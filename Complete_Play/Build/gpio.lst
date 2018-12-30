@@ -1,0 +1,670 @@
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cczKr14R.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"gpio.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.MX_GPIO_Init,"ax",%progbits
+  18              		.align	1
+  19              		.global	MX_GPIO_Init
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu fpv4-sp-d16
+  25              	MX_GPIO_Init:
+  26              	.LFB126:
+  27              		.file 1 "Core/Src/periphs/gpio.c"
+   1:Core/Src/periphs/gpio.c **** /**
+   2:Core/Src/periphs/gpio.c ****   ******************************************************************************
+   3:Core/Src/periphs/gpio.c ****   * File Name          : gpio.c
+   4:Core/Src/periphs/gpio.c ****   * Description        : This file provides code for the configuration
+   5:Core/Src/periphs/gpio.c ****   *                      of all used GPIO pins.
+   6:Core/Src/periphs/gpio.c ****   ******************************************************************************
+   7:Core/Src/periphs/gpio.c ****   * This notice applies to any and all portions of this file
+   8:Core/Src/periphs/gpio.c ****   * that are not between comment pairs USER CODE BEGIN and
+   9:Core/Src/periphs/gpio.c ****   * USER CODE END. Other portions of this file, whether 
+  10:Core/Src/periphs/gpio.c ****   * inserted by the user or by software development tools
+  11:Core/Src/periphs/gpio.c ****   * are owned by their respective copyright owners.
+  12:Core/Src/periphs/gpio.c ****   *
+  13:Core/Src/periphs/gpio.c ****   * Copyright (c) 2018 STMicroelectronics International N.V. 
+  14:Core/Src/periphs/gpio.c ****   * All rights reserved.
+  15:Core/Src/periphs/gpio.c ****   *
+  16:Core/Src/periphs/gpio.c ****   * Redistribution and use in source and binary forms, with or without 
+  17:Core/Src/periphs/gpio.c ****   * modification, are permitted, provided that the following conditions are met:
+  18:Core/Src/periphs/gpio.c ****   *
+  19:Core/Src/periphs/gpio.c ****   * 1. Redistribution of source code must retain the above copyright notice, 
+  20:Core/Src/periphs/gpio.c ****   *    this list of conditions and the following disclaimer.
+  21:Core/Src/periphs/gpio.c ****   * 2. Redistributions in binary form must reproduce the above copyright notice,
+  22:Core/Src/periphs/gpio.c ****   *    this list of conditions and the following disclaimer in the documentation
+  23:Core/Src/periphs/gpio.c ****   *    and/or other materials provided with the distribution.
+  24:Core/Src/periphs/gpio.c ****   * 3. Neither the name of STMicroelectronics nor the names of other 
+  25:Core/Src/periphs/gpio.c ****   *    contributors to this software may be used to endorse or promote products 
+  26:Core/Src/periphs/gpio.c ****   *    derived from this software without specific written permission.
+  27:Core/Src/periphs/gpio.c ****   * 4. This software, including modifications and/or derivative works of this 
+  28:Core/Src/periphs/gpio.c ****   *    software, must execute solely and exclusively on microcontroller or
+  29:Core/Src/periphs/gpio.c ****   *    microprocessor devices manufactured by or for STMicroelectronics.
+  30:Core/Src/periphs/gpio.c ****   * 5. Redistribution and use of this software other than as permitted under 
+  31:Core/Src/periphs/gpio.c ****   *    this license is void and will automatically terminate your rights under 
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cczKr14R.s 			page 2
+
+
+  32:Core/Src/periphs/gpio.c ****   *    this license. 
+  33:Core/Src/periphs/gpio.c ****   *
+  34:Core/Src/periphs/gpio.c ****   * THIS SOFTWARE IS PROVIDED BY STMICROELECTRONICS AND CONTRIBUTORS "AS IS" 
+  35:Core/Src/periphs/gpio.c ****   * AND ANY EXPRESS, IMPLIED OR STATUTORY WARRANTIES, INCLUDING, BUT NOT 
+  36:Core/Src/periphs/gpio.c ****   * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+  37:Core/Src/periphs/gpio.c ****   * PARTICULAR PURPOSE AND NON-INFRINGEMENT OF THIRD PARTY INTELLECTUAL PROPERTY
+  38:Core/Src/periphs/gpio.c ****   * RIGHTS ARE DISCLAIMED TO THE FULLEST EXTENT PERMITTED BY LAW. IN NO EVENT 
+  39:Core/Src/periphs/gpio.c ****   * SHALL STMICROELECTRONICS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+  40:Core/Src/periphs/gpio.c ****   * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  41:Core/Src/periphs/gpio.c ****   * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, 
+  42:Core/Src/periphs/gpio.c ****   * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
+  43:Core/Src/periphs/gpio.c ****   * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
+  44:Core/Src/periphs/gpio.c ****   * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+  45:Core/Src/periphs/gpio.c ****   * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  46:Core/Src/periphs/gpio.c ****   *
+  47:Core/Src/periphs/gpio.c ****   ******************************************************************************
+  48:Core/Src/periphs/gpio.c ****   */
+  49:Core/Src/periphs/gpio.c **** 
+  50:Core/Src/periphs/gpio.c **** /* Includes ------------------------------------------------------------------*/
+  51:Core/Src/periphs/gpio.c **** #include "gpio.h"
+  52:Core/Src/periphs/gpio.c **** /* USER CODE BEGIN 0 */
+  53:Core/Src/periphs/gpio.c **** 
+  54:Core/Src/periphs/gpio.c **** /* USER CODE END 0 */
+  55:Core/Src/periphs/gpio.c **** 
+  56:Core/Src/periphs/gpio.c **** /*----------------------------------------------------------------------------*/
+  57:Core/Src/periphs/gpio.c **** /* Configure GPIO                                                             */
+  58:Core/Src/periphs/gpio.c **** /*----------------------------------------------------------------------------*/
+  59:Core/Src/periphs/gpio.c **** /* USER CODE BEGIN 1 */
+  60:Core/Src/periphs/gpio.c **** 
+  61:Core/Src/periphs/gpio.c **** /* USER CODE END 1 */
+  62:Core/Src/periphs/gpio.c **** 
+  63:Core/Src/periphs/gpio.c **** /** Configure pins as 
+  64:Core/Src/periphs/gpio.c ****         * Analog 
+  65:Core/Src/periphs/gpio.c ****         * Input 
+  66:Core/Src/periphs/gpio.c ****         * Output
+  67:Core/Src/periphs/gpio.c ****         * EVENT_OUT
+  68:Core/Src/periphs/gpio.c ****         * EXTI
+  69:Core/Src/periphs/gpio.c ****         * Free pins are configured automatically as Analog (this feature is enabled through 
+  70:Core/Src/periphs/gpio.c ****         * the Code Generation settings)
+  71:Core/Src/periphs/gpio.c **** */
+  72:Core/Src/periphs/gpio.c **** void MX_GPIO_Init(void)
+  73:Core/Src/periphs/gpio.c **** {
+  28              		.loc 1 73 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 48
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+  33              	.LCFI0:
+  34              		.cfi_def_cfa_offset 36
+  35              		.cfi_offset 4, -36
+  36              		.cfi_offset 5, -32
+  37              		.cfi_offset 6, -28
+  38              		.cfi_offset 7, -24
+  39              		.cfi_offset 8, -20
+  40              		.cfi_offset 9, -16
+  41              		.cfi_offset 10, -12
+  42              		.cfi_offset 11, -8
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cczKr14R.s 			page 3
+
+
+  43              		.cfi_offset 14, -4
+  44 0004 8DB0     		sub	sp, sp, #52
+  45              	.LCFI1:
+  46              		.cfi_def_cfa_offset 88
+  74:Core/Src/periphs/gpio.c **** 
+  75:Core/Src/periphs/gpio.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
+  47              		.loc 1 75 0
+  48 0006 0024     		movs	r4, #0
+  49 0008 0794     		str	r4, [sp, #28]
+  50 000a 0894     		str	r4, [sp, #32]
+  51 000c 0994     		str	r4, [sp, #36]
+  52 000e 0A94     		str	r4, [sp, #40]
+  53 0010 0B94     		str	r4, [sp, #44]
+  54              	.LBB2:
+  76:Core/Src/periphs/gpio.c **** 
+  77:Core/Src/periphs/gpio.c ****   /* GPIO Ports Clock Enable */
+  78:Core/Src/periphs/gpio.c ****   __HAL_RCC_GPIOE_CLK_ENABLE();
+  55              		.loc 1 78 0
+  56 0012 0194     		str	r4, [sp, #4]
+  57 0014 814B     		ldr	r3, .L3
+  58 0016 1A6B     		ldr	r2, [r3, #48]
+  59 0018 42F01002 		orr	r2, r2, #16
+  60 001c 1A63     		str	r2, [r3, #48]
+  61 001e 1A6B     		ldr	r2, [r3, #48]
+  62 0020 02F01002 		and	r2, r2, #16
+  63 0024 0192     		str	r2, [sp, #4]
+  64 0026 019A     		ldr	r2, [sp, #4]
+  65              	.LBE2:
+  66              	.LBB3:
+  79:Core/Src/periphs/gpio.c ****   __HAL_RCC_GPIOC_CLK_ENABLE();
+  67              		.loc 1 79 0
+  68 0028 0294     		str	r4, [sp, #8]
+  69 002a 1A6B     		ldr	r2, [r3, #48]
+  70 002c 42F00402 		orr	r2, r2, #4
+  71 0030 1A63     		str	r2, [r3, #48]
+  72 0032 1A6B     		ldr	r2, [r3, #48]
+  73 0034 02F00402 		and	r2, r2, #4
+  74 0038 0292     		str	r2, [sp, #8]
+  75 003a 029A     		ldr	r2, [sp, #8]
+  76              	.LBE3:
+  77              	.LBB4:
+  80:Core/Src/periphs/gpio.c ****   __HAL_RCC_GPIOH_CLK_ENABLE();
+  78              		.loc 1 80 0
+  79 003c 0394     		str	r4, [sp, #12]
+  80 003e 1A6B     		ldr	r2, [r3, #48]
+  81 0040 42F08002 		orr	r2, r2, #128
+  82 0044 1A63     		str	r2, [r3, #48]
+  83 0046 1A6B     		ldr	r2, [r3, #48]
+  84 0048 02F08002 		and	r2, r2, #128
+  85 004c 0392     		str	r2, [sp, #12]
+  86 004e 039A     		ldr	r2, [sp, #12]
+  87              	.LBE4:
+  88              	.LBB5:
+  81:Core/Src/periphs/gpio.c ****   __HAL_RCC_GPIOA_CLK_ENABLE();
+  89              		.loc 1 81 0
+  90 0050 0494     		str	r4, [sp, #16]
+  91 0052 1A6B     		ldr	r2, [r3, #48]
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cczKr14R.s 			page 4
+
+
+  92 0054 42F00102 		orr	r2, r2, #1
+  93 0058 1A63     		str	r2, [r3, #48]
+  94 005a 1A6B     		ldr	r2, [r3, #48]
+  95 005c 02F00102 		and	r2, r2, #1
+  96 0060 0492     		str	r2, [sp, #16]
+  97 0062 049A     		ldr	r2, [sp, #16]
+  98              	.LBE5:
+  99              	.LBB6:
+  82:Core/Src/periphs/gpio.c ****   __HAL_RCC_GPIOB_CLK_ENABLE();
+ 100              		.loc 1 82 0
+ 101 0064 0594     		str	r4, [sp, #20]
+ 102 0066 1A6B     		ldr	r2, [r3, #48]
+ 103 0068 42F00202 		orr	r2, r2, #2
+ 104 006c 1A63     		str	r2, [r3, #48]
+ 105 006e 1A6B     		ldr	r2, [r3, #48]
+ 106 0070 02F00202 		and	r2, r2, #2
+ 107 0074 0592     		str	r2, [sp, #20]
+ 108 0076 059A     		ldr	r2, [sp, #20]
+ 109              	.LBE6:
+ 110              	.LBB7:
+  83:Core/Src/periphs/gpio.c ****   __HAL_RCC_GPIOD_CLK_ENABLE();
+ 111              		.loc 1 83 0
+ 112 0078 0694     		str	r4, [sp, #24]
+ 113 007a 1A6B     		ldr	r2, [r3, #48]
+ 114 007c 42F00802 		orr	r2, r2, #8
+ 115 0080 1A63     		str	r2, [r3, #48]
+ 116 0082 1B6B     		ldr	r3, [r3, #48]
+ 117 0084 03F00803 		and	r3, r3, #8
+ 118 0088 0693     		str	r3, [sp, #24]
+ 119 008a 069B     		ldr	r3, [sp, #24]
+ 120              	.LBE7:
+  84:Core/Src/periphs/gpio.c **** 
+  85:Core/Src/periphs/gpio.c ****   /*Configure GPIO pin Output Level */
+  86:Core/Src/periphs/gpio.c ****   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, GPIO_PIN_RESET);
+ 121              		.loc 1 86 0
+ 122 008c DFF89C91 		ldr	r9, .L3+16
+ 123 0090 2246     		mov	r2, r4
+ 124 0092 0121     		movs	r1, #1
+ 125 0094 4846     		mov	r0, r9
+ 126 0096 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 127              	.LVL0:
+  87:Core/Src/periphs/gpio.c **** 
+  88:Core/Src/periphs/gpio.c ****   /*Configure GPIO pin Output Level */
+  89:Core/Src/periphs/gpio.c ****   HAL_GPIO_WritePin(SPI2_CS_GPIO_Port, SPI2_CS_Pin, GPIO_PIN_SET);
+ 128              		.loc 1 89 0
+ 129 009a 0122     		movs	r2, #1
+ 130 009c 0221     		movs	r1, #2
+ 131 009e 4846     		mov	r0, r9
+ 132 00a0 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 133              	.LVL1:
+  90:Core/Src/periphs/gpio.c **** 
+  91:Core/Src/periphs/gpio.c ****   /*Configure GPIO pin Output Level */
+  92:Core/Src/periphs/gpio.c ****   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_RESET);
+ 134              		.loc 1 92 0
+ 135 00a4 DFF88881 		ldr	r8, .L3+20
+ 136 00a8 2246     		mov	r2, r4
+ 137 00aa 0421     		movs	r1, #4
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cczKr14R.s 			page 5
+
+
+ 138 00ac 4046     		mov	r0, r8
+ 139 00ae FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 140              	.LVL2:
+  93:Core/Src/periphs/gpio.c **** 
+  94:Core/Src/periphs/gpio.c ****   /*Configure GPIO pin Output Level */
+  95:Core/Src/periphs/gpio.c ****   HAL_GPIO_WritePin(GPIOD, B_GreenLED_Pin|B_OrangeLED_Pin|B_RedLED_Pin|B_BlueLED_Pin, GPIO_PIN_RESE
+ 141              		.loc 1 95 0
+ 142 00b2 5B4F     		ldr	r7, .L3+4
+ 143 00b4 2246     		mov	r2, r4
+ 144 00b6 4FF47041 		mov	r1, #61440
+ 145 00ba 3846     		mov	r0, r7
+ 146 00bc FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 147              	.LVL3:
+  96:Core/Src/periphs/gpio.c **** 
+  97:Core/Src/periphs/gpio.c ****   /*Configure GPIO pin Output Level */
+  98:Core/Src/periphs/gpio.c ****   HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
+ 148              		.loc 1 98 0
+ 149 00c0 0122     		movs	r2, #1
+ 150 00c2 8021     		movs	r1, #128
+ 151 00c4 3846     		mov	r0, r7
+ 152 00c6 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 153              	.LVL4:
+  99:Core/Src/periphs/gpio.c **** 
+ 100:Core/Src/periphs/gpio.c ****   /*Configure GPIO pins : PE2 PE3 PE4 PE5 
+ 101:Core/Src/periphs/gpio.c ****                            PE6 PE7 PE8 PE9 
+ 102:Core/Src/periphs/gpio.c ****                            PE10 PE12 PE13 PE14 
+ 103:Core/Src/periphs/gpio.c ****                            PE15 PE0 PE1 */
+ 104:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pin = GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5 
+ 154              		.loc 1 104 0
+ 155 00ca 4FF2FF73 		movw	r3, #63487
+ 156 00ce 0793     		str	r3, [sp, #28]
+ 105:Core/Src/periphs/gpio.c ****                           |GPIO_PIN_6|GPIO_PIN_7|GPIO_PIN_8|GPIO_PIN_9 
+ 106:Core/Src/periphs/gpio.c ****                           |GPIO_PIN_10|GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14 
+ 107:Core/Src/periphs/gpio.c ****                           |GPIO_PIN_15|GPIO_PIN_0|GPIO_PIN_1;
+ 108:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+ 157              		.loc 1 108 0
+ 158 00d0 0326     		movs	r6, #3
+ 159 00d2 0896     		str	r6, [sp, #32]
+ 109:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 160              		.loc 1 109 0
+ 161 00d4 0994     		str	r4, [sp, #36]
+ 110:Core/Src/periphs/gpio.c ****   HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
+ 162              		.loc 1 110 0
+ 163 00d6 DFF85CB1 		ldr	fp, .L3+24
+ 164 00da 07A9     		add	r1, sp, #28
+ 165 00dc 5846     		mov	r0, fp
+ 166 00de FFF7FEFF 		bl	HAL_GPIO_Init
+ 167              	.LVL5:
+ 111:Core/Src/periphs/gpio.c **** 
+ 112:Core/Src/periphs/gpio.c ****   /*Configure GPIO pins : PC13 PC14 PC15 PC4 
+ 113:Core/Src/periphs/gpio.c ****                            PC5 PC12 */
+ 114:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pin = GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15|GPIO_PIN_4 
+ 168              		.loc 1 114 0
+ 169 00e2 4FF23003 		movw	r3, #61488
+ 170 00e6 0793     		str	r3, [sp, #28]
+ 115:Core/Src/periphs/gpio.c ****                           |GPIO_PIN_5|GPIO_PIN_12;
+ 116:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cczKr14R.s 			page 6
+
+
+ 171              		.loc 1 116 0
+ 172 00e8 0896     		str	r6, [sp, #32]
+ 117:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 173              		.loc 1 117 0
+ 174 00ea 0994     		str	r4, [sp, #36]
+ 118:Core/Src/periphs/gpio.c ****   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+ 175              		.loc 1 118 0
+ 176 00ec 07A9     		add	r1, sp, #28
+ 177 00ee 4846     		mov	r0, r9
+ 178 00f0 FFF7FEFF 		bl	HAL_GPIO_Init
+ 179              	.LVL6:
+ 119:Core/Src/periphs/gpio.c **** 
+ 120:Core/Src/periphs/gpio.c ****   /*Configure GPIO pin : PC0 */
+ 121:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pin = GPIO_PIN_0;
+ 180              		.loc 1 121 0
+ 181 00f4 0125     		movs	r5, #1
+ 182 00f6 0795     		str	r5, [sp, #28]
+ 122:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 183              		.loc 1 122 0
+ 184 00f8 0895     		str	r5, [sp, #32]
+ 123:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 185              		.loc 1 123 0
+ 186 00fa 0994     		str	r4, [sp, #36]
+ 124:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 187              		.loc 1 124 0
+ 188 00fc 0A94     		str	r4, [sp, #40]
+ 125:Core/Src/periphs/gpio.c ****   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+ 189              		.loc 1 125 0
+ 190 00fe 07A9     		add	r1, sp, #28
+ 191 0100 4846     		mov	r0, r9
+ 192 0102 FFF7FEFF 		bl	HAL_GPIO_Init
+ 193              	.LVL7:
+ 126:Core/Src/periphs/gpio.c **** 
+ 127:Core/Src/periphs/gpio.c ****   /*Configure GPIO pin : PtPin */
+ 128:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pin = SPI2_CS_Pin;
+ 194              		.loc 1 128 0
+ 195 0106 0223     		movs	r3, #2
+ 196 0108 0793     		str	r3, [sp, #28]
+ 129:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 197              		.loc 1 129 0
+ 198 010a 0895     		str	r5, [sp, #32]
+ 130:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 199              		.loc 1 130 0
+ 200 010c 0994     		str	r4, [sp, #36]
+ 131:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 201              		.loc 1 131 0
+ 202 010e 0A96     		str	r6, [sp, #40]
+ 132:Core/Src/periphs/gpio.c ****   HAL_GPIO_Init(SPI2_CS_GPIO_Port, &GPIO_InitStruct);
+ 203              		.loc 1 132 0
+ 204 0110 07A9     		add	r1, sp, #28
+ 205 0112 4846     		mov	r0, r9
+ 206 0114 FFF7FEFF 		bl	HAL_GPIO_Init
+ 207              	.LVL8:
+ 133:Core/Src/periphs/gpio.c **** 
+ 134:Core/Src/periphs/gpio.c ****   /*Configure GPIO pin : PtPin */
+ 135:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pin = B_PushButton_Pin;
+ 208              		.loc 1 135 0
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cczKr14R.s 			page 7
+
+
+ 209 0118 0795     		str	r5, [sp, #28]
+ 136:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;
+ 210              		.loc 1 136 0
+ 211 011a 424B     		ldr	r3, .L3+8
+ 212 011c 0893     		str	r3, [sp, #32]
+ 137:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pull = GPIO_PULLUP;
+ 213              		.loc 1 137 0
+ 214 011e 0995     		str	r5, [sp, #36]
+ 138:Core/Src/periphs/gpio.c ****   HAL_GPIO_Init(B_PushButton_GPIO_Port, &GPIO_InitStruct);
+ 215              		.loc 1 138 0
+ 216 0120 07A9     		add	r1, sp, #28
+ 217 0122 4046     		mov	r0, r8
+ 218 0124 FFF7FEFF 		bl	HAL_GPIO_Init
+ 219              	.LVL9:
+ 139:Core/Src/periphs/gpio.c **** 
+ 140:Core/Src/periphs/gpio.c ****   /*Configure GPIO pin : PA2 */
+ 141:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pin = GPIO_PIN_2;
+ 220              		.loc 1 141 0
+ 221 0128 0423     		movs	r3, #4
+ 222 012a 0793     		str	r3, [sp, #28]
+ 142:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 223              		.loc 1 142 0
+ 224 012c 0895     		str	r5, [sp, #32]
+ 143:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 225              		.loc 1 143 0
+ 226 012e 0994     		str	r4, [sp, #36]
+ 144:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 227              		.loc 1 144 0
+ 228 0130 0A94     		str	r4, [sp, #40]
+ 145:Core/Src/periphs/gpio.c ****   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 229              		.loc 1 145 0
+ 230 0132 07A9     		add	r1, sp, #28
+ 231 0134 4046     		mov	r0, r8
+ 232 0136 FFF7FEFF 		bl	HAL_GPIO_Init
+ 233              	.LVL10:
+ 146:Core/Src/periphs/gpio.c **** 
+ 147:Core/Src/periphs/gpio.c ****   /*Configure GPIO pin : PA4 */
+ 148:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pin = GPIO_PIN_4;
+ 234              		.loc 1 148 0
+ 235 013a 1023     		movs	r3, #16
+ 236 013c 0793     		str	r3, [sp, #28]
+ 149:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+ 237              		.loc 1 149 0
+ 238 013e DFF8F8A0 		ldr	r10, .L3+28
+ 239 0142 CDF820A0 		str	r10, [sp, #32]
+ 150:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pull = GPIO_PULLUP;
+ 240              		.loc 1 150 0
+ 241 0146 0995     		str	r5, [sp, #36]
+ 151:Core/Src/periphs/gpio.c ****   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 242              		.loc 1 151 0
+ 243 0148 07A9     		add	r1, sp, #28
+ 244 014a 4046     		mov	r0, r8
+ 245 014c FFF7FEFF 		bl	HAL_GPIO_Init
+ 246              	.LVL11:
+ 152:Core/Src/periphs/gpio.c **** 
+ 153:Core/Src/periphs/gpio.c ****   /*Configure GPIO pins : PB0 PB1 PB2 PB11 
+ 154:Core/Src/periphs/gpio.c ****                            PB12 PB14 PB15 */
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cczKr14R.s 			page 8
+
+
+ 155:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_11 
+ 247              		.loc 1 155 0
+ 248 0150 4DF60703 		movw	r3, #55303
+ 249 0154 0793     		str	r3, [sp, #28]
+ 156:Core/Src/periphs/gpio.c ****                           |GPIO_PIN_12|GPIO_PIN_14|GPIO_PIN_15;
+ 157:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+ 250              		.loc 1 157 0
+ 251 0156 0896     		str	r6, [sp, #32]
+ 158:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 252              		.loc 1 158 0
+ 253 0158 0994     		str	r4, [sp, #36]
+ 159:Core/Src/periphs/gpio.c ****   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 254              		.loc 1 159 0
+ 255 015a 07A9     		add	r1, sp, #28
+ 256 015c 3248     		ldr	r0, .L3+12
+ 257 015e FFF7FEFF 		bl	HAL_GPIO_Init
+ 258              	.LVL12:
+ 160:Core/Src/periphs/gpio.c **** 
+ 161:Core/Src/periphs/gpio.c ****   /*Configure GPIO pin : PE11 */
+ 162:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pin = GPIO_PIN_11;
+ 259              		.loc 1 162 0
+ 260 0162 4FF40069 		mov	r9, #2048
+ 261 0166 CDF81C90 		str	r9, [sp, #28]
+ 163:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+ 262              		.loc 1 163 0
+ 263 016a 0894     		str	r4, [sp, #32]
+ 164:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pull = GPIO_PULLUP;
+ 264              		.loc 1 164 0
+ 265 016c 0995     		str	r5, [sp, #36]
+ 165:Core/Src/periphs/gpio.c ****   HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
+ 266              		.loc 1 165 0
+ 267 016e 07A9     		add	r1, sp, #28
+ 268 0170 5846     		mov	r0, fp
+ 269 0172 FFF7FEFF 		bl	HAL_GPIO_Init
+ 270              	.LVL13:
+ 166:Core/Src/periphs/gpio.c **** 
+ 167:Core/Src/periphs/gpio.c ****   /*Configure GPIO pin : PB13 */
+ 168:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pin = GPIO_PIN_13;
+ 271              		.loc 1 168 0
+ 272 0176 4FF40053 		mov	r3, #8192
+ 273 017a 0793     		str	r3, [sp, #28]
+ 169:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+ 274              		.loc 1 169 0
+ 275 017c CDF820A0 		str	r10, [sp, #32]
+ 170:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pull = GPIO_PULLUP;
+ 276              		.loc 1 170 0
+ 277 0180 0995     		str	r5, [sp, #36]
+ 171:Core/Src/periphs/gpio.c ****   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 278              		.loc 1 171 0
+ 279 0182 07A9     		add	r1, sp, #28
+ 280 0184 2848     		ldr	r0, .L3+12
+ 281 0186 FFF7FEFF 		bl	HAL_GPIO_Init
+ 282              	.LVL14:
+ 172:Core/Src/periphs/gpio.c **** 
+ 173:Core/Src/periphs/gpio.c ****   /*Configure GPIO pins : PD10 PD0 PD1 PD2 
+ 174:Core/Src/periphs/gpio.c ****                            PD3 PD4 */
+ 175:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pin = GPIO_PIN_10|GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2 
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cczKr14R.s 			page 9
+
+
+ 283              		.loc 1 175 0
+ 284 018a 40F21F43 		movw	r3, #1055
+ 285 018e 0793     		str	r3, [sp, #28]
+ 176:Core/Src/periphs/gpio.c ****                           |GPIO_PIN_3|GPIO_PIN_4;
+ 177:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+ 286              		.loc 1 177 0
+ 287 0190 0896     		str	r6, [sp, #32]
+ 178:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 288              		.loc 1 178 0
+ 289 0192 0994     		str	r4, [sp, #36]
+ 179:Core/Src/periphs/gpio.c ****   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+ 290              		.loc 1 179 0
+ 291 0194 07A9     		add	r1, sp, #28
+ 292 0196 3846     		mov	r0, r7
+ 293 0198 FFF7FEFF 		bl	HAL_GPIO_Init
+ 294              	.LVL15:
+ 180:Core/Src/periphs/gpio.c **** 
+ 181:Core/Src/periphs/gpio.c ****   /*Configure GPIO pin : PD11 */
+ 182:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pin = GPIO_PIN_11;
+ 295              		.loc 1 182 0
+ 296 019c CDF81C90 		str	r9, [sp, #28]
+ 183:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+ 297              		.loc 1 183 0
+ 298 01a0 0894     		str	r4, [sp, #32]
+ 184:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pull = GPIO_PULLUP;
+ 299              		.loc 1 184 0
+ 300 01a2 0995     		str	r5, [sp, #36]
+ 185:Core/Src/periphs/gpio.c ****   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+ 301              		.loc 1 185 0
+ 302 01a4 07A9     		add	r1, sp, #28
+ 303 01a6 3846     		mov	r0, r7
+ 304 01a8 FFF7FEFF 		bl	HAL_GPIO_Init
+ 305              	.LVL16:
+ 186:Core/Src/periphs/gpio.c **** 
+ 187:Core/Src/periphs/gpio.c ****   /*Configure GPIO pins : PDPin PDPin PDPin PDPin */
+ 188:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pin = B_GreenLED_Pin|B_OrangeLED_Pin|B_RedLED_Pin|B_BlueLED_Pin;
+ 306              		.loc 1 188 0
+ 307 01ac 4FF47043 		mov	r3, #61440
+ 308 01b0 0793     		str	r3, [sp, #28]
+ 189:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 309              		.loc 1 189 0
+ 310 01b2 0895     		str	r5, [sp, #32]
+ 190:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 311              		.loc 1 190 0
+ 312 01b4 0994     		str	r4, [sp, #36]
+ 191:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 313              		.loc 1 191 0
+ 314 01b6 0A94     		str	r4, [sp, #40]
+ 192:Core/Src/periphs/gpio.c ****   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+ 315              		.loc 1 192 0
+ 316 01b8 07A9     		add	r1, sp, #28
+ 317 01ba 3846     		mov	r0, r7
+ 318 01bc FFF7FEFF 		bl	HAL_GPIO_Init
+ 319              	.LVL17:
+ 193:Core/Src/periphs/gpio.c **** 
+ 194:Core/Src/periphs/gpio.c ****   /*Configure GPIO pin : PA10 */
+ 195:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pin = GPIO_PIN_10;
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cczKr14R.s 			page 10
+
+
+ 320              		.loc 1 195 0
+ 321 01c0 4FF48063 		mov	r3, #1024
+ 322 01c4 0793     		str	r3, [sp, #28]
+ 196:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+ 323              		.loc 1 196 0
+ 324 01c6 0896     		str	r6, [sp, #32]
+ 197:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 325              		.loc 1 197 0
+ 326 01c8 0994     		str	r4, [sp, #36]
+ 198:Core/Src/periphs/gpio.c ****   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 327              		.loc 1 198 0
+ 328 01ca 07A9     		add	r1, sp, #28
+ 329 01cc 4046     		mov	r0, r8
+ 330 01ce FFF7FEFF 		bl	HAL_GPIO_Init
+ 331              	.LVL18:
+ 199:Core/Src/periphs/gpio.c **** 
+ 200:Core/Src/periphs/gpio.c ****   /*Configure GPIO pin : PtPin */
+ 201:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pin = SPI1_CS_Pin;
+ 332              		.loc 1 201 0
+ 333 01d2 8023     		movs	r3, #128
+ 334 01d4 0793     		str	r3, [sp, #28]
+ 202:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 335              		.loc 1 202 0
+ 336 01d6 0895     		str	r5, [sp, #32]
+ 203:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 337              		.loc 1 203 0
+ 338 01d8 0994     		str	r4, [sp, #36]
+ 204:Core/Src/periphs/gpio.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 339              		.loc 1 204 0
+ 340 01da 0A96     		str	r6, [sp, #40]
+ 205:Core/Src/periphs/gpio.c ****   HAL_GPIO_Init(SPI1_CS_GPIO_Port, &GPIO_InitStruct);
+ 341              		.loc 1 205 0
+ 342 01dc 07A9     		add	r1, sp, #28
+ 343 01de 3846     		mov	r0, r7
+ 344 01e0 FFF7FEFF 		bl	HAL_GPIO_Init
+ 345              	.LVL19:
+ 206:Core/Src/periphs/gpio.c **** 
+ 207:Core/Src/periphs/gpio.c ****   /* EXTI interrupt init*/
+ 208:Core/Src/periphs/gpio.c ****   HAL_NVIC_SetPriority(EXTI0_IRQn, 5, 0);
+ 346              		.loc 1 208 0
+ 347 01e4 2246     		mov	r2, r4
+ 348 01e6 0521     		movs	r1, #5
+ 349 01e8 0620     		movs	r0, #6
+ 350 01ea FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 351              	.LVL20:
+ 209:Core/Src/periphs/gpio.c ****   HAL_NVIC_EnableIRQ(EXTI0_IRQn);
+ 352              		.loc 1 209 0
+ 353 01ee 0620     		movs	r0, #6
+ 354 01f0 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+ 355              	.LVL21:
+ 210:Core/Src/periphs/gpio.c **** 
+ 211:Core/Src/periphs/gpio.c ****   HAL_NVIC_SetPriority(EXTI4_IRQn, 5, 0);
+ 356              		.loc 1 211 0
+ 357 01f4 2246     		mov	r2, r4
+ 358 01f6 0521     		movs	r1, #5
+ 359 01f8 0A20     		movs	r0, #10
+ 360 01fa FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cczKr14R.s 			page 11
+
+
+ 361              	.LVL22:
+ 212:Core/Src/periphs/gpio.c ****   HAL_NVIC_EnableIRQ(EXTI4_IRQn);
+ 362              		.loc 1 212 0
+ 363 01fe 0A20     		movs	r0, #10
+ 364 0200 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+ 365              	.LVL23:
+ 213:Core/Src/periphs/gpio.c **** 
+ 214:Core/Src/periphs/gpio.c ****   HAL_NVIC_SetPriority(EXTI15_10_IRQn, 5, 0);
+ 366              		.loc 1 214 0
+ 367 0204 2246     		mov	r2, r4
+ 368 0206 0521     		movs	r1, #5
+ 369 0208 2820     		movs	r0, #40
+ 370 020a FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 371              	.LVL24:
+ 215:Core/Src/periphs/gpio.c ****   HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
+ 372              		.loc 1 215 0
+ 373 020e 2820     		movs	r0, #40
+ 374 0210 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+ 375              	.LVL25:
+ 216:Core/Src/periphs/gpio.c **** 
+ 217:Core/Src/periphs/gpio.c **** }
+ 376              		.loc 1 217 0
+ 377 0214 0DB0     		add	sp, sp, #52
+ 378              	.LCFI2:
+ 379              		.cfi_def_cfa_offset 36
+ 380              		@ sp needed
+ 381 0216 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 382              	.L4:
+ 383 021a 00BF     		.align	2
+ 384              	.L3:
+ 385 021c 00380240 		.word	1073887232
+ 386 0220 000C0240 		.word	1073875968
+ 387 0224 00003110 		.word	271646720
+ 388 0228 00040240 		.word	1073873920
+ 389 022c 00080240 		.word	1073874944
+ 390 0230 00000240 		.word	1073872896
+ 391 0234 00100240 		.word	1073876992
+ 392 0238 00001110 		.word	269549568
+ 393              		.cfi_endproc
+ 394              	.LFE126:
+ 396              		.text
+ 397              	.Letext0:
+ 398              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
+ 399              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
+ 400              		.file 4 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/CMSIS/Include/core_cm
+ 401              		.file 5 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/CMSIS/Device/ST/STM32
+ 402              		.file 6 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/CMSIS/Device/ST/STM32
+ 403              		.file 7 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
+ 404              		.file 8 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
+ 405              		.file 9 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\lib\\gcc\\arm-none-eabi
+ 406              		.file 10 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include
+ 407              		.file 11 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver
+ 408              		.file 12 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cczKr14R.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 gpio.c
+C:\Users\073be\AppData\Local\Temp\cczKr14R.s:18     .text.MX_GPIO_Init:00000000 $t
+C:\Users\073be\AppData\Local\Temp\cczKr14R.s:25     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+C:\Users\073be\AppData\Local\Temp\cczKr14R.s:385    .text.MX_GPIO_Init:0000021c $d
+
+UNDEFINED SYMBOLS
+HAL_GPIO_WritePin
+HAL_GPIO_Init
+HAL_NVIC_SetPriority
+HAL_NVIC_EnableIRQ

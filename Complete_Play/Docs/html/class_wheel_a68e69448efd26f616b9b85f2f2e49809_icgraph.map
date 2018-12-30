@@ -1,0 +1,5 @@
+<map id="Wheel::get_PIDController" name="Wheel::get_PIDController">
+<area shape="rect" id="node1" title=" " alt="" coords="141,31,309,57"/>
+<area shape="rect" id="node2" href="$tune__motors_8cpp.html#a5513ace3065a99aaa0566cdcb0438c5d" title="Function that calculates and sets new omegas for each wheel according to reach set points provided." alt="" coords="26,5,73,32"/>
+<area shape="rect" id="node3" href="$tune__motors_8cpp.html#a128156936ef88fa4b5515aa4d4797546" title=" " alt="" coords="5,56,93,83"/>
+</map>

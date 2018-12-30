@@ -1,0 +1,779 @@
+ARM GAS  C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"main.cpp"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.HAL_TIM_PeriodElapsedCallback,"ax",%progbits
+  18              		.align	1
+  19              		.global	HAL_TIM_PeriodElapsedCallback
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu fpv4-sp-d16
+  25              	HAL_TIM_PeriodElapsedCallback:
+  26              	.LFB138:
+  27              		.file 1 "Core/Src/main.cpp"
+   1:Core/Src/main.cpp **** /* USER CODE BEGIN Header */
+   2:Core/Src/main.cpp **** /**
+   3:Core/Src/main.cpp ****   ******************************************************************************
+   4:Core/Src/main.cpp ****   * @file           : main.c
+   5:Core/Src/main.cpp ****   * @brief          : Main program body
+   6:Core/Src/main.cpp ****   ******************************************************************************
+   7:Core/Src/main.cpp ****   * This notice applies to any and all portions of this file
+   8:Core/Src/main.cpp ****   * that are not between comment pairs USER CODE BEGIN and
+   9:Core/Src/main.cpp ****   * USER CODE END. Other portions of this file, whether 
+  10:Core/Src/main.cpp ****   * inserted by the user or by software development tools
+  11:Core/Src/main.cpp ****   * are owned by their respective copyright owners.
+  12:Core/Src/main.cpp ****   *
+  13:Core/Src/main.cpp ****   * Copyright (c) 2018 STMicroelectronics International N.V. 
+  14:Core/Src/main.cpp ****   * All rights reserved.
+  15:Core/Src/main.cpp ****   *
+  16:Core/Src/main.cpp ****   * Redistribution and use in source and binary forms, with or without 
+  17:Core/Src/main.cpp ****   * modification, are permitted, provided that the following conditions are met:
+  18:Core/Src/main.cpp ****   *
+  19:Core/Src/main.cpp ****   * 1. Redistribution of source code must retain the above copyright notice, 
+  20:Core/Src/main.cpp ****   *    this list of conditions and the following disclaimer.
+  21:Core/Src/main.cpp ****   * 2. Redistributions in binary form must reproduce the above copyright notice,
+  22:Core/Src/main.cpp ****   *    this list of conditions and the following disclaimer in the documentation
+  23:Core/Src/main.cpp ****   *    and/or other materials provided with the distribution.
+  24:Core/Src/main.cpp ****   * 3. Neither the name of STMicroelectronics nor the names of other 
+  25:Core/Src/main.cpp ****   *    contributors to this software may be used to endorse or promote products 
+  26:Core/Src/main.cpp ****   *    derived from this software without specific written permission.
+  27:Core/Src/main.cpp ****   * 4. This software, including modifications and/or derivative works of this 
+  28:Core/Src/main.cpp ****   *    software, must execute solely and exclusively on microcontroller or
+  29:Core/Src/main.cpp ****   *    microprocessor devices manufactured by or for STMicroelectronics.
+  30:Core/Src/main.cpp ****   * 5. Redistribution and use of this software other than as permitted under 
+  31:Core/Src/main.cpp ****   *    this license is void and will automatically terminate your rights under 
+ARM GAS  C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s 			page 2
+
+
+  32:Core/Src/main.cpp ****   *    this license. 
+  33:Core/Src/main.cpp ****   *
+  34:Core/Src/main.cpp ****   * THIS SOFTWARE IS PROVIDED BY STMICROELECTRONICS AND CONTRIBUTORS "AS IS" 
+  35:Core/Src/main.cpp ****   * AND ANY EXPRESS, IMPLIED OR STATUTORY WARRANTIES, INCLUDING, BUT NOT 
+  36:Core/Src/main.cpp ****   * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+  37:Core/Src/main.cpp ****   * PARTICULAR PURPOSE AND NON-INFRINGEMENT OF THIRD PARTY INTELLECTUAL PROPERTY
+  38:Core/Src/main.cpp ****   * RIGHTS ARE DISCLAIMED TO THE FULLEST EXTENT PERMITTED BY LAW. IN NO EVENT 
+  39:Core/Src/main.cpp ****   * SHALL STMICROELECTRONICS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+  40:Core/Src/main.cpp ****   * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  41:Core/Src/main.cpp ****   * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, 
+  42:Core/Src/main.cpp ****   * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
+  43:Core/Src/main.cpp ****   * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
+  44:Core/Src/main.cpp ****   * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+  45:Core/Src/main.cpp ****   * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  46:Core/Src/main.cpp ****   *
+  47:Core/Src/main.cpp ****   ******************************************************************************
+  48:Core/Src/main.cpp ****   */
+  49:Core/Src/main.cpp **** /* USER CODE END Header */
+  50:Core/Src/main.cpp **** 
+  51:Core/Src/main.cpp **** /* Includes ------------------------------------------------------------------*/
+  52:Core/Src/main.cpp **** #include "main.h"
+  53:Core/Src/main.cpp **** #include "cmsis_os.h"
+  54:Core/Src/main.cpp **** #include "adc.h"
+  55:Core/Src/main.cpp **** #include "dma.h"
+  56:Core/Src/main.cpp **** #include "i2c.h"
+  57:Core/Src/main.cpp **** #include "spi.h"
+  58:Core/Src/main.cpp **** #include "tim.h"
+  59:Core/Src/main.cpp **** #include "usart.h"
+  60:Core/Src/main.cpp **** #include "usb_device.h"
+  61:Core/Src/main.cpp **** #include "gpio.h"
+  62:Core/Src/main.cpp **** 
+  63:Core/Src/main.cpp **** /* Private includes ----------------------------------------------------------*/
+  64:Core/Src/main.cpp **** /* USER CODE BEGIN Includes */
+  65:Core/Src/main.cpp **** 
+  66:Core/Src/main.cpp **** /* USER CODE END Includes */
+  67:Core/Src/main.cpp **** 
+  68:Core/Src/main.cpp **** /* Private typedef -----------------------------------------------------------*/
+  69:Core/Src/main.cpp **** /* USER CODE BEGIN PTD */
+  70:Core/Src/main.cpp **** 
+  71:Core/Src/main.cpp **** /* USER CODE END PTD */
+  72:Core/Src/main.cpp **** 
+  73:Core/Src/main.cpp **** /* Private define ------------------------------------------------------------*/
+  74:Core/Src/main.cpp **** /* USER CODE BEGIN PD */
+  75:Core/Src/main.cpp **** 
+  76:Core/Src/main.cpp **** /* USER CODE END PD */
+  77:Core/Src/main.cpp **** 
+  78:Core/Src/main.cpp **** /* Private macro -------------------------------------------------------------*/
+  79:Core/Src/main.cpp **** /* USER CODE BEGIN PM */
+  80:Core/Src/main.cpp **** 
+  81:Core/Src/main.cpp **** /* USER CODE END PM */
+  82:Core/Src/main.cpp **** 
+  83:Core/Src/main.cpp **** /* Private variables ---------------------------------------------------------*/
+  84:Core/Src/main.cpp **** 
+  85:Core/Src/main.cpp **** /* USER CODE BEGIN PV */
+  86:Core/Src/main.cpp **** 
+  87:Core/Src/main.cpp **** /* USER CODE END PV */
+  88:Core/Src/main.cpp **** 
+ARM GAS  C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s 			page 3
+
+
+  89:Core/Src/main.cpp **** /* Private function prototypes -----------------------------------------------*/
+  90:Core/Src/main.cpp **** void SystemClock_Config(void);
+  91:Core/Src/main.cpp **** 
+  92:Core/Src/main.cpp **** #ifdef __cplusplus
+  93:Core/Src/main.cpp **** extern "C" {
+  94:Core/Src/main.cpp **** #endif
+  95:Core/Src/main.cpp **** void MX_FREERTOS_Init(void);
+  96:Core/Src/main.cpp **** 
+  97:Core/Src/main.cpp **** #ifdef __cplusplus
+  98:Core/Src/main.cpp **** }
+  99:Core/Src/main.cpp **** #endif
+ 100:Core/Src/main.cpp **** /* USER CODE BEGIN PFP */
+ 101:Core/Src/main.cpp **** 
+ 102:Core/Src/main.cpp **** /* USER CODE END PFP */
+ 103:Core/Src/main.cpp **** 
+ 104:Core/Src/main.cpp **** /* Private user code ---------------------------------------------------------*/
+ 105:Core/Src/main.cpp **** /* USER CODE BEGIN 0 */
+ 106:Core/Src/main.cpp **** 
+ 107:Core/Src/main.cpp **** /* USER CODE END 0 */
+ 108:Core/Src/main.cpp **** 
+ 109:Core/Src/main.cpp **** /**
+ 110:Core/Src/main.cpp ****   * @brief  The application entry point.
+ 111:Core/Src/main.cpp ****   * @retval int
+ 112:Core/Src/main.cpp ****   */
+ 113:Core/Src/main.cpp **** int main(void)
+ 114:Core/Src/main.cpp **** {
+ 115:Core/Src/main.cpp ****         /* USER CODE BEGIN 1 */
+ 116:Core/Src/main.cpp **** 
+ 117:Core/Src/main.cpp ****         /* USER CODE END 1 */
+ 118:Core/Src/main.cpp **** 
+ 119:Core/Src/main.cpp ****         /* MCU Configuration--------------------------------------------------------*/
+ 120:Core/Src/main.cpp **** 
+ 121:Core/Src/main.cpp ****         /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+ 122:Core/Src/main.cpp ****         HAL_Init();
+ 123:Core/Src/main.cpp **** 
+ 124:Core/Src/main.cpp ****         /* USER CODE BEGIN Init */
+ 125:Core/Src/main.cpp **** 
+ 126:Core/Src/main.cpp ****         /* USER CODE END Init */
+ 127:Core/Src/main.cpp **** 
+ 128:Core/Src/main.cpp ****         /* Configure the system clock */
+ 129:Core/Src/main.cpp ****         SystemClock_Config();
+ 130:Core/Src/main.cpp **** 
+ 131:Core/Src/main.cpp ****         /* USER CODE BEGIN SysInit */
+ 132:Core/Src/main.cpp **** 
+ 133:Core/Src/main.cpp ****         /* USER CODE END SysInit */
+ 134:Core/Src/main.cpp **** 
+ 135:Core/Src/main.cpp ****         /* Initialize all configured peripherals */
+ 136:Core/Src/main.cpp ****         MX_GPIO_Init();
+ 137:Core/Src/main.cpp ****         MX_DMA_Init();
+ 138:Core/Src/main.cpp ****         MX_I2C1_Init();
+ 139:Core/Src/main.cpp ****         MX_ADC1_Init();
+ 140:Core/Src/main.cpp ****         MX_SPI1_Init();
+ 141:Core/Src/main.cpp ****         MX_USART3_UART_Init();
+ 142:Core/Src/main.cpp ****         MX_TIM4_Init();
+ 143:Core/Src/main.cpp ****         MX_TIM3_Init();
+ 144:Core/Src/main.cpp ****         MX_TIM2_Init();
+ 145:Core/Src/main.cpp ****         MX_TIM1_Init();
+ARM GAS  C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s 			page 4
+
+
+ 146:Core/Src/main.cpp ****         MX_TIM8_Init();
+ 147:Core/Src/main.cpp ****         MX_UART4_Init();
+ 148:Core/Src/main.cpp ****         MX_USART2_UART_Init();
+ 149:Core/Src/main.cpp ****         MX_SPI2_Init();
+ 150:Core/Src/main.cpp ****         /* USER CODE BEGIN 2 */
+ 151:Core/Src/main.cpp **** 
+ 152:Core/Src/main.cpp ****         /* USER CODE END 2 */
+ 153:Core/Src/main.cpp **** 
+ 154:Core/Src/main.cpp ****         /* Call init function for freertos objects (in freertos.c) */
+ 155:Core/Src/main.cpp ****         MX_FREERTOS_Init();
+ 156:Core/Src/main.cpp **** 
+ 157:Core/Src/main.cpp ****         /* Start scheduler */
+ 158:Core/Src/main.cpp ****         osKernelStart();
+ 159:Core/Src/main.cpp **** 
+ 160:Core/Src/main.cpp ****         /* We should never get here as control is now taken by the scheduler */
+ 161:Core/Src/main.cpp **** 
+ 162:Core/Src/main.cpp ****         /* Infinite loop */
+ 163:Core/Src/main.cpp ****         /* USER CODE BEGIN WHILE */
+ 164:Core/Src/main.cpp ****         while (1)
+ 165:Core/Src/main.cpp ****         {
+ 166:Core/Src/main.cpp ****                 /* USER CODE END WHILE */
+ 167:Core/Src/main.cpp **** 
+ 168:Core/Src/main.cpp ****                 /* USER CODE BEGIN 3 */
+ 169:Core/Src/main.cpp ****         }
+ 170:Core/Src/main.cpp ****         /* USER CODE END 3 */
+ 171:Core/Src/main.cpp **** }
+ 172:Core/Src/main.cpp **** 
+ 173:Core/Src/main.cpp **** /**
+ 174:Core/Src/main.cpp ****   * @brief System Clock Configuration
+ 175:Core/Src/main.cpp ****   * @retval None
+ 176:Core/Src/main.cpp ****   */
+ 177:Core/Src/main.cpp **** void SystemClock_Config(void)
+ 178:Core/Src/main.cpp **** {
+ 179:Core/Src/main.cpp ****         RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+ 180:Core/Src/main.cpp ****         RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ 181:Core/Src/main.cpp **** 
+ 182:Core/Src/main.cpp ****         /**Configure the main internal regulator output voltage 
+ 183:Core/Src/main.cpp ****   */
+ 184:Core/Src/main.cpp ****         __HAL_RCC_PWR_CLK_ENABLE();
+ 185:Core/Src/main.cpp ****         __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
+ 186:Core/Src/main.cpp ****         /**Initializes the CPU, AHB and APB busses clocks 
+ 187:Core/Src/main.cpp ****   */
+ 188:Core/Src/main.cpp ****         RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+ 189:Core/Src/main.cpp ****         RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+ 190:Core/Src/main.cpp ****         RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+ 191:Core/Src/main.cpp ****         RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+ 192:Core/Src/main.cpp ****         RCC_OscInitStruct.PLL.PLLM = 4;
+ 193:Core/Src/main.cpp ****         RCC_OscInitStruct.PLL.PLLN = 168;
+ 194:Core/Src/main.cpp ****         RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+ 195:Core/Src/main.cpp ****         RCC_OscInitStruct.PLL.PLLQ = 7;
+ 196:Core/Src/main.cpp ****         if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 197:Core/Src/main.cpp ****         {
+ 198:Core/Src/main.cpp ****                 Error_Handler();
+ 199:Core/Src/main.cpp ****         }
+ 200:Core/Src/main.cpp ****         /**Initializes the CPU, AHB and APB busses clocks 
+ 201:Core/Src/main.cpp ****   */
+ 202:Core/Src/main.cpp ****         RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCL
+ARM GAS  C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s 			page 5
+
+
+ 203:Core/Src/main.cpp ****         RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+ 204:Core/Src/main.cpp ****         RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 205:Core/Src/main.cpp ****         RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
+ 206:Core/Src/main.cpp ****         RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
+ 207:Core/Src/main.cpp **** 
+ 208:Core/Src/main.cpp ****         if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5) != HAL_OK)
+ 209:Core/Src/main.cpp ****         {
+ 210:Core/Src/main.cpp ****                 Error_Handler();
+ 211:Core/Src/main.cpp ****         }
+ 212:Core/Src/main.cpp **** }
+ 213:Core/Src/main.cpp **** 
+ 214:Core/Src/main.cpp **** /* USER CODE BEGIN 4 */
+ 215:Core/Src/main.cpp **** 
+ 216:Core/Src/main.cpp **** /* USER CODE END 4 */
+ 217:Core/Src/main.cpp **** 
+ 218:Core/Src/main.cpp **** /**
+ 219:Core/Src/main.cpp ****   * @brief  Period elapsed callback in non blocking mode
+ 220:Core/Src/main.cpp ****   * @note   This function is called  when TIM5 interrupt took place, inside
+ 221:Core/Src/main.cpp ****   * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+ 222:Core/Src/main.cpp ****   * a global variable "uwTick" used as application time base.
+ 223:Core/Src/main.cpp ****   * @param  htim : TIM handle
+ 224:Core/Src/main.cpp ****   * @retval None
+ 225:Core/Src/main.cpp ****   */
+ 226:Core/Src/main.cpp **** void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+ 227:Core/Src/main.cpp **** {
+  28              		.loc 1 227 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              	.LVL0:
+  33 0000 08B5     		push	{r3, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 8
+  36              		.cfi_offset 3, -8
+  37              		.cfi_offset 14, -4
+ 228:Core/Src/main.cpp ****         /* USER CODE BEGIN Callback 0 */
+ 229:Core/Src/main.cpp **** 
+ 230:Core/Src/main.cpp ****         /* USER CODE END Callback 0 */
+ 231:Core/Src/main.cpp ****         if (htim->Instance == TIM5)
+  38              		.loc 1 231 0
+  39 0002 0268     		ldr	r2, [r0]
+  40 0004 034B     		ldr	r3, .L5
+  41 0006 9A42     		cmp	r2, r3
+  42 0008 00D0     		beq	.L4
+  43              	.LVL1:
+  44              	.L1:
+ 232:Core/Src/main.cpp ****         {
+ 233:Core/Src/main.cpp ****                 HAL_IncTick();
+ 234:Core/Src/main.cpp ****         }
+ 235:Core/Src/main.cpp ****         /* USER CODE BEGIN Callback 1 */
+ 236:Core/Src/main.cpp **** 
+ 237:Core/Src/main.cpp ****         /* USER CODE END Callback 1 */
+ 238:Core/Src/main.cpp **** }
+  45              		.loc 1 238 0
+  46 000a 08BD     		pop	{r3, pc}
+  47              	.LVL2:
+  48              	.L4:
+ARM GAS  C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s 			page 6
+
+
+ 233:Core/Src/main.cpp ****         }
+  49              		.loc 1 233 0
+  50 000c FFF7FEFF 		bl	HAL_IncTick
+  51              	.LVL3:
+  52              		.loc 1 238 0
+  53 0010 FBE7     		b	.L1
+  54              	.L6:
+  55 0012 00BF     		.align	2
+  56              	.L5:
+  57 0014 000C0040 		.word	1073744896
+  58              		.cfi_endproc
+  59              	.LFE138:
+  61              		.section	.text._Error_Handler,"ax",%progbits
+  62              		.align	1
+  63              		.global	_Error_Handler
+  64              		.syntax unified
+  65              		.thumb
+  66              		.thumb_func
+  67              		.fpu fpv4-sp-d16
+  69              	_Error_Handler:
+  70              	.LFB140:
+ 239:Core/Src/main.cpp **** 
+ 240:Core/Src/main.cpp **** /**
+ 241:Core/Src/main.cpp ****   * @brief  This function is executed in case of error occurrence.
+ 242:Core/Src/main.cpp ****   * @retval None
+ 243:Core/Src/main.cpp ****   */
+ 244:Core/Src/main.cpp **** void Error_Handler(void)
+ 245:Core/Src/main.cpp **** {
+ 246:Core/Src/main.cpp ****         /* USER CODE BEGIN Error_Handler_Debug */
+ 247:Core/Src/main.cpp ****         /* User can add his own implementation to report the HAL error return state */
+ 248:Core/Src/main.cpp ****         _Error_Handler(__FILE__, __LINE__);
+ 249:Core/Src/main.cpp ****         /* USER CODE END Error_Handler_Debug */
+ 250:Core/Src/main.cpp **** }
+ 251:Core/Src/main.cpp **** 
+ 252:Core/Src/main.cpp **** void _Error_Handler(const char *file, size_t line)
+ 253:Core/Src/main.cpp **** {
+  71              		.loc 1 253 0
+  72              		.cfi_startproc
+  73              		@ Volatile: function does not return.
+  74              		@ args = 0, pretend = 0, frame = 0
+  75              		@ frame_needed = 0, uses_anonymous_args = 0
+  76              		@ link register save eliminated.
+  77              	.LVL4:
+  78              	.L8:
+  79 0000 FEE7     		b	.L8
+  80              		.cfi_endproc
+  81              	.LFE140:
+  83              		.section	.text.Error_Handler,"ax",%progbits
+  84              		.align	1
+  85              		.global	Error_Handler
+  86              		.syntax unified
+  87              		.thumb
+  88              		.thumb_func
+  89              		.fpu fpv4-sp-d16
+  91              	Error_Handler:
+  92              	.LFB139:
+ 245:Core/Src/main.cpp ****         /* USER CODE BEGIN Error_Handler_Debug */
+ARM GAS  C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s 			page 7
+
+
+  93              		.loc 1 245 0
+  94              		.cfi_startproc
+  95              		@ Volatile: function does not return.
+  96              		@ args = 0, pretend = 0, frame = 0
+  97              		@ frame_needed = 0, uses_anonymous_args = 0
+ 245:Core/Src/main.cpp ****         /* USER CODE BEGIN Error_Handler_Debug */
+  98              		.loc 1 245 0
+  99 0000 08B5     		push	{r3, lr}
+ 100              	.LCFI1:
+ 101              		.cfi_def_cfa_offset 8
+ 102              		.cfi_offset 3, -8
+ 103              		.cfi_offset 14, -4
+ 248:Core/Src/main.cpp ****         /* USER CODE END Error_Handler_Debug */
+ 104              		.loc 1 248 0
+ 105 0002 F821     		movs	r1, #248
+ 106 0004 0148     		ldr	r0, .L11
+ 107 0006 FFF7FEFF 		bl	_Error_Handler
+ 108              	.LVL5:
+ 109              	.L12:
+ 110 000a 00BF     		.align	2
+ 111              	.L11:
+ 112 000c 00000000 		.word	.LC0
+ 113              		.cfi_endproc
+ 114              	.LFE139:
+ 116              		.section	.text._Z18SystemClock_Configv,"ax",%progbits
+ 117              		.align	1
+ 118              		.global	_Z18SystemClock_Configv
+ 119              		.syntax unified
+ 120              		.thumb
+ 121              		.thumb_func
+ 122              		.fpu fpv4-sp-d16
+ 124              	_Z18SystemClock_Configv:
+ 125              	.LFB137:
+ 178:Core/Src/main.cpp ****         RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+ 126              		.loc 1 178 0
+ 127              		.cfi_startproc
+ 128              		@ args = 0, pretend = 0, frame = 80
+ 129              		@ frame_needed = 0, uses_anonymous_args = 0
+ 130 0000 00B5     		push	{lr}
+ 131              	.LCFI2:
+ 132              		.cfi_def_cfa_offset 4
+ 133              		.cfi_offset 14, -4
+ 134 0002 95B0     		sub	sp, sp, #84
+ 135              	.LCFI3:
+ 136              		.cfi_def_cfa_offset 88
+ 179:Core/Src/main.cpp ****         RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ 137              		.loc 1 179 0
+ 138 0004 3022     		movs	r2, #48
+ 139 0006 0021     		movs	r1, #0
+ 140 0008 08A8     		add	r0, sp, #32
+ 141 000a FFF7FEFF 		bl	memset
+ 142              	.LVL6:
+ 180:Core/Src/main.cpp **** 
+ 143              		.loc 1 180 0
+ 144 000e 0023     		movs	r3, #0
+ 145 0010 0393     		str	r3, [sp, #12]
+ 146 0012 0493     		str	r3, [sp, #16]
+ARM GAS  C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s 			page 8
+
+
+ 147 0014 0593     		str	r3, [sp, #20]
+ 148 0016 0693     		str	r3, [sp, #24]
+ 149 0018 0793     		str	r3, [sp, #28]
+ 150              	.LBB2:
+ 184:Core/Src/main.cpp ****         __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
+ 151              		.loc 1 184 0
+ 152 001a 0193     		str	r3, [sp, #4]
+ 153 001c 204A     		ldr	r2, .L19
+ 154 001e 116C     		ldr	r1, [r2, #64]
+ 155 0020 41F08051 		orr	r1, r1, #268435456
+ 156 0024 1164     		str	r1, [r2, #64]
+ 157 0026 126C     		ldr	r2, [r2, #64]
+ 158 0028 02F08052 		and	r2, r2, #268435456
+ 159 002c 0192     		str	r2, [sp, #4]
+ 160 002e 019A     		ldr	r2, [sp, #4]
+ 161              	.LBE2:
+ 162              	.LBB3:
+ 185:Core/Src/main.cpp ****         /**Initializes the CPU, AHB and APB busses clocks 
+ 163              		.loc 1 185 0
+ 164 0030 0293     		str	r3, [sp, #8]
+ 165 0032 1C4B     		ldr	r3, .L19+4
+ 166 0034 1A68     		ldr	r2, [r3]
+ 167 0036 42F48042 		orr	r2, r2, #16384
+ 168 003a 1A60     		str	r2, [r3]
+ 169 003c 1B68     		ldr	r3, [r3]
+ 170 003e 03F48043 		and	r3, r3, #16384
+ 171 0042 0293     		str	r3, [sp, #8]
+ 172 0044 029B     		ldr	r3, [sp, #8]
+ 173              	.LBE3:
+ 188:Core/Src/main.cpp ****         RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+ 174              		.loc 1 188 0
+ 175 0046 0123     		movs	r3, #1
+ 176 0048 0893     		str	r3, [sp, #32]
+ 189:Core/Src/main.cpp ****         RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+ 177              		.loc 1 189 0
+ 178 004a 4FF48033 		mov	r3, #65536
+ 179 004e 0993     		str	r3, [sp, #36]
+ 190:Core/Src/main.cpp ****         RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+ 180              		.loc 1 190 0
+ 181 0050 0223     		movs	r3, #2
+ 182 0052 0E93     		str	r3, [sp, #56]
+ 191:Core/Src/main.cpp ****         RCC_OscInitStruct.PLL.PLLM = 4;
+ 183              		.loc 1 191 0
+ 184 0054 4FF48002 		mov	r2, #4194304
+ 185 0058 0F92     		str	r2, [sp, #60]
+ 192:Core/Src/main.cpp ****         RCC_OscInitStruct.PLL.PLLN = 168;
+ 186              		.loc 1 192 0
+ 187 005a 0422     		movs	r2, #4
+ 188 005c 1092     		str	r2, [sp, #64]
+ 193:Core/Src/main.cpp ****         RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+ 189              		.loc 1 193 0
+ 190 005e A822     		movs	r2, #168
+ 191 0060 1192     		str	r2, [sp, #68]
+ 194:Core/Src/main.cpp ****         RCC_OscInitStruct.PLL.PLLQ = 7;
+ 192              		.loc 1 194 0
+ 193 0062 1293     		str	r3, [sp, #72]
+ 195:Core/Src/main.cpp ****         if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ARM GAS  C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s 			page 9
+
+
+ 194              		.loc 1 195 0
+ 195 0064 0723     		movs	r3, #7
+ 196 0066 1393     		str	r3, [sp, #76]
+ 196:Core/Src/main.cpp ****         {
+ 197              		.loc 1 196 0
+ 198 0068 08A8     		add	r0, sp, #32
+ 199 006a FFF7FEFF 		bl	HAL_RCC_OscConfig
+ 200              	.LVL7:
+ 201 006e 98B9     		cbnz	r0, .L17
+ 202:Core/Src/main.cpp ****         RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+ 202              		.loc 1 202 0
+ 203 0070 0F23     		movs	r3, #15
+ 204 0072 0393     		str	r3, [sp, #12]
+ 203:Core/Src/main.cpp ****         RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 205              		.loc 1 203 0
+ 206 0074 0223     		movs	r3, #2
+ 207 0076 0493     		str	r3, [sp, #16]
+ 204:Core/Src/main.cpp ****         RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
+ 208              		.loc 1 204 0
+ 209 0078 0023     		movs	r3, #0
+ 210 007a 0593     		str	r3, [sp, #20]
+ 205:Core/Src/main.cpp ****         RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
+ 211              		.loc 1 205 0
+ 212 007c 4FF4A053 		mov	r3, #5120
+ 213 0080 0693     		str	r3, [sp, #24]
+ 206:Core/Src/main.cpp **** 
+ 214              		.loc 1 206 0
+ 215 0082 4FF48053 		mov	r3, #4096
+ 216 0086 0793     		str	r3, [sp, #28]
+ 208:Core/Src/main.cpp ****         {
+ 217              		.loc 1 208 0
+ 218 0088 0521     		movs	r1, #5
+ 219 008a 03A8     		add	r0, sp, #12
+ 220 008c FFF7FEFF 		bl	HAL_RCC_ClockConfig
+ 221              	.LVL8:
+ 222 0090 20B9     		cbnz	r0, .L18
+ 212:Core/Src/main.cpp **** 
+ 223              		.loc 1 212 0
+ 224 0092 15B0     		add	sp, sp, #84
+ 225              	.LCFI4:
+ 226              		.cfi_remember_state
+ 227              		.cfi_def_cfa_offset 4
+ 228              		@ sp needed
+ 229 0094 5DF804FB 		ldr	pc, [sp], #4
+ 230              	.L17:
+ 231              	.LCFI5:
+ 232              		.cfi_restore_state
+ 198:Core/Src/main.cpp ****         }
+ 233              		.loc 1 198 0
+ 234 0098 FFF7FEFF 		bl	Error_Handler
+ 235              	.LVL9:
+ 236              	.L18:
+ 210:Core/Src/main.cpp ****         }
+ 237              		.loc 1 210 0
+ 238 009c FFF7FEFF 		bl	Error_Handler
+ 239              	.LVL10:
+ 240              	.L20:
+ARM GAS  C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s 			page 10
+
+
+ 241              		.align	2
+ 242              	.L19:
+ 243 00a0 00380240 		.word	1073887232
+ 244 00a4 00700040 		.word	1073770496
+ 245              		.cfi_endproc
+ 246              	.LFE137:
+ 248              		.section	.text.main,"ax",%progbits
+ 249              		.align	1
+ 250              		.global	main
+ 251              		.syntax unified
+ 252              		.thumb
+ 253              		.thumb_func
+ 254              		.fpu fpv4-sp-d16
+ 256              	main:
+ 257              	.LFB136:
+ 114:Core/Src/main.cpp ****         /* USER CODE BEGIN 1 */
+ 258              		.loc 1 114 0
+ 259              		.cfi_startproc
+ 260              		@ Volatile: function does not return.
+ 261              		@ args = 0, pretend = 0, frame = 0
+ 262              		@ frame_needed = 0, uses_anonymous_args = 0
+ 263 0000 08B5     		push	{r3, lr}
+ 264              	.LCFI6:
+ 265              		.cfi_def_cfa_offset 8
+ 266              		.cfi_offset 3, -8
+ 267              		.cfi_offset 14, -4
+ 122:Core/Src/main.cpp **** 
+ 268              		.loc 1 122 0
+ 269 0002 FFF7FEFF 		bl	HAL_Init
+ 270              	.LVL11:
+ 129:Core/Src/main.cpp **** 
+ 271              		.loc 1 129 0
+ 272 0006 FFF7FEFF 		bl	_Z18SystemClock_Configv
+ 273              	.LVL12:
+ 136:Core/Src/main.cpp ****         MX_DMA_Init();
+ 274              		.loc 1 136 0
+ 275 000a FFF7FEFF 		bl	MX_GPIO_Init
+ 276              	.LVL13:
+ 137:Core/Src/main.cpp ****         MX_I2C1_Init();
+ 277              		.loc 1 137 0
+ 278 000e FFF7FEFF 		bl	MX_DMA_Init
+ 279              	.LVL14:
+ 138:Core/Src/main.cpp ****         MX_ADC1_Init();
+ 280              		.loc 1 138 0
+ 281 0012 FFF7FEFF 		bl	MX_I2C1_Init
+ 282              	.LVL15:
+ 139:Core/Src/main.cpp ****         MX_SPI1_Init();
+ 283              		.loc 1 139 0
+ 284 0016 FFF7FEFF 		bl	MX_ADC1_Init
+ 285              	.LVL16:
+ 140:Core/Src/main.cpp ****         MX_USART3_UART_Init();
+ 286              		.loc 1 140 0
+ 287 001a FFF7FEFF 		bl	MX_SPI1_Init
+ 288              	.LVL17:
+ 141:Core/Src/main.cpp ****         MX_TIM4_Init();
+ 289              		.loc 1 141 0
+ 290 001e FFF7FEFF 		bl	MX_USART3_UART_Init
+ARM GAS  C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s 			page 11
+
+
+ 291              	.LVL18:
+ 142:Core/Src/main.cpp ****         MX_TIM3_Init();
+ 292              		.loc 1 142 0
+ 293 0022 FFF7FEFF 		bl	MX_TIM4_Init
+ 294              	.LVL19:
+ 143:Core/Src/main.cpp ****         MX_TIM2_Init();
+ 295              		.loc 1 143 0
+ 296 0026 FFF7FEFF 		bl	MX_TIM3_Init
+ 297              	.LVL20:
+ 144:Core/Src/main.cpp ****         MX_TIM1_Init();
+ 298              		.loc 1 144 0
+ 299 002a FFF7FEFF 		bl	MX_TIM2_Init
+ 300              	.LVL21:
+ 145:Core/Src/main.cpp ****         MX_TIM8_Init();
+ 301              		.loc 1 145 0
+ 302 002e FFF7FEFF 		bl	MX_TIM1_Init
+ 303              	.LVL22:
+ 146:Core/Src/main.cpp ****         MX_UART4_Init();
+ 304              		.loc 1 146 0
+ 305 0032 FFF7FEFF 		bl	MX_TIM8_Init
+ 306              	.LVL23:
+ 147:Core/Src/main.cpp ****         MX_USART2_UART_Init();
+ 307              		.loc 1 147 0
+ 308 0036 FFF7FEFF 		bl	MX_UART4_Init
+ 309              	.LVL24:
+ 148:Core/Src/main.cpp ****         MX_SPI2_Init();
+ 310              		.loc 1 148 0
+ 311 003a FFF7FEFF 		bl	MX_USART2_UART_Init
+ 312              	.LVL25:
+ 149:Core/Src/main.cpp ****         /* USER CODE BEGIN 2 */
+ 313              		.loc 1 149 0
+ 314 003e FFF7FEFF 		bl	MX_SPI2_Init
+ 315              	.LVL26:
+ 155:Core/Src/main.cpp **** 
+ 316              		.loc 1 155 0
+ 317 0042 FFF7FEFF 		bl	MX_FREERTOS_Init
+ 318              	.LVL27:
+ 158:Core/Src/main.cpp **** 
+ 319              		.loc 1 158 0
+ 320 0046 FFF7FEFF 		bl	osKernelStart
+ 321              	.LVL28:
+ 322              	.L22:
+ 323 004a FEE7     		b	.L22
+ 324              		.cfi_endproc
+ 325              	.LFE136:
+ 327              		.section	.text.assert_failed,"ax",%progbits
+ 328              		.align	1
+ 329              		.global	assert_failed
+ 330              		.syntax unified
+ 331              		.thumb
+ 332              		.thumb_func
+ 333              		.fpu fpv4-sp-d16
+ 335              	assert_failed:
+ 336              	.LFB141:
+ 254:Core/Src/main.cpp ****         while(1) {
+ 255:Core/Src/main.cpp **** 
+ 256:Core/Src/main.cpp ****         }
+ARM GAS  C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s 			page 12
+
+
+ 257:Core/Src/main.cpp **** }
+ 258:Core/Src/main.cpp **** 
+ 259:Core/Src/main.cpp **** #ifdef USE_FULL_ASSERT
+ 260:Core/Src/main.cpp **** /**
+ 261:Core/Src/main.cpp ****   * @brief  Reports the name of the source file and the source line number
+ 262:Core/Src/main.cpp ****   *         where the assert_param error has occurred.
+ 263:Core/Src/main.cpp ****   * @param  file: pointer to the source file name
+ 264:Core/Src/main.cpp ****   * @param  line: assert_param error line source number
+ 265:Core/Src/main.cpp ****   * @retval None
+ 266:Core/Src/main.cpp ****   */
+ 267:Core/Src/main.cpp **** void assert_failed(uint8_t *file, uint32_t line)
+ 268:Core/Src/main.cpp **** {
+ 337              		.loc 1 268 0
+ 338              		.cfi_startproc
+ 339              		@ args = 0, pretend = 0, frame = 0
+ 340              		@ frame_needed = 0, uses_anonymous_args = 0
+ 341              		@ link register save eliminated.
+ 342              	.LVL29:
+ 269:Core/Src/main.cpp ****         /* USER CODE BEGIN 6 */
+ 270:Core/Src/main.cpp ****         /* User can add his own implementation to report the file name and line number,
+ 271:Core/Src/main.cpp ****      tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+ 272:Core/Src/main.cpp ****         /* USER CODE END 6 */
+ 273:Core/Src/main.cpp **** }
+ 343              		.loc 1 273 0
+ 344 0000 7047     		bx	lr
+ 345              		.cfi_endproc
+ 346              	.LFE141:
+ 348              		.section	.rodata.Error_Handler.str1.4,"aMS",%progbits,1
+ 349              		.align	2
+ 350              	.LC0:
+ 351 0000 436F7265 		.ascii	"Core/Src/main.cpp\000"
+ 351      2F537263 
+ 351      2F6D6169 
+ 351      6E2E6370 
+ 351      7000
+ 352              		.text
+ 353              	.Letext0:
+ 354              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
+ 355              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
+ 356              		.file 4 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/CMSIS/Include/core_cm
+ 357              		.file 5 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/CMSIS/Device/ST/STM32
+ 358              		.file 6 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/CMSIS/Device/ST/STM32
+ 359              		.file 7 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\lib\\gcc\\arm-none-eabi
+ 360              		.file 8 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
+ 361              		.file 9 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
+ 362              		.file 10 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include
+ 363              		.file 11 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver
+ 364              		.file 12 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver
+ 365              		.file 13 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver
+ 366              		.file 14 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver
+ 367              		.file 15 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver
+ 368              		.file 16 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver
+ 369              		.file 17 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver
+ 370              		.file 18 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver
+ 371              		.file 19 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver
+ 372              		.file 20 "Core/Inc\\periphs/adc.h"
+ 373              		.file 21 "Core/Inc\\periphs/i2c.h"
+ARM GAS  C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s 			page 13
+
+
+ 374              		.file 22 "Core/Inc\\periphs/spi.h"
+ 375              		.file 23 "Core/Inc\\periphs/tim.h"
+ 376              		.file 24 "Core/Inc\\periphs/usart.h"
+ 377              		.file 25 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include
+ 378              		.file 26 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include
+ 379              		.file 27 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include
+ 380              		.file 28 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include
+ 381              		.file 29 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver
+ 382              		.file 30 "Core/Inc\\periphs/gpio.h"
+ 383              		.file 31 "Core/Inc\\periphs/dma.h"
+ 384              		.file 32 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/Third_Party/Free
+ 385              		.file 33 "<built-in>"
+ARM GAS  C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s 			page 14
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.cpp
+C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s:18     .text.HAL_TIM_PeriodElapsedCallback:00000000 $t
+C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s:25     .text.HAL_TIM_PeriodElapsedCallback:00000000 HAL_TIM_PeriodElapsedCallback
+C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s:57     .text.HAL_TIM_PeriodElapsedCallback:00000014 $d
+C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s:62     .text._Error_Handler:00000000 $t
+C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s:69     .text._Error_Handler:00000000 _Error_Handler
+C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s:84     .text.Error_Handler:00000000 $t
+C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s:91     .text.Error_Handler:00000000 Error_Handler
+C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s:112    .text.Error_Handler:0000000c $d
+C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s:117    .text._Z18SystemClock_Configv:00000000 $t
+C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s:124    .text._Z18SystemClock_Configv:00000000 _Z18SystemClock_Configv
+C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s:243    .text._Z18SystemClock_Configv:000000a0 $d
+C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s:249    .text.main:00000000 $t
+C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s:256    .text.main:00000000 main
+C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s:328    .text.assert_failed:00000000 $t
+C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s:335    .text.assert_failed:00000000 assert_failed
+C:\Users\073be\AppData\Local\Temp\ccTX7MW2.s:349    .rodata.Error_Handler.str1.4:00000000 $d
+
+UNDEFINED SYMBOLS
+HAL_IncTick
+memset
+HAL_RCC_OscConfig
+HAL_RCC_ClockConfig
+HAL_Init
+MX_GPIO_Init
+MX_DMA_Init
+MX_I2C1_Init
+MX_ADC1_Init
+MX_SPI1_Init
+MX_USART3_UART_Init
+MX_TIM4_Init
+MX_TIM3_Init
+MX_TIM2_Init
+MX_TIM1_Init
+MX_TIM8_Init
+MX_UART4_Init
+MX_USART2_UART_Init
+MX_SPI2_Init
+MX_FREERTOS_Init
+osKernelStart

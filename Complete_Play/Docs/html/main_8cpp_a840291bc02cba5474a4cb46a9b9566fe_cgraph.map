@@ -1,0 +1,26 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="The application entry point." alt="" coords="5,385,56,412"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration." alt="" coords="114,5,257,32"/>
+<area shape="rect" id="node5" href="$gpio_8h.html#ac724e431d2af879252de35615be2bdea" title=" " alt="" coords="134,56,237,83"/>
+<area shape="rect" id="node6" href="$dma_8h.html#a323249dac769f9855c10b4ec9446b707" title=" " alt="" coords="135,107,235,133"/>
+<area shape="rect" id="node7" href="$i2c_8h.html#ada6e763cfa4108a8d24cd27b75f2f489" title=" " alt="" coords="137,157,234,184"/>
+<area shape="rect" id="node9" href="$adc_8h.html#acccd58aa70215a6b184ad242312ffd0c" title=" " alt="" coords="133,208,238,235"/>
+<area shape="rect" id="node10" href="$spi_8h.html#af81398f9775695df0b172367651ca3e6" title=" " alt="" coords="136,259,235,285"/>
+<area shape="rect" id="node11" href="$usart_8h.html#a3d04b903a77089f6ce08dd0bf1c81a81" title=" " alt="" coords="104,309,267,336"/>
+<area shape="rect" id="node12" href="$tim_8h.html#aef1e0b132b1af1c923cc420a57180c67" title=" " alt="" coords="136,360,235,387"/>
+<area shape="rect" id="node13" href="$tim_8h.html#a7912f2916786a2c33cb6fb8259ade58c" title=" " alt="" coords="136,411,235,437"/>
+<area shape="rect" id="node14" href="$tim_8h.html#a4b8ff887fd3fdf26605e35927e4ff202" title=" " alt="" coords="136,461,235,488"/>
+<area shape="rect" id="node15" href="$tim_8h.html#ad1f9d42690163f73f73e5b820c81ca14" title=" " alt="" coords="136,512,235,539"/>
+<area shape="rect" id="node16" href="$tim_8h.html#a265aef7a46164094e791259bf59d9cb4" title=" " alt="" coords="136,715,235,741"/>
+<area shape="rect" id="node18" href="$usart_8h.html#a41df2bc0e6f13b33f862ea4eddfc6a23" title=" " alt="" coords="129,563,241,589"/>
+<area shape="rect" id="node19" href="$usart_8h.html#a052088fe5bb3f807a4b2502e664fd4fd" title=" " alt="" coords="104,613,267,640"/>
+<area shape="rect" id="node20" href="$spi_8h.html#aea85daa666c03d85fd59edef711ebb08" title=" " alt="" coords="136,664,235,691"/>
+<area shape="rect" id="node21" href="$main_8cpp.html#abade755e13d07c10889ae83143656158" title="FreeRTOS initialization." alt="" coords="115,791,256,817"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="339,183,441,209"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a425dc7e549f2b17a4f48496d9561d248" title=" " alt="" coords="513,297,621,324"/>
+<area shape="rect" id="node8" href="$main_8h.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="339,411,441,437"/>
+<area shape="rect" id="node17" href="$tim_8c.html#a708f19bbc41b292fccf38f2d9796c46a" title=" " alt="" coords="315,701,465,728"/>
+<area shape="rect" id="node22" href="$freertos_8c.html#a016544463b4842ced7191baf8f449cea" title="Function implementing the defaultTask thread." alt="" coords="331,752,449,779"/>
+<area shape="rect" id="node23" href="$freertos_8c.html#a4e5b32a2e15bb82416f89b7a733d1e09" title="Function implementing the RoboSequence thread." alt="" coords="343,803,437,829"/>
+<area shape="rect" id="node24" href="$freertos_8c.html#a8bdf1b0904a1ea40164f181f7e86f4ef" title="Function implementing the logging thread." alt="" coords="337,853,443,880"/>
+</map>

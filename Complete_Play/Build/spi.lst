@@ -1,0 +1,783 @@
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cc11bs9b.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"spi.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.MX_SPI1_Init,"ax",%progbits
+  18              		.align	1
+  19              		.global	MX_SPI1_Init
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu fpv4-sp-d16
+  25              	MX_SPI1_Init:
+  26              	.LFB126:
+  27              		.file 1 "Core/Src/periphs/spi.c"
+   1:Core/Src/periphs/spi.c **** /**
+   2:Core/Src/periphs/spi.c ****   ******************************************************************************
+   3:Core/Src/periphs/spi.c ****   * File Name          : SPI.c
+   4:Core/Src/periphs/spi.c ****   * Description        : This file provides code for the configuration
+   5:Core/Src/periphs/spi.c ****   *                      of the SPI instances.
+   6:Core/Src/periphs/spi.c ****   ******************************************************************************
+   7:Core/Src/periphs/spi.c ****   * This notice applies to any and all portions of this file
+   8:Core/Src/periphs/spi.c ****   * that are not between comment pairs USER CODE BEGIN and
+   9:Core/Src/periphs/spi.c ****   * USER CODE END. Other portions of this file, whether 
+  10:Core/Src/periphs/spi.c ****   * inserted by the user or by software development tools
+  11:Core/Src/periphs/spi.c ****   * are owned by their respective copyright owners.
+  12:Core/Src/periphs/spi.c ****   *
+  13:Core/Src/periphs/spi.c ****   * Copyright (c) 2018 STMicroelectronics International N.V. 
+  14:Core/Src/periphs/spi.c ****   * All rights reserved.
+  15:Core/Src/periphs/spi.c ****   *
+  16:Core/Src/periphs/spi.c ****   * Redistribution and use in source and binary forms, with or without 
+  17:Core/Src/periphs/spi.c ****   * modification, are permitted, provided that the following conditions are met:
+  18:Core/Src/periphs/spi.c ****   *
+  19:Core/Src/periphs/spi.c ****   * 1. Redistribution of source code must retain the above copyright notice, 
+  20:Core/Src/periphs/spi.c ****   *    this list of conditions and the following disclaimer.
+  21:Core/Src/periphs/spi.c ****   * 2. Redistributions in binary form must reproduce the above copyright notice,
+  22:Core/Src/periphs/spi.c ****   *    this list of conditions and the following disclaimer in the documentation
+  23:Core/Src/periphs/spi.c ****   *    and/or other materials provided with the distribution.
+  24:Core/Src/periphs/spi.c ****   * 3. Neither the name of STMicroelectronics nor the names of other 
+  25:Core/Src/periphs/spi.c ****   *    contributors to this software may be used to endorse or promote products 
+  26:Core/Src/periphs/spi.c ****   *    derived from this software without specific written permission.
+  27:Core/Src/periphs/spi.c ****   * 4. This software, including modifications and/or derivative works of this 
+  28:Core/Src/periphs/spi.c ****   *    software, must execute solely and exclusively on microcontroller or
+  29:Core/Src/periphs/spi.c ****   *    microprocessor devices manufactured by or for STMicroelectronics.
+  30:Core/Src/periphs/spi.c ****   * 5. Redistribution and use of this software other than as permitted under 
+  31:Core/Src/periphs/spi.c ****   *    this license is void and will automatically terminate your rights under 
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cc11bs9b.s 			page 2
+
+
+  32:Core/Src/periphs/spi.c ****   *    this license. 
+  33:Core/Src/periphs/spi.c ****   *
+  34:Core/Src/periphs/spi.c ****   * THIS SOFTWARE IS PROVIDED BY STMICROELECTRONICS AND CONTRIBUTORS "AS IS" 
+  35:Core/Src/periphs/spi.c ****   * AND ANY EXPRESS, IMPLIED OR STATUTORY WARRANTIES, INCLUDING, BUT NOT 
+  36:Core/Src/periphs/spi.c ****   * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+  37:Core/Src/periphs/spi.c ****   * PARTICULAR PURPOSE AND NON-INFRINGEMENT OF THIRD PARTY INTELLECTUAL PROPERTY
+  38:Core/Src/periphs/spi.c ****   * RIGHTS ARE DISCLAIMED TO THE FULLEST EXTENT PERMITTED BY LAW. IN NO EVENT 
+  39:Core/Src/periphs/spi.c ****   * SHALL STMICROELECTRONICS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+  40:Core/Src/periphs/spi.c ****   * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  41:Core/Src/periphs/spi.c ****   * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, 
+  42:Core/Src/periphs/spi.c ****   * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
+  43:Core/Src/periphs/spi.c ****   * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
+  44:Core/Src/periphs/spi.c ****   * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+  45:Core/Src/periphs/spi.c ****   * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  46:Core/Src/periphs/spi.c ****   *
+  47:Core/Src/periphs/spi.c ****   ******************************************************************************
+  48:Core/Src/periphs/spi.c ****   */
+  49:Core/Src/periphs/spi.c **** 
+  50:Core/Src/periphs/spi.c **** /* Includes ------------------------------------------------------------------*/
+  51:Core/Src/periphs/spi.c **** #include "spi.h"
+  52:Core/Src/periphs/spi.c **** 
+  53:Core/Src/periphs/spi.c **** /* USER CODE BEGIN 0 */
+  54:Core/Src/periphs/spi.c **** 
+  55:Core/Src/periphs/spi.c **** /* USER CODE END 0 */
+  56:Core/Src/periphs/spi.c **** 
+  57:Core/Src/periphs/spi.c **** SPI_HandleTypeDef hspi1;
+  58:Core/Src/periphs/spi.c **** SPI_HandleTypeDef hspi2;
+  59:Core/Src/periphs/spi.c **** 
+  60:Core/Src/periphs/spi.c **** /* SPI1 init function */
+  61:Core/Src/periphs/spi.c **** void MX_SPI1_Init(void)
+  62:Core/Src/periphs/spi.c **** {
+  28              		.loc 1 62 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              	.LCFI0:
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 3, -8
+  36              		.cfi_offset 14, -4
+  63:Core/Src/periphs/spi.c **** 
+  64:Core/Src/periphs/spi.c ****   hspi1.Instance = SPI1;
+  37              		.loc 1 64 0
+  38 0002 0D48     		ldr	r0, .L5
+  39 0004 0D4B     		ldr	r3, .L5+4
+  40 0006 0360     		str	r3, [r0]
+  65:Core/Src/periphs/spi.c ****   hspi1.Init.Mode = SPI_MODE_MASTER;
+  41              		.loc 1 65 0
+  42 0008 4FF48273 		mov	r3, #260
+  43 000c 4360     		str	r3, [r0, #4]
+  66:Core/Src/periphs/spi.c ****   hspi1.Init.Direction = SPI_DIRECTION_2LINES;
+  44              		.loc 1 66 0
+  45 000e 0023     		movs	r3, #0
+  46 0010 8360     		str	r3, [r0, #8]
+  67:Core/Src/periphs/spi.c ****   hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
+  47              		.loc 1 67 0
+  48 0012 C360     		str	r3, [r0, #12]
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cc11bs9b.s 			page 3
+
+
+  68:Core/Src/periphs/spi.c ****   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
+  49              		.loc 1 68 0
+  50 0014 0361     		str	r3, [r0, #16]
+  69:Core/Src/periphs/spi.c ****   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
+  51              		.loc 1 69 0
+  52 0016 4361     		str	r3, [r0, #20]
+  70:Core/Src/periphs/spi.c ****   hspi1.Init.NSS = SPI_NSS_SOFT;
+  53              		.loc 1 70 0
+  54 0018 4FF40072 		mov	r2, #512
+  55 001c 8261     		str	r2, [r0, #24]
+  71:Core/Src/periphs/spi.c ****   hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
+  56              		.loc 1 71 0
+  57 001e C361     		str	r3, [r0, #28]
+  72:Core/Src/periphs/spi.c ****   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
+  58              		.loc 1 72 0
+  59 0020 0362     		str	r3, [r0, #32]
+  73:Core/Src/periphs/spi.c ****   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
+  60              		.loc 1 73 0
+  61 0022 4362     		str	r3, [r0, #36]
+  74:Core/Src/periphs/spi.c ****   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
+  62              		.loc 1 74 0
+  63 0024 8362     		str	r3, [r0, #40]
+  75:Core/Src/periphs/spi.c ****   hspi1.Init.CRCPolynomial = 10;
+  64              		.loc 1 75 0
+  65 0026 0A23     		movs	r3, #10
+  66 0028 C362     		str	r3, [r0, #44]
+  76:Core/Src/periphs/spi.c ****   if (HAL_SPI_Init(&hspi1) != HAL_OK)
+  67              		.loc 1 76 0
+  68 002a FFF7FEFF 		bl	HAL_SPI_Init
+  69              	.LVL0:
+  70 002e 00B9     		cbnz	r0, .L4
+  71              	.L1:
+  77:Core/Src/periphs/spi.c ****   {
+  78:Core/Src/periphs/spi.c ****     Error_Handler();
+  79:Core/Src/periphs/spi.c ****   }
+  80:Core/Src/periphs/spi.c **** 
+  81:Core/Src/periphs/spi.c **** }
+  72              		.loc 1 81 0
+  73 0030 08BD     		pop	{r3, pc}
+  74              	.L4:
+  78:Core/Src/periphs/spi.c ****   }
+  75              		.loc 1 78 0
+  76 0032 FFF7FEFF 		bl	Error_Handler
+  77              	.LVL1:
+  78              		.loc 1 81 0
+  79 0036 FBE7     		b	.L1
+  80              	.L6:
+  81              		.align	2
+  82              	.L5:
+  83 0038 00000000 		.word	hspi1
+  84 003c 00300140 		.word	1073819648
+  85              		.cfi_endproc
+  86              	.LFE126:
+  88              		.section	.text.MX_SPI2_Init,"ax",%progbits
+  89              		.align	1
+  90              		.global	MX_SPI2_Init
+  91              		.syntax unified
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cc11bs9b.s 			page 4
+
+
+  92              		.thumb
+  93              		.thumb_func
+  94              		.fpu fpv4-sp-d16
+  96              	MX_SPI2_Init:
+  97              	.LFB127:
+  82:Core/Src/periphs/spi.c **** /* SPI2 init function */
+  83:Core/Src/periphs/spi.c **** void MX_SPI2_Init(void)
+  84:Core/Src/periphs/spi.c **** {
+  98              		.loc 1 84 0
+  99              		.cfi_startproc
+ 100              		@ args = 0, pretend = 0, frame = 0
+ 101              		@ frame_needed = 0, uses_anonymous_args = 0
+ 102 0000 08B5     		push	{r3, lr}
+ 103              	.LCFI1:
+ 104              		.cfi_def_cfa_offset 8
+ 105              		.cfi_offset 3, -8
+ 106              		.cfi_offset 14, -4
+  85:Core/Src/periphs/spi.c **** 
+  86:Core/Src/periphs/spi.c ****   hspi2.Instance = SPI2;
+ 107              		.loc 1 86 0
+ 108 0002 0D48     		ldr	r0, .L11
+ 109 0004 0D4B     		ldr	r3, .L11+4
+ 110 0006 0360     		str	r3, [r0]
+  87:Core/Src/periphs/spi.c ****   hspi2.Init.Mode = SPI_MODE_MASTER;
+ 111              		.loc 1 87 0
+ 112 0008 4FF48273 		mov	r3, #260
+ 113 000c 4360     		str	r3, [r0, #4]
+  88:Core/Src/periphs/spi.c ****   hspi2.Init.Direction = SPI_DIRECTION_2LINES;
+ 114              		.loc 1 88 0
+ 115 000e 0023     		movs	r3, #0
+ 116 0010 8360     		str	r3, [r0, #8]
+  89:Core/Src/periphs/spi.c ****   hspi2.Init.DataSize = SPI_DATASIZE_8BIT;
+ 117              		.loc 1 89 0
+ 118 0012 C360     		str	r3, [r0, #12]
+  90:Core/Src/periphs/spi.c ****   hspi2.Init.CLKPolarity = SPI_POLARITY_LOW;
+ 119              		.loc 1 90 0
+ 120 0014 0361     		str	r3, [r0, #16]
+  91:Core/Src/periphs/spi.c ****   hspi2.Init.CLKPhase = SPI_PHASE_1EDGE;
+ 121              		.loc 1 91 0
+ 122 0016 4361     		str	r3, [r0, #20]
+  92:Core/Src/periphs/spi.c ****   hspi2.Init.NSS = SPI_NSS_SOFT;
+ 123              		.loc 1 92 0
+ 124 0018 4FF40072 		mov	r2, #512
+ 125 001c 8261     		str	r2, [r0, #24]
+  93:Core/Src/periphs/spi.c ****   hspi2.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
+ 126              		.loc 1 93 0
+ 127 001e C361     		str	r3, [r0, #28]
+  94:Core/Src/periphs/spi.c ****   hspi2.Init.FirstBit = SPI_FIRSTBIT_MSB;
+ 128              		.loc 1 94 0
+ 129 0020 0362     		str	r3, [r0, #32]
+  95:Core/Src/periphs/spi.c ****   hspi2.Init.TIMode = SPI_TIMODE_DISABLE;
+ 130              		.loc 1 95 0
+ 131 0022 4362     		str	r3, [r0, #36]
+  96:Core/Src/periphs/spi.c ****   hspi2.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
+ 132              		.loc 1 96 0
+ 133 0024 8362     		str	r3, [r0, #40]
+  97:Core/Src/periphs/spi.c ****   hspi2.Init.CRCPolynomial = 10;
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cc11bs9b.s 			page 5
+
+
+ 134              		.loc 1 97 0
+ 135 0026 0A23     		movs	r3, #10
+ 136 0028 C362     		str	r3, [r0, #44]
+  98:Core/Src/periphs/spi.c ****   if (HAL_SPI_Init(&hspi2) != HAL_OK)
+ 137              		.loc 1 98 0
+ 138 002a FFF7FEFF 		bl	HAL_SPI_Init
+ 139              	.LVL2:
+ 140 002e 00B9     		cbnz	r0, .L10
+ 141              	.L7:
+  99:Core/Src/periphs/spi.c ****   {
+ 100:Core/Src/periphs/spi.c ****     Error_Handler();
+ 101:Core/Src/periphs/spi.c ****   }
+ 102:Core/Src/periphs/spi.c **** 
+ 103:Core/Src/periphs/spi.c **** }
+ 142              		.loc 1 103 0
+ 143 0030 08BD     		pop	{r3, pc}
+ 144              	.L10:
+ 100:Core/Src/periphs/spi.c ****   }
+ 145              		.loc 1 100 0
+ 146 0032 FFF7FEFF 		bl	Error_Handler
+ 147              	.LVL3:
+ 148              		.loc 1 103 0
+ 149 0036 FBE7     		b	.L7
+ 150              	.L12:
+ 151              		.align	2
+ 152              	.L11:
+ 153 0038 00000000 		.word	hspi2
+ 154 003c 00380040 		.word	1073756160
+ 155              		.cfi_endproc
+ 156              	.LFE127:
+ 158              		.section	.text.HAL_SPI_MspInit,"ax",%progbits
+ 159              		.align	1
+ 160              		.global	HAL_SPI_MspInit
+ 161              		.syntax unified
+ 162              		.thumb
+ 163              		.thumb_func
+ 164              		.fpu fpv4-sp-d16
+ 166              	HAL_SPI_MspInit:
+ 167              	.LFB128:
+ 104:Core/Src/periphs/spi.c **** 
+ 105:Core/Src/periphs/spi.c **** void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
+ 106:Core/Src/periphs/spi.c **** {
+ 168              		.loc 1 106 0
+ 169              		.cfi_startproc
+ 170              		@ args = 0, pretend = 0, frame = 48
+ 171              		@ frame_needed = 0, uses_anonymous_args = 0
+ 172              	.LVL4:
+ 173 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 174              	.LCFI2:
+ 175              		.cfi_def_cfa_offset 20
+ 176              		.cfi_offset 4, -20
+ 177              		.cfi_offset 5, -16
+ 178              		.cfi_offset 6, -12
+ 179              		.cfi_offset 7, -8
+ 180              		.cfi_offset 14, -4
+ 181 0002 8DB0     		sub	sp, sp, #52
+ 182              	.LCFI3:
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cc11bs9b.s 			page 6
+
+
+ 183              		.cfi_def_cfa_offset 72
+ 107:Core/Src/periphs/spi.c **** 
+ 108:Core/Src/periphs/spi.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
+ 184              		.loc 1 108 0
+ 185 0004 0023     		movs	r3, #0
+ 186 0006 0793     		str	r3, [sp, #28]
+ 187 0008 0893     		str	r3, [sp, #32]
+ 188 000a 0993     		str	r3, [sp, #36]
+ 189 000c 0A93     		str	r3, [sp, #40]
+ 190 000e 0B93     		str	r3, [sp, #44]
+ 109:Core/Src/periphs/spi.c ****   if(spiHandle->Instance==SPI1)
+ 191              		.loc 1 109 0
+ 192 0010 0368     		ldr	r3, [r0]
+ 193 0012 3B4A     		ldr	r2, .L19
+ 194 0014 9342     		cmp	r3, r2
+ 195 0016 04D0     		beq	.L17
+ 110:Core/Src/periphs/spi.c ****   {
+ 111:Core/Src/periphs/spi.c ****   /* USER CODE BEGIN SPI1_MspInit 0 */
+ 112:Core/Src/periphs/spi.c **** 
+ 113:Core/Src/periphs/spi.c ****   /* USER CODE END SPI1_MspInit 0 */
+ 114:Core/Src/periphs/spi.c ****     /* SPI1 clock enable */
+ 115:Core/Src/periphs/spi.c ****     __HAL_RCC_SPI1_CLK_ENABLE();
+ 116:Core/Src/periphs/spi.c ****   
+ 117:Core/Src/periphs/spi.c ****     __HAL_RCC_GPIOA_CLK_ENABLE();
+ 118:Core/Src/periphs/spi.c ****     __HAL_RCC_GPIOB_CLK_ENABLE();
+ 119:Core/Src/periphs/spi.c ****     /**SPI1 GPIO Configuration    
+ 120:Core/Src/periphs/spi.c ****     PA5     ------> SPI1_SCK
+ 121:Core/Src/periphs/spi.c ****     PB4     ------> SPI1_MISO
+ 122:Core/Src/periphs/spi.c ****     PB5     ------> SPI1_MOSI 
+ 123:Core/Src/periphs/spi.c ****     */
+ 124:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Pin = GPIO_PIN_5;
+ 125:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 126:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 127:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 128:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Alternate = GPIO_AF5_SPI1;
+ 129:Core/Src/periphs/spi.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 130:Core/Src/periphs/spi.c **** 
+ 131:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Pin = GPIO_PIN_4|GPIO_PIN_5;
+ 132:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 133:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 134:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 135:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Alternate = GPIO_AF5_SPI1;
+ 136:Core/Src/periphs/spi.c ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 137:Core/Src/periphs/spi.c **** 
+ 138:Core/Src/periphs/spi.c ****   /* USER CODE BEGIN SPI1_MspInit 1 */
+ 139:Core/Src/periphs/spi.c **** 
+ 140:Core/Src/periphs/spi.c ****   /* USER CODE END SPI1_MspInit 1 */
+ 141:Core/Src/periphs/spi.c ****   }
+ 142:Core/Src/periphs/spi.c ****   else if(spiHandle->Instance==SPI2)
+ 196              		.loc 1 142 0
+ 197 0018 3A4A     		ldr	r2, .L19+4
+ 198 001a 9342     		cmp	r3, r2
+ 199 001c 38D0     		beq	.L18
+ 200              	.LVL5:
+ 201              	.L13:
+ 143:Core/Src/periphs/spi.c ****   {
+ 144:Core/Src/periphs/spi.c ****   /* USER CODE BEGIN SPI2_MspInit 0 */
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cc11bs9b.s 			page 7
+
+
+ 145:Core/Src/periphs/spi.c **** 
+ 146:Core/Src/periphs/spi.c ****   /* USER CODE END SPI2_MspInit 0 */
+ 147:Core/Src/periphs/spi.c ****     /* SPI2 clock enable */
+ 148:Core/Src/periphs/spi.c ****     __HAL_RCC_SPI2_CLK_ENABLE();
+ 149:Core/Src/periphs/spi.c ****   
+ 150:Core/Src/periphs/spi.c ****     __HAL_RCC_GPIOC_CLK_ENABLE();
+ 151:Core/Src/periphs/spi.c ****     __HAL_RCC_GPIOB_CLK_ENABLE();
+ 152:Core/Src/periphs/spi.c ****     /**SPI2 GPIO Configuration    
+ 153:Core/Src/periphs/spi.c ****     PC2     ------> SPI2_MISO
+ 154:Core/Src/periphs/spi.c ****     PC3     ------> SPI2_MOSI
+ 155:Core/Src/periphs/spi.c ****     PB10     ------> SPI2_SCK 
+ 156:Core/Src/periphs/spi.c ****     */
+ 157:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Pin = GPIO_PIN_2|GPIO_PIN_3;
+ 158:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 159:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 160:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 161:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Alternate = GPIO_AF5_SPI2;
+ 162:Core/Src/periphs/spi.c ****     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+ 163:Core/Src/periphs/spi.c **** 
+ 164:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Pin = GPIO_PIN_10;
+ 165:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 166:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 167:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 168:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Alternate = GPIO_AF5_SPI2;
+ 169:Core/Src/periphs/spi.c ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 170:Core/Src/periphs/spi.c **** 
+ 171:Core/Src/periphs/spi.c ****   /* USER CODE BEGIN SPI2_MspInit 1 */
+ 172:Core/Src/periphs/spi.c **** 
+ 173:Core/Src/periphs/spi.c ****   /* USER CODE END SPI2_MspInit 1 */
+ 174:Core/Src/periphs/spi.c ****   }
+ 175:Core/Src/periphs/spi.c **** }
+ 202              		.loc 1 175 0
+ 203 001e 0DB0     		add	sp, sp, #52
+ 204              	.LCFI4:
+ 205              		.cfi_remember_state
+ 206              		.cfi_def_cfa_offset 20
+ 207              		@ sp needed
+ 208 0020 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 209              	.LVL6:
+ 210              	.L17:
+ 211              	.LCFI5:
+ 212              		.cfi_restore_state
+ 213              	.LBB2:
+ 115:Core/Src/periphs/spi.c ****   
+ 214              		.loc 1 115 0
+ 215 0022 0024     		movs	r4, #0
+ 216 0024 0194     		str	r4, [sp, #4]
+ 217 0026 384B     		ldr	r3, .L19+8
+ 218 0028 5A6C     		ldr	r2, [r3, #68]
+ 219 002a 42F48052 		orr	r2, r2, #4096
+ 220 002e 5A64     		str	r2, [r3, #68]
+ 221 0030 5A6C     		ldr	r2, [r3, #68]
+ 222 0032 02F48052 		and	r2, r2, #4096
+ 223 0036 0192     		str	r2, [sp, #4]
+ 224 0038 019A     		ldr	r2, [sp, #4]
+ 225              	.LBE2:
+ 226              	.LBB3:
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cc11bs9b.s 			page 8
+
+
+ 117:Core/Src/periphs/spi.c ****     __HAL_RCC_GPIOB_CLK_ENABLE();
+ 227              		.loc 1 117 0
+ 228 003a 0294     		str	r4, [sp, #8]
+ 229 003c 1A6B     		ldr	r2, [r3, #48]
+ 230 003e 42F00102 		orr	r2, r2, #1
+ 231 0042 1A63     		str	r2, [r3, #48]
+ 232 0044 1A6B     		ldr	r2, [r3, #48]
+ 233 0046 02F00102 		and	r2, r2, #1
+ 234 004a 0292     		str	r2, [sp, #8]
+ 235 004c 029A     		ldr	r2, [sp, #8]
+ 236              	.LBE3:
+ 237              	.LBB4:
+ 118:Core/Src/periphs/spi.c ****     /**SPI1 GPIO Configuration    
+ 238              		.loc 1 118 0
+ 239 004e 0394     		str	r4, [sp, #12]
+ 240 0050 1A6B     		ldr	r2, [r3, #48]
+ 241 0052 42F00202 		orr	r2, r2, #2
+ 242 0056 1A63     		str	r2, [r3, #48]
+ 243 0058 1B6B     		ldr	r3, [r3, #48]
+ 244 005a 03F00203 		and	r3, r3, #2
+ 245 005e 0393     		str	r3, [sp, #12]
+ 246 0060 039B     		ldr	r3, [sp, #12]
+ 247              	.LBE4:
+ 124:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 248              		.loc 1 124 0
+ 249 0062 2023     		movs	r3, #32
+ 250 0064 0793     		str	r3, [sp, #28]
+ 125:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 251              		.loc 1 125 0
+ 252 0066 0227     		movs	r7, #2
+ 253 0068 0897     		str	r7, [sp, #32]
+ 127:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Alternate = GPIO_AF5_SPI1;
+ 254              		.loc 1 127 0
+ 255 006a 0326     		movs	r6, #3
+ 256 006c 0A96     		str	r6, [sp, #40]
+ 128:Core/Src/periphs/spi.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 257              		.loc 1 128 0
+ 258 006e 0525     		movs	r5, #5
+ 259 0070 0B95     		str	r5, [sp, #44]
+ 129:Core/Src/periphs/spi.c **** 
+ 260              		.loc 1 129 0
+ 261 0072 07A9     		add	r1, sp, #28
+ 262 0074 2548     		ldr	r0, .L19+12
+ 263              	.LVL7:
+ 264 0076 FFF7FEFF 		bl	HAL_GPIO_Init
+ 265              	.LVL8:
+ 131:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 266              		.loc 1 131 0
+ 267 007a 3023     		movs	r3, #48
+ 268 007c 0793     		str	r3, [sp, #28]
+ 132:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 269              		.loc 1 132 0
+ 270 007e 0897     		str	r7, [sp, #32]
+ 133:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 271              		.loc 1 133 0
+ 272 0080 0994     		str	r4, [sp, #36]
+ 134:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Alternate = GPIO_AF5_SPI1;
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cc11bs9b.s 			page 9
+
+
+ 273              		.loc 1 134 0
+ 274 0082 0A96     		str	r6, [sp, #40]
+ 135:Core/Src/periphs/spi.c ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 275              		.loc 1 135 0
+ 276 0084 0B95     		str	r5, [sp, #44]
+ 136:Core/Src/periphs/spi.c **** 
+ 277              		.loc 1 136 0
+ 278 0086 07A9     		add	r1, sp, #28
+ 279 0088 2148     		ldr	r0, .L19+16
+ 280 008a FFF7FEFF 		bl	HAL_GPIO_Init
+ 281              	.LVL9:
+ 282 008e C6E7     		b	.L13
+ 283              	.LVL10:
+ 284              	.L18:
+ 285              	.LBB5:
+ 148:Core/Src/periphs/spi.c ****   
+ 286              		.loc 1 148 0
+ 287 0090 0024     		movs	r4, #0
+ 288 0092 0494     		str	r4, [sp, #16]
+ 289 0094 1C4B     		ldr	r3, .L19+8
+ 290 0096 1A6C     		ldr	r2, [r3, #64]
+ 291 0098 42F48042 		orr	r2, r2, #16384
+ 292 009c 1A64     		str	r2, [r3, #64]
+ 293 009e 1A6C     		ldr	r2, [r3, #64]
+ 294 00a0 02F48042 		and	r2, r2, #16384
+ 295 00a4 0492     		str	r2, [sp, #16]
+ 296 00a6 049A     		ldr	r2, [sp, #16]
+ 297              	.LBE5:
+ 298              	.LBB6:
+ 150:Core/Src/periphs/spi.c ****     __HAL_RCC_GPIOB_CLK_ENABLE();
+ 299              		.loc 1 150 0
+ 300 00a8 0594     		str	r4, [sp, #20]
+ 301 00aa 1A6B     		ldr	r2, [r3, #48]
+ 302 00ac 42F00402 		orr	r2, r2, #4
+ 303 00b0 1A63     		str	r2, [r3, #48]
+ 304 00b2 1A6B     		ldr	r2, [r3, #48]
+ 305 00b4 02F00402 		and	r2, r2, #4
+ 306 00b8 0592     		str	r2, [sp, #20]
+ 307 00ba 059A     		ldr	r2, [sp, #20]
+ 308              	.LBE6:
+ 309              	.LBB7:
+ 151:Core/Src/periphs/spi.c ****     /**SPI2 GPIO Configuration    
+ 310              		.loc 1 151 0
+ 311 00bc 0694     		str	r4, [sp, #24]
+ 312 00be 1A6B     		ldr	r2, [r3, #48]
+ 313 00c0 42F00202 		orr	r2, r2, #2
+ 314 00c4 1A63     		str	r2, [r3, #48]
+ 315 00c6 1B6B     		ldr	r3, [r3, #48]
+ 316 00c8 03F00203 		and	r3, r3, #2
+ 317 00cc 0693     		str	r3, [sp, #24]
+ 318 00ce 069B     		ldr	r3, [sp, #24]
+ 319              	.LBE7:
+ 157:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 320              		.loc 1 157 0
+ 321 00d0 0C23     		movs	r3, #12
+ 322 00d2 0793     		str	r3, [sp, #28]
+ 158:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cc11bs9b.s 			page 10
+
+
+ 323              		.loc 1 158 0
+ 324 00d4 0227     		movs	r7, #2
+ 325 00d6 0897     		str	r7, [sp, #32]
+ 160:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Alternate = GPIO_AF5_SPI2;
+ 326              		.loc 1 160 0
+ 327 00d8 0326     		movs	r6, #3
+ 328 00da 0A96     		str	r6, [sp, #40]
+ 161:Core/Src/periphs/spi.c ****     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+ 329              		.loc 1 161 0
+ 330 00dc 0525     		movs	r5, #5
+ 331 00de 0B95     		str	r5, [sp, #44]
+ 162:Core/Src/periphs/spi.c **** 
+ 332              		.loc 1 162 0
+ 333 00e0 07A9     		add	r1, sp, #28
+ 334 00e2 0C48     		ldr	r0, .L19+20
+ 335              	.LVL11:
+ 336 00e4 FFF7FEFF 		bl	HAL_GPIO_Init
+ 337              	.LVL12:
+ 164:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 338              		.loc 1 164 0
+ 339 00e8 4FF48063 		mov	r3, #1024
+ 340 00ec 0793     		str	r3, [sp, #28]
+ 165:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 341              		.loc 1 165 0
+ 342 00ee 0897     		str	r7, [sp, #32]
+ 166:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 343              		.loc 1 166 0
+ 344 00f0 0994     		str	r4, [sp, #36]
+ 167:Core/Src/periphs/spi.c ****     GPIO_InitStruct.Alternate = GPIO_AF5_SPI2;
+ 345              		.loc 1 167 0
+ 346 00f2 0A96     		str	r6, [sp, #40]
+ 168:Core/Src/periphs/spi.c ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 347              		.loc 1 168 0
+ 348 00f4 0B95     		str	r5, [sp, #44]
+ 169:Core/Src/periphs/spi.c **** 
+ 349              		.loc 1 169 0
+ 350 00f6 07A9     		add	r1, sp, #28
+ 351 00f8 0548     		ldr	r0, .L19+16
+ 352 00fa FFF7FEFF 		bl	HAL_GPIO_Init
+ 353              	.LVL13:
+ 354              		.loc 1 175 0
+ 355 00fe 8EE7     		b	.L13
+ 356              	.L20:
+ 357              		.align	2
+ 358              	.L19:
+ 359 0100 00300140 		.word	1073819648
+ 360 0104 00380040 		.word	1073756160
+ 361 0108 00380240 		.word	1073887232
+ 362 010c 00000240 		.word	1073872896
+ 363 0110 00040240 		.word	1073873920
+ 364 0114 00080240 		.word	1073874944
+ 365              		.cfi_endproc
+ 366              	.LFE128:
+ 368              		.section	.text.HAL_SPI_MspDeInit,"ax",%progbits
+ 369              		.align	1
+ 370              		.global	HAL_SPI_MspDeInit
+ 371              		.syntax unified
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cc11bs9b.s 			page 11
+
+
+ 372              		.thumb
+ 373              		.thumb_func
+ 374              		.fpu fpv4-sp-d16
+ 376              	HAL_SPI_MspDeInit:
+ 377              	.LFB129:
+ 176:Core/Src/periphs/spi.c **** 
+ 177:Core/Src/periphs/spi.c **** void HAL_SPI_MspDeInit(SPI_HandleTypeDef* spiHandle)
+ 178:Core/Src/periphs/spi.c **** {
+ 378              		.loc 1 178 0
+ 379              		.cfi_startproc
+ 380              		@ args = 0, pretend = 0, frame = 0
+ 381              		@ frame_needed = 0, uses_anonymous_args = 0
+ 382              	.LVL14:
+ 383 0000 08B5     		push	{r3, lr}
+ 384              	.LCFI6:
+ 385              		.cfi_def_cfa_offset 8
+ 386              		.cfi_offset 3, -8
+ 387              		.cfi_offset 14, -4
+ 179:Core/Src/periphs/spi.c **** 
+ 180:Core/Src/periphs/spi.c ****   if(spiHandle->Instance==SPI1)
+ 388              		.loc 1 180 0
+ 389 0002 0368     		ldr	r3, [r0]
+ 390 0004 124A     		ldr	r2, .L27
+ 391 0006 9342     		cmp	r3, r2
+ 392 0008 03D0     		beq	.L25
+ 181:Core/Src/periphs/spi.c ****   {
+ 182:Core/Src/periphs/spi.c ****   /* USER CODE BEGIN SPI1_MspDeInit 0 */
+ 183:Core/Src/periphs/spi.c **** 
+ 184:Core/Src/periphs/spi.c ****   /* USER CODE END SPI1_MspDeInit 0 */
+ 185:Core/Src/periphs/spi.c ****     /* Peripheral clock disable */
+ 186:Core/Src/periphs/spi.c ****     __HAL_RCC_SPI1_CLK_DISABLE();
+ 187:Core/Src/periphs/spi.c ****   
+ 188:Core/Src/periphs/spi.c ****     /**SPI1 GPIO Configuration    
+ 189:Core/Src/periphs/spi.c ****     PA5     ------> SPI1_SCK
+ 190:Core/Src/periphs/spi.c ****     PB4     ------> SPI1_MISO
+ 191:Core/Src/periphs/spi.c ****     PB5     ------> SPI1_MOSI 
+ 192:Core/Src/periphs/spi.c ****     */
+ 193:Core/Src/periphs/spi.c ****     HAL_GPIO_DeInit(GPIOA, GPIO_PIN_5);
+ 194:Core/Src/periphs/spi.c **** 
+ 195:Core/Src/periphs/spi.c ****     HAL_GPIO_DeInit(GPIOB, GPIO_PIN_4|GPIO_PIN_5);
+ 196:Core/Src/periphs/spi.c **** 
+ 197:Core/Src/periphs/spi.c ****   /* USER CODE BEGIN SPI1_MspDeInit 1 */
+ 198:Core/Src/periphs/spi.c **** 
+ 199:Core/Src/periphs/spi.c ****   /* USER CODE END SPI1_MspDeInit 1 */
+ 200:Core/Src/periphs/spi.c ****   }
+ 201:Core/Src/periphs/spi.c ****   else if(spiHandle->Instance==SPI2)
+ 393              		.loc 1 201 0
+ 394 000a 124A     		ldr	r2, .L27+4
+ 395 000c 9342     		cmp	r3, r2
+ 396 000e 0FD0     		beq	.L26
+ 397              	.LVL15:
+ 398              	.L21:
+ 202:Core/Src/periphs/spi.c ****   {
+ 203:Core/Src/periphs/spi.c ****   /* USER CODE BEGIN SPI2_MspDeInit 0 */
+ 204:Core/Src/periphs/spi.c **** 
+ 205:Core/Src/periphs/spi.c ****   /* USER CODE END SPI2_MspDeInit 0 */
+ 206:Core/Src/periphs/spi.c ****     /* Peripheral clock disable */
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cc11bs9b.s 			page 12
+
+
+ 207:Core/Src/periphs/spi.c ****     __HAL_RCC_SPI2_CLK_DISABLE();
+ 208:Core/Src/periphs/spi.c ****   
+ 209:Core/Src/periphs/spi.c ****     /**SPI2 GPIO Configuration    
+ 210:Core/Src/periphs/spi.c ****     PC2     ------> SPI2_MISO
+ 211:Core/Src/periphs/spi.c ****     PC3     ------> SPI2_MOSI
+ 212:Core/Src/periphs/spi.c ****     PB10     ------> SPI2_SCK 
+ 213:Core/Src/periphs/spi.c ****     */
+ 214:Core/Src/periphs/spi.c ****     HAL_GPIO_DeInit(GPIOC, GPIO_PIN_2|GPIO_PIN_3);
+ 215:Core/Src/periphs/spi.c **** 
+ 216:Core/Src/periphs/spi.c ****     HAL_GPIO_DeInit(GPIOB, GPIO_PIN_10);
+ 217:Core/Src/periphs/spi.c **** 
+ 218:Core/Src/periphs/spi.c ****   /* USER CODE BEGIN SPI2_MspDeInit 1 */
+ 219:Core/Src/periphs/spi.c **** 
+ 220:Core/Src/periphs/spi.c ****   /* USER CODE END SPI2_MspDeInit 1 */
+ 221:Core/Src/periphs/spi.c ****   }
+ 222:Core/Src/periphs/spi.c **** } 
+ 399              		.loc 1 222 0
+ 400 0010 08BD     		pop	{r3, pc}
+ 401              	.LVL16:
+ 402              	.L25:
+ 186:Core/Src/periphs/spi.c ****   
+ 403              		.loc 1 186 0
+ 404 0012 02F58432 		add	r2, r2, #67584
+ 405 0016 536C     		ldr	r3, [r2, #68]
+ 406 0018 23F48053 		bic	r3, r3, #4096
+ 407 001c 5364     		str	r3, [r2, #68]
+ 193:Core/Src/periphs/spi.c **** 
+ 408              		.loc 1 193 0
+ 409 001e 2021     		movs	r1, #32
+ 410 0020 0D48     		ldr	r0, .L27+8
+ 411              	.LVL17:
+ 412 0022 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 413              	.LVL18:
+ 195:Core/Src/periphs/spi.c **** 
+ 414              		.loc 1 195 0
+ 415 0026 3021     		movs	r1, #48
+ 416 0028 0C48     		ldr	r0, .L27+12
+ 417 002a FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 418              	.LVL19:
+ 419 002e EFE7     		b	.L21
+ 420              	.LVL20:
+ 421              	.L26:
+ 207:Core/Src/periphs/spi.c ****   
+ 422              		.loc 1 207 0
+ 423 0030 02F50032 		add	r2, r2, #131072
+ 424 0034 136C     		ldr	r3, [r2, #64]
+ 425 0036 23F48043 		bic	r3, r3, #16384
+ 426 003a 1364     		str	r3, [r2, #64]
+ 214:Core/Src/periphs/spi.c **** 
+ 427              		.loc 1 214 0
+ 428 003c 0C21     		movs	r1, #12
+ 429 003e 0848     		ldr	r0, .L27+16
+ 430              	.LVL21:
+ 431 0040 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 432              	.LVL22:
+ 216:Core/Src/periphs/spi.c **** 
+ 433              		.loc 1 216 0
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cc11bs9b.s 			page 13
+
+
+ 434 0044 4FF48061 		mov	r1, #1024
+ 435 0048 0448     		ldr	r0, .L27+12
+ 436 004a FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 437              	.LVL23:
+ 438              		.loc 1 222 0
+ 439 004e DFE7     		b	.L21
+ 440              	.L28:
+ 441              		.align	2
+ 442              	.L27:
+ 443 0050 00300140 		.word	1073819648
+ 444 0054 00380040 		.word	1073756160
+ 445 0058 00000240 		.word	1073872896
+ 446 005c 00040240 		.word	1073873920
+ 447 0060 00080240 		.word	1073874944
+ 448              		.cfi_endproc
+ 449              	.LFE129:
+ 451              		.comm	hspi2,88,4
+ 452              		.comm	hspi1,88,4
+ 453              		.text
+ 454              	.Letext0:
+ 455              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
+ 456              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
+ 457              		.file 4 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/CMSIS/Include/core_cm
+ 458              		.file 5 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/CMSIS/Device/ST/STM32
+ 459              		.file 6 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/CMSIS/Device/ST/STM32
+ 460              		.file 7 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
+ 461              		.file 8 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
+ 462              		.file 9 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\lib\\gcc\\arm-none-eabi
+ 463              		.file 10 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include
+ 464              		.file 11 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver
+ 465              		.file 12 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver
+ 466              		.file 13 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver
+ 467              		.file 14 "C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver
+ 468              		.file 15 "Core/Inc\\periphs/spi.h"
+ 469              		.file 16 "Core/Inc/main.h"
+ARM GAS  C:\Users\073be\AppData\Local\Temp\cc11bs9b.s 			page 14
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 spi.c
+C:\Users\073be\AppData\Local\Temp\cc11bs9b.s:18     .text.MX_SPI1_Init:00000000 $t
+C:\Users\073be\AppData\Local\Temp\cc11bs9b.s:25     .text.MX_SPI1_Init:00000000 MX_SPI1_Init
+C:\Users\073be\AppData\Local\Temp\cc11bs9b.s:83     .text.MX_SPI1_Init:00000038 $d
+                            *COM*:00000058 hspi1
+C:\Users\073be\AppData\Local\Temp\cc11bs9b.s:89     .text.MX_SPI2_Init:00000000 $t
+C:\Users\073be\AppData\Local\Temp\cc11bs9b.s:96     .text.MX_SPI2_Init:00000000 MX_SPI2_Init
+C:\Users\073be\AppData\Local\Temp\cc11bs9b.s:153    .text.MX_SPI2_Init:00000038 $d
+                            *COM*:00000058 hspi2
+C:\Users\073be\AppData\Local\Temp\cc11bs9b.s:159    .text.HAL_SPI_MspInit:00000000 $t
+C:\Users\073be\AppData\Local\Temp\cc11bs9b.s:166    .text.HAL_SPI_MspInit:00000000 HAL_SPI_MspInit
+C:\Users\073be\AppData\Local\Temp\cc11bs9b.s:359    .text.HAL_SPI_MspInit:00000100 $d
+C:\Users\073be\AppData\Local\Temp\cc11bs9b.s:369    .text.HAL_SPI_MspDeInit:00000000 $t
+C:\Users\073be\AppData\Local\Temp\cc11bs9b.s:376    .text.HAL_SPI_MspDeInit:00000000 HAL_SPI_MspDeInit
+C:\Users\073be\AppData\Local\Temp\cc11bs9b.s:443    .text.HAL_SPI_MspDeInit:00000050 $d
+
+UNDEFINED SYMBOLS
+HAL_SPI_Init
+Error_Handler
+HAL_GPIO_Init
+HAL_GPIO_DeInit
