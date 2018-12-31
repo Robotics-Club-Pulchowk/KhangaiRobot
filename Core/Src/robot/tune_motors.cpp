@@ -41,17 +41,17 @@ void Robot::tune_motors(float set_points[4], uint32_t dt_millis)
         float max_omega;
 
         for (uint8_t i = 0; i < 4; ++i) {
-                omega[i] = gWheels[i].get_Omega(dt_millis);
+                omega[i] = wheels_[i].get_Omega(dt_millis);
                 error[i] = set_points[i] - omega[i];
-                pid = gWheels[i].get_PIDController();
+                pid = wheels_[i].get_PIDController();
                 voltage[i] = pid->compute_PID(error[i], dt_millis);
 
                 // Max Omega corresponds to the max voltage value
                 max_voltage = fabsf(pid->get_Algorithm()->get_Upper());
-                max_omega = gWheels[i].get_MaxOmega();
+                max_omega = wheels_[i].get_MaxOmega();
                 new_omega[i] = voltage[i] * max_omega / max_voltage;
 
-                gWheels[i].set_Omega(new_omega[i]);
+                wheels_[i].set_Omega(new_omega[i]);
                 // printf("(%ld, %ld)  ", (int32_t)(omega[i]*1000), (int32_t)(new_omega[i]*1000));
         }
         // printf("\n");
@@ -60,7 +60,7 @@ void Robot::tune_motors(float set_points[4], uint32_t dt_millis)
         pid = 0;
 
         for (uint8_t i = 0; i < 4; ++i) {
-                gWheels[i].update();
+                wheels_[i].update();
         }
 }
 
@@ -77,26 +77,26 @@ void Robot::ramp_down(uint32_t dt_millis)
         for (uint8_t j = 0; j < 10; ++j) {
                 
                 for (uint8_t i = 0; i < 4; ++i) {
-                        omega[i] = gWheels[i].get_Omega(dt_millis);
+                        omega[i] = wheels_[i].get_Omega(dt_millis);
                         if (fabsf(omega[i]) < 5) {
-                                gWheels[i].set_Omega(0);
+                                wheels_[i].set_Omega(0);
                         }else {
-                                pid = gWheels[i].get_PIDController();
+                                pid = wheels_[i].get_PIDController();
                                 error[i] = -(omega[i] / 2.0);
                                 voltage[i] = pid->compute_PID(error[i], dt_millis);
 
                                 // Max Omega corresponds to the max voltage value
                                 max_voltage = fabsf(pid->get_Algorithm()->get_Upper());
-                                max_omega = gWheels[i].get_MaxOmega();
+                                max_omega = wheels_[i].get_MaxOmega();
                                 new_omega[i] = voltage[i] * max_omega / max_voltage;
 
-                                gWheels[i].set_Omega(new_omega[i]);
+                                wheels_[i].set_Omega(new_omega[i]);
                         }
                 }
                 pid = 0;
 
                 for (uint8_t i = 0; i < 4; ++i) {
-                        gWheels[i].update();
+                        wheels_[i].update();
                 }
                 HAL_Delay(10);
         }

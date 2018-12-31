@@ -107,6 +107,8 @@ Core/Src/robot/tune_motors.cpp \
 Core/Src/robot/robo_init.cpp \
 Core/Src/robot/robot.cpp \
 \
+Core/Src/utils/math/mat.cpp \
+\
 Core/Src/robo_tasks.cpp \
 Core/Src/main.cpp
 ##

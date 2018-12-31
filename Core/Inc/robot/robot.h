@@ -43,7 +43,7 @@ public:
         void ramp_down(uint32_t dt_millis);
 
 private:
-        Wheel gWheels[4];       //< Our robot has exactly four wheels
+        Wheel wheels_[4];       //< Our robot has exactly four wheels
 
         Robot() { }
         void wheels_Init();

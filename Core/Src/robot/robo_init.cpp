@@ -103,8 +103,8 @@ void Robot::wheels_Init(void)
         gWheel_Configurations[3].henc = &htim4;
 
         for (uint8_t i = 0; i < 4; ++i) {
-                gWheels[i].set_Config(&gWheel_Configurations[i]);
-                gWheels[i].start_Periphs();
+                wheels_[i].set_Config(&gWheel_Configurations[i]);
+                wheels_[i].start_Periphs();
         }
 }
 
@@ -133,6 +133,6 @@ void Robot::pid_Init()
 
         for (uint8_t i = 0; i < 4; ++i) {
                 gPID[i].set_Algorithm(&gDisc_PID[i]);
-                gWheels[i].set_PIDController(&gPID[i]);
+                wheels_[i].set_PIDController(&gPID[i]);
         }
 }
