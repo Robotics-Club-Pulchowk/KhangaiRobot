@@ -172,6 +172,10 @@ C_INCLUDES =  \
 -ICore/Inc\periphs \
 -ICore/Inc\robot \
 -ICore/Inc\utils \
+-ICore/Inc\utils\container \
+-ICore/Inc\utils\control \
+-ICore/Inc\utils\filter \
+-ICore/Inc\utils\math \
 -ICore/Inc\sys \
 \
 -IUSB_DEVICE/App \

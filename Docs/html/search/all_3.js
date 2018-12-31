@@ -1,7 +1,9 @@
 var searchData=
 [
+  ['cdc_5ftransmit_5ffs',['CDC_Transmit_FS',['../group___u_s_b_d___c_d_c___i_f.html#ga5137d6201dbdef2bf351c5b4941c24f4',1,'CDC_Transmit_FS(uint8_t *Buf, uint16_t Len):&#160;usbd_cdc_if.c'],['../group___u_s_b_d___c_d_c___i_f___exported___functions_prototype.html#ga5137d6201dbdef2bf351c5b4941c24f4',1,'CDC_Transmit_FS(uint8_t *Buf, uint16_t Len):&#160;usbd_cdc_if.c']]],
   ['channel',['channel',['../struct_wheel___config.html#ae3f8d5c2be39474efec58fae14459a76',1,'Wheel_Config']]],
   ['cmsis',['CMSIS',['../group___c_m_s_i_s.html',1,'']]],
+  ['cmsis_5fos_2ed',['cmsis_os.d',['../cmsis__os_8d.html',1,'']]],
   ['compute',['compute',['../class_p_i_d___algorithm.html#a388ec97d23c981e62c3726505688e1f0',1,'PID_Algorithm::compute()'],['../class_discrete___p_i_d.html#aa4914b85e73cb5fdfcc5b40e8d0ff23c',1,'Discrete_PID::compute()']]],
   ['compute_5fpid',['compute_PID',['../class_p_i_d.html#a4d19abca579301069c3edb28fd5ff7f2',1,'PID']]],
   ['configassert',['configASSERT',['../_free_r_t_o_s_config_8h.html#a228c70cd48927d6ab730ed1a6dfbe35f',1,'FreeRTOSConfig.h']]],
@@ -25,5 +27,6 @@ var searchData=
   ['configuse_5fmutexes',['configUSE_MUTEXES',['../_free_r_t_o_s_config_8h.html#a543bf3c79008974cc1d36bab51d94fbf',1,'FreeRTOSConfig.h']]],
   ['configuse_5fport_5foptimised_5ftask_5fselection',['configUSE_PORT_OPTIMISED_TASK_SELECTION',['../_free_r_t_o_s_config_8h.html#aebb8c3a87d591f60f974772be0ee798d',1,'FreeRTOSConfig.h']]],
   ['configuse_5fpreemption',['configUSE_PREEMPTION',['../_free_r_t_o_s_config_8h.html#adde83486022745409c40605922b0bdd6',1,'FreeRTOSConfig.h']]],
-  ['configuse_5ftick_5fhook',['configUSE_TICK_HOOK',['../_free_r_t_o_s_config_8h.html#a23c5922c077106fad3f70b54d9071466',1,'FreeRTOSConfig.h']]]
+  ['configuse_5ftick_5fhook',['configUSE_TICK_HOOK',['../_free_r_t_o_s_config_8h.html#a23c5922c077106fad3f70b54d9071466',1,'FreeRTOSConfig.h']]],
+  ['croutine_2ed',['croutine.d',['../croutine_8d.html',1,'']]]
 ];

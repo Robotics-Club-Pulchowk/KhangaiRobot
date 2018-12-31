@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['systemcoreclock',['SystemCoreClock',['../group___s_t_m32_f4xx___system___private___variables.html#gaa3cd3e43291e81e795d642b79b6088e6',1,'system_stm32f4xx.c']]]
+  ['p_5f',['p_',['../class_p_i_d___algorithm.html#a6e988e5351fd21eb2227613ad8684d5c',1,'PID_Algorithm']]],
+  ['pid_5fcontroller',['pid_controller',['../struct_wheel___config.html#a35ab88cb85d55d061b214a3f8ee56d33',1,'Wheel_Config']]]
 ];

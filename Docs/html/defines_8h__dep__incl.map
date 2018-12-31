@@ -1,9 +1,10 @@
-<map id="Core/Inc/robot/defines.h" name="Core/Inc/robot/defines.h">
-<area shape="rect" id="node1" title=" " alt="" coords="159,5,317,32"/>
-<area shape="rect" id="node2" href="$wheel_8h.html" title=" " alt="" coords="164,80,312,107"/>
-<area shape="rect" id="node3" href="$robo__init_8h.html" title=" " alt="" coords="85,155,217,196"/>
-<area shape="rect" id="node7" href="$wheel_8cpp.html" title=" " alt="" coords="242,162,407,189"/>
-<area shape="rect" id="node4" href="$tune__motors_8h.html" title=" " alt="" coords="7,244,139,285"/>
-<area shape="rect" id="node6" href="$robo__init_8cpp.html" title=" " alt="" coords="163,244,297,285"/>
-<area shape="rect" id="node5" href="$tune__motors_8cpp.html" title=" " alt="" coords="5,333,140,375"/>
+<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot&#45;Play/Core/Inc/robot/defines.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot&#45;Play/Core/Inc/robot/defines.h">
+<area shape="rect" id="node1" title=" " alt="" coords="479,5,688,76"/>
+<area shape="rect" id="node2" href="$wheel_8h.html" title=" " alt="" coords="479,124,688,195"/>
+<area shape="rect" id="node3" href="$robot_8h.html" title=" " alt="" coords="363,243,572,313"/>
+<area shape="rect" id="node8" href="$wheel_8cpp.html" title=" " alt="" coords="596,243,805,313"/>
+<area shape="rect" id="node4" href="$robo__tasks_8cpp.html" title=" " alt="" coords="5,361,215,432"/>
+<area shape="rect" id="node5" href="$robo__init_8cpp.html" title=" " alt="" coords="239,361,458,432"/>
+<area shape="rect" id="node6" href="$robot_8cpp.html" title=" " alt="" coords="483,361,692,432"/>
+<area shape="rect" id="node7" href="$tune__motors_8cpp.html" title=" " alt="" coords="716,361,957,432"/>
 </map>

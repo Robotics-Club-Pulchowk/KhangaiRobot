@@ -93,6 +93,7 @@ void Robot::ramp_down(uint32_t dt_millis)
                                 gWheels[i].set_Omega(new_omega[i]);
                         }
                 }
+                pid = 0;
 
                 for (uint8_t i = 0; i < 4; ++i) {
                         gWheels[i].update();

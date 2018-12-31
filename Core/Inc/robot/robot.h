@@ -10,8 +10,23 @@
 #define _ROBOT_H_
 
 #include "wheel.h"
+#include "vec3.h"
 
-
+/**
+ * @class Robot
+ * @brief A Singleton class that handles all the robot's sequence
+ * 
+ * Robot class is responsible for handling all the sequence to be taken by the
+ * <b>Khangai Robot</b> in the game field.
+ * <pre>
+ * Tasks that can be delegated to the Robot class :
+ * 1) Read the robot's state, i.e, the position and orientation of the robot
+ *    using the available OrientationSensor and PositionSensor.
+ * 2) Determine the next action to be taken by the robot.
+ * 3) Give motor commands and tune the motors.
+ * 4) Stop the robot using the appropriate ramping.
+ * </pre>
+ */
 class Robot final
 {
 public:

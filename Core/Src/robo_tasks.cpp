@@ -80,6 +80,7 @@ void RobotThread(void const *argument)
         uint32_t dt_tmp = HAL_GetTick();
 
         Robot &Khangai_Robot = Robot::get_Instance();
+        float motor_set_points[4] = { 0 };
         
         osDelay(sample_period);
         /* Infinite loop */
@@ -92,6 +93,8 @@ void RobotThread(void const *argument)
                 // read_States(dt);
                 // play_Game(dt);
                 // tune_Motors(dt);
+                Khangai_Robot.tune_motors(motor_set_points, dt);
+
                 dt = HAL_GetTick();
                 dt_tmp = dt - dt_tmp;
                 // Sleep for remaining time of the sampling period if there is

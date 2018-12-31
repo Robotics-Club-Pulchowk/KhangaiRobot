@@ -1,0 +1,5 @@
+<map id="USBD_LL_Init" name="USBD_LL_Init">
+<area shape="rect" id="node1" title="Initializes the low level portion of the device driver." alt="" coords="5,5,108,32"/>
+<area shape="rect" id="node2" href="$usbd__conf_8c.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="156,5,257,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a425dc7e549f2b17a4f48496d9561d248" title=" " alt="" coords="305,5,413,32"/>
+</map>

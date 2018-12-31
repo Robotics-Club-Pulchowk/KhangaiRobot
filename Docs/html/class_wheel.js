@@ -14,6 +14,7 @@ var class_wheel =
     [ "set_Direction", "class_wheel.html#a6289948538ff07041d3787e1046c8097", null ],
     [ "set_Omega", "class_wheel.html#a17973eb57b5dd282558fb7fe5699e58e", null ],
     [ "set_PIDController", "class_wheel.html#a6c21e96677e5f7e266ce58bfcea7102a", null ],
+    [ "start_Periphs", "class_wheel.html#a9a6a972618ea7161a45b88303c45a685", null ],
     [ "update", "class_wheel.html#afbbb8dc81da2dd495e2322cddc5f0ddd", null ],
     [ "dir_", "class_wheel.html#a07306b24ce5dbd784a5cd47ac80edfab", null ],
     [ "omega_", "class_wheel.html#a0f12b549610fa86c31d66e820c0ef09a", null ],

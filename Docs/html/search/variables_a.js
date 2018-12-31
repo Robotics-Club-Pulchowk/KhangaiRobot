@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['p_5f',['p_',['../class_p_i_d___algorithm.html#a6e988e5351fd21eb2227613ad8684d5c',1,'PID_Algorithm']]],
-  ['pid_5fcontroller',['pid_controller',['../struct_wheel___config.html#a35ab88cb85d55d061b214a3f8ee56d33',1,'Wheel_Config']]]
+  ['max_5f',['max_',['../class_p_i_d___algorithm.html#a1e0d5415bea59ae3f908b06c45bd0dd8',1,'PID_Algorithm']]],
+  ['max_5fomega',['max_omega',['../struct_wheel___config.html#ab52d135d822ca3ff599f52e18789e51b',1,'Wheel_Config']]],
+  ['min_5f',['min_',['../class_p_i_d___algorithm.html#a4ba021193490b2023b0fab0f5ed5946c',1,'PID_Algorithm']]]
 ];

@@ -1,5 +1,6 @@
 <map id="Wheel::get_PIDController" name="Wheel::get_PIDController">
-<area shape="rect" id="node1" title=" " alt="" coords="141,31,309,57"/>
-<area shape="rect" id="node2" href="$tune__motors_8cpp.html#a5513ace3065a99aaa0566cdcb0438c5d" title="Function that calculates and sets new omegas for each wheel according to reach set points provided." alt="" coords="26,5,73,32"/>
-<area shape="rect" id="node3" href="$tune__motors_8cpp.html#a128156936ef88fa4b5515aa4d4797546" title=" " alt="" coords="5,56,93,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="332,31,500,57"/>
+<area shape="rect" id="node2" href="$class_robot.html#a82784a8f194eab768c4aff56152b6988" title="Function that calculates and sets new omegas for each wheel according to set points provided in order..." alt="" coords="148,5,284,32"/>
+<area shape="rect" id="node4" href="$class_robot.html#ae85704f40b8f8587bb64f02eea0d154d" title=" " alt="" coords="151,56,281,83"/>
+<area shape="rect" id="node3" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title="Function implementing the RoboSequence thread." alt="" coords="5,5,100,32"/>
 </map>

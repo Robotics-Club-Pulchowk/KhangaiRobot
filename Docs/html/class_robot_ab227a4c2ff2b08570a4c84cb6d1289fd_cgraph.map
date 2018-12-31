@@ -1,0 +1,5 @@
+<map id="Robot::init" name="Robot::init">
+<area shape="rect" id="node1" title="Function that initializes all the required components for the robot to run." alt="" coords="5,31,87,57"/>
+<area shape="rect" id="node2" href="$class_robot.html#a4ad7299309842ac373fa0f01e9b5ae1f" title="Function that initializes all the required components for the wheels of the robot." alt="" coords="135,5,263,32"/>
+<area shape="rect" id="node3" href="$class_robot.html#ae7469b6220903d6b5f81afb0602b8f9d" title="Function that initializes all the required components for the wheel&#39;s pid controller." alt="" coords="146,56,251,83"/>
+</map>

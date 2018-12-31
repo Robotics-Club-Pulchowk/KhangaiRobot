@@ -11,8 +11,9 @@ var searchData=
   ['set_5fp',['set_P',['../class_p_i_d___algorithm.html#a6248cf0e2677a45193c9b43b0001ee44',1,'PID_Algorithm']]],
   ['set_5fpid',['set_PID',['../class_p_i_d___algorithm.html#a1f6955b8c523af6e5207b598872b00f9',1,'PID_Algorithm']]],
   ['set_5fpidcontroller',['set_PIDController',['../class_wheel.html#a6c21e96677e5f7e266ce58bfcea7102a',1,'Wheel']]],
+  ['start_5fperiphs',['start_Periphs',['../class_wheel.html#a9a6a972618ea7161a45b88303c45a685',1,'Wheel']]],
   ['startdefaulttask',['StartDefaultTask',['../freertos_8c.html#a016544463b4842ced7191baf8f449cea',1,'StartDefaultTask(void const *argument):&#160;robo_tasks.cpp'],['../robo__tasks_8cpp.html#a016544463b4842ced7191baf8f449cea',1,'StartDefaultTask(void const *argument):&#160;robo_tasks.cpp']]],
-  ['systemclock_5fconfig',['SystemClock_Config',['../main_8cpp.html#a70af21c671abfcc773614a9a4f63d920',1,'main.cpp']]],
+  ['systemclock_5fconfig',['SystemClock_Config',['../main_8cpp.html#a70af21c671abfcc773614a9a4f63d920',1,'SystemClock_Config(void):&#160;main.cpp'],['../usbd__conf_8c.html#a70af21c671abfcc773614a9a4f63d920',1,'SystemClock_Config(void):&#160;main.cpp']]],
   ['systemcoreclockupdate',['SystemCoreClockUpdate',['../group___s_t_m32_f4xx___system___private___functions.html#gae0c36a9591fe6e9c45ecb21a794f0f0f',1,'system_stm32f4xx.c']]],
   ['systeminit',['SystemInit',['../group___s_t_m32_f4xx___system___private___functions.html#ga93f514700ccf00d08dbdcff7f1224eb2',1,'system_stm32f4xx.c']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Khangai Robot Play: Core/Src/robot/robo_tasks.cpp File Reference</title>
+<title>Khangai Robot Play: C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot-Play/Core/Src/robo_tasks.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -98,19 +98,29 @@ $(document).ready(function(){initNavTree('robo__tasks_8cpp.html','');});
 <code>#include &quot;task.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
 <code>#include &quot;cmsis_os.h&quot;</code><br />
-<code>#include &quot;usb_device.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="usb__device_8h_source.html">usb_device.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="robot_8h_source.html">robot.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for robo_tasks.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="robo__tasks_8cpp__incl.png" border="0" usemap="#_core_2_src_2robot_2robo__tasks_8cpp" alt=""/></div>
-<map name="_core_2_src_2robot_2robo__tasks_8cpp" id="_core_2_src_2robot_2robo__tasks_8cpp">
-<area shape="rect"  title=" " alt="" coords="171,5,305,47"/>
-<area shape="rect"  title=" " alt="" coords="5,95,100,121"/>
-<area shape="rect"  title=" " alt="" coords="125,95,183,121"/>
-<area shape="rect"  href="main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="207,95,269,121"/>
-<area shape="rect"  title=" " alt="" coords="293,95,383,121"/>
-<area shape="rect"  title=" " alt="" coords="407,95,504,121"/>
-<area shape="rect"  title=" " alt="" coords="179,169,297,196"/>
+<div class="center"><img src="robo__tasks_8cpp__incl.png" border="0" usemap="#_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_localization_2_khangai_robot-_play_2_core_2_src_2robo__tasks_8cpp" alt=""/></div>
+<map name="_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_localization_2_khangai_robot-_play_2_core_2_src_2robo__tasks_8cpp" id="_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_localization_2_khangai_robot-_play_2_core_2_src_2robo__tasks_8cpp">
+<area shape="rect"  title=" " alt="" coords="159,5,368,76"/>
+<area shape="rect"  title=" " alt="" coords="5,124,100,151"/>
+<area shape="rect"  title=" " alt="" coords="125,124,183,151"/>
+<area shape="rect"  href="main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="418,348,479,375"/>
+<area shape="rect"  title=" " alt="" coords="467,124,556,151"/>
+<area shape="rect"  href="usb__device_8h.html" title=": Header for usb_device.c file." alt="" coords="259,124,356,151"/>
+<area shape="rect"  href="robot_8h.html" title=" " alt="" coords="380,124,443,151"/>
+<area shape="rect"  title=" " alt="" coords="390,423,507,449"/>
+<area shape="rect"  title=" " alt="" coords="418,199,511,225"/>
+<area shape="rect"  title=" " alt="" coords="258,199,343,225"/>
+<area shape="rect"  href="wheel_8h.html" title=" " alt="" coords="554,199,621,225"/>
+<area shape="rect"  href="tim_8h.html" title=" " alt="" coords="418,273,469,300"/>
+<area shape="rect"  href="defines_8h.html" title=" " alt="" coords="493,273,567,300"/>
+<area shape="rect"  href="pid__algorithms_8h.html" title=" " alt="" coords="657,348,774,375"/>
+<area shape="rect"  href="pid_8h.html" title=" " alt="" coords="642,273,693,300"/>
+<area shape="rect"  title=" " alt="" coords="683,423,748,449"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -209,7 +219,28 @@ Tasks performed by this thread :
 13) Compute <a class="el" href="class_p_i_d.html">PID</a> using available <a class="el" href="class_p_i_d___algorithm.html">PID_Algorithm</a>
 14) set Omega of each wheel
 15) update new omegas of all wheels at once
-</pre> 
+</pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="robo__tasks_8cpp_a4e5b32a2e15bb82416f89b7a733d1e09_cgraph.png" border="0" usemap="#robo__tasks_8cpp_a4e5b32a2e15bb82416f89b7a733d1e09_cgraph" alt=""/></div>
+<map name="robo__tasks_8cpp_a4e5b32a2e15bb82416f89b7a733d1e09_cgraph" id="robo__tasks_8cpp_a4e5b32a2e15bb82416f89b7a733d1e09_cgraph">
+<area shape="rect"  title="Function implementing the RoboSequence thread." alt="" coords="5,161,100,188"/>
+<area shape="rect"  href="class_robot.html#afb2b087ee8339bd935f9629b56ea2983" title=" " alt="" coords="148,136,287,163"/>
+<area shape="rect"  href="class_robot.html#a82784a8f194eab768c4aff56152b6988" title="Function that calculates and sets new omegas for each wheel according to set points provided in order..." alt="" coords="149,187,285,213"/>
+<area shape="rect"  href="class_wheel.html#ad30f55db6258b3caef41420f4cb1606e" title=" " alt="" coords="351,5,486,32"/>
+<area shape="rect"  href="class_wheel.html#a68e69448efd26f616b9b85f2f2e49809" title=" " alt="" coords="335,56,503,83"/>
+<area shape="rect"  href="class_p_i_d.html#a4d19abca579301069c3edb28fd5ff7f2" title=" " alt="" coords="354,107,483,133"/>
+<area shape="rect"  href="class_p_i_d.html#a940bbf0c834f0ac68203b8e28b2ca8d1" title=" " alt="" coords="353,157,484,184"/>
+<area shape="rect"  href="class_p_i_d___algorithm.html#a0adcbfe07b44479d3c46d20037bf1013" title=" " alt="" coords="353,209,484,250"/>
+<area shape="rect"  href="class_wheel.html#a87aab248643ff4b1dab45080ed482fe0" title=" " alt="" coords="339,275,498,301"/>
+<area shape="rect"  href="class_wheel.html#a17973eb57b5dd282558fb7fe5699e58e" title=" " alt="" coords="351,325,486,352"/>
+<area shape="rect"  href="class_wheel.html#afbbb8dc81da2dd495e2322cddc5f0ddd" title=" " alt="" coords="365,376,472,403"/>
+<area shape="rect"  href="wheel_8cpp.html#a797191cba5d6fc01a04ba33fce2b235a" title=" " alt="" coords="575,5,689,32"/>
+<area shape="rect"  href="class_p_i_d___algorithm.html#a388ec97d23c981e62c3726505688e1f0" title=" " alt="" coords="551,107,713,133"/>
+<area shape="rect"  href="main_8h.html#a425dc7e549f2b17a4f48496d9561d248" title=" " alt="" coords="578,376,686,403"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a016544463b4842ced7191baf8f449cea"></a>
@@ -241,6 +272,15 @@ Tasks performed by this thread :
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="robo__tasks_8cpp_a016544463b4842ced7191baf8f449cea_cgraph.png" border="0" usemap="#robo__tasks_8cpp_a016544463b4842ced7191baf8f449cea_cgraph" alt=""/></div>
+<map name="robo__tasks_8cpp_a016544463b4842ced7191baf8f449cea_cgraph" id="robo__tasks_8cpp_a016544463b4842ced7191baf8f449cea_cgraph">
+<area shape="rect"  title="Function implementing the defaultTask thread." alt="" coords="5,5,124,32"/>
+<area shape="rect"  href="group___u_s_b_d___d_e_v_i_c_e___exported___functions_prototype.html#gadab4f7fc1db4ce2be073d3913209d2af" title=" " alt="" coords="172,5,325,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -249,7 +289,7 @@ Tasks performed by this thread :
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c6310732a22f63c0c2fc5595561e68f1.html">Core</a></li><li class="navelem"><a class="el" href="dir_b596f468b52957496e4f78b80e029268.html">Src</a></li><li class="navelem"><a class="el" href="dir_1d896444af14d00cb5ddf02683191b30.html">robot</a></li><li class="navelem"><a class="el" href="robo__tasks_8cpp.html">robo_tasks.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_c6310732a22f63c0c2fc5595561e68f1.html">Core</a></li><li class="navelem"><a class="el" href="dir_b596f468b52957496e4f78b80e029268.html">Src</a></li><li class="navelem"><a class="el" href="robo__tasks_8cpp.html">robo_tasks.cpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>

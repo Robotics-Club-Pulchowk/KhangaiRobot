@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gwheels',['gWheels',['../robo__init_8cpp.html#a7b762d71092ac8057476cedcc1977c5d',1,'gWheels():&#160;robo_init.cpp'],['../tune__motors_8cpp.html#a7b762d71092ac8057476cedcc1977c5d',1,'gWheels():&#160;robo_init.cpp']]]
+  ['enc_5fppr',['enc_ppr',['../struct_wheel___config.html#a667252e5a1daa34e8cbea58a4160f9a4',1,'Wheel_Config']]]
 ];

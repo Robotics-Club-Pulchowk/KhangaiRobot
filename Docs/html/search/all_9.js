@@ -1,6 +1,7 @@
 var searchData=
 [
   ['i2c_2ec',['i2c.c',['../i2c_8c.html',1,'']]],
+  ['i2c_2ed',['i2c.d',['../i2c_8d.html',1,'']]],
   ['i2c_2eh',['i2c.h',['../i2c_8h.html',1,'']]],
   ['i_5f',['i_',['../class_p_i_d___algorithm.html#a707b421fc0ef05719c1a3072de4ef607',1,'PID_Algorithm']]],
   ['id',['id',['../struct_wheel___config.html#aa58bda60f676c2e88512ad05466e46f6',1,'Wheel_Config']]],
@@ -16,6 +17,7 @@ var searchData=
   ['include_5fvtaskpriorityset',['INCLUDE_vTaskPrioritySet',['../_free_r_t_o_s_config_8h.html#ad6858ac8aaf726007fd19752956ef1bd',1,'FreeRTOSConfig.h']]],
   ['include_5fvtasksuspend',['INCLUDE_vTaskSuspend',['../_free_r_t_o_s_config_8h.html#aef8fbb97819ad3d962f334ac298206d1',1,'FreeRTOSConfig.h']]],
   ['include_5fxtaskgetschedulerstate',['INCLUDE_xTaskGetSchedulerState',['../_free_r_t_o_s_config_8h.html#a9ed60ede556830584e6bfd4a3ab4f9de',1,'FreeRTOSConfig.h']]],
+  ['init',['init',['../class_robot.html#ab227a4c2ff2b08570a4c84cb6d1289fd',1,'Robot']]],
   ['instruction_5fcache_5fenable',['INSTRUCTION_CACHE_ENABLE',['../stm32f4xx__hal__conf_8h.html#a3379989d46599c7e19a43f42e9145a4a',1,'stm32f4xx_hal_conf.h']]],
   ['itm_5fsendstring',['ITM_SendString',['../printf__config_8c.html#a408f6bc26176740f5efec826bffee8bf',1,'printf_config.c']]]
 ];

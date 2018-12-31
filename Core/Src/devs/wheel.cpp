@@ -53,6 +53,18 @@ static void set_WheelOmega(Wheel_Config *w, float omega)
         set_DutyCycle(w, new_omega);
 }
 
+/**
+ * @brief Function that starts timer base, pwm and encoder of the wheel
+ * @retval None
+ * 
+ * 
+ * <pre>
+ * Tasks performed by this function :
+ * 1) Starts Timer associated with the wheel
+ * 2) Starts PWM of the wheel
+ * 3) Starts Encoder of the wheel
+ * </pre> 
+ */
 void Wheel::start_Periphs()
 {
         HAL_TIM_Base_Start(wheel_->htim);
@@ -61,6 +73,22 @@ void Wheel::start_Periphs()
         HAL_TIM_Encoder_Start(wheel_->henc, TIM_CHANNEL_ALL);
 }
 
+/**
+ * @brief Function that sets the angular velocity of the wheel
+ * @param omega The new angular of the wheel
+ * @retval None
+ * 
+ * @note This function <b>does not</b> actually update the value of the wheel.
+ *       The update() function need to be called separately for new value to be
+ *       updated.
+ * 
+ * 
+ * <pre>
+ * Tasks performed by this function :
+ * 1) Sets the direction of the wheel according to the sign of omega
+ * 2) Sets the omega of the wheel
+ * </pre>
+ */
 void Wheel::set_Omega(float omega)
 {
         if (omega < -wheel_->tolerance) {

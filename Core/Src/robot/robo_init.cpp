@@ -22,6 +22,7 @@ static float gI_Factor = 2;
  *        to run
  * @retval None
  * 
+ * 
  * <pre>
  * Tasks performed by this function
  * 1) Call the devices initializations in correct order
@@ -43,6 +44,7 @@ int Robot::init()
  * @brief Function that initializes all the required components for the wheels
  *        of the robot
  * @retval None
+ * 
  * 
  * <pre>
  * Tasks performed by this function
@@ -110,6 +112,7 @@ void Robot::wheels_Init(void)
  * @brief Function that initializes all the required components for the wheel's
  *        pid controller
  * @retval None
+ * 
  * 
  * <pre>
  * Tasks performed by this function
