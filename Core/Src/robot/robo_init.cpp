@@ -1,50 +1,41 @@
 /*
- * robo_init.c
+ * robo_init.cpp
  *
  * Created : 10/1/2018
+ *  Author : n-is
+ *   email : 073bex422.nischal@pcampus.edu.np
  */
 
-#include "robo_init.h"
+#include "robot.h"
 #include "pid_algorithms.h"
 #include "pid.h"
 
 static Wheel_Config gWheel_Configurations[4];
-Wheel gWheels[4];
 
 static Discrete_PID gDisc_PID[4];
 static PID gPID[4];
 
 static float gI_Factor = 2;
 
-static void wheel_init(void);
-static void pid_Init();
-
 /**
  * @brief Function that initializes all the required components for the robot
  *        to run
  * @retval None
  * 
+ * <pre>
  * Tasks performed by this function
  * 1) Call the devices initializations in correct order
  * 2) Call the software initializations for utilities like pid and filters
- * 3) Starts the timers to run them in respective configured modes like PWM
- *    mode and the Encoder mode
+ * </pre>
  */
-void robo_Init()
+int Robot::init()
 {
-        wheel_init();
+        // Initialize all wheels of the robot
+        wheels_Init();
+        // Initializes PID parameters for all wheels
+        pid_Init();
 
-        HAL_TIM_Base_Start(&htim8);
-
-        HAL_TIM_PWM_Start(gWheel_Configurations[0].htim, TIM_CHANNEL_1);
-        HAL_TIM_PWM_Start(gWheel_Configurations[1].htim, TIM_CHANNEL_2);
-        HAL_TIM_PWM_Start(gWheel_Configurations[2].htim, TIM_CHANNEL_3);
-        HAL_TIM_PWM_Start(gWheel_Configurations[3].htim, TIM_CHANNEL_4);
-
-        HAL_TIM_Encoder_Start(gWheel_Configurations[0].henc, TIM_CHANNEL_ALL);
-        HAL_TIM_Encoder_Start(gWheel_Configurations[1].henc, TIM_CHANNEL_ALL);
-        HAL_TIM_Encoder_Start(gWheel_Configurations[2].henc, TIM_CHANNEL_ALL);
-        HAL_TIM_Encoder_Start(gWheel_Configurations[3].henc, TIM_CHANNEL_ALL);
+        return 0;
 }
 
 
@@ -53,6 +44,7 @@ void robo_Init()
  *        of the robot
  * @retval None
  * 
+ * <pre>
  * Tasks performed by this function
  * 1) Assigns appropriate IDs to each wheel
  * 2) Give each wheel the respective radius
@@ -62,8 +54,11 @@ void robo_Init()
  * 4) Assigns the ppr of each wheel's encoder
  * 5) Assigns the direction pins for each motor's direction
  * 6) Assigns timer for each wheel's encoder
+ * 7) Starts the timers to run each wheel in respective configured modes like PWM
+ *    mode and the Encoder mode
+ * </pre>
  */
-static void wheel_init(void)
+void Robot::wheels_Init(void)
 {
         int i;
         for (i = 0; i < 4; i++)
@@ -107,9 +102,8 @@ static void wheel_init(void)
 
         for (uint8_t i = 0; i < 4; ++i) {
                 gWheels[i].set_Config(&gWheel_Configurations[i]);
+                gWheels[i].start_Periphs();
         }
-        // Initializes PID parameters for all wheels
-        pid_Init();
 }
 
 /**
@@ -117,11 +111,13 @@ static void wheel_init(void)
  *        pid controller
  * @retval None
  * 
+ * <pre>
  * Tasks performed by this function
  * 1) Assigns gains for PID controller of each wheel
  * 2) Assigns separate PID controllers for each wheel
+ * </pre>
  */
-static void pid_Init()
+void Robot::pid_Init()
 {
         gDisc_PID[0].set_PID(0.6336, gI_Factor*10.05, 0);
         gDisc_PID[0].set_Limits(24, -24);

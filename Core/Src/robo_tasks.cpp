@@ -7,6 +7,7 @@
 #include "main.h"
 #include "cmsis_os.h"
 #include "usb_device.h"
+#include "robot.h"
 
 /* Export Functions Used in C */
 extern "C" void StartDefaultTask(void const *argument);
@@ -75,10 +76,11 @@ void RobotThread(void const *argument)
 {
         /* USER CODE BEGIN RobotThread */
         uint32_t sample_period = 10;
-
         uint32_t dt = HAL_GetTick();
         uint32_t dt_tmp = HAL_GetTick();
 
+        Robot &Khangai_Robot = Robot::get_Instance();
+        
         osDelay(sample_period);
         /* Infinite loop */
         for (;;)

@@ -53,6 +53,14 @@ static void set_WheelOmega(Wheel_Config *w, float omega)
         set_DutyCycle(w, new_omega);
 }
 
+void Wheel::start_Periphs()
+{
+        HAL_TIM_Base_Start(wheel_->htim);
+        
+        HAL_TIM_PWM_Start(wheel_->htim, wheel_->channel);
+        HAL_TIM_Encoder_Start(wheel_->henc, TIM_CHANNEL_ALL);
+}
+
 void Wheel::set_Omega(float omega)
 {
         if (omega < -wheel_->tolerance) {

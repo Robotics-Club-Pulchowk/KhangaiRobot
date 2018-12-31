@@ -63,6 +63,8 @@ public:
         float get_Omega(uint32_t dt_millis);
         float get_MaxOmega() { return wheel_->max_omega; }
 
+        void start_Periphs();
+
         void set_PIDController(PID *pid) { wheel_->pid_controller = pid; }
         PID * get_PIDController() {
                 return wheel_->pid_controller;

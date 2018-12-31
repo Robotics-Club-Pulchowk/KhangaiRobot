@@ -1,13 +1,19 @@
+/*
+ * tune_motors.cpp
+ *
+ * Created : 12/31/2018
+ *  Author : n-is
+ *   email : 073bex422.nischal@pcampus.edu.np
+ */
+
 #include "pid_algorithms.h"
 #include "pid.h"
 #include <math.h>
-#include "tune_motors.h"
-
-extern Wheel gWheels[4];
+#include "robot.h"
 
 /**
  * @brief Function that calculates and sets new omegas for each wheel according
- *        to reach set points provided
+ *        to set points provided in order
  * @param set_points : An array of 4 elements. This array holds the angular speed
  *                    to be reached by each wheel in order
  * @param dt_millis : The time period at which this function is called periodically
@@ -24,7 +30,7 @@ extern Wheel gWheels[4];
  * 5) update new omegas of all wheels at once
  * </pre>
  */
-void tune(float set_points[4], uint32_t dt_millis)
+void Robot::tune_motors(float set_points[4], uint32_t dt_millis)
 {
         float omega[4];
         float error[4];
@@ -58,7 +64,7 @@ void tune(float set_points[4], uint32_t dt_millis)
         }
 }
 
-void ramp_down(uint32_t dt_millis)
+void Robot::ramp_down(uint32_t dt_millis)
 {
         float omega[4];
         float error[4];
