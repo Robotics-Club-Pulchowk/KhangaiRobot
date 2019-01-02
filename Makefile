@@ -103,8 +103,10 @@ startup_stm32f407xx.s
 CXX_SOURCES = \
 Core/Src/devs/wheel.cpp \
 \
-Core/Src/robot/tune_motors.cpp \
-Core/Src/robot/robo_init.cpp \
+Core/Src/parts/actuator.cpp \
+Core/Src/parts/processor.cpp \
+Core/Src/parts/state_sensor.cpp \
+\
 Core/Src/robot/robot.cpp \
 \
 Core/Src/utils/math/mat.cpp \
@@ -170,15 +172,19 @@ AS_INCLUDES =  \
 # C includes
 C_INCLUDES =  \
 -ICore/Inc \
--ICore/Inc\devs \
--ICore/Inc\periphs \
--ICore/Inc\robot \
--ICore/Inc\utils \
--ICore/Inc\utils\container \
--ICore/Inc\utils\control \
--ICore/Inc\utils\filter \
--ICore/Inc\utils\math \
--ICore/Inc\sys \
+-ICore/Inc/devs \
+-ICore/Inc/periphs \
+-ICore/Inc/robot \
+-ICore/Inc/utils \
+-ICore/Inc/utils\container \
+-ICore/Inc/utils\control \
+-ICore/Inc/utils\filter \
+-ICore/Inc/utils\math \
+-ICore/Inc/sys \
+-ICore/Inc/parts \
+-ICore/Inc/parts/actuators \
+-ICore/Inc/parts/processor \
+-ICore/Inc/parts/sensors \
 \
 -IUSB_DEVICE/App \
 -IUSB_DEVICE/Target \

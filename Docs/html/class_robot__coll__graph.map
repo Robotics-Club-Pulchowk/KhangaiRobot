@@ -1,7 +1,9 @@
 <map id="Robot" name="Robot">
-<area shape="rect" id="node1" title="A Singleton class that handles all the robot&#39;s sequence." alt="" coords="30,363,86,389"/>
-<area shape="rect" id="node2" href="$class_wheel.html" title=" " alt="" coords="29,273,87,300"/>
-<area shape="rect" id="node3" href="$struct_wheel___config.html" title=" " alt="" coords="7,184,109,211"/>
-<area shape="rect" id="node4" href="$class_p_i_d.html" title=" " alt="" coords="37,95,79,121"/>
-<area shape="rect" id="node5" href="$class_p_i_d___algorithm.html" title=" " alt="" coords="5,5,111,32"/>
+<area shape="rect" id="node1" title="A Singleton class that handles all the robot&#39;s sequence." alt="" coords="103,452,159,479"/>
+<area shape="rect" id="node2" href="$class_actuator.html" title=" " alt="" coords="23,363,93,389"/>
+<area shape="rect" id="node3" href="$class_wheel.html" title=" " alt="" coords="29,273,87,300"/>
+<area shape="rect" id="node4" href="$struct_wheel___config.html" title=" " alt="" coords="7,184,109,211"/>
+<area shape="rect" id="node5" href="$class_p_i_d.html" title=" " alt="" coords="37,95,79,121"/>
+<area shape="rect" id="node6" href="$class_p_i_d___algorithm.html" title=" " alt="" coords="5,5,111,32"/>
+<area shape="rect" id="node7" href="$class_vec3.html" title=" " alt="" coords="117,363,217,389"/>
 </map>

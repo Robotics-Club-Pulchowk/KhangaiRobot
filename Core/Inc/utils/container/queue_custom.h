@@ -6,8 +6,8 @@
  *   email : 073bex422.nischal@pcampus.edu.np
  */
 
-#ifndef _QUEUE_H_
-#define _QUEUE_H_
+#ifndef _QUEUE_CUSTOM_H_
+#define _QUEUE_CUSTOM_H_
 
 #include "stm32f4xx_hal.h"
 
@@ -45,4 +45,4 @@ private:
         T queue_[q_size];
 };
 
-#endif // !_QUEUE_H_
+#endif // !_QUEUE_CUSTOM_H_

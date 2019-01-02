@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['l_5ferr_5f',['l_err_',['../class_discrete___p_i_d.html#a20866866cf564262c74dabef26cc0372',1,'Discrete_PID']]],
-  ['l_5foutput_5f',['l_output_',['../class_discrete___p_i_d.html#a1eecb5b2126d7f6787db1004f6d17632',1,'Discrete_PID']]],
-  ['ll_5ferr_5f',['ll_err_',['../class_discrete___p_i_d.html#aeacdfd2929599c6217f8cd06df89eb21',1,'Discrete_PID']]],
-  ['loggingbuffer',['loggingBuffer',['../freertos_8c.html#a9149c598e8dfd62d7905fa92ec3ad152',1,'freertos.c']]],
-  ['loggingcontrolblock',['loggingControlBlock',['../freertos_8c.html#ad6c5e2d6e0121feedc4a1dc0cd409c48',1,'freertos.c']]],
-  ['logginghandle',['loggingHandle',['../freertos_8c.html#aefad70a33a1e456f1c41c271cf80ea33',1,'freertos.c']]]
+  ['matrix_5f',['matrix_',['../class_mat.html#a7753c4dcb04086512d8049d0207e9815',1,'Mat']]],
+  ['max_5f',['max_',['../class_p_i_d___algorithm.html#a1e0d5415bea59ae3f908b06c45bd0dd8',1,'PID_Algorithm']]],
+  ['max_5fomega',['max_omega',['../struct_wheel___config.html#ab52d135d822ca3ff599f52e18789e51b',1,'Wheel_Config']]],
+  ['min_5f',['min_',['../class_p_i_d___algorithm.html#a4ba021193490b2023b0fab0f5ed5946c',1,'PID_Algorithm']]]
 ];

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['cmsis_5fos_2ed',['cmsis_os.d',['../cmsis__os_8d.html',1,'']]],
-  ['croutine_2ed',['croutine.d',['../croutine_8d.html',1,'']]]
+  ['defines_2eh',['defines.h',['../defines_8h.html',1,'']]],
+  ['dma_2ec',['dma.c',['../dma_8c.html',1,'']]],
+  ['dma_2eh',['dma.h',['../dma_8h.html',1,'']]]
 ];

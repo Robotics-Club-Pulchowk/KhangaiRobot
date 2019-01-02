@@ -1,7 +1,5 @@
 <map id="PID_Algorithm::get_Upper" name="PID_Algorithm::get_Upper">
-<area shape="rect" id="node1" title=" " alt="" coords="352,49,483,90"/>
-<area shape="rect" id="node2" href="$class_discrete___p_i_d.html#aa4914b85e73cb5fdfcc5b40e8d0ff23c" title=" " alt="" coords="148,5,304,32"/>
-<area shape="rect" id="node3" href="$class_robot.html#a82784a8f194eab768c4aff56152b6988" title="Function that calculates and sets new omegas for each wheel according to set points provided in order..." alt="" coords="158,56,294,83"/>
-<area shape="rect" id="node5" href="$class_robot.html#ae85704f40b8f8587bb64f02eea0d154d" title=" " alt="" coords="161,107,291,133"/>
-<area shape="rect" id="node4" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title="Function implementing the RoboSequence thread." alt="" coords="5,56,100,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="209,23,340,65"/>
+<area shape="rect" id="node2" href="$class_discrete___p_i_d.html#aa4914b85e73cb5fdfcc5b40e8d0ff23c" title=" " alt="" coords="5,5,161,32"/>
+<area shape="rect" id="node3" href="$class_actuator.html#a97d651157712c2189fac4063c31d6963" title=" " alt="" coords="31,56,135,83"/>
 </map>

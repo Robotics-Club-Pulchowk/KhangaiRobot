@@ -12,5 +12,6 @@ var searchData=
   ['b_5fredled_5fgpio_5fport',['B_RedLED_GPIO_Port',['../main_8h.html#a5c0cf164c849eb8b7aff00c181449122',1,'main.h']]],
   ['b_5fredled_5fpin',['B_RedLED_Pin',['../main_8h.html#a91b60e28f78758e9ceb18f81fedb3def',1,'main.h']]],
   ['back',['BACK',['../wheel_8h.html#a224b9163917ac32fc95a60d8c1eec3aaac921ff2cfc571c1d19b0485d7f6926ee',1,'wheel.h']]],
+  ['base_5f',['base_',['../class_robot.html#a3bc0081ef09e6f11a76ae66dfbbbc228',1,'Robot']]],
   ['busfault_5fhandler',['BusFault_Handler',['../stm32f4xx__it_8h.html#a850cefb17a977292ae5eb4cafa9976c3',1,'BusFault_Handler(void):&#160;stm32f4xx_it.c'],['../stm32f4xx__it_8c.html#a850cefb17a977292ae5eb4cafa9976c3',1,'BusFault_Handler(void):&#160;stm32f4xx_it.c']]]
 ];

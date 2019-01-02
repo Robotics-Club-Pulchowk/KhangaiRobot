@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['ramp_5fdown',['ramp_down',['../class_robot.html#ae85704f40b8f8587bb64f02eea0d154d',1,'Robot']]],
-  ['robot',['Robot',['../class_robot.html#a47aec46e3bb5782500d1d268f0d8c406',1,'Robot::Robot(Robot &amp;&amp;)=default'],['../class_robot.html#a4fd835c7c44337d31d9fd09921d29908',1,'Robot::Robot(const Robot &amp;)=default'],['../class_robot.html#a4fc7c70ae20623f05e06f2ecb388b6c4',1,'Robot::Robot()']]],
-  ['robotthread',['RobotThread',['../freertos_8c.html#a4e5b32a2e15bb82416f89b7a733d1e09',1,'RobotThread(void const *argument):&#160;robo_tasks.cpp'],['../robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09',1,'RobotThread(void const *argument):&#160;robo_tasks.cpp']]]
+  ['pid',['PID',['../class_p_i_d.html#a0311b6f7de348499ce24e53ba353514a',1,'PID::PID()'],['../class_p_i_d.html#a3dec056234c6c626fd2265041b75b373',1,'PID::PID(PID_Algorithm *algo)'],['../class_p_i_d.html#ac7e806bc5c09badd95a1209f13b0b2d9',1,'PID::PID(PID &amp;&amp;)=default'],['../class_p_i_d.html#ab974b1244b215183b3dddd136c5f8198',1,'PID::PID(const PID &amp;)=default']]],
+  ['pid_5falgorithm',['PID_Algorithm',['../class_p_i_d___algorithm.html#a77e1b4df4f9605df9373deb336c47987',1,'PID_Algorithm::PID_Algorithm()'],['../class_p_i_d___algorithm.html#afa89df608678228c8ecbb73c5953d0b4',1,'PID_Algorithm::PID_Algorithm(float p, float i, float d)']]],
+  ['pid_5finit',['pid_Init',['../class_actuator.html#a500af768989caf2b8769bf4ac97def74',1,'Actuator']]],
+  ['print',['print',['../class_mat.html#af08e1d54e7ec9d23663a65591634be0d',1,'Mat::print()'],['../class_vec3.html#af10c9e364bdec9abd60045bf3d523293',1,'Vec3::print()']]]
 ];

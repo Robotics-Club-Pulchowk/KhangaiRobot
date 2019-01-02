@@ -11,7 +11,6 @@
 
 #include <math.h>
 #include "vec3.h"
-#include "main.h"
 
 #define MAX_MATRIX_ROWS         4
 #define MAX_MATRIX_COLS         4
@@ -20,13 +19,19 @@ class Mat
 {
 public:
         Mat() : Mat(0,0) { }
+        
+        template <size_t M, size_t N>
+        Mat(const float (&mat)[M][N]) : Mat(M,N){
+                fill(mat);
+        }
+
         Mat(uint8_t rows, uint8_t columns);
         Mat(Mat &&) = default;
         Mat &operator=(Mat &&) = default;
         ~Mat() { }
 
-        uint8_t rows() { return rows_; }
-        uint8_t cols() { return cols_; }
+        uint8_t rows() const { return rows_; }
+        uint8_t cols() const { return cols_; }
 
         inline float &at(uint8_t i, uint8_t j) {
                 if (!(i < rows_ && j < cols_)) {
@@ -48,6 +53,7 @@ public:
         Mat &operator+=(const Mat &rhs);
         Mat &operator-=(const Mat &rhs);
         Mat &operator*=(const Mat &rhs);
+        Mat &operator*=(const Vec3<float> &rhs);
 
         friend Mat operator+(Mat lhs, const Mat &rhs) {
                 lhs += rhs;
@@ -64,6 +70,11 @@ public:
                 return lhs;
         }
 
+        friend Mat operator*(Mat lhs, const Vec3<float> &rhs) {
+                lhs *= rhs;
+                return lhs;
+        }
+
         Mat mult(const Mat &m);
         Mat mult_EW(float num);
         Mat transpose();
@@ -72,6 +83,18 @@ public:
                 for (uint8_t i = 0; i < rows_; ++i) {
                         for (uint8_t j = 0; j < cols_; ++j) {
                                 matrix_[i][j] = num;
+                        }
+                }
+        }
+
+        template <size_t M, size_t N>
+        void fill(const float (&mat)[M][N]) {
+                if (M != rows_ && N != cols_) {
+                        _Error_Handler(__FILE__, __LINE__);
+                }
+                for (uint8_t i = 0; i < M; ++i) {
+                        for (uint8_t j = 0; j < N; ++j) {
+                                matrix_[i][j] = mat[i][j];
                         }
                 }
         }
@@ -90,7 +113,7 @@ public:
 
         static Mat eye(uint8_t n);
 
-        bool is_Zero();
+        bool is_Zero() const;
         void swap_Rows(uint8_t a, uint8_t b);
         void swap_Cols(size_t a, size_t b);        
         bool inv(Mat &inv) const;

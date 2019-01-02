@@ -10,6 +10,7 @@
 #define _VEC3_H_
 
 #include "stm32f4xx_hal.h"
+#include "main.h"
 
 template <typename T>
 void swap_Element(T &first, T &second)

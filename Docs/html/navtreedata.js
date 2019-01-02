@@ -24,7 +24,6 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "Khangai Robot Play", "index.html", [
-    [ "KhangaiRobot-Play", "md__c_1__users_073be__one_drive__documents__robotics__codes_beta__localization__khangai_robot-_play__r_e_a_d_m_e.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -33,7 +32,8 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ]
+        [ "Variables", "functions_vars.html", null ],
+        [ "Related Functions", "functions_rela.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -53,8 +53,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_free_r_t_o_s_config_8h.html",
-"group___u_s_b_d___c_d_c___i_f___private___defines.html",
-"stm32f4xx__hal__conf_8h.html#abba7114255a2a41b81fdcb2a3702c270"
+"dma_8h.html#a323249dac769f9855c10b4ec9446b707",
+"stm32f4xx__it_8h.html#a290cb997018c8d85d4b965b4a242842f"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

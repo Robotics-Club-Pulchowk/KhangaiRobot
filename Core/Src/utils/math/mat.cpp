@@ -82,6 +82,17 @@ Mat& Mat::operator*=(const Mat &rhs)
         return *this;
 }
 
+Mat& Mat::operator*=(const Vec3<float> &rhs)
+{
+        Mat vec(3,1);
+        vec.at(0,0) = rhs.getX();
+        vec.at(1,0) = rhs.getY();
+        vec.at(2,0) = rhs.getZ();
+
+        *this = mult(vec);
+        return *this;
+}
+
 Mat Mat::mult(const Mat &m)
 {
         if (cols_ != m.rows_) {
@@ -136,7 +147,7 @@ Mat Mat::eye(uint8_t n)
         return I;
 }
 
-bool Mat::is_Zero()
+bool Mat::is_Zero() const
 {
         for (uint8_t i = 0; i < rows_; ++i) {
                 for (uint8_t j = 0; j < cols_; ++j) {

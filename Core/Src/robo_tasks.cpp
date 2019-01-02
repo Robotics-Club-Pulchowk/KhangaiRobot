@@ -82,7 +82,7 @@ void RobotThread(void const *argument)
         uint32_t dt_tmp = HAL_GetTick();
 
         Robot &Khangai_Robot = Robot::get_Instance();
-        float motor_set_points[4] = { 0 };
+        Khangai_Robot.init();
         
         osDelay(sample_period);
         /* Infinite loop */
@@ -92,10 +92,8 @@ void RobotThread(void const *argument)
                 // another task won't start when this task is running
                 dt_tmp = HAL_GetTick();
                 dt = dt_tmp - dt;
-                // read_States(dt);
-                // play_Game(dt);
-                // tune_Motors(dt);
-                Khangai_Robot.tune_motors(motor_set_points, dt);
+
+                Khangai_Robot.run(dt);
 
                 dt = HAL_GetTick();
                 dt_tmp = dt - dt_tmp;

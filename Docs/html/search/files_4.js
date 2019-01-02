@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['freertos_2ec',['freertos.c',['../freertos_8c.html',1,'']]],
-  ['freertos_2ed',['freertos.d',['../freertos_8d.html',1,'']]],
-  ['freertosconfig_2eh',['FreeRTOSConfig.h',['../_free_r_t_o_s_config_8h.html',1,'']]]
+  ['i2c_2ec',['i2c.c',['../i2c_8c.html',1,'']]],
+  ['i2c_2eh',['i2c.h',['../i2c_8h.html',1,'']]]
 ];

@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['vapplicationgetidletaskmemory',['vApplicationGetIdleTaskMemory',['../freertos_8c.html#a1988aa923b19fa6f31c93afa7773f793',1,'freertos.c']]],
-  ['vdd_5fvalue',['VDD_VALUE',['../stm32f4xx__hal__conf_8h.html#aae550dad9f96d52cfce5e539adadbbb4',1,'stm32f4xx_hal_conf.h']]],
-  ['vect_5ftab_5foffset',['VECT_TAB_OFFSET',['../group___s_t_m32_f4xx___system___private___defines.html#ga40e1495541cbb4acbe3f1819bd87a9fe',1,'system_stm32f4xx.c']]],
-  ['vportsvchandler',['vPortSVCHandler',['../_free_r_t_o_s_config_8h.html#ad43047b3ea0a146673e30637488bf754',1,'FreeRTOSConfig.h']]]
+  ['wheel',['Wheel',['../class_wheel.html',1,'Wheel'],['../class_wheel.html#a7c75aaceaf4c96aec4d4f9398abed873',1,'Wheel::Wheel()'],['../class_wheel.html#a0d09a46a3cda29d059a159cedd792bdc',1,'Wheel::Wheel(Wheel_Config *wheel)'],['../class_wheel.html#a953e0cdcf3fc520b8ee7273a40d2c322',1,'Wheel::Wheel(Wheel &amp;&amp;)=default'],['../class_wheel.html#af5037f2024413a9e3caa2a2bc87901de',1,'Wheel::Wheel(const Wheel &amp;)=default']]],
+  ['wheel_2ecpp',['wheel.cpp',['../wheel_8cpp.html',1,'']]],
+  ['wheel_2eh',['wheel.h',['../wheel_8h.html',1,'']]],
+  ['wheel_5f',['wheel_',['../class_wheel.html#ad53faf948e58fc27f010263780447505',1,'Wheel']]],
+  ['wheel_5fconfig',['Wheel_Config',['../struct_wheel___config.html',1,'']]],
+  ['wheels_5f',['wheels_',['../class_actuator.html#a8e60b2ff6901acd9e539e29b74d742da',1,'Actuator']]],
+  ['wheels_5finit',['wheels_Init',['../class_actuator.html#a998b08e1a048f6fe0b85c240aa33a498',1,'Actuator']]]
 ];

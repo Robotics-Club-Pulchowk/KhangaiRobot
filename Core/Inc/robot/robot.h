@@ -12,6 +12,10 @@
 #include "wheel.h"
 #include "vec3.h"
 
+#include "actuator.h"
+#include "processor.h"
+#include "state_sensor.h"
+
 /**
  * @class Robot
  * @brief A Singleton class that handles all the robot's sequence
@@ -39,15 +43,13 @@ public:
         static Robot& get_Instance();
 
         int init();
-        void tune_motors(float set_points[4], uint32_t dt_millis);
-        void ramp_down(uint32_t dt_millis);
+        void run(uint32_t dt_millis);
 
 private:
-        Wheel wheels_[4];       //< Our robot has exactly four wheels
+        Actuator *base_;
+        Vec3<float> state_;
 
         Robot() { }
-        void wheels_Init();
-        void pid_Init();
 };
 
 #endif // !_ROBOT_H_
