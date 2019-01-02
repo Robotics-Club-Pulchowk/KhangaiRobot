@@ -18,6 +18,9 @@ Robot& Robot::get_Instance()
 
         // Since all the parts follow singleton pattern, we should create them
         // when the robot is instantiated
+        State_Sensor &stsn = State_Sensor::get_Instance();
+        gRobo_Instance.sensor_ = &stsn;
+
         Actuator &act = Actuator::get_Instance();
         gRobo_Instance.base_ = &act;
         
@@ -26,12 +29,17 @@ Robot& Robot::get_Instance()
 
 int Robot::init()
 {
-        int status = base_->init();
+        int base_status = base_->init();
+        int sensor_status = sensor_->init();
+
+        int status = (base_status | sensor_status);
 
         return status;
 }
 
 void Robot::run(uint32_t dt_millis)
 {
-
+        state_ = sensor_->read_State(state_from_base_);
+        // TODO: Process state_
+        state_from_base_ = base_->actuate(state_, dt_millis);
 }

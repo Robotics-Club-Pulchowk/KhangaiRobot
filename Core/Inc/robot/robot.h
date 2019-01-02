@@ -47,9 +47,11 @@ public:
 
 private:
         Actuator *base_;
+        State_Sensor *sensor_;
         Vec3<float> state_;
+        Vec3<float> state_from_base_;
 
         Robot() { }
 };
-
+  
 #endif // !_ROBOT_H_

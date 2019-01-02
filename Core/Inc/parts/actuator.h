@@ -12,7 +12,7 @@
 #include "wheel.h"
 #include "vec3.h"
 
-class Actuator
+class Actuator final
 {
 public:
         Actuator(Actuator &&) = default;

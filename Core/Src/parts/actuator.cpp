@@ -39,7 +39,7 @@ Actuator& Actuator::get_Instance()
  * <pre>
  * Tasks performed by this function
  * 1) Call the devices initializations in correct order
- * 2) Call the software initializations for utilities like pid and filters
+ * 2) Call the software initializations for utilities like pid for wheels
  * </pre>
  */
 int Actuator::init()
