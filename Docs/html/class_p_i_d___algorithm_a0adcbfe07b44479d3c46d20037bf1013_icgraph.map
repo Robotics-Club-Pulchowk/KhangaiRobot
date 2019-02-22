@@ -1,5 +1,7 @@
 <map id="PID_Algorithm::get_Upper" name="PID_Algorithm::get_Upper">
-<area shape="rect" id="node1" title=" " alt="" coords="209,23,340,65"/>
-<area shape="rect" id="node2" href="$class_discrete___p_i_d.html#aa4914b85e73cb5fdfcc5b40e8d0ff23c" title=" " alt="" coords="5,5,161,32"/>
-<area shape="rect" id="node3" href="$class_actuator.html#a97d651157712c2189fac4063c31d6963" title=" " alt="" coords="31,56,135,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="580,23,711,65"/>
+<area shape="rect" id="node2" href="$class_discrete___p_i_d.html#aa4914b85e73cb5fdfcc5b40e8d0ff23c" title=" " alt="" coords="376,5,532,32"/>
+<area shape="rect" id="node3" href="$class_actuator.html#a97d651157712c2189fac4063c31d6963" title=" " alt="" coords="402,56,506,83"/>
+<area shape="rect" id="node4" href="$class_actuator.html#a12789faf0215436ece13fb1608111f34" title=" " alt="" coords="215,56,328,83"/>
+<area shape="rect" id="node5" href="$class_robot.html#a38036a2ef73f7b1af6c5d6269e03a5f8" title=" " alt="" coords="5,56,167,83"/>
 </map>

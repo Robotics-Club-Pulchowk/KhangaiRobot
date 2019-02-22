@@ -29,16 +29,18 @@ public:
         }
 
         T lookup() {
-                if( curr_size_ ) {
-                        --curr_size_;
-                        T elem = queue_[tail_++];
-                        tail_ %= q_size;
-                        return elem;
-                }
-                return 0;
+                // if( curr_size_ ) {
+                --curr_size_;
+                T elem = queue_[tail_++];
+                tail_ %= q_size;
+                return elem;
+                // }
+                // return 0;
         }
 
         uint32_t length() const { return curr_size_; }
+
+        bool is_Empty() const { return length() == 0; }
 
 private:
         uint32_t head_, tail_, curr_size_;

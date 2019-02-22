@@ -1,4 +1,5 @@
 <map id="Vec3::getZ" name="Vec3::getZ">
-<area shape="rect" id="node1" title=" " alt="" coords="169,5,255,32"/>
-<area shape="rect" id="node2" href="$class_mat.html#a8f508e70094f29bf8bd428e3d41013e8" title=" " alt="" coords="5,5,121,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="240,31,325,57"/>
+<area shape="rect" id="node2" href="$mpu6050_8cpp.html#ac4621db6e750eedcf624f78dbe405b13" title=" " alt="" coords="5,5,192,32"/>
+<area shape="rect" id="node3" href="$class_mat.html#a8f508e70094f29bf8bd428e3d41013e8" title=" " alt="" coords="41,56,157,83"/>
 </map>

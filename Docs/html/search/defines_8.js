@@ -1,14 +1,19 @@
 var searchData=
 [
-  ['mac_5faddr0',['MAC_ADDR0',['../stm32f4xx__hal__conf_8h.html#ab84a2e15d360e2644ada09641513a941',1,'stm32f4xx_hal_conf.h']]],
-  ['mac_5faddr1',['MAC_ADDR1',['../stm32f4xx__hal__conf_8h.html#a8d14266d76690c530bee01e7e5bb4099',1,'stm32f4xx_hal_conf.h']]],
-  ['mac_5faddr2',['MAC_ADDR2',['../stm32f4xx__hal__conf_8h.html#a6c5df15bec1d305ed033ad9a85ec803d',1,'stm32f4xx_hal_conf.h']]],
-  ['mac_5faddr3',['MAC_ADDR3',['../stm32f4xx__hal__conf_8h.html#a08a36ede83ae67498aecf54676be8fc8',1,'stm32f4xx_hal_conf.h']]],
-  ['mac_5faddr4',['MAC_ADDR4',['../stm32f4xx__hal__conf_8h.html#a41e5cb0b39ad74f0aafb83dbcecf9006',1,'stm32f4xx_hal_conf.h']]],
-  ['mac_5faddr5',['MAC_ADDR5',['../stm32f4xx__hal__conf_8h.html#a3bcc92663c42ec434f527847bbc4abc1',1,'stm32f4xx_hal_conf.h']]],
-  ['max_5fmatrix_5fcols',['MAX_MATRIX_COLS',['../mat_8h.html#a6df08808870b848d8ab21bf57288c748',1,'mat.h']]],
-  ['max_5fmatrix_5frows',['MAX_MATRIX_ROWS',['../mat_8h.html#a1513f6941a3ccf82f3c3848e91860285',1,'mat.h']]],
-  ['max_5fomega',['MAX_OMEGA',['../defines_8h.html#a1247dff3a0e5735e04673ff4054b5393',1,'defines.h']]],
-  ['max_5fpossible_5fomega',['MAX_POSSIBLE_OMEGA',['../defines_8h.html#a2dbe4752749c9d4858a1431ce3d78bdd',1,'defines.h']]],
-  ['motor_5fdriver_5ffrequency',['MOTOR_DRIVER_FREQUENCY',['../defines_8h.html#acc6454ff3d08c55a35e3dfa69f8a8a0d',1,'defines.h']]]
+  ['hal_5fadc_5fmodule_5fenabled',['HAL_ADC_MODULE_ENABLED',['../stm32f4xx__hal__conf_8h.html#a476f1655c969ae57e89a74d98c75f43f',1,'stm32f4xx_hal_conf.h']]],
+  ['hal_5fcortex_5fmodule_5fenabled',['HAL_CORTEX_MODULE_ENABLED',['../stm32f4xx__hal__conf_8h.html#aa9b5a3a425901e097de70092dbe31e0f',1,'stm32f4xx_hal_conf.h']]],
+  ['hal_5fdma_5fmodule_5fenabled',['HAL_DMA_MODULE_ENABLED',['../stm32f4xx__hal__conf_8h.html#a6552186102a1131b2849ac55a582945d',1,'stm32f4xx_hal_conf.h']]],
+  ['hal_5fflash_5fmodule_5fenabled',['HAL_FLASH_MODULE_ENABLED',['../stm32f4xx__hal__conf_8h.html#a7112575efe3740911f19a13e6b170fee',1,'stm32f4xx_hal_conf.h']]],
+  ['hal_5fgpio_5fmodule_5fenabled',['HAL_GPIO_MODULE_ENABLED',['../stm32f4xx__hal__conf_8h.html#a86165f80d6078719ee0715afe13febf5',1,'stm32f4xx_hal_conf.h']]],
+  ['hal_5fi2c_5fmodule_5fenabled',['HAL_I2C_MODULE_ENABLED',['../stm32f4xx__hal__conf_8h.html#a19999766418b0224871f732d800841c6',1,'stm32f4xx_hal_conf.h']]],
+  ['hal_5fmodule_5fenabled',['HAL_MODULE_ENABLED',['../stm32f4xx__hal__conf_8h.html#a877ae99e8c47a609ea97c888912bf75f',1,'stm32f4xx_hal_conf.h']]],
+  ['hal_5fpcd_5fmodule_5fenabled',['HAL_PCD_MODULE_ENABLED',['../stm32f4xx__hal__conf_8h.html#abc68645a06297042bf1f4d9f5a59f94b',1,'stm32f4xx_hal_conf.h']]],
+  ['hal_5fpwr_5fmodule_5fenabled',['HAL_PWR_MODULE_ENABLED',['../stm32f4xx__hal__conf_8h.html#ab51923c3716977d7923f49cc9d081aa8',1,'stm32f4xx_hal_conf.h']]],
+  ['hal_5frcc_5fmodule_5fenabled',['HAL_RCC_MODULE_ENABLED',['../stm32f4xx__hal__conf_8h.html#ac3dd74314ed62ac8575e2f9f48b3ac48',1,'stm32f4xx_hal_conf.h']]],
+  ['hal_5fspi_5fmodule_5fenabled',['HAL_SPI_MODULE_ENABLED',['../stm32f4xx__hal__conf_8h.html#a8ad4712bf4add56892d057778e826e0c',1,'stm32f4xx_hal_conf.h']]],
+  ['hal_5ftim_5fmodule_5fenabled',['HAL_TIM_MODULE_ENABLED',['../stm32f4xx__hal__conf_8h.html#a23382b8f04b3e6db2c59dfa1ef5ea4a2',1,'stm32f4xx_hal_conf.h']]],
+  ['hal_5fuart_5fmodule_5fenabled',['HAL_UART_MODULE_ENABLED',['../stm32f4xx__hal__conf_8h.html#a167269406e73327b95c3bb7b9cfe6d89',1,'stm32f4xx_hal_conf.h']]],
+  ['hse_5fstartup_5ftimeout',['HSE_STARTUP_TIMEOUT',['../stm32f4xx__hal__conf_8h.html#a68ecbc9b0a1a40a1ec9d18d5e9747c4f',1,'stm32f4xx_hal_conf.h']]],
+  ['hse_5fvalue',['HSE_VALUE',['../stm32f4xx__hal__conf_8h.html#aeafcff4f57440c60e64812dddd13e7cb',1,'stm32f4xx_hal_conf.h']]],
+  ['hsi_5fvalue',['HSI_VALUE',['../stm32f4xx__hal__conf_8h.html#aaa8c76e274d0f6dd2cefb5d0b17fbc37',1,'stm32f4xx_hal_conf.h']]]
 ];

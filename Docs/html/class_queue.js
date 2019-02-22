@@ -5,6 +5,7 @@ var class_queue =
     [ "Queue", "class_queue.html#aeff87a5c3aecc9e5a195dc852fe388ad", null ],
     [ "~Queue", "class_queue.html#aa87e968af9d54139a8a6719e04902ef2", null ],
     [ "insert", "class_queue.html#aee0df9b6ebf7fa989f33c650f90ada83", null ],
+    [ "is_Empty", "class_queue.html#a432aa525ee72eaf3421ae291309ec3fc", null ],
     [ "length", "class_queue.html#af3f22b735d0b6e09778054021a49e35d", null ],
     [ "lookup", "class_queue.html#af0b4f014fc929ee5a09361795fc19b30", null ],
     [ "operator=", "class_queue.html#a7977c587bfc161c29187894eb0fae0c6", null ],

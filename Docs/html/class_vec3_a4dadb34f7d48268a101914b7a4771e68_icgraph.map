@@ -1,4 +1,7 @@
 <map id="Vec3::setY" name="Vec3::setY">
-<area shape="rect" id="node1" title=" " alt="" coords="180,13,267,39"/>
-<area shape="rect" id="node2" href="$class_vec3.html#ae581dad3aa1a885da7538582a3324d3a" title=" " alt="" coords="5,5,132,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="339,78,425,105"/>
+<area shape="rect" id="node2" href="$class_vec3.html#ae581dad3aa1a885da7538582a3324d3a" title=" " alt="" coords="156,5,283,47"/>
+<area shape="rect" id="node3" href="$class_position_sensor.html#a34aa8302e10e702599384f55148160e9" title=" " alt="" coords="148,71,291,112"/>
+<area shape="rect" id="node4" href="$class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="168,137,271,163"/>
+<area shape="rect" id="node5" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,137,100,163"/>
 </map>

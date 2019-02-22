@@ -1,0 +1,20 @@
+<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive&#45;Play/Core/Inc/parts/devs_config.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive&#45;Play/Core/Inc/parts/devs_config.h">
+<area shape="rect" id="node1" title=" " alt="" coords="249,5,437,91"/>
+<area shape="rect" id="node2" href="$a4988_8h.html" title=" " alt="" coords="20,213,88,240"/>
+<area shape="rect" id="node7" href="$arduino_8h.html" title=" " alt="" coords="719,213,794,240"/>
+<area shape="rect" id="node10" href="$freewheel_8h.html" title=" " alt="" coords="112,213,199,240"/>
+<area shape="rect" id="node11" href="$hmc5883_8h.html" title=" " alt="" coords="193,139,280,165"/>
+<area shape="rect" id="node14" href="$mpu6050_8h.html" title=" " alt="" coords="407,139,493,165"/>
+<area shape="rect" id="node16" href="$encoder_8h.html" title=" " alt="" coords="304,139,383,165"/>
+<area shape="rect" id="node17" href="$lidar_8h.html" title=" " alt="" coords="605,139,663,165"/>
+<area shape="rect" id="node3" href="$tim_8h.html" title=" " alt="" coords="5,288,103,315"/>
+<area shape="rect" id="node6" href="$gpio_8h.html" title=" " alt="" coords="127,288,229,315"/>
+<area shape="rect" id="node4" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="269,363,330,389"/>
+<area shape="rect" id="node5" title=" " alt="" coords="331,437,449,464"/>
+<area shape="rect" id="node8" href="$sensor_8h.html" title=" " alt="" coords="646,288,718,315"/>
+<area shape="rect" id="node9" href="$queue__custom_8h.html" title=" " alt="" coords="561,363,680,389"/>
+<area shape="rect" id="node12" href="$i2c_8h.html" title=" " alt="" coords="274,213,325,240"/>
+<area shape="rect" id="node13" href="$vec3_8h.html" title=" " alt="" coords="361,288,419,315"/>
+<area shape="rect" id="node15" href="$mpu6050__reg_8h.html" title=" " alt="" coords="451,213,561,240"/>
+<area shape="rect" id="node18" href="$vec2_8h.html" title=" " alt="" coords="586,213,645,240"/>
+</map>

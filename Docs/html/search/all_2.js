@@ -1,17 +1,22 @@
 var searchData=
 [
+  ['b_5f',['B_',['../struct_kalman___vars.html#a5bb76dcb78368487e483d58a1d704fe5',1,'Kalman_Vars']]],
   ['b_5fblueled_5fgpio_5fport',['B_BlueLED_GPIO_Port',['../main_8h.html#adbc0e1a734556861e6399a46ddc05397',1,'main.h']]],
   ['b_5fblueled_5fpin',['B_BlueLED_Pin',['../main_8h.html#adaed86e9bc1911e5d45ff4367349e547',1,'main.h']]],
   ['b_5fgreenled_5fgpio_5fport',['B_GreenLED_GPIO_Port',['../main_8h.html#a5cee4410aa8ad4818a091b9908cdb307',1,'main.h']]],
   ['b_5fgreenled_5fpin',['B_GreenLED_Pin',['../main_8h.html#a7f1a0ff4b052ae162788c87dba43c0c6',1,'main.h']]],
   ['b_5forangeled_5fgpio_5fport',['B_OrangeLED_GPIO_Port',['../main_8h.html#a57be8ae9c9f2aa7eb1d5145026a35403',1,'main.h']]],
   ['b_5forangeled_5fpin',['B_OrangeLED_Pin',['../main_8h.html#a9c0c6dc529c162eda3cf23e43d92e22a',1,'main.h']]],
-  ['b_5fpushbutton_5fexti_5firqn',['B_PushButton_EXTI_IRQn',['../main_8h.html#a9007fb86d1547047555a81403f2bf3b1',1,'main.h']]],
   ['b_5fpushbutton_5fgpio_5fport',['B_PushButton_GPIO_Port',['../main_8h.html#a314a334e3f39290f529d4835aa6a87b6',1,'main.h']]],
   ['b_5fpushbutton_5fpin',['B_PushButton_Pin',['../main_8h.html#a3063f66527a6059855a7eb5c16f74b5c',1,'main.h']]],
   ['b_5fredled_5fgpio_5fport',['B_RedLED_GPIO_Port',['../main_8h.html#a5c0cf164c849eb8b7aff00c181449122',1,'main.h']]],
   ['b_5fredled_5fpin',['B_RedLED_Pin',['../main_8h.html#a91b60e28f78758e9ceb18f81fedb3def',1,'main.h']]],
   ['back',['BACK',['../wheel_8h.html#a224b9163917ac32fc95a60d8c1eec3aaac921ff2cfc571c1d19b0485d7f6926ee',1,'wheel.h']]],
+  ['bank_5fsel',['BANK_SEL',['../mpu6050__reg_8h.html#ae17eaf717e96ee3e5fa1ed153593561e',1,'mpu6050_reg.h']]],
   ['base_5f',['base_',['../class_robot.html#a3bc0081ef09e6f11a76ae66dfbbbc228',1,'Robot']]],
+  ['body_5fhmc',['Body_HMC',['../devs__config_8h.html#adc26373a7ee0cb422b4428e868b8e2b8',1,'Body_HMC():&#160;devs_config.cpp'],['../devs__config_8cpp.html#adc26373a7ee0cb422b4428e868b8e2b8',1,'Body_HMC():&#160;devs_config.cpp']]],
+  ['body_5fimu',['Body_IMU',['../devs__config_8h.html#a52695e933c891eff6964a08adab96abb',1,'Body_IMU():&#160;devs_config.cpp'],['../devs__config_8cpp.html#a52695e933c891eff6964a08adab96abb',1,'Body_IMU():&#160;devs_config.cpp']]],
+  ['buf_5flen',['buf_len',['../struct_arduino___packet.html#a1bc8fd3d73cb7b81fea45e0756c611ef',1,'Arduino_Packet']]],
+  ['buffer',['buffer',['../struct_arduino___packet.html#a5c35e03fa966cca485af1d8355e5f0dc',1,'Arduino_Packet']]],
   ['busfault_5fhandler',['BusFault_Handler',['../stm32f4xx__it_8h.html#a850cefb17a977292ae5eb4cafa9976c3',1,'BusFault_Handler(void):&#160;stm32f4xx_it.c'],['../stm32f4xx__it_8c.html#a850cefb17a977292ae5eb4cafa9976c3',1,'BusFault_Handler(void):&#160;stm32f4xx_it.c']]]
 ];

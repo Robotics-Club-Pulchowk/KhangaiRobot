@@ -42,16 +42,31 @@ public:
         ~Robot() { }
         static Robot& get_Instance();
 
-        int init();
+        int init(uint32_t dt_millis);
+        void update(uint32_t dt_millis);
         void run(uint32_t dt_millis);
+        bool is_Initiated() const;
+
+        void profile_Actuators(Vec3<float> vel, uint32_t dt_millis);
+        void check_Actuators();
 
 private:
-        Actuator *base_;
         State_Sensor *sensor_;
+        Processor *cpu_;
+        Actuator *base_;
+
+        // Robot class makes sure that this variable is not modified by any other
+        // entity except the Processor
+        State_Vars *robot_state_vars_;
+
         Vec3<float> state_;
         Vec3<float> state_from_base_;
+        Vec3<float> velocities_;
 
-        Robot() { }
+        bool initiated_;
+        Robot() {
+                initiated_ = false;
+        }
 };
   
 #endif // !_ROBOT_H_

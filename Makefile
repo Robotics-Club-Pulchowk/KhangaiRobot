@@ -15,7 +15,8 @@
 ######################################
 TARGET = Complete_Play
 
-
+USER_NAME = n-is
+STM_CUBE_VERSION = STM32Cube_FW_F4_V1.23.0
 ######################################
 # building variables
 ######################################
@@ -56,42 +57,42 @@ USB_DEVICE/App/usb_device.c \
 USB_DEVICE/App/usbd_desc.c \
 USB_DEVICE/App/usbd_cdc_if.c \
 USB_DEVICE/Target/usbd_conf.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c \
 \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/Third_Party/FreeRTOS/Source/croutine.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/Third_Party/FreeRTOS/Source/list.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/Third_Party/FreeRTOS/Source/queue.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/Third_Party/FreeRTOS/Source/tasks.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/Third_Party/FreeRTOS/Source/timers.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c \
-C:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Middlewares/Third_Party/FreeRTOS/Source/croutine.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Middlewares/Third_Party/FreeRTOS/Source/list.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Middlewares/Third_Party/FreeRTOS/Source/queue.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Middlewares/Third_Party/FreeRTOS/Source/tasks.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Middlewares/Third_Party/FreeRTOS/Source/timers.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c \
+C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c
 
 # ASM sources
 ASM_SOURCES =  \
@@ -102,14 +103,34 @@ startup_stm32f407xx.s
 # C++ sources
 CXX_SOURCES = \
 Core/Src/devs/wheel.cpp \
+Core/Src/devs/mpu6050.cpp \
+Core/Src/devs/hmc5883.cpp \
+Core/Src/devs/freewheel.cpp \
+Core/Src/devs/a4988.cpp \
+Core/Src/devs/arduino.cpp \
+Core/Src/devs/joystick.cpp \
 \
 Core/Src/parts/actuator.cpp \
 Core/Src/parts/processor.cpp \
 Core/Src/parts/state_sensor.cpp \
+Core/Src/parts/devs_config.cpp \
+Core/Src/parts/int_config.cpp \
+\
+Core/Src/parts/sensors/position_sensor.cpp \
+Core/Src/parts/sensors/encoder.cpp \
+Core/Src/parts/sensors/lidar.cpp \
+\
+Core/Src/parts/processor/robo_states.cpp \
+Core/Src/parts/processor/game_field.cpp \
 \
 Core/Src/robot/robot.cpp \
 \
 Core/Src/utils/math/mat.cpp \
+Core/Src/utils/filter/exp_smooth.cpp \
+\
+Core/Src/utils/logger.cpp \
+\
+Core/Src/sys/error.cpp \
 \
 Core/Src/robo_tasks.cpp \
 Core/Src/main.cpp
@@ -188,15 +209,15 @@ C_INCLUDES =  \
 \
 -IUSB_DEVICE/App \
 -IUSB_DEVICE/Target \
--IC:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Inc \
--IC:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy \
--IC:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/Third_Party/FreeRTOS/Source/include \
--IC:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS \
--IC:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F \
--IC:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STM32_USB_Device_Library/Core/Inc \
--IC:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc \
--IC:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include \
--IC:/Users/073be/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/CMSIS/Include
+-IC:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Inc \
+-IC:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy \
+-IC:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Middlewares/Third_Party/FreeRTOS/Source/include \
+-IC:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS \
+-IC:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F \
+-IC:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Middlewares/ST/STM32_USB_Device_Library/Core/Inc \
+-IC:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc \
+-IC:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/CMSIS/Device/ST/STM32F4xx/Include \
+-IC:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/CMSIS/Include
 
 
 # compile gcc flags
@@ -277,7 +298,8 @@ $(BUILD_DIR):
 #######################################
 clean:
 	del /s/q $(BUILD_DIR)
-  
+
+rebuild: clean all
 #######################################
 # dependencies
 #######################################

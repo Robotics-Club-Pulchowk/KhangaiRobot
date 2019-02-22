@@ -1,9 +1,19 @@
 <map id="Robot" name="Robot">
-<area shape="rect" id="node1" title="A Singleton class that handles all the robot&#39;s sequence." alt="" coords="103,452,159,479"/>
-<area shape="rect" id="node2" href="$class_actuator.html" title=" " alt="" coords="23,363,93,389"/>
-<area shape="rect" id="node3" href="$class_wheel.html" title=" " alt="" coords="29,273,87,300"/>
-<area shape="rect" id="node4" href="$struct_wheel___config.html" title=" " alt="" coords="7,184,109,211"/>
-<area shape="rect" id="node5" href="$class_p_i_d.html" title=" " alt="" coords="37,95,79,121"/>
-<area shape="rect" id="node6" href="$class_p_i_d___algorithm.html" title=" " alt="" coords="5,5,111,32"/>
-<area shape="rect" id="node7" href="$class_vec3.html" title=" " alt="" coords="117,363,217,389"/>
+<area shape="rect" id="node1" title="A Singleton class that handles all the robot&#39;s sequence." alt="" coords="239,708,295,735"/>
+<area shape="rect" id="node2" href="$class_actuator.html" title=" " alt="" coords="28,610,99,637"/>
+<area shape="rect" id="node3" href="$class_wheel.html" title=" " alt="" coords="29,512,87,539"/>
+<area shape="rect" id="node4" href="$struct_wheel___config.html" title=" " alt="" coords="7,423,109,449"/>
+<area shape="rect" id="node5" href="$class_p_i_d.html" title=" " alt="" coords="37,304,79,331"/>
+<area shape="rect" id="node6" href="$class_p_i_d___algorithm.html" title=" " alt="" coords="5,199,111,225"/>
+<area shape="rect" id="node7" href="$class_vec3.html" title=" " alt="" coords="216,512,316,539"/>
+<area shape="rect" id="node8" href="$class_processor.html" title=" " alt="" coords="396,610,477,637"/>
+<area shape="rect" id="node9" href="$class_robo___states.html" title=" " alt="" coords="340,512,437,539"/>
+<area shape="rect" id="node10" href="$struct_state___vars.html" title=" " alt="" coords="181,423,268,449"/>
+<area shape="rect" id="node11" href="$class_vec2.html" title=" " alt="" coords="175,304,275,331"/>
+<area shape="rect" id="node12" href="$class_state___sensor.html" title=" " alt="" coords="559,512,661,539"/>
+<area shape="rect" id="node13" href="$class_position_sensor.html" title=" " alt="" coords="555,423,665,449"/>
+<area shape="rect" id="node14" href="$class_sensor.html" title=" " alt="" coords="504,304,615,331"/>
+<area shape="rect" id="node15" href="$class_kalman___filter.html" title=" " alt="" coords="639,304,741,331"/>
+<area shape="rect" id="node16" href="$struct_kalman___vars.html" title=" " alt="" coords="591,199,691,225"/>
+<area shape="rect" id="node17" href="$class_mat.html" title=" " alt="" coords="683,5,727,32"/>
 </map>

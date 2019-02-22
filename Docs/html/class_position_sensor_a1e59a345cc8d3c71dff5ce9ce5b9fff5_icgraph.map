@@ -1,0 +1,6 @@
+<map id="PositionSensor::read_Position" name="PositionSensor::read_Position">
+<area shape="rect" id="node1" title=" " alt="" coords="461,5,604,47"/>
+<area shape="rect" id="node2" href="$class_state___sensor.html#ad04888a362dc2c7269a6dd319c513475" title="Function that provides the state of the robot." alt="" coords="279,5,413,47"/>
+<area shape="rect" id="node3" href="$class_robot.html#a1456df8be5ce9a34e8aa175fc6cb8a1a" title=" " alt="" coords="148,13,231,39"/>
+<area shape="rect" id="node4" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title="Function implementing the RoboSequence thread." alt="" coords="5,13,100,39"/>
+</map>

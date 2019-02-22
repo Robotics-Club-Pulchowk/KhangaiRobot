@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['vec3',['Vec3',['../class_vec3.html',1,'']]],
-  ['vec3_3c_20float_20_3e',['Vec3&lt; float &gt;',['../class_vec3.html',1,'']]]
+  ['mat',['Mat',['../class_mat.html',1,'']]],
+  ['mpu6050',['MPU6050',['../struct_m_p_u6050.html',1,'']]]
 ];

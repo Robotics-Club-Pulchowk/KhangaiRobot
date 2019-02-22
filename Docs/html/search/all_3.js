@@ -1,11 +1,23 @@
 var searchData=
 [
+  ['calc_5fangleofattack',['calc_AngleOfAttack',['../class_robo___states.html#a0c4368a7db98e682198ecd564fd2d28f',1,'Robo_States']]],
+  ['calc_5frobovelocity',['calc_RoboVelocity',['../class_robo___states.html#a80a3aa889e572b044f4355e4ab04e786',1,'Robo_States']]],
+  ['centre',['centre',['../struct_state___vars.html#a60d7f9a27264c4f57ec914d1e1889084',1,'State_Vars']]],
+  ['change_5fsensors',['change_Sensors',['../class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c',1,'State_Sensor']]],
   ['channel',['channel',['../struct_wheel___config.html#ae3f8d5c2be39474efec58fae14459a76',1,'Wheel_Config']]],
+  ['chb_5fpin',['chB_pin',['../struct_enc.html#a05b4ced4ef5fbb06f9283eb4a908d0aa',1,'Enc']]],
+  ['chb_5fport',['chB_port',['../struct_enc.html#a1225b438c06c3f95255e832df4d6ce66',1,'Enc']]],
+  ['check',['check',['../class_actuator.html#ac2e0278e6601213c9f7585f40b95a3f9',1,'Actuator']]],
+  ['check_5factuators',['check_Actuators',['../class_robot.html#a135dd428eb165e8c7f860696ea86fc98',1,'Robot']]],
+  ['clear',['clear',['../class_kalman___filter.html#a530ce9a34bda5562f01e782d4e4d5ebb',1,'Kalman_Filter::clear()'],['../class_exp___smooth.html#a3362788db2595048d3fc90622a7c1340',1,'Exp_Smooth::clear()']]],
+  ['clear_5ferrors',['clear_Errors',['../error_8cpp.html#a838df6e654241da45edc1f7a93252eab',1,'error.cpp']]],
   ['cmsis',['CMSIS',['../group___c_m_s_i_s.html',1,'']]],
   ['cols',['cols',['../class_mat.html#a88332d9cd088208e24bea1f10651d1e7',1,'Mat']]],
   ['cols_5f',['cols_',['../class_mat.html#af7abe041c4852f35dd45c4c65523b130',1,'Mat']]],
+  ['compass1',['Compass1',['../sensor_8h.html#a80119019834acb539f0ac38a1e57e56da6758ec831a78b090ec6e212d022dd308',1,'sensor.h']]],
   ['compute',['compute',['../class_p_i_d___algorithm.html#a388ec97d23c981e62c3726505688e1f0',1,'PID_Algorithm::compute()'],['../class_discrete___p_i_d.html#aa4914b85e73cb5fdfcc5b40e8d0ff23c',1,'Discrete_PID::compute()']]],
   ['compute_5fpid',['compute_PID',['../class_p_i_d.html#a4d19abca579301069c3edb28fd5ff7f2',1,'PID']]],
+  ['config',['CONFIG',['../mpu6050__reg_8h.html#a76ea3cf49247a07c54b3db005a3c7f57',1,'mpu6050_reg.h']]],
   ['configassert',['configASSERT',['../_free_r_t_o_s_config_8h.html#a228c70cd48927d6ab730ed1a6dfbe35f',1,'FreeRTOSConfig.h']]],
   ['configcpu_5fclock_5fhz',['configCPU_CLOCK_HZ',['../_free_r_t_o_s_config_8h.html#aa68082df879e6fc96bcb9b26513639e7',1,'FreeRTOSConfig.h']]],
   ['configkernel_5finterrupt_5fpriority',['configKERNEL_INTERRUPT_PRIORITY',['../_free_r_t_o_s_config_8h.html#ac42cff506ad61d4174fa23e952e3225e',1,'FreeRTOSConfig.h']]],
@@ -28,5 +40,10 @@ var searchData=
   ['configuse_5fport_5foptimised_5ftask_5fselection',['configUSE_PORT_OPTIMISED_TASK_SELECTION',['../_free_r_t_o_s_config_8h.html#aebb8c3a87d591f60f974772be0ee798d',1,'FreeRTOSConfig.h']]],
   ['configuse_5fpreemption',['configUSE_PREEMPTION',['../_free_r_t_o_s_config_8h.html#adde83486022745409c40605922b0bdd6',1,'FreeRTOSConfig.h']]],
   ['configuse_5ftick_5fhook',['configUSE_TICK_HOOK',['../_free_r_t_o_s_config_8h.html#a23c5922c077106fad3f70b54d9071466',1,'FreeRTOSConfig.h']]],
-  ['curr_5fsize_5f',['curr_size_',['../class_queue.html#a55aef7972e17d4f0cea7d946c4be66fa',1,'Queue']]]
+  ['count',['count',['../struct_enc.html#a56c669fa6a6933aeb355d89bc5793fee',1,'Enc']]],
+  ['cpu_5f',['cpu_',['../class_robot.html#a9c522805627d4c815b859632a9bef49e',1,'Robot']]],
+  ['cubicspline',['cubicSpline',['../class_robo___states.html#ae846d1e39dd7a955e4f14b36d0795c8d',1,'Robo_States']]],
+  ['curr_5fsize_5f',['curr_size_',['../class_queue.html#a55aef7972e17d4f0cea7d946c4be66fa',1,'Queue']]],
+  ['curr_5fstate_5f',['curr_state_',['../class_processor.html#ae53285851bf9d20176051a7aa4847ee1',1,'Processor']]],
+  ['curve_5fstep_5fsize',['CURVE_STEP_SIZE',['../robo__states_8cpp.html#ac84306ad54a15972865cbaff6fcfcd1a',1,'robo_states.cpp']]]
 ];

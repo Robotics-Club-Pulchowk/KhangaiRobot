@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['gcoupling_5farray',['gCoupling_Array',['../actuator_8cpp.html#a8ceafb86272e861562005bf223f8b2e7',1,'actuator.cpp']]],
-  ['ginverse_5fcoupling_5farray',['gInverse_Coupling_Array',['../actuator_8cpp.html#a04da7f77323b16142bf823ebd92c6103',1,'actuator.cpp']]]
+  ['f_5f',['F_',['../struct_kalman___vars.html#a778fcb01c321bd6a4be499a887564b61',1,'Kalman_Vars']]],
+  ['first_5fstate_5f',['first_state_',['../class_processor.html#a40ccd5435b8e24a550a4dbf77a6a17af',1,'Processor']]]
 ];

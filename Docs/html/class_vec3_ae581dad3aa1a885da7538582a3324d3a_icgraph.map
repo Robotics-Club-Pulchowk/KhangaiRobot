@@ -1,4 +1,5 @@
 <map id="Vec3::set_Values" name="Vec3::set_Values">
-<area shape="rect" id="node1" title=" " alt="" coords="192,5,317,32"/>
-<area shape="rect" id="node2" href="$class_vec3.html#a7c150f37ecfa78ced8b83bd95908cc33" title=" " alt="" coords="5,5,144,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="240,31,365,57"/>
+<area shape="rect" id="node2" href="$class_vec3.html#a7c150f37ecfa78ced8b83bd95908cc33" title=" " alt="" coords="29,5,168,32"/>
+<area shape="rect" id="node3" href="$mpu6050_8cpp.html#ac4621db6e750eedcf624f78dbe405b13" title=" " alt="" coords="5,56,192,83"/>
 </map>

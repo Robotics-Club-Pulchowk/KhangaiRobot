@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Khangai Robot Play: PID_Algorithm Class Reference</title>
+<title>Khangai Robot Play - Naive: PID_Algorithm Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,10 +30,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="220px-Triple_Rotacaster_commercial_industrial_omni_wheel.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Khangai Robot Play
+   <div id="projectname">Khangai Robot Play - Naive
    &#160;<span id="projectnumber">01</span>
    </div>
-   <div id="projectbrief">THe complete play of the Khangai Robot</div>
+   <div id="projectbrief">THe naive play of the Khangai Robot</div>
   </td>
  </tr>
  </tbody>
@@ -114,7 +114,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a77e1b4df4f9605df9373deb336c47987"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa89df608678228c8ecbb73c5953d0b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___algorithm.html#afa89df608678228c8ecbb73c5953d0b4">PID_Algorithm</a> (float p, float i, float d)</td></tr>
 <tr class="separator:afa89df608678228c8ecbb73c5953d0b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a388ec97d23c981e62c3726505688e1f0"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___algorithm.html#a388ec97d23c981e62c3726505688e1f0">compute</a> (float error, uint32_t dt_millis)=0</td></tr>
+<tr class="memitem:a388ec97d23c981e62c3726505688e1f0"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___algorithm.html#a388ec97d23c981e62c3726505688e1f0">compute</a> (float <a class="el" href="error_8cpp.html#ab5744f81944e2a834ef96ae10f8ae166">error</a>, uint32_t dt_millis)=0</td></tr>
 <tr class="separator:a388ec97d23c981e62c3726505688e1f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6248cf0e2677a45193c9b43b0001ee44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___algorithm.html#a6248cf0e2677a45193c9b43b0001ee44">set_P</a> (float p)</td></tr>
 <tr class="separator:a6248cf0e2677a45193c9b43b0001ee44"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -310,9 +310,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_p_i_d___algorithm_a388ec97d23c981e62c3726505688e1f0_icgraph.png" border="0" usemap="#class_p_i_d___algorithm_a388ec97d23c981e62c3726505688e1f0_icgraph" alt=""/></div>
 <map name="class_p_i_d___algorithm_a388ec97d23c981e62c3726505688e1f0_icgraph" id="class_p_i_d___algorithm_a388ec97d23c981e62c3726505688e1f0_icgraph">
-<area shape="rect"  title=" " alt="" coords="335,5,497,32"/>
-<area shape="rect"  href="class_p_i_d.html#a4d19abca579301069c3edb28fd5ff7f2" title=" " alt="" coords="157,5,287,32"/>
-<area shape="rect"  href="class_actuator.html#a97d651157712c2189fac4063c31d6963" title=" " alt="" coords="5,5,109,32"/>
+<area shape="rect"  title=" " alt="" coords="705,5,868,32"/>
+<area shape="rect"  href="class_p_i_d.html#a4d19abca579301069c3edb28fd5ff7f2" title=" " alt="" coords="528,5,657,32"/>
+<area shape="rect"  href="class_actuator.html#a97d651157712c2189fac4063c31d6963" title=" " alt="" coords="376,5,480,32"/>
+<area shape="rect"  href="class_actuator.html#a12789faf0215436ece13fb1608111f34" title=" " alt="" coords="215,5,328,32"/>
+<area shape="rect"  href="class_robot.html#a38036a2ef73f7b1af6c5d6269e03a5f8" title=" " alt="" coords="5,5,167,32"/>
 </map>
 </div>
 
@@ -481,9 +483,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_p_i_d___algorithm_a0adcbfe07b44479d3c46d20037bf1013_icgraph.png" border="0" usemap="#class_p_i_d___algorithm_a0adcbfe07b44479d3c46d20037bf1013_icgraph" alt=""/></div>
 <map name="class_p_i_d___algorithm_a0adcbfe07b44479d3c46d20037bf1013_icgraph" id="class_p_i_d___algorithm_a0adcbfe07b44479d3c46d20037bf1013_icgraph">
-<area shape="rect"  title=" " alt="" coords="209,23,340,65"/>
-<area shape="rect"  href="class_discrete___p_i_d.html#aa4914b85e73cb5fdfcc5b40e8d0ff23c" title=" " alt="" coords="5,5,161,32"/>
-<area shape="rect"  href="class_actuator.html#a97d651157712c2189fac4063c31d6963" title=" " alt="" coords="31,56,135,83"/>
+<area shape="rect"  title=" " alt="" coords="580,23,711,65"/>
+<area shape="rect"  href="class_discrete___p_i_d.html#aa4914b85e73cb5fdfcc5b40e8d0ff23c" title=" " alt="" coords="376,5,532,32"/>
+<area shape="rect"  href="class_actuator.html#a97d651157712c2189fac4063c31d6963" title=" " alt="" coords="402,56,506,83"/>
+<area shape="rect"  href="class_actuator.html#a12789faf0215436ece13fb1608111f34" title=" " alt="" coords="215,56,328,83"/>
+<area shape="rect"  href="class_robot.html#a38036a2ef73f7b1af6c5d6269e03a5f8" title=" " alt="" coords="5,56,167,83"/>
 </map>
 </div>
 
@@ -807,7 +811,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot-Play/Core/Inc/utils/control/<a class="el" href="pid__algorithms_8h_source.html">pid_algorithms.h</a></li>
+<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive-Play/Core/Inc/utils/control/<a class="el" href="pid__algorithms_8h_source.html">pid_algorithms.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

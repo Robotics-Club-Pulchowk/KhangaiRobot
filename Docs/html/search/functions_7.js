@@ -3,14 +3,19 @@ var searchData=
   ['get_5falgorithm',['get_Algorithm',['../class_p_i_d.html#a940bbf0c834f0ac68203b8e28b2ca8d1',1,'PID']]],
   ['get_5fd',['get_D',['../class_p_i_d___algorithm.html#a5a113c3d88ee8af75af7248fb590f538',1,'PID_Algorithm']]],
   ['get_5fi',['get_I',['../class_p_i_d___algorithm.html#a6305260cd346415953b41fb765d33740',1,'PID_Algorithm']]],
-  ['get_5finstance',['get_Instance',['../class_actuator.html#a5c444f19e2bd03fd38aef75f78f4de82',1,'Actuator::get_Instance()'],['../class_robot.html#afb2b087ee8339bd935f9629b56ea2983',1,'Robot::get_Instance()']]],
+  ['get_5fid',['get_ID',['../class_arduino___device.html#acd91590a4e10e4e8d0a7d92c0451cd36',1,'Arduino_Device::get_ID()'],['../class_robo___states.html#a52979a290d5b8010c6478d76db4f167a',1,'Robo_States::get_ID()']]],
+  ['get_5finstance',['get_Instance',['../class_actuator.html#a5c444f19e2bd03fd38aef75f78f4de82',1,'Actuator::get_Instance()'],['../class_processor.html#acb789148869306c2a572d16f06abd7d2',1,'Processor::get_Instance()'],['../class_position_sensor.html#a409cde1d6bc69641e99c3521b9f40f71',1,'PositionSensor::get_Instance()'],['../class_state___sensor.html#a31cc1d727cc48b82fc9ba46dfd7bea69',1,'State_Sensor::get_Instance()'],['../class_robot.html#afb2b087ee8339bd935f9629b56ea2983',1,'Robot::get_Instance()']]],
   ['get_5flower',['get_Lower',['../class_p_i_d___algorithm.html#a2029e728fcc641ba204b44ef2c6dd2d9',1,'PID_Algorithm']]],
   ['get_5fmaxomega',['get_MaxOmega',['../class_wheel.html#a87aab248643ff4b1dab45080ed482fe0',1,'Wheel']]],
+  ['get_5fname',['get_Name',['../class_sensor.html#a4f44b78a46bc1fb8edefc6f0f6dcae97',1,'Sensor']]],
+  ['get_5fnextstate',['get_NextState',['../class_robo___states.html#a2b991441c08e4ddef51f6a4683d172ed',1,'Robo_States']]],
   ['get_5fomega',['get_Omega',['../class_wheel.html#ad30f55db6258b3caef41420f4cb1606e',1,'Wheel']]],
   ['get_5fp',['get_P',['../class_p_i_d___algorithm.html#a0dd1059744956de2a09c72bd607ee2f4',1,'PID_Algorithm']]],
   ['get_5fpidcontroller',['get_PIDController',['../class_wheel.html#a68e69448efd26f616b9b85f2f2e49809',1,'Wheel']]],
+  ['get_5fstate',['get_State',['../class_robo___states.html#a6e108f35f1785617577788d4d4df2d71',1,'Robo_States']]],
   ['get_5fupper',['get_Upper',['../class_p_i_d___algorithm.html#a0adcbfe07b44479d3c46d20037bf1013',1,'PID_Algorithm']]],
-  ['getx',['getX',['../class_vec3.html#ad259e243f6678730d990acbae2cdff57',1,'Vec3']]],
-  ['gety',['getY',['../class_vec3.html#a8eeb16262b7e619f081a1ba94df098f8',1,'Vec3']]],
-  ['getz',['getZ',['../class_vec3.html#a52f0db1c387aa9bc7befe5792b698553',1,'Vec3']]]
+  ['getw',['getW',['../class_vec4.html#a2521cd3acaff1d2f08db0d0cbf99b41d',1,'Vec4']]],
+  ['getx',['getX',['../class_vec2.html#ab9c6aa483fc884d65a0f50a6426dce04',1,'Vec2::getX()'],['../class_vec3.html#ad259e243f6678730d990acbae2cdff57',1,'Vec3::getX()'],['../class_vec4.html#ac99f7d2425b140e008a4d3eb3c6ac279',1,'Vec4::getX()']]],
+  ['gety',['getY',['../class_vec2.html#ab34c86af20c627cd5ed0e1a973a43fa3',1,'Vec2::getY()'],['../class_vec3.html#a8eeb16262b7e619f081a1ba94df098f8',1,'Vec3::getY()'],['../class_vec4.html#aa75327d1d4c22bea8ce2857708ed2b72',1,'Vec4::getY()']]],
+  ['getz',['getZ',['../class_vec3.html#a52f0db1c387aa9bc7befe5792b698553',1,'Vec3::getZ()'],['../class_vec4.html#a21606d1d8d9adb1d2140f080fe1c6340',1,'Vec4::getZ()']]]
 ];

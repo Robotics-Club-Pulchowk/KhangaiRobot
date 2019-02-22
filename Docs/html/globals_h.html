@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Khangai Robot Play: File Members</title>
+<title>Khangai Robot Play - Naive: File Members</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,10 +30,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="220px-Triple_Rotacaster_commercial_industrial_omni_wheel.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Khangai Robot Play
+   <div id="projectname">Khangai Robot Play - Naive
    &#160;<span id="projectnumber">01</span>
    </div>
-   <div id="projectbrief">THe complete play of the Khangai Robot</div>
+   <div id="projectbrief">THe naive play of the Khangai Robot</div>
   </td>
  </tr>
  </tbody>
@@ -113,6 +113,9 @@ $(document).ready(function(){initNavTree('globals_h.html','');});
 <li>HAL_FLASH_MODULE_ENABLED
 : <a class="el" href="stm32f4xx__hal__conf_8h.html#a7112575efe3740911f19a13e6b170fee">stm32f4xx_hal_conf.h</a>
 </li>
+<li>HAL_GPIO_EXTI_Callback()
+: <a class="el" href="int__config_8cpp.html#a0cd91fd3a9608559c2a87a8ba6cba55f">int_config.cpp</a>
+</li>
 <li>HAL_GPIO_MODULE_ENABLED
 : <a class="el" href="stm32f4xx__hal__conf_8h.html#a86165f80d6078719ee0715afe13febf5">stm32f4xx_hal_conf.h</a>
 </li>
@@ -180,6 +183,9 @@ $(document).ready(function(){initNavTree('globals_h.html','');});
 <li>HAL_TIM_PWM_MspInit()
 : <a class="el" href="tim_8c.html#acc04a9bb2813334b6e3585d1f16e5199">tim.c</a>
 </li>
+<li>HAL_UART_IRQCallback()
+: <a class="el" href="int__config_8cpp.html#a128c6ad61d89958ee45b3cac01c6bc57">int_config.cpp</a>
+</li>
 <li>HAL_UART_MODULE_ENABLED
 : <a class="el" href="stm32f4xx__hal__conf_8h.html#a167269406e73327b95c3bb7b9cfe6d89">stm32f4xx_hal_conf.h</a>
 </li>
@@ -189,6 +195,12 @@ $(document).ready(function(){initNavTree('globals_h.html','');});
 <li>HAL_UART_MspInit()
 : <a class="el" href="usart_8c.html#a62a25476866998c7aadfb5c0864fa349">usart.c</a>
 </li>
+<li>HAL_UART_RxCpltCallback()
+: <a class="el" href="int__config_8cpp.html#ae494a9643f29b87d6d81e5264e60e57b">int_config.cpp</a>
+</li>
+<li>HAL_UART_TxCpltCallback()
+: <a class="el" href="int__config_8cpp.html#abcdf9b59049eccbc87d54042f9235b1a">int_config.cpp</a>
+</li>
 <li>HALT
 : <a class="el" href="wheel_8h.html#a224b9163917ac32fc95a60d8c1eec3aaaa2fd6bbb0c07e28e835ba595e64df78c">wheel.h</a>
 </li>
@@ -197,12 +209,28 @@ $(document).ready(function(){initNavTree('globals_h.html','');});
 , <a class="el" href="stm32f4xx__it_8c.html#a2bffc10d5bd4106753b7c30e86903bea">stm32f4xx_it.c</a>
 </li>
 <li>hdma_usart3_rx
-: <a class="el" href="stm32f4xx__it_8c.html#a418ff7f6b595dcf41b10de1083e62340">stm32f4xx_it.c</a>
-, <a class="el" href="usart_8c.html#a418ff7f6b595dcf41b10de1083e62340">usart.c</a>
+: <a class="el" href="usart_8c.html#a418ff7f6b595dcf41b10de1083e62340">usart.c</a>
+, <a class="el" href="stm32f4xx__it_8c.html#a418ff7f6b595dcf41b10de1083e62340">stm32f4xx_it.c</a>
 </li>
 <li>hi2c1
 : <a class="el" href="i2c_8h.html#af7b2c26e44dadaaa798a5c3d82914ba7">i2c.h</a>
 , <a class="el" href="i2c_8c.html#af7b2c26e44dadaaa798a5c3d82914ba7">i2c.c</a>
+</li>
+<li>hi2c2
+: <a class="el" href="i2c_8c.html#ac379bcc152d860f08b1279fd3e232295">i2c.c</a>
+, <a class="el" href="i2c_8h.html#ac379bcc152d860f08b1279fd3e232295">i2c.h</a>
+</li>
+<li>HMC5883_Calibrate()
+: <a class="el" href="hmc5883_8h.html#a6449314a8f8fa5ee28206b48b4bd94fb">hmc5883.h</a>
+, <a class="el" href="hmc5883_8cpp.html#a6449314a8f8fa5ee28206b48b4bd94fb">hmc5883.cpp</a>
+</li>
+<li>HMC5883_Init()
+: <a class="el" href="hmc5883_8h.html#a86fa17c5c34c4d8892eee22857407410">hmc5883.h</a>
+, <a class="el" href="hmc5883_8cpp.html#a31c077b9a4a446eeeca3a688aae1814c">hmc5883.cpp</a>
+</li>
+<li>HMC5883_Read()
+: <a class="el" href="hmc5883_8h.html#a160cb536a44edae08c21bb8b417d9827">hmc5883.h</a>
+, <a class="el" href="hmc5883_8cpp.html#a442df5453f14839e73d26f19c9ab95d7">hmc5883.cpp</a>
 </li>
 <li>hpcd_USB_OTG_FS
 : <a class="el" href="stm32f4xx__it_8c.html#a3ec0d70a6cb9406d997fb3d006cc940d">stm32f4xx_it.c</a>
@@ -211,56 +239,57 @@ $(document).ready(function(){initNavTree('globals_h.html','');});
 : <a class="el" href="stm32f4xx__hal__conf_8h.html#a68ecbc9b0a1a40a1ec9d18d5e9747c4f">stm32f4xx_hal_conf.h</a>
 </li>
 <li>HSE_VALUE
-: <a class="el" href="stm32f4xx__hal__conf_8h.html#aeafcff4f57440c60e64812dddd13e7cb">stm32f4xx_hal_conf.h</a>
-, <a class="el" href="group___s_t_m32_f4xx___system___private___includes.html#gaeafcff4f57440c60e64812dddd13e7cb">system_stm32f4xx.c</a>
+: <a class="el" href="group___s_t_m32_f4xx___system___private___includes.html#gaeafcff4f57440c60e64812dddd13e7cb">system_stm32f4xx.c</a>
+, <a class="el" href="stm32f4xx__hal__conf_8h.html#aeafcff4f57440c60e64812dddd13e7cb">stm32f4xx_hal_conf.h</a>
 </li>
 <li>HSI_VALUE
-: <a class="el" href="stm32f4xx__hal__conf_8h.html#aaa8c76e274d0f6dd2cefb5d0b17fbc37">stm32f4xx_hal_conf.h</a>
-, <a class="el" href="group___s_t_m32_f4xx___system___private___includes.html#gaaa8c76e274d0f6dd2cefb5d0b17fbc37">system_stm32f4xx.c</a>
-</li>
-<li>hspi1
-: <a class="el" href="spi_8h.html#a9c6222bae4d0328dd843ae099623b40b">spi.h</a>
-, <a class="el" href="spi_8c.html#a9c6222bae4d0328dd843ae099623b40b">spi.c</a>
+: <a class="el" href="group___s_t_m32_f4xx___system___private___includes.html#gaaa8c76e274d0f6dd2cefb5d0b17fbc37">system_stm32f4xx.c</a>
+, <a class="el" href="stm32f4xx__hal__conf_8h.html#aaa8c76e274d0f6dd2cefb5d0b17fbc37">stm32f4xx_hal_conf.h</a>
 </li>
 <li>hspi2
-: <a class="el" href="spi_8h.html#ab9da65f935e805137e2eb4e18c5ab224">spi.h</a>
-, <a class="el" href="spi_8c.html#ab9da65f935e805137e2eb4e18c5ab224">spi.c</a>
+: <a class="el" href="spi_8c.html#ab9da65f935e805137e2eb4e18c5ab224">spi.c</a>
+, <a class="el" href="spi_8h.html#ab9da65f935e805137e2eb4e18c5ab224">spi.h</a>
 </li>
 <li>htim1
-: <a class="el" href="tim_8c.html#a25fc663547539bc49fecc0011bd76ab5">tim.c</a>
-, <a class="el" href="tim_8h.html#a25fc663547539bc49fecc0011bd76ab5">tim.h</a>
+: <a class="el" href="tim_8h.html#a25fc663547539bc49fecc0011bd76ab5">tim.h</a>
+, <a class="el" href="tim_8c.html#a25fc663547539bc49fecc0011bd76ab5">tim.c</a>
 </li>
 <li>htim2
-: <a class="el" href="tim_8c.html#a2c80fd5510e2990a59a5c90d745c716c">tim.c</a>
-, <a class="el" href="tim_8h.html#a2c80fd5510e2990a59a5c90d745c716c">tim.h</a>
+: <a class="el" href="tim_8h.html#a2c80fd5510e2990a59a5c90d745c716c">tim.h</a>
+, <a class="el" href="tim_8c.html#a2c80fd5510e2990a59a5c90d745c716c">tim.c</a>
 </li>
 <li>htim3
-: <a class="el" href="tim_8h.html#aac3d2c59ee0e3bbae1b99529a154eb62">tim.h</a>
-, <a class="el" href="tim_8c.html#aac3d2c59ee0e3bbae1b99529a154eb62">tim.c</a>
+: <a class="el" href="tim_8c.html#aac3d2c59ee0e3bbae1b99529a154eb62">tim.c</a>
+, <a class="el" href="tim_8h.html#aac3d2c59ee0e3bbae1b99529a154eb62">tim.h</a>
 </li>
 <li>htim4
-: <a class="el" href="tim_8c.html#a85788cec5a97ee377e4ee2e74f026484">tim.c</a>
-, <a class="el" href="tim_8h.html#a85788cec5a97ee377e4ee2e74f026484">tim.h</a>
+: <a class="el" href="tim_8h.html#a85788cec5a97ee377e4ee2e74f026484">tim.h</a>
+, <a class="el" href="tim_8c.html#a85788cec5a97ee377e4ee2e74f026484">tim.c</a>
 </li>
 <li>htim5
 : <a class="el" href="stm32f4xx__hal__timebase__tim_8c.html#acefaeaaa3856ddddae7083b2d220fe4b">stm32f4xx_hal_timebase_tim.c</a>
 , <a class="el" href="stm32f4xx__it_8c.html#acefaeaaa3856ddddae7083b2d220fe4b">stm32f4xx_it.c</a>
 </li>
 <li>htim8
-: <a class="el" href="tim_8c.html#a5faa27108379f799afb6984010bf0384">tim.c</a>
-, <a class="el" href="tim_8h.html#a5faa27108379f799afb6984010bf0384">tim.h</a>
+: <a class="el" href="tim_8h.html#a5faa27108379f799afb6984010bf0384">tim.h</a>
+, <a class="el" href="tim_8c.html#a5faa27108379f799afb6984010bf0384">tim.c</a>
+</li>
+<li>htim9
+: <a class="el" href="tim_8h.html#a31f6f787777409af5ed0d131b52b7988">tim.h</a>
+, <a class="el" href="tim_8c.html#a31f6f787777409af5ed0d131b52b7988">tim.c</a>
 </li>
 <li>huart2
 : <a class="el" href="usart_8h.html#aa9479c261d65eecedd3d9582f7f0f89c">usart.h</a>
 , <a class="el" href="usart_8c.html#aa9479c261d65eecedd3d9582f7f0f89c">usart.c</a>
 </li>
 <li>huart3
-: <a class="el" href="usart_8h.html#ab7c63c1b0f65db92b6a4ea19edf957e1">usart.h</a>
-, <a class="el" href="usart_8c.html#ab7c63c1b0f65db92b6a4ea19edf957e1">usart.c</a>
+: <a class="el" href="usart_8c.html#ab7c63c1b0f65db92b6a4ea19edf957e1">usart.c</a>
+, <a class="el" href="stm32f4xx__it_8c.html#ab7c63c1b0f65db92b6a4ea19edf957e1">stm32f4xx_it.c</a>
+, <a class="el" href="usart_8h.html#ab7c63c1b0f65db92b6a4ea19edf957e1">usart.h</a>
 </li>
 <li>huart4
-: <a class="el" href="usart_8c.html#ae273feb3e0dc44e38892650faa58fced">usart.c</a>
-, <a class="el" href="usart_8h.html#ae273feb3e0dc44e38892650faa58fced">usart.h</a>
+: <a class="el" href="usart_8h.html#ae273feb3e0dc44e38892650faa58fced">usart.h</a>
+, <a class="el" href="usart_8c.html#ae273feb3e0dc44e38892650faa58fced">usart.c</a>
 </li>
 </ul>
 </div><!-- contents -->

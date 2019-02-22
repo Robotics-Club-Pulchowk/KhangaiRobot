@@ -10,4 +10,13 @@
 
 #define MAX_POSSIBLE_OMEGA	(70)    // Maximum value that may be computed
 
+
+#define _USE_BOARD_LEDS_FOR_JOYSTICK
+
+#undef _USE_BOARD_LEDS_FOR_ERROR_
+// #define _USE_mikroBUS_LEDS_FOR_ERROR_
+
+
+#define _ENABLE_I2C_ERROR_DETECTION
+
 #endif  // _DEFINES_H_

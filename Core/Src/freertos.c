@@ -10,7 +10,7 @@
   * inserted by the user or by software development tools
   * are owned by their respective copyright owners.
   *
-  * Copyright (c) 2018 STMicroelectronics International N.V. 
+  * Copyright (c) 2019 STMicroelectronics International N.V. 
   * All rights reserved.
   *
   * Redistribution and use in source and binary forms, with or without 
@@ -56,7 +56,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "usb_device.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -82,11 +82,14 @@ osThreadId defaultTaskHandle;
 uint32_t defaultTaskBuffer[256];
 osStaticThreadDef_t defaultTaskControlBlock;
 osThreadId RoboSequenceHandle;
-uint32_t RoboSequenceBuffer[1024];
+uint32_t RoboSequenceBuffer[2048];
 osStaticThreadDef_t RoboSequenceControlBlock;
 osThreadId loggingHandle;
-uint32_t loggingBuffer[1024];
+uint32_t loggingBuffer[2048];
 osStaticThreadDef_t loggingControlBlock;
+osThreadId MotorSequenceHandle;
+uint32_t MotorSequenceBuffer[ 2028 ];
+osStaticThreadDef_t MotorSequenceControlBlock;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -96,6 +99,7 @@ osStaticThreadDef_t loggingControlBlock;
 void StartDefaultTask(void const *argument);
 void RobotThread(void const *argument);
 void LoggingThread(void const *argument);
+void MotorThread(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -144,12 +148,16 @@ void MX_FREERTOS_Init(void)
         defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
         /* definition and creation of RoboSequence */
-        osThreadStaticDef(RoboSequence, RobotThread, osPriorityRealtime, 0, 1024, RoboSequenceBuffer, &RoboSequenceControlBlock);
+        osThreadStaticDef(RoboSequence, RobotThread, osPriorityRealtime, 0, 2048, RoboSequenceBuffer, &RoboSequenceControlBlock);
         RoboSequenceHandle = osThreadCreate(osThread(RoboSequence), NULL);
 
         /* definition and creation of logging */
-        osThreadStaticDef(logging, LoggingThread, osPriorityLow, 0, 1024, loggingBuffer, &loggingControlBlock);
+        osThreadStaticDef(logging, LoggingThread, osPriorityLow, 0, 2048, loggingBuffer, &loggingControlBlock);
         loggingHandle = osThreadCreate(osThread(logging), NULL);
+
+        /* definition and creation of MotorSequence */
+        osThreadStaticDef(MotorSequence, MotorThread, osPriorityRealtime, 0, 2028, MotorSequenceBuffer, &MotorSequenceControlBlock);
+        MotorSequenceHandle = osThreadCreate(osThread(MotorSequence), NULL);
 
         /* USER CODE BEGIN RTOS_THREADS */
         /* add threads, ... */

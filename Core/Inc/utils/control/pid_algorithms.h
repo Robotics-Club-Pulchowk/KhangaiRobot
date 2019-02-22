@@ -76,13 +76,14 @@ public:
                 
                 float P = get_P();
                 float I = get_I();
+                // We assume that Ts is never zero
                 float D_by_Ts = get_D() / Ts;
 
                 float a = P + D_by_Ts;
-                float b = -P + I * Ts - 2 * D_by_Ts;
+                float b = -P + I*Ts - 2*D_by_Ts;
                 float c = D_by_Ts;
 
-                l_output_ += a * error + b * l_err_ + c * ll_err_;
+                l_output_ += a*error + b*l_err_ + c*ll_err_;
 
                 if (l_output_ > get_Upper()) {
                         l_output_ = get_Upper();

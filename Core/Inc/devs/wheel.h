@@ -38,7 +38,7 @@ struct Wheel_Config
         TIM_HandleTypeDef *henc;
         
         float tolerance;                // Tolerance level for zero
-        float max_omega;
+        float max_omega;                // Max Omega Attained by the wheel(motor)
         uint32_t enc_ppr;
 
         PID *pid_controller;            // Pointer to the wheel's PID controller

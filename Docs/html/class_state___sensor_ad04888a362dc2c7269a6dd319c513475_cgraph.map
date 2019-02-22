@@ -1,0 +1,26 @@
+<map id="State_Sensor::read_State" name="State_Sensor::read_State">
+<area shape="rect" id="node1" title="Function that provides the state of the robot." alt="" coords="5,511,140,553"/>
+<area shape="rect" id="node2" href="$class_state___sensor.html#ae108cbc000aaf85a2da0ec0f6d5b2f81" title="Function that provides the orientation of the robot." alt="" coords="192,99,327,141"/>
+<area shape="rect" id="node11" href="$class_position_sensor.html#a1e59a345cc8d3c71dff5ce9ce5b9fff5" title=" " alt="" coords="188,479,331,521"/>
+<area shape="rect" id="node15" href="$class_vec3.html#ad259e243f6678730d990acbae2cdff57" title=" " alt="" coords="428,208,513,235"/>
+<area shape="rect" id="node16" href="$class_vec3.html#a8eeb16262b7e619f081a1ba94df098f8" title=" " alt="" coords="427,613,514,640"/>
+<area shape="rect" id="node17" href="$class_vec3.html#a52f0db1c387aa9bc7befe5792b698553" title=" " alt="" coords="428,664,513,691"/>
+<area shape="rect" id="node24" href="$class_vec3.html#ae581dad3aa1a885da7538582a3324d3a" title=" " alt="" coords="408,715,533,741"/>
+<area shape="rect" id="node3" href="$mpu6050_8h.html#a50fc5edfea8c837109f0dfb59d30a533" title=" " alt="" coords="404,56,537,83"/>
+<area shape="rect" id="node4" href="$mpu6050_8h.html#a0ea7dd73ae359a91636503beac5ff933" title=" " alt="" coords="379,107,563,133"/>
+<area shape="rect" id="node9" href="$hmc5883_8h.html#aba3584e780a99d0226f4a53bcf3da137" title=" " alt="" coords="404,157,537,184"/>
+<area shape="rect" id="node10" href="$hmc5883_8h.html#a8eb75a020b5823d04d0a825ac9b0d16e" title=" " alt="" coords="413,5,529,32"/>
+<area shape="rect" id="node5" href="$mpu6050_8cpp.html#af531c0ab8813f78a037967669d68274e" title=" " alt="" coords="611,81,797,108"/>
+<area shape="rect" id="node7" href="$mpu6050_8cpp.html#a23bfdaec67fbc51cce4df13fe4c7af77" title=" " alt="" coords="613,132,795,159"/>
+<area shape="rect" id="node6" href="$mpu6050_8cpp.html#a423a8f00c69f6205d8c402c0abddc89b" title=" " alt="" coords="845,81,1027,108"/>
+<area shape="rect" id="node8" href="$mpu6050_8cpp.html#aeec7a7267863cd345e68d7d0e6744430" title=" " alt="" coords="848,132,1024,159"/>
+<area shape="rect" id="node12" href="$class_vec3.html#a2d66e34e1ad4be888821158541fcd2ea" title=" " alt="" coords="428,411,513,437"/>
+<area shape="rect" id="node13" href="$class_vec3.html#a4dadb34f7d48268a101914b7a4771e68" title=" " alt="" coords="427,461,514,488"/>
+<area shape="rect" id="node14" href="$class_sensor.html#a5a115feac97a147feec2f637dbed62ac" title=" " alt="" coords="423,512,519,539"/>
+<area shape="rect" id="node18" href="$class_mat.html#aa2864c30e68caf29f400bb98295aa6a3" title=" " alt="" coords="663,284,745,311"/>
+<area shape="rect" id="node20" href="$class_mat.html#a5f4b8f7e3c55a1caf7161c11ec2a2465" title=" " alt="" coords="673,436,735,463"/>
+<area shape="rect" id="node22" href="$class_kalman___filter.html#a530ce9a34bda5562f01e782d4e4d5ebb" title=" " alt="" coords="401,360,540,387"/>
+<area shape="rect" id="node23" href="$class_kalman___filter.html#a6ee45f2d0368a57b7ea49185a52d8175" title=" " alt="" coords="403,309,538,336"/>
+<area shape="rect" id="node19" href="$class_mat.html#a55e6cc33fc65042a4cff351fe59ae476" title=" " alt="" coords="881,284,991,311"/>
+<area shape="rect" id="node21" href="$main_8h.html#a425dc7e549f2b17a4f48496d9561d248" title=" " alt="" coords="882,436,990,463"/>
+</map>

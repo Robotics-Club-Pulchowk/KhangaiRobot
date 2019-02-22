@@ -12,8 +12,8 @@
 #include <math.h>
 #include "vec3.h"
 
-#define MAX_MATRIX_ROWS         4
-#define MAX_MATRIX_COLS         4
+#define MAX_MATRIX_ROWS         (4)
+#define MAX_MATRIX_COLS         (4)
 
 class Mat
 {
@@ -78,6 +78,9 @@ public:
         Mat mult(const Mat &m);
         Mat mult_EW(float num);
         Mat transpose();
+
+        // Just an alias for getting transpose of a matrix
+        inline Mat trans() { return transpose(); }
 
         void fill(float num) {
                 for (uint8_t i = 0; i < rows_; ++i) {

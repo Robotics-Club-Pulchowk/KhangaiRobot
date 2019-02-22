@@ -27,6 +27,7 @@ var class_mat =
     [ "rows", "class_mat.html#a5b965c2e37939da2aea0af686209655c", null ],
     [ "swap_Cols", "class_mat.html#af942681667806bc48eecd8f793e35c3b", null ],
     [ "swap_Rows", "class_mat.html#a410c3755a4d91c1ef2bbe3fed93fbb00", null ],
+    [ "trans", "class_mat.html#aa2864c30e68caf29f400bb98295aa6a3", null ],
     [ "transpose", "class_mat.html#a55e6cc33fc65042a4cff351fe59ae476", null ],
     [ "operator *", "class_mat.html#a13b58290a73861162c573130417e5e00", null ],
     [ "operator *", "class_mat.html#aa3444bb36ff3148a88cae1dd8867a72a", null ],

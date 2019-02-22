@@ -1,15 +1,23 @@
-<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot&#45;Play/Core/Inc/robot/robot.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot&#45;Play/Core/Inc/robot/robot.h">
-<area shape="rect" id="node1" title=" " alt="" coords="263,5,473,76"/>
-<area shape="rect" id="node2" href="$wheel_8h.html" title=" " alt="" coords="180,199,247,225"/>
-<area shape="rect" id="node10" href="$vec3_8h.html" title=" " alt="" coords="339,199,397,225"/>
-<area shape="rect" id="node11" href="$actuator_8h.html" title=" " alt="" coords="251,124,331,151"/>
-<area shape="rect" id="node12" href="$processor_8h.html" title=" " alt="" coords="405,124,496,151"/>
-<area shape="rect" id="node13" href="$state__sensor_8h.html" title=" " alt="" coords="521,124,629,151"/>
-<area shape="rect" id="node3" title=" " alt="" coords="272,423,389,449"/>
-<area shape="rect" id="node4" href="$tim_8h.html" title=" " alt="" coords="280,273,331,300"/>
-<area shape="rect" id="node6" href="$defines_8h.html" title=" " alt="" coords="5,273,80,300"/>
-<area shape="rect" id="node7" href="$pid__algorithms_8h.html" title=" " alt="" coords="73,348,191,375"/>
-<area shape="rect" id="node9" href="$pid_8h.html" title=" " alt="" coords="155,273,205,300"/>
-<area shape="rect" id="node5" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="300,348,361,375"/>
-<area shape="rect" id="node8" title=" " alt="" coords="99,423,165,449"/>
+<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive&#45;Play/Core/Inc/robot/robot.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive&#45;Play/Core/Inc/robot/robot.h">
+<area shape="rect" id="node1" title=" " alt="" coords="218,5,406,76"/>
+<area shape="rect" id="node2" href="$wheel_8h.html" title=" " alt="" coords="128,497,195,524"/>
+<area shape="rect" id="node10" href="$vec3_8h.html" title=" " alt="" coords="336,572,395,599"/>
+<area shape="rect" id="node11" href="$actuator_8h.html" title=" " alt="" coords="195,423,275,449"/>
+<area shape="rect" id="node12" href="$processor_8h.html" title=" " alt="" coords="377,124,468,151"/>
+<area shape="rect" id="node13" href="$state__sensor_8h.html" title=" " alt="" coords="507,273,615,300"/>
+<area shape="rect" id="node3" title=" " alt="" coords="236,721,353,748"/>
+<area shape="rect" id="node4" href="$tim_8h.html" title=" " alt="" coords="261,572,312,599"/>
+<area shape="rect" id="node6" href="$defines_8h.html" title=" " alt="" coords="37,572,112,599"/>
+<area shape="rect" id="node7" href="$pid__algorithms_8h.html" title=" " alt="" coords="5,647,123,673"/>
+<area shape="rect" id="node9" href="$pid_8h.html" title=" " alt="" coords="136,572,187,599"/>
+<area shape="rect" id="node5" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="264,647,325,673"/>
+<area shape="rect" id="node8" title=" " alt="" coords="31,721,97,748"/>
+<area shape="rect" id="node19" href="$robo__states_8h.html" title=" " alt="" coords="372,199,473,225"/>
+<area shape="rect" id="node14" href="$position__sensor_8h.html" title=" " alt="" coords="465,348,589,375"/>
+<area shape="rect" id="node15" href="$sensor_8h.html" title=" " alt="" coords="451,423,523,449"/>
+<area shape="rect" id="node16" href="$kalman_8h.html" title=" " alt="" coords="547,423,621,449"/>
+<area shape="rect" id="node17" href="$mat_8h.html" title=" " alt="" coords="505,497,559,524"/>
+<area shape="rect" id="node18" title=" " alt="" coords="501,572,563,599"/>
+<area shape="rect" id="node20" href="$vec2_8h.html" title=" " alt="" coords="349,348,408,375"/>
+<area shape="rect" id="node21" href="$vec4_8h.html" title=" " alt="" coords="400,273,459,300"/>
 </map>

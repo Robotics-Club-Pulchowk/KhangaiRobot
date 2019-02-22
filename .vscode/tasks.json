@@ -23,7 +23,7 @@
                         "type": "shell",
                         "group": "build",
                         "command": "make rebuild",
-                        "isBackground": false,
+                        "isBackground": true,
                         "problemMatcher": [
                                 "$gcc"
                         ]
@@ -36,7 +36,10 @@
                         "isBackground": false,
                         "problemMatcher": [
                                 "$gcc"
-                        ]
+                        ],
+                        "runOptions": {
+                                "runOn": "folderOpen"
+                        }
                 },
                 {
                         "label": "Clean Code",

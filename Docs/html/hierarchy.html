@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Khangai Robot Play: Class Hierarchy</title>
+<title>Khangai Robot Play - Naive: Class Hierarchy</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,10 +30,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="220px-Triple_Rotacaster_commercial_industrial_omni_wheel.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Khangai Robot Play
+   <div id="projectname">Khangai Robot Play - Naive
    &#160;<span id="projectnumber">01</span>
    </div>
-   <div id="projectbrief">THe complete play of the Khangai Robot</div>
+   <div id="projectbrief">THe naive play of the Khangai Robot</div>
   </td>
  </tr>
  </tbody>
@@ -96,17 +96,41 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 <p><a href="inherits.html">Go to the graphical class hierarchy</a></p>
 This inheritance list is sorted roughly, but not completely, alphabetically:</div><div class="directory">
 <div class="levels">[detail level <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span>]</div><table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_actuator.html" target="_self">Actuator</a></td><td class="desc"></td></tr>
-<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_mat.html" target="_self">Mat</a></td><td class="desc"></td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_p_i_d.html" target="_self">PID</a></td><td class="desc"></td></tr>
-<tr id="row_3_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_3_" class="arrow" onclick="toggleFolder('3_')">&#9660;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_p_i_d___algorithm.html" target="_self">PID_Algorithm</a></td><td class="desc"></td></tr>
-<tr id="row_3_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_discrete___p_i_d.html" target="_self">Discrete_PID</a></td><td class="desc"></td></tr>
-<tr id="row_4_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_queue.html" target="_self">Queue&lt; T, q_size &gt;</a></td><td class="desc"></td></tr>
-<tr id="row_5_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_robot.html" target="_self">Robot</a></td><td class="desc">A Singleton class that handles all the robot's sequence </td></tr>
-<tr id="row_6_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_vec3.html" target="_self">Vec3&lt; T &gt;</a></td><td class="desc"></td></tr>
-<tr id="row_7_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_vec3.html" target="_self">Vec3&lt; float &gt;</a></td><td class="desc"></td></tr>
-<tr id="row_8_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_wheel.html" target="_self">Wheel</a></td><td class="desc"></td></tr>
-<tr id="row_9_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_wheel___config.html" target="_self">Wheel_Config</a></td><td class="desc"></td></tr>
+<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_a4988.html" target="_self">A4988</a></td><td class="desc"></td></tr>
+<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_actuator.html" target="_self">Actuator</a></td><td class="desc"></td></tr>
+<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_arduino___device.html" target="_self">Arduino_Device</a></td><td class="desc"></td></tr>
+<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_arduino___packet.html" target="_self">Arduino_Packet</a></td><td class="desc"></td></tr>
+<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_enc.html" target="_self">Enc</a></td><td class="desc"></td></tr>
+<tr id="row_5_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_h_m_c5883.html" target="_self">HMC5883</a></td><td class="desc"></td></tr>
+<tr id="row_6_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_kalman___filter.html" target="_self">Kalman_Filter</a></td><td class="desc"></td></tr>
+<tr id="row_7_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_kalman___vars.html" target="_self">Kalman_Vars</a></td><td class="desc"></td></tr>
+<tr id="row_8_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_mat.html" target="_self">Mat</a></td><td class="desc"></td></tr>
+<tr id="row_9_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_m_p_u6050.html" target="_self">MPU6050</a></td><td class="desc"></td></tr>
+<tr id="row_10_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_p_i_d.html" target="_self">PID</a></td><td class="desc"></td></tr>
+<tr id="row_11_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_11_" class="arrow" onclick="toggleFolder('11_')">&#9660;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_p_i_d___algorithm.html" target="_self">PID_Algorithm</a></td><td class="desc"></td></tr>
+<tr id="row_11_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_discrete___p_i_d.html" target="_self">Discrete_PID</a></td><td class="desc"></td></tr>
+<tr id="row_12_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_position_sensor.html" target="_self">PositionSensor</a></td><td class="desc"></td></tr>
+<tr id="row_13_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_processor.html" target="_self">Processor</a></td><td class="desc"></td></tr>
+<tr id="row_14_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_queue.html" target="_self">Queue&lt; T, q_size &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_15_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_queue.html" target="_self">Queue&lt; float, 2 &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_16_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_robo___states.html" target="_self">Robo_States</a></td><td class="desc"></td></tr>
+<tr id="row_17_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_robot.html" target="_self">Robot</a></td><td class="desc">A Singleton class that handles all the robot's sequence </td></tr>
+<tr id="row_18_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_sensor.html" target="_self">Sensor&lt; T &gt;</a></td><td class="desc">: An abstract class from which all the sensors must implement </td></tr>
+<tr id="row_19_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_19_" class="arrow" onclick="toggleFolder('19_')">&#9660;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_sensor.html" target="_self">Sensor&lt; float &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_19_0_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_encoder.html" target="_self">Encoder</a></td><td class="desc"></td></tr>
+<tr id="row_19_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_lidar.html" target="_self">Lidar</a></td><td class="desc"></td></tr>
+<tr id="row_20_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_20_" class="arrow" onclick="toggleFolder('20_')">&#9660;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_smoothing___algorithm.html" target="_self">Smoothing_Algorithm</a></td><td class="desc"></td></tr>
+<tr id="row_20_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_exp___smooth.html" target="_self">Exp_Smooth</a></td><td class="desc"></td></tr>
+<tr id="row_21_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_state___sensor.html" target="_self">State_Sensor</a></td><td class="desc"></td></tr>
+<tr id="row_22_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_state___vars.html" target="_self">State_Vars</a></td><td class="desc"></td></tr>
+<tr id="row_23_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_vec2.html" target="_self">Vec2&lt; T &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_24_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_vec2.html" target="_self">Vec2&lt; float &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_25_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_vec3.html" target="_self">Vec3&lt; T &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_26_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_vec3.html" target="_self">Vec3&lt; float &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_27_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_vec3.html" target="_self">Vec3&lt; int16_t &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_28_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_vec4.html" target="_self">Vec4&lt; T &gt;</a></td><td class="desc"></td></tr>
+<tr id="row_29_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_wheel.html" target="_self">Wheel</a></td><td class="desc"></td></tr>
+<tr id="row_30_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_wheel___config.html" target="_self">Wheel_Config</a></td><td class="desc"></td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->

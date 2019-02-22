@@ -16,7 +16,7 @@ static uint16_t time_period(uint16_t PWM_frequency)
 }
 
 /* SET DUTYCYCLE primary function */
-static void set_DutyCycle_Primary(TIM_HandleTypeDef *htim, uint32_t Channel, uint16_t dutyCycle)
+void set_DutyCycle_Primary(TIM_HandleTypeDef *htim, uint32_t Channel, uint16_t dutyCycle)
 {
         uint16_t mapped_value;
         mapped_value = (time_period(MOTOR_DRIVER_FREQUENCY) * dutyCycle) / 65535;
@@ -128,7 +128,8 @@ float Wheel::get_Omega(uint32_t dt_millis)
 
         // w = 2*pi*f
         // f = (counts / ppr) / dt;
-        float omega = omegaRatioTI12(wheel_->enc_ppr) * counts / dt;
+        // Nagating to make count compatible with earlier version
+        float omega = (-1)*omegaRatioTI12(wheel_->enc_ppr) * counts / dt;
 
         return omega;
 }

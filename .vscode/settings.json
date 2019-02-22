@@ -3,6 +3,12 @@
         "cortex-debug.openocdPath": "C:\\ExtraPrograms\\OpenOCD-20181020\\bin\\openocd.exe",
         "files.associations": {
                 "freertos.h": "c",
-                "cmsis_os.h": "c"
+                "cmsis_os.h": "c",
+                "*.tcc": "cpp",
+                "ostream": "cpp",
+                "cmath": "cpp",
+                "deque": "cpp",
+                "list": "cpp",
+                "vector": "cpp"
         }
 }

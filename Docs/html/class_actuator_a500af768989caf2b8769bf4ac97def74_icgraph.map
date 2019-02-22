@@ -1,6 +1,6 @@
 <map id="Actuator::pid_Init" name="Actuator::pid_Init">
 <area shape="rect" id="node1" title="Function that initializes all the required components for the wheel&#39;s pid controller." alt="" coords="421,5,541,32"/>
 <area shape="rect" id="node2" href="$class_actuator.html#a0627d75eae181eab8e03406dd65c5a91" title="Function that initializes all the required components for the robot&#39;s actuator(omni&#45;base)" alt="" coords="277,5,373,32"/>
-<area shape="rect" id="node3" href="$class_robot.html#ab227a4c2ff2b08570a4c84cb6d1289fd" title=" " alt="" coords="148,5,229,32"/>
-<area shape="rect" id="node4" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title="Function implementing the RoboSequence thread." alt="" coords="5,5,100,32"/>
+<area shape="rect" id="node3" href="$class_robot.html#abb7f05b4906d4e65fc2e37995b3646bf" title=" " alt="" coords="148,5,229,32"/>
+<area shape="rect" id="node4" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,5,100,32"/>
 </map>

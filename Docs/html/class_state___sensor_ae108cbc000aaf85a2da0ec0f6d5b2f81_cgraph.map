@@ -1,0 +1,13 @@
+<map id="State_Sensor::read_Orientation" name="State_Sensor::read_Orientation">
+<area shape="rect" id="node1" title="Function that provides the orientation of the robot." alt="" coords="5,99,140,141"/>
+<area shape="rect" id="node2" href="$mpu6050_8h.html#af32563ec0d6af4afc19f1dddb5dde5fc" title=" " alt="" coords="188,31,372,57"/>
+<area shape="rect" id="node7" href="$hmc5883_8h.html#a160cb536a44edae08c21bb8b417d9827" title=" " alt="" coords="222,81,338,108"/>
+<area shape="rect" id="node8" href="$error_8h.html#ab5744f81944e2a834ef96ae10f8ae166" title=" " alt="" coords="256,132,304,159"/>
+<area shape="rect" id="node9" href="$devs__config_8h.html#adb25f6dac3b60011603646bf86d18b16" title=" " alt="" coords="245,183,315,209"/>
+<area shape="rect" id="node3" href="$mpu6050_8cpp.html#acf3493569ebfe4fefcc3801441c70487" title=" " alt="" coords="420,5,607,32"/>
+<area shape="rect" id="node5" href="$mpu6050_8cpp.html#aa4895450dc06bac74b453423c3e88b73" title=" " alt="" coords="422,56,605,83"/>
+<area shape="rect" id="node4" href="$mpu6050_8cpp.html#a7d7f18ad4fd3ae66a0c5940cd82183e6" title=" " alt="" coords="655,5,836,32"/>
+<area shape="rect" id="node6" href="$mpu6050_8cpp.html#a5aa2a065243356e9633010a6b038a66c" title=" " alt="" coords="657,56,833,83"/>
+<area shape="rect" id="node10" href="$mpu6050_8h.html#a53b88c52ed0b8e9eb398578ef6f7fdc4" title=" " alt="" coords="462,157,565,184"/>
+<area shape="rect" id="node11" href="$hmc5883_8h.html#a86fa17c5c34c4d8892eee22857407410" title=" " alt="" coords="462,208,565,235"/>
+</map>

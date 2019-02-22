@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['length',['length',['../class_queue.html#af3f22b735d0b6e09778054021a49e35d',1,'Queue']]],
-  ['loggingthread',['LoggingThread',['../freertos_8c.html#a8bdf1b0904a1ea40164f181f7e86f4ef',1,'LoggingThread(void const *argument):&#160;robo_tasks.cpp'],['../robo__tasks_8cpp.html#a8bdf1b0904a1ea40164f181f7e86f4ef',1,'LoggingThread(void const *argument):&#160;robo_tasks.cpp']]],
-  ['lookup',['lookup',['../class_queue.html#af0b4f014fc929ee5a09361795fc19b30',1,'Queue']]]
+  ['kalman_5ffilter',['Kalman_Filter',['../class_kalman___filter.html#ac917b706405d2056e8edcb12469349d6',1,'Kalman_Filter::Kalman_Filter(Kalman_Vars *kv, int(*kv_init)(uint32_t))'],['../class_kalman___filter.html#ad7218294c69e625015c505c30072839c',1,'Kalman_Filter::Kalman_Filter(Kalman_Filter &amp;&amp;)=default'],['../class_kalman___filter.html#aaecd5f0a2c95443770f1e96e6d6ae901',1,'Kalman_Filter::Kalman_Filter(const Kalman_Filter &amp;)=default']]]
 ];

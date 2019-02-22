@@ -23,15 +23,15 @@ for the JavaScript code in this file
 */
 var NAVTREE =
 [
-  [ "Khangai Robot Play", "index.html", [
+  [ "Khangai Robot Play - Naive", "index.html", [
     [ "Modules", "modules.html", "modules" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
+        [ "All", "functions.html", "functions_dup" ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
         [ "Related Functions", "functions_rela.html", null ]
       ] ]
@@ -44,7 +44,7 @@ var NAVTREE =
         [ "Variables", "globals_vars.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
         [ "Enumerator", "globals_eval.html", null ],
-        [ "Macros", "globals_defs.html", null ]
+        [ "Macros", "globals_defs.html", "globals_defs" ]
       ] ]
     ] ]
   ] ]
@@ -53,8 +53,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_free_r_t_o_s_config_8h.html",
-"dma_8h.html#a323249dac769f9855c10b4ec9446b707",
-"stm32f4xx__it_8h.html#a290cb997018c8d85d4b965b4a242842f"
+"class_position_sensor.html#a0876bb5181de264cbd15ab3d8a26720a",
+"devs__config_8cpp.html#af99d7ea11952a1dedf21339e4f25a50b",
+"i2c_8c.html#a021114cd02d4beb0b256095cfbd088b2",
+"processor_8cpp.html#acbc778e1c79795d5aae3d8ea526b37b1",
+"tim_8c.html#a31f6f787777409af5ed0d131b52b7988"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

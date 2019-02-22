@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Khangai Robot Play: Discrete_PID Class Reference</title>
+<title>Khangai Robot Play - Naive: Discrete_PID Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,10 +30,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="220px-Triple_Rotacaster_commercial_industrial_omni_wheel.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Khangai Robot Play
+   <div id="projectname">Khangai Robot Play - Naive
    &#160;<span id="projectnumber">01</span>
    </div>
-   <div id="projectbrief">THe complete play of the Khangai Robot</div>
+   <div id="projectbrief">THe naive play of the Khangai Robot</div>
   </td>
  </tr>
  </tbody>
@@ -133,7 +133,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae529dc65772963250ff74e0f5b579bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87f9e2fc9b853704494941c92670a039"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_discrete___p_i_d.html#a87f9e2fc9b853704494941c92670a039">~Discrete_PID</a> ()</td></tr>
 <tr class="separator:a87f9e2fc9b853704494941c92670a039"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4914b85e73cb5fdfcc5b40e8d0ff23c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_discrete___p_i_d.html#aa4914b85e73cb5fdfcc5b40e8d0ff23c">compute</a> (float error, uint32_t dt_millis)</td></tr>
+<tr class="memitem:aa4914b85e73cb5fdfcc5b40e8d0ff23c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_discrete___p_i_d.html#aa4914b85e73cb5fdfcc5b40e8d0ff23c">compute</a> (float <a class="el" href="error_8cpp.html#ab5744f81944e2a834ef96ae10f8ae166">error</a>, uint32_t dt_millis)</td></tr>
 <tr class="separator:aa4914b85e73cb5fdfcc5b40e8d0ff23c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_p_i_d___algorithm"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_p_i_d___algorithm')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_p_i_d___algorithm.html">PID_Algorithm</a></td></tr>
 <tr class="memitem:a77e1b4df4f9605df9373deb336c47987 inherit pub_methods_class_p_i_d___algorithm"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d___algorithm.html#a77e1b4df4f9605df9373deb336c47987">PID_Algorithm</a> ()</td></tr>
@@ -372,12 +372,13 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_discrete___p_i_d_aa4914b85e73cb5fdfcc5b40e8d0ff23c_cgraph.png" border="0" usemap="#class_discrete___p_i_d_aa4914b85e73cb5fdfcc5b40e8d0ff23c_cgraph" alt=""/></div>
 <map name="class_discrete___p_i_d_aa4914b85e73cb5fdfcc5b40e8d0ff23c_cgraph" id="class_discrete___p_i_d_aa4914b85e73cb5fdfcc5b40e8d0ff23c_cgraph">
-<area shape="rect"  title=" " alt="" coords="5,107,161,133"/>
+<area shape="rect"  title=" " alt="" coords="5,132,161,159"/>
 <area shape="rect"  href="class_p_i_d___algorithm.html#a0dd1059744956de2a09c72bd607ee2f4" title=" " alt="" coords="209,5,356,32"/>
 <area shape="rect"  href="class_p_i_d___algorithm.html#a6305260cd346415953b41fb765d33740" title=" " alt="" coords="212,56,353,83"/>
 <area shape="rect"  href="class_p_i_d___algorithm.html#a5a113c3d88ee8af75af7248fb590f538" title=" " alt="" coords="209,107,356,133"/>
-<area shape="rect"  href="class_p_i_d___algorithm.html#a0adcbfe07b44479d3c46d20037bf1013" title=" " alt="" coords="217,158,348,199"/>
-<area shape="rect"  href="class_p_i_d___algorithm.html#a2029e728fcc641ba204b44ef2c6dd2d9" title=" " alt="" coords="217,223,348,265"/>
+<area shape="rect"  href="error_8h.html#ab5744f81944e2a834ef96ae10f8ae166" title=" " alt="" coords="259,157,307,184"/>
+<area shape="rect"  href="class_p_i_d___algorithm.html#a0adcbfe07b44479d3c46d20037bf1013" title=" " alt="" coords="217,209,348,250"/>
+<area shape="rect"  href="class_p_i_d___algorithm.html#a2029e728fcc641ba204b44ef2c6dd2d9" title=" " alt="" coords="217,274,348,315"/>
 </map>
 </div>
 
@@ -503,7 +504,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot-Play/Core/Inc/utils/control/<a class="el" href="pid__algorithms_8h_source.html">pid_algorithms.h</a></li>
+<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive-Play/Core/Inc/utils/control/<a class="el" href="pid__algorithms_8h_source.html">pid_algorithms.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

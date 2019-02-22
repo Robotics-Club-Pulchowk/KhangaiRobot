@@ -1,6 +1,7 @@
 <map id="Robot::init" name="Robot::init">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,87,57"/>
-<area shape="rect" id="node2" href="$class_actuator.html#a0627d75eae181eab8e03406dd65c5a91" title="Function that initializes all the required components for the robot&#39;s actuator(omni&#45;base)" alt="" coords="135,31,231,57"/>
-<area shape="rect" id="node3" href="$class_actuator.html#a998b08e1a048f6fe0b85c240aa33a498" title="Function that initializes all the required components for the wheels of the robot." alt="" coords="279,5,421,32"/>
-<area shape="rect" id="node4" href="$class_actuator.html#a500af768989caf2b8769bf4ac97def74" title="Function that initializes all the required components for the wheel&#39;s pid controller." alt="" coords="290,56,410,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,87,83"/>
+<area shape="rect" id="node2" href="$class_actuator.html#a0627d75eae181eab8e03406dd65c5a91" title="Function that initializes all the required components for the robot&#39;s actuator(omni&#45;base)" alt="" coords="150,31,246,57"/>
+<area shape="rect" id="node5" href="$class_state___sensor.html#a2d7f30d5249003e16e0f46e1de4eb3e4" title="Function that initializes all the required components for the robot&#39;s State Sensor(x,..." alt="" coords="135,81,261,108"/>
+<area shape="rect" id="node3" href="$class_actuator.html#a998b08e1a048f6fe0b85c240aa33a498" title="Function that initializes all the required components for the wheels of the robot." alt="" coords="309,5,452,32"/>
+<area shape="rect" id="node4" href="$class_actuator.html#a500af768989caf2b8769bf4ac97def74" title="Function that initializes all the required components for the wheel&#39;s pid controller." alt="" coords="321,56,441,83"/>
 </map>

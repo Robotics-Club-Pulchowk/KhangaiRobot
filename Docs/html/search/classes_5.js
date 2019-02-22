@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['robot',['Robot',['../class_robot.html',1,'']]]
+  ['lidar',['Lidar',['../class_lidar.html',1,'']]]
 ];

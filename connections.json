@@ -1,0 +1,96 @@
+{
+        "filename" : "connections.json",
+        "Created" : "1/4/2018",
+        "Author" : "n-is",
+        "email" : "073bex422.nischal@pcampus.edu.np",
+
+        "version" : "2.0",
+        "configurations" : [
+                {
+                        "device" : "mpu6050 and hmc5883",
+                        "periphs" : "i2c1",
+                        "address" : "0xD0 and 0x3C",
+                        "pins" : [
+                                "PB8", "PB9"
+                        ]
+                },
+                {
+                        "device" : "a4988",
+                        "periphs" : [
+                                "gpioD", "gpioB"
+                        ],
+                        "gpio-mode" : "Output",
+                        "pins" : [
+                                "PD10", "PB14"
+                        ],
+                        "remarks" : [
+                                "PD10 is used for stepper's direction",
+                                "PB14 is used for stepper's step(pwm)"
+                        ]
+                },
+                {
+                        "device" : "arduino",
+                        "periphs" : "uart3",
+                        "uart-mode" : [
+                                "rx-dma", "tx-int"
+                        ],
+                        "pins" : [
+                                "PD8", "PD9"
+                        ]
+                },
+                {
+                        "device" : "encoder",
+                        "periphs" : [
+                                "ExtINT", "gpioD", "gpioB"
+                        ],
+                        "gpio-mode" : "Input",
+                        "gpio-pins" : [
+                                "PD7", "PB4"
+                        ],
+                        "int-pins" : [
+                                "PC4", "PC5"
+                        ],
+                        "remarks" : [
+                                "PC4 and PD7 : xEncoder",
+                                "PC5 and PB4 : yEncoder"
+                        ]
+                },
+                {
+                        "device" : "Vietnamese Motors",
+                        "periphs" : "tim8, gpioE and gpioC",
+                        "channels" : "all",
+                        "counter-mode" : "Center-aligned 1",
+                        "pwm-mode" : "Mode 1",
+                        "frequency" : "8 kHz",
+                        "pwm-pins" : [
+                                "PC6", "PC7", "PC8", "PC9"
+                        ],
+                        "dir-pins" : [
+                                "PE0", "PE1",
+                                "PE2", "PE3",
+                                "PE4", "PE5",
+                                "PE6", "PC13"
+                        ],
+                        "remarks" : [
+                                "Motors and Motor Encoders are abstracted as wheels"
+                        ]
+                },
+                {
+                        "device" : "Vietnamese Motor Encoders",
+                        "periphs" : [
+                                "tim1", "tim2", "tim3", "tim4"
+                        ],
+                        "mode" : "Encoder",
+                        "max-count" : "65535",
+                        "pins" : [
+                                "PA8",  "PA9",
+                                "PA15", "PA1",
+                                "PA6",  "PA7",
+                                "PB6",  "PB7"
+                        ],
+                        "remarks" : [
+                                "Motors and Motor Encoders are abstracted as wheels"
+                        ]
+                }
+        ]
+}

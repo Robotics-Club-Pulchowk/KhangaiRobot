@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['_7eactuator',['~Actuator',['../class_actuator.html#a3c19e3031076395a918ab72e1acc8a3c',1,'Actuator']]],
-  ['_7ediscrete_5fpid',['~Discrete_PID',['../class_discrete___p_i_d.html#a87f9e2fc9b853704494941c92670a039',1,'Discrete_PID']]],
-  ['_7emat',['~Mat',['../class_mat.html#a87836525bb8e60bda57d246b7370b97e',1,'Mat']]],
-  ['_7epid',['~PID',['../class_p_i_d.html#ab7d389fc5b88d881bc25f5dafd360441',1,'PID']]],
-  ['_7epid_5falgorithm',['~PID_Algorithm',['../class_p_i_d___algorithm.html#ad6a88132e10c378e7ebe9959898278e6',1,'PID_Algorithm']]],
-  ['_7equeue',['~Queue',['../class_queue.html#aa87e968af9d54139a8a6719e04902ef2',1,'Queue']]],
-  ['_7erobot',['~Robot',['../class_robot.html#a924320124b09c2f2ac1621aa210d5f38',1,'Robot']]],
-  ['_7evec3',['~Vec3',['../class_vec3.html#a9283d297ddf47fb465cd95645615582a',1,'Vec3']]],
-  ['_7ewheel',['~Wheel',['../class_wheel.html#ac145d7f4f1d2921ebf268700f390548e',1,'Wheel']]]
+  ['z_5f',['z_',['../class_kalman___filter.html#a8f8715405aefe7c03198dbef3ac28b0c',1,'Kalman_Filter::z_()'],['../class_vec3.html#afc4b262f25e6f72277a191e0d818e1e3',1,'Vec3::z_()'],['../class_vec4.html#abca4a20e692727dffbd43c0c46b7d869',1,'Vec4::z_()']]],
+  ['z_5ffine_5fgain',['Z_FINE_GAIN',['../mpu6050__reg_8h.html#a3a7ba0accd4030b06d353933b16f8996',1,'mpu6050_reg.h']]],
+  ['za_5foffs_5fh',['ZA_OFFS_H',['../mpu6050__reg_8h.html#aaa89f8364619afe5d380dc17fa5b777c',1,'mpu6050_reg.h']]],
+  ['za_5foffs_5fl_5ftc',['ZA_OFFS_L_TC',['../mpu6050__reg_8h.html#a973567e403e2e384aa79ea9c1c6fed93',1,'mpu6050_reg.h']]],
+  ['zg_5foffs_5ftc',['ZG_OFFS_TC',['../mpu6050__reg_8h.html#a8a808eee6d051580a8e2b361ca755710',1,'mpu6050_reg.h']]],
+  ['zg_5foffs_5fusrh',['ZG_OFFS_USRH',['../mpu6050__reg_8h.html#a272087902ac250d729833f566dc0e7a7',1,'mpu6050_reg.h']]],
+  ['zg_5foffs_5fusrl',['ZG_OFFS_USRL',['../mpu6050__reg_8h.html#a21bfc74e9d45847e56fda9243cd4a1a1',1,'mpu6050_reg.h']]],
+  ['zrmot_5fdur',['ZRMOT_DUR',['../mpu6050__reg_8h.html#aea8c245e80349e063d172a10a40cf6a3',1,'mpu6050_reg.h']]],
+  ['zrmot_5fthr',['ZRMOT_THR',['../mpu6050__reg_8h.html#a4e5c8a27e067c2cf4410c184b23c43ef',1,'mpu6050_reg.h']]]
 ];

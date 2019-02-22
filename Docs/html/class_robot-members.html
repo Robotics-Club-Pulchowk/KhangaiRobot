@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Khangai Robot Play: Member List</title>
+<title>Khangai Robot Play - Naive: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,10 +30,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="220px-Triple_Rotacaster_commercial_industrial_omni_wheel.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Khangai Robot Play
+   <div id="projectname">Khangai Robot Play - Naive
    &#160;<span id="projectnumber">01</span>
    </div>
-   <div id="projectbrief">THe complete play of the Khangai Robot</div>
+   <div id="projectbrief">THe naive play of the Khangai Robot</div>
   </td>
  </tr>
  </tbody>
@@ -96,15 +96,25 @@ $(document).ready(function(){initNavTree('class_robot.html','');});
 <p>This is the complete list of members for <a class="el" href="class_robot.html">Robot</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="class_robot.html#a3bc0081ef09e6f11a76ae66dfbbbc228">base_</a></td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot.html#a135dd428eb165e8c7f860696ea86fc98">check_Actuators</a>()</td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_robot.html#a9c522805627d4c815b859632a9bef49e">cpu_</a></td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_robot.html#afb2b087ee8339bd935f9629b56ea2983">get_Instance</a>()</td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_robot.html#ab227a4c2ff2b08570a4c84cb6d1289fd">init</a>()</td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_robot.html#abb7f05b4906d4e65fc2e37995b3646bf">init</a>(uint32_t dt_millis)</td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot.html#ae957a03df48f15a2eb2c1ba92c6817cb">initiated_</a></td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_robot.html#acfa28bf423af469115fb67db6ec4e2b8">is_Initiated</a>() const</td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_robot.html#a9d87cd5916b71d18d6d6e68edc652162">operator=</a>(Robot &amp;&amp;)=default</td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_robot.html#a39205b459ddd0efc42f61a89e7f711f5">operator=</a>(const Robot &amp;)=default</td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_robot.html#a47aec46e3bb5782500d1d268f0d8c406">Robot</a>(Robot &amp;&amp;)=default</td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_robot.html#a4fd835c7c44337d31d9fd09921d29908">Robot</a>(const Robot &amp;)=default</td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_robot.html#a4fc7c70ae20623f05e06f2ecb388b6c4">Robot</a>()</td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot.html#a38036a2ef73f7b1af6c5d6269e03a5f8">profile_Actuators</a>(Vec3&lt; float &gt; vel, uint32_t dt_millis)</td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_robot.html#a47aec46e3bb5782500d1d268f0d8c406">Robot</a>(Robot &amp;&amp;)=default</td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot.html#a4fd835c7c44337d31d9fd09921d29908">Robot</a>(const Robot &amp;)=default</td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_robot.html#a4fc7c70ae20623f05e06f2ecb388b6c4">Robot</a>()</td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot.html#a7990f95a4b82902844fcbf718dccd5ec">robot_state_vars_</a></td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_robot.html#a1456df8be5ce9a34e8aa175fc6cb8a1a">run</a>(uint32_t dt_millis)</td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_robot.html#a28e64061edf91a19e3bcbe5e8a7c95b7">state_</a></td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot.html#a9662421ec8355f26c7888e9887a42fb3">sensor_</a></td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_robot.html#a28e64061edf91a19e3bcbe5e8a7c95b7">state_</a></td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot.html#acc683cb037ff132b0b3a35a0ba11748d">state_from_base_</a></td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_robot.html#a069b12308af85b7fc5b670b55503f55e">update</a>(uint32_t dt_millis)</td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_robot.html#a6811965fd11ad22a3b06823cc642e41a">velocities_</a></td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_robot.html#a924320124b09c2f2ac1621aa210d5f38">~Robot</a>()</td><td class="entry"><a class="el" href="class_robot.html">Robot</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,0 +1,4 @@
+<map id="Robot::run" name="Robot::run">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,88,32"/>
+<area shape="rect" id="node2" href="$class_actuator.html#aa3842522a1346a738cf8ff1520b6bd5a" title="Function that actuate the robot&#39;s base(omni&#45;base)" alt="" coords="136,5,259,32"/>
+</map>

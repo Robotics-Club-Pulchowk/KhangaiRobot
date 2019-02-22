@@ -27,6 +27,9 @@ public:
         Vec3<float> actuate(Vec3<float> vel, uint32_t dt_millis);
         uint32_t stop(uint32_t dt_millis, float ramp_factor = 2.0, uint32_t max_time = 1000);
 
+        void profile(Vec3<float> vel, uint32_t dt_millis);
+        void check();
+
 private:
         Wheel wheels_[4];
 

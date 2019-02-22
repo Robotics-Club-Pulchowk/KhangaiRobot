@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['matrix_5f',['matrix_',['../class_mat.html#a7753c4dcb04086512d8049d0207e9815',1,'Mat']]],
-  ['max_5f',['max_',['../class_p_i_d___algorithm.html#a1e0d5415bea59ae3f908b06c45bd0dd8',1,'PID_Algorithm']]],
-  ['max_5fomega',['max_omega',['../struct_wheel___config.html#ab52d135d822ca3ff599f52e18789e51b',1,'Wheel_Config']]],
-  ['min_5f',['min_',['../class_p_i_d___algorithm.html#a4ba021193490b2023b0fab0f5ed5946c',1,'PID_Algorithm']]]
+  ['k_5f',['K_',['../class_kalman___filter.html#a28eb4e662deea59bae39358f9aba02e3',1,'Kalman_Filter']]],
+  ['khangai_5frobot',['Khangai_Robot',['../robo__tasks_8cpp.html#a7a3cf6b9f0c8b3b0a906e86c1ed920d1',1,'robo_tasks.cpp']]],
+  ['kv_5f',['kv_',['../class_kalman___filter.html#a21a6d19d0a7772e4d0156bb37e6600d7',1,'Kalman_Filter']]],
+  ['kv_5finit_5f',['kv_init_',['../class_kalman___filter.html#acbf55b53754b79f0e97a6bfadcc4694e',1,'Kalman_Filter']]]
 ];

@@ -26,6 +26,7 @@ class Vec3
 public:
         Vec3() { set_Values(0,0,0); }
         Vec3(T x, T y, T z) { set_Values(x,y,z); }
+
         Vec3(Vec3 &&) = default;
         Vec3 &operator=(Vec3 &&) = default;
         ~Vec3() { }

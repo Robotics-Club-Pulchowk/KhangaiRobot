@@ -11,7 +11,7 @@
   * inserted by the user or by software development tools
   * are owned by their respective copyright owners.
   *
-  * Copyright (c) 2018 STMicroelectronics International N.V. 
+  * Copyright (c) 2019 STMicroelectronics International N.V. 
   * All rights reserved.
   *
   * Redistribution and use in source and binary forms, with or without 
@@ -82,8 +82,8 @@ extern "C" {
 /* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/
-void Error_Handler(void);
 void _Error_Handler(const char *file, size_t line);
+void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
 
@@ -94,7 +94,6 @@ void _Error_Handler(const char *file, size_t line);
 #define SPI2_CS_GPIO_Port GPIOC
 #define B_PushButton_Pin GPIO_PIN_0
 #define B_PushButton_GPIO_Port GPIOA
-#define B_PushButton_EXTI_IRQn EXTI0_IRQn
 #define B_GreenLED_Pin GPIO_PIN_12
 #define B_GreenLED_GPIO_Port GPIOD
 #define B_OrangeLED_Pin GPIO_PIN_13
@@ -103,8 +102,6 @@ void _Error_Handler(const char *file, size_t line);
 #define B_RedLED_GPIO_Port GPIOD
 #define B_BlueLED_Pin GPIO_PIN_15
 #define B_BlueLED_GPIO_Port GPIOD
-#define SPI1_CS_Pin GPIO_PIN_7
-#define SPI1_CS_GPIO_Port GPIOD
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

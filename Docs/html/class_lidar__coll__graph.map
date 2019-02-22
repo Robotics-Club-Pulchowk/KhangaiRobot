@@ -1,0 +1,7 @@
+<map id="Lidar" name="Lidar">
+<area shape="rect" id="node1" title=" " alt="" coords="165,184,215,211"/>
+<area shape="rect" id="node2" href="$class_sensor.html" title=" " alt="" coords="5,95,116,121"/>
+<area shape="rect" id="node3" href="$class_vec2.html" title=" " alt="" coords="140,95,240,121"/>
+<area shape="rect" id="node4" href="$class_arduino___device.html" title=" " alt="" coords="264,95,375,121"/>
+<area shape="rect" id="node5" href="$class_queue.html" title=" " alt="" coords="258,5,381,32"/>
+</map>
