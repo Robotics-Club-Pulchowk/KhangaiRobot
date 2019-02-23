@@ -159,7 +159,7 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
         // float ey = so2_pos.at(1,0);
 
         gYEncoder_Dist += ey;
-        printf("%ld\n", (int32_t)(gYEncoder_Dist));
+        // printf("%ld\n", (int32_t)(gYEncoder_Dist));
 
         // Fuse the data with the data from lidar that gives movement with
         // respect to the navigation frame

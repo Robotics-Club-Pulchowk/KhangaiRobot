@@ -93,13 +93,18 @@ Vec3<float> Processor::process(Vec3<float> state, State_Vars *robot_state_vars_,
 
                 float phi = state.getZ() - gFirstHeading;
 
+                // printf("Theta: %ld   Phi: %ld\n", (int32_t)(theta*57.3), (int32_t)(phi));
+
                 phi /= (float)57.3;
                 phi = atan2(sin(phi), cos(phi));
 
+                // phi = theta;
+
                 // ! Need to look here more
-                float vx = v*sin(theta)*cos(phi);
-                float vy = v*cos(theta)*cos(phi);
+                float vx = v*sin(theta - phi);
+                float vy = v*cos(theta - phi);
                 float rw = (phi)*0.3;
+                // float rw = 0;
 
                 vel.set_Values(vx, vy, rw);
         }

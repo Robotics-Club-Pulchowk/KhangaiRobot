@@ -58,7 +58,7 @@ int Robot::init(uint32_t dt_millis)
 void Robot::update(uint32_t dt_millis)
 {
         // *** Automatic Control ***
-        /*/
+        //*/
         state_ = sensor_->read_State(state_from_base_,robot_state_vars_, dt_millis);
         Vec3<float> vels = cpu_->process(state_, robot_state_vars_, dt_millis);
 

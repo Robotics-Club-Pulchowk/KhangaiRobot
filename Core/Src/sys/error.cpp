@@ -12,21 +12,19 @@
 
 void error(Error err)
 {
-        uint8_t err_no = (uint8_t)err;
 #ifdef _USE_BOARD_LEDS_FOR_ERROR_
+
+        uint8_t err_no = (uint8_t)err;
 
         if (err_no & 0x01) {
                 HAL_GPIO_WritePin(B_GreenLED_GPIO_Port, B_GreenLED_Pin, GPIO_PIN_SET);
         }
-
         if (err_no & 0x02) {
                 HAL_GPIO_WritePin(B_OrangeLED_GPIO_Port, B_OrangeLED_Pin, GPIO_PIN_SET);
         }
-        
         if (err_no & 0x04) {
                 HAL_GPIO_WritePin(B_RedLED_GPIO_Port, B_RedLED_Pin, GPIO_PIN_SET);
         }
-
         if (err_no & 0x08) {
                 HAL_GPIO_WritePin(B_BlueLED_GPIO_Port, B_BlueLED_Pin, GPIO_PIN_SET);
         }

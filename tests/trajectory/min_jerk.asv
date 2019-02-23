@@ -1,0 +1,52 @@
+%% Minimum Jerk Trajectory
+
+%% Constants
+Tp = 1;
+
+% Initial Values
+p1 = [0, 0];
+p1_dot = [0, 0];
+
+% Final Values
+p2 = [1.75, 1.5];
+p2_dot = [0, 0];
+
+a2 = [0, 0];
+a1 = p1_dot;
+a0 = p1;
+
+
+%% Creating Required Matrices
+T = [Tp^5, Tp^4, Tp^3;
+     5*Tp^4, 4*Tp^3, 3*Tp^2;
+     20*Tp^3, 12*Tp^2, 6*Tp];
+
+P = [p2 - p1 - p1_dot*Tp;
+     zeros(2, 2)];
+ 
+ 
+ %% Calculating the coefficient of the polynomial function
+ a = T\P;
+ a = [a; a2; a1; a0];
+ 
+ 
+ %% Plotting the distance, velocity and acceleration profile
+ t = 0:0.01:Tp;
+ posX = polyval(a(1), t);
+ posY = polyval(a(2), t);
+ 
+%  v = polyder(a);
+%  vel = polyval(v, t);
+%  acc = polyder(v);
+%  accel = polyval(acc, t);
+%  j = polyder(acc);
+%  jerk = polyval(j, t);
+%  
+subplot(3, 1, 1);
+plot(
+%  plot(t, vel); M2 = 'Velocity Profile';
+%  plot(t, accel); M3 = 'Acceleration Profile';
+%  plot(t, jerk); M4 = 'Jerk Profile';
+ 
+%  legend(M1, M2, M3);
+%  hold off;
