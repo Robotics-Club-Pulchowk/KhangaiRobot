@@ -190,13 +190,16 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
         return gLastPosition;
 }
 
-void PositionSensor::process_LidarData(float lidar[2], const State_Vars *sv)
+void PositionSensor::process_LidarData(float (&lidar)[2], const State_Vars *sv)
 {
         // Process Lidar Data according to the field the robot is in
 
         // Assumptions:
         // lidar[0] => XLidar Data
         // lidar[1] => YLidar Data
+
+        float jungle_pole_dist = 1255;
+        float bridge_pole_dist = 755;
 
         Field id = sv->id;
 
@@ -206,6 +209,18 @@ void PositionSensor::process_LidarData(float lidar[2], const State_Vars *sv)
                 if (lidar[0] < 2000) {
                         // Lower Fence distance
                         lidar[0] += 2500;
+                }
+        }
+        else {
+                if (id == Field::FIELD_B || id == Field::FIELD_F) {
+                        if (lidar[0] < jungle_pole_dist) {
+                                lidar[0] += jungle_pole_dist;
+                        }
+                }
+                else if (id == Field::FIELD_H) {
+                        if (lidar[0] < bridge_pole_dist) {
+                                lidar[0] += bridge_pole_dist;
+                        }
                 }
         }
 }

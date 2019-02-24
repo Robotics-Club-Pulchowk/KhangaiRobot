@@ -75,7 +75,7 @@ private:
                 sensor_count_ = 0;
         }
 
-        void process_LidarData(float lidar[2], const State_Vars *sv);
+        void process_LidarData(float (&lidar)[2], const State_Vars *sv);
 };
 
 #endif // !_POSITION_SENSOR_H_

@@ -12,8 +12,8 @@
 #include <math.h>
 #include "vec3.h"
 
-#define MAX_MATRIX_ROWS         (4)
-#define MAX_MATRIX_COLS         (4)
+#define MAX_MATRIX_ROWS         (6)
+#define MAX_MATRIX_COLS         (6)
 
 class Mat
 {
@@ -147,6 +147,8 @@ private:
         
         friend void swap(Mat &first, Mat &second);
 };
+
+Mat solve(Mat A, Mat B);
 
 
 #endif // !_MAT_H_

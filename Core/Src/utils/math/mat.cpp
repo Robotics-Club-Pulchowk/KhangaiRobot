@@ -308,3 +308,9 @@ bool Mat::inv(Mat &inv) const
         inv = P;
         return true;
 }
+
+Mat solve(Mat A, Mat B)
+{
+        Mat X = A.inv() * B;
+        return X;
+}

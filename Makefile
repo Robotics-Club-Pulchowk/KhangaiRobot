@@ -127,6 +127,7 @@ Core/Src/robot/robot.cpp \
 \
 Core/Src/utils/math/mat.cpp \
 Core/Src/utils/filter/exp_smooth.cpp \
+Core/Src/utils/trajectory/min_jerk.cpp \
 \
 Core/Src/utils/logger.cpp \
 \
@@ -201,6 +202,7 @@ C_INCLUDES =  \
 -ICore/Inc/utils\control \
 -ICore/Inc/utils\filter \
 -ICore/Inc/utils\math \
+-ICore/Inc/utils\trajectory \
 -ICore/Inc/sys \
 -ICore/Inc/parts \
 -ICore/Inc/parts/actuators \

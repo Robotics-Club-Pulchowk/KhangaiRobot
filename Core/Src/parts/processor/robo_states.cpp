@@ -120,6 +120,17 @@ float Robo_States::calc_AngleOfAttack(Vec3<float> state, float v, uint32_t dt_mi
         return atan2f(sin(theta), cos(theta));
 }
 
+Vec2<float> Robo_States::calc_Velocity(Vec3<float> state, uint32_t dt_millis)
+{
+        // Using Naive Approach
+        float v = calc_RoboVelocity();
+        float theta = calc_AngleOfAttack(state, v, dt_millis);
+
+        Vec2<float> vel(v, theta);
+
+        return vel;
+}
+
 bool Robo_States::nextStateReached(Vec3<float> state)
 {
         // Since the axis of the rectangle are aligned with the axes, we can

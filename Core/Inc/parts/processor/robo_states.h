@@ -55,6 +55,7 @@ public:
 
         float calc_RoboVelocity();
         float calc_AngleOfAttack(Vec3<float> state, float v, uint32_t dt_millis);
+        Vec2<float> calc_Velocity(Vec3<float> state, uint32_t dt_millis);
         bool nextStateReached(Vec3<float> state);
 
         Robo_States* get_NextState() { return next_state_; }

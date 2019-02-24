@@ -24,7 +24,7 @@ public:
         static Processor& get_Instance(State_Sensor *sen);
         
         int init(uint32_t dt_millis);
-        Vec3<float> process(Vec3<float> state, State_Vars *robot_state_vars_, uint32_t dt_millis);
+        Vec3<float> process(Vec3<float> state, State_Vars *&robot_state_vars_, uint32_t dt_millis);
 
 private:
         Robo_States *curr_state_;
