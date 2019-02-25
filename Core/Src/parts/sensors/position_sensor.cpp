@@ -21,7 +21,7 @@ static Exp_Smooth gYLidarAlpha35(0.35);
 // Starting Y-Position
 float gLast_YEncoderValue = 400;
 // Starting X-Position
-float gLast_XEncoderValue = 390;
+float gLast_XEncoderValue = 310;
 
 static float gYEncoder_Dist = 0;
 
@@ -179,9 +179,10 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
                 // ylidar_enc_fuser_.clear();
         }
         else {
-                // x = xlidar_enc_fuser_.filter(lidar[0], del_pos.getX(), dt_millis);
+                // y = ylidar_enc_fuser_.filter(lidar[0], del_pos.getY(), dt_millis);
         }
 
+        // x and y are in mm
         gLastPosition.set_Values(x, y, 0);
 
         // gLastPosition.print();
@@ -199,7 +200,7 @@ void PositionSensor::process_LidarData(float (&lidar)[2], const State_Vars *sv)
         // lidar[1] => YLidar Data
 
         float jungle_pole_dist = 1255;
-        float bridge_pole_dist = 755;
+        float bridge_pole_dist = 900;
 
         Field id = sv->id;
 
@@ -215,11 +216,19 @@ void PositionSensor::process_LidarData(float (&lidar)[2], const State_Vars *sv)
                 if (id == Field::FIELD_B || id == Field::FIELD_F) {
                         if (lidar[0] < jungle_pole_dist) {
                                 lidar[0] += jungle_pole_dist;
+
+                                // Compensating the Y value based on lidar data
+                                if (id == Field::FIELD_B) {
+                                        gLast_YEncoderValue = 2030.0;
+                                }
+                                else if (id == Field::FIELD_F) {
+                                        gLast_YEncoderValue = 5030.0;
+                                }
                         }
                 }
                 else if (id == Field::FIELD_H) {
                         if (lidar[0] < bridge_pole_dist) {
-                                lidar[0] += bridge_pole_dist;
+                                lidar[0] += 755;
                         }
                 }
         }

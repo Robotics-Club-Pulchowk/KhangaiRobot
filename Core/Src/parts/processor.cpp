@@ -69,7 +69,7 @@ int Processor::init(uint32_t dt_millis)
 
 static float gFirstHeading = 0;
 
-Vec3<float> Processor::process(Vec3<float> state, State_Vars *&robot_state_vars_, uint32_t dt_millis)
+Vec3<float> Processor::process(Vec3<float> state, Vec3<float> vel_from_base, State_Vars *&robot_state_vars_, uint32_t dt_millis)
 {
         Vec3<float> vel(0, 0, 0);
 
@@ -89,7 +89,9 @@ Vec3<float> Processor::process(Vec3<float> state, State_Vars *&robot_state_vars_
                 }
 
                 // vel contains v and theta in order
-                Vec2<float> v_polar = curr_state_->calc_Velocity(state, dt_millis);
+                // uint32_t t1 = HAL_GetTick();
+                Vec2<float> v_polar = curr_state_->calc_Velocity(state, vel_from_base, dt_millis);
+                // printf("%ld\n", (HAL_GetTick() - t1));
                 float v = v_polar.getX();
                 float theta = v_polar.getY();
 
@@ -107,6 +109,8 @@ Vec3<float> Processor::process(Vec3<float> state, State_Vars *&robot_state_vars_
                 float vy = v*cos(theta - phi);
                 float rw = (phi)*0.3;
                 // float rw = 0;
+
+                // Should use PID on vx and vy separately here
 
                 vel.set_Values(vx, vy, rw);
         }

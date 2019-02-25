@@ -93,7 +93,8 @@ Vec3<float> Actuator::actuate(Vec3<float> vel, uint32_t dt_millis)
         // This is motor tuning part
         // Omega is created as 2D array with single column so that we can easily
         // convert it to matrix form later on
-        float omega[4][1];
+        float omega[4];
+        float vels[4][1];
         float error[4];
         float voltage[4];
         float new_omega[4];
@@ -106,8 +107,8 @@ Vec3<float> Actuator::actuate(Vec3<float> vel, uint32_t dt_millis)
                 // if (i != 2)
                 //         set_points[i] = 0;
 
-                omega[i][0] = wheels_[i].get_Omega(dt_millis);
-                error[i] = set_points[i] - omega[i][0];
+                omega[i] = wheels_[i].get_Omega(dt_millis);
+                error[i] = set_points[i] - omega[i];
                 pid = wheels_[i].get_PIDController();
                 // The controller's output is voltage
                 voltage[i] = pid->compute_PID(error[i], dt_millis);
@@ -122,7 +123,9 @@ Vec3<float> Actuator::actuate(Vec3<float> vel, uint32_t dt_millis)
                 new_omega[i] = voltage[i] * max_omega / max_voltage;
 
                 wheels_[i].set_Omega(new_omega[i]);
-                // printf("(%ld, %ld, %ld)  ", (int32_t)(set_points[i]*1000), (int32_t)(omega[i][0]*1000), (int32_t)(new_omega[i]*1000));
+                // printf("(%ld, %ld, %ld)  ", (int32_t)(set_points[i]*1000), (int32_t)(omega[i]*1000), (int32_t)(new_omega[i]*1000));
+
+                vels[i][0] = omega[i] * (float)(WHEEL_RADIUS);
         }
         // printf("\n");
 
@@ -136,7 +139,7 @@ Vec3<float> Actuator::actuate(Vec3<float> vel, uint32_t dt_millis)
         // We can measure the velocity of the robot by this method
         // We can also use this for determining wheel's slippage
         // !yet to implement
-        Mat measured = gInverse_Coupling_Matrix * Mat(omega);
+        Mat measured = gInverse_Coupling_Matrix * Mat(vels);
 
         Vec3<float> last_vel(measured.at(0,0),
                              measured.at(1,0),

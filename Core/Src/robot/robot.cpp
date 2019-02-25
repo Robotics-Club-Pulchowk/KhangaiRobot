@@ -60,7 +60,10 @@ void Robot::update(uint32_t dt_millis)
         // *** Automatic Control ***
         //*/
         state_ = sensor_->read_State(state_from_base_,robot_state_vars_, dt_millis);
-        Vec3<float> vels = cpu_->process(state_, robot_state_vars_, dt_millis);
+        Vec3<float> vels = cpu_->process(state_, state_from_base_, robot_state_vars_, dt_millis);
+
+        state_.print();
+        printf("\n");
 
         // This is for correcting units and the inverted co-ordinate system
         float vx = -vels.getX() / (float)1000.0;

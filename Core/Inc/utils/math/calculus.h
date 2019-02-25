@@ -6,7 +6,7 @@
  *   email : 073bex422.nischal@pcampus.edu.np
  */
 
-#ifdef _CALCULUS_H_
+#ifndef _CALCULUS_H_
 #define _CALCULUS_H_
 
 template <size_t N>

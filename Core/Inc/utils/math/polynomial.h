@@ -15,7 +15,7 @@ float polyval(float (&poly)[N], float indep)
         float val = 0;
         float last_indep = 1;
 
-        for (size_t i = 0; i < 1; ++i) {
+        for (size_t i = 0; i < N; ++i) {
                 val += poly[i] * last_indep;
                 last_indep *= indep;
         }

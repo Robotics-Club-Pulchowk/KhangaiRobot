@@ -10,6 +10,7 @@
 #define _VEC2_H_
 
 #include "vec3.h"
+#include <math.h>
 
 template <class T>
 class Vec2
@@ -141,6 +142,13 @@ public:
         friend Vec2 operator-(Vec2 lhs, const Vec2 &rhs) {
                 lhs -= rhs;
                 return lhs;
+        }
+
+        Vec2 polar() {
+                float r = sqrtf(x_*x_ + y_*y_);
+                float theta = atan2f(y_, x_);
+                Vec2<float> pol(r, theta);
+                return pol;
         }
 
         void print() const {

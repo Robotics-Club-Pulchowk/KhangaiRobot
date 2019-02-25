@@ -12,6 +12,20 @@
 
 void min_jerk(float (&poly)[6], Vec2<float> pos, Vec2<float> vel, Vec2<float> accel, float Tp)
 {
+        // Printing the parameters
+        printf("[ ");
+        for (uint8_t i = 0; i < 6; ++i) {
+                printf("%d ", (int)(poly[i]));
+        }
+        printf("] [");
+        (pos.mult_EW(1000)).print();
+        printf("] [");
+        (vel.mult_EW(1000)).print();
+        printf("] [");
+        (accel.mult_EW(1000)).print();
+        printf("] [%d]\n", (int)(Tp*1000));
+        //
+
         float x1 = pos.getX();
         float x2 = pos.getY();
         float x1_dot = vel.getX();
@@ -23,15 +37,15 @@ void min_jerk(float (&poly)[6], Vec2<float> pos, Vec2<float> vel, Vec2<float> ac
         poly[1] = x1_dot;
         poly[2] = x1_ddot / 2.0;
 
-        Mat B(3,1);
-        B.at(0,0) = x2 - x1 - x1_dot*Tp - x1_ddot*Tp*Tp/2.0;
-        B.at(1,0) = x2_dot - x1_dot - x1_ddot*Tp;
-        B.at(2,0) = x2_ddot - x1_ddot;
-
         float Tp2 = Tp*Tp;
         float Tp3 = Tp2*Tp;
         float Tp4 = Tp3*Tp;
         float Tp5 = Tp4*Tp;
+
+        Mat B(3,1);
+        B.at(0,0) = x2 - x1 - x1_dot*Tp - x1_ddot*Tp2/2.0;
+        B.at(1,0) = x2_dot - x1_dot - x1_ddot*Tp;
+        B.at(2,0) = x2_ddot - x1_ddot;
 
         float T_arr[3][3] = { { Tp5,    Tp4,    Tp3   },
                               { 5*Tp4,  4*Tp3,  3*Tp2 },

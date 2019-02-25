@@ -10,6 +10,11 @@
 
 #include "robo_states.h"
 #include "devs_config.h"
+#include "min_jerk.h"
+#include "calculus.h"
+#include "polynomial.h"
+#include "array.h"
+#include "min_accel.h"
 
 #define CURVE_STEP_SIZE         (10.0)
 
@@ -30,7 +35,7 @@ Robo_States::Robo_States(State_Vars *sv, Robo_States *next)
         ramped_ = sv_->first_limit;
 }
 
-float Robo_States::calc_RoboVelocity()
+float Robo_States::calc_RoboVelocity(Vec3<float> state, uint32_t dt_millis)
 {
         // We are simply returning the maximum velocity of robot
         // We can probably use position PID here to obtain better robot control
@@ -120,15 +125,154 @@ float Robo_States::calc_AngleOfAttack(Vec3<float> state, float v, uint32_t dt_mi
         return atan2f(sin(theta), cos(theta));
 }
 
-Vec2<float> Robo_States::calc_Velocity(Vec3<float> state, uint32_t dt_millis)
+// state -> mm mm deg
+// vel_from_base -> m/s m/s rad/s
+Vec2<float> Robo_States::calc_Velocity(Vec3<float> state, Vec3<float> vel_from_base, uint32_t dt_millis)
 {
+        Vec2<float> velocity;
+        float v;
+        float theta;
         // Using Naive Approach
-        float v = calc_RoboVelocity();
-        float theta = calc_AngleOfAttack(state, v, dt_millis);
+        v = calc_RoboVelocity(state, dt_millis);
+        theta = calc_AngleOfAttack(state, v, dt_millis);
 
-        Vec2<float> vel(v, theta);
+/** This Part contains minimum jerk implementation, which does not work.
 
-        return vel;
+        // Vec3<float> scale_vel(2, 2, 0);
+        // vel_from_base = vel_from_base.mult_EW(scale_vel);
+
+        (vel_from_base.mult_EW(1000)).print();
+        printf("\n");
+
+        float mj_polyX[6] = { 0 };
+        float mj_polyY[6] = { 0 };
+
+        // The centre value is in mm
+        Vec2<float> centre = next_state_->sv_->centre;
+
+        Vec2<float> pos(state.getX() / 1000.0, centre.getX() / 1000.0); // mm mm
+        Vec2<float> vel(vel_from_base.getX(), 0);       // m/s m/s
+        Vec2<float> accel(0,0);                         // m/s/s m/s/s
+
+        Vec2<float> del = centre - pos;
+        Vec2<float> del_polar = del.polar();
+        float rated_vel = (float)(gRated_Robo_Velocity) / 1000.0;       // m/s
+        float dr = del_polar.getX() / 1000.0;   // m
+        float Tp = dr / rated_vel;      // s
+        // printf("%ld, %ld\n", (int32_t)(dr*1000), (int32_t)(Tp*1000));
+
+        min_jerk(mj_polyX, pos, vel, accel, Tp);
+
+        for (uint8_t i = 0; i < 6; ++i) {
+                printf("%ld  ", (int32_t)(mj_polyX[i]*1000.0));
+        }
+        printf("\n");
+
+        pos.set_Values(state.getY() / 1000.0, centre.getY() / 1000.0);
+        vel.set_Values(vel_from_base.getY(), 0);
+        accel.set_Values(0,0);
+
+        min_jerk(mj_polyY, pos, vel, accel, Tp);
+
+        for (uint8_t i = 0; i < 6; ++i) {
+                printf("%ld  ", (int32_t)(mj_polyY[i]*1000.0));
+        }
+        printf("\n");
+
+        float mj_xdot[5] = { 0 };
+        float mj_ydot[5] = { 0 };
+
+        polyder(mj_xdot, mj_polyX);
+        polyder(mj_ydot, mj_polyY);
+
+        float dt = (float)dt_millis / 1000.0;
+        float xdot = polyval(mj_xdot, dt);
+        float ydot = polyval(mj_ydot, dt);
+
+        Vec2<float> pdot(xdot, ydot);
+        pdot = pdot.polar();
+        theta = pdot.getY();
+        // (pdot.mult_EW(1000)).print();
+        // printf("\n");
+
+        velocity.setX(velocity.getX() * 1000.0);
+        if (velocity.getX() > gMax_Robo_Velocity) {
+                velocity.setX((float)(gMax_Robo_Velocity));
+        }
+//*/
+
+//** This Part contains minimum accelration implementation.
+
+        // (vel_from_base.mult_EW(1000)).print();
+        // printf("\n");
+
+        float ma_polyX[4] = { 0 };
+        float ma_polyY[4] = { 0 };
+        float ma_polyR[4] = { 0 };
+
+        // The centre value is in mm
+        Vec2<float> centre = next_state_->sv_->centre;
+
+        Vec2<float> pos(state.getX() / 1000.0, centre.getX() / 1000.0); // mm mm
+        Vec2<float> vel(-vel_from_base.getX(), 0);       // m/s m/s
+
+        Vec2<float> del = centre - pos;
+        Vec2<float> del_polar = del.polar();
+        float rated_vel = (float)(gRated_Robo_Velocity);       // m/s
+        float dr = del_polar.getX() / 1000.0;   // m
+        float Tp = dr / rated_vel;      // s
+        Vec2<float> r_v = Vec2<float>(vel_from_base).polar();
+        Vec2<float> r_vel(r_v.getX(), 0);
+        Vec2<float> r_pos(0, del_polar.getX());
+
+        min_accel(ma_polyR, r_pos, r_vel, Tp);
+        // printf("%ld, %ld\n", (int32_t)(dr*1000), (int32_t)(Tp*1000));
+
+        min_accel(ma_polyX, pos, vel, Tp);
+
+        // printArr(ma_polyX);
+        // printf("\n");
+
+        pos.set_Values(state.getY() / 1000.0, centre.getY() / 1000.0);
+        vel.set_Values(vel_from_base.getY(), 0);
+
+        min_accel(ma_polyY, pos, vel, Tp);
+        
+        // printArr(ma_polyY);
+        // printf("\n");
+
+        float ma_xdot[3] = { 0 };
+        float ma_ydot[3] = { 0 };
+        float ma_rdot[3] = { 0 };
+
+        polyder(ma_xdot, ma_polyX);
+        polyder(ma_ydot, ma_polyY);
+        polyder(ma_rdot, ma_polyR);
+
+        // arrMult(ma_xdot, 1000.0);
+        // arrMult(ma_ydot, 1000.0);
+
+        float dt = (float)dt_millis / 1000.0;
+        float xdot = polyval(ma_xdot, dt);
+        float ydot = polyval(ma_ydot, dt);
+        float rdot = polyval(ma_rdot, dt);
+        
+        Vec2<float> pdot(ydot, xdot);
+        pdot = pdot.polar();
+        // theta = pdot.getY();
+        velocity.set_Values(rdot, pdot.getY());
+        // (pdot.mult_EW(1000)).print();
+        // printf("\n");
+
+        velocity.setX(velocity.getX() * 1000.0);
+        if (velocity.getX() > gMax_Robo_Velocity) {
+                velocity.setX((float)(gMax_Robo_Velocity));
+        }
+//*/
+
+        // velocity.set_Values(v, theta);
+
+        return velocity;
 }
 
 bool Robo_States::nextStateReached(Vec3<float> state)

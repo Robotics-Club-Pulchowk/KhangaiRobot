@@ -20,6 +20,7 @@
 #include "lidar.h"
 
 extern const uint32_t gMax_Robo_Velocity;
+extern const uint32_t gRated_Robo_Velocity;
 
 // These are the main IMU and the Compass Of the Robot
 extern struct MPU6050 Body_IMU;

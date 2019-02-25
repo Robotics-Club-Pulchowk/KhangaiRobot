@@ -128,6 +128,7 @@ Core/Src/robot/robot.cpp \
 Core/Src/utils/math/mat.cpp \
 Core/Src/utils/filter/exp_smooth.cpp \
 Core/Src/utils/trajectory/min_jerk.cpp \
+Core/Src/utils/trajectory/min_accel.cpp \
 \
 Core/Src/utils/logger.cpp \
 \
