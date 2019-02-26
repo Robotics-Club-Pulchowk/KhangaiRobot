@@ -264,6 +264,11 @@ Vec2<float> Robo_States::calc_Velocity(Vec3<float> state, Vec3<float> vel_from_b
         // (pdot.mult_EW(1000)).print();
         // printf("\n");
 
+        // ! Move this to another place
+        if (sv_->id == Field::FIELD_J) {
+                velocity.setX(0);
+        }
+
         velocity.setX(velocity.getX() * 1000.0);
         if (velocity.getX() > gMax_Robo_Velocity) {
                 velocity.setX((float)(gMax_Robo_Velocity));
