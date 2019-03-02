@@ -16,7 +16,7 @@ size_t arrSize(const T (&arr)[N])
 }
 
 template <size_t N>
-void printArr(const float (&arr)[N])
+void arrPrint(const float (&arr)[N])
 {
         printf("[ ");
         for (size_t i = 0; i < N; ++i) {
@@ -34,10 +34,41 @@ void arrMult(float (&arr)[N], float num)
 }
 
 template<typename T, size_t N>
-void fill_Array(T (&arr)[N], T num)
+void arrFill(T (&arr)[N], T num)
 {
         for (size_t i = 0; i < N; ++i) {
                 arr[i] = num;
+        }
+}
+
+// Only works with datatypes with defined == operator. Doesn't with float/double.
+// Returns the first index of the element
+template <typename T, size_t N>
+int arrIndex(T (&arr)[N], T elem)
+{
+        for (size_t i = 0; i < N; ++i) {
+                if (arr[i] == elem) {
+                        return (int)i;
+                }
+        }
+        return -1;
+}
+
+template <typename T, size_t N>
+void arrCopy(T (&dest)[N], const T (&src)[N])
+{
+        for (size_t i = 0; i < N; ++i) {
+                dest[i] = src[i];
+        }
+}
+
+template <typename T, size_t N, size_t M>
+void arrCopy(T (&dest)[N][M], const T (&src)[N][M])
+{
+        for (size_t i = 0; i < N; ++i) {
+                for (size_t j = 0; j < M; ++j) {
+                        dest[i][j] = src[i][j];
+                }
         }
 }
 

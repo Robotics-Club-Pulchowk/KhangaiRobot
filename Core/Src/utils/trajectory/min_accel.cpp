@@ -14,7 +14,7 @@
 void min_accel(float (&poly)[4], Vec2<float> pos, Vec2<float> vel, float Tp)
 {
         // Printing the parameters
-        // printArr(poly);
+        // arrPrint(poly);
         // printf(" [");
         // (pos.mult_EW(1000)).print();
         // printf("] [");

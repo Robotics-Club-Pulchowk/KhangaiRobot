@@ -230,7 +230,7 @@ Vec2<float> Robo_States::calc_Velocity(Vec3<float> state, Vec3<float> vel_from_b
 
         min_accel(ma_polyX, pos, vel, Tp);
 
-        // printArr(ma_polyX);
+        // arrPrint(ma_polyX);
         // printf("\n");
 
         pos.set_Values(state.getY() / 1000.0, centre.getY() / 1000.0);
@@ -238,7 +238,7 @@ Vec2<float> Robo_States::calc_Velocity(Vec3<float> state, Vec3<float> vel_from_b
 
         min_accel(ma_polyY, pos, vel, Tp);
         
-        // printArr(ma_polyY);
+        // arrPrint(ma_polyY);
         // printf("\n");
 
         float ma_xdot[3] = { 0 };

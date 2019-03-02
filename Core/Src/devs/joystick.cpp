@@ -74,7 +74,7 @@ void JoyStick_Handle_RxCplt()
                         gStart_Byte_Rx2 = false;
                         gRx2_Data_num = 0;
                         fill_JoyData(&gJoy, gJoy_Data_Arr);
-                        fill_Array(gJoy_Data_Arr, (uint8_t)0);
+                        arrFill(gJoy_Data_Arr, (uint8_t)0);
                         gJoyStick.data.insert(gJoy);
                 }
         }
