@@ -8,6 +8,7 @@
 
 #include "joystick.h"
 #include "defines.h"
+#include "array.h"
 
 #define JOYSTICK_START_BYTE     (0xA5)
 #define NUM_JOYSTICK_BYTES      (7)
@@ -47,14 +48,6 @@ JoyStick_Data read_JoyStick()
                 return gJoyStick.data.lookup();
         }
         return gNull_JData;
-}
-
-template<typename T, size_t N>
-void fill_Array(T (&arr)[N], T num)
-{
-        for (size_t i = 0; i < N; ++i) {
-                arr[i] = num;
-        }
 }
 
 

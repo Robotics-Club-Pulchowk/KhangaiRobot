@@ -33,4 +33,12 @@ void arrMult(float (&arr)[N], float num)
         }
 }
 
+template<typename T, size_t N>
+void fill_Array(T (&arr)[N], T num)
+{
+        for (size_t i = 0; i < N; ++i) {
+                arr[i] = num;
+        }
+}
+
 #endif // !_ARRAY_CONTAINER_H_
