@@ -220,6 +220,7 @@ void PositionSensor::process_LidarData(float (&lidar)[2], const State_Vars *sv)
                                 // Compensating the Y value based on lidar data
                                 if (id == Field::FIELD_B) {
                                         gLast_YEncoderValue = 2030.0;
+                                        HAL_GPIO_WritePin(B_RedLED_GPIO_Port, B_RedLED_Pin, GPIO_PIN_SET);               
                                 }
                                 else if (id == Field::FIELD_F) {
                                         gLast_YEncoderValue = 5030.0;

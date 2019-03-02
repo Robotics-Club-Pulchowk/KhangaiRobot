@@ -93,7 +93,7 @@ void Robot::update(uint32_t dt_millis)
 // This function is called by the MotorThread
 void Robot::run(uint32_t dt_millis)
 {
-        // velocities_.set_Values(0, 0.5, 0);
+        // velocities_.set_Values(0, 0, 0);
         // (velocities_.mult_EW(1000)).print();
         // printf("\n");
         state_from_base_ = base_->actuate(velocities_, dt_millis);

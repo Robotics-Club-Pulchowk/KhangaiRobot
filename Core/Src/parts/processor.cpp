@@ -108,6 +108,12 @@ Vec3<float> Processor::process(Vec3<float> state, Vec3<float> vel_from_base, Sta
                 float vx = v*sin(theta - phi);
                 float vy = v*cos(theta - phi);
                 float rw = (phi)*0.3;
+
+                // if (curr_state_->get_ID() == Field::FIELD_C ||
+                //     curr_state_->get_ID() == Field::FIELD_D ||
+                //     curr_state_->get_ID() == Field::FIELD_E ){
+                //         rw = 0;
+                // }
                 // float rw = 0;
 
                 // Should use PID on vx and vy separately here
