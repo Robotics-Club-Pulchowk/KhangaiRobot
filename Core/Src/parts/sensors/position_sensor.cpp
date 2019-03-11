@@ -14,6 +14,12 @@
 #include "error.h"
 
 #include "robo_states.h"
+#include "moore.h"
+
+static const size_t gN_States = 9;
+static const size_t gN_Inputs = 2;
+
+extern Moore_Machine<gN_States, gN_Inputs> gBridge_Machine;
 
 static Exp_Smooth gXLidarAlpha35(0.35);
 static Exp_Smooth gYLidarAlpha35(0.35);
@@ -199,8 +205,11 @@ void PositionSensor::process_LidarData(float (&lidar)[2], const State_Vars *sv)
         // lidar[0] => XLidar Data
         // lidar[1] => YLidar Data
 
+        // printf("%ld\n", (int32_t)lidar[0]);
+
         float jungle_pole_dist = 1255;
         float bridge_pole_dist = 900;
+        float tol = 100;
 
         Field id = sv->id;
 
@@ -220,7 +229,6 @@ void PositionSensor::process_LidarData(float (&lidar)[2], const State_Vars *sv)
                                 // Compensating the Y value based on lidar data
                                 if (id == Field::FIELD_B) {
                                         gLast_YEncoderValue = 2030.0;
-                                        HAL_GPIO_WritePin(B_RedLED_GPIO_Port, B_RedLED_Pin, GPIO_PIN_SET);               
                                 }
                                 else if (id == Field::FIELD_F) {
                                         gLast_YEncoderValue = 5030.0;
@@ -228,6 +236,22 @@ void PositionSensor::process_LidarData(float (&lidar)[2], const State_Vars *sv)
                         }
                 }
                 else if (id == Field::FIELD_H) {
+
+                        int state_id = -1;
+
+                        if (lidar[0] < (bridge_pole_dist - tol)) {
+                                // Feed 0
+                                state_id = gBridge_Machine.feed(0);
+                        }
+                        else if (lidar[0] > (bridge_pole_dist + tol)) {
+                                // Feed 1
+                                state_id = gBridge_Machine.feed(1);
+                        }
+
+                        if (state_id == 7) {
+                        }
+
+                        // Correct the XLidar Value
                         if (lidar[0] < bridge_pole_dist) {
                                 lidar[0] += 755;
                         }
@@ -283,3 +307,36 @@ int init_EncodersKalman(uint32_t dt_millis)
 {
         return 0;
 }
+
+// *** Construction of Bridge Moore Machine ***
+
+void BP1_f() { gLast_YEncoderValue = 6530; printf("State BP1\n"); }
+void BP2_f() { gLast_YEncoderValue = 7030; printf("State BP2\n"); }
+void BP3_f() { gLast_YEncoderValue = 7530; printf("State BP3\n"); }
+void BP4_f() { gLast_YEncoderValue = 8030; printf("State BP4\n"); }
+
+static State B(0);
+static State BP1(1, BP1_f);
+static State BR1(2);
+static State BP2(3, BP2_f);
+static State BR2(4);
+static State BP3(5, BP3_f);
+static State BR3(6);
+static State BP4(7, BP4_f);
+static State BR4(8);
+
+static State* gStates[gN_States] = { &B, &BP1, &BR1, &BP2, &BR2, &BP3, &BR3, &BP4, &BR4 };
+static int gInputs[gN_Inputs] = { 0, 1 };
+static size_t gDel[gN_States][gN_Inputs] = { { 1, 0 },
+                                             { 1, 2 },
+                                             { 3, 2 },
+                                             { 3, 4 },
+                                             { 5, 4 },
+                                             { 5, 6 },
+                                             { 7, 6 },
+                                             { 7, 8 },
+                                             { 8, 8 } };
+
+Moore_Machine<gN_States, gN_Inputs> gBridge_Machine(gStates, gInputs, gDel);
+
+// ***     End Of Bridge Moore Machine      ***
