@@ -130,13 +130,8 @@ float Robo_States::calc_AngleOfAttack(Vec3<float> state, float v, uint32_t dt_mi
 Vec2<float> Robo_States::calc_Velocity(Vec3<float> state, Vec3<float> vel_from_base, uint32_t dt_millis)
 {
         Vec2<float> velocity;
-        float v;
-        float theta;
-        // Using Naive Approach
-        v = calc_RoboVelocity(state, dt_millis);
-        theta = calc_AngleOfAttack(state, v, dt_millis);
 
-//** This Part contains minimum accelration implementation.
+        //** This Part contains minimum accelration implementation.
 
         float ma_polyX[4] = { 0 };
         float ma_polyY[4] = { 0 };
@@ -198,11 +193,7 @@ Vec2<float> Robo_States::calc_Velocity(Vec3<float> state, Vec3<float> vel_from_b
         // the angle from x and y axes' trajectory
         velocity.set_Values(rdot, pdot.getY());
 
-        // ! Move this to another place
-        if (sv_->id == Field::FIELD_J) {
-                velocity.setX(0);
-        }
-
+        // Clamp the velocity of the robot
         velocity.setX(velocity.getX() * 1000.0);
         if (velocity.getX() > gMax_Robo_Velocity) {
                 velocity.setX((float)(gMax_Robo_Velocity));
