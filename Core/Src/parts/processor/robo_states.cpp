@@ -225,9 +225,11 @@ Vec2<float> Robo_States::calc_Velocity(Vec3<float> state, Vec3<float> vel_from_b
         Vec2<float> r_vel(r_v.getX(), 0);
         Vec2<float> r_pos(0, del_polar.getX());
 
+        // Minimum Accleration Trajectory in distance
         min_accel(ma_polyR, r_pos, r_vel, Tp);
         // printf("%ld, %ld\n", (int32_t)(dr*1000), (int32_t)(Tp*1000));
 
+        // Minimum Accleration Trajectory in x-axis
         min_accel(ma_polyX, pos, vel, Tp);
 
         // arrPrint(ma_polyX);
@@ -236,6 +238,7 @@ Vec2<float> Robo_States::calc_Velocity(Vec3<float> state, Vec3<float> vel_from_b
         pos.set_Values(state.getY() / 1000.0, centre.getY() / 1000.0);
         vel.set_Values(vel_from_base.getY(), 0);
 
+        // Minimum Accleration Trajectory in y-axis
         min_accel(ma_polyY, pos, vel, Tp);
         
         // arrPrint(ma_polyY);
@@ -245,12 +248,10 @@ Vec2<float> Robo_States::calc_Velocity(Vec3<float> state, Vec3<float> vel_from_b
         float ma_ydot[3] = { 0 };
         float ma_rdot[3] = { 0 };
 
+        // Get dx/dt, dy/dt and dr/dt
         polyder(ma_xdot, ma_polyX);
         polyder(ma_ydot, ma_polyY);
         polyder(ma_rdot, ma_polyR);
-
-        // arrMult(ma_xdot, 1000.0);
-        // arrMult(ma_ydot, 1000.0);
 
         float dt = (float)dt_millis / 1000.0;
         float xdot = polyval(ma_xdot, dt);
@@ -259,6 +260,9 @@ Vec2<float> Robo_States::calc_Velocity(Vec3<float> state, Vec3<float> vel_from_b
         
         Vec2<float> pdot(ydot, xdot);
         pdot = pdot.polar();
+
+        // Get robot's velocity from the trajectory obtained in distance and
+        // the angle from x and y axes' trajectory
         velocity.set_Values(rdot, pdot.getY());
         // (pdot.mult_EW(1000)).print();
         // printf("\n");
