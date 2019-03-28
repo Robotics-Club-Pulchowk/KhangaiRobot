@@ -83,39 +83,24 @@ Vec3<float> Processor::process(Vec3<float> state, Vec3<float> vel_from_base, Sta
                 //      1) Linear Spline Movement
                 //      2) Rough Transition
                 if (curr_state_->nextStateReached(state)) {
-                        // printf("Here!!");
                         update_State();
                         sensor_->change_Sensors(curr_state_->get_ID());
                 }
 
                 // vel contains v and theta in order
-                // uint32_t t1 = HAL_GetTick();
                 Vec2<float> v_polar = curr_state_->calc_Velocity(state, vel_from_base, dt_millis);
-                // printf("%ld\n", (HAL_GetTick() - t1));
                 float v = v_polar.getX();
                 float theta = v_polar.getY();
 
                 float phi = state.getZ() - gFirstHeading;
 
-                // printf("Theta: %ld   Phi: %ld\n", (int32_t)(theta*57.3), (int32_t)(phi));
-
                 phi /= (float)57.3;
                 phi = atan2(sin(phi), cos(phi));
-
-                // phi = theta;
 
                 // ! Need to look here more
                 float vx = v*sin(theta - phi);
                 float vy = v*cos(theta - phi);
                 float rw = (phi)*0.3;
-                // rw = 0;
-
-                // if (curr_state_->get_ID() < Field::FIELD_I){
-                //         rw = 0;
-                // }
-                // float rw = 0;
-
-                // Should use PID on vx and vy separately here
 
                 vel.set_Values(vx, vy, rw);
         }
