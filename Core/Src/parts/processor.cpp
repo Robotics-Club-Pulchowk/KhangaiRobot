@@ -78,23 +78,26 @@ Vec3<float> Processor::process(Vec3<float> state, Vec3<float> vel_from_base, Sta
                 is_first_ = false;
         }
         else {
-                // This is the first algorithm used for moving the robot.
+                // This is the second algorithm used for moving the robot.
                 // Algorithm Info:
-                //      1) Linear Spline Movement
-                //      2) Rough Transition
+                //      1) Minimum Acceleration Trajectory
+                //      2) Smooth Transition
+                
                 if (curr_state_->nextStateReached(state)) {
                         update_State();
                         sensor_->change_Sensors(curr_state_->get_ID());
                 }
-
-                // vel contains v and theta in order
+                
+                // Get new velocity for the robot
                 Vec2<float> v_polar = curr_state_->calc_Velocity(state, vel_from_base, dt_millis);
                 float v = v_polar.getX();
                 float theta = v_polar.getY();
 
                 float phi = state.getZ() - gFirstHeading;
 
-                phi /= (float)57.3;
+                phi /= (float)57.3;     // to rads
+                // Ensuring: -pi < phi <= pi
+                // Since sin and cos gives value between -1 and 1
                 phi = atan2(sin(phi), cos(phi));
 
                 // ! Need to look here more
