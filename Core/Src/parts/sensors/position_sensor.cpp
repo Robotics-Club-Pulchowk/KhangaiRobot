@@ -25,14 +25,12 @@ static Exp_Smooth gXLidarAlpha35(0.35);
 static Exp_Smooth gYLidarAlpha35(0.35);
 
 // Starting Y-Position
-float gLast_YEncoderValue = 400;
+static float gLast_YEncoderValue = 400;
 // Starting X-Position
-float gLast_XEncoderValue = 310;
+static float gLast_XEncoderValue = 310;
 
-static float gYEncoder_Dist = 0;
-
-float gXLidar_Bias = 260;
-float gYLidar_Bias = 0;
+static float gXLidar_Bias = 260;
+static float gYLidar_Bias = 0;
 
 // Last Position
 Vec3<float> gLastPosition(gLast_XEncoderValue, gLast_YEncoderValue, 0);
@@ -81,7 +79,6 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
                 else if (p_sensors_[i]->get_Name() == SensorName::XLidar) {
                         lidar[0] = p_sensors_[i]->read() + gXLidar_Bias;
                         x_lidar_used = true;
-                        // printf("%ld\n", (int32_t)(lidar[0]));
                 }
                 else if (p_sensors_[i]->get_Name() == SensorName::YLidar) {
                         lidar[1] = p_sensors_[i]->read() + gYLidar_Bias;
@@ -114,7 +111,7 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
 
         // }
 
-        // float dt = (float)(dt_millis) / 1000.0;
+
         // Calculate the movement of the body with respect to the body frame
 
         // Rotate the movement to the navigation frame
@@ -144,28 +141,6 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
 
         float ex = del_pos.getX();
         float ey = del_pos.getY();
-
-        // float ex = free_wheel.getX();
-        // float ey = free_wheel.getY() * 1.0117;
-
-        // printf("%ld  ", (int32_t)(yaw*1000));
-
-        // Mat SO2(2,2);
-        // SO2.at(0,0) = c_y;
-        // SO2.at(0,1) = -s_y;
-        // SO2.at(1,0) = s_y;
-        // SO2.at(1,1) = c_y;
-
-        // Mat fw(2,1);
-        // fw.at(0,0) = free_wheel.getX();
-        // fw.at(1,0) = free_wheel.getY();
-        // Mat so2_pos = SO2.trans() * fw;
-
-        // float ex = so2_pos.at(0,0);
-        // float ey = so2_pos.at(1,0);
-
-        gYEncoder_Dist += ey;
-        // printf("%ld\n", (int32_t)(gYEncoder_Dist));
 
         // Fuse the data with the data from lidar that gives movement with
         // respect to the navigation frame
@@ -310,10 +285,10 @@ int init_EncodersKalman(uint32_t dt_millis)
 
 // *** Construction of Bridge Moore Machine ***
 
-void BP1_f() { gLast_YEncoderValue = 6530; printf("State BP1\n"); }
-void BP2_f() { gLast_YEncoderValue = 7030; printf("State BP2\n"); }
-void BP3_f() { gLast_YEncoderValue = 7530; printf("State BP3\n"); }
-void BP4_f() { gLast_YEncoderValue = 8030; printf("State BP4\n"); }
+void BP1_f() { gLast_YEncoderValue = 6530; }
+void BP2_f() { gLast_YEncoderValue = 7030; }
+void BP3_f() { gLast_YEncoderValue = 7530; }
+void BP4_f() { gLast_YEncoderValue = 8030; }
 
 static State B(0);
 static State BP1(1, BP1_f);

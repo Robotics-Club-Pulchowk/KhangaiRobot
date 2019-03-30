@@ -44,7 +44,7 @@ Robo_States gStateG(&gStateG_Data, &gStateH);
 Robo_States gStateH(&gStateH_Data, &gStateI);
 Robo_States gStateI(&gStateI_Data, &gStateJ);
 
-Robo_States gStateJ(&gStateJ_Data, &gStateJ);
+Robo_States gStateJ(&gStateJ_Data, &gStateK);
 Robo_States gStateK(&gStateK_Data, &gStateL);
 Robo_States gStateL(&gStateL_Data, &gStateL);
 
