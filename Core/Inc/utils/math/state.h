@@ -1,7 +1,7 @@
 #ifndef _STATE_H_
 #define _STATE_H_
 
-void null_func(void) { }
+void null_func(void);
 
 class State
 {

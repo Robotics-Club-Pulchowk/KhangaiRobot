@@ -120,6 +120,7 @@ Core/Src/parts/sensors/position_sensor.cpp \
 Core/Src/parts/sensors/encoder.cpp \
 Core/Src/parts/sensors/lidar.cpp \
 Core/Src/parts/sensors/bound_box.cpp \
+Core/Src/parts/sensors/bridge.cpp \
 \
 Core/Src/parts/processor/robo_states.cpp \
 Core/Src/parts/processor/game_field.cpp \
@@ -127,6 +128,7 @@ Core/Src/parts/processor/game_field.cpp \
 Core/Src/robot/robot.cpp \
 \
 Core/Src/utils/math/mat.cpp \
+Core/Src/utils/math/state.cpp \
 Core/Src/utils/filter/exp_smooth.cpp \
 Core/Src/utils/trajectory/min_jerk.cpp \
 Core/Src/utils/trajectory/min_accel.cpp \

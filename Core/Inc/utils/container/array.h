@@ -9,6 +9,8 @@
 #ifndef _ARRAY_CONTAINER_H_
 #define _ARRAY_CONTAINER_H_
 
+#include "stm32f4xx.h"
+
 template <typename T, size_t N>
 size_t arrSize(const T (&arr)[N])
 {
