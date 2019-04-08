@@ -38,6 +38,9 @@ PositionSensor& PositionSensor::get_Instance()
 {
         static PositionSensor gPSensor_Instance;
 
+        Bound_Box &box = Bound_Box::get_Instance();
+        gPSensor_Instance.bound_box_ = &box;
+
         return gPSensor_Instance;
 }
 
@@ -48,6 +51,8 @@ int PositionSensor::init(uint32_t dt_millis)
         gXEncoder.init();
         gYEncoder.init();
         gXLidar.init();
+
+        bound_box_->init();
 
         return 0;
 }
@@ -164,6 +169,8 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
         // gLastPosition.print();
         // printf("\n");
 
+        gLastPosition = compensate_Bounds(gLastPosition, sv);
+
         return gLastPosition;
 }
 
@@ -228,6 +235,42 @@ void PositionSensor::process_LidarData(float (&lidar)[2], const State_Vars *sv)
                         }
                 }
         }
+}
+
+/**
+ ** Compensates the position values based on the readings from limit switches
+ */
+Vec3<float> PositionSensor::compensate_Bounds(Vec3<float> pos, const State_Vars *sv)
+{
+        Field id = sv->id;
+
+        if ((int)id >= (int)(Field::FIELD_J)) {
+
+                bound_box_->update();
+                uint8_t bounds = bound_box_->get_Bounds();
+
+                if (id == Field::FIELD_J || id == Field::FIELD_L) {
+                        //* Look for the robot to touch the fence with face 6
+                        if (bounds & (1 << 6)) {
+                                //* Face 6 has touched the fence
+                                pos.setY(8600);
+                        }
+                }
+
+                else if (id == Field::FIELD_K) {
+                        //* Look for the robot to touch the fence with face 6 & 8
+                        if (bounds & (1 << 6)) {
+                                //* Face 6 has touched the fence
+                                pos.setY(8600);
+                        }
+                        if (bounds & (1 << 8)) {
+                                //* Face 6 has touched the fence
+                                pos.setX(5500);
+                        }
+                }
+        }
+
+        return pos;
 }
 
 
