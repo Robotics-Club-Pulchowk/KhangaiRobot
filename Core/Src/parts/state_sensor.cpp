@@ -114,6 +114,7 @@ Vec3<float> State_Sensor::read_State(Vec3<float> base_state, const State_Vars *s
 {
         Vec3<float> state;
         Vec3<float> pos;
+        Vec3<float> dori;
 
         Vec3<float> ori = read_Orientation(base_state, dt_millis);
         // ori.print();
@@ -124,10 +125,10 @@ Vec3<float> State_Sensor::read_State(Vec3<float> base_state, const State_Vars *s
                 gFirst_Orientation = ori;
         }
         else {
-                pos = p_sensor_->read_Position(ori - gFirst_Orientation, base_state, sv, dt_millis);
+                dori = ori - gFirst_Orientation;
+                pos = p_sensor_->read_Position(dori, base_state, sv, dt_millis);
+                state.set_Values(pos.getX(), pos.getY(), dori.getZ());   // mm mm deg
         }
-
-        state.set_Values(pos.getX(), pos.getY(), ori.getZ());   // mm mm deg
 
         return state;
 }

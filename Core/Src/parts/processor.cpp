@@ -52,8 +52,8 @@ Robo_States gStateJ(&gStateJ_Data, &gStateK);
 Robo_States gStateK(&gStateK_Data, &gStateL);
 Robo_States gStateL(&gStateL_Data, &gStateM);
 
-Robo_States gStateL(&gStateM_Data, &gStateN);
-Robo_States gStateL(&gStateN_Data, &gStateN);
+Robo_States gStateM(&gStateM_Data, &gStateN);
+Robo_States gStateN(&gStateN_Data, &gStateN);
 
 void init_GameField();
 
@@ -80,40 +80,34 @@ Vec3<float> Processor::process(Vec3<float> state, Vec3<float> vel_from_base, Sta
 {
         Vec3<float> vel(0, 0, 0);
 
-        if (is_first_) {
-                gFirstHeading = state.getZ();
-                is_first_ = false;
+        // This is the second algorithm used for moving the robot.
+        // Algorithm Info:
+        //      1) Minimum Acceleration Trajectory
+        //      2) Smooth Transition
+        
+        if (curr_state_->nextStateReached(state)) {
+                update_State();
+                sensor_->change_Sensors(curr_state_->get_ID());
         }
-        else {
-                // This is the second algorithm used for moving the robot.
-                // Algorithm Info:
-                //      1) Minimum Acceleration Trajectory
-                //      2) Smooth Transition
-                
-                if (curr_state_->nextStateReached(state)) {
-                        update_State();
-                        sensor_->change_Sensors(curr_state_->get_ID());
-                }
-                
-                // Get new velocity for the robot
-                Vec2<float> v_polar = curr_state_->calc_Velocity(state, vel_from_base, dt_millis);
-                float v = v_polar.getX();
-                float theta = v_polar.getY();
+        
+        // Get new velocity for the robot
+        Vec2<float> v_polar = curr_state_->calc_Velocity(state, vel_from_base, dt_millis);
+        float v = v_polar.getX();
+        float theta = v_polar.getY();
 
-                float phi = state.getZ() - gFirstHeading;
+        float phi = state.getZ();
 
-                phi /= (float)57.3;     // to rads
-                // Ensuring: -pi < phi <= pi
-                // Since sin and cos gives value between -1 and 1
-                phi = atan2(sin(phi), cos(phi));
+        phi /= (float)57.3;     // to rads
+        // Ensuring: -pi < phi <= pi
+        // Since sin and cos gives value between -1 and 1
+        phi = atan2(sin(phi), cos(phi));
 
-                // ! Need to look here more
-                float vx = v*sin(theta - phi);
-                float vy = v*cos(theta - phi);
-                float rw = (phi)*0.3;
+        // ! Need to look here more
+        float vx = v*sin(theta - phi);
+        float vy = v*cos(theta - phi);
+        float rw = (phi)*0.3;
 
                 vel.set_Values(vx, vy, rw);
-        }
 
         robot_state_vars_ = curr_state_->get_State();
 
