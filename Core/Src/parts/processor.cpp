@@ -20,6 +20,8 @@ extern State_Vars gStateI_Data;
 extern State_Vars gStateJ_Data;
 extern State_Vars gStateK_Data;
 extern State_Vars gStateL_Data;
+extern State_Vars gStateM_Data;
+extern State_Vars gStateN_Data;
 
 extern Robo_States gStateA;
 extern Robo_States gStateB;
@@ -33,6 +35,8 @@ extern Robo_States gStateI;
 extern Robo_States gStateJ;
 extern Robo_States gStateK;
 extern Robo_States gStateL;
+extern Robo_States gStateM;
+extern Robo_States gStateN;
 
 Robo_States gStateA(&gStateA_Data, &gStateB);
 Robo_States gStateB(&gStateB_Data, &gStateC);
@@ -46,7 +50,10 @@ Robo_States gStateI(&gStateI_Data, &gStateJ);
 
 Robo_States gStateJ(&gStateJ_Data, &gStateK);
 Robo_States gStateK(&gStateK_Data, &gStateL);
-Robo_States gStateL(&gStateL_Data, &gStateL);
+Robo_States gStateL(&gStateL_Data, &gStateM);
+
+Robo_States gStateL(&gStateM_Data, &gStateN);
+Robo_States gStateL(&gStateN_Data, &gStateN);
 
 void init_GameField();
 

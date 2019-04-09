@@ -253,7 +253,7 @@ Vec3<float> PositionSensor::compensate_Bounds(Vec3<float> pos, const State_Vars 
                         //* Look for the robot to touch the fence with face 6
                         if (bounds & (1 << 6)) {
                                 //* Face 6 has touched the fence
-                                pos.setY(8600);
+                                pos.setY(8350);
                         }
                 }
 
@@ -261,11 +261,11 @@ Vec3<float> PositionSensor::compensate_Bounds(Vec3<float> pos, const State_Vars 
                         //* Look for the robot to touch the fence with face 6 & 8
                         if (bounds & (1 << 6)) {
                                 //* Face 6 has touched the fence
-                                pos.setY(8600);
+                                pos.setY(8350);
                         }
                         if (bounds & (1 << 8)) {
                                 //* Face 6 has touched the fence
-                                pos.setX(5500);
+                                pos.setX(6000);
                         }
                 }
         }
