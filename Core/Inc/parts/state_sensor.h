@@ -42,9 +42,12 @@ private:
 
         Bound_Box *bound_box_;
 
+        bool is_first_ori_;
+        Vec3<float> first_ori_;
+
         State_Sensor() { }
         Vec3<float> read_Orientation(Vec3<float> base_state, uint32_t dt_millis);
-        Vec3<float> compensate_Bounds(Vec3<float> pos, const State_Vars *sv);
+        Vec3<float> compensate_Bounds(Vec3<float> pos, Vec3<float> ori, const State_Vars *sv);
 };
 
 #endif // !_STATE_SENSOR_H_

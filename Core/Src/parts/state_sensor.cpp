@@ -49,6 +49,7 @@ State_Sensor& State_Sensor::get_Instance()
 //! Not yet implemented
 int State_Sensor::init(uint32_t dt_millis)
 {
+
         IMU_Init();
         Stepper_Init();
         Lidars_Init();
@@ -89,6 +90,9 @@ int State_Sensor::init(uint32_t dt_millis)
         gOmega_Bias = MPU6050_Calc_OmegaBias(&Body_IMU, 1000);
 
         bound_box_->init();
+
+        // Initialize variables
+        is_first_ori_ = true;
         
         return 0;
 }
@@ -113,9 +117,7 @@ int State_Sensor::init(uint32_t dt_millis)
  * 2) Read Position of the robot with Position_Sensor
  * </pre>
  */
-static Vec3<float> gFirst_Orientation;
-static bool gIsFirstOrientationReading = true;
-Vec3<float> State_Sensor::read_State(Vec3<float> base_state, const State_Vars *sv, uint32_t dt_millis)
+Vec3<float> State_Sensor::read_State(Vec3<float> base_state, const State_Vars *curr_sv, uint32_t dt_millis)
 {
         Vec3<float> state;
         Vec3<float> pos;
@@ -125,16 +127,16 @@ Vec3<float> State_Sensor::read_State(Vec3<float> base_state, const State_Vars *s
         // ori.print();
         // printf("\n");
 
-        if (gIsFirstOrientationReading) {
-                gIsFirstOrientationReading = false;
-                gFirst_Orientation = ori;
+        if (is_first_ori_) {
+                is_first_ori_ = false;
+                first_ori_ = ori;
         }
         else {
-                dori = ori - gFirst_Orientation;
-                pos = p_sensor_->read_Position(dori, base_state, sv, dt_millis);
+                dori = ori - first_ori_;
+                pos = p_sensor_->read_Position(dori, base_state, curr_sv, dt_millis);
                 state.set_Values(pos.getX(), pos.getY(), dori.getZ());   // mm mm deg
 
-                state = compensate_Bounds(state, sv);
+                state = compensate_Bounds(state, ori, curr_sv);
         }
 
         return state;
@@ -143,9 +145,9 @@ Vec3<float> State_Sensor::read_State(Vec3<float> base_state, const State_Vars *s
 /**
  ** Compensates the position values based on the readings from limit switches
  */
-Vec3<float> State_Sensor::compensate_Bounds(Vec3<float> pos, const State_Vars *sv)
+Vec3<float> State_Sensor::compensate_Bounds(Vec3<float> pos, Vec3<float> ori, const State_Vars *curr_sv)
 {
-        Field id = sv->id;
+        Field id = curr_sv->id;
 
         if ((int)id >= (int)(Field::FIELD_J)) {
 
@@ -154,21 +156,40 @@ Vec3<float> State_Sensor::compensate_Bounds(Vec3<float> pos, const State_Vars *s
 
                 if (id == Field::FIELD_J || id == Field::FIELD_L) {
                         //* Look for the robot to touch the fence with face 6
-                        if (bounds & (1 << 6)) {
+                        if (bounds & (1 << (int)(Face::_6))) {
                                 //* Face 6 has touched the fence
                                 pos.setY(8350);
+                                
+                                //* Read face 6 value and reset angle here
+                                uint8_t face6 = bound_box_->get_Bound(6);
+                                if ((face6 & (1 << 0)) && (face6 & (1 << 1))) {
+                                        first_ori_ = ori;
+                                        pos.setZ(0);
+                                }
                         }
                 }
 
                 else if (id == Field::FIELD_K) {
                         //* Look for the robot to touch the fence with face 6 & 8
-                        if (bounds & (1 << 6)) {
+                        if (bounds & (1 << (int)(Face::_6))) {
                                 //* Face 6 has touched the fence
                                 pos.setY(8350);
                         }
-                        if (bounds & (1 << 8)) {
-                                //* Face 6 has touched the fence
+                        if (bounds & (1 << (int)(Face::_8))) {
+                                //* Face 8 has touched the fence
                                 pos.setX(6000);
+                        }
+                        
+                        //* Read face 6 & 8 value and reset angle here
+                        uint8_t face6 = bound_box_->get_Bound(6);
+                        if ((face6 & (1 << 0)) && (face6 & (1 << 1))) {
+                                first_ori_ = ori;
+                                pos.setZ(0);
+                        }
+                        uint8_t face8 = bound_box_->get_Bound(8);
+                        if ((face8 & (1 << 0)) && (face8 & (1 << 1))) {
+                                first_ori_ = ori;
+                                pos.setZ(0);
                         }
                 }
         }
