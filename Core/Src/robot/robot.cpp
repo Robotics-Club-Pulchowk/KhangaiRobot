@@ -72,14 +72,22 @@ void Robot::update(uint32_t dt_millis)
         vels.setY(vy);
         /*/
         // *** Manual Control ***
-        Vec3<float> vels(0,0,0);
 
-        if (!joy_Empty()) {
-                vels = parse_JoyStick();
-                vels = vels.mult_EW(0.4);
-        }
-        else {
-                vels = velocities_.mult_EW(0.8);
+        Field id = robot_state_vars_->id;
+        Field manual_fields[] = {
+
+        };
+
+        if (arrIndex(manual_fields, id) != -1) {
+
+                Vec3<float> vels_manual(0,0,0);
+
+                if (!joy_Empty()) {
+                        vels_manual = parse_JoyStick();
+                }
+                else {
+                        vels_manual = vels;
+                }
         }
 
         // ***

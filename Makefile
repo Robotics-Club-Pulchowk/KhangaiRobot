@@ -126,6 +126,7 @@ Core/Src/parts/processor/game_field.cpp \
 Core/Src/robot/robot.cpp \
 \
 Core/Src/utils/math/mat.cpp \
+Core/Src/utils/math/interpolation.cpp \
 Core/Src/utils/filter/exp_smooth.cpp \
 Core/Src/utils/trajectory/min_jerk.cpp \
 Core/Src/utils/trajectory/min_accel.cpp \
