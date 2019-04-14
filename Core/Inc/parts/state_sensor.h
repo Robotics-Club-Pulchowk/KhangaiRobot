@@ -11,6 +11,7 @@
 
 #include "vec3.h"
 #include "position_sensor.h"
+#include "bound_box.h"
 
 // SOme forward declarations
 enum class Field;
@@ -39,8 +40,11 @@ public:
 private:
         PositionSensor *p_sensor_;
 
+        Bound_Box *bound_box_;
+
         State_Sensor() { }
         Vec3<float> read_Orientation(Vec3<float> base_state, uint32_t dt_millis);
+        Vec3<float> compensate_Bounds(Vec3<float> pos, const State_Vars *sv);
 };
 
 #endif // !_STATE_SENSOR_H_

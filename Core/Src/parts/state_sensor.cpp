@@ -27,6 +27,9 @@ State_Sensor& State_Sensor::get_Instance()
         PositionSensor &p_sens = PositionSensor::get_Instance();
         sState_Sensor_Instance.p_sensor_ = &p_sens;
 
+        Bound_Box &box = Bound_Box::get_Instance();
+        sState_Sensor_Instance.bound_box_ = &box;
+
         return sState_Sensor_Instance;
 }
 
@@ -84,6 +87,8 @@ int State_Sensor::init(uint32_t dt_millis)
         
         // HMC5883_Calibrate(&Body_HMC, &IMU_Stepper, 200);
         gOmega_Bias = MPU6050_Calc_OmegaBias(&Body_IMU, 1000);
+
+        bound_box_->init();
         
         return 0;
 }
@@ -128,9 +133,47 @@ Vec3<float> State_Sensor::read_State(Vec3<float> base_state, const State_Vars *s
                 dori = ori - gFirst_Orientation;
                 pos = p_sensor_->read_Position(dori, base_state, sv, dt_millis);
                 state.set_Values(pos.getX(), pos.getY(), dori.getZ());   // mm mm deg
+
+                state = compensate_Bounds(state, sv);
         }
 
         return state;
+}
+
+/**
+ ** Compensates the position values based on the readings from limit switches
+ */
+Vec3<float> State_Sensor::compensate_Bounds(Vec3<float> pos, const State_Vars *sv)
+{
+        Field id = sv->id;
+
+        if ((int)id >= (int)(Field::FIELD_J)) {
+
+                bound_box_->update();
+                uint8_t bounds = bound_box_->get_Bounds();
+
+                if (id == Field::FIELD_J || id == Field::FIELD_L) {
+                        //* Look for the robot to touch the fence with face 6
+                        if (bounds & (1 << 6)) {
+                                //* Face 6 has touched the fence
+                                pos.setY(8350);
+                        }
+                }
+
+                else if (id == Field::FIELD_K) {
+                        //* Look for the robot to touch the fence with face 6 & 8
+                        if (bounds & (1 << 6)) {
+                                //* Face 6 has touched the fence
+                                pos.setY(8350);
+                        }
+                        if (bounds & (1 << 8)) {
+                                //* Face 6 has touched the fence
+                                pos.setX(6000);
+                        }
+                }
+        }
+
+        return pos;
 }
 
 

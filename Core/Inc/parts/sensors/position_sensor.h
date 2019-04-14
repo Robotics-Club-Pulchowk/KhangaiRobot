@@ -12,7 +12,6 @@
 #include "vec3.h"
 #include "sensor.h"
 #include "kalman.h"
-#include "bound_box.h"
 
 struct State_Vars;
 enum class Field;
@@ -67,8 +66,6 @@ private:
         Sensor<float> *p_sensors_[MAX_POSITION_SENSORS];
         uint8_t sensor_count_;
 
-        Bound_Box *bound_box_;
-
         Kalman_Filter enc_fuser_;
         Kalman_Filter xlidar_enc_fuser_;
         
@@ -79,7 +76,6 @@ private:
         }
 
         void process_LidarData(float (&lidar)[2], const State_Vars *sv);
-        Vec3<float> compensate_Bounds(Vec3<float> pos, const State_Vars *sv);
 };
 
 #endif // !_POSITION_SENSOR_H_
