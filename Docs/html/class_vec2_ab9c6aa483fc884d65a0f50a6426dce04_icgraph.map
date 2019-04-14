@@ -1,8 +1,14 @@
 <map id="Vec2::getX" name="Vec2::getX">
-<area shape="rect" id="node1" title=" " alt="" coords="496,81,581,108"/>
-<area shape="rect" id="node2" href="$class_robo___states.html#a106e0313039d8e864c71565c2f5a12ec" title=" " alt="" coords="259,5,425,32"/>
-<area shape="rect" id="node3" href="$class_robo___states.html#ac94e2950a8c76bf0ddececcc680dc53f" title=" " alt="" coords="258,56,426,83"/>
-<area shape="rect" id="node5" href="$class_robo___states.html#aefb2cb8a8757a4638e2ee70892aa293a" title=" " alt="" coords="236,107,448,133"/>
-<area shape="rect" id="node6" href="$class_lidar.html#a87fcb1190775fbdf01a68e0efa020054" title=" " alt="" coords="301,157,383,184"/>
-<area shape="rect" id="node4" href="$class_robo___states.html#a0c4368a7db98e682198ecd564fd2d28f" title=" " alt="" coords="5,49,188,90"/>
+<area shape="rect" id="node1" title=" " alt="" coords="789,171,875,198"/>
+<area shape="rect" id="node2" href="$class_processor.html#a60d0fbfefa0a370badbba6a681626a2d" title=" " alt="" coords="323,95,457,122"/>
+<area shape="rect" id="node5" href="$class_robo___states.html#a106e0313039d8e864c71565c2f5a12ec" title=" " alt="" coords="553,45,718,71"/>
+<area shape="rect" id="node6" href="$class_robo___states.html#ac94e2950a8c76bf0ddececcc680dc53f" title=" " alt="" coords="551,197,719,223"/>
+<area shape="rect" id="node8" href="$class_robo___states.html#a265781f9c854d4fc1c959f7b26ca39cc" title=" " alt="" coords="544,95,727,122"/>
+<area shape="rect" id="node9" href="$class_robo___states.html#aefb2cb8a8757a4638e2ee70892aa293a" title=" " alt="" coords="529,146,741,173"/>
+<area shape="rect" id="node10" href="$class_lidar.html#a87fcb1190775fbdf01a68e0efa020054" title=" " alt="" coords="594,247,677,274"/>
+<area shape="rect" id="node11" href="$min__accel_8cpp.html#aa220a3a494712e400d345da12382a22c" title=" " alt="" coords="595,298,676,325"/>
+<area shape="rect" id="node12" href="$min__jerk_8cpp.html#a569d31628c228910831b5160b7c06d71" title=" " alt="" coords="600,349,671,375"/>
+<area shape="rect" id="node3" href="$class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,95,251,122"/>
+<area shape="rect" id="node4" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,95,100,122"/>
+<area shape="rect" id="node7" href="$class_robo___states.html#a0c4368a7db98e682198ecd564fd2d28f" title=" " alt="" coords="299,189,481,231"/>
 </map>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Khangai Robot Play - Naive: C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive-Play/Core/Src/robot/robot.cpp File Reference</title>
+<title>Khangai Robot Play - Naive: C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot-Play/Core/Src/robot/robot.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -98,35 +98,41 @@ $(document).ready(function(){initNavTree('robot_8cpp.html','');});
 <code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
 <code>#include &quot;FreeRTOS.h&quot;</code><br />
 <code>#include &quot;task.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="joystick_8h_source.html">joystick.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for robot.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="robot_8cpp__incl.png" border="0" usemap="#_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_localization_2_naive-_play_2_core_2_src_2robot_2robot_8cpp" alt=""/></div>
-<map name="_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_localization_2_naive-_play_2_core_2_src_2robot_2robot_8cpp" id="_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_localization_2_naive-_play_2_core_2_src_2robot_2robot_8cpp">
-<area shape="rect"  title=" " alt="" coords="414,5,613,76"/>
-<area shape="rect"  href="robot_8h.html" title=" " alt="" coords="431,124,494,151"/>
-<area shape="rect"  href="main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="337,721,399,748"/>
-<area shape="rect"  title=" " alt="" coords="518,124,613,151"/>
-<area shape="rect"  title=" " alt="" coords="637,124,696,151"/>
-<area shape="rect"  href="wheel_8h.html" title=" " alt="" coords="209,572,276,599"/>
-<area shape="rect"  href="vec3_8h.html" title=" " alt="" coords="605,647,664,673"/>
-<area shape="rect"  href="actuator_8h.html" title=" " alt="" coords="355,497,435,524"/>
-<area shape="rect"  href="processor_8h.html" title=" " alt="" coords="536,199,627,225"/>
-<area shape="rect"  href="state__sensor_8h.html" title=" " alt="" coords="527,348,635,375"/>
-<area shape="rect"  title=" " alt="" coords="309,796,427,823"/>
-<area shape="rect"  href="tim_8h.html" title=" " alt="" coords="280,647,331,673"/>
-<area shape="rect"  href="defines_8h.html" title=" " alt="" coords="80,647,155,673"/>
-<area shape="rect"  href="pid__algorithms_8h.html" title=" " alt="" coords="31,721,148,748"/>
-<area shape="rect"  href="pid_8h.html" title=" " alt="" coords="5,647,56,673"/>
-<area shape="rect"  title=" " alt="" coords="57,796,122,823"/>
-<area shape="rect"  href="robo__states_8h.html" title=" " alt="" coords="629,273,731,300"/>
-<area shape="rect"  href="position__sensor_8h.html" title=" " alt="" coords="523,423,647,449"/>
-<area shape="rect"  href="sensor_8h.html" title=" " alt="" coords="557,497,629,524"/>
-<area shape="rect"  href="kalman_8h.html" title=" " alt="" coords="459,497,533,524"/>
-<area shape="rect"  href="mat_8h.html" title=" " alt="" coords="483,572,538,599"/>
-<area shape="rect"  title=" " alt="" coords="479,647,542,673"/>
-<area shape="rect"  href="vec2_8h.html" title=" " alt="" coords="751,423,809,449"/>
-<area shape="rect"  href="vec4_8h.html" title=" " alt="" coords="660,348,719,375"/>
+<div class="center"><img src="robot_8cpp__incl.png" border="0" usemap="#_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_localization_2_khangai_robot-_play_2_core_2_src_2robot_2robot_8cpp" alt=""/></div>
+<map name="_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_localization_2_khangai_robot-_play_2_core_2_src_2robot_2robot_8cpp" id="_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_localization_2_khangai_robot-_play_2_core_2_src_2robot_2robot_8cpp">
+<area shape="rect"  title=" " alt="" coords="436,5,645,76"/>
+<area shape="rect"  href="robot_8h.html" title=" " alt="" coords="509,124,572,151"/>
+<area shape="rect"  href="main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="255,721,317,748"/>
+<area shape="rect"  title=" " alt="" coords="596,124,691,151"/>
+<area shape="rect"  title=" " alt="" coords="715,124,774,151"/>
+<area shape="rect"  href="joystick_8h.html" title=" " alt="" coords="89,572,168,599"/>
+<area shape="rect"  href="wheel_8h.html" title=" " alt="" coords="694,572,761,599"/>
+<area shape="rect"  href="vec3_8h.html" title=" " alt="" coords="403,647,462,673"/>
+<area shape="rect"  href="actuator_8h.html" title=" " alt="" coords="643,497,723,524"/>
+<area shape="rect"  href="processor_8h.html" title=" " alt="" coords="413,199,503,225"/>
+<area shape="rect"  href="state__sensor_8h.html" title=" " alt="" coords="432,348,540,375"/>
+<area shape="rect"  title=" " alt="" coords="286,796,403,823"/>
+<area shape="rect"  href="tim_8h.html" title=" " alt="" coords="489,647,539,673"/>
+<area shape="rect"  href="defines_8h.html" title=" " alt="" coords="565,647,639,673"/>
+<area shape="rect"  href="pid__algorithms_8h.html" title=" " alt="" coords="722,721,839,748"/>
+<area shape="rect"  href="pid_8h.html" title=" " alt="" coords="765,647,815,673"/>
+<area shape="rect"  title=" " alt="" coords="748,796,813,823"/>
+<area shape="rect"  href="robo__states_8h.html" title=" " alt="" coords="314,273,415,300"/>
+<area shape="rect"  href="position__sensor_8h.html" title=" " alt="" coords="368,423,492,449"/>
+<area shape="rect"  href="sensor_8h.html" title=" " alt="" coords="297,497,369,524"/>
+<area shape="rect"  href="kalman_8h.html" title=" " alt="" coords="393,497,467,524"/>
+<area shape="rect"  href="bound__box_8h.html" title=" " alt="" coords="126,497,222,524"/>
+<area shape="rect"  href="mat_8h.html" title=" " alt="" coords="403,572,457,599"/>
+<area shape="rect"  title=" " alt="" coords="316,647,379,673"/>
+<area shape="rect"  href="gpio_8h.html" title=" " alt="" coords="221,572,279,599"/>
+<area shape="rect"  href="vec2_8h.html" title=" " alt="" coords="318,572,377,599"/>
+<area shape="rect"  href="vec4_8h.html" title=" " alt="" coords="325,348,383,375"/>
+<area shape="rect"  href="usart_8h.html" title=" " alt="" coords="112,647,175,673"/>
+<area shape="rect"  href="queue__custom_8h.html" title=" " alt="" coords="5,721,124,748"/>
 </map>
 </div>
 </div><table class="memberdecls">

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['mat',['Mat',['../class_mat.html',1,'']]],
-  ['mpu6050',['MPU6050',['../struct_m_p_u6050.html',1,'']]]
+  ['kalman_5ffilter',['Kalman_Filter',['../class_kalman___filter.html',1,'']]],
+  ['kalman_5fvars',['Kalman_Vars',['../struct_kalman___vars.html',1,'']]]
 ];

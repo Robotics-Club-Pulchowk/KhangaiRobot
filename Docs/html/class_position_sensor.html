@@ -105,11 +105,13 @@ Collaboration diagram for PositionSensor:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_position_sensor__coll__graph.png" border="0" usemap="#_position_sensor_coll__map" alt="Collaboration graph"/></div>
 <map name="_position_sensor_coll__map" id="_position_sensor_coll__map">
-<area shape="rect"  title=" " alt="" coords="63,408,173,435"/>
+<area shape="rect"  title=" " alt="" coords="133,408,244,435"/>
 <area shape="rect"  href="class_sensor.html" title=" " alt="" coords="5,304,116,331"/>
 <area shape="rect"  href="class_kalman___filter.html" title=" " alt="" coords="140,304,243,331"/>
-<area shape="rect"  href="struct_kalman___vars.html" title=" " alt="" coords="203,199,303,225"/>
-<area shape="rect"  href="class_mat.html" title=" " alt="" coords="169,5,213,32"/>
+<area shape="rect"  href="struct_kalman___vars.html" title=" " alt="" coords="151,199,251,225"/>
+<area shape="rect"  href="class_mat.html" title=" " alt="" coords="117,5,161,32"/>
+<area shape="rect"  href="class_bound___box.html" title=" " alt="" coords="280,304,369,331"/>
+<area shape="rect"  href="class_bound.html" title=" " alt="" coords="279,199,370,225"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -143,8 +145,10 @@ Static Public Member Functions</h2></td></tr>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a0876bb5181de264cbd15ab3d8a26720a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_sensor.html#a0876bb5181de264cbd15ab3d8a26720a">PositionSensor</a> ()</td></tr>
 <tr class="separator:a0876bb5181de264cbd15ab3d8a26720a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae41625aa56b708e6d05915f8a10d7717"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_sensor.html#ae41625aa56b708e6d05915f8a10d7717">process_LidarData</a> (float lidar[2], const <a class="el" href="struct_state___vars.html">State_Vars</a> *sv)</td></tr>
-<tr class="separator:ae41625aa56b708e6d05915f8a10d7717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad700f7bdc321b284af4b7d247f75f58f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_sensor.html#ad700f7bdc321b284af4b7d247f75f58f">process_LidarData</a> (float(&amp;lidar)[2], const <a class="el" href="struct_state___vars.html">State_Vars</a> *sv)</td></tr>
+<tr class="separator:ad700f7bdc321b284af4b7d247f75f58f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f10e901598d65cd3151fa3f2abbe8ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_sensor.html#a3f10e901598d65cd3151fa3f2abbe8ab">compensate_Bounds</a> (<a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; pos, const <a class="el" href="struct_state___vars.html">State_Vars</a> *sv)</td></tr>
+<tr class="separator:a3f10e901598d65cd3151fa3f2abbe8ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -152,6 +156,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a4705bb660e87f22569f972fef87ea1a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12a6eb3e5e67ee0737acb42eac113bb9"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_sensor.html#a12a6eb3e5e67ee0737acb42eac113bb9">sensor_count_</a></td></tr>
 <tr class="separator:a12a6eb3e5e67ee0737acb42eac113bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae62e36ad95b697c844be1753ffe6ea87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bound___box.html">Bound_Box</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_sensor.html#ae62e36ad95b697c844be1753ffe6ea87">bound_box_</a></td></tr>
+<tr class="separator:ae62e36ad95b697c844be1753ffe6ea87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa536bfc9e67a2f4499d81d9ff745647d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_kalman___filter.html">Kalman_Filter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_sensor.html#aa536bfc9e67a2f4499d81d9ff745647d">enc_fuser_</a></td></tr>
 <tr class="separator:aa536bfc9e67a2f4499d81d9ff745647d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2227b89b6accfbd5a5c554cabd2b225"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_kalman___filter.html">Kalman_Filter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_sensor.html#ad2227b89b6accfbd5a5c554cabd2b225">xlidar_enc_fuser_</a></td></tr>
@@ -289,9 +295,62 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_position_sensor_ad76eb756d3ec36067fade93ea58a55ec_icgraph.png" border="0" usemap="#class_position_sensor_ad76eb756d3ec36067fade93ea58a55ec_icgraph" alt=""/></div>
 <map name="class_position_sensor_ad76eb756d3ec36067fade93ea58a55ec_icgraph" id="class_position_sensor_ad76eb756d3ec36067fade93ea58a55ec_icgraph">
-<area shape="rect"  title=" " alt="" coords="240,27,379,69"/>
-<area shape="rect"  href="class_state___sensor.html#a662146502361690701880a3b1b7ae29c" title=" " alt="" coords="5,5,192,32"/>
-<area shape="rect"  href="class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c" title=" " alt="" coords="23,57,174,98"/>
+<area shape="rect"  title=" " alt="" coords="716,27,855,69"/>
+<area shape="rect"  href="class_state___sensor.html#a662146502361690701880a3b1b7ae29c" title=" " alt="" coords="481,5,668,32"/>
+<area shape="rect"  href="class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c" title=" " alt="" coords="499,57,650,98"/>
+<area shape="rect"  href="class_processor.html#a60d0fbfefa0a370badbba6a681626a2d" title=" " alt="" coords="299,64,433,91"/>
+<area shape="rect"  href="class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,64,251,91"/>
+<area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,64,100,91"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3f10e901598d65cd3151fa3f2abbe8ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f10e901598d65cd3151fa3f2abbe8ab">&#9670;&nbsp;</a></span>compensate_Bounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; PositionSensor::compensate_Bounds </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_state___vars.html">State_Vars</a> *&#160;</td>
+          <td class="paramname"><em>sv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compensates the position values based on the readings from limit switches </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_position_sensor_a3f10e901598d65cd3151fa3f2abbe8ab_cgraph.png" border="0" usemap="#class_position_sensor_a3f10e901598d65cd3151fa3f2abbe8ab_cgraph" alt=""/></div>
+<map name="class_position_sensor_a3f10e901598d65cd3151fa3f2abbe8ab_cgraph" id="class_position_sensor_a3f10e901598d65cd3151fa3f2abbe8ab_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,74,195,115"/>
+<area shape="rect"  href="class_bound___box.html#a07d29bbee82838663fe43f549f7ddbe8" title=" " alt="" coords="258,5,394,32"/>
+<area shape="rect"  href="class_bound___box.html#aa5296644fccfa0c870e6d38abb395e8b" title=" " alt="" coords="243,56,409,83"/>
+<area shape="rect"  href="class_vec3.html#a4dadb34f7d48268a101914b7a4771e68" title=" " alt="" coords="283,107,369,133"/>
+<area shape="rect"  href="class_vec3.html#a2d66e34e1ad4be888821158541fcd2ea" title=" " alt="" coords="283,157,369,184"/>
+<area shape="rect"  href="class_bound.html#acb333689dc61b5fdc233b29501a82cda" title=" " alt="" coords="457,5,564,32"/>
 </map>
 </div>
 
@@ -319,6 +378,15 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_position_sensor_a409cde1d6bc69641e99c3521b9f40f71_cgraph.png" border="0" usemap="#class_position_sensor_a409cde1d6bc69641e99c3521b9f40f71_cgraph" alt=""/></div>
+<map name="class_position_sensor_a409cde1d6bc69641e99c3521b9f40f71_cgraph" id="class_position_sensor_a409cde1d6bc69641e99c3521b9f40f71_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,5,141,47"/>
+<area shape="rect"  href="class_bound___box.html#a519364f16b158de7524041760fcbc579" title=" " alt="" coords="189,13,360,39"/>
+</map>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -352,11 +420,12 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_position_sensor_a1f20719186d564899cba8ae3a01c3ecc_cgraph.png" border="0" usemap="#class_position_sensor_a1f20719186d564899cba8ae3a01c3ecc_cgraph" alt=""/></div>
 <map name="class_position_sensor_a1f20719186d564899cba8ae3a01c3ecc_cgraph" id="class_position_sensor_a1f20719186d564899cba8ae3a01c3ecc_cgraph">
-<area shape="rect"  title=" " alt="" coords="5,56,140,83"/>
-<area shape="rect"  href="devs__config_8h.html#a7a9d8b41fb6b7081d142fe2e84ed8e20" title=" " alt="" coords="188,5,289,32"/>
-<area shape="rect"  href="class_encoder.html#a0548c9bae5acec8c70616e1015cdaede" title=" " alt="" coords="191,56,286,83"/>
-<area shape="rect"  href="class_lidar.html#a319f70d36bd17592036aa1e92a6e7292" title=" " alt="" coords="201,107,276,133"/>
-<area shape="rect"  href="class_arduino___device.html#a32dc6658c68c9190fab562babe1650cf" title=" " alt="" coords="337,107,473,133"/>
+<area shape="rect"  title=" " alt="" coords="5,81,140,108"/>
+<area shape="rect"  href="devs__config_8h.html#a7a9d8b41fb6b7081d142fe2e84ed8e20" title=" " alt="" coords="195,5,296,32"/>
+<area shape="rect"  href="class_encoder.html#a0548c9bae5acec8c70616e1015cdaede" title=" " alt="" coords="198,56,293,83"/>
+<area shape="rect"  href="class_lidar.html#a319f70d36bd17592036aa1e92a6e7292" title=" " alt="" coords="208,107,283,133"/>
+<area shape="rect"  href="class_bound___box.html#a7e46227cd0b4852d0f97fa6fa805c554" title=" " alt="" coords="188,157,303,184"/>
+<area shape="rect"  href="class_arduino___device.html#a32dc6658c68c9190fab562babe1650cf" title=" " alt="" coords="351,107,487,133"/>
 </map>
 </div>
 
@@ -414,8 +483,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="ae41625aa56b708e6d05915f8a10d7717"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae41625aa56b708e6d05915f8a10d7717">&#9670;&nbsp;</a></span>process_LidarData()</h2>
+<a id="ad700f7bdc321b284af4b7d247f75f58f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad700f7bdc321b284af4b7d247f75f58f">&#9670;&nbsp;</a></span>process_LidarData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -426,7 +495,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void PositionSensor::process_LidarData </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
+          <td class="paramtype">float(&amp;)&#160;</td>
           <td class="paramname"><em>lidar</em>[2], </td>
         </tr>
         <tr>
@@ -492,11 +561,10 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_position_sensor_a34aa8302e10e702599384f55148160e9_cgraph.png" border="0" usemap="#class_position_sensor_a34aa8302e10e702599384f55148160e9_cgraph" alt=""/></div>
 <map name="class_position_sensor_a34aa8302e10e702599384f55148160e9_cgraph" id="class_position_sensor_a34aa8302e10e702599384f55148160e9_cgraph">
-<area shape="rect"  title=" " alt="" coords="5,74,148,115"/>
+<area shape="rect"  title=" " alt="" coords="5,49,148,90"/>
 <area shape="rect"  href="class_vec3.html#a2d66e34e1ad4be888821158541fcd2ea" title=" " alt="" coords="201,5,287,32"/>
 <area shape="rect"  href="class_vec3.html#a4dadb34f7d48268a101914b7a4771e68" title=" " alt="" coords="201,56,287,83"/>
 <area shape="rect"  href="class_sensor.html#a5a115feac97a147feec2f637dbed62ac" title=" " alt="" coords="196,107,292,133"/>
-<area shape="rect"  href="error_8h.html#ab5744f81944e2a834ef96ae10f8ae166" title=" " alt="" coords="220,157,268,184"/>
 </map>
 </div>
 
@@ -530,15 +598,40 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_position_sensor_ad81814b7f09c1104dc4695eec880979f_icgraph.png" border="0" usemap="#class_position_sensor_ad81814b7f09c1104dc4695eec880979f_icgraph" alt=""/></div>
 <map name="class_position_sensor_ad81814b7f09c1104dc4695eec880979f_icgraph" id="class_position_sensor_ad81814b7f09c1104dc4695eec880979f_icgraph">
-<area shape="rect"  title=" " alt="" coords="204,39,363,80"/>
-<area shape="rect"  href="class_state___sensor.html#a3965dffdc2a72622a862f2a20fe2e09f" title=" " alt="" coords="5,5,156,47"/>
-<area shape="rect"  href="class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c" title=" " alt="" coords="5,71,156,112"/>
+<area shape="rect"  title=" " alt="" coords="680,39,839,80"/>
+<area shape="rect"  href="class_state___sensor.html#a3965dffdc2a72622a862f2a20fe2e09f" title=" " alt="" coords="481,5,632,47"/>
+<area shape="rect"  href="class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c" title=" " alt="" coords="481,71,632,112"/>
+<area shape="rect"  href="class_processor.html#a60d0fbfefa0a370badbba6a681626a2d" title=" " alt="" coords="299,78,433,105"/>
+<area shape="rect"  href="class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,78,251,105"/>
+<area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,78,100,105"/>
 </map>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae62e36ad95b697c844be1753ffe6ea87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae62e36ad95b697c844be1753ffe6ea87">&#9670;&nbsp;</a></span>bound_box_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_bound___box.html">Bound_Box</a>* PositionSensor::bound_box_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aa536bfc9e67a2f4499d81d9ff745647d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa536bfc9e67a2f4499d81d9ff745647d">&#9670;&nbsp;</a></span>enc_fuser_</h2>
 
@@ -628,8 +721,8 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive-Play/Core/Inc/parts/sensors/<a class="el" href="position__sensor_8h_source.html">position_sensor.h</a></li>
-<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive-Play/Core/Src/parts/sensors/<a class="el" href="position__sensor_8cpp.html">position_sensor.cpp</a></li>
+<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot-Play/Core/Inc/parts/sensors/<a class="el" href="position__sensor_8h_source.html">position_sensor.h</a></li>
+<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot-Play/Core/Src/parts/sensors/<a class="el" href="position__sensor_8cpp.html">position_sensor.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

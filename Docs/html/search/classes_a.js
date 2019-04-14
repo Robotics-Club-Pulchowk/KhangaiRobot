@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['sensor',['Sensor',['../class_sensor.html',1,'']]],
-  ['sensor_3c_20float_20_3e',['Sensor&lt; float &gt;',['../class_sensor.html',1,'']]],
-  ['smoothing_5falgorithm',['Smoothing_Algorithm',['../class_smoothing___algorithm.html',1,'']]],
-  ['state_5fsensor',['State_Sensor',['../class_state___sensor.html',1,'']]],
-  ['state_5fvars',['State_Vars',['../struct_state___vars.html',1,'']]]
+  ['queue',['Queue',['../class_queue.html',1,'']]],
+  ['queue_3c_20float_2c_202_20_3e',['Queue&lt; float, 2 &gt;',['../class_queue.html',1,'']]],
+  ['queue_3c_20joystick_5fdata_2c_202_20_3e',['Queue&lt; JoyStick_Data, 2 &gt;',['../class_queue.html',1,'']]]
 ];

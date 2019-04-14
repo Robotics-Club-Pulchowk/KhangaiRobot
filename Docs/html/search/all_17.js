@@ -1,15 +1,14 @@
 var searchData=
 [
-  ['x_5f',['x_',['../class_kalman___filter.html#a852bae6b48e7f39a957caf21696cae6c',1,'Kalman_Filter::x_()'],['../class_vec2.html#a5133b04922466dbdfa2eee874774d87c',1,'Vec2::x_()'],['../class_vec3.html#ad6cc034d7eca8bb25a752db1c7a11c1a',1,'Vec3::x_()'],['../class_vec4.html#af15cf636cd973c2d642173c411750f81',1,'Vec4::x_()']]],
-  ['x_5ffine_5fgain',['X_FINE_GAIN',['../mpu6050__reg_8h.html#aca80739c2ec40ca15ba201d4537748ab',1,'mpu6050_reg.h']]],
-  ['xa_5foffs_5fh',['XA_OFFS_H',['../mpu6050__reg_8h.html#a04ff2b3ed31a8d968fd35d4aa6f21f41',1,'mpu6050_reg.h']]],
-  ['xa_5foffs_5fl_5ftc',['XA_OFFS_L_TC',['../mpu6050__reg_8h.html#a4f6d7b3700406f5b85d2a1d749b2d989',1,'mpu6050_reg.h']]],
-  ['xencoder',['XEncoder',['../sensor_8h.html#a80119019834acb539f0ac38a1e57e56da31a9351f252e8d61e51ba16624c95844',1,'sensor.h']]],
-  ['xg_5foffs_5ftc',['XG_OFFS_TC',['../mpu6050__reg_8h.html#aeca53a71e27a1e7f91716ec1962761db',1,'mpu6050_reg.h']]],
-  ['xg_5foffs_5fusrh',['XG_OFFS_USRH',['../mpu6050__reg_8h.html#a75ed9711e6453cadb7bc62a8457aefc7',1,'mpu6050_reg.h']]],
-  ['xg_5foffs_5fusrl',['XG_OFFS_USRL',['../mpu6050__reg_8h.html#a49299ef6d11d7ba69751f58abad33a54',1,'mpu6050_reg.h']]],
-  ['xlidar',['XLidar',['../sensor_8h.html#a80119019834acb539f0ac38a1e57e56dabaa885dc69c37a03c63594ecf6c92573',1,'sensor.h']]],
-  ['xlidar_5fenc_5ffuser_5f',['xlidar_enc_fuser_',['../class_position_sensor.html#ad2227b89b6accfbd5a5c554cabd2b225',1,'PositionSensor']]],
-  ['xportpendsvhandler',['xPortPendSVHandler',['../_free_r_t_o_s_config_8h.html#a6f30022da7d797dd31f1b8a11cae9a35',1,'FreeRTOSConfig.h']]],
-  ['xportsystickhandler',['xPortSysTickHandler',['../_free_r_t_o_s_config_8h.html#ae42e6318b5d564e44f97f8c765859448',1,'FreeRTOSConfig.h']]]
+  ['w_5f',['w_',['../class_vec4.html#a63ad1d4ce4bf1e9b082778a06b892d89',1,'Vec4']]],
+  ['wheel',['Wheel',['../class_wheel.html',1,'Wheel'],['../class_wheel.html#a7c75aaceaf4c96aec4d4f9398abed873',1,'Wheel::Wheel()'],['../class_wheel.html#a0d09a46a3cda29d059a159cedd792bdc',1,'Wheel::Wheel(Wheel_Config *wheel)'],['../class_wheel.html#a953e0cdcf3fc520b8ee7273a40d2c322',1,'Wheel::Wheel(Wheel &amp;&amp;)=default'],['../class_wheel.html#af5037f2024413a9e3caa2a2bc87901de',1,'Wheel::Wheel(const Wheel &amp;)=default']]],
+  ['wheel_2ecpp',['wheel.cpp',['../wheel_8cpp.html',1,'']]],
+  ['wheel_2eh',['wheel.h',['../wheel_8h.html',1,'']]],
+  ['wheel_5f',['wheel_',['../class_wheel.html#ad53faf948e58fc27f010263780447505',1,'Wheel']]],
+  ['wheel_5fconfig',['Wheel_Config',['../struct_wheel___config.html',1,'']]],
+  ['wheel_5fradius',['WHEEL_RADIUS',['../actuator_8cpp.html#aaa6f04f6f0d7cf1008a53279acf49f07',1,'actuator.cpp']]],
+  ['wheels_5f',['wheels_',['../class_actuator.html#a8e60b2ff6901acd9e539e29b74d742da',1,'Actuator']]],
+  ['wheels_5finit',['wheels_Init',['../class_actuator.html#a998b08e1a048f6fe0b85c240aa33a498',1,'Actuator']]],
+  ['who_5fam_5fi',['WHO_AM_I',['../mpu6050__reg_8h.html#a9fcb9e460d175bfc7ab4d80bf788b43a',1,'mpu6050_reg.h']]],
+  ['write',['write',['../class_arduino___device.html#aabb55547b2dc749c169aa78d88cdbe29',1,'Arduino_Device']]]
 ];

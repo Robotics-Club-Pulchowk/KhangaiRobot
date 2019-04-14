@@ -1,8 +1,9 @@
 <map id="Robot::get_Instance" name="Robot::get_Instance">
 <area shape="rect" id="node1" title=" " alt="" coords="5,67,144,94"/>
 <area shape="rect" id="node2" href="$class_state___sensor.html#a31cc1d727cc48b82fc9ba46dfd7bea69" title=" " alt="" coords="192,15,375,42"/>
-<area shape="rect" id="node4" href="$class_processor.html#acb789148869306c2a572d16f06abd7d2" title=" " alt="" coords="202,67,365,94"/>
-<area shape="rect" id="node6" href="$class_actuator.html#a5c444f19e2bd03fd38aef75f78f4de82" title=" " alt="" coords="207,118,360,145"/>
+<area shape="rect" id="node5" href="$class_processor.html#acb789148869306c2a572d16f06abd7d2" title=" " alt="" coords="202,67,365,94"/>
+<area shape="rect" id="node7" href="$class_actuator.html#a5c444f19e2bd03fd38aef75f78f4de82" title=" " alt="" coords="207,118,360,145"/>
 <area shape="rect" id="node3" href="$class_position_sensor.html#a409cde1d6bc69641e99c3521b9f40f71" title=" " alt="" coords="423,5,559,47"/>
-<area shape="rect" id="node5" href="$processor_8cpp.html#a9ce21429239a4cc722845e28d0aced8c" title=" " alt="" coords="436,71,545,98"/>
+<area shape="rect" id="node4" href="$class_bound___box.html#a519364f16b158de7524041760fcbc579" title=" " alt="" coords="607,13,777,39"/>
+<area shape="rect" id="node6" href="$processor_8cpp.html#a9ce21429239a4cc722845e28d0aced8c" title=" " alt="" coords="436,71,545,98"/>
 </map>

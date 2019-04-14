@@ -1,21 +1,22 @@
-<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive&#45;Play/Core/Src/parts/devs_config.cpp" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive&#45;Play/Core/Src/parts/devs_config.cpp">
-<area shape="rect" id="node1" title=": All the hardware specific configurations of all devices are done in this file, except for the wheel..." alt="" coords="249,5,437,91"/>
-<area shape="rect" id="node2" href="$devs__config_8h.html" title=" " alt="" coords="293,139,393,165"/>
-<area shape="rect" id="node3" href="$a4988_8h.html" title=" " alt="" coords="20,288,88,315"/>
-<area shape="rect" id="node8" href="$arduino_8h.html" title=" " alt="" coords="719,288,794,315"/>
-<area shape="rect" id="node11" href="$freewheel_8h.html" title=" " alt="" coords="112,288,199,315"/>
-<area shape="rect" id="node12" href="$hmc5883_8h.html" title=" " alt="" coords="193,213,280,240"/>
-<area shape="rect" id="node15" href="$mpu6050_8h.html" title=" " alt="" coords="407,213,493,240"/>
-<area shape="rect" id="node17" href="$encoder_8h.html" title=" " alt="" coords="304,213,383,240"/>
-<area shape="rect" id="node18" href="$lidar_8h.html" title=" " alt="" coords="605,213,663,240"/>
-<area shape="rect" id="node4" href="$tim_8h.html" title=" " alt="" coords="5,363,103,389"/>
-<area shape="rect" id="node7" href="$gpio_8h.html" title=" " alt="" coords="127,363,229,389"/>
-<area shape="rect" id="node5" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="269,437,330,464"/>
-<area shape="rect" id="node6" title=" " alt="" coords="331,512,449,539"/>
-<area shape="rect" id="node9" href="$sensor_8h.html" title=" " alt="" coords="646,363,718,389"/>
-<area shape="rect" id="node10" href="$queue__custom_8h.html" title=" " alt="" coords="561,437,680,464"/>
-<area shape="rect" id="node13" href="$i2c_8h.html" title=" " alt="" coords="274,288,325,315"/>
-<area shape="rect" id="node14" href="$vec3_8h.html" title=" " alt="" coords="361,363,419,389"/>
-<area shape="rect" id="node16" href="$mpu6050__reg_8h.html" title=" " alt="" coords="451,288,561,315"/>
-<area shape="rect" id="node19" href="$vec2_8h.html" title=" " alt="" coords="586,288,645,315"/>
+<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot&#45;Play/Core/Src/parts/devs_config.cpp" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot&#45;Play/Core/Src/parts/devs_config.cpp">
+<area shape="rect" id="node1" title=": All the hardware specific configurations of all devices are done in this file, except for the wheel..." alt="" coords="239,5,475,76"/>
+<area shape="rect" id="node2" href="$devs__config_8h.html" title=" " alt="" coords="307,124,407,151"/>
+<area shape="rect" id="node3" href="$a4988_8h.html" title=" " alt="" coords="29,273,97,300"/>
+<area shape="rect" id="node8" href="$arduino_8h.html" title=" " alt="" coords="729,273,803,300"/>
+<area shape="rect" id="node11" href="$freewheel_8h.html" title=" " alt="" coords="121,273,208,300"/>
+<area shape="rect" id="node12" href="$hmc5883_8h.html" title=" " alt="" coords="207,199,293,225"/>
+<area shape="rect" id="node15" href="$mpu6050_8h.html" title=" " alt="" coords="420,199,507,225"/>
+<area shape="rect" id="node17" href="$encoder_8h.html" title=" " alt="" coords="317,199,396,225"/>
+<area shape="rect" id="node18" href="$lidar_8h.html" title=" " alt="" coords="576,199,633,225"/>
+<area shape="rect" id="node4" href="$tim_8h.html" title=" " alt="" coords="5,348,103,375"/>
+<area shape="rect" id="node7" href="$gpio_8h.html" title=" " alt="" coords="127,348,229,375"/>
+<area shape="rect" id="node5" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="237,423,298,449"/>
+<area shape="rect" id="node6" title=" " alt="" coords="294,497,411,524"/>
+<area shape="rect" id="node9" href="$sensor_8h.html" title=" " alt="" coords="655,348,727,375"/>
+<area shape="rect" id="node10" href="$queue__custom_8h.html" title=" " alt="" coords="548,423,667,449"/>
+<area shape="rect" id="node13" href="$i2c_8h.html" title=" " alt="" coords="233,273,283,300"/>
+<area shape="rect" id="node14" href="$vec3_8h.html" title=" " alt="" coords="323,348,382,375"/>
+<area shape="rect" id="node16" href="$mpu6050__reg_8h.html" title=" " alt="" coords="409,273,520,300"/>
+<area shape="rect" id="node19" href="$vec2_8h.html" title=" " alt="" coords="545,273,603,300"/>
+<area shape="rect" id="node20" title=" " alt="" coords="543,348,605,375"/>
 </map>

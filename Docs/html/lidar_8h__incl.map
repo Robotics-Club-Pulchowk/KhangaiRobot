@@ -1,10 +1,11 @@
-<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive&#45;Play/Core/Inc/parts/sensors/lidar.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive&#45;Play/Core/Inc/parts/sensors/lidar.h">
+<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot&#45;Play/Core/Inc/parts/sensors/lidar.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot&#45;Play/Core/Inc/parts/sensors/lidar.h">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,232,76"/>
 <area shape="rect" id="node2" href="$sensor_8h.html" title=" " alt="" coords="8,199,80,225"/>
 <area shape="rect" id="node3" href="$arduino_8h.html" title=" " alt="" coords="81,124,156,151"/>
 <area shape="rect" id="node6" href="$vec2_8h.html" title=" " alt="" coords="183,124,241,151"/>
-<area shape="rect" id="node4" href="$queue__custom_8h.html" title=" " alt="" coords="57,273,175,300"/>
-<area shape="rect" id="node5" title=" " alt="" coords="155,348,272,375"/>
-<area shape="rect" id="node7" href="$vec3_8h.html" title=" " alt="" coords="184,199,243,225"/>
-<area shape="rect" id="node8" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="251,273,312,300"/>
+<area shape="rect" id="node4" href="$queue__custom_8h.html" title=" " alt="" coords="55,273,174,300"/>
+<area shape="rect" id="node5" title=" " alt="" coords="153,348,271,375"/>
+<area shape="rect" id="node7" href="$vec3_8h.html" title=" " alt="" coords="183,199,241,225"/>
+<area shape="rect" id="node9" title=" " alt="" coords="266,199,329,225"/>
+<area shape="rect" id="node8" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="249,273,311,300"/>
 </map>

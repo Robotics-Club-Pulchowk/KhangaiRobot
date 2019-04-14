@@ -12,5 +12,7 @@ var game__field_8cpp =
     [ "gStateI_Data", "game__field_8cpp.html#ae01e9ac35153f7c484ebe8c711fa2d50", null ],
     [ "gStateJ_Data", "game__field_8cpp.html#a70b696dde3867b8331a88af53a1ac2af", null ],
     [ "gStateK_Data", "game__field_8cpp.html#aab9f6c9122f85aba87530e119be40a61", null ],
-    [ "gStateL_Data", "game__field_8cpp.html#a2d4540f26ea4e90a1d4748b1474fcc8b", null ]
+    [ "gStateL_Data", "game__field_8cpp.html#a2d4540f26ea4e90a1d4748b1474fcc8b", null ],
+    [ "gStateM_Data", "game__field_8cpp.html#ad347fb5264d3ff6209f05b8bc017c459", null ],
+    [ "gStateN_Data", "game__field_8cpp.html#a182d5bf086ecc77190f13b36bea363fe", null ]
 ];

@@ -74,8 +74,6 @@ int Processor::init(uint32_t dt_millis)
         return 0;
 }
 
-static float gFirstHeading = 0;
-
 Vec3<float> Processor::process(Vec3<float> state, Vec3<float> vel_from_base, State_Vars *&robot_state_vars_, uint32_t dt_millis)
 {
         Vec3<float> vel(0, 0, 0);

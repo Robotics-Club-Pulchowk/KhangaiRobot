@@ -1,7 +1,8 @@
 <map id="PositionSensor::init" name="PositionSensor::init">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,140,83"/>
-<area shape="rect" id="node2" href="$devs__config_8h.html#a7a9d8b41fb6b7081d142fe2e84ed8e20" title=" " alt="" coords="188,5,289,32"/>
-<area shape="rect" id="node3" href="$class_encoder.html#a0548c9bae5acec8c70616e1015cdaede" title=" " alt="" coords="191,56,286,83"/>
-<area shape="rect" id="node4" href="$class_lidar.html#a319f70d36bd17592036aa1e92a6e7292" title=" " alt="" coords="201,107,276,133"/>
-<area shape="rect" id="node5" href="$class_arduino___device.html#a32dc6658c68c9190fab562babe1650cf" title=" " alt="" coords="337,107,473,133"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,140,108"/>
+<area shape="rect" id="node2" href="$devs__config_8h.html#a7a9d8b41fb6b7081d142fe2e84ed8e20" title=" " alt="" coords="195,5,296,32"/>
+<area shape="rect" id="node3" href="$class_encoder.html#a0548c9bae5acec8c70616e1015cdaede" title=" " alt="" coords="198,56,293,83"/>
+<area shape="rect" id="node4" href="$class_lidar.html#a319f70d36bd17592036aa1e92a6e7292" title=" " alt="" coords="208,107,283,133"/>
+<area shape="rect" id="node6" href="$class_bound___box.html#a7e46227cd0b4852d0f97fa6fa805c554" title=" " alt="" coords="188,157,303,184"/>
+<area shape="rect" id="node5" href="$class_arduino___device.html#a32dc6658c68c9190fab562babe1650cf" title=" " alt="" coords="351,107,487,133"/>
 </map>

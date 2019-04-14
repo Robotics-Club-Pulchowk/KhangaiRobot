@@ -1,11 +1,11 @@
-<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive&#45;Play/Core/Inc/utils/control/pid_algorithms.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive&#45;Play/Core/Inc/utils/control/pid_algorithms.h">
-<area shape="rect" id="node1" title=" " alt="" coords="394,5,582,91"/>
-<area shape="rect" id="node2" href="$wheel_8h.html" title=" " alt="" coords="253,257,441,328"/>
-<area shape="rect" id="node7" href="$actuator_8cpp.html" title=" " alt="" coords="471,495,687,565"/>
-<area shape="rect" id="node9" href="$pid_8h.html" title=" " alt="" coords="385,139,591,209"/>
-<area shape="rect" id="node3" href="$actuator_8h.html" title=" " alt="" coords="342,376,541,447"/>
-<area shape="rect" id="node4" href="$robot_8h.html" title=" " alt="" coords="123,495,311,565"/>
-<area shape="rect" id="node8" href="$wheel_8cpp.html" title=" " alt="" coords="119,376,318,447"/>
-<area shape="rect" id="node5" href="$robo__tasks_8cpp.html" title=" " alt="" coords="5,613,205,684"/>
-<area shape="rect" id="node6" href="$robot_8cpp.html" title=" " alt="" coords="230,613,429,684"/>
+<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot&#45;Play/Core/Inc/utils/control/pid_algorithms.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot&#45;Play/Core/Inc/utils/control/pid_algorithms.h">
+<area shape="rect" id="node1" title=" " alt="" coords="407,5,616,91"/>
+<area shape="rect" id="node2" href="$wheel_8h.html" title=" " alt="" coords="264,257,473,328"/>
+<area shape="rect" id="node7" href="$actuator_8cpp.html" title=" " alt="" coords="495,495,711,565"/>
+<area shape="rect" id="node9" href="$pid_8h.html" title=" " alt="" coords="407,139,616,209"/>
+<area shape="rect" id="node3" href="$actuator_8h.html" title=" " alt="" coords="356,376,565,447"/>
+<area shape="rect" id="node4" href="$robot_8h.html" title=" " alt="" coords="121,495,331,565"/>
+<area shape="rect" id="node8" href="$wheel_8cpp.html" title=" " alt="" coords="123,376,332,447"/>
+<area shape="rect" id="node5" href="$robo__tasks_8cpp.html" title=" " alt="" coords="5,613,215,684"/>
+<area shape="rect" id="node6" href="$robot_8cpp.html" title=" " alt="" coords="239,613,448,684"/>
 </map>

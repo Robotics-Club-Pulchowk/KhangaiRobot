@@ -1,5 +1,8 @@
 <map id="PositionSensor::add_Sensor" name="PositionSensor::add_Sensor">
-<area shape="rect" id="node1" title=" " alt="" coords="240,27,379,69"/>
-<area shape="rect" id="node2" href="$class_state___sensor.html#a662146502361690701880a3b1b7ae29c" title=" " alt="" coords="5,5,192,32"/>
-<area shape="rect" id="node3" href="$class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c" title=" " alt="" coords="23,57,174,98"/>
+<area shape="rect" id="node1" title=" " alt="" coords="716,27,855,69"/>
+<area shape="rect" id="node2" href="$class_state___sensor.html#a662146502361690701880a3b1b7ae29c" title=" " alt="" coords="481,5,668,32"/>
+<area shape="rect" id="node3" href="$class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c" title=" " alt="" coords="499,57,650,98"/>
+<area shape="rect" id="node4" href="$class_processor.html#a60d0fbfefa0a370badbba6a681626a2d" title=" " alt="" coords="299,64,433,91"/>
+<area shape="rect" id="node5" href="$class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,64,251,91"/>
+<area shape="rect" id="node6" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,64,100,91"/>
 </map>
