@@ -11,6 +11,7 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "joystick.h"
+#include "array.h"
 
 
 extern State_Vars gStateA_Data;
@@ -70,12 +71,14 @@ void Robot::update(uint32_t dt_millis)
         float vy = vels.getY()  / (float)1000.0;
         vels.setX(vx);
         vels.setY(vy);
-        /*/
+        //*/
         // *** Manual Control ***
 
         Field id = robot_state_vars_->id;
         Field manual_fields[] = {
-
+                Field::FIELD_J,
+                Field::FIELD_K,
+                Field::FIELD_L
         };
 
         if (arrIndex(manual_fields, id) != -1) {

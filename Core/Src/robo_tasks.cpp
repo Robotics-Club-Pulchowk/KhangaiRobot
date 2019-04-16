@@ -8,7 +8,6 @@
 #include "cmsis_os.h"
 #include "usb_device.h"
 
-#include "queue.h"
 #include "robot.h"
 
 /* Export Functions Used in C */

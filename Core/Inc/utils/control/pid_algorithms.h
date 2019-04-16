@@ -1,3 +1,11 @@
+/*
+ * pid_algrithms.h
+ * 
+ * Created : 11/10/2018
+ *  Author : n-is
+ *   email : 073bex422.nischal@pcampus.edu.np
+ */
+
 #ifndef _PID_ALGORITHMS_H_
 #define _PID_ALGORITHMS_H_
 

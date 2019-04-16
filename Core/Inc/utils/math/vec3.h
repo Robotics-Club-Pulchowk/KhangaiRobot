@@ -154,6 +154,14 @@ public:
                 return *this;
         }
 
+        // @return true if all the elements is less than tolerance value else false
+        bool is_AbsLess(T tol) {
+                if (abs(x_) <= tol && abs(y_) <= tol && abs(z_) <= tol) {
+                        return true;
+                }
+                return false;
+        }
+
         friend Vec3 operator+(Vec3 lhs, const Vec3 &rhs) {
                 lhs += rhs;
                 return lhs;
