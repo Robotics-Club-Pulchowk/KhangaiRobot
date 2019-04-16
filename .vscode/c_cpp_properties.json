@@ -25,7 +25,12 @@
                                 "C:/Users/n-is/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include",
                                 "C:/Users/n-is/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/CMSIS/Include",
                                 "C:/Users/n-is/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/CMSIS/RTOS/Template",
-                                "C:/Users/n-is/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/Third_Party/FreeRTOS/Source/include"
+                                "C:/Users/n-is/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/Third_Party/FreeRTOS/Source/include",
+
+                                "${workspaceRoot}/Tests",
+                                "${workspaceRoot}/Tests/Src",
+                                "${workspaceRoot}/Tests/Src/Devices",
+                                "${workspaceRoot}/Tests/Src/Math"
                         ],
                         "intelliSenseMode": "msvc-x64"
                 }
