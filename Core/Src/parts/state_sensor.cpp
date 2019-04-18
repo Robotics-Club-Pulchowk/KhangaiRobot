@@ -90,6 +90,7 @@ int State_Sensor::init(uint32_t dt_millis)
         gOmega_Bias = MPU6050_Calc_OmegaBias(&Body_IMU, 1000);
 
         bound_box_->init();
+        bounds_ = 0;
 
         // Initialize variables
         is_first_ori_ = true;
@@ -152,13 +153,13 @@ Vec3<float> State_Sensor::compensate_Bounds(Vec3<float> pos, Vec3<float> ori, co
         if ((int)id >= (int)(Field::FIELD_J)) {
 
                 bound_box_->update();
-                uint8_t bounds = bound_box_->get_Bounds();
+                bounds_ = bound_box_->get_Bounds();
 
-                // printf("%x\n", bounds);
+                printf("%x\t", bounds_);
 
                 if (id == Field::FIELD_J || id == Field::FIELD_L) {
                         //* Look for the robot to touch the fence with face 6
-                        if (bounds & (1 << (int)(Face::_6))) {
+                        if (bounds_ & (1 << (int)(Face::_6))) {
                                 //* Face 6 has touched the fence
                                 pos.setY(8350);
                                 
@@ -173,11 +174,11 @@ Vec3<float> State_Sensor::compensate_Bounds(Vec3<float> pos, Vec3<float> ori, co
 
                 else if (id == Field::FIELD_K) {
                         //* Look for the robot to touch the fence with face 6 & 8
-                        if (bounds & (1 << (int)(Face::_6))) {
+                        if (bounds_ & (1 << (int)(Face::_6))) {
                                 //* Face 6 has touched the fence
                                 pos.setY(8350);
                         }
-                        if (bounds & (1 << (int)(Face::_8))) {
+                        if (bounds_ & (1 << (int)(Face::_8))) {
                                 //* Face 8 has touched the fence
                                 pos.setX(6000);
                         }
@@ -193,7 +194,10 @@ Vec3<float> State_Sensor::compensate_Bounds(Vec3<float> pos, Vec3<float> ori, co
                                 first_ori_ = ori;
                                 pos.setZ(0);
                         }
+                        
                 }
+
+                p_sensor_->update_State(pos);
         }
 
         return pos;
@@ -427,4 +431,9 @@ void State_Sensor::change_Sensors(Field field_id)
                         p_sensor_->remove_Sensor(&gXLidar);
                 }
         }
+}
+
+uint8_t State_Sensor::get_Bounds()
+{
+        return bounds_;
 }

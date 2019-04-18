@@ -131,6 +131,17 @@ Vec2<float> Robo_States::calc_Velocity(Vec3<float> state, Vec3<float> vel_from_b
 {
         Vec2<float> velocity;
 
+        //* Linear spline for field k
+        // Field id = get_ID();
+        // if (id == Field::FIELD_K) {
+        //         float v = calc_RoboVelocity(state, dt_millis);
+        //         float theta = calc_AngleOfAttack(state, v, dt_millis);
+
+        //         velocity.set_Values(v, theta);
+
+        //         return velocity;
+        // }
+
         //** This Part contains minimum accelration implementation.
 
         float ma_polyX[4] = { 0 };
@@ -202,8 +213,23 @@ Vec2<float> Robo_States::calc_Velocity(Vec3<float> state, Vec3<float> vel_from_b
         return velocity;
 }
 
-bool Robo_States::nextStateReached(Vec3<float> state)
+bool Robo_States::nextStateReached(Vec3<float> state, uint8_t bounds)
 {
+        //* Special Case for Field K and L
+        Field id = next_state_->get_ID();
+        if (id == Field::FIELD_K) {
+                if (bounds & 1 << (int)(Face::_6)) {
+                        return true;
+                }
+                return false;
+        }
+        else if (id == Field::FIELD_L) {
+                if ((bounds & (1 << (int)(Face::_6))) && (bounds & (1 << (int)(Face::_8)))) {
+                        return true;
+                }
+                return false;
+
+        }
         // Since the axis of the rectangle are aligned with the axes, we can
         // easily calculate if a point is inside the rectange
         Vec2<float> upper = next_state_->sv_->upper_bounds;
@@ -244,5 +270,3 @@ bool Robo_States::nextStateReached(Vec3<float> state)
 
         return true;
 }
-
-

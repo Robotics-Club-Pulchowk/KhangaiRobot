@@ -63,13 +63,7 @@ void Robot::update(uint32_t dt_millis)
         Vec3<float> vels = cpu_->process(state_, state_from_base_, robot_state_vars_, dt_millis);
 
         state_.print();
-
-        Field id = robot_state_vars_->id;
-
-        if (id == Field::FIELD_J) {
-                printf ("\tField J");
-        }
-        printf("\n");
+        // vels.print();
 
         // This is for correcting units and the inverted co-ordinate system
         float vx = -vels.getX() / (float)1000.0;
@@ -90,6 +84,18 @@ void Robot::update(uint32_t dt_millis)
 
         // ***
         // */
+
+        Field id = robot_state_vars_->id;
+        if (id == Field::FIELD_J) {
+                printf ("\tField J");
+        }
+        else if (id == Field::FIELD_K) {
+                printf ("\tField K");
+        }
+        else if (id == Field::FIELD_L) {
+                printf ("\tField L");
+        }
+        printf("\n");
 
         taskENTER_CRITICAL();
         velocities_ = vels;

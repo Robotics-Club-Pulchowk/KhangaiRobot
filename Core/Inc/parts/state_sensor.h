@@ -36,11 +36,13 @@ public:
         void remove_PSensor(Sensor<float> *sen) { p_sensor_->remove_Sensor(sen); }
 
         void change_Sensors(Field field_id);
+        uint8_t get_Bounds();
 
 private:
         PositionSensor *p_sensor_;
 
         Bound_Box *bound_box_;
+        uint8_t bounds_;
 
         bool is_first_ori_;
         Vec3<float> first_ori_;

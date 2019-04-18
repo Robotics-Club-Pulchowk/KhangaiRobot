@@ -61,6 +61,7 @@ public:
         // Reads the position of the robot from the initial fences
         // using the available Sensors
         Vec3<float> read_Position(Vec3<float> ori, Vec3<float> base_state, const State_Vars *sv, uint32_t dt_millis);
+        void update_State(Vec3<float> state);
 
 private:
         Sensor<float> *p_sensors_[MAX_POSITION_SENSORS];

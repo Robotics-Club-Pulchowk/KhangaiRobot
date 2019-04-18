@@ -171,6 +171,11 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
         return gLastPosition;
 }
 
+void PositionSensor::update_State(Vec3<float> state)
+{
+        gLastPosition = state;
+}
+
 void PositionSensor::process_LidarData(float (&lidar)[2], const State_Vars *sv)
 {
         // Process Lidar Data according to the field the robot is in

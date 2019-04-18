@@ -24,8 +24,8 @@ struct Enc gYEnc;
 
 Arduino_Device gXLidar_Dev(0x02, 2);
 
-const uint32_t gMax_Robo_Velocity = 1000;        // mm/s
-const uint32_t gRated_Robo_Velocity = 100;
+const uint32_t gMax_Robo_Velocity = 400;        // mm/s
+const uint32_t gRated_Robo_Velocity = 40;
 
 
 Encoder gXEncoder(&gXEnc, SensorName::XEncoder);
