@@ -41,7 +41,6 @@ Core/Src/periphs/gpio.c \
 Core/Src/periphs/adc.c \
 Core/Src/periphs/dma.c \
 Core/Src/periphs/i2c.c \
-Core/Src/periphs/spi.c \
 Core/Src/periphs/tim.c \
 Core/Src/periphs/usart.c \
 Core/Src/freertos.c \
@@ -64,7 +63,6 @@ C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx
 C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c \
 C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c \
 C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c \
-C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c \
 C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c \
 C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c \
 C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c \

@@ -62,6 +62,7 @@ public:
         void add_LimitSwitch(GPIO_TypeDef* gpio, uint16_t pin) {
                 gpios_[num_switches_] = gpio;
                 gpio_pins_[num_switches_] = pin;
+                ++num_switches_;
         }
 
         /**
@@ -79,7 +80,7 @@ public:
         void update() {
                 uint8_t switch_val = 0;
                 for (uint8_t i = 0; i < num_switches_; ++i) {
-                        if (HAL_GPIO_ReadPin(gpios_[i], gpio_pins_[i]) == GPIO_PIN_SET) {
+                        if (HAL_GPIO_ReadPin(gpios_[i], gpio_pins_[i]) == GPIO_PIN_RESET) {
                                 switch_val |= (1 << i);
                         }
                 }

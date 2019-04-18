@@ -154,6 +154,8 @@ Vec3<float> State_Sensor::compensate_Bounds(Vec3<float> pos, Vec3<float> ori, co
                 bound_box_->update();
                 uint8_t bounds = bound_box_->get_Bounds();
 
+                // printf("%x\n", bounds);
+
                 if (id == Field::FIELD_J || id == Field::FIELD_L) {
                         //* Look for the robot to touch the fence with face 6
                         if (bounds & (1 << (int)(Face::_6))) {

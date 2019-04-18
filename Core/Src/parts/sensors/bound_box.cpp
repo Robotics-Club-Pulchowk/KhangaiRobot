@@ -41,15 +41,15 @@ int Bound_Box::init()
         // bounds_[4].add_LimitSwitch(GPIOA, GPIO_PIN_0);
 
         //* Limit Switch Assignment for Bound 6
-        // bounds_[5].add_LimitSwitch(GPIOA, GPIO_PIN_0);
-        // bounds_[5].add_LimitSwitch(GPIOA, GPIO_PIN_1);
+        bounds_[5].add_LimitSwitch(FENCE_6A_GPIO_Port, FENCE_6A_Pin);
+        bounds_[5].add_LimitSwitch(FENCE_6B_GPIO_Port, FENCE_6B_Pin);
 
         //* Limit Switch Assignment for Bound 7
-        // bounds_[6].add_LimitSwitch(GPIOA, GPIO_PIN_0);
+        bounds_[6].add_LimitSwitch(FENCE_7_GPIO_Port, FENCE_7_Pin);
 
         //* Limit Switch Assignment for Bound 8
-        // bounds_[7].add_LimitSwitch(GPIOA, GPIO_PIN_0);
-        // bounds_[7].add_LimitSwitch(GPIOA, GPIO_PIN_1);
+        bounds_[7].add_LimitSwitch(FENCE_8A_GPIO_Port, FENCE_8A_Pin);
+        bounds_[7].add_LimitSwitch(FENCE_8B_GPIO_Port, FENCE_8B_Pin);
 
         return 0;
 }
