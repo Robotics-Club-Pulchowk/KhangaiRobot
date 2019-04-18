@@ -42,6 +42,9 @@ struct State_Vars
         float last_limit;
         float ramping_factor;
         float first_limit;
+
+        float max_vel;
+        float rated_vel;
 };
 
 class Robo_States

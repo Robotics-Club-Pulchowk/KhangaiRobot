@@ -62,7 +62,7 @@ void Robot::update(uint32_t dt_millis)
         state_ = sensor_->read_State(state_from_base_,robot_state_vars_, dt_millis);
         Vec3<float> vels = cpu_->process(state_, state_from_base_, robot_state_vars_, dt_millis);
 
-        state_.print();
+        // state_.print();
         // vels.print();
 
         // This is for correcting units and the inverted co-ordinate system
@@ -70,32 +70,22 @@ void Robot::update(uint32_t dt_millis)
         float vy = vels.getY()  / (float)1000.0;
         vels.setX(vx);
         vels.setY(vy);
-        /*/
+        //*/
+        Field id = robot_state_vars_->id;
         // *** Manual Control ***
-        Vec3<float> vels(0,0,0);
-
-        if (!joy_Empty()) {
-                vels = parse_JoyStick();
-                vels = vels.mult_EW(0.4);
-        }
-        else {
-                vels = velocities_.mult_EW(0.8);
+        // Vec3<float> vels(0,0,0);
+        if (id == Field::FIELD_L) {
+                if (!joy_Empty()) {
+                        vels = parse_JoyStick();
+                        vels = vels.mult_EW(0.4);
+                }
+                else {
+                        vels = velocities_.mult_EW(0.8);
+                }
         }
 
         // ***
         // */
-
-        Field id = robot_state_vars_->id;
-        if (id == Field::FIELD_J) {
-                printf ("\tField J");
-        }
-        else if (id == Field::FIELD_K) {
-                printf ("\tField K");
-        }
-        else if (id == Field::FIELD_L) {
-                printf ("\tField L");
-        }
-        printf("\n");
 
         taskENTER_CRITICAL();
         velocities_ = vels;

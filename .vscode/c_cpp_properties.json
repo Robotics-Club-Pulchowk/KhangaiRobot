@@ -28,8 +28,7 @@
 
                                 "${workspaceRoot}/Tests",
                                 "${workspaceRoot}/Tests/Src",
-                                "${workspaceRoot}/Tests/Src/Devices",
-                                "${workspaceRoot}/Tests/Src/Math"
+                                "${workspaceRoot}/Tests/Src/Devices"
                         ],
                         "intelliSenseMode": "msvc-x64"
                 }

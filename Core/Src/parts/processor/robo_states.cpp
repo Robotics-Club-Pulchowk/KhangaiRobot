@@ -53,7 +53,7 @@ float Robo_States::calc_RoboVelocity(Vec3<float> state, uint32_t dt_millis)
 
         // printf("%ld : %d\n", (HAL_GetTick()), (int16_t)(ramped_*1000));
         
-        return ramped_ * (float)(gMax_Robo_Velocity);
+        return ramped_ * (float)(sv_->max_vel);
 }
 
 float Robo_States::quadTheta(Vec3<float> state, float v, uint32_t dt_millis)
@@ -131,14 +131,13 @@ Vec2<float> Robo_States::calc_Velocity(Vec3<float> state, Vec3<float> vel_from_b
 {
         Vec2<float> velocity;
 
-        //* Linear spline for field k
+        //* Use Linear Spline for field J to K
         // Field id = get_ID();
-        // if (id == Field::FIELD_K) {
+        // if (id == Field::FIELD_J) {
         //         float v = calc_RoboVelocity(state, dt_millis);
         //         float theta = calc_AngleOfAttack(state, v, dt_millis);
 
         //         velocity.set_Values(v, theta);
-
         //         return velocity;
         // }
 
@@ -158,7 +157,7 @@ Vec2<float> Robo_States::calc_Velocity(Vec3<float> state, Vec3<float> vel_from_b
         Vec2<float> del = centre - pos;
         Vec2<float> del_polar = del.polar();
 
-        float rated_vel = (float)(gRated_Robo_Velocity);       // m/s
+        float rated_vel = (float)(sv_->rated_vel);       // m/s
         // New total distance to cover
         float dr = del_polar.getX() / 1000.0;   // m
         // Time to cover the new distance
@@ -206,8 +205,8 @@ Vec2<float> Robo_States::calc_Velocity(Vec3<float> state, Vec3<float> vel_from_b
 
         // Clamp the velocity of the robot
         velocity.setX(velocity.getX() * 1000.0);
-        if (velocity.getX() > gMax_Robo_Velocity) {
-                velocity.setX((float)(gMax_Robo_Velocity));
+        if (velocity.getX() > sv_->max_vel) {
+                velocity.setX((float)(sv_->max_vel));
         }
 
         return velocity;

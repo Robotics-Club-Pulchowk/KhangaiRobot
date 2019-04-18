@@ -63,7 +63,7 @@ Processor& Processor::get_Instance(State_Sensor *sen)
         
         init_GameField();
 
-        sRobo_CPU.curr_state_ = &gStateJ;
+        sRobo_CPU.curr_state_ = &gStateA;
         sRobo_CPU.sensor_ = sen;
         
         return sRobo_CPU;

@@ -22,9 +22,9 @@ static Exp_Smooth gYLidarAlpha35(0.35);
 //* Required for changing field
 
 // Starting Y-Position
-float gLast_YEncoderValue = 8700;
+float gLast_YEncoderValue = 400;
 // Starting X-Position
-static float gLast_XEncoderValue = 3500;
+static float gLast_XEncoderValue = 400;
 
 //*
 
