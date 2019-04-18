@@ -138,7 +138,9 @@ Core/Src/utils/logger.cpp \
 Core/Src/sys/error.cpp \
 \
 Core/Src/robo_tasks.cpp \
-Core/Src/main.cpp
+Core/Src/main.cpp \
+\
+Tests/Src/Devices/i2c_tests.cpp
 ##
 #######################################
 # binaries
@@ -197,6 +199,8 @@ AS_INCLUDES =  \
 
 # C includes
 C_INCLUDES =  \
+-ITests/Src \
+\
 -ICore/Inc \
 -ICore/Inc/devs \
 -ICore/Inc/periphs \
