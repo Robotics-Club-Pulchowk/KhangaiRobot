@@ -43,11 +43,9 @@ int Robot::init(uint32_t dt_millis)
 
         int status = (base_status | sensor_status | cpu_status);
 
+        // Start from field A
         robot_state_vars_ = &gStateA_Data;
         velocities_.set_Values(0,0,0);
-
-        // Manual Components Initialization
-        init_JoyStick(&huart2);
 
         initiated_ = true;
 
@@ -60,7 +58,8 @@ void Robot::update(uint32_t dt_millis)
         // *** Automatic Control ***
         //*/
         state_ = sensor_->read_State(state_from_base_,robot_state_vars_, dt_millis);
-        Vec3<float> vels = cpu_->process(state_, state_from_base_, robot_state_vars_, dt_millis);
+
+        Vec3<float> vels = cpu_->control(state_, state_from_base_, robot_state_vars_, dt_millis);
 
         // state_.print();
         // vels.print();
@@ -70,22 +69,6 @@ void Robot::update(uint32_t dt_millis)
         float vy = vels.getY()  / (float)1000.0;
         vels.setX(vx);
         vels.setY(vy);
-        //*/
-        Field id = robot_state_vars_->id;
-        // *** Manual Control ***
-        // Vec3<float> vels(0,0,0);
-        if (id == Field::FIELD_L) {
-                if (!joy_Empty()) {
-                        vels = parse_JoyStick();
-                        vels = vels.mult_EW(0.4);
-                }
-                else {
-                        vels = velocities_.mult_EW(0.8);
-                }
-        }
-
-        // ***
-        // */
 
         taskENTER_CRITICAL();
         velocities_ = vels;

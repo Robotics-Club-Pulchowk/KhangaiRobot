@@ -65,6 +65,9 @@ Processor& Processor::get_Instance(State_Sensor *sen)
 
         sRobo_CPU.curr_state_ = &gStateA;
         sRobo_CPU.sensor_ = sen;
+
+        JoyStick& joy = JoyStick::get_Instance(&huart2);
+        sRobo_CPU.joy_stick_ = &joy;
         
         return sRobo_CPU;
 }
@@ -72,24 +75,28 @@ Processor& Processor::get_Instance(State_Sensor *sen)
 int Processor::init(uint32_t dt_millis)
 {
         sensor_->change_Sensors(curr_state_->get_ID());
+
+        // Manual Components Initialization
+        joy_stick_->init();
+
         return 0;
 }
 
-Vec3<float> Processor::process(Vec3<float> state, Vec3<float> vel_from_base, State_Vars *&robot_state_vars_, uint32_t dt_millis)
+void Processor::process(Vec3<float> state, State_Vars *&robot_state_vars_)
 {
-        Vec3<float> vel(0, 0, 0);
-
-        // This is the second algorithm used for moving the robot.
-        // Algorithm Info:
-        //      1) Minimum Acceleration Trajectory
-        //      2) Smooth Transition
-
         uint8_t bounds = sensor_->get_Bounds();
         if (curr_state_->nextStateReached(state, bounds)) {
                 update_State();
                 sensor_->change_Sensors(curr_state_->get_ID());
         }
-        
+
+        robot_state_vars_ = curr_state_->get_State();
+}
+
+Vec3<float> Processor::auto_control(Vec3<float> state, Vec3<float> vel_from_base, uint32_t dt_millis)
+{
+        Vec3<float> vel;
+
         // Get new velocity for the robot
         Vec2<float> v_polar = curr_state_->calc_Velocity(state, vel_from_base, dt_millis);
         float v = v_polar.getX();
@@ -107,9 +114,40 @@ Vec3<float> Processor::process(Vec3<float> state, Vec3<float> vel_from_base, Sta
         float vy = v*cos(theta - phi);
         float rw = (phi)*0.3;
 
-                vel.set_Values(vx, vy, rw);
+        vel.set_Values(vx, vy, rw);
 
-        robot_state_vars_ = curr_state_->get_State();
+        return vel;
+}
+
+Vec3<float> Processor::manual_control()
+{
+        Vec3<float> vel;
+
+        return vel;
+}
+
+Vec3<float> Processor::control(Vec3<float> state, Vec3<float> vel_from_base, State_Vars *&robot_state_vars_, uint32_t dt_millis)
+{
+        Vec3<float> vel;
+        // This is the second algorithm used for moving the robot.
+        // Algorithm Info:
+        //      1) Minimum Acceleration Trajectory
+        //      2) Smooth Transition
+        process(state_, robot_state_vars_);
+
+        //* Use Automatic Control if joystick data is not available
+        if (joy_stick_->is_Empty()) {
+                vel = auto_control(state, vel_from_base, dt_millis);
+        }
+        else {
+                Field id = robot_state_vars_->id;
+                if (id == Field::FIELD_L) {
+                        vel = manual_control();
+                }
+                else {
+                        vel = auto_control(state, vel_from_base, dt_millis);
+                }
+        }
 
         return vel;
 }
