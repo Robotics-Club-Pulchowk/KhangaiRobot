@@ -116,34 +116,41 @@ Vec3<float> Processor::auto_control(Vec3<float> state, Vec3<float> vel_from_base
 
         vel.set_Values(vx, vy, rw);
 
+        // This is for correcting units and the inverted co-ordinate system
+        vx = -vel.getX() / (float)1000.0;
+        vy = vel.getY()  / (float)1000.0;
+        vel.setX(vx);
+        vel.setY(vy);
+
         return vel;
 }
 
-Vec3<float> Processor::manual_control(Vec3<float> last_vel)
+Vec3<float> Processor::manual_control(JoyStick_Command& joy_cmd)
 {
         Vec3<float> vels;
 
-        JoyStick_Command joy_command;
+        vels = joy_cmd.vels;
+        // Set rw to 0 for testing purpose
+        vels.setZ(0);
 
-        if (!joy_stick_->is_Empty()) {
-                joy_command = joy_stick_->parse();
-                vels = joy_command.vels;
-                // Set rw to 0 for testing purpose
-                vels.setZ(0);
+        uint8_t brake = joy_cmd.brake;
+        float factor = (255.0 - (float)brake)/255.0;
 
-                uint8_t brake = joy_command.brake;
-                float factor = (255.0 - (float)brake)/255.0;
+        if (factor < 0.2) {
+                factor = 0;
+        }
 
-                if (factor < 0.2) {
-                        factor = 0;
-                }
+        vels = vels.mult_EW(factor);
 
-                vels = vels.mult_EW(factor);
-
+        uint8_t accel = joy_cmd.accel;
+        if (accel > 200) {
+                factor = 1;
         }
         else {
-                vels = last_vel.mult_EW(0.8);
+                factor = 0.5;
         }
+
+        vels = vels.mult_EW(factor);
 
         return vels;
 }
@@ -161,19 +168,41 @@ Vec3<float> Processor::control(Vec3<float> state,
         //      2) Smooth Transition
         process(state, robot_state_vars);
 
-        //* Use Manual Control starting from field L
-        Field id = robot_state_vars->id;
-        if (id == Field::FIELD_A) {
-                vels = manual_control(last_vel);
-        }
-        else {
-                vels = auto_control(state, vel_from_base, dt_millis);
+        JoyStick_Command joy_command;
+        bool auto_mode = true;
+        bool manual_mode = false;
+        bool grip_shagai = false;
+        bool reset_pos = false;
 
-                // This is for correcting units and the inverted co-ordinate system
-                float vx = -vels.getX() / (float)1000.0;
-                float vy = vels.getY()  / (float)1000.0;
-                vels.setX(vx);
-                vels.setY(vy);
+        bool just_read = false;
+        
+        if (!joy_stick_->is_Empty()) {
+                joy_command = joy_stick_->parse();
+                just_read = true;
+
+                manual_mode = joy_command.manual_mode;
+                auto_mode = joy_command.auto_mode;
+                
+                grip_shagai = joy_command.grip_shagai;
+                reset_pos = joy_command.reset_pos;
+        }
+
+        Field id = robot_state_vars->id;
+        if (id == Field::FIELD_L) {
+                manual_mode = true;
+                auto_mode = false;
+        }
+
+        if (manual_mode) {
+                if (!just_read) {
+                        vels = last_vel.mult_EW(0.8);
+                }
+                else {
+                        vels = manual_control(joy_command);
+                }
+        }
+        else if (auto_mode) {
+                vels = auto_control(state, vel_from_base, dt_millis);
         }
 
         return vels;

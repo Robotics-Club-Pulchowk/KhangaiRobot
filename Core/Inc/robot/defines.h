@@ -11,9 +11,9 @@
 #define MAX_POSSIBLE_OMEGA	(70)    // Maximum value that may be computed
 
 
-#define _USE_BOARD_LEDS_FOR_JOYSTICK
+// #define _USE_BOARD_LEDS_FOR_JOYSTICK
 
-// #undef _USE_BOARD_LEDS_FOR_ERROR_
+#undef _USE_BOARD_LEDS_FOR_ERROR_
 // #define _USE_mikroBUS_LEDS_FOR_ERROR_
 
 
