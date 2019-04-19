@@ -12,7 +12,7 @@ var class_robo___states =
     [ "get_NextState", "class_robo___states.html#a2b991441c08e4ddef51f6a4683d172ed", null ],
     [ "get_State", "class_robo___states.html#a6e108f35f1785617577788d4d4df2d71", null ],
     [ "linearTheta", "class_robo___states.html#ac94e2950a8c76bf0ddececcc680dc53f", null ],
-    [ "nextStateReached", "class_robo___states.html#aefb2cb8a8757a4638e2ee70892aa293a", null ],
+    [ "nextStateReached", "class_robo___states.html#a29597d9c80e525223e53e9120d3fa2b6", null ],
     [ "operator=", "class_robo___states.html#a2365b4121d7dca3cb536512d750bd9a9", null ],
     [ "operator=", "class_robo___states.html#a035e7a63252a49a4424aafe02cfd14a8", null ],
     [ "quadTheta", "class_robo___states.html#a106e0313039d8e864c71565c2f5a12ec", null ],

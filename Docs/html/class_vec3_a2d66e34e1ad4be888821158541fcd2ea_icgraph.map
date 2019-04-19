@@ -1,9 +1,12 @@
 <map id="Vec3::setX" name="Vec3::setX">
-<area shape="rect" id="node1" title=" " alt="" coords="385,130,471,157"/>
-<area shape="rect" id="node2" href="$class_vec3.html#ae581dad3aa1a885da7538582a3324d3a" title=" " alt="" coords="179,5,306,47"/>
-<area shape="rect" id="node3" href="$hmc5883_8cpp.html#a6449314a8f8fa5ee28206b48b4bd94fb" title=" " alt="" coords="174,71,311,98"/>
-<area shape="rect" id="node4" href="$class_position_sensor.html#a34aa8302e10e702599384f55148160e9" title=" " alt="" coords="171,123,314,164"/>
-<area shape="rect" id="node5" href="$class_position_sensor.html#a3f10e901598d65cd3151fa3f2abbe8ab" title=" " alt="" coords="148,188,337,229"/>
-<area shape="rect" id="node6" href="$class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="191,254,294,281"/>
-<area shape="rect" id="node7" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,254,100,281"/>
+<area shape="rect" id="node1" title=" " alt="" coords="709,122,795,149"/>
+<area shape="rect" id="node2" href="$class_vec3.html#ae581dad3aa1a885da7538582a3324d3a" title=" " alt="" coords="508,5,635,47"/>
+<area shape="rect" id="node3" href="$hmc5883_8cpp.html#a6449314a8f8fa5ee28206b48b4bd94fb" title=" " alt="" coords="503,71,640,98"/>
+<area shape="rect" id="node4" href="$class_processor.html#ad8a55cdfd1d1f42c3bd454a21ef0eb4d" title=" " alt="" coords="491,122,651,149"/>
+<area shape="rect" id="node8" href="$class_position_sensor.html#a34aa8302e10e702599384f55148160e9" title=" " alt="" coords="500,173,643,215"/>
+<area shape="rect" id="node10" href="$class_state___sensor.html#a4b667f79982e6b1bc40c78093bb9d285" title=" " alt="" coords="481,239,661,280"/>
+<area shape="rect" id="node5" href="$class_processor.html#a08eb6304c0993769d125cc8186cb51ac" title=" " alt="" coords="302,122,430,149"/>
+<area shape="rect" id="node6" href="$class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,151,251,178"/>
+<area shape="rect" id="node7" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,151,100,178"/>
+<area shape="rect" id="node9" href="$class_state___sensor.html#a79118858b21e47b7e6e509dfba5b06f8" title="Function that provides the state of the robot." alt="" coords="299,173,433,215"/>
 </map>

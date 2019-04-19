@@ -46,7 +46,6 @@ var searchData=
   ['henc',['henc',['../struct_wheel___config.html#a8819b7285f09381ebfd1c9baf70938ee',1,'Wheel_Config']]],
   ['hi2c',['hi2c',['../struct_h_m_c5883.html#a71d376bab0252d728f26b8d1be748438',1,'HMC5883::hi2c()'],['../struct_m_p_u6050.html#aa133576cdb5e081dfe9b0d1c3d168b31',1,'MPU6050::hi2c()']]],
   ['hi2c1',['hi2c1',['../i2c_8h.html#af7b2c26e44dadaaa798a5c3d82914ba7',1,'hi2c1():&#160;i2c.c'],['../i2c_8c.html#af7b2c26e44dadaaa798a5c3d82914ba7',1,'hi2c1():&#160;i2c.c']]],
-  ['hi2c2',['hi2c2',['../i2c_8h.html#ac379bcc152d860f08b1279fd3e232295',1,'hi2c2():&#160;i2c.c'],['../i2c_8c.html#ac379bcc152d860f08b1279fd3e232295',1,'hi2c2():&#160;i2c.c']]],
   ['hmc5883',['HMC5883',['../struct_h_m_c5883.html',1,'']]],
   ['hmc5883_2ecpp',['hmc5883.cpp',['../hmc5883_8cpp.html',1,'']]],
   ['hmc5883_2eh',['hmc5883.h',['../hmc5883_8h.html',1,'']]],
@@ -66,8 +65,9 @@ var searchData=
   ['htim5',['htim5',['../stm32f4xx__hal__timebase__tim_8c.html#acefaeaaa3856ddddae7083b2d220fe4b',1,'htim5():&#160;stm32f4xx_hal_timebase_tim.c'],['../stm32f4xx__it_8c.html#acefaeaaa3856ddddae7083b2d220fe4b',1,'htim5():&#160;stm32f4xx_hal_timebase_tim.c']]],
   ['htim8',['htim8',['../tim_8h.html#a5faa27108379f799afb6984010bf0384',1,'htim8():&#160;tim.c'],['../tim_8c.html#a5faa27108379f799afb6984010bf0384',1,'htim8():&#160;tim.c']]],
   ['htim9',['htim9',['../tim_8h.html#a31f6f787777409af5ed0d131b52b7988',1,'htim9():&#160;tim.c'],['../tim_8c.html#a31f6f787777409af5ed0d131b52b7988',1,'htim9():&#160;tim.c']]],
-  ['huart',['huart',['../struct_joy_stick.html#a23da0a1af8196690470ee0a0b5d88783',1,'JoyStick']]],
+  ['huart',['huart',['../struct_joy_stick___handle.html#a1d902e73eb2caf7254c4b39789b0b36d',1,'JoyStick_Handle']]],
   ['huart2',['huart2',['../usart_8h.html#aa9479c261d65eecedd3d9582f7f0f89c',1,'huart2():&#160;usart.c'],['../usart_8c.html#aa9479c261d65eecedd3d9582f7f0f89c',1,'huart2():&#160;usart.c']]],
   ['huart3',['huart3',['../usart_8h.html#ab7c63c1b0f65db92b6a4ea19edf957e1',1,'huart3():&#160;usart.c'],['../usart_8c.html#ab7c63c1b0f65db92b6a4ea19edf957e1',1,'huart3():&#160;usart.c'],['../stm32f4xx__it_8c.html#ab7c63c1b0f65db92b6a4ea19edf957e1',1,'huart3():&#160;usart.c']]],
-  ['huart4',['huart4',['../usart_8h.html#ae273feb3e0dc44e38892650faa58fced',1,'huart4():&#160;usart.c'],['../usart_8c.html#ae273feb3e0dc44e38892650faa58fced',1,'huart4():&#160;usart.c']]]
+  ['huart4',['huart4',['../usart_8h.html#ae273feb3e0dc44e38892650faa58fced',1,'huart4():&#160;usart.c'],['../usart_8c.html#ae273feb3e0dc44e38892650faa58fced',1,'huart4():&#160;usart.c']]],
+  ['huart_5f',['huart_',['../class_joy_stick.html#a86f1e28c8921dd0c15dfbf2acd61638d',1,'JoyStick']]]
 ];

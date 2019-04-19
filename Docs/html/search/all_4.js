@@ -1,7 +1,7 @@
 var searchData=
 [
   ['d_5f',['d_',['../class_p_i_d___algorithm.html#a30ae77c089ff5638d5b3e8203add778d',1,'PID_Algorithm']]],
-  ['data',['data',['../struct_joy_stick.html#a9d5a8d3cd44f7ba74519dd89620cac82',1,'JoyStick']]],
+  ['data',['data',['../struct_joy_stick___handle.html#a91dab1d32a095eb6fbf6e38b3105e293',1,'JoyStick_Handle']]],
   ['data_5fcache_5fenable',['DATA_CACHE_ENABLE',['../stm32f4xx__hal__conf_8h.html#a5b4c32a40cf49b06c0d761e385949a6b',1,'stm32f4xx_hal_conf.h']]],
   ['debugmon_5fhandler',['DebugMon_Handler',['../stm32f4xx__it_8h.html#adbdfb05858cc36fc520974df37ec3cb0',1,'DebugMon_Handler(void):&#160;stm32f4xx_it.c'],['../stm32f4xx__it_8c.html#adbdfb05858cc36fc520974df37ec3cb0',1,'DebugMon_Handler(void):&#160;stm32f4xx_it.c']]],
   ['defaulttaskbuffer',['defaultTaskBuffer',['../freertos_8c.html#a2e15b71e81b60cddde066649a25ec45b',1,'freertos.c']]],

@@ -1,6 +1,7 @@
 var searchData=
 [
   ['main',['main',['../main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe',1,'main.cpp']]],
+  ['manual_5fcontrol',['manual_control',['../class_processor.html#a9d08a8c82a543d7501090c96f821c3b4',1,'Processor']]],
   ['mat',['Mat',['../class_mat.html#a7205342eec3270c1aa954f35d8af27c7',1,'Mat::Mat()'],['../class_mat.html#af844a885aedf39d90ad27b2f34333791',1,'Mat::Mat(const float(&amp;mat)[M][N])'],['../class_mat.html#a591f4755584ae81e04f14e8f780a05f8',1,'Mat::Mat(uint8_t rows, uint8_t columns)'],['../class_mat.html#a560a2b152f0b4c7389058c23668da819',1,'Mat::Mat(Mat &amp;&amp;)=default'],['../class_mat.html#a1e30e252a1e556ac5e131edac7b08a23',1,'Mat::Mat(const Mat &amp;m)']]],
   ['memmanage_5fhandler',['MemManage_Handler',['../stm32f4xx__it_8h.html#a3150f74512510287a942624aa9b44cc5',1,'MemManage_Handler(void):&#160;stm32f4xx_it.c'],['../stm32f4xx__it_8c.html#a3150f74512510287a942624aa9b44cc5',1,'MemManage_Handler(void):&#160;stm32f4xx_it.c']]],
   ['min_5faccel',['min_accel',['../min__accel_8h.html#aa220a3a494712e400d345da12382a22c',1,'min_accel(float(&amp;poly)[4], Vec2&lt; float &gt; pos, Vec2&lt; float &gt; vel, float Tp):&#160;min_accel.cpp'],['../min__accel_8cpp.html#aa220a3a494712e400d345da12382a22c',1,'min_accel(float(&amp;poly)[4], Vec2&lt; float &gt; pos, Vec2&lt; float &gt; vel, float Tp):&#160;min_accel.cpp']]],
@@ -23,7 +24,6 @@ var searchData=
   ['mx_5ffreertos_5finit',['MX_FREERTOS_Init',['../freertos_8c.html#abade755e13d07c10889ae83143656158',1,'MX_FREERTOS_Init(void):&#160;freertos.c'],['../main_8cpp.html#abade755e13d07c10889ae83143656158',1,'MX_FREERTOS_Init(void):&#160;freertos.c']]],
   ['mx_5fgpio_5finit',['MX_GPIO_Init',['../gpio_8h.html#ac724e431d2af879252de35615be2bdea',1,'MX_GPIO_Init(void):&#160;gpio.c'],['../gpio_8c.html#ac724e431d2af879252de35615be2bdea',1,'MX_GPIO_Init(void):&#160;gpio.c']]],
   ['mx_5fi2c1_5finit',['MX_I2C1_Init',['../i2c_8h.html#ada6e763cfa4108a8d24cd27b75f2f489',1,'MX_I2C1_Init(void):&#160;i2c.c'],['../i2c_8c.html#ada6e763cfa4108a8d24cd27b75f2f489',1,'MX_I2C1_Init(void):&#160;i2c.c']]],
-  ['mx_5fi2c2_5finit',['MX_I2C2_Init',['../i2c_8h.html#a021114cd02d4beb0b256095cfbd088b2',1,'MX_I2C2_Init(void):&#160;i2c.c'],['../i2c_8c.html#a021114cd02d4beb0b256095cfbd088b2',1,'MX_I2C2_Init(void):&#160;i2c.c']]],
   ['mx_5fspi2_5finit',['MX_SPI2_Init',['../spi_8h.html#aea85daa666c03d85fd59edef711ebb08',1,'MX_SPI2_Init(void):&#160;spi.c'],['../spi_8c.html#aea85daa666c03d85fd59edef711ebb08',1,'MX_SPI2_Init(void):&#160;spi.c']]],
   ['mx_5ftim1_5finit',['MX_TIM1_Init',['../tim_8h.html#ad1f9d42690163f73f73e5b820c81ca14',1,'MX_TIM1_Init(void):&#160;tim.c'],['../tim_8c.html#ad1f9d42690163f73f73e5b820c81ca14',1,'MX_TIM1_Init(void):&#160;tim.c']]],
   ['mx_5ftim2_5finit',['MX_TIM2_Init',['../tim_8h.html#a4b8ff887fd3fdf26605e35927e4ff202',1,'MX_TIM2_Init(void):&#160;tim.c'],['../tim_8c.html#a4b8ff887fd3fdf26605e35927e4ff202',1,'MX_TIM2_Init(void):&#160;tim.c']]],

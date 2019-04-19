@@ -1,5 +1,9 @@
 <map id="Vec3::mult_EW" name="Vec3::mult_EW">
-<area shape="rect" id="node1" title=" " alt="" coords="376,5,491,32"/>
-<area shape="rect" id="node2" href="$class_actuator.html#a12789faf0215436ece13fb1608111f34" title=" " alt="" coords="215,5,328,32"/>
-<area shape="rect" id="node3" href="$class_robot.html#a38036a2ef73f7b1af6c5d6269e03a5f8" title=" " alt="" coords="5,5,167,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="733,56,848,83"/>
+<area shape="rect" id="node2" href="$class_actuator.html#a12789faf0215436ece13fb1608111f34" title=" " alt="" coords="540,5,653,32"/>
+<area shape="rect" id="node4" href="$class_processor.html#a9d08a8c82a543d7501090c96f821c3b4" title=" " alt="" coords="508,56,685,83"/>
+<area shape="rect" id="node5" href="$class_processor.html#a08eb6304c0993769d125cc8186cb51ac" title=" " alt="" coords="315,81,443,108"/>
+<area shape="rect" id="node3" href="$class_robot.html#a38036a2ef73f7b1af6c5d6269e03a5f8" title=" " alt="" coords="299,5,460,32"/>
+<area shape="rect" id="node6" href="$class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,81,251,108"/>
+<area shape="rect" id="node7" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,81,100,108"/>
 </map>

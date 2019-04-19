@@ -10,7 +10,7 @@ var searchData=
   ['encoder_2ecpp',['encoder.cpp',['../encoder_8cpp.html',1,'']]],
   ['encoder_2eh',['encoder.h',['../encoder_8h.html',1,'']]],
   ['encoders_5finit',['Encoders_Init',['../devs__config_8h.html#a7a9d8b41fb6b7081d142fe2e84ed8e20',1,'Encoders_Init():&#160;devs_config.cpp'],['../devs__config_8cpp.html#a7a9d8b41fb6b7081d142fe2e84ed8e20',1,'Encoders_Init():&#160;devs_config.cpp']]],
-  ['error',['error',['../error_8h.html#ab5744f81944e2a834ef96ae10f8ae166',1,'error(Error err):&#160;error.cpp'],['../error_8cpp.html#ab5744f81944e2a834ef96ae10f8ae166',1,'error(Error err):&#160;error.cpp'],['../error_8h.html#a2c3e4bb40f36b262a5214e2da2bca9c5',1,'Error():&#160;error.h']]],
+  ['error',['Error',['../error_8h.html#a2c3e4bb40f36b262a5214e2da2bca9c5',1,'Error():&#160;error.h'],['../error_8h.html#ab5744f81944e2a834ef96ae10f8ae166',1,'error(Error err):&#160;error.cpp'],['../error_8cpp.html#ab5744f81944e2a834ef96ae10f8ae166',1,'error(Error err):&#160;error.cpp']]],
   ['error_2ecpp',['error.cpp',['../error_8cpp.html',1,'']]],
   ['error_2eh',['error.h',['../error_8h.html',1,'']]],
   ['error_5fhandler',['Error_Handler',['../main_8h.html#a1730ffe1e560465665eb47d9264826f9',1,'Error_Handler(void):&#160;main.cpp'],['../main_8cpp.html#a1730ffe1e560465665eb47d9264826f9',1,'Error_Handler(void):&#160;main.cpp']]],

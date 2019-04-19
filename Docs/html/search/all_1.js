@@ -7,6 +7,7 @@ var searchData=
   ['a4988_5fstep',['A4988_step',['../a4988_8h.html#a0df4f2b1a0266368873650147f0ae31b',1,'A4988_step(A4988 *stepper):&#160;a4988.cpp'],['../a4988_8cpp.html#a37bd9536ea107833fe3ddb1284b22c8e',1,'A4988_step(struct A4988 *stepper):&#160;a4988.cpp']]],
   ['a4988_5ftoggledirection',['A4988_toggleDirection',['../a4988_8h.html#ac5ae016c9713791c67d8053280f4db9b',1,'A4988_toggleDirection(A4988 *stepper):&#160;a4988.cpp'],['../a4988_8cpp.html#a5d87b395c4941aabb8d97409d82653c2',1,'A4988_toggleDirection(struct A4988 *stepper):&#160;a4988.cpp']]],
   ['a_5fscale',['a_scale',['../struct_m_p_u6050.html#ade2780c9d3540e41162e5441349c43cc',1,'MPU6050']]],
+  ['accel',['accel',['../struct_joy_stick___command.html#a260df7e17ba4772e34cb11ad8c330239',1,'JoyStick_Command']]],
   ['accel_5fconfig',['ACCEL_CONFIG',['../mpu6050__reg_8h.html#ab7336e26f8947086e41a375f1e1e74d4',1,'mpu6050_reg.h']]],
   ['accel_5fscale',['Accel_Scale',['../mpu6050_8h.html#ab2aa80c677de9888d409d544ddb4e7a6',1,'mpu6050.h']]],
   ['accel_5fxout_5fh',['ACCEL_XOUT_H',['../mpu6050__reg_8h.html#a94b93aa4aabbe7caec7884ddb46b531b',1,'mpu6050_reg.h']]],
@@ -53,5 +54,8 @@ var searchData=
   ['assert_5ffailed',['assert_failed',['../stm32f4xx__hal__conf_8h.html#a2532ff72b1a2ff82f65e8c2a5a4dde00',1,'stm32f4xx_hal_conf.h']]],
   ['assert_5fparam',['assert_param',['../stm32f4xx__hal__conf_8h.html#a631dea7b230e600555f979c62af1de21',1,'stm32f4xx_hal_conf.h']]],
   ['at',['at',['../class_mat.html#a5f4b8f7e3c55a1caf7161c11ec2a2465',1,'Mat']]],
+  ['auto_5fcontrol',['auto_control',['../class_processor.html#ad8a55cdfd1d1f42c3bd454a21ef0eb4d',1,'Processor']]],
+  ['auto_5fkey',['AUTO_KEY',['../joystick_8h.html#a503c4d82732d03045bb2c67c0bcaf7df',1,'joystick.h']]],
+  ['auto_5fmode',['auto_mode',['../struct_joy_stick___command.html#a1ffa87f91ae09f9afd85f6c102bcdb3b',1,'JoyStick_Command']]],
   ['available',['available',['../class_arduino___device.html#a7b53022501a9aa62c05e559147ab3242',1,'Arduino_Device::available()'],['../class_encoder.html#aa11f19e9aa29ea271778078f20da8acf',1,'Encoder::available()'],['../class_lidar.html#ac6a415ffd47412ba8124b8d851587958',1,'Lidar::available()'],['../class_sensor.html#acacdc9e904fd7ba1b3fe1c4df6638603',1,'Sensor::available()']]]
 ];

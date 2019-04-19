@@ -105,19 +105,21 @@ Collaboration diagram for Processor:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_processor__coll__graph.png" border="0" usemap="#_processor_coll__map" alt="Collaboration graph"/></div>
 <map name="_processor_coll__map" id="_processor_coll__map">
-<area shape="rect"  title=" " alt="" coords="137,601,219,628"/>
-<area shape="rect"  href="class_vec3.html" title=" " alt="" coords="5,512,105,539"/>
-<area shape="rect"  href="class_robo___states.html" title=" " alt="" coords="129,512,227,539"/>
-<area shape="rect"  href="struct_state___vars.html" title=" " alt="" coords="131,423,217,449"/>
-<area shape="rect"  href="class_vec2.html" title=" " alt="" coords="116,304,216,331"/>
-<area shape="rect"  href="class_state___sensor.html" title=" " alt="" coords="349,512,450,539"/>
-<area shape="rect"  href="class_position_sensor.html" title=" " alt="" coords="347,423,457,449"/>
-<area shape="rect"  href="class_sensor.html" title=" " alt="" coords="240,304,351,331"/>
-<area shape="rect"  href="class_kalman___filter.html" title=" " alt="" coords="375,304,477,331"/>
-<area shape="rect"  href="struct_kalman___vars.html" title=" " alt="" coords="376,199,476,225"/>
-<area shape="rect"  href="class_mat.html" title=" " alt="" coords="343,5,387,32"/>
-<area shape="rect"  href="class_bound___box.html" title=" " alt="" coords="501,304,591,331"/>
-<area shape="rect"  href="class_bound.html" title=" " alt="" coords="501,199,591,225"/>
+<area shape="rect"  title=" " alt="" coords="141,601,223,628"/>
+<area shape="rect"  href="class_vec3.html" title=" " alt="" coords="41,304,141,331"/>
+<area shape="rect"  href="struct_joy_stick___command.html" title=" " alt="" coords="22,423,161,449"/>
+<area shape="rect"  href="class_state___sensor.html" title=" " alt="" coords="199,512,301,539"/>
+<area shape="rect"  href="class_joy_stick.html" title=" " alt="" coords="81,512,153,539"/>
+<area shape="rect"  href="class_robo___states.html" title=" " alt="" coords="457,512,555,539"/>
+<area shape="rect"  href="struct_state___vars.html" title=" " alt="" coords="592,423,679,449"/>
+<area shape="rect"  href="class_vec2.html" title=" " alt="" coords="623,304,723,331"/>
+<area shape="rect"  href="class_bound___box.html" title=" " alt="" coords="287,423,376,449"/>
+<area shape="rect"  href="class_bound.html" title=" " alt="" coords="246,304,337,331"/>
+<area shape="rect"  href="class_position_sensor.html" title=" " alt="" coords="400,423,511,449"/>
+<area shape="rect"  href="class_sensor.html" title=" " alt="" coords="361,304,472,331"/>
+<area shape="rect"  href="class_kalman___filter.html" title=" " alt="" coords="496,304,599,331"/>
+<area shape="rect"  href="struct_kalman___vars.html" title=" " alt="" coords="572,199,672,225"/>
+<area shape="rect"  href="class_mat.html" title=" " alt="" coords="539,5,583,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -135,8 +137,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acf37952c5b420d4e903a512571678692"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3e919f3aa7b2e7968815d2e056e4067"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processor.html#ab3e919f3aa7b2e7968815d2e056e4067">init</a> (uint32_t dt_millis)</td></tr>
 <tr class="separator:ab3e919f3aa7b2e7968815d2e056e4067"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60d0fbfefa0a370badbba6a681626a2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processor.html#a60d0fbfefa0a370badbba6a681626a2d">process</a> (<a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; state, <a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; vel_from_base, <a class="el" href="struct_state___vars.html">State_Vars</a> *&amp;robot_state_vars_, uint32_t dt_millis)</td></tr>
-<tr class="separator:a60d0fbfefa0a370badbba6a681626a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08eb6304c0993769d125cc8186cb51ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processor.html#a08eb6304c0993769d125cc8186cb51ac">control</a> (<a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; state, <a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; vel_from_base, <a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; last_vel, <a class="el" href="struct_state___vars.html">State_Vars</a> *&amp;robot_state_vars, uint32_t dt_millis)</td></tr>
+<tr class="separator:a08eb6304c0993769d125cc8186cb51ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -147,6 +149,12 @@ Static Public Member Functions</h2></td></tr>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a50c89dbf76a073f4fb491628258cf292"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processor.html#a50c89dbf76a073f4fb491628258cf292">Processor</a> ()</td></tr>
 <tr class="separator:a50c89dbf76a073f4fb491628258cf292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e529fa62420f020ef760f4a6259ed1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processor.html#a1e529fa62420f020ef760f4a6259ed1e">process</a> (<a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; state, <a class="el" href="struct_state___vars.html">State_Vars</a> *&amp;robot_state_vars_)</td></tr>
+<tr class="separator:a1e529fa62420f020ef760f4a6259ed1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8a55cdfd1d1f42c3bd454a21ef0eb4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processor.html#ad8a55cdfd1d1f42c3bd454a21ef0eb4d">auto_control</a> (<a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; state, <a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; vel_from_base, uint32_t dt_millis)</td></tr>
+<tr class="separator:ad8a55cdfd1d1f42c3bd454a21ef0eb4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d08a8c82a543d7501090c96f821c3b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processor.html#a9d08a8c82a543d7501090c96f821c3b4">manual_control</a> (<a class="el" href="struct_joy_stick___command.html">JoyStick_Command</a> &amp;joy_cmd)</td></tr>
+<tr class="separator:a9d08a8c82a543d7501090c96f821c3b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b7eaf28eed6010ec0224175d713b763"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processor.html#a0b7eaf28eed6010ec0224175d713b763">update_State</a> ()</td></tr>
 <tr class="separator:a0b7eaf28eed6010ec0224175d713b763"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -156,6 +164,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ae53285851bf9d20176051a7aa4847ee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99698604b1ee049310f492fc353ba527"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_state___sensor.html">State_Sensor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processor.html#a99698604b1ee049310f492fc353ba527">sensor_</a></td></tr>
 <tr class="separator:a99698604b1ee049310f492fc353ba527"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1fcd3b1d133474e92d19090e64864b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_joy_stick.html">JoyStick</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processor.html#aa1fcd3b1d133474e92d19090e64864b3">joy_stick_</a></td></tr>
+<tr class="separator:aa1fcd3b1d133474e92d19090e64864b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac95bb9fe0c2cf17528bad9816613881d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processor.html#ac95bb9fe0c2cf17528bad9816613881d">is_first_</a></td></tr>
 <tr class="separator:ac95bb9fe0c2cf17528bad9816613881d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40ccd5435b8e24a550a4dbf77a6a17af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_processor.html#a40ccd5435b8e24a550a4dbf77a6a17af">first_state_</a></td></tr>
@@ -265,6 +275,179 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad8a55cdfd1d1f42c3bd454a21ef0eb4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8a55cdfd1d1f42c3bd454a21ef0eb4d">&#9670;&nbsp;</a></span>auto_control()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; Processor::auto_control </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>vel_from_base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>dt_millis</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processor_ad8a55cdfd1d1f42c3bd454a21ef0eb4d_cgraph.png" border="0" usemap="#class_processor_ad8a55cdfd1d1f42c3bd454a21ef0eb4d_cgraph" alt=""/></div>
+<map name="class_processor_ad8a55cdfd1d1f42c3bd454a21ef0eb4d_cgraph" id="class_processor_ad8a55cdfd1d1f42c3bd454a21ef0eb4d_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,537,165,564"/>
+<area shape="rect"  href="class_robo___states.html#a265781f9c854d4fc1c959f7b26ca39cc" title=" " alt="" coords="213,284,396,311"/>
+<area shape="rect"  href="class_vec3.html#ad259e243f6678730d990acbae2cdff57" title=" " alt="" coords="464,31,549,57"/>
+<area shape="rect"  href="class_vec2.html#ab9c6aa483fc884d65a0f50a6426dce04" title=" " alt="" coords="618,81,703,108"/>
+<area shape="rect"  href="class_vec2.html#ab34c86af20c627cd5ed0e1a973a43fa3" title=" " alt="" coords="617,385,704,412"/>
+<area shape="rect"  href="class_vec3.html#a8eeb16262b7e619f081a1ba94df098f8" title=" " alt="" coords="463,487,550,513"/>
+<area shape="rect"  href="class_vec3.html#a52f0db1c387aa9bc7befe5792b698553" title=" " alt="" coords="262,588,347,615"/>
+<area shape="rect"  href="class_vec3.html#ae581dad3aa1a885da7538582a3324d3a" title=" " alt="" coords="242,639,367,665"/>
+<area shape="rect"  href="class_vec3.html#a2d66e34e1ad4be888821158541fcd2ea" title=" " alt="" coords="262,689,347,716"/>
+<area shape="rect"  href="class_vec3.html#a4dadb34f7d48268a101914b7a4771e68" title=" " alt="" coords="261,740,348,767"/>
+<area shape="rect"  href="class_vec2.html#a0ab61d333f91ee0c26a8cdf094fd5c4f" title=" " alt="" coords="463,436,551,463"/>
+<area shape="rect"  href="min__accel_8h.html#aa220a3a494712e400d345da12382a22c" title=" " alt="" coords="466,284,547,311"/>
+<area shape="rect"  href="calculus_8h.html#a679e4fd5ff87eefcbe0e9e50c8ea98ee" title=" " alt="" coords="475,132,539,159"/>
+<area shape="rect"  href="polynomial_8h.html#aaff274ab280f485fd3e4feef1aa88ef7" title=" " alt="" coords="476,183,537,209"/>
+<area shape="rect"  href="class_vec2.html#a238a918f6d2695dd187a9778982a1769" title=" " alt="" coords="444,233,569,260"/>
+<area shape="rect"  href="class_vec2.html#aec2b21ff78bf3a2e20a044e1ab7d4b53" title=" " alt="" coords="464,335,549,361"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processor_ad8a55cdfd1d1f42c3bd454a21ef0eb4d_icgraph.png" border="0" usemap="#class_processor_ad8a55cdfd1d1f42c3bd454a21ef0eb4d_icgraph" alt=""/></div>
+<map name="class_processor_ad8a55cdfd1d1f42c3bd454a21ef0eb4d_icgraph" id="class_processor_ad8a55cdfd1d1f42c3bd454a21ef0eb4d_icgraph">
+<area shape="rect"  title=" " alt="" coords="475,5,635,32"/>
+<area shape="rect"  href="class_processor.html#a08eb6304c0993769d125cc8186cb51ac" title=" " alt="" coords="299,5,427,32"/>
+<area shape="rect"  href="class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,5,251,32"/>
+<area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,5,100,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a08eb6304c0993769d125cc8186cb51ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08eb6304c0993769d125cc8186cb51ac">&#9670;&nbsp;</a></span>control()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; Processor::control </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>vel_from_base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>last_vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_state___vars.html">State_Vars</a> *&amp;&#160;</td>
+          <td class="paramname"><em>robot_state_vars</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>dt_millis</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processor_a08eb6304c0993769d125cc8186cb51ac_cgraph.png" border="0" usemap="#class_processor_a08eb6304c0993769d125cc8186cb51ac_cgraph" alt=""/></div>
+<map name="class_processor_a08eb6304c0993769d125cc8186cb51ac_cgraph" id="class_processor_a08eb6304c0993769d125cc8186cb51ac_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,1035,133,1062"/>
+<area shape="rect"  href="class_processor.html#a1e529fa62420f020ef760f4a6259ed1e" title=" " alt="" coords="203,187,337,214"/>
+<area shape="rect"  href="class_joy_stick.html#a67a598be23225afa905e9c35b21da1bc" title=" " alt="" coords="693,1035,828,1062"/>
+<area shape="rect"  href="class_joy_stick.html#a075c3653c4d71c13b7d03a73119c4828" title=" " alt="" coords="214,1061,326,1087"/>
+<area shape="rect"  href="class_vec3.html#a987916221fa68ba597397f51d5cf51b0" title=" " alt="" coords="455,1162,570,1189"/>
+<area shape="rect"  href="class_processor.html#a9d08a8c82a543d7501090c96f821c3b4" title=" " alt="" coords="181,1162,359,1189"/>
+<area shape="rect"  href="class_processor.html#ad8a55cdfd1d1f42c3bd454a21ef0eb4d" title=" " alt="" coords="190,599,350,626"/>
+<area shape="rect"  href="class_state___sensor.html#a2578ecaea1eb7a08f685c1652a82675c" title=" " alt="" coords="423,19,602,46"/>
+<area shape="rect"  href="class_robo___states.html#a29597d9c80e525223e53e9120d3fa2b6" title=" " alt="" coords="407,365,619,391"/>
+<area shape="rect"  href="class_robo___states.html#a52979a290d5b8010c6478d76db4f167a" title=" " alt="" coords="689,213,832,239"/>
+<area shape="rect"  href="class_processor.html#a0b7eaf28eed6010ec0224175d713b763" title=" " alt="" coords="429,137,596,163"/>
+<area shape="rect"  href="class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c" title=" " alt="" coords="437,71,588,112"/>
+<area shape="rect"  href="class_robo___states.html#a6e108f35f1785617577788d4d4df2d71" title=" " alt="" coords="432,238,593,265"/>
+<area shape="rect"  href="class_vec2.html#ab9c6aa483fc884d65a0f50a6426dce04" title=" " alt="" coords="903,655,989,682"/>
+<area shape="rect"  href="class_vec2.html#ab34c86af20c627cd5ed0e1a973a43fa3" title=" " alt="" coords="903,427,989,454"/>
+<area shape="rect"  href="class_vec3.html#ad259e243f6678730d990acbae2cdff57" title=" " alt="" coords="718,427,803,454"/>
+<area shape="rect"  href="class_vec3.html#a8eeb16262b7e619f081a1ba94df098f8" title=" " alt="" coords="717,478,804,505"/>
+<area shape="rect"  href="class_robo___states.html#a2b991441c08e4ddef51f6a4683d172ed" title=" " alt="" coords="667,137,855,163"/>
+<area shape="rect"  href="class_position_sensor.html#ad76eb756d3ec36067fade93ea58a55ec" title=" " alt="" coords="691,5,830,47"/>
+<area shape="rect"  href="class_position_sensor.html#ad81814b7f09c1104dc4695eec880979f" title=" " alt="" coords="681,71,840,112"/>
+<area shape="rect"  href="class_joy_stick.html#ab10729b26f39ae4c91d04544a74a2158" title=" " alt="" coords="460,1061,565,1087"/>
+<area shape="rect"  href="class_joy_stick.html#a93aa71791994e743457296f7ee9a8216" title=" " alt="" coords="429,1111,596,1138"/>
+<area shape="rect"  href="class_vec3.html#a334f510fc72e3ae8cf50f61429db307a" title=" " alt="" coords="470,1213,555,1239"/>
+<area shape="rect"  href="class_robo___states.html#a265781f9c854d4fc1c959f7b26ca39cc" title=" " alt="" coords="421,675,604,702"/>
+<area shape="rect"  href="class_vec3.html#a52f0db1c387aa9bc7befe5792b698553" title=" " alt="" coords="470,574,555,601"/>
+<area shape="rect"  href="class_vec3.html#ae581dad3aa1a885da7538582a3324d3a" title=" " alt="" coords="450,959,575,986"/>
+<area shape="rect"  href="class_vec3.html#a2d66e34e1ad4be888821158541fcd2ea" title=" " alt="" coords="470,422,555,449"/>
+<area shape="rect"  href="class_vec3.html#a4dadb34f7d48268a101914b7a4771e68" title=" " alt="" coords="469,523,556,550"/>
+<area shape="rect"  href="class_vec2.html#a0ab61d333f91ee0c26a8cdf094fd5c4f" title=" " alt="" coords="717,681,805,707"/>
+<area shape="rect"  href="min__accel_8h.html#aa220a3a494712e400d345da12382a22c" title=" " alt="" coords="720,579,801,606"/>
+<area shape="rect"  href="calculus_8h.html#a679e4fd5ff87eefcbe0e9e50c8ea98ee" title=" " alt="" coords="729,782,793,809"/>
+<area shape="rect"  href="polynomial_8h.html#aaff274ab280f485fd3e4feef1aa88ef7" title=" " alt="" coords="730,833,791,859"/>
+<area shape="rect"  href="class_vec2.html#a238a918f6d2695dd187a9778982a1769" title=" " alt="" coords="698,883,823,910"/>
+<area shape="rect"  href="class_vec2.html#aec2b21ff78bf3a2e20a044e1ab7d4b53" title=" " alt="" coords="718,630,803,657"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processor_a08eb6304c0993769d125cc8186cb51ac_icgraph.png" border="0" usemap="#class_processor_a08eb6304c0993769d125cc8186cb51ac_icgraph" alt=""/></div>
+<map name="class_processor_a08eb6304c0993769d125cc8186cb51ac_icgraph" id="class_processor_a08eb6304c0993769d125cc8186cb51ac_icgraph">
+<area shape="rect"  title=" " alt="" coords="299,5,427,32"/>
+<area shape="rect"  href="class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,5,251,32"/>
+<area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,5,100,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="acb789148869306c2a572d16f06abd7d2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acb789148869306c2a572d16f06abd7d2">&#9670;&nbsp;</a></span>get_Instance()</h2>
 
@@ -293,8 +476,9 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_processor_acb789148869306c2a572d16f06abd7d2_cgraph.png" border="0" usemap="#class_processor_acb789148869306c2a572d16f06abd7d2_cgraph" alt=""/></div>
 <map name="class_processor_acb789148869306c2a572d16f06abd7d2_cgraph" id="class_processor_acb789148869306c2a572d16f06abd7d2_cgraph">
-<area shape="rect"  title=" " alt="" coords="5,5,168,32"/>
-<area shape="rect"  href="processor_8cpp.html#a9ce21429239a4cc722845e28d0aced8c" title=" " alt="" coords="216,5,325,32"/>
+<area shape="rect"  title=" " alt="" coords="5,31,168,57"/>
+<area shape="rect"  href="processor_8cpp.html#a9ce21429239a4cc722845e28d0aced8c" title=" " alt="" coords="239,5,348,32"/>
+<area shape="rect"  href="class_joy_stick.html#a0526dbb1135712cc18797923aa113d4c" title=" " alt="" coords="216,56,371,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -325,12 +509,72 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processor_ab3e919f3aa7b2e7968815d2e056e4067_cgraph.png" border="0" usemap="#class_processor_ab3e919f3aa7b2e7968815d2e056e4067_cgraph" alt=""/></div>
+<map name="class_processor_ab3e919f3aa7b2e7968815d2e056e4067_cgraph" id="class_processor_ab3e919f3aa7b2e7968815d2e056e4067_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,103,112,130"/>
+<area shape="rect"  href="class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c" title=" " alt="" coords="160,37,311,79"/>
+<area shape="rect"  href="class_robo___states.html#a52979a290d5b8010c6478d76db4f167a" title=" " alt="" coords="164,103,307,130"/>
+<area shape="rect"  href="class_joy_stick.html#ab9e3d27f581f6ee31cb09c441768be65" title=" " alt="" coords="187,154,284,181"/>
+<area shape="rect"  href="class_position_sensor.html#ad76eb756d3ec36067fade93ea58a55ec" title=" " alt="" coords="369,5,507,47"/>
+<area shape="rect"  href="class_position_sensor.html#ad81814b7f09c1104dc4695eec880979f" title=" " alt="" coords="359,71,517,112"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_processor_ab3e919f3aa7b2e7968815d2e056e4067_icgraph.png" border="0" usemap="#class_processor_ab3e919f3aa7b2e7968815d2e056e4067_icgraph" alt=""/></div>
 <map name="class_processor_ab3e919f3aa7b2e7968815d2e056e4067_icgraph" id="class_processor_ab3e919f3aa7b2e7968815d2e056e4067_icgraph">
 <area shape="rect"  title=" " alt="" coords="277,5,384,32"/>
 <area shape="rect"  href="class_robot.html#abb7f05b4906d4e65fc2e37995b3646bf" title=" " alt="" coords="148,5,229,32"/>
+<area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,5,100,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9d08a8c82a543d7501090c96f821c3b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d08a8c82a543d7501090c96f821c3b4">&#9670;&nbsp;</a></span>manual_control()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; Processor::manual_control </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_joy_stick___command.html">JoyStick_Command</a> &amp;&#160;</td>
+          <td class="paramname"><em>joy_cmd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processor_a9d08a8c82a543d7501090c96f821c3b4_cgraph.png" border="0" usemap="#class_processor_a9d08a8c82a543d7501090c96f821c3b4_cgraph" alt=""/></div>
+<map name="class_processor_a9d08a8c82a543d7501090c96f821c3b4_cgraph" id="class_processor_a9d08a8c82a543d7501090c96f821c3b4_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,31,183,57"/>
+<area shape="rect"  href="class_vec3.html#a334f510fc72e3ae8cf50f61429db307a" title=" " alt="" coords="245,5,331,32"/>
+<area shape="rect"  href="class_vec3.html#a987916221fa68ba597397f51d5cf51b0" title=" " alt="" coords="231,56,345,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_processor_a9d08a8c82a543d7501090c96f821c3b4_icgraph.png" border="0" usemap="#class_processor_a9d08a8c82a543d7501090c96f821c3b4_icgraph" alt=""/></div>
+<map name="class_processor_a9d08a8c82a543d7501090c96f821c3b4_icgraph" id="class_processor_a9d08a8c82a543d7501090c96f821c3b4_icgraph">
+<area shape="rect"  title=" " alt="" coords="475,5,652,32"/>
+<area shape="rect"  href="class_processor.html#a08eb6304c0993769d125cc8186cb51ac" title=" " alt="" coords="299,5,427,32"/>
+<area shape="rect"  href="class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,5,251,32"/>
 <area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,5,100,32"/>
 </map>
 </div>
@@ -389,14 +633,17 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a60d0fbfefa0a370badbba6a681626a2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60d0fbfefa0a370badbba6a681626a2d">&#9670;&nbsp;</a></span>process()</h2>
+<a id="a1e529fa62420f020ef760f4a6259ed1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e529fa62420f020ef760f4a6259ed1e">&#9670;&nbsp;</a></span>process()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; Processor::process </td>
+          <td class="memname">void Processor::process </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td>
           <td class="paramname"><em>state</em>, </td>
@@ -404,20 +651,8 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td>
-          <td class="paramname"><em>vel_from_base</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype"><a class="el" href="struct_state___vars.html">State_Vars</a> *&amp;&#160;</td>
-          <td class="paramname"><em>robot_state_vars_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>dt_millis</em>&#160;</td>
+          <td class="paramname"><em>robot_state_vars_</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -425,42 +660,40 @@ Here is the caller graph for this function:</div>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_processor_a60d0fbfefa0a370badbba6a681626a2d_cgraph.png" border="0" usemap="#class_processor_a60d0fbfefa0a370badbba6a681626a2d_cgraph" alt=""/></div>
-<map name="class_processor_a60d0fbfefa0a370badbba6a681626a2d_cgraph" id="class_processor_a60d0fbfefa0a370badbba6a681626a2d_cgraph">
-<area shape="rect"  title=" " alt="" coords="5,728,140,754"/>
-<area shape="rect"  href="class_robo___states.html#aefb2cb8a8757a4638e2ee70892aa293a" title=" " alt="" coords="188,141,400,168"/>
-<area shape="rect"  href="class_vec2.html#ab9c6aa483fc884d65a0f50a6426dce04" title=" " alt="" coords="685,445,770,472"/>
-<area shape="rect"  href="class_vec2.html#ab34c86af20c627cd5ed0e1a973a43fa3" title=" " alt="" coords="684,141,771,168"/>
-<area shape="rect"  href="class_processor.html#a0b7eaf28eed6010ec0224175d713b763" title=" " alt="" coords="211,698,377,725"/>
-<area shape="rect"  href="class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c" title=" " alt="" coords="219,750,369,791"/>
-<area shape="rect"  href="class_robo___states.html#a52979a290d5b8010c6478d76db4f167a" title=" " alt="" coords="223,816,365,842"/>
-<area shape="rect"  href="class_robo___states.html#a265781f9c854d4fc1c959f7b26ca39cc" title=" " alt="" coords="203,394,385,421"/>
-<area shape="rect"  href="class_vec3.html#a52f0db1c387aa9bc7befe5792b698553" title=" " alt="" coords="251,866,337,893"/>
-<area shape="rect"  href="class_vec3.html#ae581dad3aa1a885da7538582a3324d3a" title=" " alt="" coords="231,917,357,944"/>
-<area shape="rect"  href="class_robo___states.html#a6e108f35f1785617577788d4d4df2d71" title=" " alt="" coords="213,968,375,994"/>
-<area shape="rect"  href="class_vec3.html#ad259e243f6678730d990acbae2cdff57" title=" " alt="" coords="499,192,585,218"/>
-<area shape="rect"  href="class_vec3.html#a8eeb16262b7e619f081a1ba94df098f8" title=" " alt="" coords="499,141,585,168"/>
-<area shape="rect"  href="class_robo___states.html#a2b991441c08e4ddef51f6a4683d172ed" title=" " alt="" coords="448,698,636,725"/>
-<area shape="rect"  href="class_position_sensor.html#ad76eb756d3ec36067fade93ea58a55ec" title=" " alt="" coords="473,815,611,856"/>
-<area shape="rect"  href="class_position_sensor.html#ad81814b7f09c1104dc4695eec880979f" title=" " alt="" coords="463,750,621,791"/>
-<area shape="rect"  href="class_vec2.html#a0ab61d333f91ee0c26a8cdf094fd5c4f" title=" " alt="" coords="498,344,586,370"/>
-<area shape="rect"  href="min__accel_8h.html#aa220a3a494712e400d345da12382a22c" title=" " alt="" coords="501,293,583,320"/>
-<area shape="rect"  href="calculus_8h.html#a679e4fd5ff87eefcbe0e9e50c8ea98ee" title=" " alt="" coords="510,394,574,421"/>
-<area shape="rect"  href="polynomial_8h.html#aaff274ab280f485fd3e4feef1aa88ef7" title=" " alt="" coords="511,445,573,472"/>
-<area shape="rect"  href="class_vec2.html#a238a918f6d2695dd187a9778982a1769" title=" " alt="" coords="479,496,605,522"/>
-<area shape="rect"  href="class_vec2.html#aec2b21ff78bf3a2e20a044e1ab7d4b53" title=" " alt="" coords="499,546,585,573"/>
+<div class="center"><img src="class_processor_a1e529fa62420f020ef760f4a6259ed1e_cgraph.png" border="0" usemap="#class_processor_a1e529fa62420f020ef760f4a6259ed1e_cgraph" alt=""/></div>
+<map name="class_processor_a1e529fa62420f020ef760f4a6259ed1e_cgraph" id="class_processor_a1e529fa62420f020ef760f4a6259ed1e_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,196,140,223"/>
+<area shape="rect"  href="class_state___sensor.html#a2578ecaea1eb7a08f685c1652a82675c" title=" " alt="" coords="205,56,383,83"/>
+<area shape="rect"  href="class_robo___states.html#a29597d9c80e525223e53e9120d3fa2b6" title=" " alt="" coords="188,157,400,184"/>
+<area shape="rect"  href="class_robo___states.html#a52979a290d5b8010c6478d76db4f167a" title=" " alt="" coords="471,5,613,32"/>
+<area shape="rect"  href="class_processor.html#a0b7eaf28eed6010ec0224175d713b763" title=" " alt="" coords="211,233,377,260"/>
+<area shape="rect"  href="class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c" title=" " alt="" coords="219,285,369,326"/>
+<area shape="rect"  href="class_robo___states.html#a6e108f35f1785617577788d4d4df2d71" title=" " alt="" coords="213,351,375,377"/>
+<area shape="rect"  href="class_vec2.html#ab9c6aa483fc884d65a0f50a6426dce04" title=" " alt="" coords="499,56,585,83"/>
+<area shape="rect"  href="class_vec2.html#ab34c86af20c627cd5ed0e1a973a43fa3" title=" " alt="" coords="499,107,585,133"/>
+<area shape="rect"  href="class_vec3.html#ad259e243f6678730d990acbae2cdff57" title=" " alt="" coords="499,157,585,184"/>
+<area shape="rect"  href="class_vec3.html#a8eeb16262b7e619f081a1ba94df098f8" title=" " alt="" coords="499,208,585,235"/>
+<area shape="rect"  href="class_robo___states.html#a2b991441c08e4ddef51f6a4683d172ed" title=" " alt="" coords="448,259,636,285"/>
+<area shape="rect"  href="class_position_sensor.html#ad76eb756d3ec36067fade93ea58a55ec" title=" " alt="" coords="473,310,611,351"/>
+<area shape="rect"  href="class_position_sensor.html#ad81814b7f09c1104dc4695eec880979f" title=" " alt="" coords="463,375,621,417"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_processor_a60d0fbfefa0a370badbba6a681626a2d_icgraph.png" border="0" usemap="#class_processor_a60d0fbfefa0a370badbba6a681626a2d_icgraph" alt=""/></div>
-<map name="class_processor_a60d0fbfefa0a370badbba6a681626a2d_icgraph" id="class_processor_a60d0fbfefa0a370badbba6a681626a2d_icgraph">
-<area shape="rect"  title=" " alt="" coords="299,5,433,32"/>
+<div class="center"><img src="class_processor_a1e529fa62420f020ef760f4a6259ed1e_icgraph.png" border="0" usemap="#class_processor_a1e529fa62420f020ef760f4a6259ed1e_icgraph" alt=""/></div>
+<map name="class_processor_a1e529fa62420f020ef760f4a6259ed1e_icgraph" id="class_processor_a1e529fa62420f020ef760f4a6259ed1e_icgraph">
+<area shape="rect"  title=" " alt="" coords="475,5,609,32"/>
+<area shape="rect"  href="class_processor.html#a08eb6304c0993769d125cc8186cb51ac" title=" " alt="" coords="299,5,427,32"/>
 <area shape="rect"  href="class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,5,251,32"/>
 <area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,5,100,32"/>
 </map>
@@ -504,8 +737,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_processor_a0b7eaf28eed6010ec0224175d713b763_icgraph.png" border="0" usemap="#class_processor_a0b7eaf28eed6010ec0224175d713b763_icgraph" alt=""/></div>
 <map name="class_processor_a0b7eaf28eed6010ec0224175d713b763_icgraph" id="class_processor_a0b7eaf28eed6010ec0224175d713b763_icgraph">
-<area shape="rect"  title=" " alt="" coords="481,5,648,32"/>
-<area shape="rect"  href="class_processor.html#a60d0fbfefa0a370badbba6a681626a2d" title=" " alt="" coords="299,5,433,32"/>
+<area shape="rect"  title=" " alt="" coords="657,5,824,32"/>
+<area shape="rect"  href="class_processor.html#a1e529fa62420f020ef760f4a6259ed1e" title=" " alt="" coords="475,5,609,32"/>
+<area shape="rect"  href="class_processor.html#a08eb6304c0993769d125cc8186cb51ac" title=" " alt="" coords="299,5,427,32"/>
 <area shape="rect"  href="class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,5,251,32"/>
 <area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,5,100,32"/>
 </map>
@@ -569,6 +803,28 @@ Here is the caller graph for this function:</div>
       <table class="memname">
         <tr>
           <td class="memname">bool Processor::is_first_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa1fcd3b1d133474e92d19090e64864b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1fcd3b1d133474e92d19090e64864b3">&#9670;&nbsp;</a></span>joy_stick_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_joy_stick.html">JoyStick</a>* Processor::joy_stick_</td>
         </tr>
       </table>
   </td>

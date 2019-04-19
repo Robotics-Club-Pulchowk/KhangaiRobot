@@ -24,9 +24,5 @@ var processor_8cpp =
     [ "gStateK", "processor_8cpp.html#aaafad572339d24df474a58547fcfd4d2", null ],
     [ "gStateK_Data", "processor_8cpp.html#a057c24ea6417bd37fa0428c44b1cadf0", null ],
     [ "gStateL", "processor_8cpp.html#a2d8f47c1016800900af497cc9c9c4328", null ],
-    [ "gStateL_Data", "processor_8cpp.html#a178acfe85b8cb5cf8b74ec766e436d30", null ],
-    [ "gStateM", "processor_8cpp.html#a26f7b8ac1a97e4fedce08c82869f0740", null ],
-    [ "gStateM_Data", "processor_8cpp.html#ab242d115adf3de84ced836a5bbc06f94", null ],
-    [ "gStateN", "processor_8cpp.html#ac0c3c756b20dd8ee2822774704f7f308", null ],
-    [ "gStateN_Data", "processor_8cpp.html#aac2af57b318f17e54d73c5c87efd25d5", null ]
+    [ "gStateL_Data", "processor_8cpp.html#a178acfe85b8cb5cf8b74ec766e436d30", null ]
 ];

@@ -1,5 +1,15 @@
 var searchData=
 [
+  ['fence_5f6a_5fgpio_5fport',['FENCE_6A_GPIO_Port',['../main_8h.html#ac43e8854aa1ecc2deb19163a7c40b93f',1,'main.h']]],
+  ['fence_5f6a_5fpin',['FENCE_6A_Pin',['../main_8h.html#a0414bc28955d9fe3db4c7b8910db90a1',1,'main.h']]],
+  ['fence_5f6b_5fgpio_5fport',['FENCE_6B_GPIO_Port',['../main_8h.html#a136ac98690c1a3a310e33a02a1686d64',1,'main.h']]],
+  ['fence_5f6b_5fpin',['FENCE_6B_Pin',['../main_8h.html#a5a253e7f0767544266d36b6fee8c5b6e',1,'main.h']]],
+  ['fence_5f7_5fgpio_5fport',['FENCE_7_GPIO_Port',['../main_8h.html#ad94e9f7c2cad90f378ac16a65acec201',1,'main.h']]],
+  ['fence_5f7_5fpin',['FENCE_7_Pin',['../main_8h.html#aa7025feaccd127e728f30a615758b6d5',1,'main.h']]],
+  ['fence_5f8a_5fgpio_5fport',['FENCE_8A_GPIO_Port',['../main_8h.html#a274006052de72b64f016b5d15ae0da11',1,'main.h']]],
+  ['fence_5f8a_5fpin',['FENCE_8A_Pin',['../main_8h.html#a5634558d6e3c9d3a2d73789bc5353b70',1,'main.h']]],
+  ['fence_5f8b_5fgpio_5fport',['FENCE_8B_GPIO_Port',['../main_8h.html#abd0d7a30cd693b03ef64649b533df743',1,'main.h']]],
+  ['fence_5f8b_5fpin',['FENCE_8B_Pin',['../main_8h.html#a6c3edcfadf50756d6230cc97f19b97bb',1,'main.h']]],
   ['ff_5fdur',['FF_DUR',['../mpu6050__reg_8h.html#a1bac52f5ea986695908e11953da65daa',1,'mpu6050_reg.h']]],
   ['ff_5fthr',['FF_THR',['../mpu6050__reg_8h.html#a410ac6e861b3d12482203f2ad4bf9803',1,'mpu6050_reg.h']]],
   ['fifo_5fcounth',['FIFO_COUNTH',['../mpu6050__reg_8h.html#adbbef0e95665e066deb615f04b347491',1,'mpu6050_reg.h']]],

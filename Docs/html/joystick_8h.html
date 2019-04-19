@@ -90,6 +90,7 @@ $(document).ready(function(){initNavTree('joystick_8h.html','');});
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">joystick.h File Reference</div>  </div>
@@ -98,17 +99,21 @@ $(document).ready(function(){initNavTree('joystick_8h.html','');});
 <div class="textblock"><code>#include &quot;<a class="el" href="vec3_8h_source.html">vec3.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="usart_8h_source.html">usart.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="queue__custom_8h_source.html">queue_custom.h</a>&quot;</code><br />
+<code>#include &quot;FreeRTOS.h&quot;</code><br />
+<code>#include &quot;task.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for joystick.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="joystick_8h__incl.png" border="0" usemap="#_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_localization_2_khangai_robot-_play_2_core_2_inc_2devs_2joystick_8h" alt=""/></div>
 <map name="_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_localization_2_khangai_robot-_play_2_core_2_inc_2devs_2joystick_8h" id="_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_localization_2_khangai_robot-_play_2_core_2_inc_2devs_2joystick_8h">
-<area shape="rect"  title=" " alt="" coords="15,5,225,76"/>
+<area shape="rect"  title=" " alt="" coords="85,5,294,76"/>
 <area shape="rect"  href="vec3_8h.html" title=" " alt="" coords="5,124,64,151"/>
 <area shape="rect"  href="usart_8h.html" title=" " alt="" coords="89,124,151,151"/>
-<area shape="rect"  href="queue__custom_8h.html" title=" " alt="" coords="151,199,270,225"/>
-<area shape="rect"  title=" " alt="" coords="37,273,155,300"/>
-<area shape="rect"  href="main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="65,199,127,225"/>
+<area shape="rect"  href="queue__custom_8h.html" title=" " alt="" coords="145,199,263,225"/>
+<area shape="rect"  title=" " alt="" coords="227,124,322,151"/>
+<area shape="rect"  title=" " alt="" coords="347,124,405,151"/>
+<area shape="rect"  title=" " alt="" coords="31,273,148,300"/>
+<area shape="rect"  href="main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="59,199,120,225"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -116,10 +121,14 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="joystick_8h__dep__incl.png" border="0" usemap="#_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_localization_2_khangai_robot-_play_2_core_2_inc_2devs_2joystick_8hdep" alt=""/></div>
 <map name="_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_localization_2_khangai_robot-_play_2_core_2_inc_2devs_2joystick_8hdep" id="_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_localization_2_khangai_robot-_play_2_core_2_inc_2devs_2joystick_8hdep">
-<area shape="rect"  title=" " alt="" coords="247,5,457,76"/>
-<area shape="rect"  href="joystick_8cpp.html" title=" " alt="" coords="5,124,216,195"/>
-<area shape="rect"  href="int__config_8cpp.html" title=" " alt="" coords="240,124,464,195"/>
-<area shape="rect"  href="robot_8cpp.html" title=" " alt="" coords="489,124,698,195"/>
+<area shape="rect"  title=" " alt="" coords="469,5,679,76"/>
+<area shape="rect"  href="processor_8h.html" title=" " alt="" coords="248,124,457,195"/>
+<area shape="rect"  href="robot_8cpp.html" title=" " alt="" coords="319,361,528,432"/>
+<area shape="rect"  href="joystick_8cpp.html" title=" " alt="" coords="541,124,751,195"/>
+<area shape="rect"  href="int__config_8cpp.html" title=" " alt="" coords="775,124,999,195"/>
+<area shape="rect"  href="robot_8h.html" title=" " alt="" coords="5,243,215,313"/>
+<area shape="rect"  href="processor_8cpp.html" title=" " alt="" coords="239,243,466,313"/>
+<area shape="rect"  href="robo__tasks_8cpp.html" title=" " alt="" coords="5,361,215,432"/>
 </map>
 </div>
 </div>
@@ -129,58 +138,235 @@ This graph shows which files directly or indirectly include this file:</div>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_joy_stick___data.html">JoyStick_Data</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_joy_stick.html">JoyStick</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_joy_stick___handle.html">JoyStick_Handle</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_joy_stick___command.html">JoyStick_Command</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joy_stick.html">JoyStick</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ad2092c57680df756baaf955836e73ab4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8h.html#ad2092c57680df756baaf955836e73ab4">B_X</a>&#160;&#160;&#160;(7)</td></tr>
+<tr class="separator:ad2092c57680df756baaf955836e73ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0645bcec17e8f6bb1d15f4b02bcc98b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8h.html#ae0645bcec17e8f6bb1d15f4b02bcc98b">B_Y</a>&#160;&#160;&#160;(6)</td></tr>
+<tr class="separator:ae0645bcec17e8f6bb1d15f4b02bcc98b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2303a3b5b3de921388e96105d4edae5f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8h.html#a2303a3b5b3de921388e96105d4edae5f">B_A</a>&#160;&#160;&#160;(5)</td></tr>
+<tr class="separator:a2303a3b5b3de921388e96105d4edae5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f05778977de54a0f37ceabb5b8a73c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8h.html#a4f05778977de54a0f37ceabb5b8a73c0">B_B</a>&#160;&#160;&#160;(4)</td></tr>
+<tr class="separator:a4f05778977de54a0f37ceabb5b8a73c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3764354763070df4a655146e46c24741"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8h.html#a3764354763070df4a655146e46c24741">B_UP</a>&#160;&#160;&#160;(3)</td></tr>
+<tr class="separator:a3764354763070df4a655146e46c24741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6026d89ac3131c946a656a20230515a8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8h.html#a6026d89ac3131c946a656a20230515a8">B_DOWN</a>&#160;&#160;&#160;(2)</td></tr>
+<tr class="separator:a6026d89ac3131c946a656a20230515a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe33d7e20ba56f6e1826221a659eb756"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8h.html#afe33d7e20ba56f6e1826221a659eb756">B_LB</a>&#160;&#160;&#160;(1)</td></tr>
+<tr class="separator:afe33d7e20ba56f6e1826221a659eb756"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad57b7c17f03e1d383c3744b6ecfff583"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8h.html#ad57b7c17f03e1d383c3744b6ecfff583">B_RB</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="separator:ad57b7c17f03e1d383c3744b6ecfff583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af18629db14b0fb8e0292d032734b36b3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8h.html#af18629db14b0fb8e0292d032734b36b3">MANUAL_KEY</a>&#160;&#160;&#160;(<a class="el" href="joystick_8h.html#afe33d7e20ba56f6e1826221a659eb756">B_LB</a>)</td></tr>
+<tr class="separator:af18629db14b0fb8e0292d032734b36b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a503c4d82732d03045bb2c67c0bcaf7df"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8h.html#a503c4d82732d03045bb2c67c0bcaf7df">AUTO_KEY</a>&#160;&#160;&#160;(<a class="el" href="joystick_8h.html#a2303a3b5b3de921388e96105d4edae5f">B_A</a>)</td></tr>
+<tr class="separator:a503c4d82732d03045bb2c67c0bcaf7df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d069b99a207bdec4cc0f22a298cbb3a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8h.html#a3d069b99a207bdec4cc0f22a298cbb3a">RESET_KEY</a>&#160;&#160;&#160;(<a class="el" href="joystick_8h.html#ad57b7c17f03e1d383c3744b6ecfff583">B_RB</a>)</td></tr>
+<tr class="separator:a3d069b99a207bdec4cc0f22a298cbb3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a657a7ed14d11b557497a95bc8f57c340"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8h.html#a657a7ed14d11b557497a95bc8f57c340">SHAGAI_GRIP_KEY</a>&#160;&#160;&#160;(<a class="el" href="joystick_8h.html#ad2092c57680df756baaf955836e73ab4">B_X</a>)</td></tr>
+<tr class="separator:a657a7ed14d11b557497a95bc8f57c340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a483c9de27db573099572f5485ef841c9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8h.html#a483c9de27db573099572f5485ef841c9">_BV</a>(x)&#160;&#160;&#160;(1 &lt;&lt; x)</td></tr>
+<tr class="separator:a483c9de27db573099572f5485ef841c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a25d2c9380b23a5bb6dc39048bb977253"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8h.html#a25d2c9380b23a5bb6dc39048bb977253">joy_Empty</a> ()</td></tr>
-<tr class="separator:a25d2c9380b23a5bb6dc39048bb977253"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c024e614be55b1d7ecb0bb56eb0b00d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8h.html#a9c024e614be55b1d7ecb0bb56eb0b00d">init_JoyStick</a> (UART_HandleTypeDef *huart)</td></tr>
-<tr class="separator:a9c024e614be55b1d7ecb0bb56eb0b00d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfeec6615729a2ebb633f2efd51858dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_joy_stick___data.html">JoyStick_Data</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8h.html#adfeec6615729a2ebb633f2efd51858dc">read_JoyStick</a> ()</td></tr>
-<tr class="separator:adfeec6615729a2ebb633f2efd51858dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bf81a87ac512746c48226da0cfaf031"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8h.html#a8bf81a87ac512746c48226da0cfaf031">JoyStick_Handle_RxCplt</a> ()</td></tr>
 <tr class="separator:a8bf81a87ac512746c48226da0cfaf031"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef88c2ad5917e90e0f11a59ea8d0fef1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8h.html#aef88c2ad5917e90e0f11a59ea8d0fef1">parse_JoyStick</a> ()</td></tr>
-<tr class="separator:aef88c2ad5917e90e0f11a59ea8d0fef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a483c9de27db573099572f5485ef841c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a483c9de27db573099572f5485ef841c9">&#9670;&nbsp;</a></span>_BV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _BV</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;(1 &lt;&lt; x)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a503c4d82732d03045bb2c67c0bcaf7df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a503c4d82732d03045bb2c67c0bcaf7df">&#9670;&nbsp;</a></span>AUTO_KEY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_KEY&#160;&#160;&#160;(<a class="el" href="joystick_8h.html#a2303a3b5b3de921388e96105d4edae5f">B_A</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2303a3b5b3de921388e96105d4edae5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2303a3b5b3de921388e96105d4edae5f">&#9670;&nbsp;</a></span>B_A</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define B_A&#160;&#160;&#160;(5)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f05778977de54a0f37ceabb5b8a73c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f05778977de54a0f37ceabb5b8a73c0">&#9670;&nbsp;</a></span>B_B</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define B_B&#160;&#160;&#160;(4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6026d89ac3131c946a656a20230515a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6026d89ac3131c946a656a20230515a8">&#9670;&nbsp;</a></span>B_DOWN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define B_DOWN&#160;&#160;&#160;(2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe33d7e20ba56f6e1826221a659eb756"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe33d7e20ba56f6e1826221a659eb756">&#9670;&nbsp;</a></span>B_LB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define B_LB&#160;&#160;&#160;(1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad57b7c17f03e1d383c3744b6ecfff583"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad57b7c17f03e1d383c3744b6ecfff583">&#9670;&nbsp;</a></span>B_RB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define B_RB&#160;&#160;&#160;(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3764354763070df4a655146e46c24741"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3764354763070df4a655146e46c24741">&#9670;&nbsp;</a></span>B_UP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define B_UP&#160;&#160;&#160;(3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2092c57680df756baaf955836e73ab4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2092c57680df756baaf955836e73ab4">&#9670;&nbsp;</a></span>B_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define B_X&#160;&#160;&#160;(7)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0645bcec17e8f6bb1d15f4b02bcc98b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0645bcec17e8f6bb1d15f4b02bcc98b">&#9670;&nbsp;</a></span>B_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define B_Y&#160;&#160;&#160;(6)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af18629db14b0fb8e0292d032734b36b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af18629db14b0fb8e0292d032734b36b3">&#9670;&nbsp;</a></span>MANUAL_KEY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MANUAL_KEY&#160;&#160;&#160;(<a class="el" href="joystick_8h.html#afe33d7e20ba56f6e1826221a659eb756">B_LB</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d069b99a207bdec4cc0f22a298cbb3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d069b99a207bdec4cc0f22a298cbb3a">&#9670;&nbsp;</a></span>RESET_KEY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RESET_KEY&#160;&#160;&#160;(<a class="el" href="joystick_8h.html#ad57b7c17f03e1d383c3744b6ecfff583">B_RB</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a657a7ed14d11b557497a95bc8f57c340"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a657a7ed14d11b557497a95bc8f57c340">&#9670;&nbsp;</a></span>SHAGAI_GRIP_KEY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHAGAI_GRIP_KEY&#160;&#160;&#160;(<a class="el" href="joystick_8h.html#ad2092c57680df756baaf955836e73ab4">B_X</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a9c024e614be55b1d7ecb0bb56eb0b00d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c024e614be55b1d7ecb0bb56eb0b00d">&#9670;&nbsp;</a></span>init_JoyStick()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void init_JoyStick </td>
-          <td>(</td>
-          <td class="paramtype">UART_HandleTypeDef *&#160;</td>
-          <td class="paramname"><em>huart</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a25d2c9380b23a5bb6dc39048bb977253"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25d2c9380b23a5bb6dc39048bb977253">&#9670;&nbsp;</a></span>joy_Empty()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool joy_Empty </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a8bf81a87ac512746c48226da0cfaf031"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8bf81a87ac512746c48226da0cfaf031">&#9670;&nbsp;</a></span>JoyStick_Handle_RxCplt()</h2>
 
@@ -195,59 +381,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="aef88c2ad5917e90e0f11a59ea8d0fef1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef88c2ad5917e90e0f11a59ea8d0fef1">&#9670;&nbsp;</a></span>parse_JoyStick()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_vec3.html">Vec3</a>&lt;float&gt; parse_JoyStick </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="joystick_8h_aef88c2ad5917e90e0f11a59ea8d0fef1_cgraph.png" border="0" usemap="#joystick_8h_aef88c2ad5917e90e0f11a59ea8d0fef1_cgraph" alt=""/></div>
-<map name="joystick_8h_aef88c2ad5917e90e0f11a59ea8d0fef1_cgraph" id="joystick_8h_aef88c2ad5917e90e0f11a59ea8d0fef1_cgraph">
-<area shape="rect"  title=" " alt="" coords="5,5,116,32"/>
-<area shape="rect"  href="joystick_8cpp.html#adfeec6615729a2ebb633f2efd51858dc" title=" " alt="" coords="164,5,268,32"/>
-<area shape="rect"  href="joystick_8cpp.html#a25d2c9380b23a5bb6dc39048bb977253" title=" " alt="" coords="316,5,400,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="adfeec6615729a2ebb633f2efd51858dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adfeec6615729a2ebb633f2efd51858dc">&#9670;&nbsp;</a></span>read_JoyStick()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_joy_stick___data.html">JoyStick_Data</a> read_JoyStick </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="joystick_8h_adfeec6615729a2ebb633f2efd51858dc_cgraph.png" border="0" usemap="#joystick_8h_adfeec6615729a2ebb633f2efd51858dc_cgraph" alt=""/></div>
-<map name="joystick_8h_adfeec6615729a2ebb633f2efd51858dc_cgraph" id="joystick_8h_adfeec6615729a2ebb633f2efd51858dc_cgraph">
-<area shape="rect"  title=" " alt="" coords="5,5,109,32"/>
-<area shape="rect"  href="joystick_8cpp.html#a25d2c9380b23a5bb6dc39048bb977253" title=" " alt="" coords="157,5,241,32"/>
-</map>
-</div>
 
 </div>
 </div>

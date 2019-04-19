@@ -1,8 +1,12 @@
 var searchData=
 [
-  ['name_5f',['name_',['../class_sensor.html#a05f9e0c2df5ca22325c0cbd9cef9de19',1,'Sensor']]],
-  ['next_5fstate_5f',['next_state_',['../class_robo___states.html#ad3288fa05e00c518ecff7b9a7c0130e9',1,'Robo_States']]],
-  ['norm_5fa_5faxis',['norm_a_axis',['../struct_m_p_u6050.html#a1448ddadf65cd8e48d3873e1fcb00b8b',1,'MPU6050']]],
-  ['norm_5fg_5faxis',['norm_g_axis',['../struct_m_p_u6050.html#a408969ff3349bf750d25a043019ab813',1,'MPU6050']]],
-  ['num_5fswitches_5f',['num_switches_',['../class_bound.html#a551096ab6cb6e12d047d506076b9dd5d',1,'Bound']]]
+  ['manual_5fmode',['manual_mode',['../struct_joy_stick___command.html#ac472f802b01fe73985ebc7961928f8ab',1,'JoyStick_Command']]],
+  ['matrix_5f',['matrix_',['../class_mat.html#a7753c4dcb04086512d8049d0207e9815',1,'Mat']]],
+  ['max_5f',['max_',['../class_p_i_d___algorithm.html#a1e0d5415bea59ae3f908b06c45bd0dd8',1,'PID_Algorithm']]],
+  ['max_5fomega',['max_omega',['../struct_wheel___config.html#ab52d135d822ca3ff599f52e18789e51b',1,'Wheel_Config']]],
+  ['max_5fvel',['max_vel',['../struct_state___vars.html#a69af19703b917df0d75642123158df36',1,'State_Vars']]],
+  ['min_5f',['min_',['../class_p_i_d___algorithm.html#a4ba021193490b2023b0fab0f5ed5946c',1,'PID_Algorithm']]],
+  ['motorsequencebuffer',['MotorSequenceBuffer',['../freertos_8c.html#a45383c061dfa4d7257d5b5f90e933345',1,'freertos.c']]],
+  ['motorsequencecontrolblock',['MotorSequenceControlBlock',['../freertos_8c.html#a30adf9f313727b0ca52e3aaf1a59e770',1,'freertos.c']]],
+  ['motorsequencehandle',['MotorSequenceHandle',['../freertos_8c.html#ab3fa954868e85bcd098dbecc5a0cb3ff',1,'freertos.c']]]
 ];

@@ -10,8 +10,16 @@ var main_8h =
     [ "B_PushButton_Pin", "main_8h.html#a3063f66527a6059855a7eb5c16f74b5c", null ],
     [ "B_RedLED_GPIO_Port", "main_8h.html#a5c0cf164c849eb8b7aff00c181449122", null ],
     [ "B_RedLED_Pin", "main_8h.html#a91b60e28f78758e9ceb18f81fedb3def", null ],
-    [ "SPI2_CS_GPIO_Port", "main_8h.html#ad2875a38a73431ff5df574415e4517f0", null ],
-    [ "SPI2_CS_Pin", "main_8h.html#a1cefd73847ad433f624034a5e3b03f79", null ],
+    [ "FENCE_6A_GPIO_Port", "main_8h.html#ac43e8854aa1ecc2deb19163a7c40b93f", null ],
+    [ "FENCE_6A_Pin", "main_8h.html#a0414bc28955d9fe3db4c7b8910db90a1", null ],
+    [ "FENCE_6B_GPIO_Port", "main_8h.html#a136ac98690c1a3a310e33a02a1686d64", null ],
+    [ "FENCE_6B_Pin", "main_8h.html#a5a253e7f0767544266d36b6fee8c5b6e", null ],
+    [ "FENCE_7_GPIO_Port", "main_8h.html#ad94e9f7c2cad90f378ac16a65acec201", null ],
+    [ "FENCE_7_Pin", "main_8h.html#aa7025feaccd127e728f30a615758b6d5", null ],
+    [ "FENCE_8A_GPIO_Port", "main_8h.html#a274006052de72b64f016b5d15ae0da11", null ],
+    [ "FENCE_8A_Pin", "main_8h.html#a5634558d6e3c9d3a2d73789bc5353b70", null ],
+    [ "FENCE_8B_GPIO_Port", "main_8h.html#abd0d7a30cd693b03ef64649b533df743", null ],
+    [ "FENCE_8B_Pin", "main_8h.html#a6c3edcfadf50756d6230cc97f19b97bb", null ],
     [ "_Error_Handler", "main_8h.html#a425dc7e549f2b17a4f48496d9561d248", null ],
     [ "Error_Handler", "main_8h.html#a1730ffe1e560465665eb47d9264826f9", null ]
 ];

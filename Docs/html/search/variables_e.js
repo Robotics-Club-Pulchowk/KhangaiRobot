@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['p_5f',['P_',['../struct_kalman___vars.html#a8e744f7c2e3ef0a02bc91b8bf00f2ecb',1,'Kalman_Vars::P_()'],['../class_p_i_d___algorithm.html#a6e988e5351fd21eb2227613ad8684d5c',1,'PID_Algorithm::p_()']]],
-  ['p_5fsensor_5f',['p_sensor_',['../class_state___sensor.html#a4c084c5f53ba27c4920dcf3f2ad7d9f4',1,'State_Sensor']]],
-  ['p_5fsensors_5f',['p_sensors_',['../class_position_sensor.html#a4705bb660e87f22569f972fef87ea1a3',1,'PositionSensor']]],
-  ['pid_5fcontroller',['pid_controller',['../struct_wheel___config.html#a35ab88cb85d55d061b214a3f8ee56d33',1,'Wheel_Config']]],
-  ['ppr',['ppr',['../struct_enc.html#a1119647366b6814372ff096a74f2e00f',1,'Enc']]]
+  ['omega',['omega',['../struct_a4988.html#a8ea23ea2cf8e5f0b76f0b9f9e2ed1341',1,'A4988']]],
+  ['omega_5f',['omega_',['../class_wheel.html#a0f12b549610fa86c31d66e820c0ef09a',1,'Wheel']]],
+  ['outliers_5f',['outliers_',['../class_lidar.html#a939e1c46f23e5be3cf43ad435b3f80cf',1,'Lidar']]]
 ];

@@ -7,6 +7,7 @@ var searchData=
   ['_7ediscrete_5fpid',['~Discrete_PID',['../class_discrete___p_i_d.html#a87f9e2fc9b853704494941c92670a039',1,'Discrete_PID']]],
   ['_7eencoder',['~Encoder',['../class_encoder.html#a87cc8067c98c0ab2134dee3822e3b250',1,'Encoder']]],
   ['_7eexp_5fsmooth',['~Exp_Smooth',['../class_exp___smooth.html#ae0c40c45c671cc5dfe6e8880acdbb2d8',1,'Exp_Smooth']]],
+  ['_7ejoystick',['~JoyStick',['../class_joy_stick.html#a412df1b4c066dec7d681bc1442a7cdba',1,'JoyStick']]],
   ['_7ekalman_5ffilter',['~Kalman_Filter',['../class_kalman___filter.html#ae28ab3bf701a35f7c1be1a8ce9e58ab8',1,'Kalman_Filter']]],
   ['_7elidar',['~Lidar',['../class_lidar.html#a5291a8b7d5ab603bf3b4b67d7287fa67',1,'Lidar']]],
   ['_7emat',['~Mat',['../class_mat.html#a87836525bb8e60bda57d246b7370b97e',1,'Mat']]],

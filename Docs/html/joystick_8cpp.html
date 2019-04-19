@@ -99,21 +99,25 @@ $(document).ready(function(){initNavTree('joystick_8cpp.html','');});
 <div class="textblock"><code>#include &quot;<a class="el" href="joystick_8h_source.html">joystick.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="defines_8h_source.html">defines.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="array_8h_source.html">array.h</a>&quot;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for joystick.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="joystick_8cpp__incl.png" border="0" usemap="#_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_localization_2_khangai_robot-_play_2_core_2_src_2devs_2joystick_8cpp" alt=""/></div>
 <map name="_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_localization_2_khangai_robot-_play_2_core_2_src_2devs_2joystick_8cpp" id="_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_localization_2_khangai_robot-_play_2_core_2_src_2devs_2joystick_8cpp">
-<area shape="rect"  title=" " alt="" coords="116,5,327,76"/>
-<area shape="rect"  href="joystick_8h.html" title=" " alt="" coords="81,124,159,151"/>
-<area shape="rect"  href="defines_8h.html" title=" " alt="" coords="184,124,259,151"/>
-<area shape="rect"  href="array_8h.html" title=" " alt="" coords="283,124,346,151"/>
+<area shape="rect"  title=" " alt="" coords="300,5,511,76"/>
+<area shape="rect"  href="joystick_8h.html" title=" " alt="" coords="173,124,251,151"/>
+<area shape="rect"  href="defines_8h.html" title=" " alt="" coords="321,124,396,151"/>
+<area shape="rect"  href="array_8h.html" title=" " alt="" coords="421,124,483,151"/>
+<area shape="rect"  title=" " alt="" coords="507,124,570,151"/>
 <area shape="rect"  href="vec3_8h.html" title=" " alt="" coords="5,199,64,225"/>
 <area shape="rect"  href="usart_8h.html" title=" " alt="" coords="89,199,151,225"/>
-<area shape="rect"  href="queue__custom_8h.html" title=" " alt="" coords="151,273,270,300"/>
-<area shape="rect"  title=" " alt="" coords="37,348,155,375"/>
-<area shape="rect"  href="main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="65,273,127,300"/>
-<area shape="rect"  title=" " alt="" coords="268,199,361,225"/>
+<area shape="rect"  href="queue__custom_8h.html" title=" " alt="" coords="145,273,263,300"/>
+<area shape="rect"  title=" " alt="" coords="227,199,322,225"/>
+<area shape="rect"  title=" " alt="" coords="347,199,405,225"/>
+<area shape="rect"  title=" " alt="" coords="31,348,148,375"/>
+<area shape="rect"  href="main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="59,273,120,300"/>
+<area shape="rect"  title=" " alt="" coords="429,199,523,225"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -126,16 +130,8 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9c024e614be55b1d7ecb0bb56eb0b00d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8cpp.html#a9c024e614be55b1d7ecb0bb56eb0b00d">init_JoyStick</a> (UART_HandleTypeDef *huart)</td></tr>
-<tr class="separator:a9c024e614be55b1d7ecb0bb56eb0b00d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25d2c9380b23a5bb6dc39048bb977253"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8cpp.html#a25d2c9380b23a5bb6dc39048bb977253">joy_Empty</a> ()</td></tr>
-<tr class="separator:a25d2c9380b23a5bb6dc39048bb977253"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfeec6615729a2ebb633f2efd51858dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_joy_stick___data.html">JoyStick_Data</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8cpp.html#adfeec6615729a2ebb633f2efd51858dc">read_JoyStick</a> ()</td></tr>
-<tr class="separator:adfeec6615729a2ebb633f2efd51858dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bf81a87ac512746c48226da0cfaf031"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8cpp.html#a8bf81a87ac512746c48226da0cfaf031">JoyStick_Handle_RxCplt</a> ()</td></tr>
 <tr class="separator:a8bf81a87ac512746c48226da0cfaf031"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef88c2ad5917e90e0f11a59ea8d0fef1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8cpp.html#aef88c2ad5917e90e0f11a59ea8d0fef1">parse_JoyStick</a> ()</td></tr>
-<tr class="separator:aef88c2ad5917e90e0f11a59ea8d0fef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -174,41 +170,6 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a9c024e614be55b1d7ecb0bb56eb0b00d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c024e614be55b1d7ecb0bb56eb0b00d">&#9670;&nbsp;</a></span>init_JoyStick()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void init_JoyStick </td>
-          <td>(</td>
-          <td class="paramtype">UART_HandleTypeDef *&#160;</td>
-          <td class="paramname"><em>huart</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a25d2c9380b23a5bb6dc39048bb977253"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25d2c9380b23a5bb6dc39048bb977253">&#9670;&nbsp;</a></span>joy_Empty()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool joy_Empty </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a8bf81a87ac512746c48226da0cfaf031"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8bf81a87ac512746c48226da0cfaf031">&#9670;&nbsp;</a></span>JoyStick_Handle_RxCplt()</h2>
 
@@ -223,59 +184,6 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="aef88c2ad5917e90e0f11a59ea8d0fef1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef88c2ad5917e90e0f11a59ea8d0fef1">&#9670;&nbsp;</a></span>parse_JoyStick()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_vec3.html">Vec3</a>&lt;float&gt; parse_JoyStick </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="joystick_8cpp_aef88c2ad5917e90e0f11a59ea8d0fef1_cgraph.png" border="0" usemap="#joystick_8cpp_aef88c2ad5917e90e0f11a59ea8d0fef1_cgraph" alt=""/></div>
-<map name="joystick_8cpp_aef88c2ad5917e90e0f11a59ea8d0fef1_cgraph" id="joystick_8cpp_aef88c2ad5917e90e0f11a59ea8d0fef1_cgraph">
-<area shape="rect"  title=" " alt="" coords="5,5,116,32"/>
-<area shape="rect"  href="joystick_8cpp.html#adfeec6615729a2ebb633f2efd51858dc" title=" " alt="" coords="164,5,268,32"/>
-<area shape="rect"  href="joystick_8cpp.html#a25d2c9380b23a5bb6dc39048bb977253" title=" " alt="" coords="316,5,400,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="adfeec6615729a2ebb633f2efd51858dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adfeec6615729a2ebb633f2efd51858dc">&#9670;&nbsp;</a></span>read_JoyStick()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_joy_stick___data.html">JoyStick_Data</a> read_JoyStick </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="joystick_8cpp_adfeec6615729a2ebb633f2efd51858dc_cgraph.png" border="0" usemap="#joystick_8cpp_adfeec6615729a2ebb633f2efd51858dc_cgraph" alt=""/></div>
-<map name="joystick_8cpp_adfeec6615729a2ebb633f2efd51858dc_cgraph" id="joystick_8cpp_adfeec6615729a2ebb633f2efd51858dc_cgraph">
-<area shape="rect"  title=" " alt="" coords="5,5,109,32"/>
-<area shape="rect"  href="joystick_8cpp.html#a25d2c9380b23a5bb6dc39048bb977253" title=" " alt="" coords="157,5,241,32"/>
-</map>
-</div>
 
 </div>
 </div>

@@ -1,6 +1,5 @@
 <map id="Bound_Box::get_Instance" name="Bound_Box::get_Instance">
-<area shape="rect" id="node1" title=" " alt="" coords="607,13,777,39"/>
-<area shape="rect" id="node2" href="$class_position_sensor.html#a409cde1d6bc69641e99c3521b9f40f71" title=" " alt="" coords="423,5,559,47"/>
-<area shape="rect" id="node3" href="$class_state___sensor.html#a31cc1d727cc48b82fc9ba46dfd7bea69" title=" " alt="" coords="192,13,375,39"/>
-<area shape="rect" id="node4" href="$class_robot.html#afb2b087ee8339bd935f9629b56ea2983" title=" " alt="" coords="5,13,144,39"/>
+<area shape="rect" id="node1" title=" " alt="" coords="423,5,593,32"/>
+<area shape="rect" id="node2" href="$class_state___sensor.html#a31cc1d727cc48b82fc9ba46dfd7bea69" title=" " alt="" coords="192,5,375,32"/>
+<area shape="rect" id="node3" href="$class_robot.html#afb2b087ee8339bd935f9629b56ea2983" title=" " alt="" coords="5,5,144,32"/>
 </map>

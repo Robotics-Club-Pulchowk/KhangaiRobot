@@ -23,5 +23,6 @@ var searchData=
   ['arrsize',['arrSize',['../array_8h.html#ae0ee529d15c5551dd12ef38b15c9ba4d',1,'array.h']]],
   ['assert_5ffailed',['assert_failed',['../stm32f4xx__hal__conf_8h.html#a2532ff72b1a2ff82f65e8c2a5a4dde00',1,'stm32f4xx_hal_conf.h']]],
   ['at',['at',['../class_mat.html#a5f4b8f7e3c55a1caf7161c11ec2a2465',1,'Mat']]],
+  ['auto_5fcontrol',['auto_control',['../class_processor.html#ad8a55cdfd1d1f42c3bd454a21ef0eb4d',1,'Processor']]],
   ['available',['available',['../class_arduino___device.html#a7b53022501a9aa62c05e559147ab3242',1,'Arduino_Device::available()'],['../class_encoder.html#aa11f19e9aa29ea271778078f20da8acf',1,'Encoder::available()'],['../class_lidar.html#ac6a415ffd47412ba8124b8d851587958',1,'Lidar::available()'],['../class_sensor.html#acacdc9e904fd7ba1b3fe1c4df6638603',1,'Sensor::available()']]]
 ];

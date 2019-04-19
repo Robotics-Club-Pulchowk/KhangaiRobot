@@ -13,5 +13,6 @@ var searchData=
   ['vec4_2eh',['vec4.h',['../vec4_8h.html',1,'']]],
   ['vect_5ftab_5foffset',['VECT_TAB_OFFSET',['../group___s_t_m32_f4xx___system___private___defines.html#ga40e1495541cbb4acbe3f1819bd87a9fe',1,'system_stm32f4xx.c']]],
   ['velocities_5f',['velocities_',['../class_robot.html#a6811965fd11ad22a3b06823cc642e41a',1,'Robot']]],
+  ['vels',['vels',['../struct_joy_stick___command.html#ab49bf90956df1e9d37ab6c79dcd9a59a',1,'JoyStick_Command']]],
   ['vportsvchandler',['vPortSVCHandler',['../_free_r_t_o_s_config_8h.html#ad43047b3ea0a146673e30637488bf754',1,'FreeRTOSConfig.h']]]
 ];

@@ -11,5 +11,6 @@ var searchData=
   ['initiated',['initiated',['../class_arduino___device.html#a27555d8c47d8a380cddaa9fd0d2215ae',1,'Arduino_Device']]],
   ['initiated_5f',['initiated_',['../class_robot.html#ae957a03df48f15a2eb2c1ba92c6817cb',1,'Robot']]],
   ['inputs_5f',['inputs_',['../class_moore___machine.html#aa157bc80472746c6838b888bf8c38f89',1,'Moore_Machine']]],
-  ['is_5ffirst_5f',['is_first_',['../class_processor.html#ac95bb9fe0c2cf17528bad9816613881d',1,'Processor::is_first_()'],['../class_kalman___filter.html#a31e5b1e4b7e5669a8021cab555aabf9a',1,'Kalman_Filter::is_first_()'],['../class_exp___smooth.html#af3defd741b8369bbbbfea3ddeee2c20c',1,'Exp_Smooth::is_first_()']]]
+  ['is_5ffirst_5f',['is_first_',['../class_processor.html#ac95bb9fe0c2cf17528bad9816613881d',1,'Processor::is_first_()'],['../class_kalman___filter.html#a31e5b1e4b7e5669a8021cab555aabf9a',1,'Kalman_Filter::is_first_()'],['../class_exp___smooth.html#af3defd741b8369bbbbfea3ddeee2c20c',1,'Exp_Smooth::is_first_()']]],
+  ['is_5ffirst_5fori_5f',['is_first_ori_',['../class_state___sensor.html#a786d6b55f8cd978b2c90b0b06b99234f',1,'State_Sensor']]]
 ];

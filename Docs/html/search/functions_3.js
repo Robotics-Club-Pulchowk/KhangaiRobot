@@ -10,8 +10,9 @@ var searchData=
   ['clear',['clear',['../class_bound.html#a989a2e0e3ea6f60f75adccebda07fcff',1,'Bound::clear()'],['../class_kalman___filter.html#a530ce9a34bda5562f01e782d4e4d5ebb',1,'Kalman_Filter::clear()'],['../class_exp___smooth.html#a3362788db2595048d3fc90622a7c1340',1,'Exp_Smooth::clear()']]],
   ['clear_5ferrors',['clear_Errors',['../error_8cpp.html#a838df6e654241da45edc1f7a93252eab',1,'error.cpp']]],
   ['cols',['cols',['../class_mat.html#a88332d9cd088208e24bea1f10651d1e7',1,'Mat']]],
-  ['compensate_5fbounds',['compensate_Bounds',['../class_position_sensor.html#a3f10e901598d65cd3151fa3f2abbe8ab',1,'PositionSensor']]],
+  ['compensate_5fbounds',['compensate_Bounds',['../class_state___sensor.html#a4b667f79982e6b1bc40c78093bb9d285',1,'State_Sensor']]],
   ['compute',['compute',['../class_p_i_d___algorithm.html#a388ec97d23c981e62c3726505688e1f0',1,'PID_Algorithm::compute()'],['../class_discrete___p_i_d.html#aa4914b85e73cb5fdfcc5b40e8d0ff23c',1,'Discrete_PID::compute()']]],
   ['compute_5fpid',['compute_PID',['../class_p_i_d.html#a4d19abca579301069c3edb28fd5ff7f2',1,'PID']]],
+  ['control',['control',['../class_processor.html#a08eb6304c0993769d125cc8186cb51ac',1,'Processor']]],
   ['cubicspline',['cubicSpline',['../class_robo___states.html#ae846d1e39dd7a955e4f14b36d0795c8d',1,'Robo_States']]]
 ];

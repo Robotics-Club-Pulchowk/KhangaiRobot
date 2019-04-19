@@ -2,11 +2,11 @@ var searchData=
 [
   ['get_5falgorithm',['get_Algorithm',['../class_p_i_d.html#a940bbf0c834f0ac68203b8e28b2ca8d1',1,'PID']]],
   ['get_5fbound',['get_Bound',['../class_bound___box.html#a152eee4a2f2b874c765a2bda45bafdeb',1,'Bound_Box']]],
-  ['get_5fbounds',['get_Bounds',['../class_bound___box.html#aa5296644fccfa0c870e6d38abb395e8b',1,'Bound_Box']]],
+  ['get_5fbounds',['get_Bounds',['../class_bound___box.html#aa5296644fccfa0c870e6d38abb395e8b',1,'Bound_Box::get_Bounds()'],['../class_state___sensor.html#a2578ecaea1eb7a08f685c1652a82675c',1,'State_Sensor::get_Bounds()']]],
   ['get_5fd',['get_D',['../class_p_i_d___algorithm.html#a5a113c3d88ee8af75af7248fb590f538',1,'PID_Algorithm']]],
   ['get_5fi',['get_I',['../class_p_i_d___algorithm.html#a6305260cd346415953b41fb765d33740',1,'PID_Algorithm']]],
   ['get_5fid',['get_ID',['../class_arduino___device.html#acd91590a4e10e4e8d0a7d92c0451cd36',1,'Arduino_Device::get_ID()'],['../class_robo___states.html#a52979a290d5b8010c6478d76db4f167a',1,'Robo_States::get_ID()'],['../class_state.html#ae684870e2450e5ab1f90f31eb4453ad2',1,'State::get_ID()']]],
-  ['get_5finstance',['get_Instance',['../class_actuator.html#a5c444f19e2bd03fd38aef75f78f4de82',1,'Actuator::get_Instance()'],['../class_processor.html#acb789148869306c2a572d16f06abd7d2',1,'Processor::get_Instance()'],['../class_bound___box.html#a519364f16b158de7524041760fcbc579',1,'Bound_Box::get_Instance()'],['../class_position_sensor.html#a409cde1d6bc69641e99c3521b9f40f71',1,'PositionSensor::get_Instance()'],['../class_state___sensor.html#a31cc1d727cc48b82fc9ba46dfd7bea69',1,'State_Sensor::get_Instance()'],['../class_robot.html#afb2b087ee8339bd935f9629b56ea2983',1,'Robot::get_Instance()']]],
+  ['get_5finstance',['get_Instance',['../class_joy_stick.html#a0526dbb1135712cc18797923aa113d4c',1,'JoyStick::get_Instance()'],['../class_actuator.html#a5c444f19e2bd03fd38aef75f78f4de82',1,'Actuator::get_Instance()'],['../class_processor.html#acb789148869306c2a572d16f06abd7d2',1,'Processor::get_Instance()'],['../class_bound___box.html#a519364f16b158de7524041760fcbc579',1,'Bound_Box::get_Instance()'],['../class_position_sensor.html#a409cde1d6bc69641e99c3521b9f40f71',1,'PositionSensor::get_Instance()'],['../class_state___sensor.html#a31cc1d727cc48b82fc9ba46dfd7bea69',1,'State_Sensor::get_Instance()'],['../class_robot.html#afb2b087ee8339bd935f9629b56ea2983',1,'Robot::get_Instance()']]],
   ['get_5flower',['get_Lower',['../class_p_i_d___algorithm.html#a2029e728fcc641ba204b44ef2c6dd2d9',1,'PID_Algorithm']]],
   ['get_5fmaxomega',['get_MaxOmega',['../class_wheel.html#a87aab248643ff4b1dab45080ed482fe0',1,'Wheel']]],
   ['get_5fname',['get_Name',['../class_sensor.html#a4f44b78a46bc1fb8edefc6f0f6dcae97',1,'Sensor']]],
