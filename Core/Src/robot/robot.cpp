@@ -11,6 +11,7 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "joystick.h"
+#include "devs_config.h"
 
 
 extern State_Vars gStateA_Data;
@@ -64,6 +65,9 @@ void Robot::update(uint32_t dt_millis)
                                          velocities_,
                                          robot_state_vars_,
                                          dt_millis);
+
+        uint8_t led_data = 0xAA;
+        gLED_Strip.write(&led_data, 1);
 
         taskENTER_CRITICAL();
         velocities_ = vels;

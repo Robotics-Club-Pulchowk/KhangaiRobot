@@ -23,6 +23,7 @@ struct Enc gXEnc;
 struct Enc gYEnc;
 
 Arduino_Device gXLidar_Dev(0x02, 2);
+Arduino_Device gLED_Strip(0x01, 1);
 
 
 Encoder gXEncoder(&gXEnc, SensorName::XEncoder);
