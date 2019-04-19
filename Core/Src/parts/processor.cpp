@@ -119,37 +119,64 @@ Vec3<float> Processor::auto_control(Vec3<float> state, Vec3<float> vel_from_base
         return vel;
 }
 
-Vec3<float> Processor::manual_control()
+Vec3<float> Processor::manual_control(Vec3<float> last_vel)
 {
-        Vec3<float> vel;
+        Vec3<float> vels;
 
-        return vel;
+        JoyStick_Command joy_command;
+
+        if (!joy_stick_->is_Empty()) {
+                joy_command = joy_stick_->parse();
+                vels = joy_command.vels;
+                // Set rw to 0 for testing purpose
+                vels.setZ(0);
+
+                uint8_t brake = joy_command.brake;
+                float factor = (255.0 - (float)brake)/255.0;
+
+                if (factor < 0.2) {
+                        factor = 0;
+                }
+
+                vels = vels.mult_EW(factor);
+
+        }
+        else {
+                vels = last_vel.mult_EW(0.8);
+        }
+
+        return vels;
 }
 
-Vec3<float> Processor::control(Vec3<float> state, Vec3<float> vel_from_base, State_Vars *&robot_state_vars_, uint32_t dt_millis)
+Vec3<float> Processor::control(Vec3<float> state,
+                               Vec3<float> vel_from_base,
+                               Vec3<float> last_vel,
+                               State_Vars *&robot_state_vars,
+                               uint32_t dt_millis)
 {
-        Vec3<float> vel;
+        Vec3<float> vels;
         // This is the second algorithm used for moving the robot.
         // Algorithm Info:
         //      1) Minimum Acceleration Trajectory
         //      2) Smooth Transition
-        process(state_, robot_state_vars_);
+        process(state, robot_state_vars);
 
-        //* Use Automatic Control if joystick data is not available
-        if (joy_stick_->is_Empty()) {
-                vel = auto_control(state, vel_from_base, dt_millis);
+        //* Use Manual Control starting from field L
+        Field id = robot_state_vars->id;
+        if (id == Field::FIELD_A) {
+                vels = manual_control(last_vel);
         }
         else {
-                Field id = robot_state_vars_->id;
-                if (id == Field::FIELD_L) {
-                        vel = manual_control();
-                }
-                else {
-                        vel = auto_control(state, vel_from_base, dt_millis);
-                }
+                vels = auto_control(state, vel_from_base, dt_millis);
+
+                // This is for correcting units and the inverted co-ordinate system
+                float vx = -vels.getX() / (float)1000.0;
+                float vy = vels.getY()  / (float)1000.0;
+                vels.setX(vx);
+                vels.setY(vy);
         }
 
-        return vel;
+        return vels;
 }
 
 void Processor::update_State()

@@ -59,16 +59,11 @@ void Robot::update(uint32_t dt_millis)
         //*/
         state_ = sensor_->read_State(state_from_base_,robot_state_vars_, dt_millis);
 
-        Vec3<float> vels = cpu_->control(state_, state_from_base_, robot_state_vars_, dt_millis);
-
-        // state_.print();
-        // vels.print();
-
-        // This is for correcting units and the inverted co-ordinate system
-        float vx = -vels.getX() / (float)1000.0;
-        float vy = vels.getY()  / (float)1000.0;
-        vels.setX(vx);
-        vels.setY(vy);
+        Vec3<float> vels = cpu_->control(state_,
+                                         state_from_base_,
+                                         velocities_,
+                                         robot_state_vars_,
+                                         dt_millis);
 
         taskENTER_CRITICAL();
         velocities_ = vels;

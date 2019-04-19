@@ -26,7 +26,11 @@ public:
         
         int init(uint32_t dt_millis);
         void process(Vec3<float> state, State_Vars *&robot_state_vars_);
-        Vec3<float> control(Vec3<float> state, Vec3<float> vel_from_base, State_Vars *&robot_state_vars_, uint32_t dt_millis);
+        Vec3<float> control(Vec3<float> state,
+                            Vec3<float> vel_from_base,
+                            Vec3<float> last_vel,
+                            State_Vars *&robot_state_vars,
+                            uint32_t dt_millis);
 
 private:
         Robo_States *curr_state_;
@@ -37,7 +41,7 @@ private:
         
         Processor() { is_first_ = true; }
         Vec3<float> auto_control(Vec3<float> state, Vec3<float> vel_from_base, uint32_t dt_millis);
-        Vec3<float> manual_control();
+        Vec3<float> manual_control(Vec3<float> last_vel);
 
         void update_State();
 };

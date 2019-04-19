@@ -13,7 +13,7 @@
 
 #define _USE_BOARD_LEDS_FOR_JOYSTICK
 
-#undef _USE_BOARD_LEDS_FOR_ERROR_
+// #undef _USE_BOARD_LEDS_FOR_ERROR_
 // #define _USE_mikroBUS_LEDS_FOR_ERROR_
 
 

@@ -143,7 +143,7 @@ void init_GameField()
         
         // Defining the state : State K
         gStateK_Data.id = Field::FIELD_K;
-        gStateK_Data.centre = Vec2<float>(5500, 7500);
+        gStateK_Data.centre = Vec2<float>(5500, 6500);
         gStateK_Data.upper_bounds = Vec2<float>(0, 0);
         gStateK_Data.lower_bounds = Vec2<float>(0, 0);
         gStateK_Data.last_limit = 1;
