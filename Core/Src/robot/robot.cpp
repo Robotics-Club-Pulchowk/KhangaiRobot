@@ -66,9 +66,6 @@ void Robot::update(uint32_t dt_millis)
                                          robot_state_vars_,
                                          dt_millis);
 
-        uint8_t led_data = 0xAA;
-        gLED_Strip.write(&led_data, 1);
-
         taskENTER_CRITICAL();
         velocities_ = vels;
         taskEXIT_CRITICAL();
