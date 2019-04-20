@@ -27,8 +27,15 @@ enum class Field
         FIELD_J,
         FIELD_K,
         FIELD_L,
-        FIELD_M,
-        FIELD_N
+
+        FIELD_O,
+        FIELD_P,
+        FIELD_Q,
+        FIELD_Q1,
+        FIELD_Q2,
+        FIELD_R1,
+        FIELD_R2,
+        FIELD_R
 };
 
 struct State_Vars

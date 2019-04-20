@@ -194,6 +194,17 @@ Vec3<float> State_Sensor::compensate_Bounds(Vec3<float> pos, Vec3<float> ori, co
                                 first_ori_ = ori;
                                 pos.setZ(0);
                         }
+                }
+                else if (id == Field::FIELD_Q || id == Field::FIELD_Q1 || id == Field::FIELD_Q2) {
+                        //* Look for the robot to touch the fence with face 6 & 8
+                        if (bounds_ & (1 << (int)(Face::_6))) {
+                                //* Face 6 has touched the fence
+                                pos.setY(4350);
+                        }
+                        if (bounds_ & (1 << (int)(Face::_7))) {
+                                //* Face 8 has touched the fence
+                                pos.setX(3800);
+                        }
                         
                 }
 

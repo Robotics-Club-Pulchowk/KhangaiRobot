@@ -20,8 +20,16 @@ extern State_Vars gStateI_Data;
 extern State_Vars gStateJ_Data;
 extern State_Vars gStateK_Data;
 extern State_Vars gStateL_Data;
-// extern State_Vars gStateM_Data;
-// extern State_Vars gStateN_Data;
+
+extern State_Vars gStateO_Data;
+extern State_Vars gStateP_Data;
+extern State_Vars gStateQ_Data;
+extern State_Vars gStateQ1_Data;
+extern State_Vars gStateQ2_Data;
+extern State_Vars gStateR_Data;
+extern State_Vars gStateR1_Data;
+extern State_Vars gStateR2_Data;
+
 
 extern Robo_States gStateA;
 extern Robo_States gStateB;
@@ -35,8 +43,16 @@ extern Robo_States gStateI;
 extern Robo_States gStateJ;
 extern Robo_States gStateK;
 extern Robo_States gStateL;
-// extern Robo_States gStateM;
-// extern Robo_States gStateN;
+
+extern Robo_States gStateO;
+extern Robo_States gStateP;
+extern Robo_States gStateQ;
+extern Robo_States gStateQ1;
+extern Robo_States gStateQ2;
+extern Robo_States gStateR;
+extern Robo_States gStateR1;
+extern Robo_States gStateR2;
+
 
 Robo_States gStateA(&gStateA_Data, &gStateB);
 Robo_States gStateB(&gStateB_Data, &gStateC);
@@ -50,10 +66,17 @@ Robo_States gStateI(&gStateI_Data, &gStateJ);
 
 Robo_States gStateJ(&gStateJ_Data, &gStateK);
 Robo_States gStateK(&gStateK_Data, &gStateL);
-Robo_States gStateL(&gStateL_Data, &gStateL);
+Robo_States gStateL(&gStateL_Data, &gStateO);
 
-// Robo_States gStateM(&gStateM_Data, &gStateN);
-// Robo_States gStateN(&gStateN_Data, &gStateN);
+Robo_States gStateO(&gStateO_Data, &gStateP);
+Robo_States gStateP(&gStateP_Data, &gStateQ);
+Robo_States gStateQ(&gStateQ_Data, &gStateR);
+Robo_States gStateQ1(&gStateQ1_Data, &gStateR1);
+Robo_States gStateQ2(&gStateQ2_Data, &gStateR2);
+Robo_States gStateR(&gStateR_Data, &gStateR);
+Robo_States gStateR1(&gStateR1_Data, &gStateR);
+Robo_States gStateR2(&gStateR2_Data, &gStateR);
+
 
 void init_GameField();
 
@@ -63,7 +86,7 @@ Processor& Processor::get_Instance(State_Sensor *sen)
         
         init_GameField();
 
-        sRobo_CPU.curr_state_ = &gStateA;
+        sRobo_CPU.curr_state_ = &gStateO;
         sRobo_CPU.sensor_ = sen;
 
         JoyStick& joy = JoyStick::get_Instance(&huart2);
@@ -86,7 +109,7 @@ void Processor::process(Vec3<float> state, State_Vars *&robot_state_vars_)
 {
         uint8_t bounds = sensor_->get_Bounds();
         if (curr_state_->nextStateReached(state, bounds)) {
-                update_State();
+                update_State(bounds);
                 sensor_->change_Sensors(curr_state_->get_ID());
         }
 
@@ -208,7 +231,47 @@ Vec3<float> Processor::control(Vec3<float> state,
         return vels;
 }
 
-void Processor::update_State()
+void Processor::update_State(uint8_t bounds)
 {
+        Field id = curr_state_->get_ID();
+
+        if (id == Field::FIELD_Q) {
+                if ((bounds & (1 << (int)(Face::_6))) && (bounds & (1 << (int)(Face::_7)))) {
+                        // field R
+                        curr_state_ = &gStateR;
+                }
+                else if (bounds & (1 << (int)(Face::_6))) {
+                        // field Q1
+                        curr_state_ = &gStateQ1;
+                }
+                else if (bounds & (1 << (int)(Face::_7))) {
+                        // field Q2
+                        curr_state_ = &gStateQ2;
+                }
+                return;
+        }
+        else if (id == Field::FIELD_Q1) {
+                if ((bounds & (1 << (int)(Face::_6))) && (bounds & (1 << (int)(Face::_7)))) {
+                        // field R
+                        curr_state_ = &gStateR;
+                }
+                else if (bounds & (1 << (int)(Face::_7))) {
+                        // field Q2
+                        curr_state_ = &gStateQ2;
+                }
+                return;
+        }
+        else if (id == Field::FIELD_Q2) {
+                if ((bounds & (1 << (int)(Face::_6))) && (bounds & (1 << (int)(Face::_7)))) {
+                        // field R
+                        curr_state_ = &gStateR;
+                }
+                else if (bounds & (1 << (int)(Face::_6))) {
+                        // field Q1
+                        curr_state_ = &gStateQ1;
+                }
+                return;
+        }
+
         curr_state_ = curr_state_->get_NextState();
 }

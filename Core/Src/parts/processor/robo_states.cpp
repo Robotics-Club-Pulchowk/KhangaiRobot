@@ -219,6 +219,23 @@ bool Robo_States::nextStateReached(Vec3<float> state, uint8_t bounds)
                 return false;
 
         }
+        else if (id == Field::FIELD_Q1) {
+                if (bounds & 1 << (int)(Face::_6)) {
+                        return true;
+                }
+                return false;
+        }
+        else if (id == Field::FIELD_Q2) {
+                if (bounds & 1 << (int)(Face::_7)) {
+                        return true;
+                }
+        }
+        else if (id == Field::FIELD_R || id == Field::FIELD_R1 || id == Field::FIELD_R2) {
+                if ((bounds & 1 << (int)(Face::_6)) && (bounds & 1 << (int)(Face::_7))) {
+                        return true;
+                }
+                return false;
+        }
         // Since the axis of the rectangle are aligned with the axes, we can
         // easily calculate if a point is inside the rectange
         Vec2<float> upper = next_state_->sv_->upper_bounds;

@@ -14,6 +14,7 @@
 
 
 extern State_Vars gStateA_Data;
+extern State_Vars gStateO_Data;
 
 // We should make sure that the robot ony have one instance and it is properly
 // instantiated
@@ -44,7 +45,7 @@ int Robot::init(uint32_t dt_millis)
         int status = (base_status | sensor_status | cpu_status);
 
         // Start from field A
-        robot_state_vars_ = &gStateA_Data;
+        robot_state_vars_ = &gStateO_Data;
         velocities_.set_Values(0,0,0);
 
         initiated_ = true;
