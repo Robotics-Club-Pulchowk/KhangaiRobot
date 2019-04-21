@@ -1,0 +1,97 @@
+#include "DynamixelMotor.h"
+#include "main.h"
+
+// Function Prototypes
+void send_PingReply();
+
+// Following variables are for timing purpose
+unsigned long gLidar_Read_Period = 5;
+unsigned long gLED_Intensity_Read_Period = 100;
+unsigned long gLidar_Read_Time = 0;
+unsigned long gLED_Intensity_Read_Time = 0;
+
+// Following are the addresses of the devices associated with the Arduino Mega
+uint8_t gArduino_Address = 0x00;
+uint8_t gLED_Address = 0x01;
+uint8_t gLidar_Address = 0x02;
+
+// Following variables are used to communicate between stm-board
+// and the arduino
+bool gPing_Command = false;
+bool gSend_Lidar_Data = false;
+
+const uint8_t gRed_LED_Pin = 10;
+const uint8_t gBlue_LED_Pin = 8;
+
+void setup()
+{
+        
+        pinMode(gRed_LED_Pin, OUTPUT);
+        pinMode(gBlue_LED_Pin, OUTPUT);
+        analogWrite(gRed_LED_Pin, 0);
+        analogWrite(gBlue_LED_Pin, 0);
+        
+        (Serial).begin(115200);
+        STM_SERIAL.begin(9600);
+
+
+        // Initialize Lidar in continuous mode
+        pinMode(2, OUTPUT); // Set pin 2 as trigger pin
+        digitalWrite(2, LOW); // Set trigger LOW for continuous read
+        pinMode(3, INPUT); // Set pin 3 as monitor pin
+
+        Serial.println("Hello World!!");
+
+        gLidar_Read_Time = millis();
+        gLED_Intensity_Read_Period = gLidar_Read_Time;
+}
+
+void loop()
+{
+
+        if (STM_SERIAL.available()) {
+                uint8_t c = STM_SERIAL.read();
+                parse_STMByte(c);
+        }
+
+        if (millis() - gLidar_Read_Time > gLidar_Read_Period) {
+                gLidar_Read_Time = millis();
+                // Read lidar data and send it
+                send_LidarDataPack((uint16_t)(read_Lidar()));
+        }
+
+        if (millis() - gLED_Intensity_Read_Time > gLED_Intensity_Read_Period) {
+                gLED_Intensity_Read_Time = millis();
+                // Write LED intensity value
+                uint8_t red = gLED_Intensity_Value & 0x0f;
+                uint8_t blue = (gLED_Intensity_Value & 0xf0) >> 4;
+
+                red = map(red, 0, 15, 0, 255);
+                blue = map(blue, 0, 15, 0, 255);
+
+                // Analogwrite the values
+                analogWrite(gRed_LED_Pin, red);
+                analogWrite(gBlue_LED_Pin, blue);
+        }
+
+        // If ping command is obtained, send ok status
+        if (gPing_Command) {
+                gPing_Command = false;
+                send_PingReply();
+        }
+}
+
+void send_DataPack(uint8_t addr, const uint8_t *buf, uint8_t len)
+{
+        STM_SERIAL.write(START_BYTE);
+        STM_SERIAL.write(addr);
+        for (uint8_t i = 0; i < len; ++i) {
+                STM_SERIAL.write(buf[i]);
+        }
+}
+
+void send_PingReply()
+{
+        uint8_t reply = 0x5A;
+        send_DataPack(gArduino_Address, &reply, 1);
+}
