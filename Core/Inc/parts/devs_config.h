@@ -22,6 +22,8 @@
 extern const uint32_t gMax_Robo_Velocity;
 extern const uint32_t gRated_Robo_Velocity;
 
+extern Arduino_Device gLED_Strip;
+
 // These are the main IMU and the Compass Of the Robot
 extern struct MPU6050 Body_IMU;
 extern struct HMC5883 Body_HMC;

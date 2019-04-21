@@ -23,6 +23,7 @@ struct Enc gXEnc;
 struct Enc gYEnc;
 
 Arduino_Device gXLidar_Dev(0x02, 2);
+Arduino_Device gLED_Strip(0x01, 1);
 
 
 Encoder gXEncoder(&gXEnc, SensorName::XEncoder);
@@ -75,5 +76,5 @@ void Encoders_Init()
 
 void Lidars_Init()
 {
-        gXLidar.set_Outliers(Vec2<float>(5000, 0));
+        gXLidar.set_Outliers(Vec2<float>(3000, 0));
 }

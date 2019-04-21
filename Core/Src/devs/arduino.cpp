@@ -100,7 +100,7 @@ int Arduino_Device::write(uint8_t *buf, uint16_t len)
         pack.buf_len = len;
 
         if (!gSending_Packet) {
-                // gSending_Packet = true;
+                gSending_Packet = true;
 
                 gTxBuffer[0] = pack.start_byte;
                 gTxBuffer[1] = pack.dev_id;

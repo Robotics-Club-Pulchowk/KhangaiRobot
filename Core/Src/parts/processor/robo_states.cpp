@@ -144,7 +144,7 @@ Vec2<float> Robo_States::calc_Velocity(Vec3<float> state, Vec3<float> vel_from_b
         Vec2<float> vel(-vel_from_base.getX(), 0);       // m/s m/s
 
         // Get a new vector to the goal position
-        Vec2<float> del = centre - pos;
+        Vec2<float> del = centre - Vec2<float>(centre.getX() / 1000.0, centre.getY() / 1000.0);
         Vec2<float> del_polar = del.polar();
 
         float rated_vel = (float)(sv_->rated_vel);       // m/s
