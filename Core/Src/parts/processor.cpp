@@ -7,6 +7,7 @@
  */
 
 #include "processor.h"
+#include "devs_config.h"
 
 extern State_Vars gStateA_Data;
 extern State_Vars gStateB_Data;
@@ -54,6 +55,9 @@ Robo_States gStateL(&gStateL_Data, &gStateL);
 
 // Robo_States gStateM(&gStateM_Data, &gStateN);
 // Robo_States gStateN(&gStateN_Data, &gStateN);
+
+static uint8_t fill_Intensity(uint8_t red, uint8_t blue);
+
 
 void init_GameField();
 
@@ -155,6 +159,8 @@ Vec3<float> Processor::manual_control(JoyStick_Command& joy_cmd)
         return vels;
 }
 
+static uint8_t sLast_Mode = 0;
+
 Vec3<float> Processor::control(Vec3<float> state,
                                Vec3<float> vel_from_base,
                                Vec3<float> last_vel,
@@ -193,17 +199,30 @@ Vec3<float> Processor::control(Vec3<float> state,
                 auto_mode = false;
         }
 
+        uint8_t led_val = 0;
+        uint8_t curr_mode = 1;
+
         if (manual_mode) {
+                curr_mode = 0;
                 if (!just_read) {
                         vels = last_vel.mult_EW(0.8);
                 }
                 else {
                         vels = manual_control(joy_command);
                 }
+                led_val = fill_Intensity(0, 15);
         }
         else if (auto_mode) {
+                curr_mode = 1;
                 vels = auto_control(state, vel_from_base, dt_millis);
+                led_val = fill_Intensity(15, 5);
         }
+
+        if (sLast_Mode != curr_mode) {
+                gLED_Strip.write(&led_val, 1);
+        }
+
+        sLast_Mode = curr_mode;
 
         return vels;
 }
@@ -211,4 +230,9 @@ Vec3<float> Processor::control(Vec3<float> state,
 void Processor::update_State()
 {
         curr_state_ = curr_state_->get_NextState();
+}
+
+static uint8_t fill_Intensity(uint8_t red, uint8_t blue)
+{
+        return (red | (blue << 4));
 }
