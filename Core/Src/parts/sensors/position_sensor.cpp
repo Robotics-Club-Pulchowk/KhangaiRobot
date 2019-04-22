@@ -22,9 +22,9 @@ static Exp_Smooth gYLidarAlpha35(0.35);
 //* Required for changing field
 
 // Starting Y-Position
-float gLast_YEncoderValue = 8500;
+float gLast_YEncoderValue = 400;
 // Starting X-Position
-static float gLast_XEncoderValue = 4000;
+static float gLast_XEncoderValue = 0;
 
 //*
 
@@ -194,7 +194,7 @@ void PositionSensor::process_LidarData(float (&lidar)[2], const State_Vars *sv)
         Field id = sv->id;
 
         // Processing XLidar data
-        if ((int)id > (int)(Field::FIELD_J)) {
+        if ((int)id >= (int)(Field::FIELD_P)) {
                 // The fence is at most 2000 mm from robot
                 if (lidar[0] < 2000) {
                         // Lower Fence distance

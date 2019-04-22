@@ -90,7 +90,7 @@ Processor& Processor::get_Instance(State_Sensor *sen)
         
         init_GameField();
 
-        sRobo_CPU.curr_state_ = &gStateO;
+        sRobo_CPU.curr_state_ = &gStateA;
         sRobo_CPU.sensor_ = sen;
 
         JoyStick& joy = JoyStick::get_Instance(&huart2);
@@ -217,7 +217,7 @@ Vec3<float> Processor::control(Vec3<float> state,
         }
 
         Field id = robot_state_vars->id;
-        if (id == Field::FIELD_L) {
+        if (id >= Field::FIELD_L) {
                 manual_mode = true;
                 auto_mode = false;
         }

@@ -155,7 +155,7 @@ Vec3<float> State_Sensor::compensate_Bounds(Vec3<float> pos, Vec3<float> ori, co
                 bound_box_->update();
                 bounds_ = bound_box_->get_Bounds();
 
-                printf("%x\t", bounds_);
+                // printf("%x\t", bounds_);
 
                 if (id == Field::FIELD_J || id == Field::FIELD_L) {
                         //* Look for the robot to touch the fence with face 6
@@ -434,6 +434,12 @@ void State_Sensor::change_Sensors(Field field_id)
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->remove_Sensor(&gXLidar);
+                } break;
+                
+                case Field::FIELD_P : {      // State I
+                        p_sensor_->add_Sensor(&gXEncoder);
+                        p_sensor_->add_Sensor(&gYEncoder);
+                        p_sensor_->add_Sensor(&gXLidar);
                 } break;
 
                 default : {      // Default State
