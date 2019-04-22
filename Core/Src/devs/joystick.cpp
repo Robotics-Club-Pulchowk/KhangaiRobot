@@ -22,8 +22,6 @@ static uint8_t gRx2Data;
 
 static void fill_JoyData(JoyStick_Data *joy, uint8_t data[NUM_JOYSTICK_BYTES]);
 
-static uint8_t sLast_Mode = 2;
-
 JoyStick_Data gJoy;
 uint8_t gJoy_Data_Arr[NUM_JOYSTICK_BYTES];
 static bool gStart_Byte_Rx2 = false;
@@ -174,7 +172,7 @@ void JoyStick::parse_JoyData(JoyStick_Data joy)
 
         #endif
 
-        uint8_t mode = 0;
+        Control_Mode mode = Control_Mode::NONE;
         uint8_t button = joy.button1;
         bool reset_pos = button & _BV(RESET_KEY);
         bool grip_shagai = button & _BV(SHAGAI_GRIP_KEY);
@@ -182,36 +180,25 @@ void JoyStick::parse_JoyData(JoyStick_Data joy)
         float auto_stroke = button & _BV(AUTO_KEY);
 
         if (manual_stroke && auto_stroke) {
-                mode = 1;       // Manual Mode
+                mode = Control_Mode::MANUAL;       // Manual Mode
         }
         else {
                 if (manual_stroke && !auto_stroke) {
-                        mode = 1;       // Manual Mode
+                        mode = Control_Mode::MANUAL;       // Manual Mode
                 }
                 else if (auto_stroke && !manual_stroke) {
-                        mode = 2;       // Automatic Mode
+                        mode = Control_Mode::AUTO;       // Automatic Mode
                 }
                 else {
-                        mode = sLast_Mode;
+                        mode = Control_Mode::NONE;
                 }
-        }
-        sLast_Mode = mode;
-
-        bool manual_mode = false;
-        bool auto_mode = false;
-        if (mode == 1) {
-                manual_mode = true;
-        }
-        else if (mode == 2) {
-                auto_mode = true;
         }
 
         uint8_t brake = joy.rt;
         uint8_t accel = joy.lt;
         
         taskENTER_CRITICAL();
-        Joy_Command.manual_mode = manual_mode;
-        Joy_Command.auto_mode = auto_mode;
+        Joy_Command.mode = mode;
         Joy_Command.reset_pos = reset_pos;
         Joy_Command.vels = vels;
         Joy_Command.brake = brake;

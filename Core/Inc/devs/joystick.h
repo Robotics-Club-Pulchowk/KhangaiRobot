@@ -52,10 +52,15 @@ struct JoyStick_Handle
         Queue<JoyStick_Data, 2> data;
 };
 
+enum class Control_Mode {
+        MANUAL,
+        AUTO,
+        NONE
+};
+
 struct JoyStick_Command
 {
-        bool manual_mode;
-        bool auto_mode;
+        Control_Mode mode;
         bool reset_pos;
         Vec3<float> vels;
         uint8_t brake;
