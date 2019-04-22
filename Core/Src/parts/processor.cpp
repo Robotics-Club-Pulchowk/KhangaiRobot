@@ -182,7 +182,10 @@ Vec3<float> Processor::manual_control(JoyStick_Command& joy_cmd)
         return vels;
 }
 
-static uint8_t sLast_Mode = 0;
+static Control_Mode sLast_Mode = Control_Mode::NONE;
+static bool gSend_LED_Data = false;
+static uint8_t gSend_LED_Data_Num = 5;
+const uint8_t gSend_LED_Data_Max = 5;
 
 Vec3<float> Processor::control(Vec3<float> state,
                                Vec3<float> vel_from_base,
@@ -198,35 +201,36 @@ Vec3<float> Processor::control(Vec3<float> state,
         process(state, robot_state_vars);
 
         JoyStick_Command joy_command;
-        bool auto_mode = true;
-        bool manual_mode = false;
+        Control_Mode mode = Control_Mode::MANUAL;
         bool grip_shagai = false;
         bool reset_pos = false;
 
         bool just_read = false;
-        
+
+        //* Read the parsed joystick data
         if (!joy_stick_->is_Empty()) {
                 joy_command = joy_stick_->parse();
                 just_read = true;
 
-                manual_mode = joy_command.manual_mode;
-                auto_mode = joy_command.auto_mode;
+                mode = joy_command.mode;
                 
                 grip_shagai = joy_command.grip_shagai;
                 reset_pos = joy_command.reset_pos;
         }
 
+        //* Switch to manual mode automatically in state L
         Field id = robot_state_vars->id;
-        if (id >= Field::FIELD_L) {
-                manual_mode = true;
-                auto_mode = false;
+        if (id == Field::FIELD_L) {
+                mode = Control_Mode::MANUAL;
+        }
+        else if (just_read && (mode == Control_Mode::NONE)) {
+                mode = sLast_Mode;
         }
 
         uint8_t led_val = 0;
-        uint8_t curr_mode = 1;
 
-        if (manual_mode) {
-                curr_mode = 0;
+        //* Select Controller on the basis of control mode
+        if (mode == Control_Mode::MANUAL) {
                 if (!just_read) {
                         vels = last_vel.mult_EW(0.8);
                 }
@@ -235,17 +239,27 @@ Vec3<float> Processor::control(Vec3<float> state,
                 }
                 led_val = fill_Intensity(0, 15);
         }
-        else if (auto_mode) {
-                curr_mode = 1;
+        else if (mode == Control_Mode::AUTO) {
                 vels = auto_control(state, vel_from_base, dt_millis);
                 led_val = fill_Intensity(15, 5);
         }
 
-        if (sLast_Mode != curr_mode) {
-                gLED_Strip.write(&led_val, 1);
+        //* Determine if there is change in control mode from the previous one
+        if (sLast_Mode != mode) {
+                gSend_LED_Data = true;
+                sLast_Mode = mode;
         }
 
-        sLast_Mode = curr_mode;
+        //* Send LED data if there is change in control mode
+        if (gSend_LED_Data) {
+                if (--gSend_LED_Data_Num) {
+                        gLED_Strip.write(&led_val, 1);
+                }
+                else {
+                        gSend_LED_Data_Num = gSend_LED_Data_Max;
+                        gSend_LED_Data = false;
+                }
+        }
 
         return vels;
 }
