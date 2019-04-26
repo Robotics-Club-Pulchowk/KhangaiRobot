@@ -29,6 +29,8 @@ bool gSend_Lidar_Data = false;
 
 const uint8_t gRed_LED_Pin = 10;
 const uint8_t gBlue_LED_Pin = 8;
+const uint8_t gExtend_Pneumatic = 21;
+const uint8_t gThrow_Pneumatic = 23;
 
 void setup()
 {
@@ -37,7 +39,14 @@ void setup()
         pinMode(gBlue_LED_Pin, OUTPUT);
         analogWrite(gRed_LED_Pin, 0);
         analogWrite(gBlue_LED_Pin, 0);
-        
+
+        //* Initialize the Pneumatics
+        pinMode(gExtend_Pneumatic, OUTPUT);
+        pinMode(gThrow_Pneumatic, OUTPUT);
+        digitalWrite(gExtend_Pneumatic, HIGH);
+        digitalWrite(gThrow_Pneumatic, HIGH);
+
+        //* Initialize the Serials
         (Serial).begin(115200);
         STM_SERIAL.begin(9600);
 
@@ -51,7 +60,7 @@ void setup()
 
         //* Store current time for periodic update
         gLidar_Read_Time = millis();
-        gLED_Intensity_Read_Period = gLidar_Read_Time;
+        gLED_Intensity_Read_Time = gLidar_Read_Time;
 }
 
 void loop()

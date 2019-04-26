@@ -32,7 +32,7 @@ State_Vars gStateR1_Data;
 State_Vars gStateR2_Data;
 
 
-const uint32_t gMax_Robo_Velocity = 900;        // mm/s
+const uint32_t gMax_Robo_Velocity = 1000;        // mm/s
 const uint32_t gRated_Robo_Velocity = 90;
 
 void init_GameField()
@@ -50,9 +50,9 @@ void init_GameField()
 
         // Defining the state : State B
         gStateB_Data.id = Field::FIELD_B;
-        gStateB_Data.centre = Vec2<float>(1700, 1300);
+        gStateB_Data.centre = Vec2<float>(1600, 1300);
         gStateB_Data.upper_bounds = Vec2<float>(2000, 1700);
-        gStateB_Data.lower_bounds = Vec2<float>(1360, 1200);
+        gStateB_Data.lower_bounds = Vec2<float>(1460, 1200);
         gStateB_Data.last_limit = 1;
         gStateB_Data.ramping_factor = 0.001;
         gStateB_Data.first_limit = gStateA_Data.last_limit;
@@ -94,9 +94,9 @@ void init_GameField()
 
         // Defining the state : State F
         gStateF_Data.id = Field::FIELD_F;
-        gStateF_Data.centre = Vec2<float>(1800, 4100);
-        gStateF_Data.upper_bounds = Vec2<float>(2100, 4300);
-        gStateF_Data.lower_bounds = Vec2<float>(1620, 3800);
+        gStateF_Data.centre = Vec2<float>(1700, 4300);
+        gStateF_Data.upper_bounds = Vec2<float>(2100, 4500);
+        gStateF_Data.lower_bounds = Vec2<float>(1500, 3800);
         gStateF_Data.last_limit = 1;
         gStateF_Data.ramping_factor = 0.001;
         gStateF_Data.first_limit = gStateE_Data.last_limit;
@@ -127,9 +127,9 @@ void init_GameField()
 
         // Defining the state : State I
         gStateI_Data.id = Field::FIELD_I;
-        gStateI_Data.centre = Vec2<float>(1300, 8000);
+        gStateI_Data.centre = Vec2<float>(1300, 8500);
         gStateI_Data.upper_bounds = Vec2<float>(1450, 9000);
-        gStateI_Data.lower_bounds = Vec2<float>(1050, 8230);
+        gStateI_Data.lower_bounds = Vec2<float>(1050, 8330);
         gStateI_Data.last_limit = 0;
         gStateI_Data.ramping_factor = -0.1;
         gStateI_Data.first_limit = 0;
@@ -138,7 +138,7 @@ void init_GameField()
 
         // Defining the state : State J
         gStateJ_Data.id = Field::FIELD_J;
-        gStateJ_Data.centre = Vec2<float>(5500, 8500);
+        gStateJ_Data.centre = Vec2<float>(5500, 8600);
         gStateJ_Data.upper_bounds = Vec2<float>(6500, 9000);
         gStateJ_Data.lower_bounds = Vec2<float>(4300, 7800);
         gStateJ_Data.last_limit = 1;
