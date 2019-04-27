@@ -10,46 +10,17 @@
 #include "defines.h"
 #include "array.h"
 
+#include <math.h>
+
 #define JOYSTICK_START_BYTE     (0xA5)
 #define NUM_JOYSTICK_BYTES      (7)
 
-static JoyStick gJoyStick;
+static JoyStick_Handle gJoyStick;
 static JoyStick_Data gNull_JData;
 
 static uint8_t gRx2Data;
 
 static void fill_JoyData(JoyStick_Data *joy, uint8_t data[NUM_JOYSTICK_BYTES]);
-
-void init_JoyStick(UART_HandleTypeDef *huart)
-{
-        gJoyStick.huart = huart;
-
-        // Null JoyStick Data
-        gNull_JData.button1 = 0;
-        gNull_JData.lt = 0;
-        gNull_JData.rt = 0;
-        gNull_JData.l_hatx = 0;
-        gNull_JData.l_haty = 0;
-        gNull_JData.r_hatx = 0;
-        gNull_JData.r_haty = 0;
-        
-        // __HAL_UART_ENABLE_IT(huart, UART_IT_TC);
-        HAL_UART_Receive_DMA(huart, &gRx2Data, 1);
-}
-
-bool joy_Empty()
-{
-        return gJoyStick.data.is_Empty();
-}
-
-JoyStick_Data read_JoyStick()
-{
-        if (!joy_Empty()) {
-                return gJoyStick.data.lookup();
-        }
-        return gNull_JData;
-}
-
 
 JoyStick_Data gJoy;
 uint8_t gJoy_Data_Arr[NUM_JOYSTICK_BYTES];
@@ -129,14 +100,71 @@ static void use_LEDs(Vec3<float> vels, float tol)
 }
 #endif
 
-static Vec3<float> parse_JoyData(JoyStick_Data joy)
-{
-        int8_t lx = (int8_t)(joy.r_hatx);
-        float vx = (float)(lx) / 128.0;
-        int8_t ly = (int8_t)(joy.r_haty);
-        float vy = (float)(ly) / 128.0;
 
-        Vec3<float> vels(vx, vy, 0);
+JoyStick& JoyStick::get_Instance(UART_HandleTypeDef *huart)
+{
+        static JoyStick sJoy(huart);
+        
+        return sJoy;
+}
+
+int JoyStick::init()
+{
+        gJoyStick.huart = huart_;
+
+        // Null JoyStick Data
+        gNull_JData.button1 = 0;
+        gNull_JData.lt = 0;
+        gNull_JData.rt = 0;
+        gNull_JData.l_hatx = 0;
+        gNull_JData.l_haty = 0;
+        gNull_JData.r_hatx = 0;
+        gNull_JData.r_haty = 0;
+        
+        // __HAL_UART_ENABLE_IT(huart, UART_IT_TC);
+        HAL_UART_Receive_DMA(huart_, &gRx2Data, 1);
+
+        return 0;
+}
+
+bool JoyStick::is_Empty()
+{
+        return gJoyStick.data.is_Empty();
+}
+
+JoyStick_Data JoyStick::read()
+{
+        if (!is_Empty()) {
+                return gJoyStick.data.lookup();
+        }
+        return gNull_JData;
+}
+
+JoyStick_Command& JoyStick::parse()
+{
+        JoyStick_Data joydata = read();
+        parse_JoyData(joydata);
+
+        return Joy_Command;
+}
+
+void JoyStick::parse_JoyData(JoyStick_Data joy)
+{
+        int8_t rx = (int8_t)(joy.r_hatx);
+        float vx = (float)(rx) / 128.0;
+        int8_t ry = (int8_t)(joy.r_haty);
+        float vy = (float)(ry) / 128.0;
+
+        int lx = (int8_t)(joy.l_hatx);
+        float x = (float)(lx) / 128.0;
+        int ly = (int8_t)(joy.l_haty);
+        float y = (float)(ly) / 128.0;
+        float rw = 0;
+        if (!((fabsf(x) < 1e-3f) && (fabsf(y) < 1e-3f))) {
+                rw = atan2f(y,x);
+        }
+
+        Vec3<float> vels(vx, vy, rw);
 
         #ifdef _USE_BOARD_LEDS_FOR_JOYSTICK
 
@@ -144,13 +172,40 @@ static Vec3<float> parse_JoyData(JoyStick_Data joy)
 
         #endif
 
-        return vels;
-}
+        Control_Mode mode = Control_Mode::NONE;
+        uint8_t button = joy.button1;
+        bool reset_pos = button & _BV(RESET_KEY);
+        bool grip_shagai = button & _BV(SHAGAI_GRIP_KEY);
+        bool throw_shagai = button & _BV(THROW_SHAGAI_KEY);
 
-Vec3<float> parse_JoyStick()
-{
-        JoyStick_Data joydata = read_JoyStick();
-        Vec3<float> vels = parse_JoyData(joydata);
+        float manual_stroke = button & _BV(MANUAL_KEY);
+        float auto_stroke = button & _BV(AUTO_KEY);
 
-        return vels;
+        if (manual_stroke && auto_stroke) {
+                mode = Control_Mode::MANUAL;       // Manual Mode
+        }
+        else {
+                if (manual_stroke && !auto_stroke) {
+                        mode = Control_Mode::MANUAL;       // Manual Mode
+                }
+                else if (auto_stroke && !manual_stroke) {
+                        mode = Control_Mode::AUTO;       // Automatic Mode
+                }
+                else {
+                        mode = Control_Mode::NONE;
+                }
+        }
+
+        uint8_t brake = joy.rt;
+        uint8_t accel = joy.lt;
+        
+        taskENTER_CRITICAL();
+        Joy_Command.mode = mode;
+        Joy_Command.reset_pos = reset_pos;
+        Joy_Command.vels = vels;
+        Joy_Command.brake = brake;
+        Joy_Command.accel = accel;
+        Joy_Command.grip_shagai = grip_shagai;
+        Joy_Command.throw_shagai = throw_shagai;
+        taskEXIT_CRITICAL();
 }

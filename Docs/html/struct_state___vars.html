@@ -117,12 +117,16 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a4ca7c5367ada6f45404ddc43a0389616"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89a1879a9d7a076268a0a74b9426a927"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vec2.html">Vec2</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_state___vars.html#a89a1879a9d7a076268a0a74b9426a927">lower_bounds</a></td></tr>
 <tr class="separator:a89a1879a9d7a076268a0a74b9426a927"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63504a3bc2ddc9586158b57b16ea9679"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_state___vars.html#a63504a3bc2ddc9586158b57b16ea9679">max_limit</a></td></tr>
-<tr class="separator:a63504a3bc2ddc9586158b57b16ea9679"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c30b065d0708642542181e7dff074d5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_state___vars.html#a8c30b065d0708642542181e7dff074d5">last_limit</a></td></tr>
+<tr class="separator:a8c30b065d0708642542181e7dff074d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94bb66f36326723153d9ccc565dd3fd8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_state___vars.html#a94bb66f36326723153d9ccc565dd3fd8">ramping_factor</a></td></tr>
 <tr class="separator:a94bb66f36326723153d9ccc565dd3fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9eab6ebbecd60183449257b3d35335a6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_state___vars.html#a9eab6ebbecd60183449257b3d35335a6">min_limit</a></td></tr>
-<tr class="separator:a9eab6ebbecd60183449257b3d35335a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a367b4620274f645adb4268d53f6eaf37"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_state___vars.html#a367b4620274f645adb4268d53f6eaf37">first_limit</a></td></tr>
+<tr class="separator:a367b4620274f645adb4268d53f6eaf37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69af19703b917df0d75642123158df36"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_state___vars.html#a69af19703b917df0d75642123158df36">max_vel</a></td></tr>
+<tr class="separator:a69af19703b917df0d75642123158df36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a630f4b528df60d077e9310340c7a1746"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_state___vars.html#a630f4b528df60d077e9310340c7a1746">rated_vel</a></td></tr>
+<tr class="separator:a630f4b528df60d077e9310340c7a1746"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a60d7f9a27264c4f57ec914d1e1889084"></a>
@@ -133,6 +137,20 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_vec2.html">Vec2</a>&lt;float&gt; State_Vars::centre</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a367b4620274f645adb4268d53f6eaf37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a367b4620274f645adb4268d53f6eaf37">&#9670;&nbsp;</a></span>first_limit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float State_Vars::first_limit</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -153,6 +171,20 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a8c30b065d0708642542181e7dff074d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c30b065d0708642542181e7dff074d5">&#9670;&nbsp;</a></span>last_limit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float State_Vars::last_limit</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a89a1879a9d7a076268a0a74b9426a927"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a89a1879a9d7a076268a0a74b9426a927">&#9670;&nbsp;</a></span>lower_bounds</h2>
 
@@ -167,28 +199,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a63504a3bc2ddc9586158b57b16ea9679"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63504a3bc2ddc9586158b57b16ea9679">&#9670;&nbsp;</a></span>max_limit</h2>
+<a id="a69af19703b917df0d75642123158df36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69af19703b917df0d75642123158df36">&#9670;&nbsp;</a></span>max_vel</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float State_Vars::max_limit</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9eab6ebbecd60183449257b3d35335a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9eab6ebbecd60183449257b3d35335a6">&#9670;&nbsp;</a></span>min_limit</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float State_Vars::min_limit</td>
+          <td class="memname">float State_Vars::max_vel</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -203,6 +221,20 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">float State_Vars::ramping_factor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a630f4b528df60d077e9310340c7a1746"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a630f4b528df60d077e9310340c7a1746">&#9670;&nbsp;</a></span>rated_vel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float State_Vars::rated_vel</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -224,7 +256,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive-Play/Core/Inc/parts/processor/<a class="el" href="robo__states_8h_source.html">robo_states.h</a></li>
+<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot-Play/Core/Inc/parts/processor/<a class="el" href="robo__states_8h_source.html">robo_states.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

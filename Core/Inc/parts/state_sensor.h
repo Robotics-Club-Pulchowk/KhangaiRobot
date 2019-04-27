@@ -11,6 +11,7 @@
 
 #include "vec3.h"
 #include "position_sensor.h"
+#include "bound_box.h"
 
 // SOme forward declarations
 enum class Field;
@@ -35,12 +36,20 @@ public:
         void remove_PSensor(Sensor<float> *sen) { p_sensor_->remove_Sensor(sen); }
 
         void change_Sensors(Field field_id);
+        uint8_t get_Bounds();
 
 private:
         PositionSensor *p_sensor_;
 
+        Bound_Box *bound_box_;
+        uint8_t bounds_;
+
+        bool is_first_ori_;
+        Vec3<float> first_ori_;
+
         State_Sensor() { }
         Vec3<float> read_Orientation(Vec3<float> base_state, uint32_t dt_millis);
+        Vec3<float> compensate_Bounds(Vec3<float> pos, Vec3<float> ori, const State_Vars *sv);
 };
 
 #endif // !_STATE_SENSOR_H_

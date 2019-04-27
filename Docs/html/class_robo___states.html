@@ -124,12 +124,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a035e7a63252a49a4424aafe02cfd14a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cb41a7008686fc27662a2abd00c7e69"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robo___states.html#a5cb41a7008686fc27662a2abd00c7e69">~Robo_States</a> ()</td></tr>
 <tr class="separator:a5cb41a7008686fc27662a2abd00c7e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80a3aa889e572b044f4355e4ab04e786"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robo___states.html#a80a3aa889e572b044f4355e4ab04e786">calc_RoboVelocity</a> ()</td></tr>
-<tr class="separator:a80a3aa889e572b044f4355e4ab04e786"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96e4be77ac27979c68dccfa93d90d883"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robo___states.html#a96e4be77ac27979c68dccfa93d90d883">calc_RoboVelocity</a> (<a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; state, uint32_t dt_millis)</td></tr>
+<tr class="separator:a96e4be77ac27979c68dccfa93d90d883"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c4368a7db98e682198ecd564fd2d28f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robo___states.html#a0c4368a7db98e682198ecd564fd2d28f">calc_AngleOfAttack</a> (<a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; state, float v, uint32_t dt_millis)</td></tr>
 <tr class="separator:a0c4368a7db98e682198ecd564fd2d28f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefb2cb8a8757a4638e2ee70892aa293a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robo___states.html#aefb2cb8a8757a4638e2ee70892aa293a">nextStateReached</a> (<a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; state)</td></tr>
-<tr class="separator:aefb2cb8a8757a4638e2ee70892aa293a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a265781f9c854d4fc1c959f7b26ca39cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vec2.html">Vec2</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robo___states.html#a265781f9c854d4fc1c959f7b26ca39cc">calc_Velocity</a> (<a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; state, <a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; vel_from_base, uint32_t dt_millis)</td></tr>
+<tr class="separator:a265781f9c854d4fc1c959f7b26ca39cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29597d9c80e525223e53e9120d3fa2b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robo___states.html#a29597d9c80e525223e53e9120d3fa2b6">nextStateReached</a> (<a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; state, uint8_t bounds)</td></tr>
+<tr class="separator:a29597d9c80e525223e53e9120d3fa2b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b991441c08e4ddef51f6a4683d172ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_robo___states.html">Robo_States</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robo___states.html#a2b991441c08e4ddef51f6a4683d172ed">get_NextState</a> ()</td></tr>
 <tr class="separator:a2b991441c08e4ddef51f6a4683d172ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52979a290d5b8010c6478d76db4f167a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="robo__states_8h.html#a1e35064f4b70226adc63b8fe1af7ddf8">Field</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robo___states.html#a52979a290d5b8010c6478d76db4f167a">get_ID</a> ()</td></tr>
@@ -307,8 +309,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a80a3aa889e572b044f4355e4ab04e786"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80a3aa889e572b044f4355e4ab04e786">&#9670;&nbsp;</a></span>calc_RoboVelocity()</h2>
+<a id="a96e4be77ac27979c68dccfa93d90d883"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96e4be77ac27979c68dccfa93d90d883">&#9670;&nbsp;</a></span>calc_RoboVelocity()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -316,11 +318,86 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">float Robo_States::calc_RoboVelocity </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>dt_millis</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a265781f9c854d4fc1c959f7b26ca39cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a265781f9c854d4fc1c959f7b26ca39cc">&#9670;&nbsp;</a></span>calc_Velocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vec2.html">Vec2</a>&lt; float &gt; Robo_States::calc_Velocity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>vel_from_base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>dt_millis</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_robo___states_a265781f9c854d4fc1c959f7b26ca39cc_cgraph.png" border="0" usemap="#class_robo___states_a265781f9c854d4fc1c959f7b26ca39cc_cgraph" alt=""/></div>
+<map name="class_robo___states_a265781f9c854d4fc1c959f7b26ca39cc_cgraph" id="class_robo___states_a265781f9c854d4fc1c959f7b26ca39cc_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,233,188,260"/>
+<area shape="rect"  href="class_vec3.html#ad259e243f6678730d990acbae2cdff57" title=" " alt="" coords="256,5,341,32"/>
+<area shape="rect"  href="class_vec2.html#ab9c6aa483fc884d65a0f50a6426dce04" title=" " alt="" coords="410,132,495,159"/>
+<area shape="rect"  href="class_vec2.html#a0ab61d333f91ee0c26a8cdf094fd5c4f" title=" " alt="" coords="255,107,343,133"/>
+<area shape="rect"  href="min__accel_8h.html#aa220a3a494712e400d345da12382a22c" title=" " alt="" coords="258,157,339,184"/>
+<area shape="rect"  href="class_vec2.html#ab34c86af20c627cd5ed0e1a973a43fa3" title=" " alt="" coords="409,195,496,221"/>
+<area shape="rect"  href="class_vec3.html#a8eeb16262b7e619f081a1ba94df098f8" title=" " alt="" coords="255,259,342,285"/>
+<area shape="rect"  href="calculus_8h.html#a679e4fd5ff87eefcbe0e9e50c8ea98ee" title=" " alt="" coords="267,309,331,336"/>
+<area shape="rect"  href="polynomial_8h.html#aaff274ab280f485fd3e4feef1aa88ef7" title=" " alt="" coords="268,360,329,387"/>
+<area shape="rect"  href="class_vec2.html#a238a918f6d2695dd187a9778982a1769" title=" " alt="" coords="236,411,361,437"/>
+<area shape="rect"  href="class_vec2.html#aec2b21ff78bf3a2e20a044e1ab7d4b53" title=" " alt="" coords="256,461,341,488"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_robo___states_a265781f9c854d4fc1c959f7b26ca39cc_icgraph.png" border="0" usemap="#class_robo___states_a265781f9c854d4fc1c959f7b26ca39cc_icgraph" alt=""/></div>
+<map name="class_robo___states_a265781f9c854d4fc1c959f7b26ca39cc_icgraph" id="class_robo___states_a265781f9c854d4fc1c959f7b26ca39cc_icgraph">
+<area shape="rect"  title=" " alt="" coords="683,5,865,32"/>
+<area shape="rect"  href="class_processor.html#ad8a55cdfd1d1f42c3bd454a21ef0eb4d" title=" " alt="" coords="475,5,635,32"/>
+<area shape="rect"  href="class_processor.html#a08eb6304c0993769d125cc8186cb51ac" title=" " alt="" coords="299,5,427,32"/>
+<area shape="rect"  href="class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,5,251,32"/>
+<area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,5,100,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -388,6 +465,21 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_robo___states_a52979a290d5b8010c6478d76db4f167a_icgraph.png" border="0" usemap="#class_robo___states_a52979a290d5b8010c6478d76db4f167a_icgraph" alt=""/></div>
+<map name="class_robo___states_a52979a290d5b8010c6478d76db4f167a_icgraph" id="class_robo___states_a52979a290d5b8010c6478d76db4f167a_icgraph">
+<area shape="rect"  title=" " alt="" coords="917,56,1060,83"/>
+<area shape="rect"  href="class_processor.html#ab3e919f3aa7b2e7968815d2e056e4067" title=" " alt="" coords="710,5,817,32"/>
+<area shape="rect"  href="class_processor.html#a1e529fa62420f020ef760f4a6259ed1e" title=" " alt="" coords="475,56,609,83"/>
+<area shape="rect"  href="class_robo___states.html#a29597d9c80e525223e53e9120d3fa2b6" title=" " alt="" coords="657,107,869,133"/>
+<area shape="rect"  href="class_robot.html#abb7f05b4906d4e65fc2e37995b3646bf" title=" " alt="" coords="322,5,403,32"/>
+<area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,31,100,57"/>
+<area shape="rect"  href="class_processor.html#a08eb6304c0993769d125cc8186cb51ac" title=" " alt="" coords="299,56,427,83"/>
+<area shape="rect"  href="class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,56,251,83"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -418,8 +510,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_robo___states_a2b991441c08e4ddef51f6a4683d172ed_icgraph.png" border="0" usemap="#class_robo___states_a2b991441c08e4ddef51f6a4683d172ed_icgraph" alt=""/></div>
 <map name="class_robo___states_a2b991441c08e4ddef51f6a4683d172ed_icgraph" id="class_robo___states_a2b991441c08e4ddef51f6a4683d172ed_icgraph">
-<area shape="rect"  title=" " alt="" coords="220,5,408,32"/>
-<area shape="rect"  href="class_processor.html#a0b7eaf28eed6010ec0224175d713b763" title=" " alt="" coords="5,5,172,32"/>
+<area shape="rect"  title=" " alt="" coords="872,5,1060,32"/>
+<area shape="rect"  href="class_processor.html#a0b7eaf28eed6010ec0224175d713b763" title=" " alt="" coords="657,5,824,32"/>
+<area shape="rect"  href="class_processor.html#a1e529fa62420f020ef760f4a6259ed1e" title=" " alt="" coords="475,5,609,32"/>
+<area shape="rect"  href="class_processor.html#a08eb6304c0993769d125cc8186cb51ac" title=" " alt="" coords="299,5,427,32"/>
+<area shape="rect"  href="class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,5,251,32"/>
+<area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,5,100,32"/>
 </map>
 </div>
 
@@ -447,6 +543,18 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_robo___states_a6e108f35f1785617577788d4d4df2d71_icgraph.png" border="0" usemap="#class_robo___states_a6e108f35f1785617577788d4d4df2d71_icgraph" alt=""/></div>
+<map name="class_robo___states_a6e108f35f1785617577788d4d4df2d71_icgraph" id="class_robo___states_a6e108f35f1785617577788d4d4df2d71_icgraph">
+<area shape="rect"  title=" " alt="" coords="657,5,819,32"/>
+<area shape="rect"  href="class_processor.html#a1e529fa62420f020ef760f4a6259ed1e" title=" " alt="" coords="475,5,609,32"/>
+<area shape="rect"  href="class_processor.html#a08eb6304c0993769d125cc8186cb51ac" title=" " alt="" coords="299,5,427,32"/>
+<area shape="rect"  href="class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,5,251,32"/>
+<area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,5,100,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -511,8 +619,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="aefb2cb8a8757a4638e2ee70892aa293a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefb2cb8a8757a4638e2ee70892aa293a">&#9670;&nbsp;</a></span>nextStateReached()</h2>
+<a id="a29597d9c80e525223e53e9120d3fa2b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29597d9c80e525223e53e9120d3fa2b6">&#9670;&nbsp;</a></span>nextStateReached()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -521,21 +629,44 @@ Here is the caller graph for this function:</div>
           <td class="memname">bool Robo_States::nextStateReached </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td>
-          <td class="paramname"><em>state</em></td><td>)</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>bounds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_robo___states_aefb2cb8a8757a4638e2ee70892aa293a_cgraph.png" border="0" usemap="#class_robo___states_aefb2cb8a8757a4638e2ee70892aa293a_cgraph" alt=""/></div>
-<map name="class_robo___states_aefb2cb8a8757a4638e2ee70892aa293a_cgraph" id="class_robo___states_aefb2cb8a8757a4638e2ee70892aa293a_cgraph">
-<area shape="rect"  title=" " alt="" coords="5,81,217,108"/>
-<area shape="rect"  href="class_vec2.html#ab9c6aa483fc884d65a0f50a6426dce04" title=" " alt="" coords="266,5,351,32"/>
-<area shape="rect"  href="class_vec2.html#ab34c86af20c627cd5ed0e1a973a43fa3" title=" " alt="" coords="265,56,352,83"/>
-<area shape="rect"  href="class_vec3.html#ad259e243f6678730d990acbae2cdff57" title=" " alt="" coords="266,107,351,133"/>
-<area shape="rect"  href="class_vec3.html#a8eeb16262b7e619f081a1ba94df098f8" title=" " alt="" coords="265,157,352,184"/>
+<div class="center"><img src="class_robo___states_a29597d9c80e525223e53e9120d3fa2b6_cgraph.png" border="0" usemap="#class_robo___states_a29597d9c80e525223e53e9120d3fa2b6_cgraph" alt=""/></div>
+<map name="class_robo___states_a29597d9c80e525223e53e9120d3fa2b6_cgraph" id="class_robo___states_a29597d9c80e525223e53e9120d3fa2b6_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,107,217,133"/>
+<area shape="rect"  href="class_robo___states.html#a52979a290d5b8010c6478d76db4f167a" title=" " alt="" coords="265,5,408,32"/>
+<area shape="rect"  href="class_vec2.html#ab9c6aa483fc884d65a0f50a6426dce04" title=" " alt="" coords="294,56,379,83"/>
+<area shape="rect"  href="class_vec2.html#ab34c86af20c627cd5ed0e1a973a43fa3" title=" " alt="" coords="293,107,380,133"/>
+<area shape="rect"  href="class_vec3.html#ad259e243f6678730d990acbae2cdff57" title=" " alt="" coords="294,157,379,184"/>
+<area shape="rect"  href="class_vec3.html#a8eeb16262b7e619f081a1ba94df098f8" title=" " alt="" coords="293,208,380,235"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_robo___states_a29597d9c80e525223e53e9120d3fa2b6_icgraph.png" border="0" usemap="#class_robo___states_a29597d9c80e525223e53e9120d3fa2b6_icgraph" alt=""/></div>
+<map name="class_robo___states_a29597d9c80e525223e53e9120d3fa2b6_icgraph" id="class_robo___states_a29597d9c80e525223e53e9120d3fa2b6_icgraph">
+<area shape="rect"  title=" " alt="" coords="657,5,869,32"/>
+<area shape="rect"  href="class_processor.html#a1e529fa62420f020ef760f4a6259ed1e" title=" " alt="" coords="475,5,609,32"/>
+<area shape="rect"  href="class_processor.html#a08eb6304c0993769d125cc8186cb51ac" title=" " alt="" coords="299,5,427,32"/>
+<area shape="rect"  href="class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,5,251,32"/>
+<area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,5,100,32"/>
 </map>
 </div>
 
@@ -725,8 +856,8 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive-Play/Core/Inc/parts/processor/<a class="el" href="robo__states_8h_source.html">robo_states.h</a></li>
-<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive-Play/Core/Src/parts/processor/<a class="el" href="robo__states_8cpp.html">robo_states.cpp</a></li>
+<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot-Play/Core/Inc/parts/processor/<a class="el" href="robo__states_8h_source.html">robo_states.h</a></li>
+<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot-Play/Core/Src/parts/processor/<a class="el" href="robo__states_8cpp.html">robo_states.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

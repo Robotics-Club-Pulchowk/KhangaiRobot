@@ -27,6 +27,9 @@ State_Sensor& State_Sensor::get_Instance()
         PositionSensor &p_sens = PositionSensor::get_Instance();
         sState_Sensor_Instance.p_sensor_ = &p_sens;
 
+        Bound_Box &box = Bound_Box::get_Instance();
+        sState_Sensor_Instance.bound_box_ = &box;
+
         return sState_Sensor_Instance;
 }
 
@@ -46,6 +49,7 @@ State_Sensor& State_Sensor::get_Instance()
 //! Not yet implemented
 int State_Sensor::init(uint32_t dt_millis)
 {
+
         IMU_Init();
         Stepper_Init();
         Lidars_Init();
@@ -84,6 +88,12 @@ int State_Sensor::init(uint32_t dt_millis)
         
         // HMC5883_Calibrate(&Body_HMC, &IMU_Stepper, 200);
         gOmega_Bias = MPU6050_Calc_OmegaBias(&Body_IMU, 1000);
+
+        bound_box_->init();
+        bounds_ = 0;
+
+        // Initialize variables
+        is_first_ori_ = true;
         
         return 0;
 }
@@ -108,28 +118,100 @@ int State_Sensor::init(uint32_t dt_millis)
  * 2) Read Position of the robot with Position_Sensor
  * </pre>
  */
-static Vec3<float> gFirst_Orientation;
-static bool gIsFirstOrientationReading = true;
-Vec3<float> State_Sensor::read_State(Vec3<float> base_state, const State_Vars *sv, uint32_t dt_millis)
+Vec3<float> State_Sensor::read_State(Vec3<float> base_state, const State_Vars *curr_sv, uint32_t dt_millis)
 {
         Vec3<float> state;
         Vec3<float> pos;
+        Vec3<float> dori;
 
         Vec3<float> ori = read_Orientation(base_state, dt_millis);
         // ori.print();
         // printf("\n");
 
-        if (gIsFirstOrientationReading) {
-                gIsFirstOrientationReading = false;
-                gFirst_Orientation = ori;
+        if (is_first_ori_) {
+                is_first_ori_ = false;
+                first_ori_ = ori;
         }
         else {
-                pos = p_sensor_->read_Position(ori - gFirst_Orientation, base_state, sv, dt_millis);
+                dori = ori - first_ori_;
+                pos = p_sensor_->read_Position(dori, base_state, curr_sv, dt_millis);
+                state.set_Values(pos.getX(), pos.getY(), dori.getZ());   // mm mm deg
+
+                state = compensate_Bounds(state, ori, curr_sv);
         }
 
-        state.set_Values(pos.getX(), pos.getY(), ori.getZ());   // mm mm deg
-
         return state;
+}
+
+/**
+ ** Compensates the position values based on the readings from limit switches
+ */
+Vec3<float> State_Sensor::compensate_Bounds(Vec3<float> pos, Vec3<float> ori, const State_Vars *curr_sv)
+{
+        Field id = curr_sv->id;
+
+        if ((int)id >= (int)(Field::FIELD_J)) {
+
+                bound_box_->update();
+                bounds_ = bound_box_->get_Bounds();
+
+                // printf("%x\t", bounds_);
+
+                if (id == Field::FIELD_J || id == Field::FIELD_L) {
+                        //* Look for the robot to touch the fence with face 6
+                        if (bounds_ & (1 << (int)(Face::_6))) {
+                                //* Face 6 has touched the fence
+                                pos.setY(8350);
+                                
+                                //* Read face 6 value and reset angle here
+                                uint8_t face6 = bound_box_->get_Bound(6);
+                                if ((face6 & (1 << 0)) && (face6 & (1 << 1))) {
+                                        first_ori_ = ori;
+                                        pos.setZ(0);
+                                }
+                        }
+                }
+
+                else if (id == Field::FIELD_K) {
+                        //* Look for the robot to touch the fence with face 6 & 8
+                        if (bounds_ & (1 << (int)(Face::_6))) {
+                                //* Face 6 has touched the fence
+                                pos.setY(8350);
+                        }
+                        if (bounds_ & (1 << (int)(Face::_8))) {
+                                //* Face 8 has touched the fence
+                                pos.setX(6000);
+                        }
+                        
+                        //* Read face 6 & 8 value and reset angle here
+                        uint8_t face6 = bound_box_->get_Bound(6);
+                        if ((face6 & (1 << 0)) && (face6 & (1 << 1))) {
+                                first_ori_ = ori;
+                                pos.setZ(0);
+                        }
+                        uint8_t face8 = bound_box_->get_Bound(8);
+                        if ((face8 & (1 << 0)) && (face8 & (1 << 1))) {
+                                first_ori_ = ori;
+                                pos.setZ(0);
+                        }
+                }
+                else if (id == Field::FIELD_Q || id == Field::FIELD_Q1 || id == Field::FIELD_Q2) {
+                        //* Look for the robot to touch the fence with face 6 & 8
+                        if (bounds_ & (1 << (int)(Face::_6))) {
+                                //* Face 6 has touched the fence
+                                pos.setY(4350);
+                        }
+                        if (bounds_ & (1 << (int)(Face::_7))) {
+                                //* Face 8 has touched the fence
+                                pos.setX(3800);
+                        }
+                        
+                }
+
+                p_sensor_->update_State(pos);
+        }
+
+        return pos;
 }
 
 
@@ -353,6 +435,12 @@ void State_Sensor::change_Sensors(Field field_id)
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->remove_Sensor(&gXLidar);
                 } break;
+                
+                case Field::FIELD_P : {      // State I
+                        p_sensor_->add_Sensor(&gXEncoder);
+                        p_sensor_->add_Sensor(&gYEncoder);
+                        p_sensor_->add_Sensor(&gXLidar);
+                } break;
 
                 default : {      // Default State
                         p_sensor_->add_Sensor(&gXEncoder);
@@ -360,4 +448,9 @@ void State_Sensor::change_Sensors(Field field_id)
                         p_sensor_->remove_Sensor(&gXLidar);
                 }
         }
+}
+
+uint8_t State_Sensor::get_Bounds()
+{
+        return bounds_;
 }

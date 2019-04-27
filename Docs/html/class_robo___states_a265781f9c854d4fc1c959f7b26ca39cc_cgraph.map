@@ -1,0 +1,13 @@
+<map id="Robo_States::calc_Velocity" name="Robo_States::calc_Velocity">
+<area shape="rect" id="node1" title=" " alt="" coords="5,233,188,260"/>
+<area shape="rect" id="node2" href="$class_vec3.html#ad259e243f6678730d990acbae2cdff57" title=" " alt="" coords="256,5,341,32"/>
+<area shape="rect" id="node3" href="$class_vec2.html#ab9c6aa483fc884d65a0f50a6426dce04" title=" " alt="" coords="410,132,495,159"/>
+<area shape="rect" id="node4" href="$class_vec2.html#a0ab61d333f91ee0c26a8cdf094fd5c4f" title=" " alt="" coords="255,107,343,133"/>
+<area shape="rect" id="node5" href="$min__accel_8h.html#aa220a3a494712e400d345da12382a22c" title=" " alt="" coords="258,157,339,184"/>
+<area shape="rect" id="node6" href="$class_vec2.html#ab34c86af20c627cd5ed0e1a973a43fa3" title=" " alt="" coords="409,195,496,221"/>
+<area shape="rect" id="node7" href="$class_vec3.html#a8eeb16262b7e619f081a1ba94df098f8" title=" " alt="" coords="255,259,342,285"/>
+<area shape="rect" id="node8" href="$calculus_8h.html#a679e4fd5ff87eefcbe0e9e50c8ea98ee" title=" " alt="" coords="267,309,331,336"/>
+<area shape="rect" id="node9" href="$polynomial_8h.html#aaff274ab280f485fd3e4feef1aa88ef7" title=" " alt="" coords="268,360,329,387"/>
+<area shape="rect" id="node10" href="$class_vec2.html#a238a918f6d2695dd187a9778982a1769" title=" " alt="" coords="236,411,361,437"/>
+<area shape="rect" id="node11" href="$class_vec2.html#aec2b21ff78bf3a2e20a044e1ab7d4b53" title=" " alt="" coords="256,461,341,488"/>
+</map>

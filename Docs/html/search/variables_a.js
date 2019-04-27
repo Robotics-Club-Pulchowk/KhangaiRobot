@@ -1,12 +1,7 @@
 var searchData=
 [
-  ['l_5ferr_5f',['l_err_',['../class_discrete___p_i_d.html#a20866866cf564262c74dabef26cc0372',1,'Discrete_PID']]],
-  ['l_5foutput_5f',['l_output_',['../class_discrete___p_i_d.html#a1eecb5b2126d7f6787db1004f6d17632',1,'Discrete_PID']]],
-  ['last_5fdata_5f',['last_data_',['../class_lidar.html#a745be337f0c24970792847617a780d8a',1,'Lidar']]],
-  ['last_5foutput_5f',['last_output_',['../class_exp___smooth.html#aff65e096d091a21d1cec4fb5b7300269',1,'Exp_Smooth']]],
-  ['ll_5ferr_5f',['ll_err_',['../class_discrete___p_i_d.html#aeacdfd2929599c6217f8cd06df89eb21',1,'Discrete_PID']]],
-  ['loggingbuffer',['loggingBuffer',['../freertos_8c.html#add75dd136ea001eb3fd79505a5dd6f74',1,'freertos.c']]],
-  ['loggingcontrolblock',['loggingControlBlock',['../freertos_8c.html#ad6c5e2d6e0121feedc4a1dc0cd409c48',1,'freertos.c']]],
-  ['logginghandle',['loggingHandle',['../freertos_8c.html#aefad70a33a1e456f1c41c271cf80ea33',1,'freertos.c']]],
-  ['lower_5fbounds',['lower_bounds',['../struct_state___vars.html#a89a1879a9d7a076268a0a74b9426a927',1,'State_Vars']]]
+  ['k_5f',['K_',['../class_kalman___filter.html#a28eb4e662deea59bae39358f9aba02e3',1,'Kalman_Filter']]],
+  ['khangai_5frobot',['Khangai_Robot',['../robo__tasks_8cpp.html#a7a3cf6b9f0c8b3b0a906e86c1ed920d1',1,'robo_tasks.cpp']]],
+  ['kv_5f',['kv_',['../class_kalman___filter.html#a21a6d19d0a7772e4d0156bb37e6600d7',1,'Kalman_Filter']]],
+  ['kv_5finit_5f',['kv_init_',['../class_kalman___filter.html#acbf55b53754b79f0e97a6bfadcc4694e',1,'Kalman_Filter']]]
 ];

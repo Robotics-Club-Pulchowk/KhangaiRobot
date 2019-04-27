@@ -1,12 +1,14 @@
 var searchData=
 [
   ['d_5f',['d_',['../class_p_i_d___algorithm.html#a30ae77c089ff5638d5b3e8203add778d',1,'PID_Algorithm']]],
+  ['data',['data',['../struct_joy_stick___handle.html#a91dab1d32a095eb6fbf6e38b3105e293',1,'JoyStick_Handle']]],
   ['data_5fcache_5fenable',['DATA_CACHE_ENABLE',['../stm32f4xx__hal__conf_8h.html#a5b4c32a40cf49b06c0d761e385949a6b',1,'stm32f4xx_hal_conf.h']]],
   ['debugmon_5fhandler',['DebugMon_Handler',['../stm32f4xx__it_8h.html#adbdfb05858cc36fc520974df37ec3cb0',1,'DebugMon_Handler(void):&#160;stm32f4xx_it.c'],['../stm32f4xx__it_8c.html#adbdfb05858cc36fc520974df37ec3cb0',1,'DebugMon_Handler(void):&#160;stm32f4xx_it.c']]],
   ['defaulttaskbuffer',['defaultTaskBuffer',['../freertos_8c.html#a2e15b71e81b60cddde066649a25ec45b',1,'freertos.c']]],
   ['defaulttaskcontrolblock',['defaultTaskControlBlock',['../freertos_8c.html#aca18732f09ae696fd34b94d393dc9a42',1,'freertos.c']]],
   ['defaulttaskhandle',['defaultTaskHandle',['../freertos_8c.html#aa658fe134a5d1309d7a15c8116fa142c',1,'freertos.c']]],
   ['defines_2eh',['defines.h',['../defines_8h.html',1,'']]],
+  ['del_5f',['del_',['../class_moore___machine.html#afab3d2fffc1038119008db7712132f75',1,'Moore_Machine']]],
   ['denit',['denit',['../class_arduino___device.html#afb8bef53be51ba2625fd839da4a6566a',1,'Arduino_Device::denit()'],['../class_encoder.html#a089f7d0c49002e4da40600f71e8c0e60',1,'Encoder::denit()'],['../class_lidar.html#a9622a485032c9a222a7f7e9530f32044',1,'Lidar::denit()'],['../class_sensor.html#a00caa71627e1df54312d61186b7ec609',1,'Sensor::denit()']]],
   ['dev_5fid',['dev_id',['../struct_arduino___packet.html#a0f260b041e4ed1bb3279364b97410c6f',1,'Arduino_Packet']]],
   ['device_5ferror',['DEVICE_ERROR',['../error_8h.html#a2c3e4bb40f36b262a5214e2da2bca9c5a305723330ef3e77780d061f8979d0d05',1,'error.h']]],
@@ -22,6 +24,7 @@ var searchData=
   ['dma_2ec',['dma.c',['../dma_8c.html',1,'']]],
   ['dma_2eh',['dma.h',['../dma_8h.html',1,'']]],
   ['dma1_5fstream1_5firqhandler',['DMA1_Stream1_IRQHandler',['../stm32f4xx__it_8h.html#a31783ba032a9c7268a10ba2b4c59a9fd',1,'DMA1_Stream1_IRQHandler(void):&#160;stm32f4xx_it.c'],['../stm32f4xx__it_8c.html#a31783ba032a9c7268a10ba2b4c59a9fd',1,'DMA1_Stream1_IRQHandler(void):&#160;stm32f4xx_it.c']]],
+  ['dma1_5fstream5_5firqhandler',['DMA1_Stream5_IRQHandler',['../stm32f4xx__it_8c.html#ac201b60d58b0eba2ce0b55710eb3c4d0',1,'stm32f4xx_it.c']]],
   ['dmp_5fcfg_5f1',['DMP_CFG_1',['../mpu6050__reg_8h.html#a883a1dcb76b489ce621fb3e979732edf',1,'mpu6050_reg.h']]],
   ['dmp_5fcfg_5f2',['DMP_CFG_2',['../mpu6050__reg_8h.html#af23e95fc78b2a1dcc58ebc12723041b8',1,'mpu6050_reg.h']]],
   ['dmp_5fint_5fstatus',['DMP_INT_STATUS',['../mpu6050__reg_8h.html#acd8ea6999f06652db1f2f0191535030d',1,'mpu6050_reg.h']]],

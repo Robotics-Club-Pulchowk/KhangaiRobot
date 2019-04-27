@@ -12,9 +12,11 @@
 #include "task.h"
 #include "joystick.h"
 #include "array.h"
+#include "devs_config.h"
 
 
 extern State_Vars gStateA_Data;
+extern State_Vars gStateO_Data;
 
 // We should make sure that the robot ony have one instance and it is properly
 // instantiated
@@ -44,11 +46,9 @@ int Robot::init(uint32_t dt_millis)
 
         int status = (base_status | sensor_status | cpu_status);
 
+        // Start from field A
         robot_state_vars_ = &gStateA_Data;
         velocities_.set_Values(0,0,0);
-
-        // Manual Components Initialization
-        init_JoyStick(&huart2);
 
         initiated_ = true;
 
@@ -58,43 +58,16 @@ int Robot::init(uint32_t dt_millis)
 // This function is called by the RobotThread
 void Robot::update(uint32_t dt_millis)
 {
-        // *** Automatic Control ***
-        //*/
         state_ = sensor_->read_State(state_from_base_,robot_state_vars_, dt_millis);
-        Vec3<float> vels = cpu_->process(state_, state_from_base_, robot_state_vars_, dt_millis);
 
-        state_.print();
-        printf("\n");
+        Vec3<float> vels = cpu_->control(state_,
+                                         state_from_base_,
+                                         velocities_,
+                                         robot_state_vars_,
+                                         dt_millis);
 
-        // This is for correcting units and the inverted co-ordinate system
-        float vx = -vels.getX() / (float)1000.0;
-        float vy = vels.getY()  / (float)1000.0;
-        vels.setX(vx);
-        vels.setY(vy);
-        //*/
-        // *** Manual Control ***
-
-        Field id = robot_state_vars_->id;
-        Field manual_fields[] = {
-                Field::FIELD_J,
-                Field::FIELD_K,
-                Field::FIELD_L
-        };
-
-        if (arrIndex(manual_fields, id) != -1) {
-
-                Vec3<float> vels_manual(0,0,0);
-
-                if (!joy_Empty()) {
-                        vels_manual = parse_JoyStick();
-                }
-                else {
-                        vels_manual = vels;
-                }
-        }
-
-        // ***
-        // */
+        // state_.print();
+        // printf("\n");
 
         taskENTER_CRITICAL();
         velocities_ = vels;

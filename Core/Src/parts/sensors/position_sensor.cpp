@@ -14,25 +14,22 @@
 #include "error.h"
 
 #include "robo_states.h"
-#include "moore.h"
-
-static const size_t gN_States = 9;
-static const size_t gN_Inputs = 2;
-
-extern Moore_Machine<gN_States, gN_Inputs> gBridge_Machine;
+#include "bridge.h"
 
 static Exp_Smooth gXLidarAlpha35(0.35);
 static Exp_Smooth gYLidarAlpha35(0.35);
 
+//* Required for changing field
+
 // Starting Y-Position
 float gLast_YEncoderValue = 400;
 // Starting X-Position
-float gLast_XEncoderValue = 310;
+static float gLast_XEncoderValue = 0;
 
-static float gYEncoder_Dist = 0;
+//*
 
-float gXLidar_Bias = 260;
-float gYLidar_Bias = 0;
+static float gXLidar_Bias = 0;
+static float gYLidar_Bias = 0;
 
 // Last Position
 Vec3<float> gLastPosition(gLast_XEncoderValue, gLast_YEncoderValue, 0);
@@ -43,9 +40,9 @@ Kalman_Vars gXLidarEncoder_KV;
 
 PositionSensor& PositionSensor::get_Instance()
 {
-        static PositionSensor gPSensor_Instance;
+        static PositionSensor sPSensor_Instance;
 
-        return gPSensor_Instance;
+        return sPSensor_Instance;
 }
 
 int PositionSensor::init(uint32_t dt_millis)
@@ -81,7 +78,7 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
                 else if (p_sensors_[i]->get_Name() == SensorName::XLidar) {
                         lidar[0] = p_sensors_[i]->read() + gXLidar_Bias;
                         x_lidar_used = true;
-                        // printf("%ld\n", (int32_t)(lidar[0]));
+                        // printf("Time : %ld\tLidar : %ld\n", HAL_GetTick(), (int32_t)lidar[0]);
                 }
                 else if (p_sensors_[i]->get_Name() == SensorName::YLidar) {
                         lidar[1] = p_sensors_[i]->read() + gYLidar_Bias;
@@ -114,7 +111,7 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
 
         // }
 
-        // float dt = (float)(dt_millis) / 1000.0;
+
         // Calculate the movement of the body with respect to the body frame
 
         // Rotate the movement to the navigation frame
@@ -144,28 +141,6 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
 
         float ex = del_pos.getX();
         float ey = del_pos.getY();
-
-        // float ex = free_wheel.getX();
-        // float ey = free_wheel.getY() * 1.0117;
-
-        // printf("%ld  ", (int32_t)(yaw*1000));
-
-        // Mat SO2(2,2);
-        // SO2.at(0,0) = c_y;
-        // SO2.at(0,1) = -s_y;
-        // SO2.at(1,0) = s_y;
-        // SO2.at(1,1) = c_y;
-
-        // Mat fw(2,1);
-        // fw.at(0,0) = free_wheel.getX();
-        // fw.at(1,0) = free_wheel.getY();
-        // Mat so2_pos = SO2.trans() * fw;
-
-        // float ex = so2_pos.at(0,0);
-        // float ey = so2_pos.at(1,0);
-
-        gYEncoder_Dist += ey;
-        // printf("%ld\n", (int32_t)(gYEncoder_Dist));
 
         // Fuse the data with the data from lidar that gives movement with
         // respect to the navigation frame
@@ -197,6 +172,11 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
         return gLastPosition;
 }
 
+void PositionSensor::update_State(Vec3<float> state)
+{
+        gLastPosition = state;
+}
+
 void PositionSensor::process_LidarData(float (&lidar)[2], const State_Vars *sv)
 {
         // Process Lidar Data according to the field the robot is in
@@ -214,7 +194,7 @@ void PositionSensor::process_LidarData(float (&lidar)[2], const State_Vars *sv)
         Field id = sv->id;
 
         // Processing XLidar data
-        if ((int)id > (int)(Field::FIELD_J)) {
+        if ((int)id >= (int)(Field::FIELD_P)) {
                 // The fence is at most 2000 mm from robot
                 if (lidar[0] < 2000) {
                         // Lower Fence distance
@@ -235,6 +215,7 @@ void PositionSensor::process_LidarData(float (&lidar)[2], const State_Vars *sv)
                                 }
                         }
                 }
+                // Bridge is in between field H and I
                 else if (id == Field::FIELD_H) {
 
                         int state_id = -1;
@@ -307,36 +288,3 @@ int init_EncodersKalman(uint32_t dt_millis)
 {
         return 0;
 }
-
-// *** Construction of Bridge Moore Machine ***
-
-void BP1_f() { gLast_YEncoderValue = 6530; printf("State BP1\n"); }
-void BP2_f() { gLast_YEncoderValue = 7030; printf("State BP2\n"); }
-void BP3_f() { gLast_YEncoderValue = 7530; printf("State BP3\n"); }
-void BP4_f() { gLast_YEncoderValue = 8030; printf("State BP4\n"); }
-
-static State B(0);
-static State BP1(1, BP1_f);
-static State BR1(2);
-static State BP2(3, BP2_f);
-static State BR2(4);
-static State BP3(5, BP3_f);
-static State BR3(6);
-static State BP4(7, BP4_f);
-static State BR4(8);
-
-static State* gStates[gN_States] = { &B, &BP1, &BR1, &BP2, &BR2, &BP3, &BR3, &BP4, &BR4 };
-static int gInputs[gN_Inputs] = { 0, 1 };
-static size_t gDel[gN_States][gN_Inputs] = { { 1, 0 },
-                                             { 1, 2 },
-                                             { 3, 2 },
-                                             { 3, 4 },
-                                             { 5, 4 },
-                                             { 5, 6 },
-                                             { 7, 6 },
-                                             { 7, 8 },
-                                             { 8, 8 } };
-
-Moore_Machine<gN_States, gN_Inputs> gBridge_Machine(gStates, gInputs, gDel);
-
-// ***     End Of Bridge Moore Machine      ***

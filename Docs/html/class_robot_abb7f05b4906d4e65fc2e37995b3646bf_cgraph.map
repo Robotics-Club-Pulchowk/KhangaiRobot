@@ -1,8 +1,14 @@
 <map id="Robot::init" name="Robot::init">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,87,83"/>
-<area shape="rect" id="node2" href="$class_state___sensor.html#acf2521c1a1d9ad31a6affb33ba3c4c42" title="Function that initializes all the required components for the robot&#39;s State Sensor(x,..." alt="" coords="135,5,261,32"/>
-<area shape="rect" id="node3" href="$class_actuator.html#a0627d75eae181eab8e03406dd65c5a91" title="Function that initializes all the required components for the robot&#39;s actuator(omni&#45;base)" alt="" coords="150,56,246,83"/>
-<area shape="rect" id="node6" href="$class_processor.html#ab3e919f3aa7b2e7968815d2e056e4067" title=" " alt="" coords="145,107,251,133"/>
-<area shape="rect" id="node4" href="$class_actuator.html#a998b08e1a048f6fe0b85c240aa33a498" title="Function that initializes all the required components for the wheels of the robot." alt="" coords="309,31,452,57"/>
-<area shape="rect" id="node5" href="$class_actuator.html#a500af768989caf2b8769bf4ac97def74" title="Function that initializes all the required components for the wheel&#39;s pid controller." alt="" coords="321,81,441,108"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,181,87,207"/>
+<area shape="rect" id="node2" href="$class_state___sensor.html#acf2521c1a1d9ad31a6affb33ba3c4c42" title="Function that initializes all the required components for the robot&#39;s State Sensor(x,..." alt="" coords="135,105,261,131"/>
+<area shape="rect" id="node3" href="$class_processor.html#ab3e919f3aa7b2e7968815d2e056e4067" title=" " alt="" coords="145,155,251,182"/>
+<area shape="rect" id="node9" href="$class_actuator.html#a0627d75eae181eab8e03406dd65c5a91" title="Function that initializes all the required components for the robot&#39;s actuator(omni&#45;base)" alt="" coords="150,206,246,233"/>
+<area shape="rect" id="node12" href="$class_vec3.html#ae581dad3aa1a885da7538582a3324d3a" title=" " alt="" coords="135,257,261,283"/>
+<area shape="rect" id="node4" href="$class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c" title=" " alt="" coords="309,39,460,80"/>
+<area shape="rect" id="node7" href="$class_robo___states.html#a52979a290d5b8010c6478d76db4f167a" title=" " alt="" coords="313,105,456,131"/>
+<area shape="rect" id="node8" href="$class_joy_stick.html#ab9e3d27f581f6ee31cb09c441768be65" title=" " alt="" coords="336,155,433,182"/>
+<area shape="rect" id="node5" href="$class_position_sensor.html#ad76eb756d3ec36067fade93ea58a55ec" title=" " alt="" coords="518,5,657,47"/>
+<area shape="rect" id="node6" href="$class_position_sensor.html#ad81814b7f09c1104dc4695eec880979f" title=" " alt="" coords="508,71,667,112"/>
+<area shape="rect" id="node10" href="$class_actuator.html#a998b08e1a048f6fe0b85c240aa33a498" title="Function that initializes all the required components for the wheels of the robot." alt="" coords="313,206,456,233"/>
+<area shape="rect" id="node11" href="$class_actuator.html#a500af768989caf2b8769bf4ac97def74" title="Function that initializes all the required components for the wheel&#39;s pid controller." alt="" coords="325,257,445,283"/>
 </map>

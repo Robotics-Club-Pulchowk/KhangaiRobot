@@ -1,4 +1,9 @@
 <map id="Vec2::set_Values" name="Vec2::set_Values">
-<area shape="rect" id="node1" title=" " alt="" coords="192,5,317,32"/>
-<area shape="rect" id="node2" href="$class_vec2.html#a0d51ef92a3baedc006bca6a702cefc65" title=" " alt="" coords="5,5,144,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="913,31,1039,57"/>
+<area shape="rect" id="node2" href="$class_vec2.html#a0d51ef92a3baedc006bca6a702cefc65" title=" " alt="" coords="705,5,843,32"/>
+<area shape="rect" id="node3" href="$class_robo___states.html#a265781f9c854d4fc1c959f7b26ca39cc" title=" " alt="" coords="683,56,865,83"/>
+<area shape="rect" id="node4" href="$class_processor.html#ad8a55cdfd1d1f42c3bd454a21ef0eb4d" title=" " alt="" coords="475,56,635,83"/>
+<area shape="rect" id="node5" href="$class_processor.html#a08eb6304c0993769d125cc8186cb51ac" title=" " alt="" coords="299,56,427,83"/>
+<area shape="rect" id="node6" href="$class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,56,251,83"/>
+<area shape="rect" id="node7" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,56,100,83"/>
 </map>

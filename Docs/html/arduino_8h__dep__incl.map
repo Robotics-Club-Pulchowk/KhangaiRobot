@@ -1,13 +1,13 @@
-<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive&#45;Play/Core/Inc/devs/arduino.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive&#45;Play/Core/Inc/devs/arduino.h">
-<area shape="rect" id="node1" title=" " alt="" coords="419,5,610,76"/>
-<area shape="rect" id="node2" href="$devs__config_8h.html" title=" " alt="" coords="346,243,534,328"/>
-<area shape="rect" id="node7" href="$robo__tasks_8cpp.html" title=" " alt="" coords="5,383,205,454"/>
-<area shape="rect" id="node8" href="$lidar_8h.html" title=" " alt="" coords="401,124,628,195"/>
-<area shape="rect" id="node10" href="$arduino_8cpp.html" title=" " alt="" coords="652,124,860,195"/>
-<area shape="rect" id="node11" href="$int__config_8cpp.html" title=" " alt="" coords="884,124,1108,195"/>
-<area shape="rect" id="node3" href="$devs__config_8cpp.html" title=": All the hardware specific configurations of all devices are done in this file, except for the wheel..." alt="" coords="882,376,1070,461"/>
-<area shape="rect" id="node4" href="$robo__states_8cpp.html" title=" " alt="" coords="230,376,431,461"/>
-<area shape="rect" id="node5" href="$position__sensor_8cpp.html" title=" " alt="" coords="455,376,646,461"/>
-<area shape="rect" id="node6" href="$state__sensor_8cpp.html" title=" " alt="" coords="670,376,858,461"/>
-<area shape="rect" id="node9" href="$lidar_8cpp.html" title=" " alt="" coords="558,243,749,328"/>
+<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot&#45;Play/Core/Inc/devs/arduino.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot&#45;Play/Core/Inc/devs/arduino.h">
+<area shape="rect" id="node1" title=" " alt="" coords="429,5,639,76"/>
+<area shape="rect" id="node2" href="$devs__config_8h.html" title=" " alt="" coords="350,250,569,321"/>
+<area shape="rect" id="node7" href="$robo__tasks_8cpp.html" title=" " alt="" coords="5,383,215,454"/>
+<area shape="rect" id="node8" href="$lidar_8h.html" title=" " alt="" coords="421,124,647,195"/>
+<area shape="rect" id="node10" href="$arduino_8cpp.html" title=" " alt="" coords="672,124,881,195"/>
+<area shape="rect" id="node11" href="$int__config_8cpp.html" title=" " alt="" coords="906,124,1130,195"/>
+<area shape="rect" id="node3" href="$devs__config_8cpp.html" title=": All the hardware specific configurations of all devices are done in this file, except for the wheel..." alt="" coords="973,383,1209,454"/>
+<area shape="rect" id="node4" href="$robo__states_8cpp.html" title=" " alt="" coords="239,376,448,461"/>
+<area shape="rect" id="node5" href="$position__sensor_8cpp.html" title=" " alt="" coords="472,376,681,461"/>
+<area shape="rect" id="node6" href="$state__sensor_8cpp.html" title=" " alt="" coords="705,383,949,454"/>
+<area shape="rect" id="node9" href="$lidar_8cpp.html" title=" " alt="" coords="593,243,803,328"/>
 </map>

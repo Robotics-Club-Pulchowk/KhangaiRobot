@@ -8,5 +8,5 @@ var searchData=
   ['count',['count',['../struct_enc.html#a56c669fa6a6933aeb355d89bc5793fee',1,'Enc']]],
   ['cpu_5f',['cpu_',['../class_robot.html#a9c522805627d4c815b859632a9bef49e',1,'Robot']]],
   ['curr_5fsize_5f',['curr_size_',['../class_queue.html#a55aef7972e17d4f0cea7d946c4be66fa',1,'Queue']]],
-  ['curr_5fstate_5f',['curr_state_',['../class_processor.html#ae53285851bf9d20176051a7aa4847ee1',1,'Processor']]]
+  ['curr_5fstate_5f',['curr_state_',['../class_processor.html#ae53285851bf9d20176051a7aa4847ee1',1,'Processor::curr_state_()'],['../class_moore___machine.html#a4e7de3e9bc10cf803d6e4822d8a9e52c',1,'Moore_Machine::curr_state_()']]]
 ];

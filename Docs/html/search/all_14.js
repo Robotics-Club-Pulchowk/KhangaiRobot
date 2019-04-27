@@ -1,15 +1,14 @@
 var searchData=
 [
-  ['u_5f',['u_',['../class_kalman___filter.html#ae680b4ee331f43b1f2b7d44bed01c2d1',1,'Kalman_Filter']]],
-  ['update',['update',['../class_wheel.html#afbbb8dc81da2dd495e2322cddc5f0ddd',1,'Wheel::update()'],['../class_robot.html#a069b12308af85b7fc5b670b55503f55e',1,'Robot::update()']]],
-  ['update_5fstate',['update_State',['../class_processor.html#a0b7eaf28eed6010ec0224175d713b763',1,'Processor']]],
-  ['upper_5fbounds',['upper_bounds',['../struct_state___vars.html#a4ca7c5367ada6f45404ddc43a0389616',1,'State_Vars']]],
-  ['usagefault_5fhandler',['UsageFault_Handler',['../stm32f4xx__it_8h.html#a1d98923de2ed6b7309b66f9ba2971647',1,'UsageFault_Handler(void):&#160;stm32f4xx_it.c'],['../stm32f4xx__it_8c.html#a1d98923de2ed6b7309b66f9ba2971647',1,'UsageFault_Handler(void):&#160;stm32f4xx_it.c']]],
-  ['usart_2ec',['usart.c',['../usart_8c.html',1,'']]],
-  ['usart_2eh',['usart.h',['../usart_8h.html',1,'']]],
-  ['usart3_5firqhandler',['USART3_IRQHandler',['../stm32f4xx__it_8h.html#a0d108a3468b2051548183ee5ca2158a0',1,'USART3_IRQHandler(void):&#160;stm32f4xx_it.c'],['../stm32f4xx__it_8c.html#a0d108a3468b2051548183ee5ca2158a0',1,'USART3_IRQHandler(void):&#160;stm32f4xx_it.c']]],
-  ['use_5ffull_5fassert',['USE_FULL_ASSERT',['../stm32f4xx__hal__conf_8h.html#a525a5fd911355eaf7775fd6c32e66f60',1,'stm32f4xx_hal_conf.h']]],
-  ['use_5frtos',['USE_RTOS',['../stm32f4xx__hal__conf_8h.html#ad048ac737242c2c2cb9f4a72953d10ce',1,'stm32f4xx_hal_conf.h']]],
-  ['use_5fspi_5fcrc',['USE_SPI_CRC',['../stm32f4xx__hal__conf_8h.html#a4c6fab687afc7ba4469b1b2d34472358',1,'stm32f4xx_hal_conf.h']]],
-  ['user_5fctrl',['USER_CTRL',['../mpu6050__reg_8h.html#abd9eebb35aad7616fe0414952e2d477d',1,'mpu6050_reg.h']]]
+  ['tail_5f',['tail_',['../class_queue.html#aa67ab70ef099f9ef82c1ef44fd2b1cea',1,'Queue']]],
+  ['temp_5fout_5fh',['TEMP_OUT_H',['../mpu6050__reg_8h.html#ae8c4c28fe604535a3a57d0536c6e8175',1,'mpu6050_reg.h']]],
+  ['temp_5fout_5fl',['TEMP_OUT_L',['../mpu6050__reg_8h.html#a7fe4a13198c0b3d8cf09802e7247fd2c',1,'mpu6050_reg.h']]],
+  ['tick_5fint_5fpriority',['TICK_INT_PRIORITY',['../stm32f4xx__hal__conf_8h.html#ae27809d4959b9fd5b5d974e3e1c77d2e',1,'stm32f4xx_hal_conf.h']]],
+  ['tim_2ec',['tim.c',['../tim_8c.html',1,'']]],
+  ['tim_2eh',['tim.h',['../tim_8h.html',1,'']]],
+  ['tim5_5firqhandler',['TIM5_IRQHandler',['../stm32f4xx__it_8h.html#a5e66446caf21dd90191dc07a13ce2378',1,'TIM5_IRQHandler(void):&#160;stm32f4xx_it.c'],['../stm32f4xx__it_8c.html#a5e66446caf21dd90191dc07a13ce2378',1,'TIM5_IRQHandler(void):&#160;stm32f4xx_it.c']]],
+  ['tmpr',['tmpr',['../struct_m_p_u6050.html#ab0ab95d9f8ac9cc71b578e780ee7288a',1,'MPU6050']]],
+  ['tolerance',['tolerance',['../struct_wheel___config.html#acc9ae23fdc139ece6b88bc1ae1770d07',1,'Wheel_Config']]],
+  ['trans',['trans',['../class_mat.html#aa2864c30e68caf29f400bb98295aa6a3',1,'Mat']]],
+  ['transpose',['transpose',['../class_mat.html#a55e6cc33fc65042a4cff351fe59ae476',1,'Mat']]]
 ];

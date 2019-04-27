@@ -133,6 +133,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad81814b7f09c1104dc4695eec880979f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34aa8302e10e702599384f55148160e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_sensor.html#a34aa8302e10e702599384f55148160e9">read_Position</a> (<a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; ori, <a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; base_state, const <a class="el" href="struct_state___vars.html">State_Vars</a> *sv, uint32_t dt_millis)</td></tr>
 <tr class="separator:a34aa8302e10e702599384f55148160e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a501484f39ecfb966c487961d0ddfb65a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_sensor.html#a501484f39ecfb966c487961d0ddfb65a">update_State</a> (<a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; state)</td></tr>
+<tr class="separator:a501484f39ecfb966c487961d0ddfb65a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -143,8 +145,8 @@ Static Public Member Functions</h2></td></tr>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a0876bb5181de264cbd15ab3d8a26720a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_sensor.html#a0876bb5181de264cbd15ab3d8a26720a">PositionSensor</a> ()</td></tr>
 <tr class="separator:a0876bb5181de264cbd15ab3d8a26720a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae41625aa56b708e6d05915f8a10d7717"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_sensor.html#ae41625aa56b708e6d05915f8a10d7717">process_LidarData</a> (float lidar[2], const <a class="el" href="struct_state___vars.html">State_Vars</a> *sv)</td></tr>
-<tr class="separator:ae41625aa56b708e6d05915f8a10d7717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad700f7bdc321b284af4b7d247f75f58f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_sensor.html#ad700f7bdc321b284af4b7d247f75f58f">process_LidarData</a> (float(&amp;lidar)[2], const <a class="el" href="struct_state___vars.html">State_Vars</a> *sv)</td></tr>
+<tr class="separator:ad700f7bdc321b284af4b7d247f75f58f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -289,9 +291,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_position_sensor_ad76eb756d3ec36067fade93ea58a55ec_icgraph.png" border="0" usemap="#class_position_sensor_ad76eb756d3ec36067fade93ea58a55ec_icgraph" alt=""/></div>
 <map name="class_position_sensor_ad76eb756d3ec36067fade93ea58a55ec_icgraph" id="class_position_sensor_ad76eb756d3ec36067fade93ea58a55ec_icgraph">
-<area shape="rect"  title=" " alt="" coords="240,27,379,69"/>
-<area shape="rect"  href="class_state___sensor.html#a662146502361690701880a3b1b7ae29c" title=" " alt="" coords="5,5,192,32"/>
-<area shape="rect"  href="class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c" title=" " alt="" coords="23,57,174,98"/>
+<area shape="rect"  title=" " alt="" coords="892,27,1031,69"/>
+<area shape="rect"  href="class_state___sensor.html#a662146502361690701880a3b1b7ae29c" title=" " alt="" coords="657,5,844,32"/>
+<area shape="rect"  href="class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c" title=" " alt="" coords="675,57,826,98"/>
+<area shape="rect"  href="class_processor.html#ab3e919f3aa7b2e7968815d2e056e4067" title=" " alt="" coords="489,39,595,65"/>
+<area shape="rect"  href="class_processor.html#a1e529fa62420f020ef760f4a6259ed1e" title=" " alt="" coords="475,89,609,116"/>
+<area shape="rect"  href="class_robot.html#abb7f05b4906d4e65fc2e37995b3646bf" title=" " alt="" coords="159,39,240,65"/>
+<area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,64,100,91"/>
+<area shape="rect"  href="class_processor.html#a08eb6304c0993769d125cc8186cb51ac" title=" " alt="" coords="299,89,427,116"/>
+<area shape="rect"  href="class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,89,251,116"/>
 </map>
 </div>
 
@@ -414,8 +422,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="ae41625aa56b708e6d05915f8a10d7717"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae41625aa56b708e6d05915f8a10d7717">&#9670;&nbsp;</a></span>process_LidarData()</h2>
+<a id="ad700f7bdc321b284af4b7d247f75f58f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad700f7bdc321b284af4b7d247f75f58f">&#9670;&nbsp;</a></span>process_LidarData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -426,7 +434,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void PositionSensor::process_LidarData </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
+          <td class="paramtype">float(&amp;)&#160;</td>
           <td class="paramname"><em>lidar</em>[2], </td>
         </tr>
         <tr>
@@ -492,11 +500,21 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_position_sensor_a34aa8302e10e702599384f55148160e9_cgraph.png" border="0" usemap="#class_position_sensor_a34aa8302e10e702599384f55148160e9_cgraph" alt=""/></div>
 <map name="class_position_sensor_a34aa8302e10e702599384f55148160e9_cgraph" id="class_position_sensor_a34aa8302e10e702599384f55148160e9_cgraph">
-<area shape="rect"  title=" " alt="" coords="5,74,148,115"/>
+<area shape="rect"  title=" " alt="" coords="5,49,148,90"/>
 <area shape="rect"  href="class_vec3.html#a2d66e34e1ad4be888821158541fcd2ea" title=" " alt="" coords="201,5,287,32"/>
 <area shape="rect"  href="class_vec3.html#a4dadb34f7d48268a101914b7a4771e68" title=" " alt="" coords="201,56,287,83"/>
 <area shape="rect"  href="class_sensor.html#a5a115feac97a147feec2f637dbed62ac" title=" " alt="" coords="196,107,292,133"/>
-<area shape="rect"  href="error_8h.html#ab5744f81944e2a834ef96ae10f8ae166" title=" " alt="" coords="220,157,268,184"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_position_sensor_a34aa8302e10e702599384f55148160e9_icgraph.png" border="0" usemap="#class_position_sensor_a34aa8302e10e702599384f55148160e9_icgraph" alt=""/></div>
+<map name="class_position_sensor_a34aa8302e10e702599384f55148160e9_icgraph" id="class_position_sensor_a34aa8302e10e702599384f55148160e9_icgraph">
+<area shape="rect"  title=" " alt="" coords="481,5,624,47"/>
+<area shape="rect"  href="class_state___sensor.html#a79118858b21e47b7e6e509dfba5b06f8" title="Function that provides the state of the robot." alt="" coords="299,5,433,47"/>
+<area shape="rect"  href="class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,13,251,39"/>
+<area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,13,100,39"/>
 </map>
 </div>
 
@@ -530,9 +548,45 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_position_sensor_ad81814b7f09c1104dc4695eec880979f_icgraph.png" border="0" usemap="#class_position_sensor_ad81814b7f09c1104dc4695eec880979f_icgraph" alt=""/></div>
 <map name="class_position_sensor_ad81814b7f09c1104dc4695eec880979f_icgraph" id="class_position_sensor_ad81814b7f09c1104dc4695eec880979f_icgraph">
-<area shape="rect"  title=" " alt="" coords="204,39,363,80"/>
-<area shape="rect"  href="class_state___sensor.html#a3965dffdc2a72622a862f2a20fe2e09f" title=" " alt="" coords="5,5,156,47"/>
-<area shape="rect"  href="class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c" title=" " alt="" coords="5,71,156,112"/>
+<area shape="rect"  title=" " alt="" coords="856,39,1015,80"/>
+<area shape="rect"  href="class_state___sensor.html#a3965dffdc2a72622a862f2a20fe2e09f" title=" " alt="" coords="657,5,808,47"/>
+<area shape="rect"  href="class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c" title=" " alt="" coords="657,71,808,112"/>
+<area shape="rect"  href="class_processor.html#ab3e919f3aa7b2e7968815d2e056e4067" title=" " alt="" coords="489,53,595,79"/>
+<area shape="rect"  href="class_processor.html#a1e529fa62420f020ef760f4a6259ed1e" title=" " alt="" coords="475,103,609,130"/>
+<area shape="rect"  href="class_robot.html#abb7f05b4906d4e65fc2e37995b3646bf" title=" " alt="" coords="159,53,240,79"/>
+<area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,78,100,105"/>
+<area shape="rect"  href="class_processor.html#a08eb6304c0993769d125cc8186cb51ac" title=" " alt="" coords="299,103,427,130"/>
+<area shape="rect"  href="class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,103,251,130"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a501484f39ecfb966c487961d0ddfb65a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a501484f39ecfb966c487961d0ddfb65a">&#9670;&nbsp;</a></span>update_State()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PositionSensor::update_State </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_position_sensor_a501484f39ecfb966c487961d0ddfb65a_icgraph.png" border="0" usemap="#class_position_sensor_a501484f39ecfb966c487961d0ddfb65a_icgraph" alt=""/></div>
+<map name="class_position_sensor_a501484f39ecfb966c487961d0ddfb65a_icgraph" id="class_position_sensor_a501484f39ecfb966c487961d0ddfb65a_icgraph">
+<area shape="rect"  title=" " alt="" coords="709,5,867,47"/>
+<area shape="rect"  href="class_state___sensor.html#a4b667f79982e6b1bc40c78093bb9d285" title=" " alt="" coords="481,5,661,47"/>
+<area shape="rect"  href="class_state___sensor.html#a79118858b21e47b7e6e509dfba5b06f8" title="Function that provides the state of the robot." alt="" coords="299,5,433,47"/>
+<area shape="rect"  href="class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,13,251,39"/>
+<area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,13,100,39"/>
 </map>
 </div>
 
@@ -628,8 +682,8 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive-Play/Core/Inc/parts/sensors/<a class="el" href="position__sensor_8h_source.html">position_sensor.h</a></li>
-<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive-Play/Core/Src/parts/sensors/<a class="el" href="position__sensor_8cpp.html">position_sensor.cpp</a></li>
+<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot-Play/Core/Inc/parts/sensors/<a class="el" href="position__sensor_8h_source.html">position_sensor.h</a></li>
+<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot-Play/Core/Src/parts/sensors/<a class="el" href="position__sensor_8cpp.html">position_sensor.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

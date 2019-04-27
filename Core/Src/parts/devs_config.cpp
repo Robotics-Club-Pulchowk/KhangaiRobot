@@ -23,9 +23,8 @@ struct Enc gXEnc;
 struct Enc gYEnc;
 
 Arduino_Device gXLidar_Dev(0x02, 2);
-
-const uint32_t gMax_Robo_Velocity = 1000;        // mm/s
-const uint32_t gRated_Robo_Velocity = 100;
+Arduino_Device gLED_Strip(0x01, 1);
+Arduino_Device gPneumatic(0x03, 1);
 
 
 Encoder gXEncoder(&gXEnc, SensorName::XEncoder);
@@ -78,5 +77,5 @@ void Encoders_Init()
 
 void Lidars_Init()
 {
-        gXLidar.set_Outliers(Vec2<float>(5000, 0));
+        gXLidar.set_Outliers(Vec2<float>(3000, 0));
 }

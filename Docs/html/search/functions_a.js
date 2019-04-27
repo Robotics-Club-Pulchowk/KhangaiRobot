@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['kalman_5ffilter',['Kalman_Filter',['../class_kalman___filter.html#ac917b706405d2056e8edcb12469349d6',1,'Kalman_Filter::Kalman_Filter(Kalman_Vars *kv, int(*kv_init)(uint32_t))'],['../class_kalman___filter.html#ad7218294c69e625015c505c30072839c',1,'Kalman_Filter::Kalman_Filter(Kalman_Filter &amp;&amp;)=default'],['../class_kalman___filter.html#aaecd5f0a2c95443770f1e96e6d6ae901',1,'Kalman_Filter::Kalman_Filter(const Kalman_Filter &amp;)=default']]]
+  ['joystick',['JoyStick',['../class_joy_stick.html#ac8f372511c54bca0819ab9779fea5f9e',1,'JoyStick::JoyStick(UART_HandleTypeDef *huart)'],['../class_joy_stick.html#a955e238e35e020494e565fec892392b3',1,'JoyStick::JoyStick(JoyStick &amp;&amp;)=default'],['../class_joy_stick.html#a7a5decfbee312b31ba1883db574f3047',1,'JoyStick::JoyStick(const JoyStick &amp;)=default']]],
+  ['joystick_5fhandle_5frxcplt',['JoyStick_Handle_RxCplt',['../joystick_8h.html#a8bf81a87ac512746c48226da0cfaf031',1,'JoyStick_Handle_RxCplt():&#160;joystick.cpp'],['../joystick_8cpp.html#a8bf81a87ac512746c48226da0cfaf031',1,'JoyStick_Handle_RxCplt():&#160;joystick.cpp']]]
 ];

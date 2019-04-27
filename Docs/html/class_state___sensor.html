@@ -105,12 +105,15 @@ Collaboration diagram for State_Sensor:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_state___sensor__coll__graph.png" border="0" usemap="#_state___sensor_coll__map" alt="Collaboration graph"/></div>
 <map name="_state___sensor_coll__map" id="_state___sensor_coll__map">
-<area shape="rect"  title=" " alt="" coords="67,497,169,524"/>
-<area shape="rect"  href="class_position_sensor.html" title=" " alt="" coords="63,408,173,435"/>
-<area shape="rect"  href="class_sensor.html" title=" " alt="" coords="5,304,116,331"/>
-<area shape="rect"  href="class_kalman___filter.html" title=" " alt="" coords="140,304,243,331"/>
-<area shape="rect"  href="struct_kalman___vars.html" title=" " alt="" coords="203,199,303,225"/>
-<area shape="rect"  href="class_mat.html" title=" " alt="" coords="169,5,213,32"/>
+<area shape="rect"  title=" " alt="" coords="123,497,225,524"/>
+<area shape="rect"  href="class_vec3.html" title=" " alt="" coords="5,408,105,435"/>
+<area shape="rect"  href="class_bound___box.html" title=" " alt="" coords="129,408,219,435"/>
+<area shape="rect"  href="class_bound.html" title=" " alt="" coords="127,304,218,331"/>
+<area shape="rect"  href="class_position_sensor.html" title=" " alt="" coords="243,408,353,435"/>
+<area shape="rect"  href="class_sensor.html" title=" " alt="" coords="243,304,353,331"/>
+<area shape="rect"  href="class_kalman___filter.html" title=" " alt="" coords="377,304,480,331"/>
+<area shape="rect"  href="struct_kalman___vars.html" title=" " alt="" coords="440,199,540,225"/>
+<area shape="rect"  href="class_mat.html" title=" " alt="" coords="407,5,451,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -127,9 +130,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afee28d932f262422f2a4341f3cf92691"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state___sensor.html#afee28d932f262422f2a4341f3cf92691">~State_Sensor</a> ()</td></tr>
 <tr class="separator:afee28d932f262422f2a4341f3cf92691"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf2521c1a1d9ad31a6affb33ba3c4c42"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state___sensor.html#acf2521c1a1d9ad31a6affb33ba3c4c42">init</a> (uint32_t dt_millis)</td></tr>
-<tr class="memdesc:acf2521c1a1d9ad31a6affb33ba3c4c42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that initializes all the required components for the robot's State <a class="el" href="class_sensor.html" title=": An abstract class from which all the sensors must implement">Sensor(x, y and yaw)</a>  <a href="#acf2521c1a1d9ad31a6affb33ba3c4c42">More...</a><br /></td></tr>
+<tr class="memdesc:acf2521c1a1d9ad31a6affb33ba3c4c42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that initializes all the required components for the robot's <a class="el" href="class_state.html">State</a> <a class="el" href="class_sensor.html" title=": An abstract class from which all the sensors must implement">Sensor(x, y and yaw)</a>  <a href="#acf2521c1a1d9ad31a6affb33ba3c4c42">More...</a><br /></td></tr>
 <tr class="separator:acf2521c1a1d9ad31a6affb33ba3c4c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79118858b21e47b7e6e509dfba5b06f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state___sensor.html#a79118858b21e47b7e6e509dfba5b06f8">read_State</a> (<a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; base_state, const <a class="el" href="struct_state___vars.html">State_Vars</a> *sv, uint32_t dt_millis)</td></tr>
+<tr class="memdesc:a79118858b21e47b7e6e509dfba5b06f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that provides the state of the robot.  <a href="#a79118858b21e47b7e6e509dfba5b06f8">More...</a><br /></td></tr>
 <tr class="separator:a79118858b21e47b7e6e509dfba5b06f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a662146502361690701880a3b1b7ae29c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state___sensor.html#a662146502361690701880a3b1b7ae29c">add_PSensor</a> (<a class="el" href="class_sensor.html">Sensor</a>&lt; float &gt; *sen)</td></tr>
 <tr class="separator:a662146502361690701880a3b1b7ae29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,6 +141,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3965dffdc2a72622a862f2a20fe2e09f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60f0ce9b8b64f85bd06c2bb849b3300c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c">change_Sensors</a> (<a class="el" href="robo__states_8h.html#a1e35064f4b70226adc63b8fe1af7ddf8">Field</a> field_id)</td></tr>
 <tr class="separator:a60f0ce9b8b64f85bd06c2bb849b3300c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2578ecaea1eb7a08f685c1652a82675c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state___sensor.html#a2578ecaea1eb7a08f685c1652a82675c">get_Bounds</a> ()</td></tr>
+<tr class="separator:a2578ecaea1eb7a08f685c1652a82675c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -150,11 +156,21 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:ae108cbc000aaf85a2da0ec0f6d5b2f81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state___sensor.html#ae108cbc000aaf85a2da0ec0f6d5b2f81">read_Orientation</a> (<a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; base_state, uint32_t dt_millis)</td></tr>
 <tr class="memdesc:ae108cbc000aaf85a2da0ec0f6d5b2f81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that provides the orientation of the robot.  <a href="#ae108cbc000aaf85a2da0ec0f6d5b2f81">More...</a><br /></td></tr>
 <tr class="separator:ae108cbc000aaf85a2da0ec0f6d5b2f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b667f79982e6b1bc40c78093bb9d285"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state___sensor.html#a4b667f79982e6b1bc40c78093bb9d285">compensate_Bounds</a> (<a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; pos, <a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; ori, const <a class="el" href="struct_state___vars.html">State_Vars</a> *sv)</td></tr>
+<tr class="separator:a4b667f79982e6b1bc40c78093bb9d285"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a4c084c5f53ba27c4920dcf3f2ad7d9f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_position_sensor.html">PositionSensor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state___sensor.html#a4c084c5f53ba27c4920dcf3f2ad7d9f4">p_sensor_</a></td></tr>
 <tr class="separator:a4c084c5f53ba27c4920dcf3f2ad7d9f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a205540f21a08fc82e92fa7c3d8cc289b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bound___box.html">Bound_Box</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state___sensor.html#a205540f21a08fc82e92fa7c3d8cc289b">bound_box_</a></td></tr>
+<tr class="separator:a205540f21a08fc82e92fa7c3d8cc289b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad05af7d80a4a62f17029a51918debd74"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state___sensor.html#ad05af7d80a4a62f17029a51918debd74">bounds_</a></td></tr>
+<tr class="separator:ad05af7d80a4a62f17029a51918debd74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a786d6b55f8cd978b2c90b0b06b99234f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state___sensor.html#a786d6b55f8cd978b2c90b0b06b99234f">is_first_ori_</a></td></tr>
+<tr class="separator:a786d6b55f8cd978b2c90b0b06b99234f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaefe6218ef1a505043b8e055a5383cf1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state___sensor.html#aaefe6218ef1a505043b8e055a5383cf1">first_ori_</a></td></tr>
+<tr class="separator:aaefe6218ef1a505043b8e055a5383cf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a127ae0e191685916282d982815978729"></a>
@@ -320,6 +336,120 @@ Here is the call graph for this function:</div>
 <area shape="rect"  href="class_position_sensor.html#ad81814b7f09c1104dc4695eec880979f" title=" " alt="" coords="204,71,363,112"/>
 </map>
 </div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_state___sensor_a60f0ce9b8b64f85bd06c2bb849b3300c_icgraph.png" border="0" usemap="#class_state___sensor_a60f0ce9b8b64f85bd06c2bb849b3300c_icgraph" alt=""/></div>
+<map name="class_state___sensor_a60f0ce9b8b64f85bd06c2bb849b3300c_icgraph" id="class_state___sensor_a60f0ce9b8b64f85bd06c2bb849b3300c_icgraph">
+<area shape="rect"  title=" " alt="" coords="657,23,808,65"/>
+<area shape="rect"  href="class_processor.html#ab3e919f3aa7b2e7968815d2e056e4067" title=" " alt="" coords="489,5,595,32"/>
+<area shape="rect"  href="class_processor.html#a1e529fa62420f020ef760f4a6259ed1e" title=" " alt="" coords="475,56,609,83"/>
+<area shape="rect"  href="class_robot.html#abb7f05b4906d4e65fc2e37995b3646bf" title=" " alt="" coords="159,5,240,32"/>
+<area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,31,100,57"/>
+<area shape="rect"  href="class_processor.html#a08eb6304c0993769d125cc8186cb51ac" title=" " alt="" coords="299,56,427,83"/>
+<area shape="rect"  href="class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,56,251,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4b667f79982e6b1bc40c78093bb9d285"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b667f79982e6b1bc40c78093bb9d285">&#9670;&nbsp;</a></span>compensate_Bounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; State_Sensor::compensate_Bounds </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>ori</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_state___vars.html">State_Vars</a> *&#160;</td>
+          <td class="paramname"><em>curr_sv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compensates the position values based on the readings from limit switches </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_state___sensor_a4b667f79982e6b1bc40c78093bb9d285_cgraph.png" border="0" usemap="#class_state___sensor_a4b667f79982e6b1bc40c78093bb9d285_cgraph" alt=""/></div>
+<map name="class_state___sensor_a4b667f79982e6b1bc40c78093bb9d285_cgraph" id="class_state___sensor_a4b667f79982e6b1bc40c78093bb9d285_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,150,185,191"/>
+<area shape="rect"  href="class_bound___box.html#a07d29bbee82838663fe43f549f7ddbe8" title=" " alt="" coords="249,5,385,32"/>
+<area shape="rect"  href="class_bound___box.html#aa5296644fccfa0c870e6d38abb395e8b" title=" " alt="" coords="233,56,400,83"/>
+<area shape="rect"  href="class_vec3.html#a4dadb34f7d48268a101914b7a4771e68" title=" " alt="" coords="273,107,360,133"/>
+<area shape="rect"  href="class_bound___box.html#a152eee4a2f2b874c765a2bda45bafdeb" title=" " alt="" coords="237,157,396,184"/>
+<area shape="rect"  href="class_vec3.html#a334f510fc72e3ae8cf50f61429db307a" title=" " alt="" coords="274,208,359,235"/>
+<area shape="rect"  href="class_vec3.html#a2d66e34e1ad4be888821158541fcd2ea" title=" " alt="" coords="274,259,359,285"/>
+<area shape="rect"  href="class_position_sensor.html#a501484f39ecfb966c487961d0ddfb65a" title=" " alt="" coords="238,310,395,351"/>
+<area shape="rect"  href="class_bound.html#acb333689dc61b5fdc233b29501a82cda" title=" " alt="" coords="448,5,555,32"/>
+<area shape="rect"  href="class_bound.html#aedf5d1dbb82e1bbeb666951867b916b5" title="Read which limit switches are pressed." alt="" coords="455,157,547,184"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_state___sensor_a4b667f79982e6b1bc40c78093bb9d285_icgraph.png" border="0" usemap="#class_state___sensor_a4b667f79982e6b1bc40c78093bb9d285_icgraph" alt=""/></div>
+<map name="class_state___sensor_a4b667f79982e6b1bc40c78093bb9d285_icgraph" id="class_state___sensor_a4b667f79982e6b1bc40c78093bb9d285_icgraph">
+<area shape="rect"  title=" " alt="" coords="481,5,661,47"/>
+<area shape="rect"  href="class_state___sensor.html#a79118858b21e47b7e6e509dfba5b06f8" title="Function that provides the state of the robot." alt="" coords="299,5,433,47"/>
+<area shape="rect"  href="class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,13,251,39"/>
+<area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,13,100,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2578ecaea1eb7a08f685c1652a82675c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2578ecaea1eb7a08f685c1652a82675c">&#9670;&nbsp;</a></span>get_Bounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t State_Sensor::get_Bounds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_state___sensor_a2578ecaea1eb7a08f685c1652a82675c_icgraph.png" border="0" usemap="#class_state___sensor_a2578ecaea1eb7a08f685c1652a82675c_icgraph" alt=""/></div>
+<map name="class_state___sensor_a2578ecaea1eb7a08f685c1652a82675c_icgraph" id="class_state___sensor_a2578ecaea1eb7a08f685c1652a82675c_icgraph">
+<area shape="rect"  title=" " alt="" coords="657,5,836,32"/>
+<area shape="rect"  href="class_processor.html#a1e529fa62420f020ef760f4a6259ed1e" title=" " alt="" coords="475,5,609,32"/>
+<area shape="rect"  href="class_processor.html#a08eb6304c0993769d125cc8186cb51ac" title=" " alt="" coords="299,5,427,32"/>
+<area shape="rect"  href="class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,5,251,32"/>
+<area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,5,100,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -350,8 +480,9 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_state___sensor_a31cc1d727cc48b82fc9ba46dfd7bea69_cgraph.png" border="0" usemap="#class_state___sensor_a31cc1d727cc48b82fc9ba46dfd7bea69_cgraph" alt=""/></div>
 <map name="class_state___sensor_a31cc1d727cc48b82fc9ba46dfd7bea69_cgraph" id="class_state___sensor_a31cc1d727cc48b82fc9ba46dfd7bea69_cgraph">
-<area shape="rect"  title=" " alt="" coords="5,13,188,39"/>
-<area shape="rect"  href="class_position_sensor.html#a409cde1d6bc69641e99c3521b9f40f71" title=" " alt="" coords="236,5,372,47"/>
+<area shape="rect"  title=" " alt="" coords="5,42,188,69"/>
+<area shape="rect"  href="class_position_sensor.html#a409cde1d6bc69641e99c3521b9f40f71" title=" " alt="" coords="253,5,389,47"/>
+<area shape="rect"  href="class_bound___box.html#a519364f16b158de7524041760fcbc579" title=" " alt="" coords="236,71,407,98"/>
 </map>
 </div>
 <div class="dynheader">
@@ -382,7 +513,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Function that initializes all the required components for the robot's State <a class="el" href="class_sensor.html" title=": An abstract class from which all the sensors must implement">Sensor(x, y and yaw)</a> </p>
+<p>Function that initializes all the required components for the robot's <a class="el" href="class_state.html">State</a> <a class="el" href="class_sensor.html" title=": An abstract class from which all the sensors must implement">Sensor(x, y and yaw)</a> </p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">0</td><td>if inititialized properly</td></tr>
@@ -511,8 +642,7 @@ Here is the caller graph for this function:</div>
 <pre>
 Tasks performed by this function
 1) Read the values from Accelerometer and the Gyroscope
-</pre> <p>Error Condition </p>
-<div class="dynheader">
+</pre> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_state___sensor_ae108cbc000aaf85a2da0ec0f6d5b2f81_cgraph.png" border="0" usemap="#class_state___sensor_ae108cbc000aaf85a2da0ec0f6d5b2f81_cgraph" alt=""/></div>
@@ -536,7 +666,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_state___sensor_ae108cbc000aaf85a2da0ec0f6d5b2f81_icgraph.png" border="0" usemap="#class_state___sensor_ae108cbc000aaf85a2da0ec0f6d5b2f81_icgraph" alt=""/></div>
 <map name="class_state___sensor_ae108cbc000aaf85a2da0ec0f6d5b2f81_icgraph" id="class_state___sensor_ae108cbc000aaf85a2da0ec0f6d5b2f81_icgraph">
 <area shape="rect"  title="Function that provides the orientation of the robot." alt="" coords="481,5,616,47"/>
-<area shape="rect"  href="class_state___sensor.html#a79118858b21e47b7e6e509dfba5b06f8" title=" " alt="" coords="299,5,433,47"/>
+<area shape="rect"  href="class_state___sensor.html#a79118858b21e47b7e6e509dfba5b06f8" title="Function that provides the state of the robot." alt="" coords="299,5,433,47"/>
 <area shape="rect"  href="class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,13,251,39"/>
 <area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,13,100,39"/>
 </map>
@@ -560,7 +690,7 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="struct_state___vars.html">State_Vars</a> *&#160;</td>
-          <td class="paramname"><em>sv</em>, </td>
+          <td class="paramname"><em>curr_sv</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -575,23 +705,59 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="dynheader">
+
+<p>Function that provides the state of the robot. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">base_state</td><td>This parameter is considered as one of the possible state of robot. This will be passed to both Orientation_Sensor and the Position_Sensor for further use. </td></tr>
+    <tr><td class="paramname">dt_millis</td><td>: The time period at which this function is called periodically</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">state</td><td>of the robot</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The state of our robot is defined by x,y distance from fences and the <a class="el" href="class_robot.html" title="A Singleton class that handles all the robot&#39;s sequence.">Robot</a>'s heading</dd></dl>
+<pre>
+Tasks performed by this function
+1) Read Orientation of the robot with Orientation_Sensor
+2) Read Position of the robot with Position_Sensor
+</pre> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_state___sensor_a79118858b21e47b7e6e509dfba5b06f8_cgraph.png" border="0" usemap="#class_state___sensor_a79118858b21e47b7e6e509dfba5b06f8_cgraph" alt=""/></div>
 <map name="class_state___sensor_a79118858b21e47b7e6e509dfba5b06f8_cgraph" id="class_state___sensor_a79118858b21e47b7e6e509dfba5b06f8_cgraph">
-<area shape="rect"  title=" " alt="" coords="5,99,140,141"/>
-<area shape="rect"  href="class_state___sensor.html#ae108cbc000aaf85a2da0ec0f6d5b2f81" title="Function that provides the orientation of the robot." alt="" coords="188,99,323,141"/>
-<area shape="rect"  href="mpu6050_8h.html#af32563ec0d6af4afc19f1dddb5dde5fc" title=" " alt="" coords="371,31,555,57"/>
-<area shape="rect"  href="hmc5883_8h.html#a160cb536a44edae08c21bb8b417d9827" title=" " alt="" coords="405,81,521,108"/>
-<area shape="rect"  href="error_8h.html#ab5744f81944e2a834ef96ae10f8ae166" title=" " alt="" coords="439,132,487,159"/>
-<area shape="rect"  href="devs__config_8h.html#adb25f6dac3b60011603646bf86d18b16" title=" " alt="" coords="428,183,497,209"/>
-<area shape="rect"  href="mpu6050_8cpp.html#acf3493569ebfe4fefcc3801441c70487" title=" " alt="" coords="603,5,789,32"/>
-<area shape="rect"  href="mpu6050_8cpp.html#aa4895450dc06bac74b453423c3e88b73" title=" " alt="" coords="605,56,787,83"/>
-<area shape="rect"  href="mpu6050_8cpp.html#a7d7f18ad4fd3ae66a0c5940cd82183e6" title=" " alt="" coords="837,5,1019,32"/>
-<area shape="rect"  href="mpu6050_8cpp.html#a5aa2a065243356e9633010a6b038a66c" title=" " alt="" coords="840,56,1016,83"/>
-<area shape="rect"  href="mpu6050_8h.html#a53b88c52ed0b8e9eb398578ef6f7fdc4" title=" " alt="" coords="645,157,747,184"/>
-<area shape="rect"  href="hmc5883_8h.html#a86fa17c5c34c4d8892eee22857407410" title=" " alt="" coords="645,208,747,235"/>
+<area shape="rect"  title="Function that provides the state of the robot." alt="" coords="5,445,140,486"/>
+<area shape="rect"  href="class_state___sensor.html#ae108cbc000aaf85a2da0ec0f6d5b2f81" title="Function that provides the orientation of the robot." alt="" coords="211,125,345,166"/>
+<area shape="rect"  href="class_position_sensor.html#a34aa8302e10e702599384f55148160e9" title=" " alt="" coords="207,298,349,339"/>
+<area shape="rect"  href="class_vec3.html#ae581dad3aa1a885da7538582a3324d3a" title=" " alt="" coords="215,452,341,479"/>
+<area shape="rect"  href="class_vec3.html#ad259e243f6678730d990acbae2cdff57" title=" " alt="" coords="235,503,321,529"/>
+<area shape="rect"  href="class_vec3.html#a8eeb16262b7e619f081a1ba94df098f8" title=" " alt="" coords="235,553,321,580"/>
+<area shape="rect"  href="class_vec3.html#a52f0db1c387aa9bc7befe5792b698553" title=" " alt="" coords="235,604,321,631"/>
+<area shape="rect"  href="class_state___sensor.html#a4b667f79982e6b1bc40c78093bb9d285" title=" " alt="" coords="188,386,368,427"/>
+<area shape="rect"  href="mpu6050_8h.html#af32563ec0d6af4afc19f1dddb5dde5fc" title=" " alt="" coords="416,31,600,57"/>
+<area shape="rect"  href="hmc5883_8h.html#a160cb536a44edae08c21bb8b417d9827" title=" " alt="" coords="450,81,566,108"/>
+<area shape="rect"  href="error_8h.html#ab5744f81944e2a834ef96ae10f8ae166" title=" " alt="" coords="484,132,532,159"/>
+<area shape="rect"  href="devs__config_8h.html#adb25f6dac3b60011603646bf86d18b16" title=" " alt="" coords="473,183,543,209"/>
+<area shape="rect"  href="mpu6050_8cpp.html#acf3493569ebfe4fefcc3801441c70487" title=" " alt="" coords="648,5,835,32"/>
+<area shape="rect"  href="mpu6050_8cpp.html#aa4895450dc06bac74b453423c3e88b73" title=" " alt="" coords="650,56,833,83"/>
+<area shape="rect"  href="mpu6050_8cpp.html#a7d7f18ad4fd3ae66a0c5940cd82183e6" title=" " alt="" coords="883,5,1064,32"/>
+<area shape="rect"  href="mpu6050_8cpp.html#a5aa2a065243356e9633010a6b038a66c" title=" " alt="" coords="885,56,1061,83"/>
+<area shape="rect"  href="mpu6050_8h.html#a53b88c52ed0b8e9eb398578ef6f7fdc4" title=" " alt="" coords="690,157,793,184"/>
+<area shape="rect"  href="hmc5883_8h.html#a86fa17c5c34c4d8892eee22857407410" title=" " alt="" coords="690,208,793,235"/>
+<area shape="rect"  href="class_vec3.html#a2d66e34e1ad4be888821158541fcd2ea" title=" " alt="" coords="465,284,551,311"/>
+<area shape="rect"  href="class_vec3.html#a4dadb34f7d48268a101914b7a4771e68" title=" " alt="" coords="465,335,551,361"/>
+<area shape="rect"  href="class_sensor.html#a5a115feac97a147feec2f637dbed62ac" title=" " alt="" coords="460,233,556,260"/>
+<area shape="rect"  href="class_bound___box.html#a07d29bbee82838663fe43f549f7ddbe8" title=" " alt="" coords="440,452,576,479"/>
+<area shape="rect"  href="class_bound___box.html#aa5296644fccfa0c870e6d38abb395e8b" title=" " alt="" coords="425,503,591,529"/>
+<area shape="rect"  href="class_bound___box.html#a152eee4a2f2b874c765a2bda45bafdeb" title=" " alt="" coords="429,553,587,580"/>
+<area shape="rect"  href="class_vec3.html#a334f510fc72e3ae8cf50f61429db307a" title=" " alt="" coords="465,604,551,631"/>
+<area shape="rect"  href="class_position_sensor.html#a501484f39ecfb966c487961d0ddfb65a" title=" " alt="" coords="429,386,587,427"/>
+<area shape="rect"  href="class_bound.html#acb333689dc61b5fdc233b29501a82cda" title=" " alt="" coords="688,452,795,479"/>
+<area shape="rect"  href="class_bound.html#aedf5d1dbb82e1bbeb666951867b916b5" title="Read which limit switches are pressed." alt="" coords="695,553,787,580"/>
 </map>
 </div>
 <div class="dynheader">
@@ -599,7 +765,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_state___sensor_a79118858b21e47b7e6e509dfba5b06f8_icgraph.png" border="0" usemap="#class_state___sensor_a79118858b21e47b7e6e509dfba5b06f8_icgraph" alt=""/></div>
 <map name="class_state___sensor_a79118858b21e47b7e6e509dfba5b06f8_icgraph" id="class_state___sensor_a79118858b21e47b7e6e509dfba5b06f8_icgraph">
-<area shape="rect"  title=" " alt="" coords="299,5,433,47"/>
+<area shape="rect"  title="Function that provides the state of the robot." alt="" coords="299,5,433,47"/>
 <area shape="rect"  href="class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,13,251,39"/>
 <area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,13,100,39"/>
 </map>
@@ -643,6 +809,94 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a205540f21a08fc82e92fa7c3d8cc289b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a205540f21a08fc82e92fa7c3d8cc289b">&#9670;&nbsp;</a></span>bound_box_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_bound___box.html">Bound_Box</a>* State_Sensor::bound_box_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad05af7d80a4a62f17029a51918debd74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad05af7d80a4a62f17029a51918debd74">&#9670;&nbsp;</a></span>bounds_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t State_Sensor::bounds_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaefe6218ef1a505043b8e055a5383cf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaefe6218ef1a505043b8e055a5383cf1">&#9670;&nbsp;</a></span>first_ori_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vec3.html">Vec3</a>&lt;float&gt; State_Sensor::first_ori_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a786d6b55f8cd978b2c90b0b06b99234f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a786d6b55f8cd978b2c90b0b06b99234f">&#9670;&nbsp;</a></span>is_first_ori_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool State_Sensor::is_first_ori_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a4c084c5f53ba27c4920dcf3f2ad7d9f4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4c084c5f53ba27c4920dcf3f2ad7d9f4">&#9670;&nbsp;</a></span>p_sensor_</h2>
 
@@ -666,8 +920,8 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive-Play/Core/Inc/parts/<a class="el" href="state__sensor_8h_source.html">state_sensor.h</a></li>
-<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive-Play/Core/Src/parts/<a class="el" href="state__sensor_8cpp.html">state_sensor.cpp</a></li>
+<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot-Play/Core/Inc/parts/<a class="el" href="state__sensor_8h_source.html">state_sensor.h</a></li>
+<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot-Play/Core/Src/parts/<a class="el" href="state__sensor_8cpp.html">state_sensor.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

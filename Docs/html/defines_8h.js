@@ -1,5 +1,6 @@
 var defines_8h =
 [
+    [ "_ENABLE_I2C_ERROR_DETECTION", "defines_8h.html#a2c6def2e552514874cb5cc51a014ec75", null ],
     [ "MAX_OMEGA", "defines_8h.html#a1247dff3a0e5735e04673ff4054b5393", null ],
     [ "MAX_POSSIBLE_OMEGA", "defines_8h.html#a2dbe4752749c9d4858a1431ce3d78bdd", null ],
     [ "MOTOR_DRIVER_FREQUENCY", "defines_8h.html#acc6454ff3d08c55a35e3dfa69f8a8a0d", null ],

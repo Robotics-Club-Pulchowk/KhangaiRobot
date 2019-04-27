@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['kalman_5ffilter',['Kalman_Filter',['../class_kalman___filter.html',1,'']]],
-  ['kalman_5fvars',['Kalman_Vars',['../struct_kalman___vars.html',1,'']]]
+  ['hmc5883',['HMC5883',['../struct_h_m_c5883.html',1,'']]]
 ];

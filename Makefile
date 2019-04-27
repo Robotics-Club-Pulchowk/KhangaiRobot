@@ -41,7 +41,6 @@ Core/Src/periphs/gpio.c \
 Core/Src/periphs/adc.c \
 Core/Src/periphs/dma.c \
 Core/Src/periphs/i2c.c \
-Core/Src/periphs/spi.c \
 Core/Src/periphs/tim.c \
 Core/Src/periphs/usart.c \
 Core/Src/freertos.c \
@@ -64,7 +63,6 @@ C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx
 C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c \
 C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c \
 C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c \
-C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c \
 C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c \
 C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c \
 C:/Users/$(USER_NAME)/STM32Cube/Repository/${STM_CUBE_VERSION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c \
@@ -119,6 +117,8 @@ Core/Src/parts/int_config.cpp \
 Core/Src/parts/sensors/position_sensor.cpp \
 Core/Src/parts/sensors/encoder.cpp \
 Core/Src/parts/sensors/lidar.cpp \
+Core/Src/parts/sensors/bound_box.cpp \
+Core/Src/parts/sensors/bridge.cpp \
 \
 Core/Src/parts/processor/robo_states.cpp \
 Core/Src/parts/processor/game_field.cpp \
@@ -127,6 +127,7 @@ Core/Src/robot/robot.cpp \
 \
 Core/Src/utils/math/mat.cpp \
 Core/Src/utils/math/interpolation.cpp \
+Core/Src/utils/math/state.cpp \
 Core/Src/utils/filter/exp_smooth.cpp \
 Core/Src/utils/trajectory/min_jerk.cpp \
 Core/Src/utils/trajectory/min_accel.cpp \
@@ -136,7 +137,9 @@ Core/Src/utils/logger.cpp \
 Core/Src/sys/error.cpp \
 \
 Core/Src/robo_tasks.cpp \
-Core/Src/main.cpp
+Core/Src/main.cpp \
+\
+Tests/Src/Devices/i2c_tests.cpp
 ##
 #######################################
 # binaries
@@ -195,6 +198,8 @@ AS_INCLUDES =  \
 
 # C includes
 C_INCLUDES =  \
+-ITests/Src \
+\
 -ICore/Inc \
 -ICore/Inc/devs \
 -ICore/Inc/periphs \

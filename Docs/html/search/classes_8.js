@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['queue',['Queue',['../class_queue.html',1,'']]],
-  ['queue_3c_20float_2c_202_20_3e',['Queue&lt; float, 2 &gt;',['../class_queue.html',1,'']]]
+  ['mat',['Mat',['../class_mat.html',1,'']]],
+  ['moore_5fmachine',['Moore_Machine',['../class_moore___machine.html',1,'']]],
+  ['mpu6050',['MPU6050',['../struct_m_p_u6050.html',1,'']]]
 ];

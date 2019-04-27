@@ -1,10 +1,13 @@
 var searchData=
 [
-  ['k_5f',['K_',['../class_kalman___filter.html#a28eb4e662deea59bae39358f9aba02e3',1,'Kalman_Filter']]],
-  ['kalman_2eh',['kalman.h',['../kalman_8h.html',1,'']]],
-  ['kalman_5ffilter',['Kalman_Filter',['../class_kalman___filter.html',1,'Kalman_Filter'],['../struct_kalman___vars.html#a2a9de2e5af58a1f7f78798d6952f7c66',1,'Kalman_Vars::Kalman_Filter()'],['../class_kalman___filter.html#ac917b706405d2056e8edcb12469349d6',1,'Kalman_Filter::Kalman_Filter(Kalman_Vars *kv, int(*kv_init)(uint32_t))'],['../class_kalman___filter.html#ad7218294c69e625015c505c30072839c',1,'Kalman_Filter::Kalman_Filter(Kalman_Filter &amp;&amp;)=default'],['../class_kalman___filter.html#aaecd5f0a2c95443770f1e96e6d6ae901',1,'Kalman_Filter::Kalman_Filter(const Kalman_Filter &amp;)=default']]],
-  ['kalman_5fvars',['Kalman_Vars',['../struct_kalman___vars.html',1,'']]],
-  ['khangai_5frobot',['Khangai_Robot',['../robo__tasks_8cpp.html#a7a3cf6b9f0c8b3b0a906e86c1ed920d1',1,'robo_tasks.cpp']]],
-  ['kv_5f',['kv_',['../class_kalman___filter.html#a21a6d19d0a7772e4d0156bb37e6600d7',1,'Kalman_Filter']]],
-  ['kv_5finit_5f',['kv_init_',['../class_kalman___filter.html#acbf55b53754b79f0e97a6bfadcc4694e',1,'Kalman_Filter']]]
+  ['joy_5fcommand',['Joy_Command',['../class_joy_stick.html#a8c73c12c49f698e9b24cc7e247720eae',1,'JoyStick']]],
+  ['joy_5fstick_5f',['joy_stick_',['../class_processor.html#aa1fcd3b1d133474e92d19090e64864b3',1,'Processor']]],
+  ['joystick',['JoyStick',['../class_joy_stick.html',1,'JoyStick'],['../class_joy_stick.html#ac8f372511c54bca0819ab9779fea5f9e',1,'JoyStick::JoyStick(UART_HandleTypeDef *huart)'],['../class_joy_stick.html#a955e238e35e020494e565fec892392b3',1,'JoyStick::JoyStick(JoyStick &amp;&amp;)=default'],['../class_joy_stick.html#a7a5decfbee312b31ba1883db574f3047',1,'JoyStick::JoyStick(const JoyStick &amp;)=default']]],
+  ['joystick_2ecpp',['joystick.cpp',['../joystick_8cpp.html',1,'']]],
+  ['joystick_2eh',['joystick.h',['../joystick_8h.html',1,'']]],
+  ['joystick_5fcommand',['JoyStick_Command',['../struct_joy_stick___command.html',1,'']]],
+  ['joystick_5fdata',['JoyStick_Data',['../struct_joy_stick___data.html',1,'']]],
+  ['joystick_5fhandle',['JoyStick_Handle',['../struct_joy_stick___handle.html',1,'']]],
+  ['joystick_5fhandle_5frxcplt',['JoyStick_Handle_RxCplt',['../joystick_8h.html#a8bf81a87ac512746c48226da0cfaf031',1,'JoyStick_Handle_RxCplt():&#160;joystick.cpp'],['../joystick_8cpp.html#a8bf81a87ac512746c48226da0cfaf031',1,'JoyStick_Handle_RxCplt():&#160;joystick.cpp']]],
+  ['joystick_5fstart_5fbyte',['JOYSTICK_START_BYTE',['../joystick_8cpp.html#a0d34faab0f186b44cf390831828f65b1',1,'joystick.cpp']]]
 ];

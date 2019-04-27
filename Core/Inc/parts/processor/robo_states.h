@@ -26,7 +26,16 @@ enum class Field
         FIELD_I,
         FIELD_J,
         FIELD_K,
-        FIELD_L
+        FIELD_L,
+
+        FIELD_O,
+        FIELD_P,
+        FIELD_Q,
+        FIELD_Q1,
+        FIELD_Q2,
+        FIELD_R1,
+        FIELD_R2,
+        FIELD_R
 };
 
 struct State_Vars
@@ -40,6 +49,9 @@ struct State_Vars
         float last_limit;
         float ramping_factor;
         float first_limit;
+
+        float max_vel;
+        float rated_vel;
 };
 
 class Robo_States
@@ -56,11 +68,15 @@ public:
         float calc_RoboVelocity(Vec3<float> state, uint32_t dt_millis);
         float calc_AngleOfAttack(Vec3<float> state, float v, uint32_t dt_millis);
         Vec2<float> calc_Velocity(Vec3<float> state, Vec3<float> vel_from_base, uint32_t dt_millis);
-        bool nextStateReached(Vec3<float> state);
+        bool nextStateReached(Vec3<float> state, uint8_t bounds);
 
         Robo_States* get_NextState() { return next_state_; }
         Field get_ID() { return sv_->id; }
         State_Vars* get_State() { return sv_; }
+        void set_State(Robo_States *robo) {
+                sv_ = robo->get_State();
+                next_state_ = robo->get_NextState();
+        }
         
 private:
         State_Vars *sv_;

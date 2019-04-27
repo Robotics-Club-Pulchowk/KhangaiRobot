@@ -1,11 +1,13 @@
-<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive&#45;Play/Core/Inc/parts/state_sensor.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/Naive&#45;Play/Core/Inc/parts/state_sensor.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,193,91"/>
-<area shape="rect" id="node2" href="$vec3_8h.html" title=" " alt="" coords="65,363,123,389"/>
-<area shape="rect" id="node5" href="$position__sensor_8h.html" title=" " alt="" coords="93,139,217,165"/>
-<area shape="rect" id="node3" title=" " alt="" coords="35,512,153,539"/>
-<area shape="rect" id="node4" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="98,437,159,464"/>
-<area shape="rect" id="node6" href="$sensor_8h.html" title=" " alt="" coords="131,213,203,240"/>
-<area shape="rect" id="node7" href="$kalman_8h.html" title=" " alt="" coords="227,213,302,240"/>
-<area shape="rect" id="node8" href="$mat_8h.html" title=" " alt="" coords="195,288,249,315"/>
-<area shape="rect" id="node9" title=" " alt="" coords="191,363,253,389"/>
+<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot&#45;Play/Core/Inc/parts/state_sensor.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot&#45;Play/Core/Inc/parts/state_sensor.h">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,232,76"/>
+<area shape="rect" id="node2" href="$vec3_8h.html" title=" " alt="" coords="25,348,84,375"/>
+<area shape="rect" id="node5" href="$position__sensor_8h.html" title=" " alt="" coords="57,124,181,151"/>
+<area shape="rect" id="node10" href="$bound__box_8h.html" title=" " alt="" coords="224,124,320,151"/>
+<area shape="rect" id="node3" title=" " alt="" coords="29,497,147,524"/>
+<area shape="rect" id="node4" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="92,423,153,449"/>
+<area shape="rect" id="node6" href="$sensor_8h.html" title=" " alt="" coords="83,199,155,225"/>
+<area shape="rect" id="node7" href="$kalman_8h.html" title=" " alt="" coords="179,199,253,225"/>
+<area shape="rect" id="node8" href="$mat_8h.html" title=" " alt="" coords="153,273,207,300"/>
+<area shape="rect" id="node9" title=" " alt="" coords="149,348,211,375"/>
+<area shape="rect" id="node11" href="$gpio_8h.html" title=" " alt="" coords="251,273,309,300"/>
 </map>

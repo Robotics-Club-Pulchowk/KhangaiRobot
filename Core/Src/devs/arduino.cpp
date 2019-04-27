@@ -16,7 +16,7 @@ extern Arduino_Device gXLidar_Dev;
 #define ARDUINO_UART            (huart3)
 #define ARDUINO_START_BYTE      (0xA5)
 
-#define MAX_DEVICES             (3)
+#define MAX_DEVICES             (5)
 #define MAX_BYTES_PER_DEVICE    (8)
 
 static uint8_t gBytes_Per_Device[MAX_DEVICES];
@@ -100,7 +100,7 @@ int Arduino_Device::write(uint8_t *buf, uint16_t len)
         pack.buf_len = len;
 
         if (!gSending_Packet) {
-                // gSending_Packet = true;
+                gSending_Packet = true;
 
                 gTxBuffer[0] = pack.start_byte;
                 gTxBuffer[1] = pack.dev_id;

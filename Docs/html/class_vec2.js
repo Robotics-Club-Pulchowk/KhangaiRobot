@@ -18,6 +18,7 @@ var class_vec2 =
     [ "operator-=", "class_vec2.html#a91f9eab3c7a93d7e3465228fb5ec489e", null ],
     [ "operator=", "class_vec2.html#a13ea5fda8289d864dd67d13fcbfc12b7", null ],
     [ "operator=", "class_vec2.html#ad31c26f71af2b9068479184b9c829e18", null ],
+    [ "polar", "class_vec2.html#a0ab61d333f91ee0c26a8cdf094fd5c4f", null ],
     [ "print", "class_vec2.html#ad7de6de0f736bccf0ebb5c443de1af0e", null ],
     [ "set_Values", "class_vec2.html#a238a918f6d2695dd187a9778982a1769", null ],
     [ "setX", "class_vec2.html#aec2b21ff78bf3a2e20a044e1ab7d4b53", null ],
