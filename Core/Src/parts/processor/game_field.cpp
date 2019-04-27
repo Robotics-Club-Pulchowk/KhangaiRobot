@@ -50,7 +50,7 @@ void init_GameField()
 
         // Defining the state : State B
         gStateB_Data.id = Field::FIELD_B;
-        gStateB_Data.centre = Vec2<float>(1500, 1250);
+        gStateB_Data.centre = Vec2<float>(1500, 1350);
         gStateB_Data.upper_bounds = Vec2<float>(2000, 1700);
         gStateB_Data.lower_bounds = Vec2<float>(1460, 1200);
         gStateB_Data.last_limit = 1;
