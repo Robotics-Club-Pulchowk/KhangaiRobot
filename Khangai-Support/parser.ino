@@ -18,6 +18,7 @@ bool gDev_Addr_Received = false;
 uint8_t gReceived_Device_Address = 0x00;
 
 uint8_t gLED_Intensity_Value = 0;
+uint8_t gPneumatic_Value = 0;
 
 uint8_t gNum_Bytes_Received = 0;
 
@@ -44,6 +45,13 @@ void parse_STMByte(uint8_t c)
                         if (gReceived_Device_Address == gLED_Address) {
 //                                Serial.println(c);
                                 gLED_Intensity_Value = c;
+                                gNum_Bytes_Received = 0;
+                                gStart_Byte_Received = false;
+                                gDev_Addr_Received = false;
+                        }
+                        else if (gReceived_Device_Address == gPneumatic_Address) {
+//                                Serial.println(c);
+                                gPneumatic_Value = c;
                                 gNum_Bytes_Received = 0;
                                 gStart_Byte_Received = false;
                                 gDev_Addr_Received = false;

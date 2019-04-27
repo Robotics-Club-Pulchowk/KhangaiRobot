@@ -22,7 +22,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
                 } break;
                 
                 // This interrupt pin is connected to gYEnc
-                case GPIO_PIN_4 : {    // PB4
+                case GPIO_PIN_14 : {    // PE14
                         Enc_HandleCount(&gYEnc);
                 }
         }
