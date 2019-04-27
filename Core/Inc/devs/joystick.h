@@ -26,10 +26,11 @@
 #define B_LB            (1)
 #define B_RB            (0)
 
-#define MANUAL_KEY      (B_LB)
-#define AUTO_KEY        (B_A)
-#define RESET_KEY       (B_RB)
-#define SHAGAI_GRIP_KEY (B_X)
+#define MANUAL_KEY              (B_LB)
+#define AUTO_KEY                (B_A)
+#define RESET_KEY               (B_RB)
+#define SHAGAI_GRIP_KEY         (B_X)
+#define THROW_SHAGAI_KEY        (B_Y)
 
 #ifndef _BV
         #define _BV(x)          (1 << x)
@@ -66,6 +67,7 @@ struct JoyStick_Command
         uint8_t brake;
         uint8_t accel;
         bool grip_shagai;
+        bool throw_shagai;
 };
 
 class JoyStick
