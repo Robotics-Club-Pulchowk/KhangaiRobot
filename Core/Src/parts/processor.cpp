@@ -8,6 +8,10 @@
 
 #include "processor.h"
 #include "devs_config.h"
+#include "interpolation.h"
+
+
+extern float gAuto_Ratio;
 
 extern State_Vars gStateA_Data;
 extern State_Vars gStateB_Data;
@@ -248,7 +252,18 @@ Vec3<float> Processor::control(Vec3<float> state,
                 led_val = fill_Intensity(0, 15);
         }
         else if (mode == Control_Mode::AUTO) {
-                vels = auto_control(state, vel_from_base, dt_millis);
+                Vec3<float> vels_auto = auto_control(state, vel_from_base, dt_millis);
+                Vec3<float> vels_manual;
+                
+                if (!just_read) {
+                        vels_manual = last_vel.mult_EW(0.8);
+                }
+                else {
+                        vels_manual = manual_control(joy_command);
+                }
+
+                vels = lerp(vels_manual, vels_auto, gAuto_Ratio);
+
                 led_val = fill_Intensity(15, 5);
         }
 
