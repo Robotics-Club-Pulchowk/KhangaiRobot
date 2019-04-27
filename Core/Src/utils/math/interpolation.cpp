@@ -8,6 +8,8 @@
 
 #include "interpolation.h"
 
+//* https://en.wikipedia.org/wiki/Linear_interpolation
+//* https://en.wikipedia.org/wiki/Cubic_Hermite_spline
 
 float lerp(float x, float y, float t)
 {
