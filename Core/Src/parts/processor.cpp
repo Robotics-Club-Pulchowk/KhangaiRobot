@@ -187,6 +187,12 @@ static bool gSend_LED_Data = false;
 static uint8_t gSend_LED_Data_Num = 5;
 const uint8_t gSend_LED_Data_Max = 5;
 
+static bool gSend_Pneumatic_Data = false;
+static uint8_t gSend_Pneumatic_Data_Num = 5;
+const uint8_t gSend_Pneumatic_Data_Max = 5;
+
+static uint8_t gSend_Extend_Num = 10;
+
 Vec3<float> Processor::control(Vec3<float> state,
                                Vec3<float> vel_from_base,
                                Vec3<float> last_vel,
@@ -204,6 +210,7 @@ Vec3<float> Processor::control(Vec3<float> state,
         Control_Mode mode = Control_Mode::MANUAL;
         bool grip_shagai = false;
         bool reset_pos = false;
+        bool throw_shagai = false;
 
         bool just_read = false;
 
@@ -216,6 +223,7 @@ Vec3<float> Processor::control(Vec3<float> state,
                 
                 grip_shagai = joy_command.grip_shagai;
                 reset_pos = joy_command.reset_pos;
+                throw_shagai = joy_command.throw_shagai;
         }
 
         //* Switch to manual mode automatically in state L
@@ -259,6 +267,38 @@ Vec3<float> Processor::control(Vec3<float> state,
                         gSend_LED_Data_Num = gSend_LED_Data_Max;
                         gSend_LED_Data = false;
                 }
+        }
+
+        //* Send Extend command if robot is in field Q
+        if (id == Field::FIELD_Q) {
+                if (gSend_Extend_Num) {
+                        uint8_t extend = 0x01;
+                        gPneumatic.write(&extend, 1);
+                        --gSend_Extend_Num;
+                }
+        }
+
+        //* Throw Shagai if reset pos obtained
+        if (throw_shagai) {
+                gSend_Pneumatic_Data = true;
+        }
+
+        //* Send Pneumatic data if there is change in control mode
+        if (gSend_Pneumatic_Data) {
+                if (--gSend_Pneumatic_Data_Num) {
+                        uint8_t throw_shagai_cmd = 0x03;
+                        gPneumatic.write(&throw_shagai_cmd, 1);
+                        HAL_GPIO_WritePin(B_RedLED_GPIO_Port, B_RedLED_Pin, GPIO_PIN_SET);
+                }
+                else {
+                        gSend_Pneumatic_Data_Num = gSend_Pneumatic_Data_Max;
+                        gSend_Pneumatic_Data = false;
+                }
+        }
+
+        //* Reset Position to field O
+        if (reset_pos) {
+                curr_state_->set_State(&gStateO);
         }
 
         return vels;

@@ -16,7 +16,7 @@ extern Arduino_Device gXLidar_Dev;
 #define ARDUINO_UART            (huart3)
 #define ARDUINO_START_BYTE      (0xA5)
 
-#define MAX_DEVICES             (3)
+#define MAX_DEVICES             (5)
 #define MAX_BYTES_PER_DEVICE    (8)
 
 static uint8_t gBytes_Per_Device[MAX_DEVICES];

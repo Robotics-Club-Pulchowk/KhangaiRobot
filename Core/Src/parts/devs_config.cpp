@@ -24,6 +24,7 @@ struct Enc gYEnc;
 
 Arduino_Device gXLidar_Dev(0x02, 2);
 Arduino_Device gLED_Strip(0x01, 1);
+Arduino_Device gPneumatic(0x03, 1);
 
 
 Encoder gXEncoder(&gXEnc, SensorName::XEncoder);

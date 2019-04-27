@@ -73,6 +73,10 @@ public:
         Robo_States* get_NextState() { return next_state_; }
         Field get_ID() { return sv_->id; }
         State_Vars* get_State() { return sv_; }
+        void set_State(Robo_States *robo) {
+                sv_ = robo->get_State();
+                next_state_ = robo->get_NextState();
+        }
         
 private:
         State_Vars *sv_;
