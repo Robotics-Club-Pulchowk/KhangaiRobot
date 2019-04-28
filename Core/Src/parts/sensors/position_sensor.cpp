@@ -216,7 +216,7 @@ void PositionSensor::process_LidarData(float (&lidar)[2], const State_Vars *sv)
                         }
                 }
                 // Bridge is in between field H and I
-                else if (id == Field::FIELD_H) {
+                else if (id == Field::FIELD_H || id == Field::FIELD_I) {
 
                         int state_id = -1;
 
