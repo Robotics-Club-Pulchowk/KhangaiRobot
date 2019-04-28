@@ -166,8 +166,8 @@ Vec3<float> State_Sensor::compensate_Bounds(Vec3<float> pos, Vec3<float> ori, co
                                 //* Read face 6 value and reset angle here
                                 uint8_t face6 = bound_box_->get_Bound(6);
                                 if ((face6 & (1 << 0)) && (face6 & (1 << 1))) {
-                                        first_ori_ = ori;
-                                        pos.setZ(0);
+                                        // first_ori_ = ori;
+                                        // pos.setZ(0);
                                 }
                         }
                 }
@@ -186,13 +186,13 @@ Vec3<float> State_Sensor::compensate_Bounds(Vec3<float> pos, Vec3<float> ori, co
                         //* Read face 6 & 8 value and reset angle here
                         uint8_t face6 = bound_box_->get_Bound(6);
                         if ((face6 & (1 << 0)) && (face6 & (1 << 1))) {
-                                first_ori_ = ori;
-                                pos.setZ(0);
+                                // first_ori_ = ori;
+                                // pos.setZ(0);
                         }
                         uint8_t face8 = bound_box_->get_Bound(8);
                         if ((face8 & (1 << 0)) && (face8 & (1 << 1))) {
-                                first_ori_ = ori;
-                                pos.setZ(0);
+                                // first_ori_ = ori;
+                                // pos.setZ(0);
                         }
                 }
                 else if (id == Field::FIELD_Q || id == Field::FIELD_Q1 || id == Field::FIELD_Q2) {
