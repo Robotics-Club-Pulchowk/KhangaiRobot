@@ -131,13 +131,14 @@ Vec2<float> Robo_States::calc_Velocity(Vec3<float> state, Vec3<float> vel_from_b
 {
         Vec2<float> velocity;
 
-        // Field id = sv_->id;
-        // if (id == Field::FIELD_P) {
-        //         float v = calc_RoboVelocity(state, dt_millis);
-        //         float theta = calc_AngleOfAttack(state, v, dt_millis);
-        //         velocity.set_Values(v, theta);
-        //         return velocity;
-        // }
+        Field id = sv_->id;
+        if (id == Field::FIELD_A || id == Field::FIELD_I ||
+            id == Field::FIELD_O || id == Field::FIELD_P) {
+                float v = calc_RoboVelocity(state, dt_millis);
+                float theta = calc_AngleOfAttack(state, v, dt_millis);
+                velocity.set_Values(v, theta);
+                return velocity;
+        }
 
         //** This Part contains minimum accelration implementation.
 

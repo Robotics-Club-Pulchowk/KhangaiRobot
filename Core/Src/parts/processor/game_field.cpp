@@ -42,17 +42,17 @@ void init_GameField()
         gStateA_Data.centre = Vec2<float>(0, 0);
         gStateA_Data.upper_bounds = Vec2<float>(100, 100);
         gStateA_Data.lower_bounds = Vec2<float>(100, 100);
-        gStateA_Data.last_limit = 0.9;
-        gStateA_Data.ramping_factor = 0.005;
-        gStateA_Data.first_limit = 0.33;
+        gStateA_Data.last_limit = 1;
+        gStateA_Data.ramping_factor = 0.01;
+        gStateA_Data.first_limit = 0.6;
         gStateA_Data.max_vel = gMax_Robo_Velocity;
         gStateA_Data.rated_vel = gRated_Robo_Velocity;
 
         // Defining the state : State B
         gStateB_Data.id = Field::FIELD_B;
-        gStateB_Data.centre = Vec2<float>(1500, 1350);
+        gStateB_Data.centre = Vec2<float>(1500, 1000);
         gStateB_Data.upper_bounds = Vec2<float>(2000, 1700);
-        gStateB_Data.lower_bounds = Vec2<float>(1460, 1200);
+        gStateB_Data.lower_bounds = Vec2<float>(1360, 800);
         gStateB_Data.last_limit = 1;
         gStateB_Data.ramping_factor = 0.001;
         gStateB_Data.first_limit = gStateA_Data.last_limit;
@@ -85,7 +85,7 @@ void init_GameField()
         gStateE_Data.id = Field::FIELD_E;
         gStateE_Data.centre = Vec2<float>(900, 3800);
         gStateE_Data.upper_bounds = Vec2<float>(1050, 4100);
-        gStateE_Data.lower_bounds = Vec2<float>(750, 3500);
+        gStateE_Data.lower_bounds = Vec2<float>(750, 3400);
         gStateE_Data.last_limit = 1;
         gStateE_Data.ramping_factor = 0.001;
         gStateE_Data.first_limit = gStateD_Data.last_limit;
@@ -94,9 +94,9 @@ void init_GameField()
 
         // Defining the state : State F
         gStateF_Data.id = Field::FIELD_F;
-        gStateF_Data.centre = Vec2<float>(1700, 4300);
+        gStateF_Data.centre = Vec2<float>(1500, 4300);
         gStateF_Data.upper_bounds = Vec2<float>(2100, 4500);
-        gStateF_Data.lower_bounds = Vec2<float>(1500, 3800);
+        gStateF_Data.lower_bounds = Vec2<float>(1400, 3800);
         gStateF_Data.last_limit = 1;
         gStateF_Data.ramping_factor = 0.001;
         gStateF_Data.first_limit = gStateE_Data.last_limit;
@@ -129,16 +129,16 @@ void init_GameField()
         gStateI_Data.id = Field::FIELD_I;
         gStateI_Data.centre = Vec2<float>(1300, 8500);
         gStateI_Data.upper_bounds = Vec2<float>(1450, 9000);
-        gStateI_Data.lower_bounds = Vec2<float>(1050, 8130);
-        gStateI_Data.last_limit = 0;
-        gStateI_Data.ramping_factor = -0.1;
-        gStateI_Data.first_limit = 0;
+        gStateI_Data.lower_bounds = Vec2<float>(1050, 7930);
+        gStateI_Data.last_limit = 1;
+        gStateI_Data.ramping_factor = 0.1;
+        gStateI_Data.first_limit = 0.9;
         gStateI_Data.max_vel = gMax_Robo_Velocity;
         gStateI_Data.rated_vel = gRated_Robo_Velocity;
 
         // Defining the state : State J
         gStateJ_Data.id = Field::FIELD_J;
-        gStateJ_Data.centre = Vec2<float>(5500, 8600);
+        gStateJ_Data.centre = Vec2<float>(5500, 8300);
         gStateJ_Data.upper_bounds = Vec2<float>(6500, 9000);
         gStateJ_Data.lower_bounds = Vec2<float>(4300, 7800);
         gStateJ_Data.last_limit = 1;
@@ -183,9 +183,9 @@ void init_GameField()
 
          // Defining the state : State P
         gStateP_Data.id = Field::FIELD_P;
-        gStateP_Data.centre = Vec2<float>(3800, 7520);
+        gStateP_Data.centre = Vec2<float>(3500, 7520);
         gStateP_Data.upper_bounds = Vec2<float>(4500, 8000);
-        gStateP_Data.lower_bounds = Vec2<float>(3500, 7040);
+        gStateP_Data.lower_bounds = Vec2<float>(3300, 7040);
         gStateP_Data.last_limit = 1;
         gStateP_Data.ramping_factor = 0.001;
         gStateP_Data.first_limit = 1;
@@ -194,9 +194,9 @@ void init_GameField()
 
          // Defining the state : State Q
         gStateQ_Data.id = Field::FIELD_Q;
-        gStateQ_Data.centre = Vec2<float>(3800, 5000);
+        gStateQ_Data.centre = Vec2<float>(3500, 5000);
         gStateQ_Data.upper_bounds = Vec2<float>(4500, 5400);
-        gStateQ_Data.lower_bounds = Vec2<float>(3500, 4600);
+        gStateQ_Data.lower_bounds = Vec2<float>(3300, 4600);
         gStateQ_Data.last_limit = 1;
         gStateQ_Data.ramping_factor = 0.001;
         gStateQ_Data.first_limit = 1;
