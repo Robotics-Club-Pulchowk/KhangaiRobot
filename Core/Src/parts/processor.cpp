@@ -109,7 +109,7 @@ int Processor::init(uint32_t dt_millis)
         return 0;
 }
 
-void Processor::process(Vec3<float> state, State_Vars *&robot_state_vars_)
+void Processor::process(Vec3<float> state, State_Vars *&robot_state_vars)
 {
         uint8_t bounds = sensor_->get_Bounds();
         if (curr_state_->nextStateReached(state, bounds)) {
@@ -117,7 +117,7 @@ void Processor::process(Vec3<float> state, State_Vars *&robot_state_vars_)
                 sensor_->change_Sensors(curr_state_->get_ID());
         }
 
-        robot_state_vars_ = curr_state_->get_State();
+        robot_state_vars = curr_state_->get_State();
 }
 
 Vec3<float> Processor::auto_control(Vec3<float> state, Vec3<float> vel_from_base, uint32_t dt_millis)
@@ -239,12 +239,20 @@ Vec3<float> Processor::control(Vec3<float> state,
 
         //* Select Controller on the basis of control mode
         if (mode == Control_Mode::MANUAL) {
+
+                float phi = state.getZ();
+                phi /= (float)57.3;     // to rads
+
                 if (!just_read) {
                         vels = last_vel.mult_EW(0.8);
                 }
                 else {
                         vels = manual_control(joy_command);
                 }
+
+                float rw = (phi)*0.1;
+                vels.setZ(rw);
+
                 led_val = fill_Intensity(0, 15);
         }
         else if (mode == Control_Mode::AUTO) {
@@ -278,7 +286,7 @@ Vec3<float> Processor::control(Vec3<float> state,
                 }
         }
 
-        //* Throw Shagai if reset pos obtained
+        //* Throw Shagai if throw shagai flag obtained
         if (throw_shagai) {
                 gSend_Pneumatic_Data = true;
         }
@@ -288,7 +296,6 @@ Vec3<float> Processor::control(Vec3<float> state,
                 if (--gSend_Pneumatic_Data_Num) {
                         uint8_t throw_shagai_cmd = 0x03;
                         gPneumatic.write(&throw_shagai_cmd, 1);
-                        HAL_GPIO_WritePin(B_RedLED_GPIO_Port, B_RedLED_Pin, GPIO_PIN_SET);
                 }
                 else {
                         gSend_Pneumatic_Data_Num = gSend_Pneumatic_Data_Max;
@@ -298,7 +305,13 @@ Vec3<float> Processor::control(Vec3<float> state,
 
         //* Reset Position to field O
         if (reset_pos) {
-                curr_state_->set_State(&gStateO);
+                curr_state_ = &gStateO;
+                sensor_->change_Sensors(curr_state_->get_ID());
+                robot_state_vars = curr_state_->get_State();
+                Vec2<float> p = curr_state_->get_Centre();
+                Vec3<float> pos(p.getX(), p.getY(), 0); 
+                sensor_->update_Position(pos);
+                // HAL_GPIO_WritePin(B_RedLED_GPIO_Port, B_RedLED_Pin, GPIO_PIN_SET);
         }
 
         return vels;
