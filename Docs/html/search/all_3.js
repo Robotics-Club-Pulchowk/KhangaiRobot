@@ -45,6 +45,7 @@ var searchData=
   ['configuse_5fpreemption',['configUSE_PREEMPTION',['../_free_r_t_o_s_config_8h.html#adde83486022745409c40605922b0bdd6',1,'FreeRTOSConfig.h']]],
   ['configuse_5ftick_5fhook',['configUSE_TICK_HOOK',['../_free_r_t_o_s_config_8h.html#a23c5922c077106fad3f70b54d9071466',1,'FreeRTOSConfig.h']]],
   ['control',['control',['../class_processor.html#a08eb6304c0993769d125cc8186cb51ac',1,'Processor']]],
+  ['control_5fmode',['Control_Mode',['../joystick_8h.html#ad8ea442b2b17305b033cfea78a037b33',1,'joystick.h']]],
   ['count',['count',['../struct_enc.html#a56c669fa6a6933aeb355d89bc5793fee',1,'Enc']]],
   ['cpu_5f',['cpu_',['../class_robot.html#a9c522805627d4c815b859632a9bef49e',1,'Robot']]],
   ['cubicspline',['cubicSpline',['../class_robo___states.html#ae846d1e39dd7a955e4f14b36d0795c8d',1,'Robo_States']]],

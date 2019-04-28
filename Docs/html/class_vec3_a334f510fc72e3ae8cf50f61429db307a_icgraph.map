@@ -1,10 +1,5 @@
 <map id="Vec3::setZ" name="Vec3::setZ">
-<area shape="rect" id="node1" title=" " alt="" coords="709,71,795,98"/>
-<area shape="rect" id="node2" href="$class_vec3.html#ae581dad3aa1a885da7538582a3324d3a" title=" " alt="" coords="508,5,635,47"/>
-<area shape="rect" id="node3" href="$class_processor.html#a9d08a8c82a543d7501090c96f821c3b4" title=" " alt="" coords="483,71,660,98"/>
-<area shape="rect" id="node7" href="$class_state___sensor.html#a4b667f79982e6b1bc40c78093bb9d285" title=" " alt="" coords="481,123,661,164"/>
-<area shape="rect" id="node4" href="$class_processor.html#a08eb6304c0993769d125cc8186cb51ac" title=" " alt="" coords="302,71,430,98"/>
-<area shape="rect" id="node5" href="$class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,101,251,127"/>
-<area shape="rect" id="node6" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,101,100,127"/>
-<area shape="rect" id="node8" href="$class_state___sensor.html#a79118858b21e47b7e6e509dfba5b06f8" title="Function that provides the state of the robot." alt="" coords="299,123,433,164"/>
+<area shape="rect" id="node1" title=" " alt="" coords="231,42,316,69"/>
+<area shape="rect" id="node2" href="$class_vec3.html#ae581dad3aa1a885da7538582a3324d3a" title=" " alt="" coords="31,5,157,47"/>
+<area shape="rect" id="node3" href="$class_processor.html#a9d08a8c82a543d7501090c96f821c3b4" title=" " alt="" coords="5,71,183,98"/>
 </map>

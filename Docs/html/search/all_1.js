@@ -54,8 +54,8 @@ var searchData=
   ['assert_5ffailed',['assert_failed',['../stm32f4xx__hal__conf_8h.html#a2532ff72b1a2ff82f65e8c2a5a4dde00',1,'stm32f4xx_hal_conf.h']]],
   ['assert_5fparam',['assert_param',['../stm32f4xx__hal__conf_8h.html#a631dea7b230e600555f979c62af1de21',1,'stm32f4xx_hal_conf.h']]],
   ['at',['at',['../class_mat.html#a5f4b8f7e3c55a1caf7161c11ec2a2465',1,'Mat']]],
+  ['auto',['AUTO',['../joystick_8h.html#ad8ea442b2b17305b033cfea78a037b33ae1f2d5134ed2543d38a0de9751cf75d9',1,'joystick.h']]],
   ['auto_5fcontrol',['auto_control',['../class_processor.html#ad8a55cdfd1d1f42c3bd454a21ef0eb4d',1,'Processor']]],
   ['auto_5fkey',['AUTO_KEY',['../joystick_8h.html#a503c4d82732d03045bb2c67c0bcaf7df',1,'joystick.h']]],
-  ['auto_5fmode',['auto_mode',['../struct_joy_stick___command.html#a1ffa87f91ae09f9afd85f6c102bcdb3b',1,'JoyStick_Command']]],
   ['available',['available',['../class_arduino___device.html#a7b53022501a9aa62c05e559147ab3242',1,'Arduino_Device::available()'],['../class_encoder.html#aa11f19e9aa29ea271778078f20da8acf',1,'Encoder::available()'],['../class_lidar.html#ac6a415ffd47412ba8124b8d851587958',1,'Lidar::available()'],['../class_sensor.html#acacdc9e904fd7ba1b3fe1c4df6638603',1,'Sensor::available()']]]
 ];

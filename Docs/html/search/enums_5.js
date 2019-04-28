@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sensorname',['SensorName',['../sensor_8h.html#a80119019834acb539f0ac38a1e57e56d',1,'sensor.h']]]
+  ['gyro_5fscale',['Gyro_Scale',['../mpu6050_8h.html#aafecca78685b4c6a67c94fcce77151d2',1,'mpu6050.h']]]
 ];

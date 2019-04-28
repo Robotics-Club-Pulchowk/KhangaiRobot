@@ -109,10 +109,8 @@ Collaboration diagram for JoyStick_Command:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ac472f802b01fe73985ebc7961928f8ab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_joy_stick___command.html#ac472f802b01fe73985ebc7961928f8ab">manual_mode</a></td></tr>
-<tr class="separator:ac472f802b01fe73985ebc7961928f8ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ffa87f91ae09f9afd85f6c102bcdb3b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_joy_stick___command.html#a1ffa87f91ae09f9afd85f6c102bcdb3b">auto_mode</a></td></tr>
-<tr class="separator:a1ffa87f91ae09f9afd85f6c102bcdb3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fb9df75f9f28381458c5034cdd02090"><td class="memItemLeft" align="right" valign="top"><a class="el" href="joystick_8h.html#ad8ea442b2b17305b033cfea78a037b33">Control_Mode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_joy_stick___command.html#a7fb9df75f9f28381458c5034cdd02090">mode</a></td></tr>
+<tr class="separator:a7fb9df75f9f28381458c5034cdd02090"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac95a433284391e4a643cf928586af96b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_joy_stick___command.html#ac95a433284391e4a643cf928586af96b">reset_pos</a></td></tr>
 <tr class="separator:ac95a433284391e4a643cf928586af96b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab49bf90956df1e9d37ab6c79dcd9a59a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_joy_stick___command.html#ab49bf90956df1e9d37ab6c79dcd9a59a">vels</a></td></tr>
@@ -123,6 +121,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a260df7e17ba4772e34cb11ad8c330239"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4504de9ff9ddf8b04e00de68383358ac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_joy_stick___command.html#a4504de9ff9ddf8b04e00de68383358ac">grip_shagai</a></td></tr>
 <tr class="separator:a4504de9ff9ddf8b04e00de68383358ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b9f8402890f6bbc67b9d865dc52457a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_joy_stick___command.html#a7b9f8402890f6bbc67b9d865dc52457a">throw_shagai</a></td></tr>
+<tr class="separator:a7b9f8402890f6bbc67b9d865dc52457a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a260df7e17ba4772e34cb11ad8c330239"></a>
@@ -133,20 +133,6 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">uint8_t JoyStick_Command::accel</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1ffa87f91ae09f9afd85f6c102bcdb3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ffa87f91ae09f9afd85f6c102bcdb3b">&#9670;&nbsp;</a></span>auto_mode</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool JoyStick_Command::auto_mode</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -181,14 +167,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac472f802b01fe73985ebc7961928f8ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac472f802b01fe73985ebc7961928f8ab">&#9670;&nbsp;</a></span>manual_mode</h2>
+<a id="a7fb9df75f9f28381458c5034cdd02090"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fb9df75f9f28381458c5034cdd02090">&#9670;&nbsp;</a></span>mode</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool JoyStick_Command::manual_mode</td>
+          <td class="memname"><a class="el" href="joystick_8h.html#ad8ea442b2b17305b033cfea78a037b33">Control_Mode</a> JoyStick_Command::mode</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -203,6 +189,20 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">bool JoyStick_Command::reset_pos</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b9f8402890f6bbc67b9d865dc52457a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b9f8402890f6bbc67b9d865dc52457a">&#9670;&nbsp;</a></span>throw_shagai</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool JoyStick_Command::throw_shagai</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -224,7 +224,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot-Play/Core/Inc/devs/<a class="el" href="joystick_8h_source.html">joystick.h</a></li>
+<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai-Robot/KhangaiRobot-Play/Core/Inc/devs/<a class="el" href="joystick_8h_source.html">joystick.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

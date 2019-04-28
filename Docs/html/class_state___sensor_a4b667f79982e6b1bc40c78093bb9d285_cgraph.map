@@ -1,12 +1,11 @@
 <map id="State_Sensor::compensate_Bounds" name="State_Sensor::compensate_Bounds">
-<area shape="rect" id="node1" title=" " alt="" coords="5,150,185,191"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,125,185,166"/>
 <area shape="rect" id="node2" href="$class_bound___box.html#a07d29bbee82838663fe43f549f7ddbe8" title=" " alt="" coords="249,5,385,32"/>
 <area shape="rect" id="node4" href="$class_bound___box.html#aa5296644fccfa0c870e6d38abb395e8b" title=" " alt="" coords="233,56,400,83"/>
 <area shape="rect" id="node5" href="$class_vec3.html#a4dadb34f7d48268a101914b7a4771e68" title=" " alt="" coords="273,107,360,133"/>
 <area shape="rect" id="node6" href="$class_bound___box.html#a152eee4a2f2b874c765a2bda45bafdeb" title=" " alt="" coords="237,157,396,184"/>
-<area shape="rect" id="node8" href="$class_vec3.html#a334f510fc72e3ae8cf50f61429db307a" title=" " alt="" coords="274,208,359,235"/>
-<area shape="rect" id="node9" href="$class_vec3.html#a2d66e34e1ad4be888821158541fcd2ea" title=" " alt="" coords="274,259,359,285"/>
-<area shape="rect" id="node10" href="$class_position_sensor.html#a501484f39ecfb966c487961d0ddfb65a" title=" " alt="" coords="238,310,395,351"/>
+<area shape="rect" id="node8" href="$class_vec3.html#a2d66e34e1ad4be888821158541fcd2ea" title=" " alt="" coords="274,208,359,235"/>
+<area shape="rect" id="node9" href="$class_position_sensor.html#a501484f39ecfb966c487961d0ddfb65a" title=" " alt="" coords="238,259,395,301"/>
 <area shape="rect" id="node3" href="$class_bound.html#acb333689dc61b5fdc233b29501a82cda" title=" " alt="" coords="448,5,555,32"/>
 <area shape="rect" id="node7" href="$class_bound.html#aedf5d1dbb82e1bbeb666951867b916b5" title="Read which limit switches are pressed." alt="" coords="455,157,547,184"/>
 </map>

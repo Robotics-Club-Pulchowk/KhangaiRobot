@@ -1,10 +1,10 @@
-<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot&#45;Play/Core/Inc/devs/joystick.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot&#45;Play/Core/Inc/devs/joystick.h">
-<area shape="rect" id="node1" title=" " alt="" coords="469,5,679,76"/>
-<area shape="rect" id="node2" href="$processor_8h.html" title=" " alt="" coords="248,124,457,195"/>
-<area shape="rect" id="node5" href="$robot_8cpp.html" title=" " alt="" coords="319,361,528,432"/>
-<area shape="rect" id="node7" href="$joystick_8cpp.html" title=" " alt="" coords="541,124,751,195"/>
-<area shape="rect" id="node8" href="$int__config_8cpp.html" title=" " alt="" coords="775,124,999,195"/>
-<area shape="rect" id="node3" href="$robot_8h.html" title=" " alt="" coords="5,243,215,313"/>
-<area shape="rect" id="node6" href="$processor_8cpp.html" title=" " alt="" coords="239,243,466,313"/>
-<area shape="rect" id="node4" href="$robo__tasks_8cpp.html" title=" " alt="" coords="5,361,215,432"/>
+<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/KhangaiRobot&#45;Play/Core/Inc/devs/joystick.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/KhangaiRobot&#45;Play/Core/Inc/devs/joystick.h">
+<area shape="rect" id="node1" title=" " alt="" coords="481,5,707,76"/>
+<area shape="rect" id="node2" href="$processor_8h.html" title=" " alt="" coords="256,124,481,195"/>
+<area shape="rect" id="node5" href="$robot_8cpp.html" title=" " alt="" coords="331,361,556,432"/>
+<area shape="rect" id="node7" href="$joystick_8cpp.html" title=" " alt="" coords="557,124,783,195"/>
+<area shape="rect" id="node8" href="$int__config_8cpp.html" title=" " alt="" coords="807,124,1032,195"/>
+<area shape="rect" id="node3" href="$robot_8h.html" title=" " alt="" coords="5,243,231,313"/>
+<area shape="rect" id="node6" href="$processor_8cpp.html" title=" " alt="" coords="255,243,482,313"/>
+<area shape="rect" id="node4" href="$robo__tasks_8cpp.html" title=" " alt="" coords="5,361,231,432"/>
 </map>

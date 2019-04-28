@@ -7,6 +7,5 @@ var searchData=
   ['ahbpresctable',['AHBPrescTable',['../group___s_t_m32_f4xx___system___private___variables.html#ga6e1d9cd666f0eacbfde31e9932a93466',1,'system_stm32f4xx.c']]],
   ['algo_5f',['algo_',['../class_p_i_d.html#a00da8f79183718c3326bc5322f77b5f9',1,'PID']]],
   ['alpha_5f',['alpha_',['../class_exp___smooth.html#a0406c67c983a212c0e744fff4672399b',1,'Exp_Smooth']]],
-  ['apbpresctable',['APBPrescTable',['../group___s_t_m32_f4xx___system___private___variables.html#ga5b4f8b768465842cf854a8f993b375e9',1,'system_stm32f4xx.c']]],
-  ['auto_5fmode',['auto_mode',['../struct_joy_stick___command.html#a1ffa87f91ae09f9afd85f6c102bcdb3b',1,'JoyStick_Command']]]
+  ['apbpresctable',['APBPrescTable',['../group___s_t_m32_f4xx___system___private___variables.html#ga5b4f8b768465842cf854a8f993b375e9',1,'system_stm32f4xx.c']]]
 ];

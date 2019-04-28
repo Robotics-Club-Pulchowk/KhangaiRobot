@@ -14,6 +14,7 @@ var class_state___sensor =
     [ "read_Orientation", "class_state___sensor.html#ae108cbc000aaf85a2da0ec0f6d5b2f81", null ],
     [ "read_State", "class_state___sensor.html#a79118858b21e47b7e6e509dfba5b06f8", null ],
     [ "remove_PSensor", "class_state___sensor.html#a3965dffdc2a72622a862f2a20fe2e09f", null ],
+    [ "update_Position", "class_state___sensor.html#a18febc839ef7fcdd42b33c108267bcc1", null ],
     [ "bound_box_", "class_state___sensor.html#a205540f21a08fc82e92fa7c3d8cc289b", null ],
     [ "bounds_", "class_state___sensor.html#ad05af7d80a4a62f17029a51918debd74", null ],
     [ "first_ori_", "class_state___sensor.html#aaefe6218ef1a505043b8e055a5383cf1", null ],
