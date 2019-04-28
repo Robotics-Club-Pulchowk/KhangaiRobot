@@ -38,6 +38,8 @@ public:
         void change_Sensors(Field field_id);
         uint8_t get_Bounds();
 
+        void update_Position(Vec3<float> pos) { p_sensor_->update_State(pos); }
+
 private:
         PositionSensor *p_sensor_;
 

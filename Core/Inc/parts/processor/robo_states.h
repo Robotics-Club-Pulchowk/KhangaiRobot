@@ -71,6 +71,7 @@ public:
         bool nextStateReached(Vec3<float> state, uint8_t bounds);
 
         Robo_States* get_NextState() { return next_state_; }
+        Vec2<float> get_Centre() { return sv_->centre; }
         Field get_ID() { return sv_->id; }
         State_Vars* get_State() { return sv_; }
         void set_State(Robo_States *robo) {
