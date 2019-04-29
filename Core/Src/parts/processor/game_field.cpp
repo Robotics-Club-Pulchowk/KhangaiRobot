@@ -30,6 +30,8 @@ State_Vars gStateQ2_Data;
 State_Vars gStateR_Data;
 State_Vars gStateR1_Data;
 State_Vars gStateR2_Data;
+State_Vars gStateS_Data;
+State_Vars gStateT_Data;
 
 
 const uint32_t gMax_Robo_Velocity = 1000;        // mm/s
@@ -50,7 +52,7 @@ void init_GameField()
 
         // Defining the state : State B
         gStateB_Data.id = Field::FIELD_B;
-        gStateB_Data.centre = Vec2<float>(1500, 1000);
+        gStateB_Data.centre = Vec2<float>(1400, 1000);
         gStateB_Data.upper_bounds = Vec2<float>(2000, 1700);
         gStateB_Data.lower_bounds = Vec2<float>(1360, 800);
         gStateB_Data.last_limit = 1;
@@ -129,7 +131,7 @@ void init_GameField()
         gStateI_Data.id = Field::FIELD_I;
         gStateI_Data.centre = Vec2<float>(1300, 8500);
         gStateI_Data.upper_bounds = Vec2<float>(1450, 9000);
-        gStateI_Data.lower_bounds = Vec2<float>(1050, 7930);
+        gStateI_Data.lower_bounds = Vec2<float>(1050, 8030);
         gStateI_Data.last_limit = 1;
         gStateI_Data.ramping_factor = 0.1;
         gStateI_Data.first_limit = 0.9;
@@ -257,4 +259,26 @@ void init_GameField()
         gStateR2_Data.first_limit = 1;
         gStateR2_Data.max_vel = 0;
         gStateR2_Data.rated_vel = 0;
+
+         // Defining the state : State S
+        gStateS_Data.id = Field::FIELD_S;
+        gStateS_Data.centre = Vec2<float>(3800, 3500);
+        gStateS_Data.upper_bounds = Vec2<float>(4100, 4000);
+        gStateS_Data.lower_bounds = Vec2<float>(3900, 3000);
+        gStateS_Data.last_limit = 1;
+        gStateS_Data.ramping_factor = 0.001;
+        gStateS_Data.first_limit = 1;
+        gStateS_Data.max_vel = gMax_Robo_Velocity;
+        gStateS_Data.rated_vel = gRated_Robo_Velocity;
+        
+        // Defining the state : State T
+        gStateT_Data.id = Field::FIELD_T;
+        gStateT_Data.centre = Vec2<float>(4000, 8500);
+        gStateT_Data.upper_bounds = Vec2<float>(4500, 9000);
+        gStateT_Data.lower_bounds = Vec2<float>(3500, 8000);
+        gStateT_Data.last_limit = 1;
+        gStateT_Data.ramping_factor = 0.001;
+        gStateT_Data.first_limit = 1;
+        gStateT_Data.max_vel = 400;
+        gStateT_Data.rated_vel = 40;
 }
