@@ -47,8 +47,8 @@ void init_GameField()
         gStateA_Data.last_limit = 1;
         gStateA_Data.ramping_factor = 0.01;
         gStateA_Data.first_limit = 0.6;
-        gStateA_Data.max_vel = gMax_Robo_Velocity;
-        gStateA_Data.rated_vel = gRated_Robo_Velocity;
+        gStateA_Data.max_vel = 1200;
+        gStateA_Data.rated_vel = 120;
 
         // Defining the state : State B
         gStateB_Data.id = Field::FIELD_B;
@@ -74,7 +74,7 @@ void init_GameField()
 
         // Defining the state : State D
         gStateD_Data.id = Field::FIELD_D;
-        gStateD_Data.centre = Vec2<float>(800, 3000);
+        gStateD_Data.centre = Vec2<float>(800, 2800);
         gStateD_Data.upper_bounds = Vec2<float>(1100, 3300);
         gStateD_Data.lower_bounds = Vec2<float>(500, 2700);
         gStateD_Data.last_limit = 1;
@@ -124,8 +124,8 @@ void init_GameField()
         gStateH_Data.last_limit = 1;
         gStateH_Data.ramping_factor = 0.001;
         gStateH_Data.first_limit = 1;
-        gStateH_Data.max_vel = gMax_Robo_Velocity;
-        gStateH_Data.rated_vel = gRated_Robo_Velocity;
+        gStateH_Data.max_vel = 1200;
+        gStateH_Data.rated_vel = 120;
 
         // Defining the state : State I
         gStateI_Data.id = Field::FIELD_I;
