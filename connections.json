@@ -45,14 +45,15 @@
                         ],
                         "gpio-mode" : "Input",
                         "gpio-pins" : [
-                                "PD7", "PB4"
+                                "PD7", "PB4-to-PC14"
                         ],
                         "int-pins" : [
                                 "PC4", "PC5"
                         ],
                         "remarks" : [
                                 "PC4 and PD7 : xEncoder",
-                                "PC5 and PB4 : yEncoder"
+                                "PC5 and PB4 : yEncoder",
+                                "PC14 was used instead of PB4 because PB4 was used for Vietnamese Motor Encoder"
                         ]
                 },
                 {
@@ -85,11 +86,12 @@
                         "pins" : [
                                 "PA8",  "PA9",
                                 "PA15", "PA1",
-                                "PA6",  "PA7",
+                                "PA6-to-PB4",  "PA7",
                                 "PB6",  "PB7"
                         ],
                         "remarks" : [
-                                "Motors and Motor Encoders are abstracted as wheels"
+                                "Motors and Motor Encoders are abstracted as wheels",
+                                "PB4 was used instead of PA6 because the encoder was not working consistently"
                         ]
                 }
         ]
