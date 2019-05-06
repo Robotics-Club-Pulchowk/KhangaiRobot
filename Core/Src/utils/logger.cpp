@@ -16,8 +16,9 @@ int ITM_SendString(char *data, int len)
         int i = 0;
         for (; i < len; ++i)
         {
-                uint8_t buf_index = 1 - gSending_Index;
-                gPrintfData[buf_index][gPrintfDataIndex[buf_index]++] = data[i];
+                // uint8_t buf_index = 1 - gSending_Index;
+                // gPrintfData[buf_index][gPrintfDataIndex[buf_index]++] = data[i];
+                ITM_SendChar(data[i]);
         }
         return i;
 }
