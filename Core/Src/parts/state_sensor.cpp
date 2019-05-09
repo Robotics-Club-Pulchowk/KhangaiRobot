@@ -439,7 +439,7 @@ void State_Sensor::change_Sensors(Field field_id)
                 case Field::FIELD_P : {      // State I
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
-                        p_sensor_->add_Sensor(&gXLidar);
+                        p_sensor_->remove_Sensor(&gXLidar);
                 } break;
 
                 default : {      // Default State
