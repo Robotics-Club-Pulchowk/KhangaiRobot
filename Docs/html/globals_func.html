@@ -188,6 +188,9 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 <li>DMA1_Stream5_IRQHandler()
 : <a class="el" href="stm32f4xx__it_8c.html#ac201b60d58b0eba2ce0b55710eb3c4d0">stm32f4xx_it.c</a>
 </li>
+<li>DMA1_Stream6_IRQHandler()
+: <a class="el" href="stm32f4xx__it_8c.html#aa28fd448462a6347589129f63bb0a388">stm32f4xx_it.c</a>
+</li>
 </ul>
 
 
@@ -218,11 +221,10 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 </li>
 <li>EXTI4_IRQHandler()
 : <a class="el" href="stm32f4xx__it_8h.html#a290cb997018c8d85d4b965b4a242842f">stm32f4xx_it.h</a>
-, <a class="el" href="stm32f4xx__it_8c.html#a290cb997018c8d85d4b965b4a242842f">stm32f4xx_it.c</a>
 </li>
 <li>EXTI9_5_IRQHandler()
-: <a class="el" href="stm32f4xx__it_8h.html#a7b2096b8b2643286dc3a7e5110e5ae85">stm32f4xx_it.h</a>
-, <a class="el" href="stm32f4xx__it_8c.html#a7b2096b8b2643286dc3a7e5110e5ae85">stm32f4xx_it.c</a>
+: <a class="el" href="stm32f4xx__it_8c.html#a7b2096b8b2643286dc3a7e5110e5ae85">stm32f4xx_it.c</a>
+, <a class="el" href="stm32f4xx__it_8h.html#a7b2096b8b2643286dc3a7e5110e5ae85">stm32f4xx_it.h</a>
 </li>
 </ul>
 
@@ -251,12 +253,6 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 </li>
 <li>HAL_ResumeTick()
 : <a class="el" href="stm32f4xx__hal__timebase__tim_8c.html#a24e0ee9dae1ec0f9d19200f5575ff790">stm32f4xx_hal_timebase_tim.c</a>
-</li>
-<li>HAL_SPI_MspDeInit()
-: <a class="el" href="spi_8c.html#af9af6cae4cb9386b709196d3a3ab4f78">spi.c</a>
-</li>
-<li>HAL_SPI_MspInit()
-: <a class="el" href="spi_8c.html#a8e1dadd744299fa6f8bca0e1bcbd2c00">spi.c</a>
 </li>
 <li>HAL_SuspendTick()
 : <a class="el" href="stm32f4xx__hal__timebase__tim_8c.html#aaf651af2afe688a991c657f64f8fa5f9">stm32f4xx_hal_timebase_tim.c</a>
@@ -300,8 +296,8 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 , <a class="el" href="stm32f4xx__it_8h.html#a2bffc10d5bd4106753b7c30e86903bea">stm32f4xx_it.h</a>
 </li>
 <li>HMC5883_Calibrate()
-: <a class="el" href="hmc5883_8h.html#a6449314a8f8fa5ee28206b48b4bd94fb">hmc5883.h</a>
-, <a class="el" href="hmc5883_8cpp.html#a6449314a8f8fa5ee28206b48b4bd94fb">hmc5883.cpp</a>
+: <a class="el" href="hmc5883_8cpp.html#a6449314a8f8fa5ee28206b48b4bd94fb">hmc5883.cpp</a>
+, <a class="el" href="hmc5883_8h.html#a6449314a8f8fa5ee28206b48b4bd94fb">hmc5883.h</a>
 </li>
 <li>HMC5883_Init()
 : <a class="el" href="hmc5883_8h.html#a86fa17c5c34c4d8892eee22857407410">hmc5883.h</a>
@@ -355,9 +351,17 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 : <a class="el" href="devs__config_8h.html#a255201daf7b60410935e2f939f34a263">devs_config.h</a>
 , <a class="el" href="devs__config_8cpp.html#a255201daf7b60410935e2f939f34a263">devs_config.cpp</a>
 </li>
+<li>log_data()
+: <a class="el" href="logger_8cpp.html#a66d17868f5a5bcc68dc70243bb439959">logger.cpp</a>
+, <a class="el" href="robo__tasks_8cpp.html#a66d17868f5a5bcc68dc70243bb439959">robo_tasks.cpp</a>
+</li>
+<li>Logging_Handle_TxCplt()
+: <a class="el" href="int__config_8cpp.html#a27198f22d5635a298da88a3d6e238f22">int_config.cpp</a>
+, <a class="el" href="logger_8cpp.html#a27198f22d5635a298da88a3d6e238f22">logger.cpp</a>
+</li>
 <li>LoggingThread()
-: <a class="el" href="freertos_8c.html#a8bdf1b0904a1ea40164f181f7e86f4ef">freertos.c</a>
-, <a class="el" href="robo__tasks_8cpp.html#a8bdf1b0904a1ea40164f181f7e86f4ef">robo_tasks.cpp</a>
+: <a class="el" href="robo__tasks_8cpp.html#a8bdf1b0904a1ea40164f181f7e86f4ef">robo_tasks.cpp</a>
+, <a class="el" href="freertos_8c.html#a8bdf1b0904a1ea40164f181f7e86f4ef">freertos.c</a>
 </li>
 </ul>
 
@@ -438,41 +442,37 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 : <a class="el" href="i2c_8h.html#ada6e763cfa4108a8d24cd27b75f2f489">i2c.h</a>
 , <a class="el" href="i2c_8c.html#ada6e763cfa4108a8d24cd27b75f2f489">i2c.c</a>
 </li>
-<li>MX_SPI2_Init()
-: <a class="el" href="spi_8h.html#aea85daa666c03d85fd59edef711ebb08">spi.h</a>
-, <a class="el" href="spi_8c.html#aea85daa666c03d85fd59edef711ebb08">spi.c</a>
-</li>
 <li>MX_TIM1_Init()
 : <a class="el" href="tim_8c.html#ad1f9d42690163f73f73e5b820c81ca14">tim.c</a>
 , <a class="el" href="tim_8h.html#ad1f9d42690163f73f73e5b820c81ca14">tim.h</a>
 </li>
 <li>MX_TIM2_Init()
-: <a class="el" href="tim_8h.html#a4b8ff887fd3fdf26605e35927e4ff202">tim.h</a>
-, <a class="el" href="tim_8c.html#a4b8ff887fd3fdf26605e35927e4ff202">tim.c</a>
+: <a class="el" href="tim_8c.html#a4b8ff887fd3fdf26605e35927e4ff202">tim.c</a>
+, <a class="el" href="tim_8h.html#a4b8ff887fd3fdf26605e35927e4ff202">tim.h</a>
 </li>
 <li>MX_TIM3_Init()
 : <a class="el" href="tim_8h.html#a7912f2916786a2c33cb6fb8259ade58c">tim.h</a>
 , <a class="el" href="tim_8c.html#a7912f2916786a2c33cb6fb8259ade58c">tim.c</a>
 </li>
 <li>MX_TIM4_Init()
-: <a class="el" href="tim_8c.html#aef1e0b132b1af1c923cc420a57180c67">tim.c</a>
-, <a class="el" href="tim_8h.html#aef1e0b132b1af1c923cc420a57180c67">tim.h</a>
+: <a class="el" href="tim_8h.html#aef1e0b132b1af1c923cc420a57180c67">tim.h</a>
+, <a class="el" href="tim_8c.html#aef1e0b132b1af1c923cc420a57180c67">tim.c</a>
 </li>
 <li>MX_TIM8_Init()
-: <a class="el" href="tim_8c.html#a265aef7a46164094e791259bf59d9cb4">tim.c</a>
-, <a class="el" href="tim_8h.html#a265aef7a46164094e791259bf59d9cb4">tim.h</a>
+: <a class="el" href="tim_8h.html#a265aef7a46164094e791259bf59d9cb4">tim.h</a>
+, <a class="el" href="tim_8c.html#a265aef7a46164094e791259bf59d9cb4">tim.c</a>
 </li>
 <li>MX_TIM9_Init()
-: <a class="el" href="tim_8h.html#a31471cefed9f6de5861a05d61de7e302">tim.h</a>
-, <a class="el" href="tim_8c.html#a31471cefed9f6de5861a05d61de7e302">tim.c</a>
+: <a class="el" href="tim_8c.html#a31471cefed9f6de5861a05d61de7e302">tim.c</a>
+, <a class="el" href="tim_8h.html#a31471cefed9f6de5861a05d61de7e302">tim.h</a>
 </li>
 <li>MX_UART4_Init()
-: <a class="el" href="usart_8h.html#a41df2bc0e6f13b33f862ea4eddfc6a23">usart.h</a>
-, <a class="el" href="usart_8c.html#a41df2bc0e6f13b33f862ea4eddfc6a23">usart.c</a>
+: <a class="el" href="usart_8c.html#a41df2bc0e6f13b33f862ea4eddfc6a23">usart.c</a>
+, <a class="el" href="usart_8h.html#a41df2bc0e6f13b33f862ea4eddfc6a23">usart.h</a>
 </li>
 <li>MX_USART2_UART_Init()
-: <a class="el" href="usart_8h.html#a052088fe5bb3f807a4b2502e664fd4fd">usart.h</a>
-, <a class="el" href="usart_8c.html#a052088fe5bb3f807a4b2502e664fd4fd">usart.c</a>
+: <a class="el" href="usart_8c.html#a052088fe5bb3f807a4b2502e664fd4fd">usart.c</a>
+, <a class="el" href="usart_8h.html#a052088fe5bb3f807a4b2502e664fd4fd">usart.h</a>
 </li>
 <li>MX_USART3_UART_Init()
 : <a class="el" href="usart_8c.html#a3d04b903a77089f6ce08dd0bf1c81a81">usart.c</a>
@@ -523,23 +523,20 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 
 
 <h3><a id="index_s"></a>- s -</h3><ul>
-<li>send_AllData()
-: <a class="el" href="logger_8cpp.html#abe231afbbd7868826c17de16f966d739">logger.cpp</a>
-</li>
 <li>set_DutyCycle_Primary()
 : <a class="el" href="wheel_8cpp.html#a13d649632c00bd04816ecd0aeb36ba7d">wheel.cpp</a>
 </li>
 <li>solve()
-: <a class="el" href="mat_8cpp.html#a6d965abd578502a55f988c51a3dd82d0">mat.cpp</a>
-, <a class="el" href="mat_8h.html#a6d965abd578502a55f988c51a3dd82d0">mat.h</a>
+: <a class="el" href="mat_8h.html#a6d965abd578502a55f988c51a3dd82d0">mat.h</a>
+, <a class="el" href="mat_8cpp.html#a6d965abd578502a55f988c51a3dd82d0">mat.cpp</a>
 </li>
 <li>StartDefaultTask()
 : <a class="el" href="freertos_8c.html#a016544463b4842ced7191baf8f449cea">freertos.c</a>
 , <a class="el" href="robo__tasks_8cpp.html#a016544463b4842ced7191baf8f449cea">robo_tasks.cpp</a>
 </li>
 <li>Stepper_Init()
-: <a class="el" href="devs__config_8cpp.html#a52f7ea282af55cb3604963a668a41a02">devs_config.cpp</a>
-, <a class="el" href="devs__config_8h.html#a52f7ea282af55cb3604963a668a41a02">devs_config.h</a>
+: <a class="el" href="devs__config_8h.html#a52f7ea282af55cb3604963a668a41a02">devs_config.h</a>
+, <a class="el" href="devs__config_8cpp.html#a52f7ea282af55cb3604963a668a41a02">devs_config.cpp</a>
 </li>
 <li>swap()
 : <a class="el" href="mat_8cpp.html#a67468cb8d132dc0a2d02af527103d82e">mat.cpp</a>

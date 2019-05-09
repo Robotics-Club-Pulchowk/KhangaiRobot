@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['direction',['Direction',['../wheel_8h.html#a224b9163917ac32fc95a60d8c1eec3aa',1,'wheel.h']]]
+  ['control_5fmode',['Control_Mode',['../joystick_8h.html#ad8ea442b2b17305b033cfea78a037b33',1,'joystick.h']]]
 ];

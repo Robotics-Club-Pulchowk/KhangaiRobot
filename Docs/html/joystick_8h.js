@@ -17,5 +17,11 @@ var joystick_8h =
     [ "MANUAL_KEY", "joystick_8h.html#af18629db14b0fb8e0292d032734b36b3", null ],
     [ "RESET_KEY", "joystick_8h.html#a3d069b99a207bdec4cc0f22a298cbb3a", null ],
     [ "SHAGAI_GRIP_KEY", "joystick_8h.html#a657a7ed14d11b557497a95bc8f57c340", null ],
+    [ "THROW_SHAGAI_KEY", "joystick_8h.html#afbd561605768a0523968c616ce0572e6", null ],
+    [ "Control_Mode", "joystick_8h.html#ad8ea442b2b17305b033cfea78a037b33", [
+      [ "MANUAL", "joystick_8h.html#ad8ea442b2b17305b033cfea78a037b33aa60a6a471c0681e5a49c4f5d00f6bc5a", null ],
+      [ "AUTO", "joystick_8h.html#ad8ea442b2b17305b033cfea78a037b33ae1f2d5134ed2543d38a0de9751cf75d9", null ],
+      [ "NONE", "joystick_8h.html#ad8ea442b2b17305b033cfea78a037b33ab50339a10e1de285ac99d4c3990b8693", null ]
+    ] ],
     [ "JoyStick_Handle_RxCplt", "joystick_8h.html#a8bf81a87ac512746c48226da0cfaf031", null ]
 ];

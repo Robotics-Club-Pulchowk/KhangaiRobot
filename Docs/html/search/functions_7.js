@@ -3,6 +3,7 @@ var searchData=
   ['get_5falgorithm',['get_Algorithm',['../class_p_i_d.html#a940bbf0c834f0ac68203b8e28b2ca8d1',1,'PID']]],
   ['get_5fbound',['get_Bound',['../class_bound___box.html#a152eee4a2f2b874c765a2bda45bafdeb',1,'Bound_Box']]],
   ['get_5fbounds',['get_Bounds',['../class_bound___box.html#aa5296644fccfa0c870e6d38abb395e8b',1,'Bound_Box::get_Bounds()'],['../class_state___sensor.html#a2578ecaea1eb7a08f685c1652a82675c',1,'State_Sensor::get_Bounds()']]],
+  ['get_5fcentre',['get_Centre',['../class_robo___states.html#ac673d6759baaa1a4afb5acc454389ec8',1,'Robo_States']]],
   ['get_5fd',['get_D',['../class_p_i_d___algorithm.html#a5a113c3d88ee8af75af7248fb590f538',1,'PID_Algorithm']]],
   ['get_5fi',['get_I',['../class_p_i_d___algorithm.html#a6305260cd346415953b41fb765d33740',1,'PID_Algorithm']]],
   ['get_5fid',['get_ID',['../class_arduino___device.html#acd91590a4e10e4e8d0a7d92c0451cd36',1,'Arduino_Device::get_ID()'],['../class_robo___states.html#a52979a290d5b8010c6478d76db4f167a',1,'Robo_States::get_ID()'],['../class_state.html#ae684870e2450e5ab1f90f31eb4453ad2',1,'State::get_ID()']]],

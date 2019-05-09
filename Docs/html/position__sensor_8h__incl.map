@@ -1,10 +1,10 @@
-<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot&#45;Play/Core/Inc/parts/sensors/position_sensor.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot&#45;Play/Core/Inc/parts/sensors/position_sensor.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,215,91"/>
-<area shape="rect" id="node2" href="$vec3_8h.html" title=" " alt="" coords="50,288,109,315"/>
-<area shape="rect" id="node5" href="$sensor_8h.html" title=" " alt="" coords="74,139,146,165"/>
-<area shape="rect" id="node6" href="$kalman_8h.html" title=" " alt="" coords="170,139,245,165"/>
-<area shape="rect" id="node3" title=" " alt="" coords="21,437,138,464"/>
-<area shape="rect" id="node4" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="83,363,145,389"/>
-<area shape="rect" id="node7" href="$mat_8h.html" title=" " alt="" coords="159,213,213,240"/>
-<area shape="rect" id="node8" title=" " alt="" coords="155,288,217,315"/>
+<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/KhangaiRobot&#45;Play/Core/Inc/parts/sensors/position_sensor.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/KhangaiRobot&#45;Play/Core/Inc/parts/sensors/position_sensor.h">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,299,76"/>
+<area shape="rect" id="node2" href="$vec3_8h.html" title=" " alt="" coords="92,273,151,300"/>
+<area shape="rect" id="node5" href="$sensor_8h.html" title=" " alt="" coords="116,124,188,151"/>
+<area shape="rect" id="node6" href="$kalman_8h.html" title=" " alt="" coords="212,124,287,151"/>
+<area shape="rect" id="node3" title=" " alt="" coords="63,423,180,449"/>
+<area shape="rect" id="node4" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="125,348,187,375"/>
+<area shape="rect" id="node7" href="$mat_8h.html" title=" " alt="" coords="201,199,255,225"/>
+<area shape="rect" id="node8" title=" " alt="" coords="197,273,259,300"/>
 </map>

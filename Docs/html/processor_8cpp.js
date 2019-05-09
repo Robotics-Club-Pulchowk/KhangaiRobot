@@ -1,6 +1,8 @@
 var processor_8cpp =
 [
     [ "init_GameField", "processor_8cpp.html#a9ce21429239a4cc722845e28d0aced8c", null ],
+    [ "gSend_LED_Data_Max", "processor_8cpp.html#a84cd52cc313f045d3d386da0ca0b0eda", null ],
+    [ "gSend_Pneumatic_Data_Max", "processor_8cpp.html#a2558156fda07498a46ce3cff1255ff98", null ],
     [ "gStateA", "processor_8cpp.html#a48997c8e3978553f5a751234288081dc", null ],
     [ "gStateA_Data", "processor_8cpp.html#a94fc944ed1fb7171d3ddf15e685663db", null ],
     [ "gStateB", "processor_8cpp.html#a45a437c46d59b41f3421d3c412b93172", null ],
@@ -24,5 +26,21 @@ var processor_8cpp =
     [ "gStateK", "processor_8cpp.html#aaafad572339d24df474a58547fcfd4d2", null ],
     [ "gStateK_Data", "processor_8cpp.html#a057c24ea6417bd37fa0428c44b1cadf0", null ],
     [ "gStateL", "processor_8cpp.html#a2d8f47c1016800900af497cc9c9c4328", null ],
-    [ "gStateL_Data", "processor_8cpp.html#a178acfe85b8cb5cf8b74ec766e436d30", null ]
+    [ "gStateL_Data", "processor_8cpp.html#a178acfe85b8cb5cf8b74ec766e436d30", null ],
+    [ "gStateO", "processor_8cpp.html#a3cc25e0741f4b68311129aaf2be3277f", null ],
+    [ "gStateO_Data", "processor_8cpp.html#a60770d6181559af053ced24a512b0c13", null ],
+    [ "gStateP", "processor_8cpp.html#aff3c1dd61806fed60c1c8742e4508235", null ],
+    [ "gStateP_Data", "processor_8cpp.html#a0b05a2f90c9f40ba9e09bdab24179aa3", null ],
+    [ "gStateQ", "processor_8cpp.html#a857c32d88f53d12c82325a87b7df8f4f", null ],
+    [ "gStateQ1", "processor_8cpp.html#ae4cfef47dfc7fa597d7cad12a4dfe523", null ],
+    [ "gStateQ1_Data", "processor_8cpp.html#a782fae33b6515884fa44decfef4b5508", null ],
+    [ "gStateQ2", "processor_8cpp.html#a7b6d16f89a7a953e2aa60b44bd38695f", null ],
+    [ "gStateQ2_Data", "processor_8cpp.html#af536ce440934edc34bf7ea8d24872af8", null ],
+    [ "gStateQ_Data", "processor_8cpp.html#ab36fcc2cc8257ca846c97322937d224a", null ],
+    [ "gStateR", "processor_8cpp.html#aa26b456e64303869bca2aff580c645f9", null ],
+    [ "gStateR1", "processor_8cpp.html#a877ffd17a31dbe0b6faec6e8bdfe4165", null ],
+    [ "gStateR1_Data", "processor_8cpp.html#a673780303ff7a8c5f6a7bc11dca1d602", null ],
+    [ "gStateR2", "processor_8cpp.html#a1da3cbdc925381328dccf0cf9b70cfc8", null ],
+    [ "gStateR2_Data", "processor_8cpp.html#ac00acce3c891f49979a38f47e3b5da4e", null ],
+    [ "gStateR_Data", "processor_8cpp.html#a1578d381c4fed91ea6e63d37d2e259f8", null ]
 ];

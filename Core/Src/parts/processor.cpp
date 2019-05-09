@@ -34,6 +34,8 @@ extern State_Vars gStateQ2_Data;
 extern State_Vars gStateR_Data;
 extern State_Vars gStateR1_Data;
 extern State_Vars gStateR2_Data;
+extern State_Vars gStateS_Data;
+extern State_Vars gStateT_Data;
 
 
 extern Robo_States gStateA;
@@ -57,6 +59,8 @@ extern Robo_States gStateQ2;
 extern Robo_States gStateR;
 extern Robo_States gStateR1;
 extern Robo_States gStateR2;
+extern Robo_States gStateS;
+extern Robo_States gStateT;
 
 
 Robo_States gStateA(&gStateA_Data, &gStateB);
@@ -81,6 +85,8 @@ Robo_States gStateQ2(&gStateQ2_Data, &gStateR2);
 Robo_States gStateR(&gStateR_Data, &gStateR);
 Robo_States gStateR1(&gStateR1_Data, &gStateR);
 Robo_States gStateR2(&gStateR2_Data, &gStateR);
+Robo_States gStateS(&gStateS_Data, &gStateT);
+Robo_States gStateT(&gStateT_Data, &gStateO);
 
 
 static uint8_t fill_Intensity(uint8_t red, uint8_t blue);
@@ -113,7 +119,7 @@ int Processor::init(uint32_t dt_millis)
         return 0;
 }
 
-void Processor::process(Vec3<float> state, State_Vars *&robot_state_vars_)
+void Processor::process(Vec3<float> state, State_Vars *&robot_state_vars)
 {
         uint8_t bounds = sensor_->get_Bounds();
         if (curr_state_->nextStateReached(state, bounds)) {
@@ -121,7 +127,7 @@ void Processor::process(Vec3<float> state, State_Vars *&robot_state_vars_)
                 sensor_->change_Sensors(curr_state_->get_ID());
         }
 
-        robot_state_vars_ = curr_state_->get_State();
+        robot_state_vars = curr_state_->get_State();
 }
 
 Vec3<float> Processor::auto_control(Vec3<float> state, Vec3<float> vel_from_base, uint32_t dt_millis)
@@ -195,7 +201,13 @@ static bool gSend_Pneumatic_Data = false;
 static uint8_t gSend_Pneumatic_Data_Num = 5;
 const uint8_t gSend_Pneumatic_Data_Max = 5;
 
-static uint8_t gSend_Extend_Num = 10;
+const static uint8_t gSend_Extend_Num_Max = 10;
+static uint8_t gSend_Extend_Num = gSend_Extend_Num_Max;
+
+
+const uint32_t gArm_Retrieve_Count = 10;
+static uint32_t gShagai_Thrown_Counter = 0;
+static bool gShagai_Thrown_Counter_Start = false;
 
 Vec3<float> Processor::control(Vec3<float> state,
                                Vec3<float> vel_from_base,
@@ -208,7 +220,6 @@ Vec3<float> Processor::control(Vec3<float> state,
         // Algorithm Info:
         //      1) Minimum Acceleration Trajectory
         //      2) Smooth Transition
-        process(state, robot_state_vars);
 
         JoyStick_Command joy_command;
         Control_Mode mode = Control_Mode::MANUAL;
@@ -229,9 +240,29 @@ Vec3<float> Processor::control(Vec3<float> state,
                 reset_pos = joy_command.reset_pos;
                 throw_shagai = joy_command.throw_shagai;
         }
+        
+        //* Process the data if read
+        process(state, robot_state_vars);
+        
+        Field id = robot_state_vars->id;
+
+        if (id == Field::FIELD_Q) {
+
+                if (throw_shagai) {
+                        gShagai_Thrown_Counter_Start = true;
+                }
+                if (gShagai_Thrown_Counter_Start) {
+                        ++gShagai_Thrown_Counter;
+                        if (gShagai_Thrown_Counter > gArm_Retrieve_Count) {
+                                gShagai_Thrown_Counter = 0;
+                                curr_state_ = &gStateS;
+                                gShagai_Thrown_Counter_Start = false;
+                        }
+                }
+
+        }
 
         //* Switch to manual mode automatically in state L
-        Field id = robot_state_vars->id;
         if (id == Field::FIELD_L) {
                 mode = Control_Mode::MANUAL;
         }
@@ -243,12 +274,20 @@ Vec3<float> Processor::control(Vec3<float> state,
 
         //* Select Controller on the basis of control mode
         if (mode == Control_Mode::MANUAL) {
+
+                float phi = state.getZ();
+                phi /= (float)57.3;     // to rads
+
                 if (!just_read) {
                         vels = last_vel.mult_EW(0.8);
                 }
                 else {
                         vels = manual_control(joy_command);
                 }
+
+                float rw = (phi)*0.1;
+                vels.setZ(rw);
+
                 led_val = fill_Intensity(0, 15);
         }
         else if (mode == Control_Mode::AUTO) {
@@ -265,6 +304,11 @@ Vec3<float> Processor::control(Vec3<float> state,
                 vels = lerp(vels_manual, vels_auto, gAuto_Ratio);
 
                 led_val = fill_Intensity(15, 5);
+
+                if (id == Field::FIELD_O || id == Field::FIELD_P) {
+                        float rw = vels.getZ();
+                        vels.setZ(0.5*rw);
+                }
         }
 
         //* Determine if there is change in control mode from the previous one
@@ -293,7 +337,7 @@ Vec3<float> Processor::control(Vec3<float> state,
                 }
         }
 
-        //* Throw Shagai if reset pos obtained
+        //* Throw Shagai if throw shagai flag obtained
         if (throw_shagai) {
                 gSend_Pneumatic_Data = true;
         }
@@ -303,7 +347,6 @@ Vec3<float> Processor::control(Vec3<float> state,
                 if (--gSend_Pneumatic_Data_Num) {
                         uint8_t throw_shagai_cmd = 0x03;
                         gPneumatic.write(&throw_shagai_cmd, 1);
-                        HAL_GPIO_WritePin(B_RedLED_GPIO_Port, B_RedLED_Pin, GPIO_PIN_SET);
                 }
                 else {
                         gSend_Pneumatic_Data_Num = gSend_Pneumatic_Data_Max;
@@ -313,7 +356,16 @@ Vec3<float> Processor::control(Vec3<float> state,
 
         //* Reset Position to field O
         if (reset_pos) {
-                curr_state_->set_State(&gStateO);
+                curr_state_ = &gStateO;
+                sensor_->change_Sensors(curr_state_->get_ID());
+                robot_state_vars = curr_state_->get_State();
+
+                Vec2<float> p = curr_state_->get_Centre();
+                Vec3<float> pos(p.getX(), p.getY(), 0); 
+                sensor_->update_Position(pos);
+                
+                gSend_Extend_Num = gSend_Extend_Num_Max;
+                // HAL_GPIO_WritePin(B_RedLED_GPIO_Port, B_RedLED_Pin, GPIO_PIN_SET);
         }
 
         return vels;

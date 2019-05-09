@@ -10,6 +10,9 @@
 #include "arduino.h"
 #include "joystick.h"
 
+
+void Logging_Handle_TxCplt();
+
 extern struct Enc gXEnc;
 extern struct Enc gYEnc;
 
@@ -42,6 +45,9 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 {
         if (huart->Instance == USART3) {
                 Arduino_Handle_TxCplt();
+        }
+        else if (huart->Instance == USART2) {
+                Logging_Handle_TxCplt();
         }
 }
 

@@ -22,7 +22,7 @@ static Exp_Smooth gYLidarAlpha35(0.35);
 //* Required for changing field
 
 // Starting Y-Position
-float gLast_YEncoderValue = 400;
+float gLast_YEncoderValue = 300;
 // Starting X-Position
 static float gLast_XEncoderValue = 0;
 
@@ -202,12 +202,14 @@ void PositionSensor::process_LidarData(float (&lidar)[2], const State_Vars *sv)
                 }
         }
         else {
-                if (id == Field::FIELD_B || id == Field::FIELD_F) {
+                if (id == Field::FIELD_B || id == Field::FIELD_F ||
+                    (id == Field::FIELD_C && lidar[0] < 400)) {
                         if (lidar[0] < jungle_pole_dist) {
                                 lidar[0] += jungle_pole_dist;
 
                                 // Compensating the Y value based on lidar data
-                                if (id == Field::FIELD_B) {
+                                if (id == Field::FIELD_B ||
+                                    (id == Field::FIELD_C && lidar[0] < 400)) {
                                         gLast_YEncoderValue = 2030.0;
                                 }
                                 else if (id == Field::FIELD_F) {

@@ -143,6 +143,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a60f0ce9b8b64f85bd06c2bb849b3300c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2578ecaea1eb7a08f685c1652a82675c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state___sensor.html#a2578ecaea1eb7a08f685c1652a82675c">get_Bounds</a> ()</td></tr>
 <tr class="separator:a2578ecaea1eb7a08f685c1652a82675c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18febc839ef7fcdd42b33c108267bcc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state___sensor.html#a18febc839ef7fcdd42b33c108267bcc1">update_Position</a> (<a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; pos)</td></tr>
+<tr class="separator:a18febc839ef7fcdd42b33c108267bcc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -398,14 +400,13 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_state___sensor_a4b667f79982e6b1bc40c78093bb9d285_cgraph.png" border="0" usemap="#class_state___sensor_a4b667f79982e6b1bc40c78093bb9d285_cgraph" alt=""/></div>
 <map name="class_state___sensor_a4b667f79982e6b1bc40c78093bb9d285_cgraph" id="class_state___sensor_a4b667f79982e6b1bc40c78093bb9d285_cgraph">
-<area shape="rect"  title=" " alt="" coords="5,150,185,191"/>
+<area shape="rect"  title=" " alt="" coords="5,125,185,166"/>
 <area shape="rect"  href="class_bound___box.html#a07d29bbee82838663fe43f549f7ddbe8" title=" " alt="" coords="249,5,385,32"/>
 <area shape="rect"  href="class_bound___box.html#aa5296644fccfa0c870e6d38abb395e8b" title=" " alt="" coords="233,56,400,83"/>
 <area shape="rect"  href="class_vec3.html#a4dadb34f7d48268a101914b7a4771e68" title=" " alt="" coords="273,107,360,133"/>
 <area shape="rect"  href="class_bound___box.html#a152eee4a2f2b874c765a2bda45bafdeb" title=" " alt="" coords="237,157,396,184"/>
-<area shape="rect"  href="class_vec3.html#a334f510fc72e3ae8cf50f61429db307a" title=" " alt="" coords="274,208,359,235"/>
-<area shape="rect"  href="class_vec3.html#a2d66e34e1ad4be888821158541fcd2ea" title=" " alt="" coords="274,259,359,285"/>
-<area shape="rect"  href="class_position_sensor.html#a501484f39ecfb966c487961d0ddfb65a" title=" " alt="" coords="238,310,395,351"/>
+<area shape="rect"  href="class_vec3.html#a2d66e34e1ad4be888821158541fcd2ea" title=" " alt="" coords="274,208,359,235"/>
+<area shape="rect"  href="class_position_sensor.html#a501484f39ecfb966c487961d0ddfb65a" title=" " alt="" coords="238,259,395,301"/>
 <area shape="rect"  href="class_bound.html#acb333689dc61b5fdc233b29501a82cda" title=" " alt="" coords="448,5,555,32"/>
 <area shape="rect"  href="class_bound.html#aedf5d1dbb82e1bbeb666951867b916b5" title="Read which limit switches are pressed." alt="" coords="455,157,547,184"/>
 </map>
@@ -730,34 +731,33 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_state___sensor_a79118858b21e47b7e6e509dfba5b06f8_cgraph.png" border="0" usemap="#class_state___sensor_a79118858b21e47b7e6e509dfba5b06f8_cgraph" alt=""/></div>
 <map name="class_state___sensor_a79118858b21e47b7e6e509dfba5b06f8_cgraph" id="class_state___sensor_a79118858b21e47b7e6e509dfba5b06f8_cgraph">
-<area shape="rect"  title="Function that provides the state of the robot." alt="" coords="5,445,140,486"/>
-<area shape="rect"  href="class_state___sensor.html#ae108cbc000aaf85a2da0ec0f6d5b2f81" title="Function that provides the orientation of the robot." alt="" coords="211,125,345,166"/>
-<area shape="rect"  href="class_position_sensor.html#a34aa8302e10e702599384f55148160e9" title=" " alt="" coords="207,298,349,339"/>
-<area shape="rect"  href="class_vec3.html#ae581dad3aa1a885da7538582a3324d3a" title=" " alt="" coords="215,452,341,479"/>
-<area shape="rect"  href="class_vec3.html#ad259e243f6678730d990acbae2cdff57" title=" " alt="" coords="235,503,321,529"/>
-<area shape="rect"  href="class_vec3.html#a8eeb16262b7e619f081a1ba94df098f8" title=" " alt="" coords="235,553,321,580"/>
-<area shape="rect"  href="class_vec3.html#a52f0db1c387aa9bc7befe5792b698553" title=" " alt="" coords="235,604,321,631"/>
-<area shape="rect"  href="class_state___sensor.html#a4b667f79982e6b1bc40c78093bb9d285" title=" " alt="" coords="188,386,368,427"/>
-<area shape="rect"  href="mpu6050_8h.html#af32563ec0d6af4afc19f1dddb5dde5fc" title=" " alt="" coords="416,31,600,57"/>
-<area shape="rect"  href="hmc5883_8h.html#a160cb536a44edae08c21bb8b417d9827" title=" " alt="" coords="450,81,566,108"/>
-<area shape="rect"  href="error_8h.html#ab5744f81944e2a834ef96ae10f8ae166" title=" " alt="" coords="484,132,532,159"/>
-<area shape="rect"  href="devs__config_8h.html#adb25f6dac3b60011603646bf86d18b16" title=" " alt="" coords="473,183,543,209"/>
-<area shape="rect"  href="mpu6050_8cpp.html#acf3493569ebfe4fefcc3801441c70487" title=" " alt="" coords="648,5,835,32"/>
-<area shape="rect"  href="mpu6050_8cpp.html#aa4895450dc06bac74b453423c3e88b73" title=" " alt="" coords="650,56,833,83"/>
-<area shape="rect"  href="mpu6050_8cpp.html#a7d7f18ad4fd3ae66a0c5940cd82183e6" title=" " alt="" coords="883,5,1064,32"/>
-<area shape="rect"  href="mpu6050_8cpp.html#a5aa2a065243356e9633010a6b038a66c" title=" " alt="" coords="885,56,1061,83"/>
-<area shape="rect"  href="mpu6050_8h.html#a53b88c52ed0b8e9eb398578ef6f7fdc4" title=" " alt="" coords="690,157,793,184"/>
-<area shape="rect"  href="hmc5883_8h.html#a86fa17c5c34c4d8892eee22857407410" title=" " alt="" coords="690,208,793,235"/>
-<area shape="rect"  href="class_vec3.html#a2d66e34e1ad4be888821158541fcd2ea" title=" " alt="" coords="465,284,551,311"/>
-<area shape="rect"  href="class_vec3.html#a4dadb34f7d48268a101914b7a4771e68" title=" " alt="" coords="465,335,551,361"/>
-<area shape="rect"  href="class_sensor.html#a5a115feac97a147feec2f637dbed62ac" title=" " alt="" coords="460,233,556,260"/>
-<area shape="rect"  href="class_bound___box.html#a07d29bbee82838663fe43f549f7ddbe8" title=" " alt="" coords="440,452,576,479"/>
-<area shape="rect"  href="class_bound___box.html#aa5296644fccfa0c870e6d38abb395e8b" title=" " alt="" coords="425,503,591,529"/>
-<area shape="rect"  href="class_bound___box.html#a152eee4a2f2b874c765a2bda45bafdeb" title=" " alt="" coords="429,553,587,580"/>
-<area shape="rect"  href="class_vec3.html#a334f510fc72e3ae8cf50f61429db307a" title=" " alt="" coords="465,604,551,631"/>
-<area shape="rect"  href="class_position_sensor.html#a501484f39ecfb966c487961d0ddfb65a" title=" " alt="" coords="429,386,587,427"/>
-<area shape="rect"  href="class_bound.html#acb333689dc61b5fdc233b29501a82cda" title=" " alt="" coords="688,452,795,479"/>
-<area shape="rect"  href="class_bound.html#aedf5d1dbb82e1bbeb666951867b916b5" title="Read which limit switches are pressed." alt="" coords="695,553,787,580"/>
+<area shape="rect"  title="Function that provides the state of the robot." alt="" coords="5,458,140,499"/>
+<area shape="rect"  href="class_state___sensor.html#ae108cbc000aaf85a2da0ec0f6d5b2f81" title="Function that provides the orientation of the robot." alt="" coords="211,150,345,191"/>
+<area shape="rect"  href="class_position_sensor.html#a34aa8302e10e702599384f55148160e9" title=" " alt="" coords="207,313,349,354"/>
+<area shape="rect"  href="class_vec3.html#ae581dad3aa1a885da7538582a3324d3a" title=" " alt="" coords="215,465,341,492"/>
+<area shape="rect"  href="class_vec3.html#ad259e243f6678730d990acbae2cdff57" title=" " alt="" coords="235,516,321,543"/>
+<area shape="rect"  href="class_vec3.html#a8eeb16262b7e619f081a1ba94df098f8" title=" " alt="" coords="235,567,321,593"/>
+<area shape="rect"  href="class_vec3.html#a52f0db1c387aa9bc7befe5792b698553" title=" " alt="" coords="235,617,321,644"/>
+<area shape="rect"  href="class_state___sensor.html#a4b667f79982e6b1bc40c78093bb9d285" title=" " alt="" coords="188,399,368,441"/>
+<area shape="rect"  href="mpu6050_8h.html#af32563ec0d6af4afc19f1dddb5dde5fc" title=" " alt="" coords="416,107,600,133"/>
+<area shape="rect"  href="hmc5883_8h.html#a160cb536a44edae08c21bb8b417d9827" title=" " alt="" coords="450,157,566,184"/>
+<area shape="rect"  href="error_8h.html#ab5744f81944e2a834ef96ae10f8ae166" title=" " alt="" coords="484,208,532,235"/>
+<area shape="rect"  href="devs__config_8h.html#adb25f6dac3b60011603646bf86d18b16" title=" " alt="" coords="473,56,543,83"/>
+<area shape="rect"  href="mpu6050_8cpp.html#acf3493569ebfe4fefcc3801441c70487" title=" " alt="" coords="648,107,835,133"/>
+<area shape="rect"  href="mpu6050_8cpp.html#aa4895450dc06bac74b453423c3e88b73" title=" " alt="" coords="650,157,833,184"/>
+<area shape="rect"  href="mpu6050_8cpp.html#a7d7f18ad4fd3ae66a0c5940cd82183e6" title=" " alt="" coords="883,107,1064,133"/>
+<area shape="rect"  href="mpu6050_8cpp.html#a5aa2a065243356e9633010a6b038a66c" title=" " alt="" coords="885,157,1061,184"/>
+<area shape="rect"  href="mpu6050_8h.html#a53b88c52ed0b8e9eb398578ef6f7fdc4" title=" " alt="" coords="690,5,793,32"/>
+<area shape="rect"  href="hmc5883_8h.html#a86fa17c5c34c4d8892eee22857407410" title=" " alt="" coords="690,56,793,83"/>
+<area shape="rect"  href="class_vec3.html#a2d66e34e1ad4be888821158541fcd2ea" title=" " alt="" coords="465,360,551,387"/>
+<area shape="rect"  href="class_vec3.html#a4dadb34f7d48268a101914b7a4771e68" title=" " alt="" coords="465,309,551,336"/>
+<area shape="rect"  href="class_sensor.html#a5a115feac97a147feec2f637dbed62ac" title=" " alt="" coords="460,259,556,285"/>
+<area shape="rect"  href="class_bound___box.html#a07d29bbee82838663fe43f549f7ddbe8" title=" " alt="" coords="440,477,576,504"/>
+<area shape="rect"  href="class_bound___box.html#aa5296644fccfa0c870e6d38abb395e8b" title=" " alt="" coords="425,528,591,555"/>
+<area shape="rect"  href="class_bound___box.html#a152eee4a2f2b874c765a2bda45bafdeb" title=" " alt="" coords="429,579,587,605"/>
+<area shape="rect"  href="class_position_sensor.html#a501484f39ecfb966c487961d0ddfb65a" title=" " alt="" coords="429,411,587,453"/>
+<area shape="rect"  href="class_bound.html#acb333689dc61b5fdc233b29501a82cda" title=" " alt="" coords="688,477,795,504"/>
+<area shape="rect"  href="class_bound.html#aedf5d1dbb82e1bbeb666951867b916b5" title="Read which limit switches are pressed." alt="" coords="695,579,787,605"/>
 </map>
 </div>
 <div class="dynheader">
@@ -803,6 +803,41 @@ Here is the call graph for this function:</div>
 <map name="class_state___sensor_a3965dffdc2a72622a862f2a20fe2e09f_cgraph" id="class_state___sensor_a3965dffdc2a72622a862f2a20fe2e09f_cgraph">
 <area shape="rect"  title=" " alt="" coords="5,5,156,47"/>
 <area shape="rect"  href="class_position_sensor.html#ad81814b7f09c1104dc4695eec880979f" title=" " alt="" coords="204,5,363,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a18febc839ef7fcdd42b33c108267bcc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18febc839ef7fcdd42b33c108267bcc1">&#9670;&nbsp;</a></span>update_Position()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void State_Sensor::update_Position </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_state___sensor_a18febc839ef7fcdd42b33c108267bcc1_cgraph.png" border="0" usemap="#class_state___sensor_a18febc839ef7fcdd42b33c108267bcc1_cgraph" alt=""/></div>
+<map name="class_state___sensor_a18febc839ef7fcdd42b33c108267bcc1_cgraph" id="class_state___sensor_a18febc839ef7fcdd42b33c108267bcc1_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,5,153,47"/>
+<area shape="rect"  href="class_position_sensor.html#a501484f39ecfb966c487961d0ddfb65a" title=" " alt="" coords="201,5,359,47"/>
 </map>
 </div>
 
@@ -920,8 +955,8 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot-Play/Core/Inc/parts/<a class="el" href="state__sensor_8h_source.html">state_sensor.h</a></li>
-<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Localization/KhangaiRobot-Play/Core/Src/parts/<a class="el" href="state__sensor_8cpp.html">state_sensor.cpp</a></li>
+<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai-Robot/KhangaiRobot-Play/Core/Inc/parts/<a class="el" href="state__sensor_8h_source.html">state_sensor.h</a></li>
+<li>C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai-Robot/KhangaiRobot-Play/Core/Src/parts/<a class="el" href="state__sensor_8cpp.html">state_sensor.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

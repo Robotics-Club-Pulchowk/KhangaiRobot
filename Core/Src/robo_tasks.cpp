@@ -195,21 +195,16 @@ void MotorThread(void const *argument)
 * @retval None
 */
 /* USER CODE END Header_LoggingThread */
-extern Queue<char, 32*1024> gPrintfData;
+void log_data();
+
 void LoggingThread(void const *argument)
 {
         /* USER CODE BEGIN LoggingThread */
         /* Infinite loop */
         for (;;)
         {
-                // if (!gPrintfData.is_Empty()) {
-                //         ITM_SendChar(gPrintfData.lookup());
-                // }
-                // // Approximately 2uS delay to allow data transfer
-                // for (uint32_t i = 0; i < 2*168; ++i) {
-                //         asm volatile("nop");
-                // }
-                osDelay(1000);
+                log_data();
+                asm volatile("nop");
         }
         /* USER CODE END LoggingThread */
 }

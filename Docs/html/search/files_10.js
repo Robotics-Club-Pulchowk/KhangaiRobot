@@ -2,8 +2,6 @@ var searchData=
 [
   ['sensor_2eh',['sensor.h',['../sensor_8h.html',1,'']]],
   ['smoothing_5falgorithm_2eh',['smoothing_algorithm.h',['../smoothing__algorithm_8h.html',1,'']]],
-  ['spi_2ec',['spi.c',['../spi_8c.html',1,'']]],
-  ['spi_2eh',['spi.h',['../spi_8h.html',1,'']]],
   ['state_2ecpp',['state.cpp',['../state_8cpp.html',1,'']]],
   ['state_2eh',['state.h',['../state_8h.html',1,'']]],
   ['state_5fsensor_2ecpp',['state_sensor.cpp',['../state__sensor_8cpp.html',1,'']]],

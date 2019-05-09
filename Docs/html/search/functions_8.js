@@ -8,8 +8,6 @@ var searchData=
   ['hal_5finittick',['HAL_InitTick',['../stm32f4xx__hal__timebase__tim_8c.html#a879cdb21ef051eb81ec51c18147397d5',1,'stm32f4xx_hal_timebase_tim.c']]],
   ['hal_5fmspinit',['HAL_MspInit',['../stm32f4xx__hal__msp_8c.html#ae4fb8e66865c87d0ebab74a726a6891f',1,'stm32f4xx_hal_msp.c']]],
   ['hal_5fresumetick',['HAL_ResumeTick',['../stm32f4xx__hal__timebase__tim_8c.html#a24e0ee9dae1ec0f9d19200f5575ff790',1,'stm32f4xx_hal_timebase_tim.c']]],
-  ['hal_5fspi_5fmspdeinit',['HAL_SPI_MspDeInit',['../spi_8c.html#af9af6cae4cb9386b709196d3a3ab4f78',1,'spi.c']]],
-  ['hal_5fspi_5fmspinit',['HAL_SPI_MspInit',['../spi_8c.html#a8e1dadd744299fa6f8bca0e1bcbd2c00',1,'spi.c']]],
   ['hal_5fsuspendtick',['HAL_SuspendTick',['../stm32f4xx__hal__timebase__tim_8c.html#aaf651af2afe688a991c657f64f8fa5f9',1,'stm32f4xx_hal_timebase_tim.c']]],
   ['hal_5ftim_5fencoder_5fmspdeinit',['HAL_TIM_Encoder_MspDeInit',['../tim_8c.html#aa45a7ed70c5190ddc921cc667a00e801',1,'tim.c']]],
   ['hal_5ftim_5fencoder_5fmspinit',['HAL_TIM_Encoder_MspInit',['../tim_8c.html#ac9447b4beb065a4630e94c133d7fd97c',1,'tim.c']]],

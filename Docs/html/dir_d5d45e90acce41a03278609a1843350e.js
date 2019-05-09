@@ -4,7 +4,6 @@ var dir_d5d45e90acce41a03278609a1843350e =
     [ "dma.c", "dma_8c.html", "dma_8c" ],
     [ "gpio.c", "gpio_8c.html", "gpio_8c" ],
     [ "i2c.c", "i2c_8c.html", "i2c_8c" ],
-    [ "spi.c", "spi_8c.html", "spi_8c" ],
     [ "tim.c", "tim_8c.html", "tim_8c" ],
     [ "usart.c", "usart_8c.html", "usart_8c" ]
 ];

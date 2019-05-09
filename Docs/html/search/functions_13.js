@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['send_5falldata',['send_AllData',['../logger_8cpp.html#abe231afbbd7868826c17de16f966d739',1,'logger.cpp']]],
   ['sensor',['Sensor',['../class_sensor.html#a4541bfea23851674d391a10432803fb7',1,'Sensor::Sensor()=default'],['../class_sensor.html#a45a97be2673030fe62f926b02d6b35c9',1,'Sensor::Sensor(Sensor &amp;&amp;)=default'],['../class_sensor.html#a230bf30582c1921f472b46c66634b8db',1,'Sensor::Sensor(const Sensor &amp;)=default']]],
   ['set_5falgorithm',['set_Algorithm',['../class_p_i_d.html#af9dc86555b8f221ca9d19f393e179196',1,'PID']]],
   ['set_5falpha',['set_Alpha',['../class_exp___smooth.html#a4c87027d0aaaef41619f63b7358f9ef8',1,'Exp_Smooth']]],
@@ -20,6 +19,7 @@ var searchData=
   ['set_5fpidcontroller',['set_PIDController',['../class_wheel.html#a6c21e96677e5f7e266ce58bfcea7102a',1,'Wheel']]],
   ['set_5fq',['set_Q',['../struct_kalman___vars.html#aa19db0dc8a5b4d7f0db1cd18ecc20a7d',1,'Kalman_Vars']]],
   ['set_5fr',['set_R',['../struct_kalman___vars.html#a49e035a9f13c4b45fd77215a8bc95309',1,'Kalman_Vars']]],
+  ['set_5fstate',['set_State',['../class_robo___states.html#ac59698b00f85364077cebba2b14d4707',1,'Robo_States']]],
   ['set_5fvalues',['set_Values',['../class_vec2.html#a238a918f6d2695dd187a9778982a1769',1,'Vec2::set_Values()'],['../class_vec3.html#ae581dad3aa1a885da7538582a3324d3a',1,'Vec3::set_Values()'],['../class_vec4.html#a4c670bb938d2274701f7d5764ac68fb8',1,'Vec4::set_Values()']]],
   ['setw',['setW',['../class_vec4.html#ad347e47a5371a8663d6b19c3bfaf4154',1,'Vec4']]],
   ['setx',['setX',['../class_vec2.html#aec2b21ff78bf3a2e20a044e1ab7d4b53',1,'Vec2::setX()'],['../class_vec3.html#a2d66e34e1ad4be888821158541fcd2ea',1,'Vec3::setX()'],['../class_vec4.html#a9f4e3566a9d832a0b1de1e6dbd9c6dbd',1,'Vec4::setX()']]],

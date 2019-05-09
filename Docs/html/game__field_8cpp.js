@@ -14,5 +14,13 @@ var game__field_8cpp =
     [ "gStateI_Data", "game__field_8cpp.html#ae01e9ac35153f7c484ebe8c711fa2d50", null ],
     [ "gStateJ_Data", "game__field_8cpp.html#a70b696dde3867b8331a88af53a1ac2af", null ],
     [ "gStateK_Data", "game__field_8cpp.html#aab9f6c9122f85aba87530e119be40a61", null ],
-    [ "gStateL_Data", "game__field_8cpp.html#a2d4540f26ea4e90a1d4748b1474fcc8b", null ]
+    [ "gStateL_Data", "game__field_8cpp.html#a2d4540f26ea4e90a1d4748b1474fcc8b", null ],
+    [ "gStateO_Data", "game__field_8cpp.html#a2c1b6b1012ee233257ab02aa07a84be1", null ],
+    [ "gStateP_Data", "game__field_8cpp.html#ad5c8b280f025b1702d14e0fdfe2522fd", null ],
+    [ "gStateQ1_Data", "game__field_8cpp.html#a300de20a579aa72d5eb1368e8a7330aa", null ],
+    [ "gStateQ2_Data", "game__field_8cpp.html#a0cc4a1d4699c8e0c8d7b1762f338e9d3", null ],
+    [ "gStateQ_Data", "game__field_8cpp.html#a289edd05e7cbd24cc0bba73e84a6c1ab", null ],
+    [ "gStateR1_Data", "game__field_8cpp.html#ac2d3cfe6309ad600cb10c2d36aedd686", null ],
+    [ "gStateR2_Data", "game__field_8cpp.html#a1c01f5cc87c139dd844cd363deea4939", null ],
+    [ "gStateR_Data", "game__field_8cpp.html#acdc33e30dd37d8aae06c67eee9da5b7f", null ]
 ];
