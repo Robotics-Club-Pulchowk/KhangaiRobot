@@ -271,8 +271,8 @@ Vec3<float> Processor::control(Vec3<float> state,
         //* Select Controller on the basis of control mode
         if (mode == Control_Mode::MANUAL) {
 
-                // float phi = state.getZ();
-                // phi /= (float)57.3;     // to rads
+                float phi = state.getZ();
+                phi /= (float)57.3;     // to rads
 
                 if (!just_read) {
                         vels = last_vel.mult_EW(0.8);
@@ -281,14 +281,19 @@ Vec3<float> Processor::control(Vec3<float> state,
                         vels = manual_control(joy_command);
                 }
 
-                // float rw = (phi)*0.1;
-                // vels.setZ(rw);
+                float rw = (phi)*0.1;
+                vels.setZ(rw);
 
                 led_val = fill_Intensity(0, 15);
         }
         else if (mode == Control_Mode::AUTO) {
                 vels = auto_control(state, vel_from_base, dt_millis);
                 led_val = fill_Intensity(15, 5);
+
+                if (id == Field::FIELD_O || id == Field::FIELD_P) {
+                        float rw = vels.getZ();
+                        vels.setZ(0.5*rw);
+                }
         }
 
         //* Determine if there is change in control mode from the previous one
