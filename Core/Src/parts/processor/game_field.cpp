@@ -65,7 +65,7 @@ void init_GameField()
         gStateC_Data.id = Field::FIELD_C;
         gStateC_Data.centre = Vec2<float>(1600, 2400);
         gStateC_Data.upper_bounds = Vec2<float>(2000, 2700);
-        gStateC_Data.lower_bounds = Vec2<float>(1500, 1930);
+        gStateC_Data.lower_bounds = Vec2<float>(1500, 1830);
         gStateC_Data.last_limit = 1;
         gStateC_Data.ramping_factor = 0.001;
         gStateC_Data.first_limit = gStateB_Data.last_limit;
@@ -74,9 +74,9 @@ void init_GameField()
 
         // Defining the state : State D
         gStateD_Data.id = Field::FIELD_D;
-        gStateD_Data.centre = Vec2<float>(800, 2700);
+        gStateD_Data.centre = Vec2<float>(800, 2600);
         gStateD_Data.upper_bounds = Vec2<float>(1215, 3300);
-        gStateD_Data.lower_bounds = Vec2<float>(500, 2600);
+        gStateD_Data.lower_bounds = Vec2<float>(500, 2500);
         gStateD_Data.last_limit = 1;
         gStateD_Data.ramping_factor = 0.001;
         gStateD_Data.first_limit = gStateC_Data.last_limit;
@@ -174,31 +174,31 @@ void init_GameField()
         
         // Defining the state : State O
         gStateO_Data.id = Field::FIELD_O;
-        gStateO_Data.centre = Vec2<float>(3500, 8500);
+        gStateO_Data.centre = Vec2<float>(3700, 8500);
         gStateO_Data.upper_bounds = Vec2<float>(4000, 9000);
         gStateO_Data.lower_bounds = Vec2<float>(3000, 8000);
         gStateO_Data.last_limit = 1;
         gStateO_Data.ramping_factor = 0.01;
         gStateO_Data.first_limit = 0.6;
-        gStateO_Data.max_vel = 1400;
-        gStateO_Data.rated_vel = 140;
+        gStateO_Data.max_vel = 1000;
+        gStateO_Data.rated_vel = 100;
 
          // Defining the state : State P
         gStateP_Data.id = Field::FIELD_P;
-        gStateP_Data.centre = Vec2<float>(3500, 7520);
+        gStateP_Data.centre = Vec2<float>(3700, 7520);
         gStateP_Data.upper_bounds = Vec2<float>(4500, 8000);
         gStateP_Data.lower_bounds = Vec2<float>(3300, 7040);
         gStateP_Data.last_limit = 1;
         gStateP_Data.ramping_factor = 0.001;
         gStateP_Data.first_limit = 1;
-        gStateP_Data.max_vel = 1400;
-        gStateP_Data.rated_vel = 140;
+        gStateP_Data.max_vel = 1000;
+        gStateP_Data.rated_vel = 100;
 
          // Defining the state : State Q
         gStateQ_Data.id = Field::FIELD_Q;
-        gStateQ_Data.centre = Vec2<float>(3500, 5000);
+        gStateQ_Data.centre = Vec2<float>(3700, 5000);
         gStateQ_Data.upper_bounds = Vec2<float>(4500, 5400);
-        gStateQ_Data.lower_bounds = Vec2<float>(3300, 4600);
+        gStateQ_Data.lower_bounds = Vec2<float>(3000, 4600);
         gStateQ_Data.last_limit = 1;
         gStateQ_Data.ramping_factor = 0.001;
         gStateQ_Data.first_limit = 1;
