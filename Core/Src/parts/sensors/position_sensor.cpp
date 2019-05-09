@@ -208,7 +208,8 @@ void PositionSensor::process_LidarData(float (&lidar)[2], const State_Vars *sv)
                                 lidar[0] += jungle_pole_dist;
 
                                 // Compensating the Y value based on lidar data
-                                if (id == Field::FIELD_B) {
+                                if (id == Field::FIELD_B ||
+                                    (id == Field::FIELD_C && lidar[0] < 400)) {
                                         gLast_YEncoderValue = 2030.0;
                                 }
                                 else if (id == Field::FIELD_F) {
