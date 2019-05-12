@@ -39,9 +39,12 @@ private:
         Vec3<float> first_state_;
 
         Processor() { is_first_ = true; }
-        void process(Vec3<float> state, State_Vars *&robot_state_vars_);
+        void process(Vec3<float> state, State_Vars *&robot_state_vars);
         Vec3<float> auto_control(Vec3<float> state, Vec3<float> vel_from_base, uint32_t dt_millis);
         Vec3<float> manual_control(JoyStick_Command& joy_cmd);
+        void reset_Position(State_Vars *&robot_state_vars);
+        void throw_Shagai(bool throw_shagai);
+        void extend_Arm();
 
         void update_State(uint8_t bounds);
 };

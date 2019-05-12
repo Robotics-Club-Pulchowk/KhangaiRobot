@@ -12,6 +12,7 @@
 
 
 extern float gAuto_Ratio;
+extern uint32_t gMax_Robo_Manual_Velocity;
 
 extern State_Vars gStateA_Data;
 extern State_Vars gStateB_Data;
@@ -167,20 +168,20 @@ Vec3<float> Processor::manual_control(JoyStick_Command& joy_cmd)
         Vec3<float> vels;
 
         vels = joy_cmd.vels;
+        float v = (float)(gMax_Robo_Manual_Velocity) / 1000.0;
+        vels = vels.mult_EW(v);
         // Set rw to 0 for testing purpose
         vels.setZ(0);
 
         uint8_t brake = joy_cmd.brake;
-        float factor = (255.0 - (float)brake)/255.0;
-
-        if (factor < 0.2) {
-                factor = 0;
-        }
-
-        vels = vels.mult_EW(factor);
-
         uint8_t accel = joy_cmd.accel;
-        if (accel > 200) {
+
+        float factor = 0.5;
+
+        if (brake > 200) {
+                factor = 0.25;
+        }
+        else if (accel > 200) {
                 factor = 1;
         }
         else {
@@ -246,6 +247,8 @@ Vec3<float> Processor::control(Vec3<float> state,
         
         Field id = robot_state_vars->id;
 
+        //* Return back to pick another shagai if shagai is thrown and the robot
+        //* has retrieved it's arm
         if (id == Field::FIELD_Q) {
 
                 if (throw_shagai) {
@@ -330,42 +333,15 @@ Vec3<float> Processor::control(Vec3<float> state,
 
         //* Send Extend command if robot is in field Q
         if (id == Field::FIELD_Q) {
-                if (gSend_Extend_Num) {
-                        uint8_t extend = 0x01;
-                        gPneumatic.write(&extend, 1);
-                        --gSend_Extend_Num;
-                }
+                extend_Arm();
         }
 
-        //* Throw Shagai if throw shagai flag obtained
-        if (throw_shagai) {
-                gSend_Pneumatic_Data = true;
-        }
+        //* Throw Shagai if command obtained
+        throw_Shagai(throw_shagai);
 
-        //* Send Pneumatic data if there is change in control mode
-        if (gSend_Pneumatic_Data) {
-                if (--gSend_Pneumatic_Data_Num) {
-                        uint8_t throw_shagai_cmd = 0x03;
-                        gPneumatic.write(&throw_shagai_cmd, 1);
-                }
-                else {
-                        gSend_Pneumatic_Data_Num = gSend_Pneumatic_Data_Max;
-                        gSend_Pneumatic_Data = false;
-                }
-        }
-
-        //* Reset Position to field O
+        //* Reset Position to field O if reset_pos command is obtained
         if (reset_pos) {
-                curr_state_ = &gStateO;
-                sensor_->change_Sensors(curr_state_->get_ID());
-                robot_state_vars = curr_state_->get_State();
-
-                Vec2<float> p = curr_state_->get_Centre();
-                Vec3<float> pos(p.getX(), p.getY(), 0); 
-                sensor_->update_Position(pos);
-                
-                gSend_Extend_Num = gSend_Extend_Num_Max;
-                // HAL_GPIO_WritePin(B_RedLED_GPIO_Port, B_RedLED_Pin, GPIO_PIN_SET);
+                reset_Position(robot_state_vars);
         }
 
         return vels;
@@ -414,6 +390,47 @@ void Processor::update_State(uint8_t bounds)
         }
 
         curr_state_ = curr_state_->get_NextState();
+}
+
+void Processor::reset_Position(State_Vars *&robot_state_vars)
+{
+        curr_state_ = &gStateO;
+        sensor_->change_Sensors(curr_state_->get_ID());
+        robot_state_vars = curr_state_->get_State();
+
+        Vec2<float> p = curr_state_->get_Centre();
+        Vec3<float> pos(p.getX(), p.getY(), 0); 
+        sensor_->update_Position(pos);
+        
+        gSend_Extend_Num = gSend_Extend_Num_Max;
+}
+
+void Processor::throw_Shagai(bool throw_shagai)
+{
+        //* Throw Shagai if throw shagai flag obtained
+        if (throw_shagai) {
+                gSend_Pneumatic_Data = true;
+        }
+
+        //* Send Pneumatic data if there is change in control mode
+        if (gSend_Pneumatic_Data) {
+                if (--gSend_Pneumatic_Data_Num) {
+                        uint8_t throw_shagai_cmd = 0x03;
+                        gPneumatic.write(&throw_shagai_cmd, 1);
+                }
+                else {
+                        gSend_Pneumatic_Data_Num = gSend_Pneumatic_Data_Max;
+                        gSend_Pneumatic_Data = false;
+                }
+        }
+}
+void Processor::extend_Arm()
+{
+        if (gSend_Extend_Num) {
+                uint8_t extend = 0x01;
+                gPneumatic.write(&extend, 1);
+                --gSend_Extend_Num;
+        }
 }
 
 static uint8_t fill_Intensity(uint8_t red, uint8_t blue)
