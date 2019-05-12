@@ -150,19 +150,29 @@ JoyStick_Command& JoyStick::parse()
 
 void JoyStick::parse_JoyData(JoyStick_Data joy)
 {
-        int8_t rx = (int8_t)(joy.r_hatx);
-        float vx = (float)(rx) / 128.0;
-        int8_t ry = (int8_t)(joy.r_haty);
-        float vy = (float)(ry) / 128.0;
+        // int8_t rx = (int8_t)(joy.r_hatx);
+        // float vx = (float)(rx) / 128.0;
+        // int8_t ry = (int8_t)(joy.r_haty);
+        // float vy = (float)(ry) / 128.0;
 
         int lx = (int8_t)(joy.l_hatx);
-        float x = (float)(lx) / 128.0;
-        int ly = (int8_t)(joy.l_haty);
-        float y = (float)(ly) / 128.0;
-        float rw = 0;
-        if (!((fabsf(x) < 1e-3f) && (fabsf(y) < 1e-3f))) {
-                rw = atan2f(y,x);
+        float vx = (float)(lx) / 128.0;
+
+        if (fabsf(vx) < 0.2) {
+                vx = 0;
         }
+
+        int ly = (int8_t)(joy.l_haty);
+        float vy = (float)(ly) / 128.0;
+
+        if (fabsf(vy) < 0.2) {
+                vy = 0;
+        }
+
+        float rw = 0;
+        // if (!((fabsf(x) < 1e-3f) && (fabsf(y) < 1e-3f))) {
+        //         rw = atan2f(y,x);
+        // }
 
         Vec3<float> vels(vx, vy, rw);
 
