@@ -37,6 +37,8 @@ State_Vars gStateT_Data;
 const uint32_t gMax_Robo_Velocity = 1250;        // mm/s
 const uint32_t gRated_Robo_Velocity = 110;
 
+uint32_t gMax_Robo_Manual_Velocity = 1400;        // mm/s
+
 float gAuto_Ratio = 0.8;
 
 void init_GameField()
