@@ -1,0 +1,21 @@
+{
+        "configurations": [
+            {
+                "name": "Win32",
+                "includePath": [
+                    "${workspaceFolder}/**",
+                    "C:/Users/n-is/OneDrive/Documents/Arduino/libraries/ardyno/src",
+                    "C:/Users/n-is/OneDrive/Documents/Arduino/libraries/LIDAR-lite/src",
+                    "C:/Users/n-is/OneDrive/Documents/Arduino/libraries/USB_Host_Shield_Library_2.0"
+                ],
+                "defines": [
+                        
+                ],
+                "compilerPath": "C:/Program Files (x86)/Arduino/hardware/tools/avr/bin/avr-gcc.exe",
+                "cStandard": "c11",
+                "cppStandard": "c++17",
+                "intelliSenseMode": "gcc-x64"
+            }
+        ],
+        "version": 4
+    }
