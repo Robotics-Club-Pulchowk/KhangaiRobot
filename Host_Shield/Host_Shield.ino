@@ -1,3 +1,5 @@
+#define _WIRELESS_JOYSTICK_
+
 #include <XBOXUSB.h>
 #include <SoftwareSerial.h>
 
@@ -6,12 +8,20 @@
 #endif
 #include <SPI.h>
 
+#ifdef _WIRELESS_JOYSTICK_
+#include <XBOXRECV.h>
+#endif
+
 #define START_BYTE (0xA5)
 
 // #define DEBUG_MODE
 
 USB Usb;
+#ifndef _WIRELESS_JOYSTICK_
 XBOXUSB Xbox(&Usb);
+#else
+XBOXRECV Xbox(&Usb);
+#endif
 
 #define _USE_SMALLEST_SIZE
 
