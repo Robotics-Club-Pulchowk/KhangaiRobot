@@ -18,7 +18,6 @@ void send_LidarDataPack(unsigned long val)
 
         send_DataPack(gLidar_Address, gLidar_Buffer, 2);
 
-        //* Print the data on serial monitor
         Serial.println(val);
 }
 

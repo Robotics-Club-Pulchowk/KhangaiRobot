@@ -19,7 +19,6 @@ extern uint8_t gLidar_Address;
 extern uint8_t gPneumatic_Address;
 
 extern uint8_t gLED_Intensity_Value;
-extern uint8_t gPneumatic_Value;
 
 // Function Prototypes
 void send_DataPack(uint8_t addr, const uint8_t *buf, uint8_t len);

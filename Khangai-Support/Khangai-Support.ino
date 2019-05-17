@@ -21,7 +21,6 @@ unsigned long gLED_Intensity_Read_Time = 0;
 uint8_t gArduino_Address = 0x00;
 uint8_t gLED_Address = 0x01;
 uint8_t gLidar_Address = 0x02;
-uint8_t gPneumatic_Address = 0x03;
 
 //* Following variables are used to communicate between stm-board
 //* and the arduino
@@ -30,11 +29,6 @@ bool gSend_Lidar_Data = false;
 
 const uint8_t gRed_LED_Pin = 10;
 const uint8_t gBlue_LED_Pin = 8;
-const uint8_t gExtend_Pneumatic = 21;
-const uint8_t gThrow_Pneumatic = 23;
-
-bool gShagai_Throw = false;
-uint8_t gShagai_Throw_Count = 2;
 
 void setup()
 {
@@ -43,12 +37,6 @@ void setup()
         pinMode(gBlue_LED_Pin, OUTPUT);
         analogWrite(gRed_LED_Pin, 0);
         analogWrite(gBlue_LED_Pin, 0);
-
-        //* Initialize the Pneumatics
-        pinMode(gExtend_Pneumatic, OUTPUT);
-        pinMode(gThrow_Pneumatic, OUTPUT);
-        digitalWrite(gExtend_Pneumatic, LOW);
-        digitalWrite(gThrow_Pneumatic, LOW);
 
         //* Initialize the Serials
         (Serial).begin(115200);
@@ -97,35 +85,6 @@ void loop()
                 //* Analogwrite the LED intensity value
                 analogWrite(gRed_LED_Pin, red);
                 analogWrite(gBlue_LED_Pin, blue);
-
-
-                //* Also update pneumatic values
-                if (gPneumatic_Value & 0x01) {
-                        digitalWrite(gExtend_Pneumatic, HIGH);
-                }
-                else {
-                        digitalWrite(gExtend_Pneumatic, LOW);
-                }
-
-                if (gPneumatic_Value & 0x02) {
-                        gShagai_Throw = true;
-                        digitalWrite(gThrow_Pneumatic, HIGH);
-                }
-                else {
-                        digitalWrite(gThrow_Pneumatic, LOW);
-                }
-
-                if (gShagai_Throw) {
-                        if (gShagai_Throw_Count) {
-                                --gShagai_Throw_Count;
-                                if (!gShagai_Throw_Count) {
-                                        gShagai_Throw_Count = 2;
-                                        gShagai_Throw = false;
-                                        gPneumatic_Value = 0;
-                                }
-                        }
-                }
-
         }
 
         //* If ping command is obtained, send ok status
