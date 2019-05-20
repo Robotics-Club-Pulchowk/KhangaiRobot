@@ -107,6 +107,7 @@ Core/Src/devs/freewheel.cpp \
 Core/Src/devs/a4988.cpp \
 Core/Src/devs/arduino.cpp \
 Core/Src/devs/joystick.cpp \
+Core/Src/devs/throwing.cpp \
 \
 Core/Src/parts/actuator.cpp \
 Core/Src/parts/processor.cpp \
