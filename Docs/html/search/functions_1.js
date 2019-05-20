@@ -4,6 +4,7 @@ var searchData=
   ['a4988_5fstep',['A4988_step',['../a4988_8h.html#a0df4f2b1a0266368873650147f0ae31b',1,'A4988_step(A4988 *stepper):&#160;a4988.cpp'],['../a4988_8cpp.html#a37bd9536ea107833fe3ddb1284b22c8e',1,'A4988_step(struct A4988 *stepper):&#160;a4988.cpp']]],
   ['a4988_5ftoggledirection',['A4988_toggleDirection',['../a4988_8h.html#ac5ae016c9713791c67d8053280f4db9b',1,'A4988_toggleDirection(A4988 *stepper):&#160;a4988.cpp'],['../a4988_8cpp.html#a5d87b395c4941aabb8d97409d82653c2',1,'A4988_toggleDirection(struct A4988 *stepper):&#160;a4988.cpp']]],
   ['actuate',['actuate',['../class_actuator.html#aa3842522a1346a738cf8ff1520b6bd5a',1,'Actuator']]],
+  ['actuate_5farm',['actuate_Arm',['../class_processor.html#a3e382e22c68e3ec8e28d152ecb277381',1,'Processor']]],
   ['actuator',['Actuator',['../class_actuator.html#a3c863ce0c6c1e7d870db5249dee1f394',1,'Actuator::Actuator(Actuator &amp;&amp;)=default'],['../class_actuator.html#a5a49df022bd3363811907957f3da9283',1,'Actuator::Actuator(const Actuator &amp;)=default'],['../class_actuator.html#ad08f81ed90eb01f4654acb47eff38be6',1,'Actuator::Actuator()']]],
   ['add_5fcols',['add_Cols',['../class_mat.html#a3fc332affd01fd294aa98550b88c819d',1,'Mat']]],
   ['add_5fdevice',['add_Device',['../arduino_8h.html#aa1e662a43acf98a0731edc9055995f14',1,'arduino.h']]],

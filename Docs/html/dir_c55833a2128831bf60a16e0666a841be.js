@@ -1,6 +1,7 @@
 var dir_c55833a2128831bf60a16e0666a841be =
 [
     [ "calculus.h", "calculus_8h.html", "calculus_8h" ],
+    [ "interpolation.h", "interpolation_8h.html", "interpolation_8h" ],
     [ "mat.h", "mat_8h.html", "mat_8h" ],
     [ "moore.h", "moore_8h.html", [
       [ "Moore_Machine", "class_moore___machine.html", "class_moore___machine" ]

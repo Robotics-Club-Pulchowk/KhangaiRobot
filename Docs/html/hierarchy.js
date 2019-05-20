@@ -40,6 +40,7 @@ var hierarchy =
     [ "State", "class_state.html", null ],
     [ "State_Sensor", "class_state___sensor.html", null ],
     [ "State_Vars", "struct_state___vars.html", null ],
+    [ "Throwing", "class_throwing.html", null ],
     [ "Vec2< T >", "class_vec2.html", null ],
     [ "Vec2< float >", "class_vec2.html", null ],
     [ "Vec3< T >", "class_vec3.html", null ],

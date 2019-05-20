@@ -22,6 +22,8 @@ var robo__states_8h =
       [ "FIELD_Q2", "robo__states_8h.html#a1e35064f4b70226adc63b8fe1af7ddf8ad14f197c1056e46a7de93756fd75da72", null ],
       [ "FIELD_R1", "robo__states_8h.html#a1e35064f4b70226adc63b8fe1af7ddf8aba9c383b8f7e793b7995d6b2b14b32f0", null ],
       [ "FIELD_R2", "robo__states_8h.html#a1e35064f4b70226adc63b8fe1af7ddf8a393ada008523b463c792c98ad70e4c0f", null ],
-      [ "FIELD_R", "robo__states_8h.html#a1e35064f4b70226adc63b8fe1af7ddf8ad98b8f35de1e1cb42218d69dbd8c3c03", null ]
+      [ "FIELD_R", "robo__states_8h.html#a1e35064f4b70226adc63b8fe1af7ddf8ad98b8f35de1e1cb42218d69dbd8c3c03", null ],
+      [ "FIELD_S", "robo__states_8h.html#a1e35064f4b70226adc63b8fe1af7ddf8a36cf948e487465fc6940098630980690", null ],
+      [ "FIELD_T", "robo__states_8h.html#a1e35064f4b70226adc63b8fe1af7ddf8a13eb870651454ad85cb72707d8cfaece", null ]
     ] ]
 ];

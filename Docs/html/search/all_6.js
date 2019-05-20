@@ -36,6 +36,8 @@ var searchData=
   ['field_5fr',['FIELD_R',['../robo__states_8h.html#a1e35064f4b70226adc63b8fe1af7ddf8ad98b8f35de1e1cb42218d69dbd8c3c03',1,'robo_states.h']]],
   ['field_5fr1',['FIELD_R1',['../robo__states_8h.html#a1e35064f4b70226adc63b8fe1af7ddf8aba9c383b8f7e793b7995d6b2b14b32f0',1,'robo_states.h']]],
   ['field_5fr2',['FIELD_R2',['../robo__states_8h.html#a1e35064f4b70226adc63b8fe1af7ddf8a393ada008523b463c792c98ad70e4c0f',1,'robo_states.h']]],
+  ['field_5fs',['FIELD_S',['../robo__states_8h.html#a1e35064f4b70226adc63b8fe1af7ddf8a36cf948e487465fc6940098630980690',1,'robo_states.h']]],
+  ['field_5ft',['FIELD_T',['../robo__states_8h.html#a1e35064f4b70226adc63b8fe1af7ddf8a13eb870651454ad85cb72707d8cfaece',1,'robo_states.h']]],
   ['fifo_5fcounth',['FIFO_COUNTH',['../mpu6050__reg_8h.html#adbbef0e95665e066deb615f04b347491',1,'mpu6050_reg.h']]],
   ['fifo_5fcountl',['FIFO_COUNTL',['../mpu6050__reg_8h.html#adbede65b2cfa35abde780bd704077f53',1,'mpu6050_reg.h']]],
   ['fifo_5fen',['FIFO_EN',['../mpu6050__reg_8h.html#a53954ec7f9dc790f00548da08ccd5ed6',1,'mpu6050_reg.h']]],

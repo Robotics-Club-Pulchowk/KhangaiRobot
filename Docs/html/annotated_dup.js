@@ -33,6 +33,7 @@ var annotated_dup =
     [ "State", "class_state.html", "class_state" ],
     [ "State_Sensor", "class_state___sensor.html", "class_state___sensor" ],
     [ "State_Vars", "struct_state___vars.html", "struct_state___vars" ],
+    [ "Throwing", "class_throwing.html", "class_throwing" ],
     [ "Vec2", "class_vec2.html", "class_vec2" ],
     [ "Vec3", "class_vec3.html", "class_vec3" ],
     [ "Vec4", "class_vec4.html", "class_vec4" ],

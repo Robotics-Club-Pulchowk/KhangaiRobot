@@ -14,5 +14,6 @@ var searchData=
   ['compute',['compute',['../class_p_i_d___algorithm.html#a388ec97d23c981e62c3726505688e1f0',1,'PID_Algorithm::compute()'],['../class_discrete___p_i_d.html#aa4914b85e73cb5fdfcc5b40e8d0ff23c',1,'Discrete_PID::compute()']]],
   ['compute_5fpid',['compute_PID',['../class_p_i_d.html#a4d19abca579301069c3edb28fd5ff7f2',1,'PID']]],
   ['control',['control',['../class_processor.html#a08eb6304c0993769d125cc8186cb51ac',1,'Processor']]],
+  ['cubic_5fherp',['cubic_herp',['../interpolation_8h.html#a1653fc56f969e6a1e55309326e7b6a96',1,'cubic_herp(float x, float y, float t):&#160;interpolation.cpp'],['../interpolation_8h.html#aa482d0ea357b7d020520a4fec1c0c86a',1,'cubic_herp(Vec3&lt; float &gt; x, Vec3&lt; float &gt; y, float t):&#160;interpolation.cpp'],['../interpolation_8cpp.html#a1653fc56f969e6a1e55309326e7b6a96',1,'cubic_herp(float x, float y, float t):&#160;interpolation.cpp'],['../interpolation_8cpp.html#aa482d0ea357b7d020520a4fec1c0c86a',1,'cubic_herp(Vec3&lt; float &gt; x, Vec3&lt; float &gt; y, float t):&#160;interpolation.cpp']]],
   ['cubicspline',['cubicSpline',['../class_robo___states.html#ae846d1e39dd7a955e4f14b36d0795c8d',1,'Robo_States']]]
 ];

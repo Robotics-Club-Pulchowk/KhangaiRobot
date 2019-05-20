@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['send_5fthrowcommand',['send_ThrowCommand',['../class_processor.html#a90f9ec4aeb24913849e26468eaeee51a',1,'Processor']]],
   ['sensor',['Sensor',['../class_sensor.html#a4541bfea23851674d391a10432803fb7',1,'Sensor::Sensor()=default'],['../class_sensor.html#a45a97be2673030fe62f926b02d6b35c9',1,'Sensor::Sensor(Sensor &amp;&amp;)=default'],['../class_sensor.html#a230bf30582c1921f472b46c66634b8db',1,'Sensor::Sensor(const Sensor &amp;)=default']]],
   ['set_5falgorithm',['set_Algorithm',['../class_p_i_d.html#af9dc86555b8f221ca9d19f393e179196',1,'PID']]],
   ['set_5falpha',['set_Alpha',['../class_exp___smooth.html#a4c87027d0aaaef41619f63b7358f9ef8',1,'Exp_Smooth']]],

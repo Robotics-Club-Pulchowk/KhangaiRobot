@@ -1,8 +1,11 @@
 var processor_8cpp =
 [
     [ "init_GameField", "processor_8cpp.html#a9ce21429239a4cc722845e28d0aced8c", null ],
+    [ "gArm_Retrieve_Count", "processor_8cpp.html#a4c9dc401c8f47d7169e99fae487ce94a", null ],
+    [ "gAuto_Ratio", "processor_8cpp.html#acd4e1aac5771484408e90a063b323f7a", null ],
+    [ "gMax_Robo_Manual_Velocity", "processor_8cpp.html#ade4dda8cceef978c8a56b53980d8e6e3", null ],
     [ "gSend_LED_Data_Max", "processor_8cpp.html#a84cd52cc313f045d3d386da0ca0b0eda", null ],
-    [ "gSend_Pneumatic_Data_Max", "processor_8cpp.html#a2558156fda07498a46ce3cff1255ff98", null ],
+    [ "gSend_Throw_Max", "processor_8cpp.html#a7d7819d72c6266e01468e3e3467e34a0", null ],
     [ "gStateA", "processor_8cpp.html#a48997c8e3978553f5a751234288081dc", null ],
     [ "gStateA_Data", "processor_8cpp.html#a94fc944ed1fb7171d3ddf15e685663db", null ],
     [ "gStateB", "processor_8cpp.html#a45a437c46d59b41f3421d3c412b93172", null ],
@@ -42,5 +45,9 @@ var processor_8cpp =
     [ "gStateR1_Data", "processor_8cpp.html#a673780303ff7a8c5f6a7bc11dca1d602", null ],
     [ "gStateR2", "processor_8cpp.html#a1da3cbdc925381328dccf0cf9b70cfc8", null ],
     [ "gStateR2_Data", "processor_8cpp.html#ac00acce3c891f49979a38f47e3b5da4e", null ],
-    [ "gStateR_Data", "processor_8cpp.html#a1578d381c4fed91ea6e63d37d2e259f8", null ]
+    [ "gStateR_Data", "processor_8cpp.html#a1578d381c4fed91ea6e63d37d2e259f8", null ],
+    [ "gStateS", "processor_8cpp.html#a847eb757f30bd8ad3e9b7c54221c1532", null ],
+    [ "gStateS_Data", "processor_8cpp.html#a0de8fed0a617fdd2aaa0395240e15340", null ],
+    [ "gStateT", "processor_8cpp.html#abb8538c833fcbe0940dcf8985db0a3e1", null ],
+    [ "gStateT_Data", "processor_8cpp.html#a11305bd12cd578aecc95587426de8836", null ]
 ];

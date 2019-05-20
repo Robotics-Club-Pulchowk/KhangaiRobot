@@ -1,8 +1,9 @@
 <map id="Processor::init" name="Processor::init">
-<area shape="rect" id="node1" title=" " alt="" coords="5,103,112,130"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,129,112,155"/>
 <area shape="rect" id="node2" href="$class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c" title=" " alt="" coords="160,37,311,79"/>
 <area shape="rect" id="node5" href="$class_robo___states.html#a52979a290d5b8010c6478d76db4f167a" title=" " alt="" coords="164,103,307,130"/>
 <area shape="rect" id="node6" href="$class_joy_stick.html#ab9e3d27f581f6ee31cb09c441768be65" title=" " alt="" coords="187,154,284,181"/>
+<area shape="rect" id="node7" href="$class_throwing.html#aa28b89147263aff03a95d51f40268e1a" title=" " alt="" coords="186,205,285,231"/>
 <area shape="rect" id="node3" href="$class_position_sensor.html#ad76eb756d3ec36067fade93ea58a55ec" title=" " alt="" coords="369,5,507,47"/>
 <area shape="rect" id="node4" href="$class_position_sensor.html#ad81814b7f09c1104dc4695eec880979f" title=" " alt="" coords="359,71,517,112"/>
 </map>

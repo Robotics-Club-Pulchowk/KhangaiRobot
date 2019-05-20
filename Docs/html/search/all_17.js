@@ -10,5 +10,5 @@ var searchData=
   ['wheels_5f',['wheels_',['../class_actuator.html#a8e60b2ff6901acd9e539e29b74d742da',1,'Actuator']]],
   ['wheels_5finit',['wheels_Init',['../class_actuator.html#a998b08e1a048f6fe0b85c240aa33a498',1,'Actuator']]],
   ['who_5fam_5fi',['WHO_AM_I',['../mpu6050__reg_8h.html#a9fcb9e460d175bfc7ab4d80bf788b43a',1,'mpu6050_reg.h']]],
-  ['write',['write',['../class_arduino___device.html#aabb55547b2dc749c169aa78d88cdbe29',1,'Arduino_Device']]]
+  ['write',['write',['../class_arduino___device.html#aabb55547b2dc749c169aa78d88cdbe29',1,'Arduino_Device::write()'],['../class_throwing.html#a202107a0b9caede51136859f505bd702',1,'Throwing::write()']]]
 ];

@@ -5,6 +5,7 @@ var joystick_8h =
     [ "JoyStick_Command", "struct_joy_stick___command.html", "struct_joy_stick___command" ],
     [ "JoyStick", "class_joy_stick.html", "class_joy_stick" ],
     [ "_BV", "joystick_8h.html#a483c9de27db573099572f5485ef841c9", null ],
+    [ "ACTUATE_ARM_KEY", "joystick_8h.html#a79689d76473d885b5d745f505b02db13", null ],
     [ "AUTO_KEY", "joystick_8h.html#a503c4d82732d03045bb2c67c0bcaf7df", null ],
     [ "B_A", "joystick_8h.html#a2303a3b5b3de921388e96105d4edae5f", null ],
     [ "B_B", "joystick_8h.html#a4f05778977de54a0f37ceabb5b8a73c0", null ],

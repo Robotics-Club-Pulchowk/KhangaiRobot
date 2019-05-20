@@ -7,5 +7,6 @@ var dir_981ea345f367983fc435fb1e37e60b10 =
     [ "joystick.h", "joystick_8h.html", "joystick_8h" ],
     [ "mpu6050.h", "mpu6050_8h.html", "mpu6050_8h" ],
     [ "mpu6050_reg.h", "mpu6050__reg_8h.html", "mpu6050__reg_8h" ],
+    [ "throwing.h", "throwing_8h.html", "throwing_8h" ],
     [ "wheel.h", "wheel_8h.html", "wheel_8h" ]
 ];

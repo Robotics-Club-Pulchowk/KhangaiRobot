@@ -6,6 +6,8 @@ var searchData=
   ['read_5fstate',['read_State',['../class_state___sensor.html#a79118858b21e47b7e6e509dfba5b06f8',1,'State_Sensor']]],
   ['remove_5fpsensor',['remove_PSensor',['../class_state___sensor.html#a3965dffdc2a72622a862f2a20fe2e09f',1,'State_Sensor']]],
   ['remove_5fsensor',['remove_Sensor',['../class_position_sensor.html#ad81814b7f09c1104dc4695eec880979f',1,'PositionSensor']]],
+  ['reset_5fposition',['reset_Position',['../class_processor.html#a48a1b74f5331de13b90c35ca3569391d',1,'Processor']]],
+  ['retrieve_5farm',['retrieve_Arm',['../class_processor.html#ab01526920cd82729e23cef4cee26d976',1,'Processor']]],
   ['robo_5fstates',['Robo_States',['../class_robo___states.html#a2cd43f77316014f3b5d17d30882b1154',1,'Robo_States::Robo_States(State_Vars *sv, Robo_States *next)'],['../class_robo___states.html#afc7254b6bf99994f1d0e97a868898e83',1,'Robo_States::Robo_States(Robo_States &amp;&amp;)=default'],['../class_robo___states.html#aad3bcc51ca4a1adfec07c61c959123ca',1,'Robo_States::Robo_States(const Robo_States &amp;)=default']]],
   ['robot',['Robot',['../class_robot.html#a47aec46e3bb5782500d1d268f0d8c406',1,'Robot::Robot(Robot &amp;&amp;)=default'],['../class_robot.html#a4fd835c7c44337d31d9fd09921d29908',1,'Robot::Robot(const Robot &amp;)=default'],['../class_robot.html#a4fc7c70ae20623f05e06f2ecb388b6c4',1,'Robot::Robot()']]],
   ['robotthread',['RobotThread',['../freertos_8c.html#a4e5b32a2e15bb82416f89b7a733d1e09',1,'RobotThread(void const *argument):&#160;robo_tasks.cpp'],['../robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09',1,'RobotThread(void const *argument):&#160;robo_tasks.cpp']]],

@@ -12,6 +12,7 @@ var class_vec3 =
     [ "getX", "class_vec3.html#ad259e243f6678730d990acbae2cdff57", null ],
     [ "getY", "class_vec3.html#a8eeb16262b7e619f081a1ba94df098f8", null ],
     [ "getZ", "class_vec3.html#a52f0db1c387aa9bc7befe5792b698553", null ],
+    [ "is_AbsLess", "class_vec3.html#a90f1934c79452ae2f2b7134956296d96", null ],
     [ "mult_EW", "class_vec3.html#a987916221fa68ba597397f51d5cf51b0", null ],
     [ "mult_EW", "class_vec3.html#a3c49d6ccaf343f2182f5d8e5eb39df2c", null ],
     [ "operator+=", "class_vec3.html#a8501af04a24777f846b3ddcda6bf0705", null ],

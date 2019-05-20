@@ -1,7 +1,8 @@
 <map id="Robo_States::get_State" name="Robo_States::get_State">
-<area shape="rect" id="node1" title=" " alt="" coords="684,31,845,57"/>
-<area shape="rect" id="node2" href="$class_robo___states.html#ac59698b00f85364077cebba2b14d4707" title=" " alt="" coords="475,5,636,32"/>
-<area shape="rect" id="node3" href="$class_processor.html#a1e529fa62420f020ef760f4a6259ed1e" title=" " alt="" coords="488,56,623,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="695,56,856,83"/>
+<area shape="rect" id="node2" href="$class_robo___states.html#ac59698b00f85364077cebba2b14d4707" title=" " alt="" coords="480,5,641,32"/>
+<area shape="rect" id="node3" href="$class_processor.html#a27d4a79448ab44b2f97807fd9d4c3e07" title=" " alt="" coords="493,56,628,83"/>
+<area shape="rect" id="node7" href="$class_processor.html#a48a1b74f5331de13b90c35ca3569391d" title=" " alt="" coords="475,107,647,133"/>
 <area shape="rect" id="node4" href="$class_processor.html#a08eb6304c0993769d125cc8186cb51ac" title=" " alt="" coords="299,56,427,83"/>
 <area shape="rect" id="node5" href="$class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,56,251,83"/>
 <area shape="rect" id="node6" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,56,100,83"/>

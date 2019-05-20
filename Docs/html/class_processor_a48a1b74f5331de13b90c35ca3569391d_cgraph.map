@@ -1,0 +1,13 @@
+<map id="Processor::reset_Position" name="Processor::reset_Position">
+<area shape="rect" id="node1" title=" " alt="" coords="5,205,177,231"/>
+<area shape="rect" id="node2" href="$class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c" title=" " alt="" coords="234,37,385,79"/>
+<area shape="rect" id="node5" href="$class_robo___states.html#a52979a290d5b8010c6478d76db4f167a" title=" " alt="" coords="238,103,381,130"/>
+<area shape="rect" id="node6" href="$class_robo___states.html#a6e108f35f1785617577788d4d4df2d71" title=" " alt="" coords="229,154,390,181"/>
+<area shape="rect" id="node7" href="$class_robo___states.html#ac673d6759baaa1a4afb5acc454389ec8" title=" " alt="" coords="225,205,393,231"/>
+<area shape="rect" id="node8" href="$class_vec2.html#ab9c6aa483fc884d65a0f50a6426dce04" title=" " alt="" coords="267,255,352,282"/>
+<area shape="rect" id="node9" href="$class_vec2.html#ab34c86af20c627cd5ed0e1a973a43fa3" title=" " alt="" coords="266,306,353,333"/>
+<area shape="rect" id="node10" href="$class_state___sensor.html#a18febc839ef7fcdd42b33c108267bcc1" title=" " alt="" coords="235,357,383,399"/>
+<area shape="rect" id="node3" href="$class_position_sensor.html#ad76eb756d3ec36067fade93ea58a55ec" title=" " alt="" coords="451,5,590,47"/>
+<area shape="rect" id="node4" href="$class_position_sensor.html#ad81814b7f09c1104dc4695eec880979f" title=" " alt="" coords="441,71,600,112"/>
+<area shape="rect" id="node11" href="$class_position_sensor.html#a501484f39ecfb966c487961d0ddfb65a" title=" " alt="" coords="442,357,599,399"/>
+</map>

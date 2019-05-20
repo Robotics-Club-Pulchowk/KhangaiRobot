@@ -66,6 +66,6 @@ var searchData=
   ['huart',['huart',['../struct_joy_stick___handle.html#a1d902e73eb2caf7254c4b39789b0b36d',1,'JoyStick_Handle']]],
   ['huart2',['huart2',['../usart_8h.html#aa9479c261d65eecedd3d9582f7f0f89c',1,'huart2():&#160;usart.c'],['../usart_8c.html#aa9479c261d65eecedd3d9582f7f0f89c',1,'huart2():&#160;usart.c']]],
   ['huart3',['huart3',['../usart_8h.html#ab7c63c1b0f65db92b6a4ea19edf957e1',1,'huart3():&#160;usart.c'],['../usart_8c.html#ab7c63c1b0f65db92b6a4ea19edf957e1',1,'huart3():&#160;usart.c'],['../stm32f4xx__it_8c.html#ab7c63c1b0f65db92b6a4ea19edf957e1',1,'huart3():&#160;usart.c']]],
-  ['huart4',['huart4',['../usart_8h.html#ae273feb3e0dc44e38892650faa58fced',1,'huart4():&#160;usart.c'],['../usart_8c.html#ae273feb3e0dc44e38892650faa58fced',1,'huart4():&#160;usart.c']]],
+  ['huart4',['huart4',['../usart_8h.html#ae273feb3e0dc44e38892650faa58fced',1,'huart4():&#160;usart.c'],['../usart_8c.html#ae273feb3e0dc44e38892650faa58fced',1,'huart4():&#160;usart.c'],['../stm32f4xx__it_8c.html#ae273feb3e0dc44e38892650faa58fced',1,'huart4():&#160;usart.c']]],
   ['huart_5f',['huart_',['../class_joy_stick.html#a86f1e28c8921dd0c15dfbf2acd61638d',1,'JoyStick']]]
 ];

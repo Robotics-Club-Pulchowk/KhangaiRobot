@@ -1,6 +1,7 @@
 var struct_joy_stick___command =
 [
     [ "accel", "struct_joy_stick___command.html#a260df7e17ba4772e34cb11ad8c330239", null ],
+    [ "actuate_arm", "struct_joy_stick___command.html#ae34e5d699738623e1877654b037113db", null ],
     [ "brake", "struct_joy_stick___command.html#aba359f312766f9a07407ee497353aff9", null ],
     [ "grip_shagai", "struct_joy_stick___command.html#a4504de9ff9ddf8b04e00de68383358ac", null ],
     [ "mode", "struct_joy_stick___command.html#a7fb9df75f9f28381458c5034cdd02090", null ],

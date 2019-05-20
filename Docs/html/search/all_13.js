@@ -8,6 +8,7 @@ var searchData=
   ['scale_5f4g',['SCALE_4G',['../mpu6050_8h.html#ab2aa80c677de9888d409d544ddb4e7a6a869e860e8cf6cde62daa2e4c5b9db073',1,'mpu6050.h']]],
   ['scale_5f500',['SCALE_500',['../mpu6050_8h.html#aafecca78685b4c6a67c94fcce77151d2a5248af385f13aaa099260993a5dce20e',1,'mpu6050.h']]],
   ['scale_5f8g',['SCALE_8G',['../mpu6050_8h.html#ab2aa80c677de9888d409d544ddb4e7a6a2323c0bdcf1b700604d892afe66b38bb',1,'mpu6050.h']]],
+  ['send_5fthrowcommand',['send_ThrowCommand',['../class_processor.html#a90f9ec4aeb24913849e26468eaeee51a',1,'Processor']]],
   ['sensor',['Sensor',['../class_sensor.html',1,'Sensor&lt; T &gt;'],['../class_sensor.html#a4541bfea23851674d391a10432803fb7',1,'Sensor::Sensor()=default'],['../class_sensor.html#a45a97be2673030fe62f926b02d6b35c9',1,'Sensor::Sensor(Sensor &amp;&amp;)=default'],['../class_sensor.html#a230bf30582c1921f472b46c66634b8db',1,'Sensor::Sensor(const Sensor &amp;)=default']]],
   ['sensor_2eh',['sensor.h',['../sensor_8h.html',1,'']]],
   ['sensor_3c_20float_20_3e',['Sensor&lt; float &gt;',['../class_sensor.html',1,'']]],

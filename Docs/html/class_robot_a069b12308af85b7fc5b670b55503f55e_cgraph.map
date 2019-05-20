@@ -28,20 +28,20 @@
 <area shape="rect" id="node28" href="$class_position_sensor.html#a501484f39ecfb966c487961d0ddfb65a" title=" " alt="" coords="1024,538,1181,579"/>
 <area shape="rect" id="node24" href="$class_bound.html#acb333689dc61b5fdc233b29501a82cda" title=" " alt="" coords="1283,385,1389,412"/>
 <area shape="rect" id="node27" href="$class_bound.html#aedf5d1dbb82e1bbeb666951867b916b5" title="Read which limit switches are pressed." alt="" coords="1290,487,1382,513"/>
-<area shape="rect" id="node30" href="$class_processor.html#a1e529fa62420f020ef760f4a6259ed1e" title=" " alt="" coords="332,789,467,816"/>
-<area shape="rect" id="node42" href="$class_joy_stick.html#a67a598be23225afa905e9c35b21da1bc" title=" " alt="" coords="801,989,936,1016"/>
-<area shape="rect" id="node43" href="$class_joy_stick.html#a075c3653c4d71c13b7d03a73119c4828" title=" " alt="" coords="343,1008,455,1035"/>
-<area shape="rect" id="node31" href="$class_state___sensor.html#a2578ecaea1eb7a08f685c1652a82675c" title=" " alt="" coords="531,789,710,816"/>
-<area shape="rect" id="node32" href="$class_robo___states.html#a29597d9c80e525223e53e9120d3fa2b6" title=" " alt="" coords="515,637,727,664"/>
-<area shape="rect" id="node33" href="$class_robo___states.html#a52979a290d5b8010c6478d76db4f167a" title=" " alt="" coords="797,739,940,765"/>
-<area shape="rect" id="node36" href="$class_processor.html#a538b861ae9378103eb37de45b0bb3faa" title=" " alt="" coords="537,739,704,765"/>
-<area shape="rect" id="node38" href="$class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c" title=" " alt="" coords="545,841,696,882"/>
-<area shape="rect" id="node41" href="$class_robo___states.html#a6e108f35f1785617577788d4d4df2d71" title=" " alt="" coords="540,907,701,933"/>
-<area shape="rect" id="node34" href="$class_vec2.html#ab9c6aa483fc884d65a0f50a6426dce04" title=" " alt="" coords="826,637,911,664"/>
-<area shape="rect" id="node35" href="$class_vec2.html#ab34c86af20c627cd5ed0e1a973a43fa3" title=" " alt="" coords="825,688,912,715"/>
-<area shape="rect" id="node37" href="$class_robo___states.html#a2b991441c08e4ddef51f6a4683d172ed" title=" " alt="" coords="775,789,963,816"/>
-<area shape="rect" id="node39" href="$class_position_sensor.html#ad76eb756d3ec36067fade93ea58a55ec" title=" " alt="" coords="799,841,938,882"/>
-<area shape="rect" id="node40" href="$class_position_sensor.html#ad81814b7f09c1104dc4695eec880979f" title=" " alt="" coords="789,906,948,947"/>
-<area shape="rect" id="node44" href="$class_joy_stick.html#ab10729b26f39ae4c91d04544a74a2158" title=" " alt="" coords="568,1008,673,1035"/>
-<area shape="rect" id="node45" href="$class_joy_stick.html#a93aa71791994e743457296f7ee9a8216" title=" " alt="" coords="537,1059,704,1085"/>
+<area shape="rect" id="node30" href="$class_joy_stick.html#a67a598be23225afa905e9c35b21da1bc" title=" " alt="" coords="801,989,936,1016"/>
+<area shape="rect" id="node31" href="$class_joy_stick.html#a075c3653c4d71c13b7d03a73119c4828" title=" " alt="" coords="343,1008,455,1035"/>
+<area shape="rect" id="node34" href="$class_processor.html#a27d4a79448ab44b2f97807fd9d4c3e07" title=" " alt="" coords="332,789,467,816"/>
+<area shape="rect" id="node32" href="$class_joy_stick.html#ab10729b26f39ae4c91d04544a74a2158" title=" " alt="" coords="568,1008,673,1035"/>
+<area shape="rect" id="node33" href="$class_joy_stick.html#a93aa71791994e743457296f7ee9a8216" title=" " alt="" coords="537,1059,704,1085"/>
+<area shape="rect" id="node35" href="$class_state___sensor.html#a2578ecaea1eb7a08f685c1652a82675c" title=" " alt="" coords="531,789,710,816"/>
+<area shape="rect" id="node36" href="$class_robo___states.html#a29597d9c80e525223e53e9120d3fa2b6" title=" " alt="" coords="515,637,727,664"/>
+<area shape="rect" id="node37" href="$class_robo___states.html#a52979a290d5b8010c6478d76db4f167a" title=" " alt="" coords="797,739,940,765"/>
+<area shape="rect" id="node40" href="$class_processor.html#a538b861ae9378103eb37de45b0bb3faa" title=" " alt="" coords="537,739,704,765"/>
+<area shape="rect" id="node42" href="$class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c" title=" " alt="" coords="545,841,696,882"/>
+<area shape="rect" id="node45" href="$class_robo___states.html#a6e108f35f1785617577788d4d4df2d71" title=" " alt="" coords="540,907,701,933"/>
+<area shape="rect" id="node38" href="$class_vec2.html#ab9c6aa483fc884d65a0f50a6426dce04" title=" " alt="" coords="826,637,911,664"/>
+<area shape="rect" id="node39" href="$class_vec2.html#ab34c86af20c627cd5ed0e1a973a43fa3" title=" " alt="" coords="825,688,912,715"/>
+<area shape="rect" id="node41" href="$class_robo___states.html#a2b991441c08e4ddef51f6a4683d172ed" title=" " alt="" coords="775,789,963,816"/>
+<area shape="rect" id="node43" href="$class_position_sensor.html#ad76eb756d3ec36067fade93ea58a55ec" title=" " alt="" coords="799,841,938,882"/>
+<area shape="rect" id="node44" href="$class_position_sensor.html#ad81814b7f09c1104dc4695eec880979f" title=" " alt="" coords="789,906,948,947"/>
 </map>

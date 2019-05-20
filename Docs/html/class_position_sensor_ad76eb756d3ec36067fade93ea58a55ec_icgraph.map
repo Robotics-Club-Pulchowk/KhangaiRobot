@@ -1,11 +1,12 @@
 <map id="PositionSensor::add_Sensor" name="PositionSensor::add_Sensor">
-<area shape="rect" id="node1" title=" " alt="" coords="892,27,1031,69"/>
-<area shape="rect" id="node2" href="$class_state___sensor.html#a662146502361690701880a3b1b7ae29c" title=" " alt="" coords="657,5,844,32"/>
-<area shape="rect" id="node3" href="$class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c" title=" " alt="" coords="675,57,826,98"/>
-<area shape="rect" id="node4" href="$class_processor.html#ab3e919f3aa7b2e7968815d2e056e4067" title=" " alt="" coords="489,39,595,65"/>
-<area shape="rect" id="node7" href="$class_processor.html#a1e529fa62420f020ef760f4a6259ed1e" title=" " alt="" coords="475,89,609,116"/>
-<area shape="rect" id="node5" href="$class_robot.html#abb7f05b4906d4e65fc2e37995b3646bf" title=" " alt="" coords="159,39,240,65"/>
-<area shape="rect" id="node6" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,64,100,91"/>
-<area shape="rect" id="node8" href="$class_processor.html#a08eb6304c0993769d125cc8186cb51ac" title=" " alt="" coords="299,89,427,116"/>
-<area shape="rect" id="node9" href="$class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,89,251,116"/>
+<area shape="rect" id="node1" title=" " alt="" coords="929,27,1068,69"/>
+<area shape="rect" id="node2" href="$class_state___sensor.html#a662146502361690701880a3b1b7ae29c" title=" " alt="" coords="695,5,881,32"/>
+<area shape="rect" id="node3" href="$class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c" title=" " alt="" coords="713,57,863,98"/>
+<area shape="rect" id="node4" href="$class_processor.html#ab3e919f3aa7b2e7968815d2e056e4067" title=" " alt="" coords="507,13,614,40"/>
+<area shape="rect" id="node7" href="$class_processor.html#a27d4a79448ab44b2f97807fd9d4c3e07" title=" " alt="" coords="493,64,628,91"/>
+<area shape="rect" id="node10" href="$class_processor.html#a48a1b74f5331de13b90c35ca3569391d" title=" " alt="" coords="475,115,647,141"/>
+<area shape="rect" id="node5" href="$class_robot.html#abb7f05b4906d4e65fc2e37995b3646bf" title=" " alt="" coords="159,13,240,40"/>
+<area shape="rect" id="node6" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,39,100,65"/>
+<area shape="rect" id="node8" href="$class_processor.html#a08eb6304c0993769d125cc8186cb51ac" title=" " alt="" coords="299,64,427,91"/>
+<area shape="rect" id="node9" href="$class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,64,251,91"/>
 </map>

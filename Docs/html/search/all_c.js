@@ -8,6 +8,7 @@ var searchData=
   ['last_5flimit',['last_limit',['../struct_state___vars.html#a8c30b065d0708642542181e7dff074d5',1,'State_Vars']]],
   ['last_5foutput_5f',['last_output_',['../class_exp___smooth.html#aff65e096d091a21d1cec4fb5b7300269',1,'Exp_Smooth']]],
   ['length',['length',['../class_queue.html#af3f22b735d0b6e09778054021a49e35d',1,'Queue']]],
+  ['lerp',['lerp',['../interpolation_8h.html#aa86f0f229d17d27b664150b9283e4ad3',1,'lerp(float x, float y, float t):&#160;interpolation.cpp'],['../interpolation_8h.html#a6d31b60d0d4e250acfdea864f608a6df',1,'lerp(Vec3&lt; float &gt; x, Vec3&lt; float &gt; y, float t):&#160;interpolation.cpp'],['../interpolation_8cpp.html#aa86f0f229d17d27b664150b9283e4ad3',1,'lerp(float x, float y, float t):&#160;interpolation.cpp'],['../interpolation_8cpp.html#a6d31b60d0d4e250acfdea864f608a6df',1,'lerp(Vec3&lt; float &gt; x, Vec3&lt; float &gt; y, float t):&#160;interpolation.cpp']]],
   ['lidar',['Lidar',['../class_lidar.html',1,'Lidar'],['../class_lidar.html#a3220e5247cbe084b29d5ee74fea7388b',1,'Lidar::Lidar()=default'],['../class_lidar.html#a71b643ccd715114e94437214ff9e6ac2',1,'Lidar::Lidar(Lidar &amp;&amp;)=default'],['../class_lidar.html#a307e70c0a410fdfc6758542b75d98434',1,'Lidar::Lidar(const Lidar &amp;)=default'],['../class_lidar.html#a42b9c01e3700747b772632ab484df07d',1,'Lidar::Lidar(Arduino_Device *adev, SensorName name)']]],
   ['lidar_2ecpp',['lidar.cpp',['../lidar_8cpp.html',1,'']]],
   ['lidar_2eh',['lidar.h',['../lidar_8h.html',1,'']]],

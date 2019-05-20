@@ -1,7 +1,8 @@
 <map id="State_Sensor::change_Sensors" name="State_Sensor::change_Sensors">
-<area shape="rect" id="node1" title=" " alt="" coords="657,23,808,65"/>
-<area shape="rect" id="node2" href="$class_processor.html#ab3e919f3aa7b2e7968815d2e056e4067" title=" " alt="" coords="489,5,595,32"/>
-<area shape="rect" id="node5" href="$class_processor.html#a1e529fa62420f020ef760f4a6259ed1e" title=" " alt="" coords="475,56,609,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="695,49,845,90"/>
+<area shape="rect" id="node2" href="$class_processor.html#ab3e919f3aa7b2e7968815d2e056e4067" title=" " alt="" coords="507,5,614,32"/>
+<area shape="rect" id="node5" href="$class_processor.html#a27d4a79448ab44b2f97807fd9d4c3e07" title=" " alt="" coords="493,56,628,83"/>
+<area shape="rect" id="node8" href="$class_processor.html#a48a1b74f5331de13b90c35ca3569391d" title=" " alt="" coords="475,107,647,133"/>
 <area shape="rect" id="node3" href="$class_robot.html#abb7f05b4906d4e65fc2e37995b3646bf" title=" " alt="" coords="159,5,240,32"/>
 <area shape="rect" id="node4" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,31,100,57"/>
 <area shape="rect" id="node6" href="$class_processor.html#a08eb6304c0993769d125cc8186cb51ac" title=" " alt="" coords="299,56,427,83"/>
