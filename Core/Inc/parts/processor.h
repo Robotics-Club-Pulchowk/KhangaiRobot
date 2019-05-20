@@ -13,6 +13,8 @@
 #include "robo_states.h"
 #include "joystick.h"
 
+#include "throwing.h"
+
 class Processor
 {
 public:
@@ -34,7 +36,10 @@ public:
 private:
         Robo_States *curr_state_;
         State_Sensor *sensor_;
+
+        Throwing *thrower_;
         JoyStick *joy_stick_;
+
         bool is_first_;
         Vec3<float> first_state_;
 
@@ -44,7 +49,13 @@ private:
         Vec3<float> manual_control(JoyStick_Command& joy_cmd);
         void reset_Position(State_Vars *&robot_state_vars);
         void throw_Shagai(bool throw_shagai);
+        void grip_Shagai(bool grip_shagai);
         void extend_Arm();
+        void pass_Gerege(bool pass);
+        void actuate_Arm(bool act_arm);
+        void retrieve_Arm();
+
+        void send_ThrowCommand(bool grip, bool throw_shg, bool act_arm);
 
         void update_State(uint8_t bounds);
 };

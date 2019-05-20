@@ -9,6 +9,7 @@
 #include "freewheel.h"
 #include "arduino.h"
 #include "joystick.h"
+#include "throwing.h"
 
 
 void Logging_Handle_TxCplt();
@@ -48,6 +49,9 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
         }
         else if (huart->Instance == USART2) {
                 Logging_Handle_TxCplt();
+        }
+        else if (huart->Instance == UART4) {
+                Throwing_Handle_TxCplt();
         }
 }
 

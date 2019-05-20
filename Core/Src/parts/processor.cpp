@@ -106,6 +106,9 @@ Processor& Processor::get_Instance(State_Sensor *sen)
 
         JoyStick& joy = JoyStick::get_Instance(&huart2);
         sRobo_CPU.joy_stick_ = &joy;
+
+        Throwing& thr = Throwing::get_Instance();
+        sRobo_CPU.thrower_ = &thr;
         
         return sRobo_CPU;
 }
@@ -116,6 +119,9 @@ int Processor::init(uint32_t dt_millis)
 
         // Manual Components Initialization
         joy_stick_->init();
+
+        // Throwing Initialization
+        thrower_->init();
 
         return 0;
 }
@@ -198,10 +204,6 @@ static bool gSend_LED_Data = false;
 static uint8_t gSend_LED_Data_Num = 5;
 const uint8_t gSend_LED_Data_Max = 5;
 
-static bool gSend_Pneumatic_Data = false;
-static uint8_t gSend_Pneumatic_Data_Num = 5;
-const uint8_t gSend_Pneumatic_Data_Max = 5;
-
 const static uint8_t gSend_Extend_Num_Max = 10;
 static uint8_t gSend_Extend_Num = gSend_Extend_Num_Max;
 
@@ -226,7 +228,8 @@ Vec3<float> Processor::control(Vec3<float> state,
         Control_Mode mode = Control_Mode::MANUAL;
         bool grip_shagai = false;
         bool reset_pos = false;
-        bool throw_shagai = false;
+        bool thr_shg = false;
+        bool actuate_arm = false;
 
         bool just_read = false;
 
@@ -239,7 +242,8 @@ Vec3<float> Processor::control(Vec3<float> state,
                 
                 grip_shagai = joy_command.grip_shagai;
                 reset_pos = joy_command.reset_pos;
-                throw_shagai = joy_command.throw_shagai;
+                thr_shg = joy_command.throw_shagai;
+                actuate_arm = joy_command.actuate_arm;
         }
         
         //* Process the data if read
@@ -249,9 +253,9 @@ Vec3<float> Processor::control(Vec3<float> state,
 
         //* Return back to pick another shagai if shagai is thrown and the robot
         //* has retrieved it's arm
-        if (id == Field::FIELD_Q) {
+        if (id >= Field::FIELD_Q) {
 
-                if (throw_shagai) {
+                if (thr_shg) {
                         gShagai_Thrown_Counter_Start = true;
                 }
                 if (gShagai_Thrown_Counter_Start) {
@@ -288,7 +292,7 @@ Vec3<float> Processor::control(Vec3<float> state,
                         vels = manual_control(joy_command);
                 }
 
-                float rw = (phi)*0.1;
+                float rw = (phi)*0.3;
                 vels.setZ(rw);
 
                 led_val = fill_Intensity(0, 15);
@@ -331,18 +335,13 @@ Vec3<float> Processor::control(Vec3<float> state,
                 }
         }
 
-        //* Send Extend command if robot is in field Q
-        if (id == Field::FIELD_Q) {
-                extend_Arm();
-        }
-
-        //* Throw Shagai if command obtained
-        throw_Shagai(throw_shagai);
 
         //* Reset Position to field O if reset_pos command is obtained
         if (reset_pos) {
                 reset_Position(robot_state_vars);
         }
+
+        send_ThrowCommand(grip_shagai, thr_shg, actuate_arm);
 
         return vels;
 }
@@ -405,31 +404,145 @@ void Processor::reset_Position(State_Vars *&robot_state_vars)
         gSend_Extend_Num = gSend_Extend_Num_Max;
 }
 
+static uint32_t gSend_Retrieve_Num = 10;
+
+void Processor::send_ThrowCommand(bool grip, bool throw_shg, bool act_arm)
+{
+        Field id = curr_state_->get_ID();
+
+        if (id == Field::FIELD_O) {
+                gSend_Retrieve_Num = 10;
+        }
+
+        if (id == Field::FIELD_S) {
+                retrieve_Arm();
+        }
+
+        //* Send Extend command if robot is in field Q
+        if (id == Field::FIELD_Q) {
+                extend_Arm();
+        }
+
+        if (id >= Field::FIELD_Q) {
+                throw_Shagai(throw_shg);
+        }
+
+        actuate_Arm(act_arm);
+
+        if (id == Field::FIELD_O) {
+                grip_Shagai(grip);
+                // printf("Grip Shagai");
+        }
+        else if (id >= Field::FIELD_I && id < Field::FIELD_O) {
+                pass_Gerege(grip);
+        }
+}
+
+
+static bool gSend_Throw_Command = false;
+static uint8_t gSend_Throw_Num = 5;
+const uint8_t gSend_Throw_Max = 5;
+
 void Processor::throw_Shagai(bool throw_shagai)
 {
         //* Throw Shagai if throw shagai flag obtained
         if (throw_shagai) {
-                gSend_Pneumatic_Data = true;
+                gSend_Throw_Command = true;
         }
 
         //* Send Pneumatic data if there is change in control mode
-        if (gSend_Pneumatic_Data) {
-                if (--gSend_Pneumatic_Data_Num) {
-                        uint8_t throw_shagai_cmd = 0x03;
-                        gPneumatic.write(&throw_shagai_cmd, 1);
+        if (gSend_Throw_Command) {
+                if (--gSend_Throw_Num) {
+                        thrower_->write((uint8_t)(Throwing_Commands::THROW));
+                        HAL_GPIO_WritePin(B_RedLED_GPIO_Port, B_RedLED_Pin, GPIO_PIN_SET);
                 }
                 else {
-                        gSend_Pneumatic_Data_Num = gSend_Pneumatic_Data_Max;
-                        gSend_Pneumatic_Data = false;
+                        gSend_Throw_Num = gSend_Throw_Max;
+                        gSend_Throw_Command = false;
+                        HAL_GPIO_WritePin(B_RedLED_GPIO_Port, B_RedLED_Pin, GPIO_PIN_RESET);
                 }
         }
 }
+
 void Processor::extend_Arm()
 {
         if (gSend_Extend_Num) {
-                uint8_t extend = 0x01;
-                gPneumatic.write(&extend, 1);
+                thrower_->write((uint8_t)(Throwing_Commands::EXTEND));
                 --gSend_Extend_Num;
+        }
+}
+
+void Processor::retrieve_Arm()
+{
+        if (gSend_Retrieve_Num) {
+                thrower_->write((uint8_t)(Throwing_Commands::RETRIEVE));
+                --gSend_Retrieve_Num;
+        }
+}
+
+static bool gSend_Grip_Command = false;
+static uint8_t gSend_Grip_Command_Num = 5;
+static uint8_t gSend_Grip_Command_Num_Max = 5;
+
+void Processor::grip_Shagai(bool grip_shagai)
+{
+        //* Throw Shagai if throw shagai flag obtained
+        if (grip_shagai) {
+                gSend_Grip_Command = true;
+        }
+
+        //* Send Pneumatic data if there is change in control mode
+        if (gSend_Grip_Command) {
+                if (--gSend_Grip_Command_Num) {
+                        thrower_->write((uint8_t)(Throwing_Commands::GRIP));
+                }
+                else {
+                        gSend_Grip_Command_Num = gSend_Grip_Command_Num_Max;
+                        gSend_Grip_Command = false;
+                }
+        }
+}
+
+static bool gSend_Gerege_Pass_Command = false;
+static uint8_t gSend_Gerege_Pass_Command_Num = 5;
+static uint8_t gSend_Gerege_Pass_Command_Num_Max = 5;
+
+void Processor::pass_Gerege(bool pass)
+{
+        //* Throw Shagai if throw shagai flag obtained
+        if (pass) {
+                gSend_Gerege_Pass_Command = true;
+        }
+
+        //* Send Pneumatic data if there is change in control mode
+        if (gSend_Gerege_Pass_Command) {
+                if (--gSend_Gerege_Pass_Command_Num) {
+                        thrower_->write((uint8_t)(Throwing_Commands::PASS_GEREGE));
+                }
+                else {
+                        gSend_Gerege_Pass_Command_Num = gSend_Gerege_Pass_Command_Num_Max;
+                        gSend_Gerege_Pass_Command = false;
+                }
+        }
+}
+
+static bool gSend_Actuate_Arm_Cmd = false;
+static uint8_t gSend_Actuate_Arm_Cmd_Num = 5;
+static uint8_t gSend_Actuate_Arm_Cmd_Num_Max = 5;
+void Processor::actuate_Arm(bool act_arm)
+{
+        if (act_arm) {
+                gSend_Actuate_Arm_Cmd = true;
+        }
+
+        if (gSend_Actuate_Arm_Cmd) {
+                if (--gSend_Actuate_Arm_Cmd_Num) {
+                        thrower_->write((uint8_t)(Throwing_Commands::ACTUATE));
+                }
+                else {
+                        gSend_Actuate_Arm_Cmd_Num = gSend_Actuate_Arm_Cmd_Num_Max;
+                        gSend_Actuate_Arm_Cmd = false;
+                }
         }
 }
 
