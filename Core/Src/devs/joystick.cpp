@@ -187,6 +187,7 @@ void JoyStick::parse_JoyData(JoyStick_Data joy)
         bool reset_pos = button & _BV(RESET_KEY);
         bool grip_shagai = button & _BV(SHAGAI_GRIP_KEY);
         bool throw_shagai = button & _BV(THROW_SHAGAI_KEY);
+        bool actuate_arm = button & _BV(ACTUATE_ARM_KEY);
 
         float manual_stroke = button & _BV(MANUAL_KEY);
         float auto_stroke = button & _BV(AUTO_KEY);
@@ -217,5 +218,6 @@ void JoyStick::parse_JoyData(JoyStick_Data joy)
         Joy_Command.accel = accel;
         Joy_Command.grip_shagai = grip_shagai;
         Joy_Command.throw_shagai = throw_shagai;
+        Joy_Command.actuate_arm = actuate_arm;
         taskEXIT_CRITICAL();
 }
