@@ -12,7 +12,7 @@
 
 #include <math.h>
 
-#define JOYSTICK_START_BYTE     (0xA5)
+#define JOYSTICK_START_BYTE     (START_BYTE)
 #define NUM_JOYSTICK_BYTES      (7)
 
 static JoyStick_Handle gJoyStick;

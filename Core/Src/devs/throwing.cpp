@@ -8,6 +8,7 @@
 
 #include "throwing.h"
 #include "usart.h"
+#include "defines.h"
 
 #define THROWING_UART   (huart4)
 
@@ -27,7 +28,9 @@ int Throwing::init()
 {
         __HAL_UART_ENABLE_IT(&THROWING_UART, UART_IT_TC);
 
-        gThrowing_TxData[0] = 0xA5;
+        gThrowing_TxData[0] = START_BYTE;
+
+        return 0;
 }
 
 Queue<uint8_t, MAX_COMMAND_QUEUE> gThrowing_Commands;
