@@ -124,6 +124,7 @@ Vec3<float> Actuator::actuate(Vec3<float> vel, uint32_t dt_millis)
 
                 wheels_[i].set_Omega(new_omega[i]);
                 // printf("(%ld, %ld, %ld)  ", (int32_t)(set_points[i]*1000), (int32_t)(omega[i]*1000), (int32_t)(new_omega[i]*1000));
+                wheels_[i].log(omega[i], new_omega[i]);
 
                 vels[i][0] = omega[i] * (float)(WHEEL_RADIUS);
         }
@@ -230,7 +231,7 @@ void Actuator::wheels_Init(void)
         int i;
         for (i = 0; i < 4; i++)
         {
-                gWheel_Configurations[i].id = i;
+                gWheel_Configurations[i].id = i + 1;
                 gWheel_Configurations[i].radius = 0.0675;
                 // All motors are connected to same timer : TIM8
                 gWheel_Configurations[i].htim = &htim8;

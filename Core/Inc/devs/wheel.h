@@ -2,6 +2,8 @@
  * wheel.h
  *
  * Created : 10/1/2018
+ *  Author : n-is
+ *   email : 073bex422.nischal@pcampus.edu.np
  */
 
 #ifndef _WHEEL_H_
@@ -14,6 +16,8 @@
 
 #include "pid_algorithms.h"
 #include "pid.h"
+
+#include "logger.h"
 
 enum Direction
 {
@@ -68,6 +72,28 @@ public:
         void set_PIDController(PID *pid) { wheel_->pid_controller = pid; }
         PID * get_PIDController() {
                 return wheel_->pid_controller;
+        }
+
+        void log(float omega, float new_omega) {
+                // Motor Packet is of the following form
+                // START_BYTE  MOTOR_PACKET_ID  MOTOR_ID SCALED_OMEGA  SCALED_NEW_OMEGA  TIME_HIGH_BYTE  TIME_LOW_BYTE
+                // A total of 7 bytes including start byte
+                // uint32_t curr_time = HAL_GetTick();
+
+                gLogging_Buffer.insert((uint8_t)(START_BYTE));
+                gLogging_Buffer.insert((uint8_t)(MOTOR_PACKET_ID));
+                gLogging_Buffer.insert((uint8_t)(wheel_->id));
+                float omga = (omega / (float)(MAX_OMEGA)) * 127.0;
+                gLogging_Buffer.insert((uint8_t)(omga));
+                float n_omga = (new_omega / (float)(MAX_OMEGA)) * 127.0;
+                gLogging_Buffer.insert((uint8_t)(n_omga));
+
+                // uint8_t time_h = (uint8_t)(curr_time >> (8+4));
+                // uint8_t time_l = (uint8_t)(curr_time >> 4);
+                // gLogging_Buffer.insert(time_h);
+                // gLogging_Buffer.insert(time_l);
+
+                // printf("%d, %d, %d, %d\n", (int8_t)(omga), (int8_t)(n_omga), time_h, time_l);
         }
 private:
        Wheel_Config *wheel_;
