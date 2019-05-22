@@ -126,12 +126,12 @@ void loop()
 //                        Serial.print(" ");
                 }
         }
-        Serial.println();
-//
-//        if (Serial1.available()) {
-//                char c = Serial1.read();
-//                Serial.print(c);
-//        }
+        // Serial.println();
+
+        if (Serial1.available()) {
+               char c = Serial1.read();
+               Serial.write(c);
+        }
 #endif
 }
 
