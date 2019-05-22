@@ -1,41 +1,29 @@
+/*
+ * logger.cpp
+ *
+ * Created : 5/21/2019
+ *  Author : n-is
+ *   email : 073bex422.nischal@pcampus.edu.np
+ */
 
 #include "stm32f4xx_hal.h"
-#include "queue_custom.h"
-#include "usart.h"
+#include "logger.h"
 
-extern "C" int ITM_SendString(char *data, int len);
-
-uint8_t gPrintfData[2][16*1024];
-uint32_t gPrintfDataIndex[2] = { 0 };
-
-uint8_t gSending_Index = 0;
-volatile bool gPrintfDataSent = true;
-
-int ITM_SendString(char *data, int len)
-{
-        int i = 0;
-        for (; i < len; ++i)
-        {
-                // uint8_t buf_index = 1 - gSending_Index;
-                // gPrintfData[buf_index][gPrintfDataIndex[buf_index]++] = data[i];
-                ITM_SendChar(data[i]);
-        }
-        return i;
-}
+Queue<uint8_t, LOG_BUFFER_SIZE> gLogging_Buffer;
+static bool gLogDataSent = true;
 
 void log_data()
 {
-        if (gPrintfDataSent) {
-                uint8_t send_index = 1 - gSending_Index;
-                gSending_Index = 1 - gSending_Index;
-
-                HAL_UART_Transmit_DMA(&huart2, gPrintfData[send_index], gPrintfDataIndex[send_index]);
-                gPrintfDataIndex[send_index] = 0;
-                gPrintfDataSent = false;
+        if (gLogDataSent && !gLogging_Buffer.is_Empty()) {
+                gLogDataSent = false;
+                uint8_t data = gLogging_Buffer.lookup();
+                HAL_UART_Transmit_IT(&huart2, &data, 1);
+                HAL_Delay(1);
         }
 }
 
+uint8_t gSent_Count = 0;
 void Logging_Handle_TxCplt()
 {
-        gPrintfDataSent = true;
+        gLogDataSent = true;
 }
