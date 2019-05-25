@@ -69,9 +69,9 @@ void Robot::update(uint32_t dt_millis)
         // state_.print();
         // printf("\n");
 
-        // Rotation by 180 degrees
-        vels.setX(-vels.getX());
-        vels.setY(-vels.getY());
+        // // Rotation by 180 degrees
+        // vels.setX(-vels.getX());
+        // vels.setY(-vels.getY());
 
         taskENTER_CRITICAL();
         velocities_ = vels;
