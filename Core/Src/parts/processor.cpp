@@ -292,7 +292,7 @@ Vec3<float> Processor::control(Vec3<float> state,
                         vels = manual_control(joy_command);
                 }
 
-                float rw = (phi)*0.3;
+                float rw = (phi)*0.2;
                 vels.setZ(rw);
 
                 led_val = fill_Intensity(0, 15);
