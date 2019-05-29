@@ -65,7 +65,7 @@ public:
         void update() const;
 
         float get_Omega(uint32_t dt_millis);
-        float get_MaxOmega() { return wheel_->max_omega; }
+        float get_MaxOmega() const { return wheel_->max_omega; }
 
         void start_Periphs();
 
@@ -83,10 +83,8 @@ public:
                 gLogging_Buffer.insert((uint8_t)(START_BYTE));
                 gLogging_Buffer.insert((uint8_t)(MOTOR_PACKET_ID));
                 gLogging_Buffer.insert((uint8_t)(wheel_->id));
-                float omga = (omega / (float)(MAX_OMEGA)) * 127.0;
-                gLogging_Buffer.insert((uint8_t)(omga));
-                float n_omga = (new_omega / (float)(MAX_OMEGA)) * 127.0;
-                gLogging_Buffer.insert((uint8_t)(n_omga));
+                gLogging_Buffer.insert((int8_t)(omega));
+                gLogging_Buffer.insert((int8_t)(new_omega));
 
                 // uint8_t time_h = (uint8_t)(curr_time >> (8+4));
                 // uint8_t time_l = (uint8_t)(curr_time >> 4);
@@ -95,6 +93,11 @@ public:
 
                 // printf("%d, %d, %d, %d\n", (int8_t)(omga), (int8_t)(n_omga), time_h, time_l);
         }
+
+        void clear() {
+                wheel_->pid_controller->clear();
+        }
+
 private:
        Wheel_Config *wheel_;
        enum Direction dir_;
