@@ -20,7 +20,7 @@
 static JoyStick_Handle gJoyStick;
 static JoyStick_Data gNull_JData;
 
-static CRC_Hash gJoyStick_CRC(0x07);
+static CRC_Hash gJoyStick_CRC(7);
 static uint32_t gJoy_Err_Count = 0;
 
 static uint8_t gRx2Data;
