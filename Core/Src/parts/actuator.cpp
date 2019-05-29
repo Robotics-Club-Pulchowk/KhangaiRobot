@@ -87,13 +87,9 @@ static const Mat gInverse_Coupling_Matrix(gInverse_Coupling_Array);
 
 Vec3<float> Actuator::actuate(Vec3<float> vel, Vec3<float> psis, uint32_t dt_millis, int8_t test)
 {
-        static uint32_t gMotor_On_Period = HAL_GetTick();
-        uint32_t current_time = HAL_GetTick();
-
-
         float rw = 0;
-        float t_psi = 0;
-        float psi = 0;
+        float t_psi = psis.getX() / 57.3;
+        float psi = psis.getY() / 57.3;
 
         if (test > 0) {
                 rw = 0.5;
@@ -102,25 +98,6 @@ Vec3<float> Actuator::actuate(Vec3<float> vel, Vec3<float> psis, uint32_t dt_mil
                 rw = -0.5;
         }
         else {
-                psi = psis.getY() / 57.3;
-
-                if (current_time - gMotor_On_Period < 4000) {
-                        vel.set_Values(0, 0, 0);
-                        t_psi = M_PI / 2.0;
-                }
-                else if (current_time - gMotor_On_Period < 6000) {
-                        vel.set_Values(0, 0, 0);
-                        t_psi = psi;
-                }
-                else if (current_time - gMotor_On_Period < 10000) {
-                        vel.set_Values(0, -0, 0);
-                        t_psi = 0;
-                }
-                else {
-                        gMotor_On_Period = HAL_GetTick();
-                }
-        
-
                 // Calculate rw
                 float err_psi = t_psi - psi;
                 rw = -angle_pid_->compute_PID(err_psi, dt_millis);
