@@ -132,6 +132,7 @@ Core/Src/utils/math/state.cpp \
 Core/Src/utils/filter/exp_smooth.cpp \
 Core/Src/utils/trajectory/min_jerk.cpp \
 Core/Src/utils/trajectory/min_accel.cpp \
+Core/Src/utils/crypto/crc_hash.cpp \
 \
 Core/Src/utils/logger.cpp \
 \
@@ -211,6 +212,7 @@ C_INCLUDES =  \
 -ICore/Inc/utils\filter \
 -ICore/Inc/utils\math \
 -ICore/Inc/utils\trajectory \
+-ICore/Inc/utils\crypto \
 -ICore/Inc/sys \
 -ICore/Inc/parts \
 -ICore/Inc/parts/actuators \
