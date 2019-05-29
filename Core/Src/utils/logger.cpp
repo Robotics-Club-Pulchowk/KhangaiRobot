@@ -8,6 +8,7 @@
 
 #include "stm32f4xx_hal.h"
 #include "logger.h"
+#include "defines.h"
 
 Queue<uint8_t, LOG_BUFFER_SIZE> gLogging_Buffer;
 static bool gLogDataSent = true;
@@ -26,4 +27,30 @@ uint8_t gSent_Count = 0;
 void Logging_Handle_TxCplt()
 {
         gLogDataSent = true;
+}
+
+//* Angle_Logging Function
+void log_Angle(float psi, float rw)
+{
+        // Angle Packet is of the following form
+        // START_BYTE  ANGLE_PACKET_ID  PSI  NEW_PSI
+        // A total of 4 bytes including start byte
+
+        gLogging_Buffer.insert((uint8_t)(START_BYTE));
+        gLogging_Buffer.insert((uint8_t)(ANGLE_PACKET_ID));
+        gLogging_Buffer.insert((int8_t)(psi * 20));
+        gLogging_Buffer.insert((int8_t)(rw * 25));
+}
+
+void log_CompassOffsets(Vec3<float> offsets)
+{
+        // Angle Packet is of the following form
+        // START_BYTE  COMPASS_PACKET_ID  OFFSETS
+        // A total of 5 bytes including start byte
+
+        gLogging_Buffer.insert((uint8_t)(START_BYTE));
+        gLogging_Buffer.insert((uint8_t)(COMPASS_PACKET_ID));
+        gLogging_Buffer.insert((int8_t)((offsets.getX()/300.0)*128.0));
+        gLogging_Buffer.insert((int8_t)((offsets.getY()/300.0)*128.0));
+        gLogging_Buffer.insert((int8_t)((offsets.getZ()/300.0)*128.0));
 }
