@@ -102,16 +102,18 @@ Vec3<float> Actuator::actuate(Vec3<float> vel, Vec3<float> psis, uint32_t dt_mil
                 rw = -0.5;
         }
         else {
+                psi = psis.getY() / 57.3;
+
                 if (current_time - gMotor_On_Period < 4000) {
-                        vel.set_Values(0, 0.4, 0);
+                        vel.set_Values(0, 0, 0);
                         t_psi = M_PI / 2.0;
                 }
                 else if (current_time - gMotor_On_Period < 6000) {
                         vel.set_Values(0, 0, 0);
-                        t_psi = M_PI / 2.0;
+                        t_psi = psi;
                 }
                 else if (current_time - gMotor_On_Period < 10000) {
-                        vel.set_Values(0, -0.4, 0);
+                        vel.set_Values(0, -0, 0);
                         t_psi = 0;
                 }
                 else {
@@ -120,27 +122,11 @@ Vec3<float> Actuator::actuate(Vec3<float> vel, Vec3<float> psis, uint32_t dt_mil
         
 
                 // Calculate rw
-                psi = psis.getY() / 57.3;
                 float err_psi = t_psi - psi;
                 rw = -angle_pid_->compute_PID(err_psi, dt_millis);
         }
-
-        // printf("%ld, %ld\n", (int32_t)(rw*1000), (int32_t)(psi*1000));
-
-        // vel.set_Values(0,0,0);
-
-        vel.set_Values(0, 0, rw);
-
-        log_Angle(psi, rw);
-
-        // psi /= 57.3;
-
-        // float Rot[3][3] = { { cos(psi), -sin(psi), 0 },
-        //                     { sin(psi),  cos(psi), 0 },
-        //                     {        0,         0, 1} };
-
-        // Mat Rm(Rot);
-        // Mat v = Rm * vel;
+        
+        vel.setZ(rw);
 
         Mat wheels_omegas = gCoupling_Matrix * vel;
         // w = v / r
@@ -149,6 +135,7 @@ Vec3<float> Actuator::actuate(Vec3<float> vel, Vec3<float> psis, uint32_t dt_mil
                                 wheels_omegas.at(2,0) / (float)(WHEEL_RADIUS),
                                 wheels_omegas.at(3,0) / (float)(WHEEL_RADIUS) };
 
+#ifdef _USE_SAFETY_ON_WHEELS
         for (uint8_t i = 0; i < 4; ++i) {
                 if (set_points[i] > 15) {
                         set_points[i] = 15;
@@ -157,6 +144,7 @@ Vec3<float> Actuator::actuate(Vec3<float> vel, Vec3<float> psis, uint32_t dt_mil
                         set_points[i] = -15;
                 }
         }
+#endif
 
         // This is motor tuning part
         // Omega is created as 2D array with single column so that we can easily
