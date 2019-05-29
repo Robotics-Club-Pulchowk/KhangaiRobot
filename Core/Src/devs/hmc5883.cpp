@@ -10,6 +10,8 @@
 #include "hmc5883.h"
 #include "mpu6050.h"
 
+#include "utils.h"
+
 static uint8_t buffer[8];
 
 int8_t HMC5883_Init(struct HMC5883 *hmc)
@@ -48,16 +50,6 @@ int8_t HMC5883_Read(struct HMC5883 *hmc)
         return (h1 | h2);
 }
 
-static float max_val(float x, float y)
-{
-        return (x > y)? x : y;
-}
-
-static float min_val(float x, float y)
-{
-        return (x < y)? x : y;
-}
-
 void HMC5883_Calibrate(struct HMC5883 *hmc, struct A4988 *stpr, uint32_t n)
 {
         Vec3<float> maxs, mins;
@@ -94,4 +86,7 @@ void HMC5883_Calibrate(struct HMC5883 *hmc, struct A4988 *stpr, uint32_t n)
         printf("Stop Rotating Compass\n");
 
         hmc->hard_iron_offset = (maxs + mins).mult_EW(0.5);
+
+        (hmc->hard_iron_offset).print();
+        printf("\n");
 }
