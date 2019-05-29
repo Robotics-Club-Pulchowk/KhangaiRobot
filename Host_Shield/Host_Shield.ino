@@ -86,15 +86,21 @@ void fill_array(T (&arr)[N], T elem)
         }
 }
 
-CRC_Hash gJoyStick_CRC(0x07);
+CRC_Hash gJoyStick_CRC;
+unsigned long gCurr_Time = 0;
 
 void setup()
 {
         Serial.begin(115200);
+        Serial.println("Hello World!!");
+        gJoyStick_CRC.begin(7);
+        
         Serial1.begin(115200);
         Usb.Init();
         delay(500);
         fill_array(gJoyStick_Packet, (uint8_t)0);
+        
+        gCurr_Time = millis();
 }
 
 bool is_Unrequired(uint8_t i)
@@ -123,20 +129,29 @@ void loop()
 #else
 //        Serial.print(dt);
 //        Serial.print(":  ");
-        uint8_t j = 0;
-        uint8_t joy_arr[JOUSTICK_SMALL_SIZE_NUM];
-        for (uint8_t i = 0; i < 13; ++i) {
-                if (!is_Unrequired(i)) {
-                        Serial1.write(gJoyStick_Packet[i]);
-//                        int8_t c = gJoyStick_Packet[i];
-//                        Serial.print(c);
-//                        Serial.print(" ");
-                        joy_arr[j++] = gJoyStick_Packet[i];
+        if (millis() - gCurr_Time > 5) {
+                gCurr_Time = millis();
+                
+                uint8_t j = 0;
+                uint8_t joy_arr[JOUSTICK_SMALL_SIZE_NUM+1];
+                for (uint8_t i = 0; i < 13; ++i) {
+                        if (!is_Unrequired(i)) {
+                                Serial1.write(gJoyStick_Packet[i]);
+        //                        int8_t c = gJoyStick_Packet[i];
+        //                        Serial.print(c);
+        //                        Serial.print(" ");
+                                joy_arr[j++] = gJoyStick_Packet[i];
+                        }
                 }
-        }
-        // Serial.println();
-        Serial1.write(gJoyStick_CRC.get_Hash(joy_arr,JOUSTICK_SMALL_SIZE_NUM));
+                // Serial.println();
+//                uint8_t hash = 0;
 
+//                Serial.println("Hello2");
+                uint8_t hash = gJoyStick_CRC.get_Hash(&joy_arr[1],JOUSTICK_SMALL_SIZE_NUM);
+                
+                Serial1.write(hash);
+
+        }
         if (Serial1.available()) {
                char c = Serial1.read();
                Serial.write(c);
