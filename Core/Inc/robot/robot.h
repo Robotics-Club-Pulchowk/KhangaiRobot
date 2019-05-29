@@ -62,6 +62,7 @@ private:
         Vec3<float> state_;
         Vec3<float> state_from_base_;
         Vec3<float> velocities_;
+        Vec3<float> psis_;
 
         bool initiated_;
         Robot() {
