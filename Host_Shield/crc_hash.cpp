@@ -1,31 +1,29 @@
 #include "crc_hash.h"
 
 
-CRC_Hash::CRC_Hash(uint8_t poly)
+CRC_Hash::CRC_Hash()
+{
+
+}
+
+void CRC_Hash::begin(uint8_t poly)
 {
         uint8_t remainder;
         int dividend = 0;
 
-        for(; dividend < 256; ++dividend)
-        {
+        for(; dividend < 256; ++dividend) {
                 remainder = dividend << (WIDTH - 8);
+
+                for(uint8_t b = 8; b > 0; --b) {
+                        if(remainder & TOP_BIT) {
+                                remainder = (remainder << 1) ^ poly;
+                        }
+                        else {
+                                remainder = (remainder << 1);
+                        }
+                }
+                table_[dividend] = remainder;
         }
-
-        for(uint8_t bit = 8; bit > 0; --bit)
-        {
-                if(remainder && TOP_BIT)
-                {
-                        remainder = (remainder << 1) ^ poly;
-                }
-
-                else
-                {
-                        remainder = (remainder << 1);
-                }
-        }        
-       
-        table_[dividend] = remainder;
-
 }
 
 uint8_t CRC_Hash::get_Hash(uint8_t *buf, uint16_t len)
@@ -39,5 +37,5 @@ uint8_t CRC_Hash::get_Hash(uint8_t *buf, uint16_t len)
                 remainder = table_[data] ^ (remainder << 8);
         }
 
-        return(remainder);
+        return (remainder);
 }

@@ -5,7 +5,7 @@
 
 #define WIDTH                   (8)
 #define CRC_HASH_TABLE_SIZE     (256)
-#define TOP_BIT                 (1 << (WIDTH - 1))
+#define TOP_BIT                 (1 << 7)
 
 class CRC_Hash
 {
