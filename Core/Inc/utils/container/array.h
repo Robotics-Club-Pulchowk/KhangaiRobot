@@ -28,6 +28,16 @@ void arrPrint(const float (&arr)[N])
 }
 
 template <size_t N>
+void arrPrint(const uint8_t (&arr)[N])
+{
+        printf("[ ");
+        for (size_t i = 0; i < N; ++i) {
+                printf("%d ", (uint8_t)(arr[i]));
+        }
+        printf("]");
+}
+
+template <size_t N>
 void arrMult(float (&arr)[N], float num)
 {
         for (size_t i = 0; i < N; ++i) {
