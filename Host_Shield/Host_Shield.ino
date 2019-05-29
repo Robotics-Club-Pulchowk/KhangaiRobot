@@ -12,6 +12,8 @@
 #include <XBOXRECV.h>
 #endif
 
+#include "crc_hash.h"
+
 #define START_BYTE (0xA5)
 
 // #define DEBUG_MODE
@@ -24,6 +26,7 @@ XBOXRECV Xbox(&Usb);
 #endif
 
 #define _USE_SMALLEST_SIZE
+#define JOUSTICK_SMALL_SIZE_NUM         (7)
 
 // Data format
 // 2 bytes for buttons
@@ -83,6 +86,8 @@ void fill_array(T (&arr)[N], T elem)
         }
 }
 
+CRC_Hash gJoyStick_CRC(0x07);
+
 void setup()
 {
         Serial.begin(115200);
@@ -118,15 +123,19 @@ void loop()
 #else
 //        Serial.print(dt);
 //        Serial.print(":  ");
+        uint8_t j = 0;
+        uint8_t joy_arr[JOUSTICK_SMALL_SIZE_NUM];
         for (uint8_t i = 0; i < 13; ++i) {
                 if (!is_Unrequired(i)) {
                         Serial1.write(gJoyStick_Packet[i]);
 //                        int8_t c = gJoyStick_Packet[i];
 //                        Serial.print(c);
 //                        Serial.print(" ");
+                        joy_arr[j++] = gJoyStick_Packet[i];
                 }
         }
         // Serial.println();
+        Serial1.write(gJoyStick_CRC.get_Hash(joy_arr,JOUSTICK_SMALL_SIZE_NUM));
 
         if (Serial1.available()) {
                char c = Serial1.read();
