@@ -20,6 +20,7 @@ extern Queue<uint8_t, LOG_BUFFER_SIZE> gLogging_Buffer;
 
 void log_Angle(float psi, float rw);
 void log_CompassOffsets(Vec3<float> offsets);
+void log_JoyStickError(uint32_t err_count);
 
 
 #endif // !_LOGGER_H_

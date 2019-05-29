@@ -44,7 +44,7 @@ void log_Angle(float psi, float rw)
 
 void log_CompassOffsets(Vec3<float> offsets)
 {
-        // Angle Packet is of the following form
+        // Compass Packet is of the following form
         // START_BYTE  COMPASS_PACKET_ID  OFFSETS
         // A total of 5 bytes including start byte
 
@@ -53,4 +53,18 @@ void log_CompassOffsets(Vec3<float> offsets)
         gLogging_Buffer.insert((int8_t)((offsets.getX()/300.0)*128.0));
         gLogging_Buffer.insert((int8_t)((offsets.getY()/300.0)*128.0));
         gLogging_Buffer.insert((int8_t)((offsets.getZ()/300.0)*128.0));
+}
+
+void log_JoyStickError(uint32_t err_count)
+{
+        // JoyStick Error Packet is of the following form
+        // START_BYTE  JOYSTICK_ERROR_PACKET_ID  ERR_COUNT
+        // A total of 6 bytes including start byte
+
+        gLogging_Buffer.insert((uint8_t)(START_BYTE));
+        gLogging_Buffer.insert((uint8_t)(JOYSTICK_ERROR_PACKET_ID));
+        gLogging_Buffer.insert((uint8_t)(err_count));
+        gLogging_Buffer.insert((uint8_t)(err_count >> 8));
+        gLogging_Buffer.insert((uint8_t)(err_count >> 16));
+        gLogging_Buffer.insert((uint8_t)(err_count >> 24));
 }
