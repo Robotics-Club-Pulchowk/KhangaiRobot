@@ -11,6 +11,7 @@
 #include "array.h"
 
 #include "crc_hash.h"
+#include "logger.h"
 
 #include <math.h>
 
@@ -53,18 +54,22 @@ void JoyStick_Handle_RxCplt()
                         gRx2_Data_num = 0;
 
                         uint8_t hash = gJoyStick_CRC.get_Hash(gJoy_Data_Arr, NUM_JOYSTICK_BYTES);
+                        // arrPrint(gJoy_Data_Arr);
+                        // printf("\t%d\t", hash);
 
                         if (hash == rem) {
                                 fill_JoyData(&gJoy, gJoy_Data_Arr);
                                 gJoyStick.data.insert(gJoy);
-                                
-                                // printf("No Error!!\n");
+
+                                // printf("No Error!!");
                         }
                         else {
                                 ++gJoy_Err_Count;
-                                printf("%d, %d, %ld\n", rem, hash, gJoy_Err_Count);
+                                log_JoyStickError(gJoy_Err_Count);
+                                // printf("%d, %d, %ld", rem, hash, gJoy_Err_Count);
                         }
-                        
+                        // printf("\n");
+
                         arrFill(gJoy_Data_Arr, (uint8_t)0);
                 }
         }

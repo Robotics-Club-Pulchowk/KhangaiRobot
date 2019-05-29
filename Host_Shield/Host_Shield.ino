@@ -137,20 +137,14 @@ void loop()
                 for (uint8_t i = 0; i < 13; ++i) {
                         if (!is_Unrequired(i)) {
                                 Serial1.write(gJoyStick_Packet[i]);
-        //                        int8_t c = gJoyStick_Packet[i];
-        //                        Serial.print(c);
-        //                        Serial.print(" ");
+                                // Serial.print(gJoyStick_Packet[i], DEC);
+                                // Serial.print(' ');
                                 joy_arr[j++] = gJoyStick_Packet[i];
                         }
                 }
-                // Serial.println();
-//                uint8_t hash = 0;
-
-//                Serial.println("Hello2");
                 uint8_t hash = gJoyStick_CRC.get_Hash(&joy_arr[1],JOUSTICK_SMALL_SIZE_NUM);
-                
+                // Serial.println(hash, DEC);
                 Serial1.write(hash);
-
         }
         if (Serial1.available()) {
                char c = Serial1.read();
