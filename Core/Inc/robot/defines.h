@@ -14,6 +14,8 @@
 
 //* Packet IDs
 #define MOTOR_PACKET_ID         (0x01)
+#define ANGLE_PACKET_ID         (0x02)
+#define COMPASS_PACKET_ID       (0x03)
 
 // #define _USE_BOARD_LEDS_FOR_JOYSTICK
 
