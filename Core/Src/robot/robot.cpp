@@ -144,14 +144,14 @@ void Robot::update(uint32_t dt_millis)
 
         taskENTER_CRITICAL();
         velocities_ = vels;
-        psis_.set_Values(0, state_.getZ(), 0);
+        psis_.set_Values(vels.getZ(), state_.getZ(), 0);
         taskEXIT_CRITICAL();
 }
 
 // This function is called by the MotorThread
 void Robot::run(uint32_t dt_millis)
 {
-        velocities_.set_Values(0, 0, 0);
+        velocities_.setZ(0);
         // (velocities_.mult_EW(1000)).print();
         // printf("\n");
         state_from_base_ = base_->actuate(velocities_, psis_, dt_millis, 0);
