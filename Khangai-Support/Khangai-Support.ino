@@ -10,11 +10,9 @@
 
 //* Function Prototypes
 void send_PingReply();
+void update_Lidar();
 
 //* Following variables are for timing purpose
-const unsigned long gLidar_Read_Period = 5;
-unsigned long gLidar_Read_Time = 0;
-
 const unsigned long gLED_Intensity_Read_Period = 100;
 unsigned long gLED_Intensity_Read_Time = 0;
 
@@ -22,6 +20,7 @@ unsigned long gLED_Intensity_Read_Time = 0;
 uint8_t gArduino_Address = 0x00;
 uint8_t gLED_Address = 0x01;
 uint8_t gXLidar_Address = 0x02;
+uint8_t gYLidar_Address = 0x03;
 
 //* Following variables are used to communicate between stm-board
 //* and the arduino
@@ -46,8 +45,7 @@ void setup()
         Serial.println("Hello World!!");
 
         //* Store current time for periodic update
-        gLidar_Read_Time = millis();
-        gLED_Intensity_Read_Time = gLidar_Read_Time;
+        gLED_Intensity_Read_Time = millis();
 }
 
 void loop()
@@ -57,6 +55,9 @@ void loop()
                 uint8_t c = STM_SERIAL.read();
                 parse_STMByte(c);
         }
+
+        //* Update lidar values to the stm if the timing constraint is fulfilled
+        update_Lidar();
 
         if (millis() - gLED_Intensity_Read_Time > gLED_Intensity_Read_Period) {
                 gLED_Intensity_Read_Time = millis();

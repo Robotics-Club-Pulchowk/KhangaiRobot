@@ -15,8 +15,9 @@
 #define STM_SERIAL      (Serial2)
 
 extern uint8_t gArduino_Address;
-extern uint8_t gLidar_Address;
-extern uint8_t gPneumatic_Address;
+extern uint8_t gLED_Address;
+extern uint8_t gXLidar_Address;
+extern uint8_t gYLidar_Address;
 
 extern uint8_t gLED_Intensity_Value;
 
