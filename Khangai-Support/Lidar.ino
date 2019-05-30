@@ -36,6 +36,8 @@ void update_Lidar()
                 gXLidar_Read_Time = millis();
                 delay(2);
                 gYLidar_Read_Time = millis();
+
+                gIs_First_Update = false;
         }
         else {
                 if (millis() - gXLidar_Read_Time > gLidar_Read_Period) {
