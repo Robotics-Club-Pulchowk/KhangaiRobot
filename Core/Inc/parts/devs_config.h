@@ -35,6 +35,7 @@ extern struct Enc gYEnc;
 extern Encoder gXEncoder;
 extern Encoder gYEncoder;
 extern Lidar   gXLidar;
+extern Lidar   gYLidar;
 
 
 void IMU_Init();
