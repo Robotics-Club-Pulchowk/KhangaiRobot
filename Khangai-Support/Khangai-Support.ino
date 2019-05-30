@@ -13,14 +13,15 @@ void send_PingReply();
 
 //* Following variables are for timing purpose
 const unsigned long gLidar_Read_Period = 5;
-const unsigned long gLED_Intensity_Read_Period = 100;
 unsigned long gLidar_Read_Time = 0;
+
+const unsigned long gLED_Intensity_Read_Period = 100;
 unsigned long gLED_Intensity_Read_Time = 0;
 
 //* Following are the addresses of the devices associated with the Arduino Mega
 uint8_t gArduino_Address = 0x00;
 uint8_t gLED_Address = 0x01;
-uint8_t gLidar_Address = 0x02;
+uint8_t gXLidar_Address = 0x02;
 
 //* Following variables are used to communicate between stm-board
 //* and the arduino
@@ -66,7 +67,7 @@ void loop()
         if (millis() - gLidar_Read_Time > gLidar_Read_Period) {
                 gLidar_Read_Time = millis();
                 // Read lidar data and send it
-                send_LidarDataPack((uint16_t)(read_Lidar()));
+                send_LidarDataPack(gXLidar_Address, (uint16_t)(read_Lidar()));
         }
 
         if (millis() - gLED_Intensity_Read_Time > gLED_Intensity_Read_Period) {

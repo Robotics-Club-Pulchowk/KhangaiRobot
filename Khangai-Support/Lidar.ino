@@ -8,15 +8,14 @@
 
 #include "main.h"
 
-uint8_t gLidar_Buffer[2] = { 0 };
-
-void send_LidarDataPack(unsigned long val)
+void send_LidarDataPack(uint8_t addr, unsigned long val)
 {
+        uint8_t buf[2];
         //* Send the lidar data in big endian format
-        gLidar_Buffer[0] = (uint8_t)(val >> 8);
-        gLidar_Buffer[1] = (uint8_t)val;
+        buf[0] = (uint8_t)(val >> 8);
+        buf[1] = (uint8_t)val;
 
-        send_DataPack(gLidar_Address, gLidar_Buffer, 2);
+        send_DataPack(addr, buf, 2);
 
         Serial.println(val);
 }
