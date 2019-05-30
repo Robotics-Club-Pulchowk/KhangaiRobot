@@ -10,6 +10,7 @@
 #define _POSITION_SENSOR_H_
 
 #include "vec3.h"
+#include "vec2.h"
 #include "sensor.h"
 #include "kalman.h"
 

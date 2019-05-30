@@ -130,7 +130,7 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
                 ylidar_enc_fuser_.clear();
         }
         else {
-                y = ylidar_enc_fuser_.filter(lidar[0], del_pos.getY(), dt_millis);
+                y = ylidar_enc_fuser_.filter(lidar[0], ey, dt_millis);
         }
 
         // x and y are in mm
