@@ -19,7 +19,9 @@ void log_data()
                 gLogDataSent = false;
                 uint8_t data = gLogging_Buffer.lookup();
                 HAL_UART_Transmit_IT(&huart2, &data, 1);
-                HAL_Delay(1);
+                for (uint32_t i = 500; i; --i) {
+                        asm volatile("nop");
+                }
         }
 }
 
