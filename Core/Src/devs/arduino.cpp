@@ -11,6 +11,7 @@
 #include "defines.h"
 
 extern Arduino_Device gXLidar_Dev;
+extern Arduino_Device gYLidar_Dev;
 
 #define MAX_PACKET_LENGTH       (32)
 
@@ -167,6 +168,12 @@ void Arduino_Handle_RxCplt(void)
                                                 int16_t val = (gRxBuffer[gCurrent_Device_ID][0]) << 8;
                                                 val |= gRxBuffer[gCurrent_Device_ID][1];
                                                 gXLidar_Dev.store((float)val);
+                                                // printf("%d\n", val);
+                                        }
+                                        else if (gCurrent_Device_ID == gYLidar_Dev.get_ID()) {
+                                                int16_t val = (gRxBuffer[gCurrent_Device_ID][0]) << 8;
+                                                val |= gRxBuffer[gCurrent_Device_ID][1];
+                                                gYLidar_Dev.store((float)val);
                                                 // printf("%d\n", val);
                                         }
                                 }
