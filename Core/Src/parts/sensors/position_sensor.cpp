@@ -130,7 +130,7 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
                 ylidar_enc_fuser_.clear();
         }
         else {
-                y = ylidar_enc_fuser_.filter(lidar[0], ey, dt_millis);
+                y = ylidar_enc_fuser_.filter(lidar[1], ey, dt_millis);
         }
 
         // x and y are in mm
@@ -242,10 +242,8 @@ Vec2<float> PositionSensor::rotate_EncData(Vec3<float> ori, Vec2<float> enc)
 
         Mat d_pos = Rm.trans() * free_wheel;
 
-        Vec3<float> del_pos(d_pos.at(0,0), d_pos.at(1,0), d_pos.at(2,0));
-
-        float ex = del_pos.getX();
-        float ey = del_pos.getY();
+        float ex = d_pos.at(0,0);
+        float ey = d_pos.at(1,0);
 
         return Vec2<float>(ex, ey);
 }
