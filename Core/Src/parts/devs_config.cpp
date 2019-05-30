@@ -23,12 +23,14 @@ struct Enc gXEnc;
 struct Enc gYEnc;
 
 Arduino_Device gXLidar_Dev(0x02, 2);
+Arduino_Device gYLidar_Dev(0x03, 2);
 Arduino_Device gLED_Strip(0x01, 1);
 
 
 Encoder gXEncoder(&gXEnc, SensorName::XEncoder);
 Encoder gYEncoder(&gYEnc, SensorName::YEncoder);
 Lidar   gXLidar(&gXLidar_Dev, SensorName::XLidar);
+Lidar   gYLidar(&gYLidar_Dev, SensorName::YLidar);
 
 void IMU_Init()
 {
@@ -72,9 +74,16 @@ void Encoders_Init()
         gYEnc.count = 0;
         gYEnc.radius = 29.5;
         gYEnc.ppr = 200;
+
+        gXEncoder.init();
+        gYEncoder.init();
 }
 
 void Lidars_Init()
 {
-        gXLidar.set_Outliers(Vec2<float>(3000, 0));
+        gXLidar.set_Outliers(Vec2<float>(3000, 10));
+        gYLidar.set_Outliers(Vec2<float>(3000, 10));
+
+        gXLidar.init();
+        gYLidar.init();
 }
