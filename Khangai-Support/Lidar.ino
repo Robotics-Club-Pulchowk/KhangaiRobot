@@ -19,13 +19,3 @@ void send_LidarDataPack(uint8_t addr, unsigned long val)
 
         Serial.println(val);
 }
-
-unsigned long read_Lidar()
-{
-        unsigned long pulseWidth;
-
-        //* Count how long the pulse is high in microseconds
-        pulseWidth = pulseIn(3, HIGH);
-
-        return pulseWidth;      //* 1usec = 1 mm of distance
-}

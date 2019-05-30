@@ -43,12 +43,6 @@ void setup()
         (Serial).begin(115200);
         STM_SERIAL.begin(9600);
 
-
-        //* Initialize Lidar in continuous mode
-        pinMode(2, OUTPUT);     // Set pin 2 as trigger pin
-        digitalWrite(2, LOW);   // Set trigger LOW for continuous read
-        pinMode(3, INPUT);      // Set pin 3 as monitor pin
-
         Serial.println("Hello World!!");
 
         //* Store current time for periodic update
@@ -62,12 +56,6 @@ void loop()
         if (STM_SERIAL.available()) {
                 uint8_t c = STM_SERIAL.read();
                 parse_STMByte(c);
-        }
-
-        if (millis() - gLidar_Read_Time > gLidar_Read_Period) {
-                gLidar_Read_Time = millis();
-                // Read lidar data and send it
-                send_LidarDataPack(gXLidar_Address, (uint16_t)(read_Lidar()));
         }
 
         if (millis() - gLED_Intensity_Read_Time > gLED_Intensity_Read_Period) {
