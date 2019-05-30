@@ -10,7 +10,8 @@
 
 //* Function Prototypes
 void send_PingReply();
-void update_Lidar();
+void update_Lidars();
+void init_Lidars();
 
 //* Following variables are for timing purpose
 const unsigned long gLED_Intensity_Read_Period = 100;
@@ -44,6 +45,8 @@ void setup()
 
         Serial.println("Hello World!!");
 
+        init_Lidars();
+
         //* Store current time for periodic update
         gLED_Intensity_Read_Time = millis();
 }
@@ -57,7 +60,7 @@ void loop()
         }
 
         //* Update lidar values to the stm if the timing constraint is fulfilled
-        update_Lidar();
+        update_Lidars();
 
         if (millis() - gLED_Intensity_Read_Time > gLED_Intensity_Read_Period) {
                 gLED_Intensity_Read_Time = millis();
