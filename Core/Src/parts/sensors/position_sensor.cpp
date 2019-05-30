@@ -281,7 +281,7 @@ int init_XLidarEncoderKalman(uint32_t dt_millis)
         process_error.at(1,1) = 0.003;
         
         Mat measure_error(1,1);
-        measure_error.at(0,0) = 5;
+        measure_error.at(0,0) = 50;
 
         gXLidarEncoder_KV.set_F(state_model);
         gXLidarEncoder_KV.set_B(control_model);
@@ -325,7 +325,7 @@ int init_YLidarEncoderKalman(uint32_t dt_millis)
         process_error.at(1,1) = 0.003;
         
         Mat measure_error(1,1);
-        measure_error.at(0,0) = 5;
+        measure_error.at(0,0) = 50;
 
         gYLidarEncoder_KV.set_F(state_model);
         gYLidarEncoder_KV.set_B(control_model);
