@@ -29,7 +29,12 @@
 
                                 "${workspaceRoot}/Tests",
                                 "${workspaceRoot}/Tests/Src",
-                                "${workspaceRoot}/Tests/Src/Devices"
+                                "${workspaceRoot}/Tests/Src/Devices",
+                                
+                                "C:/Users/n-is/OneDrive/Documents/Arduino/libraries/TFMini/src",
+                                "C:/Users/n-is/OneDrive/Documents/Arduino/libraries/USB_Host_Shield_Library_2.0",
+                                "C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SoftwareSerial/src",
+                                "C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/src"
                         ],
                         "intelliSenseMode": "msvc-x64"
                 }
