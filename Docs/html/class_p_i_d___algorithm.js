@@ -3,6 +3,7 @@ var class_p_i_d___algorithm =
     [ "PID_Algorithm", "class_p_i_d___algorithm.html#a77e1b4df4f9605df9373deb336c47987", null ],
     [ "PID_Algorithm", "class_p_i_d___algorithm.html#afa89df608678228c8ecbb73c5953d0b4", null ],
     [ "~PID_Algorithm", "class_p_i_d___algorithm.html#ad6a88132e10c378e7ebe9959898278e6", null ],
+    [ "clear", "class_p_i_d___algorithm.html#a98964ffa1025c1e4d8199b0bbd15fb05", null ],
     [ "compute", "class_p_i_d___algorithm.html#a388ec97d23c981e62c3726505688e1f0", null ],
     [ "get_D", "class_p_i_d___algorithm.html#a5a113c3d88ee8af75af7248fb590f538", null ],
     [ "get_I", "class_p_i_d___algorithm.html#a6305260cd346415953b41fb765d33740", null ],

@@ -6,11 +6,12 @@ var searchData=
   ['init_5fgamefield',['init_GameField',['../game__field_8cpp.html#a9ce21429239a4cc722845e28d0aced8c',1,'init_GameField():&#160;game_field.cpp'],['../robo__states_8cpp.html#a9ce21429239a4cc722845e28d0aced8c',1,'init_GameField():&#160;game_field.cpp'],['../processor_8cpp.html#a9ce21429239a4cc722845e28d0aced8c',1,'init_GameField():&#160;game_field.cpp']]],
   ['init_5forifilters',['init_OriFilters',['../state__sensor_8cpp.html#a5e9b8881f5421a7cf0ee696044ee16fb',1,'state_sensor.cpp']]],
   ['init_5fxlidarencoderkalman',['init_XLidarEncoderKalman',['../position__sensor_8h.html#a02009f631741b37a8bef1cf40756ecd6',1,'init_XLidarEncoderKalman(uint32_t dt_millis):&#160;position_sensor.cpp'],['../position__sensor_8cpp.html#a02009f631741b37a8bef1cf40756ecd6',1,'init_XLidarEncoderKalman(uint32_t dt_millis):&#160;position_sensor.cpp']]],
+  ['init_5fylidarencoderkalman',['init_YLidarEncoderKalman',['../position__sensor_8h.html#a7ebb7057e89bf88cc9118a8f0d6fba31',1,'init_YLidarEncoderKalman(uint32_t dt_millis):&#160;position_sensor.cpp'],['../position__sensor_8cpp.html#a7ebb7057e89bf88cc9118a8f0d6fba31',1,'init_YLidarEncoderKalman(uint32_t dt_millis):&#160;position_sensor.cpp']]],
   ['insert',['insert',['../class_queue.html#aee0df9b6ebf7fa989f33c650f90ada83',1,'Queue']]],
   ['inv',['inv',['../class_mat.html#a22ba19e51a04cbf9211b070b696ae399',1,'Mat::inv(Mat &amp;inv) const'],['../class_mat.html#a8655dfdd2bcf36aeb250f71b746632c3',1,'Mat::inv() const']]],
   ['is_5fabsless',['is_AbsLess',['../class_vec3.html#a90f1934c79452ae2f2b7134956296d96',1,'Vec3']]],
   ['is_5fempty',['is_Empty',['../class_joy_stick.html#a67a598be23225afa905e9c35b21da1bc',1,'JoyStick::is_Empty()'],['../class_queue.html#a432aa525ee72eaf3421ae291309ec3fc',1,'Queue::is_Empty()']]],
   ['is_5finitiated',['is_Initiated',['../class_robot.html#acfa28bf423af469115fb67db6ec4e2b8',1,'Robot']]],
   ['is_5fzero',['is_Zero',['../class_mat.html#a1faaf46898f55a59d5e27baf7c4a028b',1,'Mat']]],
-  ['itm_5fsendstring',['ITM_SendString',['../logger_8cpp.html#a408f6bc26176740f5efec826bffee8bf',1,'ITM_SendString(char *data, int len):&#160;logger.cpp'],['../printf__config_8c.html#a408f6bc26176740f5efec826bffee8bf',1,'ITM_SendString(char *data, int len):&#160;logger.cpp']]]
+  ['itm_5fsendstring',['ITM_SendString',['../printf__config_8c.html#a408f6bc26176740f5efec826bffee8bf',1,'printf_config.c']]]
 ];

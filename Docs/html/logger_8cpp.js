@@ -1,10 +1,10 @@
 var logger_8cpp =
 [
-    [ "ITM_SendString", "logger_8cpp.html#a408f6bc26176740f5efec826bffee8bf", null ],
+    [ "log_Angle", "logger_8cpp.html#af1cf2d07b5447cfbde0365157fe9c1b6", null ],
+    [ "log_CompassOffsets", "logger_8cpp.html#a5cad4623bc9b165c0b5119ca65872856", null ],
     [ "log_data", "logger_8cpp.html#a66d17868f5a5bcc68dc70243bb439959", null ],
+    [ "log_JoyStickError", "logger_8cpp.html#a620927000ecd96c4e87d69bd46bd6c32", null ],
     [ "Logging_Handle_TxCplt", "logger_8cpp.html#a27198f22d5635a298da88a3d6e238f22", null ],
-    [ "gPrintfData", "logger_8cpp.html#acdfbaa4af7b06eec9cef6f677b229bdc", null ],
-    [ "gPrintfDataIndex", "logger_8cpp.html#a068a6777d99a2d48005be5137d006c94", null ],
-    [ "gPrintfDataSent", "logger_8cpp.html#ae2d924d0f03e305dbc686a8abf518c96", null ],
-    [ "gSending_Index", "logger_8cpp.html#a81550cff2580cad21141b7108055e459", null ]
+    [ "gLogging_Buffer", "logger_8cpp.html#acf1603bdd021d9abd4919bf1edb74b65", null ],
+    [ "gSent_Count", "logger_8cpp.html#acb229b767b261f9d8cc5975f19a04ec9", null ]
 ];

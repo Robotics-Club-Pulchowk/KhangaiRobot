@@ -48,7 +48,6 @@ var searchData=
   ['extend_5farm',['extend_Arm',['../class_processor.html#aacd6f515a6fd68e9938bea4d7a5e5e37',1,'Processor']]],
   ['external_5fclock_5fvalue',['EXTERNAL_CLOCK_VALUE',['../stm32f4xx__hal__conf_8h.html#a8c47c935e91e70569098b41718558648',1,'stm32f4xx_hal_conf.h']]],
   ['exti15_5f10_5firqhandler',['EXTI15_10_IRQHandler',['../stm32f4xx__it_8h.html#a738473a5b43f6c92b80ce1d3d6f77ed9',1,'EXTI15_10_IRQHandler(void):&#160;stm32f4xx_it.c'],['../stm32f4xx__it_8c.html#a738473a5b43f6c92b80ce1d3d6f77ed9',1,'EXTI15_10_IRQHandler(void):&#160;stm32f4xx_it.c']]],
-  ['exti4_5firqhandler',['EXTI4_IRQHandler',['../stm32f4xx__it_8h.html#a290cb997018c8d85d4b965b4a242842f',1,'stm32f4xx_it.h']]],
   ['exti9_5f5_5firqhandler',['EXTI9_5_IRQHandler',['../stm32f4xx__it_8h.html#a7b2096b8b2643286dc3a7e5110e5ae85',1,'EXTI9_5_IRQHandler(void):&#160;stm32f4xx_it.c'],['../stm32f4xx__it_8c.html#a7b2096b8b2643286dc3a7e5110e5ae85',1,'EXTI9_5_IRQHandler(void):&#160;stm32f4xx_it.c']]],
   ['eye',['eye',['../class_mat.html#ab02af947644cba411f97e1459485b67d',1,'Mat']]]
 ];

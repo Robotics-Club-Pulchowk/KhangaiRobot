@@ -99,31 +99,35 @@ $(document).ready(function(){initNavTree('joystick_8cpp.html','');});
 <div class="textblock"><code>#include &quot;<a class="el" href="joystick_8h_source.html">joystick.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="defines_8h_source.html">defines.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="array_8h_source.html">array.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="crc__hash_8h_source.html">crc_hash.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="logger_8h_source.html">logger.h</a>&quot;</code><br />
 <code>#include &lt;math.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for joystick.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="joystick_8cpp__incl.png" border="0" usemap="#_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_khangai-_robot_2_khangai_robot-_play_2_core_2_src_2devs_2joystick_8cpp" alt=""/></div>
 <map name="_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_khangai-_robot_2_khangai_robot-_play_2_core_2_src_2devs_2joystick_8cpp" id="_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_khangai-_robot_2_khangai_robot-_play_2_core_2_src_2devs_2joystick_8cpp">
-<area shape="rect"  title=" " alt="" coords="293,5,518,76"/>
-<area shape="rect"  href="joystick_8h.html" title=" " alt="" coords="173,124,251,151"/>
-<area shape="rect"  href="defines_8h.html" title=" " alt="" coords="321,124,396,151"/>
-<area shape="rect"  href="array_8h.html" title=" " alt="" coords="421,124,483,151"/>
-<area shape="rect"  title=" " alt="" coords="507,124,570,151"/>
+<area shape="rect"  title=" " alt="" coords="298,5,523,76"/>
+<area shape="rect"  href="joystick_8h.html" title=" " alt="" coords="205,124,283,151"/>
+<area shape="rect"  href="defines_8h.html" title=" " alt="" coords="327,124,401,151"/>
+<area shape="rect"  href="array_8h.html" title=" " alt="" coords="426,124,489,151"/>
+<area shape="rect"  href="crc__hash_8h.html" title=" " alt="" coords="513,124,599,151"/>
+<area shape="rect"  href="logger_8h.html" title=" " alt="" coords="94,124,162,151"/>
+<area shape="rect"  title=" " alt="" coords="623,124,686,151"/>
 <area shape="rect"  href="vec3_8h.html" title=" " alt="" coords="5,199,64,225"/>
 <area shape="rect"  href="usart_8h.html" title=" " alt="" coords="89,199,151,225"/>
-<area shape="rect"  href="queue__custom_8h.html" title=" " alt="" coords="145,273,263,300"/>
-<area shape="rect"  title=" " alt="" coords="227,199,322,225"/>
-<area shape="rect"  title=" " alt="" coords="347,199,405,225"/>
-<area shape="rect"  title=" " alt="" coords="31,348,148,375"/>
-<area shape="rect"  href="main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="59,273,120,300"/>
-<area shape="rect"  title=" " alt="" coords="429,199,523,225"/>
+<area shape="rect"  href="queue__custom_8h.html" title=" " alt="" coords="175,199,294,225"/>
+<area shape="rect"  title=" " alt="" coords="318,199,413,225"/>
+<area shape="rect"  title=" " alt="" coords="437,199,496,225"/>
+<area shape="rect"  title=" " alt="" coords="56,348,173,375"/>
+<area shape="rect"  href="main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="84,273,145,300"/>
+<area shape="rect"  title=" " alt="" coords="520,199,613,225"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a0d34faab0f186b44cf390831828f65b1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8cpp.html#a0d34faab0f186b44cf390831828f65b1">JOYSTICK_START_BYTE</a>&#160;&#160;&#160;(0xA5)</td></tr>
+<tr class="memitem:a0d34faab0f186b44cf390831828f65b1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8cpp.html#a0d34faab0f186b44cf390831828f65b1">JOYSTICK_START_BYTE</a>&#160;&#160;&#160;(<a class="el" href="defines_8h.html#a30d2043ca397843e08c43ade3aaee5b2">START_BYTE</a>)</td></tr>
 <tr class="separator:a0d34faab0f186b44cf390831828f65b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af58cc1fbdbf18b28928ca9aa822e15d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joystick_8cpp.html#af58cc1fbdbf18b28928ca9aa822e15d8">NUM_JOYSTICK_BYTES</a>&#160;&#160;&#160;(7)</td></tr>
 <tr class="separator:af58cc1fbdbf18b28928ca9aa822e15d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,7 +152,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define JOYSTICK_START_BYTE&#160;&#160;&#160;(0xA5)</td>
+          <td class="memname">#define JOYSTICK_START_BYTE&#160;&#160;&#160;(<a class="el" href="defines_8h.html#a30d2043ca397843e08c43ade3aaee5b2">START_BYTE</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">

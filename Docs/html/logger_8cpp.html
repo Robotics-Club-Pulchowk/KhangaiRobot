@@ -96,60 +96,63 @@ $(document).ready(function(){initNavTree('logger_8cpp.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;stm32f4xx_hal.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="queue__custom_8h_source.html">queue_custom.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="usart_8h_source.html">usart.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="logger_8h_source.html">logger.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="defines_8h_source.html">defines.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for logger.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="logger_8cpp__incl.png" border="0" usemap="#_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_khangai-_robot_2_khangai_robot-_play_2_core_2_src_2utils_2logger_8cpp" alt=""/></div>
 <map name="_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_khangai-_robot_2_khangai_robot-_play_2_core_2_src_2utils_2logger_8cpp" id="_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_khangai-_robot_2_khangai_robot-_play_2_core_2_src_2utils_2logger_8cpp">
-<area shape="rect"  title=" " alt="" coords="5,5,231,76"/>
-<area shape="rect"  title=" " alt="" coords="59,273,177,300"/>
-<area shape="rect"  href="queue__custom_8h.html" title=" " alt="" coords="59,199,177,225"/>
-<area shape="rect"  href="usart_8h.html" title=" " alt="" coords="179,124,241,151"/>
-<area shape="rect"  href="main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="202,199,263,225"/>
+<area shape="rect"  title=" " alt="" coords="15,5,240,76"/>
+<area shape="rect"  title=" " alt="" coords="92,348,209,375"/>
+<area shape="rect"  href="logger_8h.html" title=" " alt="" coords="94,124,162,151"/>
+<area shape="rect"  href="defines_8h.html" title=" " alt="" coords="186,124,261,151"/>
+<area shape="rect"  href="queue__custom_8h.html" title=" " alt="" coords="34,273,152,300"/>
+<area shape="rect"  href="usart_8h.html" title=" " alt="" coords="131,199,194,225"/>
+<area shape="rect"  href="vec3_8h.html" title=" " alt="" coords="218,199,277,225"/>
+<area shape="rect"  href="main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="177,273,238,300"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a408f6bc26176740f5efec826bffee8bf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8cpp.html#a408f6bc26176740f5efec826bffee8bf">ITM_SendString</a> (char *data, int len)</td></tr>
-<tr class="separator:a408f6bc26176740f5efec826bffee8bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66d17868f5a5bcc68dc70243bb439959"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8cpp.html#a66d17868f5a5bcc68dc70243bb439959">log_data</a> ()</td></tr>
 <tr class="memdesc:a66d17868f5a5bcc68dc70243bb439959"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function implementing the logging thread.  <a href="#a66d17868f5a5bcc68dc70243bb439959">More...</a><br /></td></tr>
 <tr class="separator:a66d17868f5a5bcc68dc70243bb439959"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27198f22d5635a298da88a3d6e238f22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8cpp.html#a27198f22d5635a298da88a3d6e238f22">Logging_Handle_TxCplt</a> ()</td></tr>
 <tr class="separator:a27198f22d5635a298da88a3d6e238f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1cf2d07b5447cfbde0365157fe9c1b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8cpp.html#af1cf2d07b5447cfbde0365157fe9c1b6">log_Angle</a> (float psi, float rw)</td></tr>
+<tr class="separator:af1cf2d07b5447cfbde0365157fe9c1b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cad4623bc9b165c0b5119ca65872856"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8cpp.html#a5cad4623bc9b165c0b5119ca65872856">log_CompassOffsets</a> (<a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; offsets)</td></tr>
+<tr class="separator:a5cad4623bc9b165c0b5119ca65872856"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a620927000ecd96c4e87d69bd46bd6c32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8cpp.html#a620927000ecd96c4e87d69bd46bd6c32">log_JoyStickError</a> (uint32_t err_count)</td></tr>
+<tr class="separator:a620927000ecd96c4e87d69bd46bd6c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:acdfbaa4af7b06eec9cef6f677b229bdc"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8cpp.html#acdfbaa4af7b06eec9cef6f677b229bdc">gPrintfData</a> [2][16 *1024]</td></tr>
-<tr class="separator:acdfbaa4af7b06eec9cef6f677b229bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a068a6777d99a2d48005be5137d006c94"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8cpp.html#a068a6777d99a2d48005be5137d006c94">gPrintfDataIndex</a> [2] = { 0 }</td></tr>
-<tr class="separator:a068a6777d99a2d48005be5137d006c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81550cff2580cad21141b7108055e459"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8cpp.html#a81550cff2580cad21141b7108055e459">gSending_Index</a> = 0</td></tr>
-<tr class="separator:a81550cff2580cad21141b7108055e459"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2d924d0f03e305dbc686a8abf518c96"><td class="memItemLeft" align="right" valign="top">volatile bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8cpp.html#ae2d924d0f03e305dbc686a8abf518c96">gPrintfDataSent</a> = true</td></tr>
-<tr class="separator:ae2d924d0f03e305dbc686a8abf518c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf1603bdd021d9abd4919bf1edb74b65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_queue.html">Queue</a>&lt; uint8_t, <a class="el" href="logger_8h.html#a381c342b2b34df0b1a5b39c0d94da4e1">LOG_BUFFER_SIZE</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8cpp.html#acf1603bdd021d9abd4919bf1edb74b65">gLogging_Buffer</a></td></tr>
+<tr class="separator:acf1603bdd021d9abd4919bf1edb74b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb229b767b261f9d8cc5975f19a04ec9"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8cpp.html#acb229b767b261f9d8cc5975f19a04ec9">gSent_Count</a> = 0</td></tr>
+<tr class="separator:acb229b767b261f9d8cc5975f19a04ec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a408f6bc26176740f5efec826bffee8bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a408f6bc26176740f5efec826bffee8bf">&#9670;&nbsp;</a></span>ITM_SendString()</h2>
+<a id="af1cf2d07b5447cfbde0365157fe9c1b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1cf2d07b5447cfbde0365157fe9c1b6">&#9670;&nbsp;</a></span>log_Angle()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int ITM_SendString </td>
+          <td class="memname">void log_Angle </td>
           <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>psi</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>len</em>&#160;</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>rw</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -158,6 +161,35 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5cad4623bc9b165c0b5119ca65872856"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cad4623bc9b165c0b5119ca65872856">&#9670;&nbsp;</a></span>log_CompassOffsets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void log_CompassOffsets </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>offsets</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="logger_8cpp_a5cad4623bc9b165c0b5119ca65872856_cgraph.png" border="0" usemap="#logger_8cpp_a5cad4623bc9b165c0b5119ca65872856_cgraph" alt=""/></div>
+<map name="logger_8cpp_a5cad4623bc9b165c0b5119ca65872856_cgraph" id="logger_8cpp_a5cad4623bc9b165c0b5119ca65872856_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,56,148,83"/>
+<area shape="rect"  href="class_vec3.html#ad259e243f6678730d990acbae2cdff57" title=" " alt="" coords="197,5,282,32"/>
+<area shape="rect"  href="class_vec3.html#a8eeb16262b7e619f081a1ba94df098f8" title=" " alt="" coords="196,56,283,83"/>
+<area shape="rect"  href="class_vec3.html#a52f0db1c387aa9bc7befe5792b698553" title=" " alt="" coords="197,107,282,133"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -192,6 +224,24 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a620927000ecd96c4e87d69bd46bd6c32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a620927000ecd96c4e87d69bd46bd6c32">&#9670;&nbsp;</a></span>log_JoyStickError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void log_JoyStickError </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>err_count</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a27198f22d5635a298da88a3d6e238f22"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a27198f22d5635a298da88a3d6e238f22">&#9670;&nbsp;</a></span>Logging_Handle_TxCplt()</h2>
 
@@ -210,56 +260,28 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="acdfbaa4af7b06eec9cef6f677b229bdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acdfbaa4af7b06eec9cef6f677b229bdc">&#9670;&nbsp;</a></span>gPrintfData</h2>
+<a id="acf1603bdd021d9abd4919bf1edb74b65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf1603bdd021d9abd4919bf1edb74b65">&#9670;&nbsp;</a></span>gLogging_Buffer</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t gPrintfData[2][16 *1024]</td>
+          <td class="memname"><a class="el" href="class_queue.html">Queue</a>&lt;uint8_t, <a class="el" href="logger_8h.html#a381c342b2b34df0b1a5b39c0d94da4e1">LOG_BUFFER_SIZE</a>&gt; gLogging_Buffer</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a068a6777d99a2d48005be5137d006c94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a068a6777d99a2d48005be5137d006c94">&#9670;&nbsp;</a></span>gPrintfDataIndex</h2>
+<a id="acb229b767b261f9d8cc5975f19a04ec9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb229b767b261f9d8cc5975f19a04ec9">&#9670;&nbsp;</a></span>gSent_Count</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t gPrintfDataIndex[2] = { 0 }</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae2d924d0f03e305dbc686a8abf518c96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2d924d0f03e305dbc686a8abf518c96">&#9670;&nbsp;</a></span>gPrintfDataSent</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">volatile bool gPrintfDataSent = true</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a81550cff2580cad21141b7108055e459"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81550cff2580cad21141b7108055e459">&#9670;&nbsp;</a></span>gSending_Index</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t gSending_Index = 0</td>
+          <td class="memname">uint8_t gSent_Count = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

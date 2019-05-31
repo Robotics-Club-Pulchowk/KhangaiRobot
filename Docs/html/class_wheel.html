@@ -137,8 +137,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afbbb8dc81da2dd495e2322cddc5f0ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad30f55db6258b3caef41420f4cb1606e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wheel.html#ad30f55db6258b3caef41420f4cb1606e">get_Omega</a> (uint32_t dt_millis)</td></tr>
 <tr class="separator:ad30f55db6258b3caef41420f4cb1606e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87aab248643ff4b1dab45080ed482fe0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wheel.html#a87aab248643ff4b1dab45080ed482fe0">get_MaxOmega</a> ()</td></tr>
-<tr class="separator:a87aab248643ff4b1dab45080ed482fe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86ed9b899e589f3b450a91eceaf5c679"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wheel.html#a86ed9b899e589f3b450a91eceaf5c679">get_MaxOmega</a> () const</td></tr>
+<tr class="separator:a86ed9b899e589f3b450a91eceaf5c679"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a6a972618ea7161a45b88303c45a685"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wheel.html#a9a6a972618ea7161a45b88303c45a685">start_Periphs</a> ()</td></tr>
 <tr class="memdesc:a9a6a972618ea7161a45b88303c45a685"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that starts timer base, pwm and encoder of the wheel.  <a href="#a9a6a972618ea7161a45b88303c45a685">More...</a><br /></td></tr>
 <tr class="separator:a9a6a972618ea7161a45b88303c45a685"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,6 +146,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6c21e96677e5f7e266ce58bfcea7102a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68e69448efd26f616b9b85f2f2e49809"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_p_i_d.html">PID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wheel.html#a68e69448efd26f616b9b85f2f2e49809">get_PIDController</a> ()</td></tr>
 <tr class="separator:a68e69448efd26f616b9b85f2f2e49809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a559eb3cbf3918ea14ac0696b99e4ca2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wheel.html#a559eb3cbf3918ea14ac0696b99e4ca2e">log</a> (float omega, float new_omega)</td></tr>
+<tr class="separator:a559eb3cbf3918ea14ac0696b99e4ca2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a313c8a1aa16803dbbb261acd291f1fd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wheel.html#a313c8a1aa16803dbbb261acd291f1fd4">clear</a> ()</td></tr>
+<tr class="separator:a313c8a1aa16803dbbb261acd291f1fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -286,8 +290,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a87aab248643ff4b1dab45080ed482fe0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87aab248643ff4b1dab45080ed482fe0">&#9670;&nbsp;</a></span>get_MaxOmega()</h2>
+<a id="a313c8a1aa16803dbbb261acd291f1fd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a313c8a1aa16803dbbb261acd291f1fd4">&#9670;&nbsp;</a></span>clear()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -296,7 +300,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float Wheel::get_MaxOmega </td>
+          <td class="memname">void Wheel::clear </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -309,10 +313,56 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_wheel_a313c8a1aa16803dbbb261acd291f1fd4_cgraph.png" border="0" usemap="#class_wheel_a313c8a1aa16803dbbb261acd291f1fd4_cgraph" alt=""/></div>
+<map name="class_wheel_a313c8a1aa16803dbbb261acd291f1fd4_cgraph" id="class_wheel_a313c8a1aa16803dbbb261acd291f1fd4_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,5,100,32"/>
+<area shape="rect"  href="class_p_i_d.html#a1979972e8ca6ad9a95aa70e35d467211" title=" " alt="" coords="148,5,227,32"/>
+<area shape="rect"  href="class_p_i_d___algorithm.html#a98964ffa1025c1e4d8199b0bbd15fb05" title=" " alt="" coords="275,5,416,32"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_wheel_a87aab248643ff4b1dab45080ed482fe0_icgraph.png" border="0" usemap="#class_wheel_a87aab248643ff4b1dab45080ed482fe0_icgraph" alt=""/></div>
-<map name="class_wheel_a87aab248643ff4b1dab45080ed482fe0_icgraph" id="class_wheel_a87aab248643ff4b1dab45080ed482fe0_icgraph">
+<div class="center"><img src="class_wheel_a313c8a1aa16803dbbb261acd291f1fd4_icgraph.png" border="0" usemap="#class_wheel_a313c8a1aa16803dbbb261acd291f1fd4_icgraph" alt=""/></div>
+<map name="class_wheel_a313c8a1aa16803dbbb261acd291f1fd4_icgraph" id="class_wheel_a313c8a1aa16803dbbb261acd291f1fd4_icgraph">
+<area shape="rect"  title=" " alt="" coords="432,5,527,32"/>
+<area shape="rect"  href="class_actuator.html#a56bd0d7da4f4e0aed593bfc9186a311b" title=" " alt="" coords="277,5,384,32"/>
+<area shape="rect"  href="class_robot.html#abb7f05b4906d4e65fc2e37995b3646bf" title=" " alt="" coords="148,5,229,32"/>
+<area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,5,100,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a86ed9b899e589f3b450a91eceaf5c679"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86ed9b899e589f3b450a91eceaf5c679">&#9670;&nbsp;</a></span>get_MaxOmega()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Wheel::get_MaxOmega </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_wheel_a86ed9b899e589f3b450a91eceaf5c679_icgraph.png" border="0" usemap="#class_wheel_a86ed9b899e589f3b450a91eceaf5c679_icgraph" alt=""/></div>
+<map name="class_wheel_a86ed9b899e589f3b450a91eceaf5c679_icgraph" id="class_wheel_a86ed9b899e589f3b450a91eceaf5c679_icgraph">
 <area shape="rect"  title=" " alt="" coords="528,5,687,32"/>
 <area shape="rect"  href="class_actuator.html#a97d651157712c2189fac4063c31d6963" title=" " alt="" coords="376,5,480,32"/>
 <area shape="rect"  href="class_actuator.html#a12789faf0215436ece13fb1608111f34" title=" " alt="" coords="215,5,328,32"/>
@@ -393,6 +443,42 @@ Here is the caller graph for this function:</div>
 <area shape="rect"  href="class_robot.html#a38036a2ef73f7b1af6c5d6269e03a5f8" title=" " alt="" coords="5,5,167,32"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a559eb3cbf3918ea14ac0696b99e4ca2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a559eb3cbf3918ea14ac0696b99e4ca2e">&#9670;&nbsp;</a></span>log()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Wheel::log </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>omega</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>new_omega</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

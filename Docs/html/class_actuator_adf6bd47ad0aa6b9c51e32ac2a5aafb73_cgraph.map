@@ -1,0 +1,8 @@
+<map id="Actuator::actuate" name="Actuator::actuate">
+<area shape="rect" id="node1" title="Function that actuate the robot&#39;s base(omni&#45;base)" alt="" coords="5,81,128,108"/>
+<area shape="rect" id="node2" href="$class_vec3.html#ad259e243f6678730d990acbae2cdff57" title=" " alt="" coords="198,5,283,32"/>
+<area shape="rect" id="node3" href="$class_vec3.html#a8eeb16262b7e619f081a1ba94df098f8" title=" " alt="" coords="197,56,284,83"/>
+<area shape="rect" id="node4" href="$class_p_i_d.html#a4d19abca579301069c3edb28fd5ff7f2" title=" " alt="" coords="176,107,305,133"/>
+<area shape="rect" id="node6" href="$class_vec3.html#a334f510fc72e3ae8cf50f61429db307a" title=" " alt="" coords="198,157,283,184"/>
+<area shape="rect" id="node5" href="$class_p_i_d___algorithm.html#a388ec97d23c981e62c3726505688e1f0" title=" " alt="" coords="353,107,516,133"/>
+</map>

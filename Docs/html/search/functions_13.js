@@ -4,6 +4,7 @@ var searchData=
   ['sensor',['Sensor',['../class_sensor.html#a4541bfea23851674d391a10432803fb7',1,'Sensor::Sensor()=default'],['../class_sensor.html#a45a97be2673030fe62f926b02d6b35c9',1,'Sensor::Sensor(Sensor &amp;&amp;)=default'],['../class_sensor.html#a230bf30582c1921f472b46c66634b8db',1,'Sensor::Sensor(const Sensor &amp;)=default']]],
   ['set_5falgorithm',['set_Algorithm',['../class_p_i_d.html#af9dc86555b8f221ca9d19f393e179196',1,'PID']]],
   ['set_5falpha',['set_Alpha',['../class_exp___smooth.html#a4c87027d0aaaef41619f63b7358f9ef8',1,'Exp_Smooth']]],
+  ['set_5fanglepid',['set_AnglePID',['../class_actuator.html#a4cebf0d34063998d73211cada96d5def',1,'Actuator']]],
   ['set_5fb',['set_B',['../struct_kalman___vars.html#a7e2b8d6cf9ecb4b3ac722eed4a5a8c5a',1,'Kalman_Vars']]],
   ['set_5fconfig',['set_Config',['../class_wheel.html#a49ca6f50f58ce72785b7a1632425c07b',1,'Wheel']]],
   ['set_5fd',['set_D',['../class_p_i_d___algorithm.html#a6e830c2340d3cebb2131a9308f558746',1,'PID_Algorithm']]],

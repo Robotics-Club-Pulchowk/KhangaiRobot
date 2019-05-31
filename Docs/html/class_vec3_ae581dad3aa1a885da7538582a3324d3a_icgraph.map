@@ -1,10 +1,11 @@
 <map id="Vec3::set_Values" name="Vec3::set_Values">
-<area shape="rect" id="node1" title=" " alt="" coords="533,107,659,133"/>
+<area shape="rect" id="node1" title=" " alt="" coords="533,157,659,184"/>
 <area shape="rect" id="node2" href="$class_vec3.html#a7c150f37ecfa78ced8b83bd95908cc33" title=" " alt="" coords="323,5,461,32"/>
 <area shape="rect" id="node3" href="$mpu6050_8cpp.html#ac4621db6e750eedcf624f78dbe405b13" title=" " alt="" coords="299,56,485,83"/>
-<area shape="rect" id="node4" href="$class_processor.html#ad8a55cdfd1d1f42c3bd454a21ef0eb4d" title=" " alt="" coords="312,107,472,133"/>
-<area shape="rect" id="node5" href="$class_state___sensor.html#a79118858b21e47b7e6e509dfba5b06f8" title="Function that provides the state of the robot." alt="" coords="325,158,459,199"/>
-<area shape="rect" id="node8" href="$class_robot.html#abb7f05b4906d4e65fc2e37995b3646bf" title=" " alt="" coords="159,220,240,247"/>
-<area shape="rect" id="node6" href="$class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,168,251,195"/>
-<area shape="rect" id="node7" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,195,100,221"/>
+<area shape="rect" id="node4" href="$devs__config_8cpp.html#adb25f6dac3b60011603646bf86d18b16" title=" " alt="" coords="357,107,427,133"/>
+<area shape="rect" id="node5" href="$class_processor.html#ad8a55cdfd1d1f42c3bd454a21ef0eb4d" title=" " alt="" coords="312,157,472,184"/>
+<area shape="rect" id="node6" href="$class_state___sensor.html#a79118858b21e47b7e6e509dfba5b06f8" title="Function that provides the state of the robot." alt="" coords="325,209,459,250"/>
+<area shape="rect" id="node7" href="$class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,275,251,301"/>
+<area shape="rect" id="node9" href="$class_robot.html#abb7f05b4906d4e65fc2e37995b3646bf" title=" " alt="" coords="159,325,240,352"/>
+<area shape="rect" id="node8" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,300,100,327"/>
 </map>

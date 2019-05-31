@@ -1,5 +1,6 @@
 <map id="IMU_Init" name="IMU_Init">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,75,57"/>
-<area shape="rect" id="node2" href="$mpu6050_8h.html#a53b88c52ed0b8e9eb398578ef6f7fdc4" title=" " alt="" coords="123,5,225,32"/>
-<area shape="rect" id="node3" href="$hmc5883_8h.html#a86fa17c5c34c4d8892eee22857407410" title=" " alt="" coords="123,56,225,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,75,83"/>
+<area shape="rect" id="node2" href="$class_vec3.html#ae581dad3aa1a885da7538582a3324d3a" title=" " alt="" coords="123,5,248,32"/>
+<area shape="rect" id="node3" href="$mpu6050_8h.html#a53b88c52ed0b8e9eb398578ef6f7fdc4" title=" " alt="" coords="134,56,237,83"/>
+<area shape="rect" id="node4" href="$hmc5883_8h.html#a86fa17c5c34c4d8892eee22857407410" title=" " alt="" coords="134,107,237,133"/>
 </map>

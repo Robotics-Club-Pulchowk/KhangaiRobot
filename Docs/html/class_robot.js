@@ -15,6 +15,7 @@ var class_robot =
     [ "base_", "class_robot.html#a3bc0081ef09e6f11a76ae66dfbbbc228", null ],
     [ "cpu_", "class_robot.html#a9c522805627d4c815b859632a9bef49e", null ],
     [ "initiated_", "class_robot.html#ae957a03df48f15a2eb2c1ba92c6817cb", null ],
+    [ "psis_", "class_robot.html#a92bb7c8d049c32e8ff886a6b0e066b95", null ],
     [ "robot_state_vars_", "class_robot.html#a7990f95a4b82902844fcbf718dccd5ec", null ],
     [ "sensor_", "class_robot.html#a9662421ec8355f26c7888e9887a42fb3", null ],
     [ "state_", "class_robot.html#a28e64061edf91a19e3bcbe5e8a7c95b7", null ],

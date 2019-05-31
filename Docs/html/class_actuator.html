@@ -105,9 +105,9 @@ Collaboration diagram for Actuator:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_actuator__coll__graph.png" border="0" usemap="#_actuator_coll__map" alt="Collaboration graph"/></div>
 <map name="_actuator_coll__map" id="_actuator_coll__map">
-<area shape="rect"  title=" " alt="" coords="23,363,93,389"/>
-<area shape="rect"  href="class_wheel.html" title=" " alt="" coords="29,273,87,300"/>
-<area shape="rect"  href="struct_wheel___config.html" title=" " alt="" coords="7,184,109,211"/>
+<area shape="rect"  title=" " alt="" coords="32,363,103,389"/>
+<area shape="rect"  href="class_wheel.html" title=" " alt="" coords="89,273,147,300"/>
+<area shape="rect"  href="struct_wheel___config.html" title=" " alt="" coords="79,184,181,211"/>
 <area shape="rect"  href="class_p_i_d.html" title=" " alt="" coords="37,95,79,121"/>
 <area shape="rect"  href="class_p_i_d___algorithm.html" title=" " alt="" coords="5,5,111,32"/>
 </map>
@@ -128,11 +128,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0627d75eae181eab8e03406dd65c5a91"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actuator.html#a0627d75eae181eab8e03406dd65c5a91">init</a> ()</td></tr>
 <tr class="memdesc:a0627d75eae181eab8e03406dd65c5a91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that initializes all the required components for the robot's actuator(omni-base)  <a href="#a0627d75eae181eab8e03406dd65c5a91">More...</a><br /></td></tr>
 <tr class="separator:a0627d75eae181eab8e03406dd65c5a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3842522a1346a738cf8ff1520b6bd5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actuator.html#aa3842522a1346a738cf8ff1520b6bd5a">actuate</a> (<a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; vel, uint32_t dt_millis)</td></tr>
-<tr class="memdesc:aa3842522a1346a738cf8ff1520b6bd5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that actuate the robot's base(omni-base)  <a href="#aa3842522a1346a738cf8ff1520b6bd5a">More...</a><br /></td></tr>
-<tr class="separator:aa3842522a1346a738cf8ff1520b6bd5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf6bd47ad0aa6b9c51e32ac2a5aafb73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actuator.html#adf6bd47ad0aa6b9c51e32ac2a5aafb73">actuate</a> (<a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; vel, <a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; psis, uint32_t dt_millis, int8_t test=0)</td></tr>
+<tr class="memdesc:adf6bd47ad0aa6b9c51e32ac2a5aafb73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that actuate the robot's base(omni-base)  <a href="#adf6bd47ad0aa6b9c51e32ac2a5aafb73">More...</a><br /></td></tr>
+<tr class="separator:adf6bd47ad0aa6b9c51e32ac2a5aafb73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97d651157712c2189fac4063c31d6963"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actuator.html#a97d651157712c2189fac4063c31d6963">stop</a> (uint32_t dt_millis, float ramp_factor=2.0, uint32_t max_time=1000)</td></tr>
 <tr class="separator:a97d651157712c2189fac4063c31d6963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56bd0d7da4f4e0aed593bfc9186a311b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actuator.html#a56bd0d7da4f4e0aed593bfc9186a311b">clear</a> ()</td></tr>
+<tr class="separator:a56bd0d7da4f4e0aed593bfc9186a311b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12789faf0215436ece13fb1608111f34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actuator.html#a12789faf0215436ece13fb1608111f34">profile</a> (<a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; vel, uint32_t dt_millis)</td></tr>
 <tr class="separator:a12789faf0215436ece13fb1608111f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2e0278e6601213c9f7585f40b95a3f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actuator.html#ac2e0278e6601213c9f7585f40b95a3f9">check</a> ()</td></tr>
@@ -153,11 +155,15 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a500af768989caf2b8769bf4ac97def74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actuator.html#a500af768989caf2b8769bf4ac97def74">pid_Init</a> ()</td></tr>
 <tr class="memdesc:a500af768989caf2b8769bf4ac97def74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that initializes all the required components for the wheel's pid controller.  <a href="#a500af768989caf2b8769bf4ac97def74">More...</a><br /></td></tr>
 <tr class="separator:a500af768989caf2b8769bf4ac97def74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cebf0d34063998d73211cada96d5def"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actuator.html#a4cebf0d34063998d73211cada96d5def">set_AnglePID</a> (<a class="el" href="class_p_i_d.html">PID</a> *pid)</td></tr>
+<tr class="separator:a4cebf0d34063998d73211cada96d5def"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a8e60b2ff6901acd9e539e29b74d742da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wheel.html">Wheel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actuator.html#a8e60b2ff6901acd9e539e29b74d742da">wheels_</a> [4]</td></tr>
 <tr class="separator:a8e60b2ff6901acd9e539e29b74d742da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6afba556e6ece204feaa7e536331208a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_p_i_d.html">PID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actuator.html#a6afba556e6ece204feaa7e536331208a">angle_pid_</a></td></tr>
+<tr class="separator:a6afba556e6ece204feaa7e536331208a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3c863ce0c6c1e7d870db5249dee1f394"></a>
@@ -263,8 +269,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa3842522a1346a738cf8ff1520b6bd5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3842522a1346a738cf8ff1520b6bd5a">&#9670;&nbsp;</a></span>actuate()</h2>
+<a id="adf6bd47ad0aa6b9c51e32ac2a5aafb73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf6bd47ad0aa6b9c51e32ac2a5aafb73">&#9670;&nbsp;</a></span>actuate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -278,8 +284,20 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>psis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>dt_millis</em>&#160;</td>
+          <td class="paramname"><em>dt_millis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t&#160;</td>
+          <td class="paramname"><em>test</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -292,7 +310,8 @@ Private Attributes</h2></td></tr>
 <p>Function that actuate the robot's base(omni-base) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">vel</td><td>: An vector that holds vx, vy and omega </td></tr>
+    <tr><td class="paramname">vel</td><td>: A vector that holds vx, vy and omega </td></tr>
+    <tr><td class="paramname">psis</td><td>: A vector that holds psi_target, psi and psi_dot </td></tr>
     <tr><td class="paramname">dt_millis</td><td>: The time period at which this function is called periodically </td></tr>
   </table>
   </dd>
@@ -315,15 +334,27 @@ Tasks performed by this function
 7) Calculates vx, vy and rw of the base from the measured omegas of each
    wheel using the inverse Coupling Matrix
 </pre> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_actuator_adf6bd47ad0aa6b9c51e32ac2a5aafb73_cgraph.png" border="0" usemap="#class_actuator_adf6bd47ad0aa6b9c51e32ac2a5aafb73_cgraph" alt=""/></div>
+<map name="class_actuator_adf6bd47ad0aa6b9c51e32ac2a5aafb73_cgraph" id="class_actuator_adf6bd47ad0aa6b9c51e32ac2a5aafb73_cgraph">
+<area shape="rect"  title="Function that actuate the robot&#39;s base(omni&#45;base)" alt="" coords="5,81,128,108"/>
+<area shape="rect"  href="class_vec3.html#ad259e243f6678730d990acbae2cdff57" title=" " alt="" coords="198,5,283,32"/>
+<area shape="rect"  href="class_vec3.html#a8eeb16262b7e619f081a1ba94df098f8" title=" " alt="" coords="197,56,284,83"/>
+<area shape="rect"  href="class_p_i_d.html#a4d19abca579301069c3edb28fd5ff7f2" title=" " alt="" coords="176,107,305,133"/>
+<area shape="rect"  href="class_vec3.html#a334f510fc72e3ae8cf50f61429db307a" title=" " alt="" coords="198,157,283,184"/>
+<area shape="rect"  href="class_p_i_d___algorithm.html#a388ec97d23c981e62c3726505688e1f0" title=" " alt="" coords="353,107,516,133"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_actuator_aa3842522a1346a738cf8ff1520b6bd5a_icgraph.png" border="0" usemap="#class_actuator_aa3842522a1346a738cf8ff1520b6bd5a_icgraph" alt=""/></div>
-<map name="class_actuator_aa3842522a1346a738cf8ff1520b6bd5a_icgraph" id="class_actuator_aa3842522a1346a738cf8ff1520b6bd5a_icgraph">
-<area shape="rect"  title="Function that actuate the robot&#39;s base(omni&#45;base)" alt="" coords="376,31,499,57"/>
-<area shape="rect"  href="class_actuator.html#a12789faf0215436ece13fb1608111f34" title=" " alt="" coords="215,5,328,32"/>
-<area shape="rect"  href="class_robot.html#a1456df8be5ce9a34e8aa175fc6cb8a1a" title=" " alt="" coords="230,56,313,83"/>
-<area shape="rect"  href="class_robot.html#a38036a2ef73f7b1af6c5d6269e03a5f8" title=" " alt="" coords="5,5,167,32"/>
-<area shape="rect"  href="robo__tasks_8cpp.html#a002008655210c48a6b7414c925b5f4ac" title="Function implementing the MotorSequence thread." alt="" coords="39,56,133,83"/>
+<div class="center"><img src="class_actuator_adf6bd47ad0aa6b9c51e32ac2a5aafb73_icgraph.png" border="0" usemap="#class_actuator_adf6bd47ad0aa6b9c51e32ac2a5aafb73_icgraph" alt=""/></div>
+<map name="class_actuator_adf6bd47ad0aa6b9c51e32ac2a5aafb73_icgraph" id="class_actuator_adf6bd47ad0aa6b9c51e32ac2a5aafb73_icgraph">
+<area shape="rect"  title="Function that actuate the robot&#39;s base(omni&#45;base)" alt="" coords="279,31,401,57"/>
+<area shape="rect"  href="class_robot.html#abb7f05b4906d4e65fc2e37995b3646bf" title=" " alt="" coords="149,5,230,32"/>
+<area shape="rect"  href="class_robot.html#a1456df8be5ce9a34e8aa175fc6cb8a1a" title=" " alt="" coords="148,56,231,83"/>
+<area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,5,100,32"/>
 </map>
 </div>
 
@@ -361,6 +392,44 @@ Here is the caller graph for this function:</div>
 <map name="class_actuator_ac2e0278e6601213c9f7585f40b95a3f9_icgraph" id="class_actuator_ac2e0278e6601213c9f7585f40b95a3f9_icgraph">
 <area shape="rect"  title=" " alt="" coords="216,5,331,32"/>
 <area shape="rect"  href="class_robot.html#a135dd428eb165e8c7f860696ea86fc98" title=" " alt="" coords="5,5,168,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a56bd0d7da4f4e0aed593bfc9186a311b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56bd0d7da4f4e0aed593bfc9186a311b">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Actuator::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_actuator_a56bd0d7da4f4e0aed593bfc9186a311b_cgraph.png" border="0" usemap="#class_actuator_a56bd0d7da4f4e0aed593bfc9186a311b_cgraph" alt=""/></div>
+<map name="class_actuator_a56bd0d7da4f4e0aed593bfc9186a311b_cgraph" id="class_actuator_a56bd0d7da4f4e0aed593bfc9186a311b_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,31,112,57"/>
+<area shape="rect"  href="class_wheel.html#a313c8a1aa16803dbbb261acd291f1fd4" title=" " alt="" coords="160,5,255,32"/>
+<area shape="rect"  href="class_p_i_d.html#a1979972e8ca6ad9a95aa70e35d467211" title=" " alt="" coords="303,31,381,57"/>
+<area shape="rect"  href="class_p_i_d___algorithm.html#a98964ffa1025c1e4d8199b0bbd15fb05" title=" " alt="" coords="429,31,571,57"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_actuator_a56bd0d7da4f4e0aed593bfc9186a311b_icgraph.png" border="0" usemap="#class_actuator_a56bd0d7da4f4e0aed593bfc9186a311b_icgraph" alt=""/></div>
+<map name="class_actuator_a56bd0d7da4f4e0aed593bfc9186a311b_icgraph" id="class_actuator_a56bd0d7da4f4e0aed593bfc9186a311b_icgraph">
+<area shape="rect"  title=" " alt="" coords="277,5,384,32"/>
+<area shape="rect"  href="class_robot.html#abb7f05b4906d4e65fc2e37995b3646bf" title=" " alt="" coords="148,5,229,32"/>
+<area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,5,100,32"/>
 </map>
 </div>
 
@@ -579,23 +648,22 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_actuator_a12789faf0215436ece13fb1608111f34_cgraph.png" border="0" usemap="#class_actuator_a12789faf0215436ece13fb1608111f34_cgraph" alt=""/></div>
 <map name="class_actuator_a12789faf0215436ece13fb1608111f34_cgraph" id="class_actuator_a12789faf0215436ece13fb1608111f34_cgraph">
-<area shape="rect"  title=" " alt="" coords="5,132,119,159"/>
-<area shape="rect"  href="class_vec3.html#af10c9e364bdec9abd60045bf3d523293" title=" " alt="" coords="185,56,271,83"/>
-<area shape="rect"  href="class_actuator.html#aa3842522a1346a738cf8ff1520b6bd5a" title="Function that actuate the robot&#39;s base(omni&#45;base)" alt="" coords="167,107,289,133"/>
-<area shape="rect"  href="class_vec3.html#a987916221fa68ba597397f51d5cf51b0" title=" " alt="" coords="171,157,285,184"/>
-<area shape="rect"  href="class_actuator.html#a97d651157712c2189fac4063c31d6963" title=" " alt="" coords="176,208,280,235"/>
-<area shape="rect"  href="error_8h.html#ab5744f81944e2a834ef96ae10f8ae166" title=" " alt="" coords="397,5,445,32"/>
-<area shape="rect"  href="class_wheel.html#ad30f55db6258b3caef41420f4cb1606e" title=" " alt="" coords="354,56,489,83"/>
-<area shape="rect"  href="class_wheel.html#a17973eb57b5dd282558fb7fe5699e58e" title="Function that sets the angular velocity of the wheel." alt="" coords="354,107,489,133"/>
-<area shape="rect"  href="class_wheel.html#a68e69448efd26f616b9b85f2f2e49809" title=" " alt="" coords="337,157,505,184"/>
-<area shape="rect"  href="class_p_i_d.html#a4d19abca579301069c3edb28fd5ff7f2" title=" " alt="" coords="357,208,486,235"/>
-<area shape="rect"  href="class_p_i_d.html#a940bbf0c834f0ac68203b8e28b2ca8d1" title=" " alt="" coords="356,259,487,285"/>
-<area shape="rect"  href="class_p_i_d___algorithm.html#a0adcbfe07b44479d3c46d20037bf1013" title=" " alt="" coords="356,310,487,351"/>
-<area shape="rect"  href="class_wheel.html#a87aab248643ff4b1dab45080ed482fe0" title=" " alt="" coords="342,376,501,403"/>
-<area shape="rect"  href="class_wheel.html#afbbb8dc81da2dd495e2322cddc5f0ddd" title=" " alt="" coords="368,427,475,453"/>
-<area shape="rect"  href="wheel_8cpp.html#a797191cba5d6fc01a04ba33fce2b235a" title=" " alt="" coords="577,56,692,83"/>
-<area shape="rect"  href="class_p_i_d___algorithm.html#a388ec97d23c981e62c3726505688e1f0" title=" " alt="" coords="553,208,716,235"/>
-<area shape="rect"  href="main_8h.html#a425dc7e549f2b17a4f48496d9561d248" title=" " alt="" coords="581,427,689,453"/>
+<area shape="rect"  title=" " alt="" coords="5,157,119,184"/>
+<area shape="rect"  href="class_vec3.html#af10c9e364bdec9abd60045bf3d523293" title=" " alt="" coords="181,107,267,133"/>
+<area shape="rect"  href="class_vec3.html#a987916221fa68ba597397f51d5cf51b0" title=" " alt="" coords="167,157,281,184"/>
+<area shape="rect"  href="class_actuator.html#a97d651157712c2189fac4063c31d6963" title=" " alt="" coords="172,208,276,235"/>
+<area shape="rect"  href="error_8h.html#ab5744f81944e2a834ef96ae10f8ae166" title=" " alt="" coords="389,5,437,32"/>
+<area shape="rect"  href="class_wheel.html#ad30f55db6258b3caef41420f4cb1606e" title=" " alt="" coords="346,56,481,83"/>
+<area shape="rect"  href="class_wheel.html#a17973eb57b5dd282558fb7fe5699e58e" title="Function that sets the angular velocity of the wheel." alt="" coords="346,107,481,133"/>
+<area shape="rect"  href="class_wheel.html#a68e69448efd26f616b9b85f2f2e49809" title=" " alt="" coords="329,157,497,184"/>
+<area shape="rect"  href="class_p_i_d.html#a4d19abca579301069c3edb28fd5ff7f2" title=" " alt="" coords="349,208,478,235"/>
+<area shape="rect"  href="class_p_i_d.html#a940bbf0c834f0ac68203b8e28b2ca8d1" title=" " alt="" coords="348,259,479,285"/>
+<area shape="rect"  href="class_p_i_d___algorithm.html#a0adcbfe07b44479d3c46d20037bf1013" title=" " alt="" coords="348,310,479,351"/>
+<area shape="rect"  href="class_wheel.html#a86ed9b899e589f3b450a91eceaf5c679" title=" " alt="" coords="334,376,493,403"/>
+<area shape="rect"  href="class_wheel.html#afbbb8dc81da2dd495e2322cddc5f0ddd" title=" " alt="" coords="360,427,467,453"/>
+<area shape="rect"  href="wheel_8cpp.html#a797191cba5d6fc01a04ba33fce2b235a" title=" " alt="" coords="569,56,684,83"/>
+<area shape="rect"  href="class_p_i_d___algorithm.html#a388ec97d23c981e62c3726505688e1f0" title=" " alt="" coords="545,208,708,235"/>
+<area shape="rect"  href="main_8h.html#a425dc7e549f2b17a4f48496d9561d248" title=" " alt="" coords="573,427,681,453"/>
 </map>
 </div>
 <div class="dynheader">
@@ -607,6 +675,32 @@ Here is the caller graph for this function:</div>
 <area shape="rect"  href="class_robot.html#a38036a2ef73f7b1af6c5d6269e03a5f8" title=" " alt="" coords="5,5,167,32"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a4cebf0d34063998d73211cada96d5def"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cebf0d34063998d73211cada96d5def">&#9670;&nbsp;</a></span>set_AnglePID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Actuator::set_AnglePID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_p_i_d.html">PID</a> *&#160;</td>
+          <td class="paramname"><em>pid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -654,7 +748,7 @@ Here is the call graph for this function:</div>
 <area shape="rect"  href="class_p_i_d.html#a4d19abca579301069c3edb28fd5ff7f2" title=" " alt="" coords="177,208,306,235"/>
 <area shape="rect"  href="class_p_i_d.html#a940bbf0c834f0ac68203b8e28b2ca8d1" title=" " alt="" coords="176,259,307,285"/>
 <area shape="rect"  href="class_p_i_d___algorithm.html#a0adcbfe07b44479d3c46d20037bf1013" title=" " alt="" coords="176,310,307,351"/>
-<area shape="rect"  href="class_wheel.html#a87aab248643ff4b1dab45080ed482fe0" title=" " alt="" coords="162,376,321,403"/>
+<area shape="rect"  href="class_wheel.html#a86ed9b899e589f3b450a91eceaf5c679" title=" " alt="" coords="162,376,321,403"/>
 <area shape="rect"  href="class_wheel.html#afbbb8dc81da2dd495e2322cddc5f0ddd" title=" " alt="" coords="188,427,295,453"/>
 <area shape="rect"  href="wheel_8cpp.html#a797191cba5d6fc01a04ba33fce2b235a" title=" " alt="" coords="397,56,512,83"/>
 <area shape="rect"  href="class_p_i_d___algorithm.html#a388ec97d23c981e62c3726505688e1f0" title=" " alt="" coords="373,208,536,235"/>
@@ -733,6 +827,28 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a6afba556e6ece204feaa7e536331208a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6afba556e6ece204feaa7e536331208a">&#9670;&nbsp;</a></span>angle_pid_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_p_i_d.html">PID</a>* Actuator::angle_pid_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a8e60b2ff6901acd9e539e29b74d742da"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8e60b2ff6901acd9e539e29b74d742da">&#9670;&nbsp;</a></span>wheels_</h2>
 

@@ -1,23 +1,23 @@
 <map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/KhangaiRobot&#45;Play/Core/Inc/parts/processor.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/KhangaiRobot&#45;Play/Core/Inc/parts/processor.h">
-<area shape="rect" id="node1" title=" " alt="" coords="423,5,649,76"/>
-<area shape="rect" id="node2" href="$state__sensor_8h.html" title=" " alt="" coords="367,199,475,225"/>
-<area shape="rect" id="node13" href="$robo__states_8h.html" title=" " alt="" coords="239,124,340,151"/>
-<area shape="rect" id="node16" href="$joystick_8h.html" title=" " alt="" coords="581,423,659,449"/>
-<area shape="rect" id="node21" href="$throwing_8h.html" title=" " alt="" coords="642,124,723,151"/>
-<area shape="rect" id="node3" href="$vec3_8h.html" title=" " alt="" coords="359,497,417,524"/>
-<area shape="rect" id="node6" href="$position__sensor_8h.html" title=" " alt="" coords="247,273,371,300"/>
-<area shape="rect" id="node11" href="$bound__box_8h.html" title=" " alt="" coords="459,273,555,300"/>
-<area shape="rect" id="node4" title=" " alt="" coords="397,647,515,673"/>
-<area shape="rect" id="node5" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="425,572,487,599"/>
-<area shape="rect" id="node7" href="$sensor_8h.html" title=" " alt="" coords="261,348,333,375"/>
-<area shape="rect" id="node8" href="$kalman_8h.html" title=" " alt="" coords="163,348,237,375"/>
-<area shape="rect" id="node9" href="$mat_8h.html" title=" " alt="" coords="269,423,323,449"/>
-<area shape="rect" id="node10" title=" " alt="" coords="237,497,299,524"/>
-<area shape="rect" id="node12" href="$gpio_8h.html" title=" " alt="" coords="469,348,526,375"/>
-<area shape="rect" id="node14" href="$vec2_8h.html" title=" " alt="" coords="185,423,244,449"/>
-<area shape="rect" id="node15" href="$vec4_8h.html" title=" " alt="" coords="5,199,64,225"/>
-<area shape="rect" id="node17" href="$usart_8h.html" title=" " alt="" coords="493,497,555,524"/>
-<area shape="rect" id="node18" href="$queue__custom_8h.html" title=" " alt="" coords="782,497,901,524"/>
-<area shape="rect" id="node19" title=" " alt="" coords="579,497,674,524"/>
-<area shape="rect" id="node20" title=" " alt="" coords="699,497,757,524"/>
+<area shape="rect" id="node1" title=" " alt="" coords="273,5,498,76"/>
+<area shape="rect" id="node2" href="$state__sensor_8h.html" title=" " alt="" coords="110,199,218,225"/>
+<area shape="rect" id="node14" href="$robo__states_8h.html" title=" " alt="" coords="284,124,385,151"/>
+<area shape="rect" id="node16" href="$joystick_8h.html" title=" " alt="" coords="451,423,530,449"/>
+<area shape="rect" id="node21" href="$throwing_8h.html" title=" " alt="" coords="521,124,602,151"/>
+<area shape="rect" id="node3" href="$vec3_8h.html" title=" " alt="" coords="251,497,309,524"/>
+<area shape="rect" id="node6" href="$position__sensor_8h.html" title=" " alt="" coords="143,273,267,300"/>
+<area shape="rect" id="node12" href="$bound__box_8h.html" title=" " alt="" coords="5,273,101,300"/>
+<area shape="rect" id="node4" title=" " alt="" coords="289,647,407,673"/>
+<area shape="rect" id="node5" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="317,572,379,599"/>
+<area shape="rect" id="node7" href="$vec2_8h.html" title=" " alt="" coords="317,348,376,375"/>
+<area shape="rect" id="node9" href="$sensor_8h.html" title=" " alt="" coords="72,348,144,375"/>
+<area shape="rect" id="node10" href="$kalman_8h.html" title=" " alt="" coords="168,348,243,375"/>
+<area shape="rect" id="node8" title=" " alt="" coords="147,497,210,524"/>
+<area shape="rect" id="node11" href="$mat_8h.html" title=" " alt="" coords="137,423,191,449"/>
+<area shape="rect" id="node13" href="$gpio_8h.html" title=" " alt="" coords="31,423,89,449"/>
+<area shape="rect" id="node15" href="$vec4_8h.html" title=" " alt="" coords="243,199,301,225"/>
+<area shape="rect" id="node17" href="$usart_8h.html" title=" " alt="" coords="334,497,397,524"/>
+<area shape="rect" id="node18" href="$queue__custom_8h.html" title=" " alt="" coords="623,497,742,524"/>
+<area shape="rect" id="node19" title=" " alt="" coords="421,497,515,524"/>
+<area shape="rect" id="node20" title=" " alt="" coords="540,497,599,524"/>
 </map>

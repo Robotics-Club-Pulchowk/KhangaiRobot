@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['kalman_5ffilter',['Kalman_Filter',['../class_kalman___filter.html',1,'']]],
-  ['kalman_5fvars',['Kalman_Vars',['../struct_kalman___vars.html',1,'']]]
+  ['joystick',['JoyStick',['../class_joy_stick.html',1,'']]],
+  ['joystick_5fcommand',['JoyStick_Command',['../struct_joy_stick___command.html',1,'']]],
+  ['joystick_5fdata',['JoyStick_Data',['../struct_joy_stick___data.html',1,'']]],
+  ['joystick_5fhandle',['JoyStick_Handle',['../struct_joy_stick___handle.html',1,'']]]
 ];

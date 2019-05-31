@@ -40,7 +40,7 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", "globals_dup" ],
-        [ "Functions", "globals_func.html", null ],
+        [ "Functions", "globals_func.html", "globals_func" ],
         [ "Variables", "globals_vars.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
         [ "Enumerator", "globals_eval.html", null ],
@@ -53,12 +53,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_free_r_t_o_s_config_8h.html",
-"class_lidar.html#a6ead7bfc4c42738efd08015e31af4969",
-"class_throwing.html#acae6699ef86b1f8ab9dc2e6dc5c37ac9",
-"functions_func_i.html",
-"main_8h.html#a5a253e7f0767544266d36b6fee8c5b6e",
-"processor_8cpp.html#ade4dda8cceef978c8a56b53980d8e6e3",
-"struct_m_p_u6050.html#aa133576cdb5e081dfe9b0d1c3d168b31"
+"class_kalman___filter.html#abdea48a473c55bf2ddf8ded6a8c7ee78",
+"class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c",
+"freertos_8c.html#a45383c061dfa4d7257d5b5f90e933345",
+"joystick_8cpp.html#a8bf81a87ac512746c48226da0cfaf031",
+"pid__algorithms_8h_source.html",
+"stm32f4xx__it_8h.html#adbdfb05858cc36fc520974df37ec3cb0"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -33,6 +33,7 @@ var searchData=
   ['robot_2eh',['robot.h',['../robot_8h.html',1,'']]],
   ['robot_5fstate_5fvars_5f',['robot_state_vars_',['../class_robot.html#a7990f95a4b82902844fcbf718dccd5ec',1,'Robot']]],
   ['robotthread',['RobotThread',['../freertos_8c.html#a4e5b32a2e15bb82416f89b7a733d1e09',1,'RobotThread(void const *argument):&#160;robo_tasks.cpp'],['../robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09',1,'RobotThread(void const *argument):&#160;robo_tasks.cpp']]],
+  ['rotate_5fencdata',['rotate_EncData',['../class_position_sensor.html#adcd13a461130d4ce2c53ca917794fc0b',1,'PositionSensor']]],
   ['rows',['rows',['../class_mat.html#a5b965c2e37939da2aea0af686209655c',1,'Mat']]],
   ['rows_5f',['rows_',['../class_mat.html#aad27e7e5a9e5672a3ae21493892fc67e',1,'Mat']]],
   ['rt',['rt',['../struct_joy_stick___data.html#aa11f5bce8d4d5ac7045e7b5b7c6e0755',1,'JoyStick_Data']]],

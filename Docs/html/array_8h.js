@@ -6,5 +6,6 @@ var array_8h =
     [ "arrIndex", "array_8h.html#a9b84381816b49e781cda9de78309f80c", null ],
     [ "arrMult", "array_8h.html#a41fb3d3b966a799a5182e8850eceb4ee", null ],
     [ "arrPrint", "array_8h.html#a5fb1130eedc231e13ab1c20e590d3f24", null ],
+    [ "arrPrint", "array_8h.html#a04a64837f5778b5397e0762a3e26efff", null ],
     [ "arrSize", "array_8h.html#ae0ee529d15c5551dd12ef38b15c9ba4d", null ]
 ];

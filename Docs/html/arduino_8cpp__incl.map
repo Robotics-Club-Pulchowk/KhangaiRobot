@@ -1,7 +1,8 @@
 <map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/KhangaiRobot&#45;Play/Core/Src/devs/arduino.cpp" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/KhangaiRobot&#45;Play/Core/Src/devs/arduino.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="101,5,326,76"/>
+<area shape="rect" id="node1" title=" " alt="" coords="153,5,378,76"/>
 <area shape="rect" id="node2" href="$arduino_8h.html" title=" " alt="" coords="124,124,199,151"/>
 <area shape="rect" id="node6" href="$usart_8h.html" title=" " alt="" coords="234,124,297,151"/>
+<area shape="rect" id="node8" href="$defines_8h.html" title=" " alt="" coords="321,124,396,151"/>
 <area shape="rect" id="node3" href="$sensor_8h.html" title=" " alt="" coords="5,199,77,225"/>
 <area shape="rect" id="node4" href="$queue__custom_8h.html" title=" " alt="" coords="102,199,221,225"/>
 <area shape="rect" id="node5" title=" " alt="" coords="160,273,277,300"/>

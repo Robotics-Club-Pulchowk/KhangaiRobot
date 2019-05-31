@@ -39,7 +39,6 @@ var searchData=
   ['hard_5firon_5foffset',['hard_iron_offset',['../struct_h_m_c5883.html#ae60407010a74561502f2bec3bb986c13',1,'HMC5883']]],
   ['hardfault_5fhandler',['HardFault_Handler',['../stm32f4xx__it_8h.html#a2bffc10d5bd4106753b7c30e86903bea',1,'HardFault_Handler(void):&#160;stm32f4xx_it.c'],['../stm32f4xx__it_8c.html#a2bffc10d5bd4106753b7c30e86903bea',1,'HardFault_Handler(void):&#160;stm32f4xx_it.c']]],
   ['hdma_5fusart2_5frx',['hdma_usart2_rx',['../usart_8c.html#a784aa25dc7e4580cfbf80658340f482c',1,'hdma_usart2_rx():&#160;usart.c'],['../stm32f4xx__it_8c.html#a784aa25dc7e4580cfbf80658340f482c',1,'hdma_usart2_rx():&#160;usart.c']]],
-  ['hdma_5fusart2_5ftx',['hdma_usart2_tx',['../usart_8c.html#a0083b476c2a75ab9fb2ccbed0048857e',1,'hdma_usart2_tx():&#160;usart.c'],['../stm32f4xx__it_8c.html#a0083b476c2a75ab9fb2ccbed0048857e',1,'hdma_usart2_tx():&#160;usart.c']]],
   ['hdma_5fusart3_5frx',['hdma_usart3_rx',['../usart_8c.html#a418ff7f6b595dcf41b10de1083e62340',1,'hdma_usart3_rx():&#160;usart.c'],['../stm32f4xx__it_8c.html#a418ff7f6b595dcf41b10de1083e62340',1,'hdma_usart3_rx():&#160;usart.c']]],
   ['head_5f',['head_',['../class_queue.html#a5530a993efde4f36774380e6a759ac67',1,'Queue']]],
   ['henc',['henc',['../struct_wheel___config.html#a8819b7285f09381ebfd1c9baf70938ee',1,'Wheel_Config']]],
@@ -64,7 +63,7 @@ var searchData=
   ['htim8',['htim8',['../tim_8h.html#a5faa27108379f799afb6984010bf0384',1,'htim8():&#160;tim.c'],['../tim_8c.html#a5faa27108379f799afb6984010bf0384',1,'htim8():&#160;tim.c']]],
   ['htim9',['htim9',['../tim_8h.html#a31f6f787777409af5ed0d131b52b7988',1,'htim9():&#160;tim.c'],['../tim_8c.html#a31f6f787777409af5ed0d131b52b7988',1,'htim9():&#160;tim.c']]],
   ['huart',['huart',['../struct_joy_stick___handle.html#a1d902e73eb2caf7254c4b39789b0b36d',1,'JoyStick_Handle']]],
-  ['huart2',['huart2',['../usart_8h.html#aa9479c261d65eecedd3d9582f7f0f89c',1,'huart2():&#160;usart.c'],['../usart_8c.html#aa9479c261d65eecedd3d9582f7f0f89c',1,'huart2():&#160;usart.c']]],
+  ['huart2',['huart2',['../usart_8h.html#aa9479c261d65eecedd3d9582f7f0f89c',1,'huart2():&#160;usart.c'],['../usart_8c.html#aa9479c261d65eecedd3d9582f7f0f89c',1,'huart2():&#160;usart.c'],['../stm32f4xx__it_8c.html#aa9479c261d65eecedd3d9582f7f0f89c',1,'huart2():&#160;usart.c']]],
   ['huart3',['huart3',['../usart_8h.html#ab7c63c1b0f65db92b6a4ea19edf957e1',1,'huart3():&#160;usart.c'],['../usart_8c.html#ab7c63c1b0f65db92b6a4ea19edf957e1',1,'huart3():&#160;usart.c'],['../stm32f4xx__it_8c.html#ab7c63c1b0f65db92b6a4ea19edf957e1',1,'huart3():&#160;usart.c']]],
   ['huart4',['huart4',['../usart_8h.html#ae273feb3e0dc44e38892650faa58fced',1,'huart4():&#160;usart.c'],['../usart_8c.html#ae273feb3e0dc44e38892650faa58fced',1,'huart4():&#160;usart.c'],['../stm32f4xx__it_8c.html#ae273feb3e0dc44e38892650faa58fced',1,'huart4():&#160;usart.c']]],
   ['huart_5f',['huart_',['../class_joy_stick.html#a86f1e28c8921dd0c15dfbf2acd61638d',1,'JoyStick']]]

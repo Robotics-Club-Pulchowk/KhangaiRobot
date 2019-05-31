@@ -1,6 +1,4 @@
 <map id="MotorThread" name="MotorThread">
-<area shape="rect" id="node1" title="Function implementing the MotorSequence thread." alt="" coords="5,31,100,57"/>
+<area shape="rect" id="node1" title="Function implementing the MotorSequence thread." alt="" coords="5,5,100,32"/>
 <area shape="rect" id="node2" href="$class_robot.html#acfa28bf423af469115fb67db6ec4e2b8" title=" " alt="" coords="148,5,275,32"/>
-<area shape="rect" id="node3" href="$class_robot.html#a1456df8be5ce9a34e8aa175fc6cb8a1a" title=" " alt="" coords="170,56,253,83"/>
-<area shape="rect" id="node4" href="$class_actuator.html#aa3842522a1346a738cf8ff1520b6bd5a" title="Function that actuate the robot&#39;s base(omni&#45;base)" alt="" coords="323,56,445,83"/>
 </map>
