@@ -341,13 +341,13 @@ static PID gRobo_PID;
  */
 void Actuator::pid_Init()
 {
-        gDisc_PID[0].set_PID(0.2732, 1.662, 0.0005221);
+        gDisc_PID[0].set_PID(0.525, 14.896, 0.0);
         gDisc_PID[0].set_Limits(24, -24);
-        gDisc_PID[1].set_PID(0.2789, 2.644, 0.000342);
+        gDisc_PID[1].set_PID(0.525, 10.345, 0.0);
         gDisc_PID[1].set_Limits(24, -24);
-        gDisc_PID[2].set_PID(0.2491, 1.458, 0.0004947);
+        gDisc_PID[2].set_PID(0.525, 13.954, 0.0);
         gDisc_PID[2].set_Limits(24, -24);
-        gDisc_PID[3].set_PID(0.2618, 2.347, 0.0003395);
+        gDisc_PID[3].set_PID(0.685, 12.945, 0.0);
         gDisc_PID[3].set_Limits(24, -24);
 
         gAng_PID.set_PID(0.2, 0, 0);
