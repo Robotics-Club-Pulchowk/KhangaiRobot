@@ -33,7 +33,7 @@ void init_Lidars()
         Serial.println("Initializing Lidars...");
 #endif
 
-//        gXLidar.begin(&XLIDAR_SERIAL);
+        gXLidar.begin(&XLIDAR_SERIAL);
         gYLidar.begin(&YLIDAR_SERIAL);
 }
 

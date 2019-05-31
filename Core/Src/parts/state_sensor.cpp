@@ -391,59 +391,73 @@ void State_Sensor::change_Sensors(Field field_id)
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->add_Sensor(&gXLidar);
-                        p_sensor_->remove_Sensor(&gYLidar);
+                        p_sensor_->add_Sensor(&gYLidar);
                 } break;
                 
                 case Field::FIELD_B : {      // State B
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->add_Sensor(&gXLidar);
-                        p_sensor_->remove_Sensor(&gYLidar);
+                        p_sensor_->add_Sensor(&gYLidar);
                 } break;
                 
                 case Field::FIELD_C : {      // State C
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->add_Sensor(&gXLidar);
-                        p_sensor_->remove_Sensor(&gYLidar);
+                        p_sensor_->add_Sensor(&gYLidar);
                 } break;
                 
                 case Field::FIELD_D : {      // State D
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->add_Sensor(&gXLidar);
-                        p_sensor_->remove_Sensor(&gYLidar);
+                        p_sensor_->add_Sensor(&gYLidar);
                 } break;
                 
                 case Field::FIELD_E : {      // State E
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->add_Sensor(&gXLidar);
-                        p_sensor_->remove_Sensor(&gYLidar);
+                        p_sensor_->add_Sensor(&gYLidar);
                 } break;
                 
                 case Field::FIELD_F : {      // State F
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->add_Sensor(&gXLidar);
-                        p_sensor_->remove_Sensor(&gYLidar);
+                        p_sensor_->add_Sensor(&gYLidar);
                 } break;
                 
                 case Field::FIELD_G : {      // State G
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->add_Sensor(&gXLidar);
-                        p_sensor_->remove_Sensor(&gYLidar);
+                        p_sensor_->add_Sensor(&gYLidar);
                 } break;
                 
                 case Field::FIELD_H : {      // State H
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->add_Sensor(&gXLidar);
-                        p_sensor_->remove_Sensor(&gYLidar);
+                        p_sensor_->add_Sensor(&gYLidar);
                 } break;
                 
                 case Field::FIELD_I : {      // State I
+                        p_sensor_->add_Sensor(&gXEncoder);
+                        p_sensor_->add_Sensor(&gYEncoder);
+                        p_sensor_->remove_Sensor(&gXLidar);
+                        p_sensor_->add_Sensor(&gYLidar);
+                } break;
+                
+                case Field::FIELD_J : {      // State J
+                        p_sensor_->add_Sensor(&gXEncoder);
+                        p_sensor_->add_Sensor(&gYEncoder);
+                        p_sensor_->remove_Sensor(&gXLidar);
+                        p_sensor_->add_Sensor(&gYLidar);
+                } break;
+                
+                case Field::FIELD_O : {      // State O
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->remove_Sensor(&gXLidar);
