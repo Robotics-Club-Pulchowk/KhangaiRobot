@@ -6,8 +6,8 @@
  *   email : 073bex422.nischal@pcampus.edu.np
  */
 
-#include "main.h"
 #include "TFMini.h"
+#include "main.h"
 
 //* Following variables are for timing purpose
 const unsigned long gLidar_Read_Period = 10;
@@ -33,7 +33,7 @@ void init_Lidars()
         Serial.println("Initializing Lidars...");
 #endif
 
-        gXLidar.begin(&XLIDAR_SERIAL);
+//        gXLidar.begin(&XLIDAR_SERIAL);
         gYLidar.begin(&YLIDAR_SERIAL);
 }
 
@@ -46,11 +46,6 @@ void send_LidarDataPack(uint8_t addr, unsigned long val)
 
         send_DataPack(addr, buf, 2);
 
-#ifdef _DEBUG_MODE
-        Serial.print(addr);
-        Serial.print(" : ");
-        Serial.println(val);
-#endif
 }
 
 void update_Lidars()
@@ -75,7 +70,7 @@ void update_Lidars()
                         uint16_t strength = gXLidar.getRecentSignalStrength();
                         
                         // Display the measurement
-                        Serial.print("XLidar(0x02) : ")
+                        Serial.print("XLidar(0x02) : ");
                         Serial.print(dist);
                         Serial.print(" mm      sigstr: ");
                         Serial.println(strength);
@@ -94,7 +89,7 @@ void update_Lidars()
                         uint16_t strength = gYLidar.getRecentSignalStrength();
                         
                         // Display the measurement
-                        Serial.print("YLidar(0x03) : ")
+                        Serial.print("YLidar(0x03) : ");
                         Serial.print(dist);
                         Serial.print(" mm      sigstr: ");
                         Serial.println(strength);

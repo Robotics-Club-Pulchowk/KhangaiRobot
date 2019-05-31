@@ -9,6 +9,7 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
 
+#define _DEBUG_MODE
 
 #define START_BYTE      (0xA5)
 
