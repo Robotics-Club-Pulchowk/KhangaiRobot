@@ -81,8 +81,8 @@ void Encoders_Init()
 
 void Lidars_Init()
 {
-        gXLidar.set_Outliers(Vec2<float>(3000, 10));
-        gYLidar.set_Outliers(Vec2<float>(3000, 10));
+        gXLidar.set_Outliers(Vec2<float>(12000, 10));
+        gYLidar.set_Outliers(Vec2<float>(12000, 10));
 
         gXLidar.init();
         gYLidar.init();
