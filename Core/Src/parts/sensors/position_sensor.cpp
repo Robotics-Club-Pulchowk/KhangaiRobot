@@ -73,10 +73,11 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
                 else if (p_sensors_[i]->get_Name() == SensorName::XLidar) {
                         lidar[0] = p_sensors_[i]->read();
                         x_lidar_used = true;
-                        // printf("Time : %ld\tLidar : %ld\n", HAL_GetTick(), (int32_t)lidar[0]);
+                        // printf("Time : %ld\tXLidar : %ld\n", HAL_GetTick(), (int32_t)lidar[0]);
                 }
                 else if (p_sensors_[i]->get_Name() == SensorName::YLidar) {
                         lidar[1] = p_sensors_[i]->read();
+                        // printf("Time : %ld\tYLidar : %ld\n", HAL_GetTick(), (int32_t)lidar[1]);
                         y_lidar_used = true;
                 }
         }
@@ -172,6 +173,7 @@ void PositionSensor::process_LidarData(float (&lidar)[2], const State_Vars *sv)
                 }
         }
         else {
+                // Compensating y-values at poles using xlidar's data
                 if (id == Field::FIELD_B || id == Field::FIELD_F ||
                     (id == Field::FIELD_C && lidar[0] < 400)) {
                         if (lidar[0] < jungle_pole_dist) {
@@ -208,6 +210,47 @@ void PositionSensor::process_LidarData(float (&lidar)[2], const State_Vars *sv)
                         if (lidar[0] < bridge_pole_dist) {
                                 lidar[0] += 755;
                         }
+                }
+
+                // Compensating y-values at poles using ylidar's data 
+                if (id == Field::FIELD_A || id == Field::FIELD_B) {
+                        if (lidar[1] < 1500) {
+                                lidar[1] = 2000 - lidar[1];
+                        }
+                        else {
+                                lidar[1] = gLast_YEncoderValue;
+                        }
+                }
+                else if (id == Field::FIELD_C || id == Field::FIELD_D) {
+                        if (lidar[1] < 1000) {
+                                lidar[1] = 3500 - lidar[1];
+                        }
+                        else {
+                                lidar[1] = gLast_YEncoderValue;
+                        }
+                }
+                else if (id == Field::FIELD_E || id == Field::FIELD_F) {
+                        if (lidar[1] < 1000) {
+                                lidar[1] = 5000 - lidar[1];
+                        }
+                        else {
+                                lidar[1] = gLast_YEncoderValue;
+                        }
+                }
+                else if (id == Field::FIELD_G || id == Field::FIELD_H) {
+                        if (lidar[1] < 1000) {
+                                lidar[1] = 6500 - lidar[1];
+                        }
+                        else {
+                                lidar[1] = gLast_YEncoderValue;
+                        }
+                }
+                else if (id == Field::FIELD_I || id == Field::FIELD_J) {
+                        // Need to compensate for shagai too
+                        lidar[1] = 10000 - lidar[1];
+                }
+                else {
+                        lidar[1] = gLast_YEncoderValue;
                 }
         }
 }
