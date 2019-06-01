@@ -100,6 +100,9 @@ Vec3<float> Actuator::actuate(Vec3<float> vel, Vec3<float> psis, uint32_t dt_mil
         else {
                 // Calculate rw
                 float err_psi = t_psi - psi;
+                if (fabsf(err_psi) < 0.02) {
+                        err_psi = 0;
+                }
                 rw = -angle_pid_->compute_PID(err_psi, dt_millis);
         }
         
