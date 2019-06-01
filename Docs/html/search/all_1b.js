@@ -4,6 +4,7 @@ var searchData=
   ['_7earduino_5fdevice',['~Arduino_Device',['../class_arduino___device.html#a6df283679dacb275744770bee2af2333',1,'Arduino_Device']]],
   ['_7ebound',['~Bound',['../class_bound.html#acf381c12d8ca4000ec51a1638d0a5361',1,'Bound']]],
   ['_7ebound_5fbox',['~Bound_Box',['../class_bound___box.html#a3582fbb9675e3ee294cc1212641c47d0',1,'Bound_Box']]],
+  ['_7ecrc_5fhash',['~CRC_Hash',['../class_c_r_c___hash.html#af0b7650ef27cc481cbee28264b9369bb',1,'CRC_Hash']]],
   ['_7ediscrete_5fpid',['~Discrete_PID',['../class_discrete___p_i_d.html#a87f9e2fc9b853704494941c92670a039',1,'Discrete_PID']]],
   ['_7eencoder',['~Encoder',['../class_encoder.html#a87cc8067c98c0ab2134dee3822e3b250',1,'Encoder']]],
   ['_7eexp_5fsmooth',['~Exp_Smooth',['../class_exp___smooth.html#ae0c40c45c671cc5dfe6e8880acdbb2d8',1,'Exp_Smooth']]],

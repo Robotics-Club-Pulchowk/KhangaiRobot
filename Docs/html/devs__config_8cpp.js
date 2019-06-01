@@ -10,5 +10,6 @@ var devs__config_8cpp =
     [ "gXEnc", "devs__config_8cpp.html#a040d6a430570bfbad6a05624b8574509", null ],
     [ "gXLidar_Dev", "devs__config_8cpp.html#a3c439cffe73aa1d318761c487840b237", null ],
     [ "gYEnc", "devs__config_8cpp.html#a48a1da14e3718b463d2e665521961921", null ],
+    [ "gYLidar_Dev", "devs__config_8cpp.html#aaa8b96ee89ec755c77016fb1c7eefc26", null ],
     [ "IMU_Stepper", "devs__config_8cpp.html#af99d7ea11952a1dedf21339e4f25a50b", null ]
 ];

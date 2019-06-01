@@ -8,13 +8,15 @@
 
 #include "arduino.h"
 #include "usart.h"
+#include "defines.h"
 
 extern Arduino_Device gXLidar_Dev;
+extern Arduino_Device gYLidar_Dev;
 
 #define MAX_PACKET_LENGTH       (32)
 
 #define ARDUINO_UART            (huart3)
-#define ARDUINO_START_BYTE      (0xA5)
+#define ARDUINO_START_BYTE      (START_BYTE)
 
 #define MAX_DEVICES             (5)
 #define MAX_BYTES_PER_DEVICE    (8)
@@ -94,7 +96,7 @@ int Arduino_Device::write(uint8_t *buf, uint16_t len)
         }
 
         Arduino_Packet pack;
-        pack.start_byte = 0xA5;
+        pack.start_byte = ARDUINO_START_BYTE;
         pack.dev_id = id_;
         pack.buffer = buf;
         pack.buf_len = len;
@@ -166,6 +168,12 @@ void Arduino_Handle_RxCplt(void)
                                                 int16_t val = (gRxBuffer[gCurrent_Device_ID][0]) << 8;
                                                 val |= gRxBuffer[gCurrent_Device_ID][1];
                                                 gXLidar_Dev.store((float)val);
+                                                // printf("%d\n", val);
+                                        }
+                                        else if (gCurrent_Device_ID == gYLidar_Dev.get_ID()) {
+                                                int16_t val = (gRxBuffer[gCurrent_Device_ID][0]) << 8;
+                                                val |= gRxBuffer[gCurrent_Device_ID][1];
+                                                gYLidar_Dev.store((float)val);
                                                 // printf("%d\n", val);
                                         }
                                 }

@@ -50,6 +50,7 @@ var searchData=
   ['init_5fgamefield',['init_GameField',['../game__field_8cpp.html#a9ce21429239a4cc722845e28d0aced8c',1,'init_GameField():&#160;game_field.cpp'],['../robo__states_8cpp.html#a9ce21429239a4cc722845e28d0aced8c',1,'init_GameField():&#160;game_field.cpp'],['../processor_8cpp.html#a9ce21429239a4cc722845e28d0aced8c',1,'init_GameField():&#160;game_field.cpp']]],
   ['init_5forifilters',['init_OriFilters',['../state__sensor_8cpp.html#a5e9b8881f5421a7cf0ee696044ee16fb',1,'state_sensor.cpp']]],
   ['init_5fxlidarencoderkalman',['init_XLidarEncoderKalman',['../position__sensor_8h.html#a02009f631741b37a8bef1cf40756ecd6',1,'init_XLidarEncoderKalman(uint32_t dt_millis):&#160;position_sensor.cpp'],['../position__sensor_8cpp.html#a02009f631741b37a8bef1cf40756ecd6',1,'init_XLidarEncoderKalman(uint32_t dt_millis):&#160;position_sensor.cpp']]],
+  ['init_5fylidarencoderkalman',['init_YLidarEncoderKalman',['../position__sensor_8h.html#a7ebb7057e89bf88cc9118a8f0d6fba31',1,'init_YLidarEncoderKalman(uint32_t dt_millis):&#160;position_sensor.cpp'],['../position__sensor_8cpp.html#a7ebb7057e89bf88cc9118a8f0d6fba31',1,'init_YLidarEncoderKalman(uint32_t dt_millis):&#160;position_sensor.cpp']]],
   ['initiated',['initiated',['../class_arduino___device.html#a27555d8c47d8a380cddaa9fd0d2215ae',1,'Arduino_Device']]],
   ['initiated_5f',['initiated_',['../class_robot.html#ae957a03df48f15a2eb2c1ba92c6817cb',1,'Robot']]],
   ['inputs_5f',['inputs_',['../class_moore___machine.html#aa157bc80472746c6838b888bf8c38f89',1,'Moore_Machine']]],
@@ -68,5 +69,5 @@ var searchData=
   ['is_5ffirst_5fori_5f',['is_first_ori_',['../class_state___sensor.html#a786d6b55f8cd978b2c90b0b06b99234f',1,'State_Sensor']]],
   ['is_5finitiated',['is_Initiated',['../class_robot.html#acfa28bf423af469115fb67db6ec4e2b8',1,'Robot']]],
   ['is_5fzero',['is_Zero',['../class_mat.html#a1faaf46898f55a59d5e27baf7c4a028b',1,'Mat']]],
-  ['itm_5fsendstring',['ITM_SendString',['../logger_8cpp.html#a408f6bc26176740f5efec826bffee8bf',1,'ITM_SendString(char *data, int len):&#160;logger.cpp'],['../printf__config_8c.html#a408f6bc26176740f5efec826bffee8bf',1,'ITM_SendString(char *data, int len):&#160;logger.cpp']]]
+  ['itm_5fsendstring',['ITM_SendString',['../printf__config_8c.html#a408f6bc26176740f5efec826bffee8bf',1,'printf_config.c']]]
 ];

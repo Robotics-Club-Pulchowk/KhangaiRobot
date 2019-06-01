@@ -8,5 +8,6 @@ var searchData=
   ['yg_5foffs_5ftc',['YG_OFFS_TC',['../mpu6050__reg_8h.html#a4c9fe42b3e40805abad8193315efc55c',1,'mpu6050_reg.h']]],
   ['yg_5foffs_5fusrh',['YG_OFFS_USRH',['../mpu6050__reg_8h.html#af77b200540e2780a76af9d446e722ee7',1,'mpu6050_reg.h']]],
   ['yg_5foffs_5fusrl',['YG_OFFS_USRL',['../mpu6050__reg_8h.html#a79bd3286cf36d15c6cea51d08a6a622c',1,'mpu6050_reg.h']]],
-  ['ylidar',['YLidar',['../sensor_8h.html#a80119019834acb539f0ac38a1e57e56dac0a6c2ddd6bcdd3e3ac1a9d463d86cd0',1,'sensor.h']]]
+  ['ylidar',['YLidar',['../sensor_8h.html#a80119019834acb539f0ac38a1e57e56dac0a6c2ddd6bcdd3e3ac1a9d463d86cd0',1,'sensor.h']]],
+  ['ylidar_5fenc_5ffuser_5f',['ylidar_enc_fuser_',['../class_position_sensor.html#a47f6c64acd23f2a7adf74030a432f18b',1,'PositionSensor']]]
 ];

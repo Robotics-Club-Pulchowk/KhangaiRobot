@@ -130,6 +130,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a940bbf0c834f0ac68203b8e28b2ca8d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d19abca579301069c3edb28fd5ff7f2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d.html#a4d19abca579301069c3edb28fd5ff7f2">compute_PID</a> (float err, uint32_t dt_millis)</td></tr>
 <tr class="separator:a4d19abca579301069c3edb28fd5ff7f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1979972e8ca6ad9a95aa70e35d467211"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_i_d.html#a1979972e8ca6ad9a95aa70e35d467211">clear</a> ()</td></tr>
+<tr class="separator:a1979972e8ca6ad9a95aa70e35d467211"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -275,6 +277,52 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1979972e8ca6ad9a95aa70e35d467211"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1979972e8ca6ad9a95aa70e35d467211">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PID::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_p_i_d_a1979972e8ca6ad9a95aa70e35d467211_cgraph.png" border="0" usemap="#class_p_i_d_a1979972e8ca6ad9a95aa70e35d467211_cgraph" alt=""/></div>
+<map name="class_p_i_d_a1979972e8ca6ad9a95aa70e35d467211_cgraph" id="class_p_i_d_a1979972e8ca6ad9a95aa70e35d467211_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,5,84,32"/>
+<area shape="rect"  href="class_p_i_d___algorithm.html#a98964ffa1025c1e4d8199b0bbd15fb05" title=" " alt="" coords="132,5,273,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_p_i_d_a1979972e8ca6ad9a95aa70e35d467211_icgraph.png" border="0" usemap="#class_p_i_d_a1979972e8ca6ad9a95aa70e35d467211_icgraph" alt=""/></div>
+<map name="class_p_i_d_a1979972e8ca6ad9a95aa70e35d467211_icgraph" id="class_p_i_d_a1979972e8ca6ad9a95aa70e35d467211_icgraph">
+<area shape="rect"  title=" " alt="" coords="575,31,653,57"/>
+<area shape="rect"  href="class_wheel.html#a313c8a1aa16803dbbb261acd291f1fd4" title=" " alt="" coords="432,5,527,32"/>
+<area shape="rect"  href="class_actuator.html#a56bd0d7da4f4e0aed593bfc9186a311b" title=" " alt="" coords="277,31,384,57"/>
+<area shape="rect"  href="class_robot.html#abb7f05b4906d4e65fc2e37995b3646bf" title=" " alt="" coords="148,31,229,57"/>
+<area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,31,100,57"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a4d19abca579301069c3edb28fd5ff7f2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4d19abca579301069c3edb28fd5ff7f2">&#9670;&nbsp;</a></span>compute_PID()</h2>
 
@@ -322,10 +370,14 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_p_i_d_a4d19abca579301069c3edb28fd5ff7f2_icgraph.png" border="0" usemap="#class_p_i_d_a4d19abca579301069c3edb28fd5ff7f2_icgraph" alt=""/></div>
 <map name="class_p_i_d_a4d19abca579301069c3edb28fd5ff7f2_icgraph" id="class_p_i_d_a4d19abca579301069c3edb28fd5ff7f2_icgraph">
-<area shape="rect"  title=" " alt="" coords="528,5,657,32"/>
-<area shape="rect"  href="class_actuator.html#a97d651157712c2189fac4063c31d6963" title=" " alt="" coords="376,5,480,32"/>
-<area shape="rect"  href="class_actuator.html#a12789faf0215436ece13fb1608111f34" title=" " alt="" coords="215,5,328,32"/>
-<area shape="rect"  href="class_robot.html#a38036a2ef73f7b1af6c5d6269e03a5f8" title=" " alt="" coords="5,5,167,32"/>
+<area shape="rect"  title=" " alt="" coords="547,81,676,108"/>
+<area shape="rect"  href="class_actuator.html#adf6bd47ad0aa6b9c51e32ac2a5aafb73" title="Function that actuate the robot&#39;s base(omni&#45;base)" alt="" coords="376,56,499,83"/>
+<area shape="rect"  href="class_actuator.html#a97d651157712c2189fac4063c31d6963" title=" " alt="" coords="385,107,489,133"/>
+<area shape="rect"  href="class_robot.html#abb7f05b4906d4e65fc2e37995b3646bf" title=" " alt="" coords="231,5,312,32"/>
+<area shape="rect"  href="class_robot.html#a1456df8be5ce9a34e8aa175fc6cb8a1a" title=" " alt="" coords="230,56,313,83"/>
+<area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="39,5,133,32"/>
+<area shape="rect"  href="class_actuator.html#a12789faf0215436ece13fb1608111f34" title=" " alt="" coords="215,107,328,133"/>
+<area shape="rect"  href="class_robot.html#a38036a2ef73f7b1af6c5d6269e03a5f8" title=" " alt="" coords="5,107,167,133"/>
 </map>
 </div>
 

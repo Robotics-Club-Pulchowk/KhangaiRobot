@@ -7,6 +7,7 @@ var searchData=
   ['joystick_2eh',['joystick.h',['../joystick_8h.html',1,'']]],
   ['joystick_5fcommand',['JoyStick_Command',['../struct_joy_stick___command.html',1,'']]],
   ['joystick_5fdata',['JoyStick_Data',['../struct_joy_stick___data.html',1,'']]],
+  ['joystick_5ferror_5fpacket_5fid',['JOYSTICK_ERROR_PACKET_ID',['../defines_8h.html#a3f0848ded4f61d3a98b1b13ffb48fc42',1,'defines.h']]],
   ['joystick_5fhandle',['JoyStick_Handle',['../struct_joy_stick___handle.html',1,'']]],
   ['joystick_5fhandle_5frxcplt',['JoyStick_Handle_RxCplt',['../joystick_8h.html#a8bf81a87ac512746c48226da0cfaf031',1,'JoyStick_Handle_RxCplt():&#160;joystick.cpp'],['../joystick_8cpp.html#a8bf81a87ac512746c48226da0cfaf031',1,'JoyStick_Handle_RxCplt():&#160;joystick.cpp']]],
   ['joystick_5fstart_5fbyte',['JOYSTICK_START_BYTE',['../joystick_8cpp.html#a0d34faab0f186b44cf390831828f65b1',1,'joystick.cpp']]]

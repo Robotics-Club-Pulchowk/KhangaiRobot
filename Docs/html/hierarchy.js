@@ -7,6 +7,7 @@ var hierarchy =
     [ "Bound< N >", "class_bound.html", null ],
     [ "Bound< 2 >", "class_bound.html", null ],
     [ "Bound_Box", "class_bound___box.html", null ],
+    [ "CRC_Hash", "class_c_r_c___hash.html", null ],
     [ "Enc", "struct_enc.html", null ],
     [ "HMC5883", "struct_h_m_c5883.html", null ],
     [ "JoyStick", "class_joy_stick.html", null ],

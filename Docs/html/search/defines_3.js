@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['compass_5fpacket_5fid',['COMPASS_PACKET_ID',['../defines_8h.html#a7e4ef7e85d341191c70c7cfd744cfe4a',1,'defines.h']]],
   ['config',['CONFIG',['../mpu6050__reg_8h.html#a76ea3cf49247a07c54b3db005a3c7f57',1,'mpu6050_reg.h']]],
   ['configassert',['configASSERT',['../_free_r_t_o_s_config_8h.html#a228c70cd48927d6ab730ed1a6dfbe35f',1,'FreeRTOSConfig.h']]],
   ['configcpu_5fclock_5fhz',['configCPU_CLOCK_HZ',['../_free_r_t_o_s_config_8h.html#aa68082df879e6fc96bcb9b26513639e7',1,'FreeRTOSConfig.h']]],
@@ -23,5 +24,6 @@ var searchData=
   ['configuse_5fport_5foptimised_5ftask_5fselection',['configUSE_PORT_OPTIMISED_TASK_SELECTION',['../_free_r_t_o_s_config_8h.html#aebb8c3a87d591f60f974772be0ee798d',1,'FreeRTOSConfig.h']]],
   ['configuse_5fpreemption',['configUSE_PREEMPTION',['../_free_r_t_o_s_config_8h.html#adde83486022745409c40605922b0bdd6',1,'FreeRTOSConfig.h']]],
   ['configuse_5ftick_5fhook',['configUSE_TICK_HOOK',['../_free_r_t_o_s_config_8h.html#a23c5922c077106fad3f70b54d9071466',1,'FreeRTOSConfig.h']]],
+  ['crc_5fhash_5ftable_5fsize',['CRC_HASH_TABLE_SIZE',['../crc__hash_8h.html#a6583ae176d166d5e9afc6d0a3cbcf721',1,'crc_hash.h']]],
   ['curve_5fstep_5fsize',['CURVE_STEP_SIZE',['../robo__states_8cpp.html#ac84306ad54a15972865cbaff6fcfcd1a',1,'robo_states.cpp']]]
 ];

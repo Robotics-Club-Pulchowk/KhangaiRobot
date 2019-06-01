@@ -99,11 +99,14 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="defines_8h__dep__incl.png" border="0" usemap="#_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_khangai-_robot_2_khangai_robot-_play_2_core_2_inc_2robot_2defines_8hdep" alt=""/></div>
 <map name="_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_khangai-_robot_2_khangai_robot-_play_2_core_2_inc_2robot_2defines_8hdep" id="_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_khangai-_robot_2_khangai_robot-_play_2_core_2_inc_2robot_2defines_8hdep">
-<area shape="rect"  title=" " alt="" coords="659,5,884,76"/>
+<area shape="rect"  title=" " alt="" coords="1028,5,1253,76"/>
 <area shape="rect"  href="wheel_8h.html" title=" " alt="" coords="280,124,505,195"/>
-<area shape="rect"  href="joystick_8cpp.html" title=" " alt="" coords="529,124,755,195"/>
-<area shape="rect"  href="state__sensor_8cpp.html" title=" " alt="" coords="779,124,1023,195"/>
-<area shape="rect"  href="error_8cpp.html" title=" " alt="" coords="1047,124,1272,195"/>
+<area shape="rect"  href="arduino_8cpp.html" title=" " alt="" coords="529,124,755,195"/>
+<area shape="rect"  href="joystick_8cpp.html" title=" " alt="" coords="779,124,1004,195"/>
+<area shape="rect"  href="throwing_8cpp.html" title=" " alt="" coords="1028,124,1253,195"/>
+<area shape="rect"  href="state__sensor_8cpp.html" title=" " alt="" coords="1277,124,1521,195"/>
+<area shape="rect"  href="error_8cpp.html" title=" " alt="" coords="1545,124,1771,195"/>
+<area shape="rect"  href="logger_8cpp.html" title=" " alt="" coords="1795,124,2020,195"/>
 <area shape="rect"  href="actuator_8h.html" title=" " alt="" coords="280,243,505,313"/>
 <area shape="rect"  href="robot_8h.html" title=" " alt="" coords="129,361,355,432"/>
 <area shape="rect"  href="wheel_8cpp.html" title=" " alt="" coords="529,243,755,313"/>
@@ -125,6 +128,16 @@ Macros</h2></td></tr>
 <tr class="separator:a1247dff3a0e5735e04673ff4054b5393"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2dbe4752749c9d4858a1431ce3d78bdd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defines_8h.html#a2dbe4752749c9d4858a1431ce3d78bdd">MAX_POSSIBLE_OMEGA</a>&#160;&#160;&#160;(70)</td></tr>
 <tr class="separator:a2dbe4752749c9d4858a1431ce3d78bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30d2043ca397843e08c43ade3aaee5b2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defines_8h.html#a30d2043ca397843e08c43ade3aaee5b2">START_BYTE</a>&#160;&#160;&#160;(0xA5)</td></tr>
+<tr class="separator:a30d2043ca397843e08c43ade3aaee5b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a644ee635cb0ab6fc9a4d32908251cc69"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defines_8h.html#a644ee635cb0ab6fc9a4d32908251cc69">MOTOR_PACKET_ID</a>&#160;&#160;&#160;(0x01)</td></tr>
+<tr class="separator:a644ee635cb0ab6fc9a4d32908251cc69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45e59bc0afc78f683c1dba5d89961498"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defines_8h.html#a45e59bc0afc78f683c1dba5d89961498">ANGLE_PACKET_ID</a>&#160;&#160;&#160;(0x02)</td></tr>
+<tr class="separator:a45e59bc0afc78f683c1dba5d89961498"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e4ef7e85d341191c70c7cfd744cfe4a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defines_8h.html#a7e4ef7e85d341191c70c7cfd744cfe4a">COMPASS_PACKET_ID</a>&#160;&#160;&#160;(0x03)</td></tr>
+<tr class="separator:a7e4ef7e85d341191c70c7cfd744cfe4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f0848ded4f61d3a98b1b13ffb48fc42"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defines_8h.html#a3f0848ded4f61d3a98b1b13ffb48fc42">JOYSTICK_ERROR_PACKET_ID</a>&#160;&#160;&#160;(0x04)</td></tr>
+<tr class="separator:a3f0848ded4f61d3a98b1b13ffb48fc42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c6def2e552514874cb5cc51a014ec75"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defines_8h.html#a2c6def2e552514874cb5cc51a014ec75">_ENABLE_I2C_ERROR_DETECTION</a></td></tr>
 <tr class="separator:a2c6def2e552514874cb5cc51a014ec75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -137,6 +150,48 @@ Macros</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define _ENABLE_I2C_ERROR_DETECTION</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a45e59bc0afc78f683c1dba5d89961498"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45e59bc0afc78f683c1dba5d89961498">&#9670;&nbsp;</a></span>ANGLE_PACKET_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ANGLE_PACKET_ID&#160;&#160;&#160;(0x02)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e4ef7e85d341191c70c7cfd744cfe4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e4ef7e85d341191c70c7cfd744cfe4a">&#9670;&nbsp;</a></span>COMPASS_PACKET_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COMPASS_PACKET_ID&#160;&#160;&#160;(0x03)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f0848ded4f61d3a98b1b13ffb48fc42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f0848ded4f61d3a98b1b13ffb48fc42">&#9670;&nbsp;</a></span>JOYSTICK_ERROR_PACKET_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JOYSTICK_ERROR_PACKET_ID&#160;&#160;&#160;(0x04)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -185,6 +240,20 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="a644ee635cb0ab6fc9a4d32908251cc69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a644ee635cb0ab6fc9a4d32908251cc69">&#9670;&nbsp;</a></span>MOTOR_PACKET_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MOTOR_PACKET_ID&#160;&#160;&#160;(0x01)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a4e3e5ee7a089062e5dd2ee50eada9311"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4e3e5ee7a089062e5dd2ee50eada9311">&#9670;&nbsp;</a></span>PWM_TIMER_FREQUENCY</h2>
 
@@ -193,6 +262,20 @@ Macros</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define PWM_TIMER_FREQUENCY&#160;&#160;&#160;(168000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a30d2043ca397843e08c43ade3aaee5b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30d2043ca397843e08c43ade3aaee5b2">&#9670;&nbsp;</a></span>START_BYTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define START_BYTE&#160;&#160;&#160;(0xA5)</td>
         </tr>
       </table>
 </div><div class="memdoc">

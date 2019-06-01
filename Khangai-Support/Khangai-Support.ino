@@ -10,17 +10,18 @@
 
 //* Function Prototypes
 void send_PingReply();
+void update_Lidars();
+void init_Lidars();
 
 //* Following variables are for timing purpose
-const unsigned long gLidar_Read_Period = 5;
 const unsigned long gLED_Intensity_Read_Period = 100;
-unsigned long gLidar_Read_Time = 0;
 unsigned long gLED_Intensity_Read_Time = 0;
 
 //* Following are the addresses of the devices associated with the Arduino Mega
 uint8_t gArduino_Address = 0x00;
 uint8_t gLED_Address = 0x01;
-uint8_t gLidar_Address = 0x02;
+uint8_t gXLidar_Address = 0x02;
+uint8_t gYLidar_Address = 0x03;
 
 //* Following variables are used to communicate between stm-board
 //* and the arduino
@@ -42,17 +43,12 @@ void setup()
         (Serial).begin(115200);
         STM_SERIAL.begin(9600);
 
-
-        //* Initialize Lidar in continuous mode
-        pinMode(2, OUTPUT);     // Set pin 2 as trigger pin
-        digitalWrite(2, LOW);   // Set trigger LOW for continuous read
-        pinMode(3, INPUT);      // Set pin 3 as monitor pin
-
         Serial.println("Hello World!!");
 
+        init_Lidars();
+
         //* Store current time for periodic update
-        gLidar_Read_Time = millis();
-        gLED_Intensity_Read_Time = gLidar_Read_Time;
+        gLED_Intensity_Read_Time = millis();
 }
 
 void loop()
@@ -63,11 +59,8 @@ void loop()
                 parse_STMByte(c);
         }
 
-        if (millis() - gLidar_Read_Time > gLidar_Read_Period) {
-                gLidar_Read_Time = millis();
-                // Read lidar data and send it
-                send_LidarDataPack((uint16_t)(read_Lidar()));
-        }
+        //* Update lidar values to the stm if the timing constraint is fulfilled
+        update_Lidars();
 
         if (millis() - gLED_Intensity_Read_Time > gLED_Intensity_Read_Period) {
                 gLED_Intensity_Read_Time = millis();

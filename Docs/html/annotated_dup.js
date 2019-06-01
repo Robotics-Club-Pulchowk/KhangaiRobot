@@ -6,6 +6,7 @@ var annotated_dup =
     [ "Arduino_Packet", "struct_arduino___packet.html", "struct_arduino___packet" ],
     [ "Bound", "class_bound.html", "class_bound" ],
     [ "Bound_Box", "class_bound___box.html", "class_bound___box" ],
+    [ "CRC_Hash", "class_c_r_c___hash.html", "class_c_r_c___hash" ],
     [ "Discrete_PID", "class_discrete___p_i_d.html", "class_discrete___p_i_d" ],
     [ "Enc", "struct_enc.html", "struct_enc" ],
     [ "Encoder", "class_encoder.html", "class_encoder" ],

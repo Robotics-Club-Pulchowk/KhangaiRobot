@@ -29,6 +29,8 @@ public:
                 return algo_->compute(err, dt_millis);
         }
 
+        void clear() { algo_->clear(); }
+
 private:
         PID_Algorithm *algo_;
 };

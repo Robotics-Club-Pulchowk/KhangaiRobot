@@ -200,6 +200,7 @@ void log_data();
 void LoggingThread(void const *argument)
 {
         /* USER CODE BEGIN LoggingThread */
+        __HAL_UART_ENABLE_IT(&huart2, UART_IT_TC);
         /* Infinite loop */
         for (;;)
         {

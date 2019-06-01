@@ -24,18 +24,21 @@ public:
         static Actuator& get_Instance();
 
         int init();
-        Vec3<float> actuate(Vec3<float> vel, uint32_t dt_millis);
+        Vec3<float> actuate(Vec3<float> vel, Vec3<float> psis, uint32_t dt_millis, int8_t test = 0);
         uint32_t stop(uint32_t dt_millis, float ramp_factor = 2.0, uint32_t max_time = 1000);
+        void clear();
 
         void profile(Vec3<float> vel, uint32_t dt_millis);
         void check();
 
 private:
         Wheel wheels_[4];
+        PID* angle_pid_;
 
         Actuator() { }
         void wheels_Init();
         void pid_Init();
+        void set_AnglePID(PID *pid) { angle_pid_ = pid; }
 };
 
 #endif // !_ACTUATOR_H_

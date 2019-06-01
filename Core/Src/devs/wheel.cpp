@@ -49,6 +49,9 @@ static void set_WheelDirection(Wheel_Config *w, Direction d)
 
 static void set_WheelOmega(Wheel_Config *w, float omega)
 {
+        if ( omega > w->max_omega ){
+                omega = w->max_omega;
+        }
         uint16_t new_omega = (65535.0 / w->max_omega) * (omega);
         set_DutyCycle(w, new_omega);
 }

@@ -1,19 +1,18 @@
 <map id="Actuator::profile" name="Actuator::profile">
-<area shape="rect" id="node1" title=" " alt="" coords="5,132,119,159"/>
-<area shape="rect" id="node2" href="$class_vec3.html#af10c9e364bdec9abd60045bf3d523293" title=" " alt="" coords="185,56,271,83"/>
-<area shape="rect" id="node3" href="$class_actuator.html#aa3842522a1346a738cf8ff1520b6bd5a" title="Function that actuate the robot&#39;s base(omni&#45;base)" alt="" coords="167,107,289,133"/>
-<area shape="rect" id="node4" href="$class_vec3.html#a987916221fa68ba597397f51d5cf51b0" title=" " alt="" coords="171,157,285,184"/>
-<area shape="rect" id="node5" href="$class_actuator.html#a97d651157712c2189fac4063c31d6963" title=" " alt="" coords="176,208,280,235"/>
-<area shape="rect" id="node6" href="$error_8h.html#ab5744f81944e2a834ef96ae10f8ae166" title=" " alt="" coords="397,5,445,32"/>
-<area shape="rect" id="node7" href="$class_wheel.html#ad30f55db6258b3caef41420f4cb1606e" title=" " alt="" coords="354,56,489,83"/>
-<area shape="rect" id="node9" href="$class_wheel.html#a17973eb57b5dd282558fb7fe5699e58e" title="Function that sets the angular velocity of the wheel." alt="" coords="354,107,489,133"/>
-<area shape="rect" id="node10" href="$class_wheel.html#a68e69448efd26f616b9b85f2f2e49809" title=" " alt="" coords="337,157,505,184"/>
-<area shape="rect" id="node11" href="$class_p_i_d.html#a4d19abca579301069c3edb28fd5ff7f2" title=" " alt="" coords="357,208,486,235"/>
-<area shape="rect" id="node13" href="$class_p_i_d.html#a940bbf0c834f0ac68203b8e28b2ca8d1" title=" " alt="" coords="356,259,487,285"/>
-<area shape="rect" id="node14" href="$class_p_i_d___algorithm.html#a0adcbfe07b44479d3c46d20037bf1013" title=" " alt="" coords="356,310,487,351"/>
-<area shape="rect" id="node15" href="$class_wheel.html#a87aab248643ff4b1dab45080ed482fe0" title=" " alt="" coords="342,376,501,403"/>
-<area shape="rect" id="node16" href="$class_wheel.html#afbbb8dc81da2dd495e2322cddc5f0ddd" title=" " alt="" coords="368,427,475,453"/>
-<area shape="rect" id="node8" href="$wheel_8cpp.html#a797191cba5d6fc01a04ba33fce2b235a" title=" " alt="" coords="577,56,692,83"/>
-<area shape="rect" id="node12" href="$class_p_i_d___algorithm.html#a388ec97d23c981e62c3726505688e1f0" title=" " alt="" coords="553,208,716,235"/>
-<area shape="rect" id="node17" href="$main_8h.html#a425dc7e549f2b17a4f48496d9561d248" title=" " alt="" coords="581,427,689,453"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,157,119,184"/>
+<area shape="rect" id="node2" href="$class_vec3.html#af10c9e364bdec9abd60045bf3d523293" title=" " alt="" coords="181,107,267,133"/>
+<area shape="rect" id="node3" href="$class_vec3.html#a987916221fa68ba597397f51d5cf51b0" title=" " alt="" coords="167,157,281,184"/>
+<area shape="rect" id="node4" href="$class_actuator.html#a97d651157712c2189fac4063c31d6963" title=" " alt="" coords="172,208,276,235"/>
+<area shape="rect" id="node5" href="$error_8h.html#ab5744f81944e2a834ef96ae10f8ae166" title=" " alt="" coords="389,5,437,32"/>
+<area shape="rect" id="node6" href="$class_wheel.html#ad30f55db6258b3caef41420f4cb1606e" title=" " alt="" coords="346,56,481,83"/>
+<area shape="rect" id="node8" href="$class_wheel.html#a17973eb57b5dd282558fb7fe5699e58e" title="Function that sets the angular velocity of the wheel." alt="" coords="346,107,481,133"/>
+<area shape="rect" id="node9" href="$class_wheel.html#a68e69448efd26f616b9b85f2f2e49809" title=" " alt="" coords="329,157,497,184"/>
+<area shape="rect" id="node10" href="$class_p_i_d.html#a4d19abca579301069c3edb28fd5ff7f2" title=" " alt="" coords="349,208,478,235"/>
+<area shape="rect" id="node12" href="$class_p_i_d.html#a940bbf0c834f0ac68203b8e28b2ca8d1" title=" " alt="" coords="348,259,479,285"/>
+<area shape="rect" id="node13" href="$class_p_i_d___algorithm.html#a0adcbfe07b44479d3c46d20037bf1013" title=" " alt="" coords="348,310,479,351"/>
+<area shape="rect" id="node14" href="$class_wheel.html#a86ed9b899e589f3b450a91eceaf5c679" title=" " alt="" coords="334,376,493,403"/>
+<area shape="rect" id="node15" href="$class_wheel.html#afbbb8dc81da2dd495e2322cddc5f0ddd" title=" " alt="" coords="360,427,467,453"/>
+<area shape="rect" id="node7" href="$wheel_8cpp.html#a797191cba5d6fc01a04ba33fce2b235a" title=" " alt="" coords="569,56,684,83"/>
+<area shape="rect" id="node11" href="$class_p_i_d___algorithm.html#a388ec97d23c981e62c3726505688e1f0" title=" " alt="" coords="545,208,708,235"/>
+<area shape="rect" id="node16" href="$main_8h.html#a425dc7e549f2b17a4f48496d9561d248" title=" " alt="" coords="573,427,681,453"/>
 </map>

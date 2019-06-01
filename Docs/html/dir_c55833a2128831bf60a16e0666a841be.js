@@ -8,6 +8,7 @@ var dir_c55833a2128831bf60a16e0666a841be =
     ] ],
     [ "polynomial.h", "polynomial_8h.html", "polynomial_8h" ],
     [ "state.h", "state_8h.html", "state_8h" ],
+    [ "utils.h", "utils_8h.html", "utils_8h" ],
     [ "vec2.h", "vec2_8h.html", [
       [ "Vec2", "class_vec2.html", "class_vec2" ]
     ] ],

@@ -54,6 +54,7 @@ var searchData=
   ['processor_2eh',['processor.h',['../processor_8h.html',1,'']]],
   ['profile',['profile',['../class_actuator.html#a12789faf0215436ece13fb1608111f34',1,'Actuator']]],
   ['profile_5factuators',['profile_Actuators',['../class_robot.html#a38036a2ef73f7b1af6c5d6269e03a5f8',1,'Robot']]],
+  ['psis_5f',['psis_',['../class_robot.html#a92bb7c8d049c32e8ff886a6b0e066b95',1,'Robot']]],
   ['pwm_5ftimer_5ffrequency',['PWM_TIMER_FREQUENCY',['../defines_8h.html#a4e3e5ee7a089062e5dd2ee50eada9311',1,'defines.h']]],
   ['pwr_5fmgmt_5f1',['PWR_MGMT_1',['../mpu6050__reg_8h.html#a96169eb207e721c1546cea9ffd8a35e4',1,'mpu6050_reg.h']]],
   ['pwr_5fmgmt_5f2',['PWR_MGMT_2',['../mpu6050__reg_8h.html#a23cfbcfd19dc88eb631309970f138e65',1,'mpu6050_reg.h']]]

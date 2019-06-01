@@ -14,5 +14,6 @@ var devs__config_8h =
     [ "gXLidar", "devs__config_8h.html#a9c7a34a9b46b96eb2b170e6254c6394c", null ],
     [ "gYEnc", "devs__config_8h.html#a99efb191cf75853b079f9911221e53fb", null ],
     [ "gYEncoder", "devs__config_8h.html#aa240a4bf78ddae3334c1d8e70c835ada", null ],
+    [ "gYLidar", "devs__config_8h.html#aa08b36d60f1ef297a770ba1ef9a46fa5", null ],
     [ "IMU_Stepper", "devs__config_8h.html#af99d7ea11952a1dedf21339e4f25a50b", null ]
 ];

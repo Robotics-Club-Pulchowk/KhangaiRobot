@@ -99,14 +99,16 @@ $(document).ready(function(){initNavTree('arduino_8cpp.html','');});
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="arduino_8h_source.html">arduino.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="usart_8h_source.html">usart.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="defines_8h_source.html">defines.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for arduino.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="arduino_8cpp__incl.png" border="0" usemap="#_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_khangai-_robot_2_khangai_robot-_play_2_core_2_src_2devs_2arduino_8cpp" alt=""/></div>
 <map name="_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_khangai-_robot_2_khangai_robot-_play_2_core_2_src_2devs_2arduino_8cpp" id="_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_khangai-_robot_2_khangai_robot-_play_2_core_2_src_2devs_2arduino_8cpp">
-<area shape="rect"  title=" " alt="" coords="101,5,326,76"/>
+<area shape="rect"  title=" " alt="" coords="153,5,378,76"/>
 <area shape="rect"  href="arduino_8h.html" title=" " alt="" coords="124,124,199,151"/>
 <area shape="rect"  href="usart_8h.html" title=" " alt="" coords="234,124,297,151"/>
+<area shape="rect"  href="defines_8h.html" title=" " alt="" coords="321,124,396,151"/>
 <area shape="rect"  href="sensor_8h.html" title=" " alt="" coords="5,199,77,225"/>
 <area shape="rect"  href="queue__custom_8h.html" title=" " alt="" coords="102,199,221,225"/>
 <area shape="rect"  title=" " alt="" coords="160,273,277,300"/>
@@ -125,7 +127,7 @@ Macros</h2></td></tr>
 <tr class="separator:a973c680573b37fc359fc68d0707da355"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b66efcf31ffd935735691c1827cd14e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino_8cpp.html#a9b66efcf31ffd935735691c1827cd14e">ARDUINO_UART</a>&#160;&#160;&#160;(<a class="el" href="stm32f4xx__it_8c.html#ab7c63c1b0f65db92b6a4ea19edf957e1">huart3</a>)</td></tr>
 <tr class="separator:a9b66efcf31ffd935735691c1827cd14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e042ba856651831d663ee73423757a1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino_8cpp.html#a1e042ba856651831d663ee73423757a1">ARDUINO_START_BYTE</a>&#160;&#160;&#160;(0xA5)</td></tr>
+<tr class="memitem:a1e042ba856651831d663ee73423757a1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino_8cpp.html#a1e042ba856651831d663ee73423757a1">ARDUINO_START_BYTE</a>&#160;&#160;&#160;(<a class="el" href="defines_8h.html#a30d2043ca397843e08c43ade3aaee5b2">START_BYTE</a>)</td></tr>
 <tr class="separator:a1e042ba856651831d663ee73423757a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e132cfaa78353e3af1474a86b2dd535"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino_8cpp.html#a4e132cfaa78353e3af1474a86b2dd535">MAX_DEVICES</a>&#160;&#160;&#160;(5)</td></tr>
 <tr class="separator:a4e132cfaa78353e3af1474a86b2dd535"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,6 +145,8 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:a2345a8d608254e2cea47418fd24f781c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_arduino___device.html">Arduino_Device</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino_8cpp.html#a2345a8d608254e2cea47418fd24f781c">gXLidar_Dev</a></td></tr>
 <tr class="separator:a2345a8d608254e2cea47418fd24f781c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abab2026c039546dc129852f8723906f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_arduino___device.html">Arduino_Device</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino_8cpp.html#abab2026c039546dc129852f8723906f1">gYLidar_Dev</a></td></tr>
+<tr class="separator:abab2026c039546dc129852f8723906f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16762c95560aecc263f5f1c17eff0fed"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino_8cpp.html#a16762c95560aecc263f5f1c17eff0fed">gTxBuffer</a> [<a class="el" href="throwing_8cpp.html#a973c680573b37fc359fc68d0707da355">MAX_PACKET_LENGTH</a>]</td></tr>
 <tr class="separator:a16762c95560aecc263f5f1c17eff0fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f06e092456ad3343e2ef8e5160a141f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arduino_8cpp.html#a9f06e092456ad3343e2ef8e5160a141f">gSending_Packet</a> = false</td></tr>
@@ -156,7 +160,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ARDUINO_START_BYTE&#160;&#160;&#160;(0xA5)</td>
+          <td class="memname">#define ARDUINO_START_BYTE&#160;&#160;&#160;(<a class="el" href="defines_8h.html#a30d2043ca397843e08c43ade3aaee5b2">START_BYTE</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -293,6 +297,20 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_lidar.html">Lidar</a> <a class="el" href="devs__config_8h.html#a9c7a34a9b46b96eb2b170e6254c6394c">gXLidar</a> &amp; gXLidar_Dev</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abab2026c039546dc129852f8723906f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abab2026c039546dc129852f8723906f1">&#9670;&nbsp;</a></span>gYLidar_Dev</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_lidar.html">Lidar</a> <a class="el" href="devs__config_8h.html#aa08b36d60f1ef297a770ba1ef9a46fa5">gYLidar</a> &amp; gYLidar_Dev</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -11,9 +11,11 @@ var class_position_sensor =
     [ "process_LidarData", "class_position_sensor.html#ad700f7bdc321b284af4b7d247f75f58f", null ],
     [ "read_Position", "class_position_sensor.html#a34aa8302e10e702599384f55148160e9", null ],
     [ "remove_Sensor", "class_position_sensor.html#ad81814b7f09c1104dc4695eec880979f", null ],
+    [ "rotate_EncData", "class_position_sensor.html#adcd13a461130d4ce2c53ca917794fc0b", null ],
     [ "update_State", "class_position_sensor.html#a501484f39ecfb966c487961d0ddfb65a", null ],
     [ "enc_fuser_", "class_position_sensor.html#aa536bfc9e67a2f4499d81d9ff745647d", null ],
     [ "p_sensors_", "class_position_sensor.html#a4705bb660e87f22569f972fef87ea1a3", null ],
     [ "sensor_count_", "class_position_sensor.html#a12a6eb3e5e67ee0737acb42eac113bb9", null ],
-    [ "xlidar_enc_fuser_", "class_position_sensor.html#ad2227b89b6accfbd5a5c554cabd2b225", null ]
+    [ "xlidar_enc_fuser_", "class_position_sensor.html#ad2227b89b6accfbd5a5c554cabd2b225", null ],
+    [ "ylidar_enc_fuser_", "class_position_sensor.html#a47f6c64acd23f2a7adf74030a432f18b", null ]
 ];

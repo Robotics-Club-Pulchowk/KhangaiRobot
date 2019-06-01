@@ -135,7 +135,11 @@ Vec3<float> State_Sensor::read_State(Vec3<float> base_state, const State_Vars *c
         else {
                 dori = ori - first_ori_;
                 pos = p_sensor_->read_Position(dori, base_state, curr_sv, dt_millis);
-                state.set_Values(pos.getX(), pos.getY(), dori.getZ());   // mm mm deg
+
+                float psi = dori.getZ() / 57.3;
+                psi = atan2(sin(psi), cos(psi)) * 57.3;
+
+                state.set_Values(pos.getX(), pos.getY(), psi);   // mm mm deg
 
                 state = compensate_Bounds(state, ori, curr_sv);
         }
@@ -371,8 +375,9 @@ Vec3<float> State_Sensor::read_Orientation(Vec3<float> base_state, uint32_t dt_m
         // Tilt Compensated Yaw
         float yaw = atan2f((bz*sin_roll - by*cos_roll), (bx*cos_pitch + by*sin_roll*sin_pitch + bz*cos_roll*sin_pitch)) * 57.3;
 
+        // printf("%ld\t", (int32_t)(yaw));
         yaw = gYaw_Filter.filter(yaw, gz, dt_millis);
-        // printf("%ld\n", (int32_t)(yaw*1000));
+        // printf("%ld\n", (int32_t)(yaw));
 
         angles.set_Values(roll, pitch, yaw);
 
@@ -386,66 +391,91 @@ void State_Sensor::change_Sensors(Field field_id)
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->add_Sensor(&gXLidar);
+                        p_sensor_->add_Sensor(&gYLidar);
                 } break;
                 
                 case Field::FIELD_B : {      // State B
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->add_Sensor(&gXLidar);
+                        p_sensor_->add_Sensor(&gYLidar);
                 } break;
                 
                 case Field::FIELD_C : {      // State C
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->add_Sensor(&gXLidar);
+                        p_sensor_->add_Sensor(&gYLidar);
                 } break;
                 
                 case Field::FIELD_D : {      // State D
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->add_Sensor(&gXLidar);
+                        p_sensor_->add_Sensor(&gYLidar);
                 } break;
                 
                 case Field::FIELD_E : {      // State E
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->add_Sensor(&gXLidar);
+                        p_sensor_->add_Sensor(&gYLidar);
                 } break;
                 
                 case Field::FIELD_F : {      // State F
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->add_Sensor(&gXLidar);
+                        p_sensor_->add_Sensor(&gYLidar);
                 } break;
                 
                 case Field::FIELD_G : {      // State G
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->add_Sensor(&gXLidar);
+                        p_sensor_->add_Sensor(&gYLidar);
                 } break;
                 
                 case Field::FIELD_H : {      // State H
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->add_Sensor(&gXLidar);
+                        p_sensor_->add_Sensor(&gYLidar);
                 } break;
                 
                 case Field::FIELD_I : {      // State I
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->remove_Sensor(&gXLidar);
+                        p_sensor_->add_Sensor(&gYLidar);
+                } break;
+                
+                case Field::FIELD_J : {      // State J
+                        p_sensor_->add_Sensor(&gXEncoder);
+                        p_sensor_->add_Sensor(&gYEncoder);
+                        p_sensor_->remove_Sensor(&gXLidar);
+                        p_sensor_->add_Sensor(&gYLidar);
+                } break;
+                
+                case Field::FIELD_O : {      // State O
+                        p_sensor_->add_Sensor(&gXEncoder);
+                        p_sensor_->add_Sensor(&gYEncoder);
+                        p_sensor_->remove_Sensor(&gXLidar);
+                        p_sensor_->remove_Sensor(&gYLidar);
                 } break;
                 
                 case Field::FIELD_P : {      // State I
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->remove_Sensor(&gXLidar);
+                        p_sensor_->remove_Sensor(&gYLidar);
                 } break;
 
                 default : {      // Default State
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->remove_Sensor(&gXLidar);
+                        p_sensor_->remove_Sensor(&gYLidar);
                 }
         }
 }

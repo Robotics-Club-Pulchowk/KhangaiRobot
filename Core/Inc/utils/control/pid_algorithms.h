@@ -17,6 +17,7 @@ public:
         PID_Algorithm() { set_PID(0,0,0); }
         PID_Algorithm(float p, float i, float d) { set_PID(p,i,d); }
         virtual float compute(float error, uint32_t dt_millis) = 0;
+        virtual void clear() = 0;
 
         void set_P(float p) { p_ = p; }
         void set_I(float i) { i_ = i; }
@@ -50,14 +51,10 @@ class Discrete_PID : public PID_Algorithm
 public:
         Discrete_PID(float p, float i, float d) :
         PID_Algorithm(p, i, d) {
-                l_output_ = 0;
-                l_err_ = 0;
-                ll_err_ = 0;
+                clear();
         }
         Discrete_PID() {
-                l_output_ = 0;
-                l_err_ = 0;
-                ll_err_ = 0;
+                clear();
         }
         Discrete_PID(Discrete_PID &&) = default;
         Discrete_PID(const Discrete_PID &) = default;
@@ -104,6 +101,12 @@ public:
                 l_err_ = error;
 
                 return l_output_;
+        }
+
+        void clear() {
+                l_output_ = 0;
+                l_err_ = 0;
+                ll_err_ = 0;
         }
 
 private:

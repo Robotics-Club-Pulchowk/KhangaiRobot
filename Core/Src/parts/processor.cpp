@@ -156,9 +156,8 @@ Vec3<float> Processor::auto_control(Vec3<float> state, Vec3<float> vel_from_base
         // ! Need to look here more
         float vx = v*sin(theta - phi);
         float vy = v*cos(theta - phi);
-        float rw = (phi)*0.3;
 
-        vel.set_Values(vx, vy, rw);
+        vel.set_Values(vx, vy, 0);
 
         // This is for correcting units and the inverted co-ordinate system
         vx = -vel.getX() / (float)1000.0;
@@ -282,18 +281,12 @@ Vec3<float> Processor::control(Vec3<float> state,
         //* Select Controller on the basis of control mode
         if (mode == Control_Mode::MANUAL) {
 
-                float phi = state.getZ();
-                phi /= (float)57.3;     // to rads
-
                 if (!just_read) {
                         vels = last_vel.mult_EW(0.8);
                 }
                 else {
                         vels = manual_control(joy_command);
                 }
-
-                float rw = (phi)*0.3;
-                vels.setZ(rw);
 
                 led_val = fill_Intensity(0, 15);
         }
@@ -311,11 +304,6 @@ Vec3<float> Processor::control(Vec3<float> state,
                 vels = lerp(vels_manual, vels_auto, gAuto_Ratio);
 
                 led_val = fill_Intensity(15, 5);
-
-                if (id == Field::FIELD_O || id == Field::FIELD_P) {
-                        float rw = vels.getZ();
-                        vels.setZ(0.5*rw);
-                }
         }
 
         //* Determine if there is change in control mode from the previous one

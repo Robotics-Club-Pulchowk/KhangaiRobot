@@ -13,6 +13,8 @@
 #include "pid.h"
 #include "mat.h"
 
+#include "logger.h"
+
 #define WHEEL_RADIUS    (0.0675)
 
 
@@ -63,7 +65,8 @@ const float gInverse_Coupling_Array[3][4] = {{ 0.25,  0.25, -0.25, -0.25 },
 static const Mat gInverse_Coupling_Matrix(gInverse_Coupling_Array);
 /**
  * @brief Function that actuate the robot's base(omni-base)
- * @param vel : An vector that holds vx, vy and omega
+ * @param vel : A vector that holds vx, vy and omega
+ * @param psis : A vector that holds psi_target, psi and psi_dot
  * @param dt_millis : The time period at which this function is called periodically
  * @retval A vector that holds vx, vy and omega of the base in the last frame
  * 
@@ -81,14 +84,48 @@ static const Mat gInverse_Coupling_Matrix(gInverse_Coupling_Array);
  *    wheel using the inverse Coupling Matrix
  * </pre>
  */
-Vec3<float> Actuator::actuate(Vec3<float> vel, uint32_t dt_millis)
+
+Vec3<float> Actuator::actuate(Vec3<float> vel, Vec3<float> psis, uint32_t dt_millis, int8_t test)
 {
+        float rw = 0;
+        float t_psi = psis.getX() / 57.3;
+        float psi = psis.getY() / 57.3;
+
+        if (test > 0) {
+                rw = 0.5;
+        }
+        else if (test < 0) {
+                rw = -0.5;
+        }
+        else {
+                // Calculate rw
+                float err_psi = t_psi - psi;
+                if (fabsf(err_psi) < 0.02) {
+                        err_psi = 0;
+                }
+                rw = -angle_pid_->compute_PID(err_psi, dt_millis);
+        }
+        
+        vel.setZ(rw);
+
         Mat wheels_omegas = gCoupling_Matrix * vel;
         // w = v / r
         float set_points[4] = { wheels_omegas.at(0,0) / (float)(WHEEL_RADIUS),
                                 wheels_omegas.at(1,0) / (float)(WHEEL_RADIUS),
                                 wheels_omegas.at(2,0) / (float)(WHEEL_RADIUS),
                                 wheels_omegas.at(3,0) / (float)(WHEEL_RADIUS) };
+
+// #define _USE_SAFETY_ON_WHEELS
+#ifdef _USE_SAFETY_ON_WHEELS
+        for (uint8_t i = 0; i < 4; ++i) {
+                if (set_points[i] > 25) {
+                        set_points[i] = 25;
+                }
+                else if (set_points[i] < -25) {
+                        set_points[i] = -25;
+                }
+        }
+#endif
 
         // This is motor tuning part
         // Omega is created as 2D array with single column so that we can easily
@@ -123,7 +160,8 @@ Vec3<float> Actuator::actuate(Vec3<float> vel, uint32_t dt_millis)
                 new_omega[i] = voltage[i] * max_omega / max_voltage;
 
                 wheels_[i].set_Omega(new_omega[i]);
-                // printf("(%ld, %ld, %ld)  ", (int32_t)(set_points[i]*1000), (int32_t)(omega[i]*1000), (int32_t)(new_omega[i]*1000));
+                // printf("%ld   %ld   %ld   ", (int32_t)(set_points[i]*1000), (int32_t)(omega[i]*1000), (int32_t)(new_omega[i]*1000));
+                // wheels_[i].log(omega[i], new_omega[i]);
 
                 vels[i][0] = omega[i] * (float)(WHEEL_RADIUS);
         }
@@ -203,6 +241,14 @@ uint32_t Actuator::stop(uint32_t dt_millis, float ramp_factor, uint32_t max_time
         return (tick_end - tick_start);
 }
 
+void Actuator::clear()
+{
+        for (uint8_t i = 0; i < 4; ++i) {
+                wheels_[i].clear();
+        }
+        angle_pid_->clear();
+}
+
 
 static Wheel_Config gWheel_Configurations[4];
 /**
@@ -230,7 +276,7 @@ void Actuator::wheels_Init(void)
         int i;
         for (i = 0; i < 4; i++)
         {
-                gWheel_Configurations[i].id = i;
+                gWheel_Configurations[i].id = i + 1;
                 gWheel_Configurations[i].radius = 0.0675;
                 // All motors are connected to same timer : TIM8
                 gWheel_Configurations[i].htim = &htim8;
@@ -243,7 +289,7 @@ void Actuator::wheels_Init(void)
         gWheel_Configurations[0].in1_pin = GPIO_PIN_5; 
         gWheel_Configurations[0].channel = TIM_CHANNEL_1;
         gWheel_Configurations[0].henc = &htim4;
-        gWheel_Configurations[0].max_omega = 69;
+        gWheel_Configurations[0].max_omega = 65.19;
 
         gWheel_Configurations[1].in2_port = GPIOA;
         gWheel_Configurations[1].in2_pin = GPIO_PIN_10;
@@ -251,7 +297,7 @@ void Actuator::wheels_Init(void)
         gWheel_Configurations[1].in1_pin = GPIO_PIN_5;
         gWheel_Configurations[1].channel = TIM_CHANNEL_2;
         gWheel_Configurations[1].henc = &htim2;
-        gWheel_Configurations[1].max_omega = 70;
+        gWheel_Configurations[1].max_omega = 63.86;
         
         gWheel_Configurations[2].in2_port = GPIOE;
         gWheel_Configurations[2].in2_pin = GPIO_PIN_3;
@@ -259,7 +305,7 @@ void Actuator::wheels_Init(void)
         gWheel_Configurations[2].in1_pin = GPIO_PIN_2;
         gWheel_Configurations[2].channel = TIM_CHANNEL_3;
         gWheel_Configurations[2].henc = &htim3;
-        gWheel_Configurations[2].max_omega = 68;
+        gWheel_Configurations[2].max_omega = 71.507;
 
         gWheel_Configurations[3].in2_port = GPIOC;
         gWheel_Configurations[3].in2_pin = GPIO_PIN_13;
@@ -267,7 +313,7 @@ void Actuator::wheels_Init(void)
         gWheel_Configurations[3].in1_pin = GPIO_PIN_1;
         gWheel_Configurations[3].channel = TIM_CHANNEL_4;
         gWheel_Configurations[3].henc = &htim1;
-        gWheel_Configurations[3].max_omega = 68;
+        gWheel_Configurations[3].max_omega = 68.041;
 
         for (uint8_t i = 0; i < 4; ++i) {
                 wheels_[i].set_Config(&gWheel_Configurations[i]);
@@ -279,8 +325,12 @@ void Actuator::wheels_Init(void)
 static Discrete_PID gDisc_PID[4];
 static PID gPID[4];
 
-static float gI_Factor = 2;
-static float gP_Factor = 2;
+// static float gI_Factor = 3.125;
+// static float gP_Factor = 1;
+
+//* Robot's ANgle Control parameters
+static Discrete_PID gAng_PID;
+static PID gRobo_PID;
 /**
  * @brief Function that initializes all the required components for the wheel's
  *        pid controller
@@ -295,14 +345,19 @@ static float gP_Factor = 2;
  */
 void Actuator::pid_Init()
 {
-        gDisc_PID[0].set_PID(0.2538, gI_Factor*6.0, 0);
+        gDisc_PID[0].set_PID(0.525, 14.896, 0.0);
         gDisc_PID[0].set_Limits(24, -24);
-        gDisc_PID[1].set_PID(0.2469, gI_Factor*7.01, 0);
+        gDisc_PID[1].set_PID(0.525, 10.345, 0.0);
         gDisc_PID[1].set_Limits(24, -24);
-        gDisc_PID[2].set_PID(gP_Factor*0.2582, gI_Factor*7.834, 0);
+        gDisc_PID[2].set_PID(0.525, 13.954, 0.0);
         gDisc_PID[2].set_Limits(24, -24);
-        gDisc_PID[3].set_PID(0.261, gI_Factor*8.501, 0);
+        gDisc_PID[3].set_PID(0.685, 12.945, 0.0);
         gDisc_PID[3].set_Limits(24, -24);
+
+        gAng_PID.set_PID(0.943, 0, 0);
+        gAng_PID.set_Limits(3, -3);
+        gRobo_PID.set_Algorithm(&gAng_PID);
+        set_AnglePID(&gRobo_PID);
 
         for (uint8_t i = 0; i < 4; ++i) {
                 gPID[i].set_Algorithm(&gDisc_PID[i]);
@@ -327,7 +382,7 @@ void Actuator::profile(Vec3<float> vel, uint32_t dt_millis)
                         curr_time = HAL_GetTick();
 
                         printf("Actuated : ");
-                        v = actuate(vel, dt_millis);
+                        // v = actuate(vel, dt_millis);
                         v = v.mult_EW(1000);
                         v.print();
                         printf("\n");

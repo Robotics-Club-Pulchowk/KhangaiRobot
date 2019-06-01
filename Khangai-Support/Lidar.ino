@@ -6,27 +6,94 @@
  *   email : 073bex422.nischal@pcampus.edu.np
  */
 
+#include "TFMini.h"
 #include "main.h"
 
-uint8_t gLidar_Buffer[2] = { 0 };
+//* Following variables are for timing purpose
+const unsigned long gLidar_Read_Period = 10;
+static unsigned long gXLidar_Read_Time = 0;
+static unsigned long gYLidar_Read_Time = 0;
+static bool gIs_First_Update = true;
 
-void send_LidarDataPack(unsigned long val)
+//* Biases of respective lidars
+static unsigned long gXLidar_Bias = 135;
+static unsigned long gYLidar_Bias = 35;
+
+//* Construct the lidar's object
+TFMini gXLidar;
+TFMini gYLidar;
+
+//* Initialize the lidars as shown in BasicReading.ino example of TFMini
+void init_Lidars()
 {
-        //* Send the lidar data in big endian format
-        gLidar_Buffer[0] = (uint8_t)(val >> 8);
-        gLidar_Buffer[1] = (uint8_t)val;
+        XLIDAR_SERIAL.begin(TFMINI_BAUDRATE);
+        YLIDAR_SERIAL.begin(TFMINI_BAUDRATE);
 
-        send_DataPack(gLidar_Address, gLidar_Buffer, 2);
+#ifdef _DEBUG_MODE
+        Serial.println("Initializing Lidars...");
+#endif
 
-        Serial.println(val);
+        gXLidar.begin(&XLIDAR_SERIAL);
+        gYLidar.begin(&YLIDAR_SERIAL);
 }
 
-unsigned long read_Lidar()
+void send_LidarDataPack(uint8_t addr, unsigned long val)
 {
-        unsigned long pulseWidth;
+        uint8_t buf[2];
+        //* Send the lidar data in big endian format
+        buf[0] = (uint8_t)(val >> 8);
+        buf[1] = (uint8_t)val;
 
-        //* Count how long the pulse is high in microseconds
-        pulseWidth = pulseIn(3, HIGH);
+        send_DataPack(addr, buf, 2);
 
-        return pulseWidth;      //* 1usec = 1 mm of distance
+}
+
+void update_Lidars()
+{
+        uint16_t dist;
+        if (gIs_First_Update) {
+                gXLidar_Read_Time = millis();
+                delay(2);
+                gYLidar_Read_Time = millis();
+
+                gIs_First_Update = false;
+        }
+        else {
+                if (millis() - gXLidar_Read_Time > gLidar_Read_Period) {
+                        gXLidar_Read_Time = millis();
+
+                        //* Read and send XLidar data here
+                        dist = gXLidar.getDistance()*10 + gXLidar_Bias;
+                        send_LidarDataPack(gXLidar_Address, dist);
+                        
+#ifdef _DEBUG_MODE
+                        uint16_t strength = gXLidar.getRecentSignalStrength();
+                        
+                        // Display the measurement
+                        Serial.print("XLidar(0x02) : ");
+                        Serial.print(dist);
+                        Serial.print(" mm      sigstr: ");
+                        Serial.println(strength);
+#endif
+
+                }
+
+                if (millis() - gYLidar_Read_Time > gLidar_Read_Period) {
+                        gYLidar_Read_Time = millis();
+
+                        //* Read and send YLidar data here
+                        dist = gYLidar.getDistance()*10 + gYLidar_Bias;
+                        send_LidarDataPack(gYLidar_Address, dist);
+                        
+#ifdef _DEBUG_MODE
+                        uint16_t strength = gYLidar.getRecentSignalStrength();
+                        
+                        // Display the measurement
+                        Serial.print("YLidar(0x03) : ");
+                        Serial.print(dist);
+                        Serial.print(" mm      sigstr: ");
+                        Serial.println(strength);
+#endif
+                }
+        }
 }

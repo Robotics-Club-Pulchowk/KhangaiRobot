@@ -18,6 +18,7 @@
                                 "${workspaceRoot}/Core/Inc/utils/filter",
                                 "${workspaceRoot}/Core/Inc/utils/math",
                                 "${workspaceRoot}/Core/Inc/utils/trajectory",
+                                "${workspaceRoot}/Core/Inc/utils/crypto",
                                 
                                 "C:/Users/n-is/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Inc",
                                 "C:/Users/n-is/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy",
@@ -28,7 +29,12 @@
 
                                 "${workspaceRoot}/Tests",
                                 "${workspaceRoot}/Tests/Src",
-                                "${workspaceRoot}/Tests/Src/Devices"
+                                "${workspaceRoot}/Tests/Src/Devices",
+                                
+                                "C:/Users/n-is/OneDrive/Documents/Arduino/libraries/TFMini/src",
+                                "C:/Users/n-is/OneDrive/Documents/Arduino/libraries/USB_Host_Shield_Library_2.0",
+                                "C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SoftwareSerial/src",
+                                "C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/src"
                         ],
                         "intelliSenseMode": "msvc-x64"
                 }

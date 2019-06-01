@@ -10,6 +10,7 @@
 #define _POSITION_SENSOR_H_
 
 #include "vec3.h"
+#include "vec2.h"
 #include "sensor.h"
 #include "kalman.h"
 
@@ -20,8 +21,10 @@ enum class Field;
 
 extern Kalman_Vars gEncoders_KV;
 extern Kalman_Vars gXLidarEncoder_KV;
+extern Kalman_Vars gYLidarEncoder_KV;
 
 int init_XLidarEncoderKalman(uint32_t dt_millis);
+int init_YLidarEncoderKalman(uint32_t dt_millis);
 int init_EncodersKalman(uint32_t dt_millis);
 
 
@@ -69,14 +72,17 @@ private:
 
         Kalman_Filter enc_fuser_;
         Kalman_Filter xlidar_enc_fuser_;
+        Kalman_Filter ylidar_enc_fuser_;
         
         PositionSensor() :
-        enc_fuser_(&gEncoders_KV, init_EncodersKalman), xlidar_enc_fuser_(&gXLidarEncoder_KV, init_XLidarEncoderKalman)
+        enc_fuser_(&gEncoders_KV, init_EncodersKalman), xlidar_enc_fuser_(&gXLidarEncoder_KV, init_XLidarEncoderKalman),
+        ylidar_enc_fuser_(&gYLidarEncoder_KV, init_YLidarEncoderKalman)
         {
                 sensor_count_ = 0;
         }
 
         void process_LidarData(float (&lidar)[2], const State_Vars *sv);
+        Vec2<float> rotate_EncData(Vec3<float> ori, Vec2<float> enc);
 };
 
 #endif // !_POSITION_SENSOR_H_

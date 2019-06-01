@@ -105,7 +105,7 @@ Collaboration diagram for PositionSensor:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_position_sensor__coll__graph.png" border="0" usemap="#_position_sensor_coll__map" alt="Collaboration graph"/></div>
 <map name="_position_sensor_coll__map" id="_position_sensor_coll__map">
-<area shape="rect"  title=" " alt="" coords="63,408,173,435"/>
+<area shape="rect"  title=" " alt="" coords="63,423,173,449"/>
 <area shape="rect"  href="class_sensor.html" title=" " alt="" coords="5,304,116,331"/>
 <area shape="rect"  href="class_kalman___filter.html" title=" " alt="" coords="140,304,243,331"/>
 <area shape="rect"  href="struct_kalman___vars.html" title=" " alt="" coords="203,199,303,225"/>
@@ -147,6 +147,8 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:a0876bb5181de264cbd15ab3d8a26720a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad700f7bdc321b284af4b7d247f75f58f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_sensor.html#ad700f7bdc321b284af4b7d247f75f58f">process_LidarData</a> (float(&amp;lidar)[2], const <a class="el" href="struct_state___vars.html">State_Vars</a> *sv)</td></tr>
 <tr class="separator:ad700f7bdc321b284af4b7d247f75f58f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcd13a461130d4ce2c53ca917794fc0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vec2.html">Vec2</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_sensor.html#adcd13a461130d4ce2c53ca917794fc0b">rotate_EncData</a> (<a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt; ori, <a class="el" href="class_vec2.html">Vec2</a>&lt; float &gt; enc)</td></tr>
+<tr class="separator:adcd13a461130d4ce2c53ca917794fc0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -158,6 +160,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:aa536bfc9e67a2f4499d81d9ff745647d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2227b89b6accfbd5a5c554cabd2b225"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_kalman___filter.html">Kalman_Filter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_sensor.html#ad2227b89b6accfbd5a5c554cabd2b225">xlidar_enc_fuser_</a></td></tr>
 <tr class="separator:ad2227b89b6accfbd5a5c554cabd2b225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47f6c64acd23f2a7adf74030a432f18b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_kalman___filter.html">Kalman_Filter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_position_sensor.html#a47f6c64acd23f2a7adf74030a432f18b">ylidar_enc_fuser_</a></td></tr>
+<tr class="separator:a47f6c64acd23f2a7adf74030a432f18b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a07d786f6718ceddcba77d906e0f5dda3"></a>
@@ -361,11 +365,13 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_position_sensor_a1f20719186d564899cba8ae3a01c3ecc_cgraph.png" border="0" usemap="#class_position_sensor_a1f20719186d564899cba8ae3a01c3ecc_cgraph" alt=""/></div>
 <map name="class_position_sensor_a1f20719186d564899cba8ae3a01c3ecc_cgraph" id="class_position_sensor_a1f20719186d564899cba8ae3a01c3ecc_cgraph">
-<area shape="rect"  title=" " alt="" coords="5,56,140,83"/>
+<area shape="rect"  title=" " alt="" coords="5,31,140,57"/>
 <area shape="rect"  href="devs__config_8h.html#a7a9d8b41fb6b7081d142fe2e84ed8e20" title=" " alt="" coords="188,5,289,32"/>
-<area shape="rect"  href="class_encoder.html#a0548c9bae5acec8c70616e1015cdaede" title=" " alt="" coords="191,56,286,83"/>
-<area shape="rect"  href="class_lidar.html#a319f70d36bd17592036aa1e92a6e7292" title=" " alt="" coords="201,107,276,133"/>
-<area shape="rect"  href="class_arduino___device.html#a32dc6658c68c9190fab562babe1650cf" title=" " alt="" coords="337,107,473,133"/>
+<area shape="rect"  href="devs__config_8h.html#a255201daf7b60410935e2f939f34a263" title=" " alt="" coords="198,56,279,83"/>
+<area shape="rect"  href="class_encoder.html#a0548c9bae5acec8c70616e1015cdaede" title=" " alt="" coords="354,5,449,32"/>
+<area shape="rect"  href="class_lidar.html#a4d6d4fd8bdcc558f474e349ade576523" title=" " alt="" coords="337,56,465,83"/>
+<area shape="rect"  href="class_lidar.html#a319f70d36bd17592036aa1e92a6e7292" title=" " alt="" coords="364,107,439,133"/>
+<area shape="rect"  href="class_arduino___device.html#a32dc6658c68c9190fab562babe1650cf" title=" " alt="" coords="513,107,649,133"/>
 </map>
 </div>
 
@@ -456,6 +462,18 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_position_sensor_ad700f7bdc321b284af4b7d247f75f58f_icgraph.png" border="0" usemap="#class_position_sensor_ad700f7bdc321b284af4b7d247f75f58f_icgraph" alt=""/></div>
+<map name="class_position_sensor_ad700f7bdc321b284af4b7d247f75f58f_icgraph" id="class_position_sensor_ad700f7bdc321b284af4b7d247f75f58f_icgraph">
+<area shape="rect"  title=" " alt="" coords="672,5,836,47"/>
+<area shape="rect"  href="class_position_sensor.html#a34aa8302e10e702599384f55148160e9" title=" " alt="" coords="481,5,624,47"/>
+<area shape="rect"  href="class_state___sensor.html#a79118858b21e47b7e6e509dfba5b06f8" title="Function that provides the state of the robot." alt="" coords="299,5,433,47"/>
+<area shape="rect"  href="class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,13,251,39"/>
+<area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,13,100,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -501,10 +519,12 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_position_sensor_a34aa8302e10e702599384f55148160e9_cgraph.png" border="0" usemap="#class_position_sensor_a34aa8302e10e702599384f55148160e9_cgraph" alt=""/></div>
 <map name="class_position_sensor_a34aa8302e10e702599384f55148160e9_cgraph" id="class_position_sensor_a34aa8302e10e702599384f55148160e9_cgraph">
-<area shape="rect"  title=" " alt="" coords="5,49,148,90"/>
-<area shape="rect"  href="class_vec3.html#a2d66e34e1ad4be888821158541fcd2ea" title=" " alt="" coords="201,5,287,32"/>
-<area shape="rect"  href="class_vec3.html#a4dadb34f7d48268a101914b7a4771e68" title=" " alt="" coords="201,56,287,83"/>
-<area shape="rect"  href="class_sensor.html#a5a115feac97a147feec2f637dbed62ac" title=" " alt="" coords="196,107,292,133"/>
+<area shape="rect"  title=" " alt="" coords="5,99,148,141"/>
+<area shape="rect"  href="class_vec2.html#aec2b21ff78bf3a2e20a044e1ab7d4b53" title=" " alt="" coords="235,5,321,32"/>
+<area shape="rect"  href="class_vec2.html#afb88a3937a78e4d2d7f9031321e6a20b" title=" " alt="" coords="235,56,321,83"/>
+<area shape="rect"  href="class_sensor.html#a5a115feac97a147feec2f637dbed62ac" title=" " alt="" coords="230,107,326,133"/>
+<area shape="rect"  href="error_8h.html#ab5744f81944e2a834ef96ae10f8ae166" title=" " alt="" coords="254,157,302,184"/>
+<area shape="rect"  href="class_position_sensor.html#ad700f7bdc321b284af4b7d247f75f58f" title=" " alt="" coords="196,209,360,250"/>
 </map>
 </div>
 <div class="dynheader">
@@ -559,6 +579,59 @@ Here is the caller graph for this function:</div>
 <area shape="rect"  href="robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,53,100,79"/>
 <area shape="rect"  href="class_processor.html#a08eb6304c0993769d125cc8186cb51ac" title=" " alt="" coords="299,78,427,105"/>
 <area shape="rect"  href="class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,78,251,105"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adcd13a461130d4ce2c53ca917794fc0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcd13a461130d4ce2c53ca917794fc0b">&#9670;&nbsp;</a></span>rotate_EncData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vec2.html">Vec2</a>&lt; float &gt; PositionSensor::rotate_EncData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vec3.html">Vec3</a>&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>ori</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vec2.html">Vec2</a>&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>enc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_position_sensor_adcd13a461130d4ce2c53ca917794fc0b_cgraph.png" border="0" usemap="#class_position_sensor_adcd13a461130d4ce2c53ca917794fc0b_cgraph" alt=""/></div>
+<map name="class_position_sensor_adcd13a461130d4ce2c53ca917794fc0b_cgraph" id="class_position_sensor_adcd13a461130d4ce2c53ca917794fc0b_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,150,156,191"/>
+<area shape="rect"  href="class_vec3.html#ad259e243f6678730d990acbae2cdff57" title=" " alt="" coords="205,5,290,32"/>
+<area shape="rect"  href="class_vec3.html#a8eeb16262b7e619f081a1ba94df098f8" title=" " alt="" coords="204,56,291,83"/>
+<area shape="rect"  href="class_vec3.html#a52f0db1c387aa9bc7befe5792b698553" title=" " alt="" coords="205,107,290,133"/>
+<area shape="rect"  href="class_vec2.html#ab9c6aa483fc884d65a0f50a6426dce04" title=" " alt="" coords="205,157,290,184"/>
+<area shape="rect"  href="class_vec2.html#ab34c86af20c627cd5ed0e1a973a43fa3" title=" " alt="" coords="204,208,291,235"/>
+<area shape="rect"  href="class_mat.html#aa2864c30e68caf29f400bb98295aa6a3" title=" " alt="" coords="207,259,288,285"/>
+<area shape="rect"  href="class_mat.html#a5f4b8f7e3c55a1caf7161c11ec2a2465" title=" " alt="" coords="216,309,279,336"/>
+<area shape="rect"  href="class_mat.html#a55e6cc33fc65042a4cff351fe59ae476" title=" " alt="" coords="339,259,448,285"/>
+<area shape="rect"  href="main_8h.html#a425dc7e549f2b17a4f48496d9561d248" title=" " alt="" coords="339,309,447,336"/>
 </map>
 </div>
 
@@ -674,6 +747,28 @@ Here is the caller graph for this function:</div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_kalman___filter.html">Kalman_Filter</a> PositionSensor::xlidar_enc_fuser_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a47f6c64acd23f2a7adf74030a432f18b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47f6c64acd23f2a7adf74030a432f18b">&#9670;&nbsp;</a></span>ylidar_enc_fuser_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_kalman___filter.html">Kalman_Filter</a> PositionSensor::ylidar_enc_fuser_</td>
         </tr>
       </table>
   </td>

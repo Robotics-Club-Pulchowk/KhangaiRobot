@@ -10,5 +10,6 @@ var arduino_8cpp =
     [ "Arduino_Handle_TxCplt", "arduino_8cpp.html#a4102fb699b44bdcef0e7a2952bc8bece", null ],
     [ "gSending_Packet", "arduino_8cpp.html#a9f06e092456ad3343e2ef8e5160a141f", null ],
     [ "gTxBuffer", "arduino_8cpp.html#a16762c95560aecc263f5f1c17eff0fed", null ],
-    [ "gXLidar_Dev", "arduino_8cpp.html#a2345a8d608254e2cea47418fd24f781c", null ]
+    [ "gXLidar_Dev", "arduino_8cpp.html#a2345a8d608254e2cea47418fd24f781c", null ],
+    [ "gYLidar_Dev", "arduino_8cpp.html#abab2026c039546dc129852f8723906f1", null ]
 ];

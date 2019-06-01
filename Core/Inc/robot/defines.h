@@ -10,6 +10,13 @@
 
 #define MAX_POSSIBLE_OMEGA	(70)    // Maximum value that may be computed
 
+#define START_BYTE      (0xA5)
+
+//* Packet IDs
+#define MOTOR_PACKET_ID                 (0x01)
+#define ANGLE_PACKET_ID                 (0x02)
+#define COMPASS_PACKET_ID               (0x03)
+#define JOYSTICK_ERROR_PACKET_ID        (0x04)
 
 // #define _USE_BOARD_LEDS_FOR_JOYSTICK
 
