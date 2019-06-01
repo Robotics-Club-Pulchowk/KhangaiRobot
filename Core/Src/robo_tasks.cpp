@@ -162,7 +162,7 @@ void MotorThread(void const *argument)
                         dt_tmp = HAL_GetTick();
                         dt = dt_tmp - dt;
 
-                        // Khangai_Robot.run(sample_period);
+                        Khangai_Robot.run(sample_period);
 
                         // for (uint32_t i = 0; i < 100; ++i) {
                         //         printf("%ld, %ld\n", dt + last_run_time, i);
