@@ -115,13 +115,14 @@ Vec3<float> Actuator::actuate(Vec3<float> vel, Vec3<float> psis, uint32_t dt_mil
                                 wheels_omegas.at(2,0) / (float)(WHEEL_RADIUS),
                                 wheels_omegas.at(3,0) / (float)(WHEEL_RADIUS) };
 
+// #define _USE_SAFETY_ON_WHEELS
 #ifdef _USE_SAFETY_ON_WHEELS
         for (uint8_t i = 0; i < 4; ++i) {
-                if (set_points[i] > 15) {
-                        set_points[i] = 15;
+                if (set_points[i] > 25) {
+                        set_points[i] = 25;
                 }
-                else if (set_points[i] < -15) {
-                        set_points[i] = -15;
+                else if (set_points[i] < -25) {
+                        set_points[i] = -25;
                 }
         }
 #endif
