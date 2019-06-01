@@ -51,6 +51,8 @@ int PositionSensor::init(uint32_t dt_millis)
         return 0;
 }
 
+static bool gY_Lidar_Used = false;
+
 Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_state, const State_Vars *sv, uint32_t dt_millis)
 {
         // First Collect Data from all available position sensors
@@ -60,6 +62,7 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
 
         bool x_lidar_used(false), y_lidar_used(false);
         bool x_enc_used(false), y_enc_used(false);
+        gY_Lidar_Used = false;
 
         for (uint8_t i = 0; i < sensor_count_; ++i) {
                 if (p_sensors_[i]->get_Name() == SensorName::XEncoder) {
@@ -77,8 +80,9 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
                 }
                 else if (p_sensors_[i]->get_Name() == SensorName::YLidar) {
                         lidar[1] = p_sensors_[i]->read();
-                        // printf("Time : %ld\tYLidar : %ld\n", HAL_GetTick(), (int32_t)lidar[1]);
+                        printf("Time : %ld\tYLidar : %ld\t\t", HAL_GetTick(), (int32_t)lidar[1]);
                         y_lidar_used = true;
+                        gY_Lidar_Used = true;
                 }
         }
         // Report error if there are no available sensors in any axes
@@ -102,7 +106,7 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
         else {
                 gXLidarAlpha35.clear();
         }
-        if (y_lidar_used) {
+        if (gY_Lidar_Used) {
                 lidar[1] = gYLidarAlpha35.smooth(lidar[1]);
         }
         else {
@@ -112,8 +116,8 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
 
         // Calculate the movement of the body with respect to the body frame
         Vec2<float> enc = rotate_EncData(ori, free_wheel);
-        float ex = enc.getX();        
-        float ey = enc.getY();        
+        float ex = -enc.getX();        
+        float ey = -enc.getY();        
 
         // Fuse the data with the data from lidar that gives movement with
         // respect to the navigation frame
@@ -126,7 +130,7 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
         else {
                 x = xlidar_enc_fuser_.filter(lidar[0], ex, dt_millis);
         }
-        if (!y_lidar_used) {
+        if (!gY_Lidar_Used) {
                 y = gLastPosition.getY() + ey;
                 ylidar_enc_fuser_.clear();
         }
@@ -160,6 +164,7 @@ void PositionSensor::process_LidarData(float (&lidar)[2], const State_Vars *sv)
 
         float jungle_pole_dist = 1255;
         float bridge_pole_dist = 900;
+        float ylidar_lower_value = 100;
         float tol = 100;
 
         Field id = sv->id;
@@ -213,44 +218,46 @@ void PositionSensor::process_LidarData(float (&lidar)[2], const State_Vars *sv)
                 }
 
                 // Compensating y-values at poles using ylidar's data 
-                if (id == Field::FIELD_A || id == Field::FIELD_B) {
-                        if (lidar[1] < 1500) {
+                if (id == Field::FIELD_A) {
+                        if (lidar[1] < 1500 && lidar[1] > ylidar_lower_value) {
                                 lidar[1] = 2000 - lidar[1];
                         }
                         else {
-                                lidar[1] = gLast_YEncoderValue;
+                                gY_Lidar_Used = false;
                         }
                 }
-                else if (id == Field::FIELD_C || id == Field::FIELD_D) {
-                        if (lidar[1] < 1000) {
+                else if (id == Field::FIELD_C) {
+                        if (lidar[1] < 1000 && lidar[1] > ylidar_lower_value) {
                                 lidar[1] = 3500 - lidar[1];
                         }
                         else {
-                                lidar[1] = gLast_YEncoderValue;
+                                gY_Lidar_Used = false;
                         }
                 }
-                else if (id == Field::FIELD_E || id == Field::FIELD_F) {
-                        if (lidar[1] < 1000) {
+                else if (id == Field::FIELD_E) {
+                        if (lidar[1] < 1000 && lidar[1] > ylidar_lower_value) {
                                 lidar[1] = 5000 - lidar[1];
                         }
                         else {
-                                lidar[1] = gLast_YEncoderValue;
+                                gY_Lidar_Used = false;
                         }
                 }
                 else if (id == Field::FIELD_G || id == Field::FIELD_H) {
-                        if (lidar[1] < 1000) {
+                        if (lidar[1] < 1000 && lidar[1] > ylidar_lower_value) {
                                 lidar[1] = 6500 - lidar[1];
                         }
                         else {
-                                lidar[1] = gLast_YEncoderValue;
+                                gY_Lidar_Used = false;
                         }
                 }
                 else if (id == Field::FIELD_I || id == Field::FIELD_J) {
                         // Need to compensate for shagai too
-                        lidar[1] = 10000 - lidar[1];
+                        if (lidar[1] > ylidar_lower_value) {
+                                lidar[1] = 10000 - lidar[1];
+                        }
                 }
                 else {
-                        lidar[1] = gLast_YEncoderValue;
+                        gY_Lidar_Used = false;
                 }
         }
 }
