@@ -350,8 +350,8 @@ void Actuator::pid_Init()
         gDisc_PID[3].set_PID(0.685, 12.945, 0.0);
         gDisc_PID[3].set_Limits(24, -24);
 
-        gAng_PID.set_PID(0.2, 0, 0);
-        gAng_PID.set_Limits(5, -5);
+        gAng_PID.set_PID(0.943, 0, 0);
+        gAng_PID.set_Limits(3, -3);
         gRobo_PID.set_Algorithm(&gAng_PID);
         set_AnglePID(&gRobo_PID);
 
