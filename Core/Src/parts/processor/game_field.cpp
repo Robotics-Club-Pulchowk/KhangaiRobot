@@ -135,7 +135,7 @@ void init_GameField()
         gStateI_Data.id = Field::FIELD_I;
         gStateI_Data.centre = Vec2<float>(1375, 8500);
         gStateI_Data.upper_bounds = Vec2<float>(1450, 9000);
-        gStateI_Data.lower_bounds = Vec2<float>(1050, 8030);
+        gStateI_Data.lower_bounds = Vec2<float>(1050, 8050);
         gStateI_Data.last_limit = 1;
         gStateI_Data.ramping_factor = 0.004;
         gStateI_Data.first_limit = 0.825;
@@ -144,7 +144,7 @@ void init_GameField()
 
         // Defining the state : State J
         gStateJ_Data.id = Field::FIELD_J;
-        gStateJ_Data.centre = Vec2<float>(5500, 8400);
+        gStateJ_Data.centre = Vec2<float>(5300, 8400);
         gStateJ_Data.upper_bounds = Vec2<float>(6500, 9000);
         gStateJ_Data.lower_bounds = Vec2<float>(4300, 7800);
         gStateJ_Data.last_limit = 1;
@@ -201,7 +201,7 @@ void init_GameField()
          // Defining the state : State Q
         gStateQ_Data.id = Field::FIELD_Q;
         gStateQ_Data.centre = Vec2<float>(3700, 5000);
-        gStateQ_Data.upper_bounds = Vec2<float>(4500, 5400);
+        gStateQ_Data.upper_bounds = Vec2<float>(4500, 5200);
         gStateQ_Data.lower_bounds = Vec2<float>(3000, 4600);
         gStateQ_Data.last_limit = 1;
         gStateQ_Data.ramping_factor = 0.001;
