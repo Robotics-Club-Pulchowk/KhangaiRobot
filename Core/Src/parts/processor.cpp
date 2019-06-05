@@ -323,7 +323,6 @@ Vec3<float> Processor::control(Vec3<float> state,
                 }
         }
 
-
         //* Reset Position to field O if reset_pos command is obtained
         if (reset_pos) {
                 reset_Position(robot_state_vars);
@@ -409,27 +408,33 @@ void Processor::send_ThrowCommand(bool grip, bool throw_shg, bool act_arm)
         //* Send Extend command if robot is in field Q
         if (id == Field::FIELD_Q) {
                 extend_Arm();
+                // actuate_Platform(true);
         }
 
-        if (id >= Field::FIELD_Q) {
+        // if (id >= Field::FIELD_Q) {
                 throw_Shagai(throw_shg);
+        // }
+
+        if (id <= Field::FIELD_O) {
+                actuate_Arm(act_arm);
+        }
+        else {
+                actuate_Platform(act_arm);
         }
 
-        actuate_Arm(act_arm);
-
-        if (id == Field::FIELD_O) {
+        if (id >= Field::FIELD_O) {
                 grip_Shagai(grip);
                 // printf("Grip Shagai");
         }
-        else if (id >= Field::FIELD_I && id < Field::FIELD_O) {
+        else if (id < Field::FIELD_O) {
                 pass_Gerege(grip);
         }
 }
 
 
 static bool gSend_Throw_Command = false;
-static uint8_t gSend_Throw_Num = 5;
-const uint8_t gSend_Throw_Max = 5;
+static uint8_t gSend_Throw_Num = 3;
+const uint8_t gSend_Throw_Max = 3;
 
 void Processor::throw_Shagai(bool throw_shagai)
 {
@@ -463,14 +468,14 @@ void Processor::extend_Arm()
 void Processor::retrieve_Arm()
 {
         if (gSend_Retrieve_Num) {
-                thrower_->write((uint8_t)(Throwing_Commands::RETRIEVE));
+                thrower_->write((uint8_t)(Throwing_Commands::EXTEND));
                 --gSend_Retrieve_Num;
         }
 }
 
 static bool gSend_Grip_Command = false;
-static uint8_t gSend_Grip_Command_Num = 5;
-static uint8_t gSend_Grip_Command_Num_Max = 5;
+static uint8_t gSend_Grip_Command_Num = 3;
+static uint8_t gSend_Grip_Command_Num_Max = 3;
 
 void Processor::grip_Shagai(bool grip_shagai)
 {
@@ -492,8 +497,8 @@ void Processor::grip_Shagai(bool grip_shagai)
 }
 
 static bool gSend_Gerege_Pass_Command = false;
-static uint8_t gSend_Gerege_Pass_Command_Num = 5;
-static uint8_t gSend_Gerege_Pass_Command_Num_Max = 5;
+static uint8_t gSend_Gerege_Pass_Command_Num = 3;
+static uint8_t gSend_Gerege_Pass_Command_Num_Max = 3;
 
 void Processor::pass_Gerege(bool pass)
 {
@@ -515,8 +520,8 @@ void Processor::pass_Gerege(bool pass)
 }
 
 static bool gSend_Actuate_Arm_Cmd = false;
-static uint8_t gSend_Actuate_Arm_Cmd_Num = 5;
-static uint8_t gSend_Actuate_Arm_Cmd_Num_Max = 5;
+static uint8_t gSend_Actuate_Arm_Cmd_Num = 3;
+static uint8_t gSend_Actuate_Arm_Cmd_Num_Max = 3;
 void Processor::actuate_Arm(bool act_arm)
 {
         if (act_arm) {
@@ -530,6 +535,26 @@ void Processor::actuate_Arm(bool act_arm)
                 else {
                         gSend_Actuate_Arm_Cmd_Num = gSend_Actuate_Arm_Cmd_Num_Max;
                         gSend_Actuate_Arm_Cmd = false;
+                }
+        }
+}
+
+static bool gSend_Actuate_Platform_Cmd = false;
+static uint8_t gSend_Actuate_Platform_Cmd_Num = 3;
+static uint8_t gSend_Actuate_Platform_Cmd_Num_Max = 3;
+void Processor::actuate_Platform(bool act_arm)
+{
+        if (act_arm) {
+                gSend_Actuate_Platform_Cmd = true;
+        }
+
+        if (gSend_Actuate_Platform_Cmd) {
+                if (--gSend_Actuate_Platform_Cmd_Num) {
+                        thrower_->write((uint8_t)(Throwing_Commands::MOVE_PLATFORM_LEFT));
+                }
+                else {
+                        gSend_Actuate_Platform_Cmd_Num = gSend_Actuate_Platform_Cmd_Num_Max;
+                        gSend_Actuate_Platform_Cmd = false;
                 }
         }
 }

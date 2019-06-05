@@ -80,7 +80,7 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
                 }
                 else if (p_sensors_[i]->get_Name() == SensorName::YLidar) {
                         lidar[1] = p_sensors_[i]->read();
-                        printf("Time : %ld\tYLidar : %ld\t\t", HAL_GetTick(), (int32_t)lidar[1]);
+                        // printf("Time : %ld\tYLidar : %ld\t\t", HAL_GetTick(), (int32_t)lidar[1]);
                         y_lidar_used = true;
                         gY_Lidar_Used = true;
                 }

@@ -53,6 +53,7 @@ private:
         void extend_Arm();
         void pass_Gerege(bool pass);
         void actuate_Arm(bool act_arm);
+        void actuate_Platform(bool act_arm);
         void retrieve_Arm();
 
         void send_ThrowCommand(bool grip, bool throw_shg, bool act_arm);
