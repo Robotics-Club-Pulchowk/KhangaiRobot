@@ -330,6 +330,11 @@ Vec3<float> Processor::control(Vec3<float> state,
 
         send_ThrowCommand(grip_shagai, thr_shg, actuate_arm);
 
+        //* Change orientation if in field Q
+        if (id == Field::FIELD_Q) {
+                vels.setZ(-20);
+        }
+
         return vels;
 }
 
