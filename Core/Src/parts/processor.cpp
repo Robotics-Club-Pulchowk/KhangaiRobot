@@ -160,7 +160,7 @@ Vec3<float> Processor::auto_control(Vec3<float> state, Vec3<float> vel_from_base
         vel.set_Values(vx, vy, 0);
 
         // This is for correcting units and the inverted co-ordinate system
-        vx = -vel.getX() / (float)1000.0;
+        vx = vel.getX() / (float)1000.0;
         vy = vel.getY()  / (float)1000.0;
         vel.setX(vx);
         vel.setY(vy);
@@ -332,7 +332,7 @@ Vec3<float> Processor::control(Vec3<float> state,
 
         //* Change orientation if in field Q
         if (id == Field::FIELD_Q) {
-                vels.setZ(-20);
+                vels.setZ(20);
         }
 
         return vels;
@@ -555,7 +555,7 @@ void Processor::actuate_Platform(bool act_arm)
 
         if (gSend_Actuate_Platform_Cmd) {
                 if (--gSend_Actuate_Platform_Cmd_Num) {
-                        thrower_->write((uint8_t)(Throwing_Commands::MOVE_PLATFORM_LEFT));
+                        thrower_->write((uint8_t)(Throwing_Commands::MOVE_PLATFORM_RIGHT));
                 }
                 else {
                         gSend_Actuate_Platform_Cmd_Num = gSend_Actuate_Platform_Cmd_Num_Max;
