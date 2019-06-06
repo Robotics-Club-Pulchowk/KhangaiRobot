@@ -242,7 +242,7 @@ void PositionSensor::process_LidarData(float (&lidar)[2], const State_Vars *sv)
                                 gY_Lidar_Used = false;
                         }
                 }
-                else if (id == Field::FIELD_G || id == Field::FIELD_H) {
+                else if (id == Field::FIELD_G) {
                         if (lidar[1] < 1000 && lidar[1] > ylidar_lower_value) {
                                 lidar[1] = 6500 - lidar[1];
                         }
