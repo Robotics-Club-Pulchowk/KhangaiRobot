@@ -384,6 +384,11 @@ Vec3<float> State_Sensor::read_Orientation(Vec3<float> base_state, uint32_t dt_m
         return angles;
 }
 
+void State_Sensor::update_IMUOffsets(Vec3<float> offsets)
+{
+        Body_HMC.hard_iron_offset = offsets;
+}
+
 void State_Sensor::change_Sensors(Field field_id)
 {
         switch (field_id) {
@@ -419,28 +424,28 @@ void State_Sensor::change_Sensors(Field field_id)
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->add_Sensor(&gXLidar);
-                        p_sensor_->add_Sensor(&gYLidar);
+                        p_sensor_->remove_Sensor(&gYLidar);
                 } break;
                 
                 case Field::FIELD_F : {      // State F
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->add_Sensor(&gXLidar);
-                        p_sensor_->add_Sensor(&gYLidar);
+                        p_sensor_->remove_Sensor(&gYLidar);
                 } break;
                 
                 case Field::FIELD_G : {      // State G
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->add_Sensor(&gXLidar);
-                        p_sensor_->add_Sensor(&gYLidar);
+                        p_sensor_->remove_Sensor(&gYLidar);
                 } break;
                 
                 case Field::FIELD_H : {      // State H
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->add_Sensor(&gXLidar);
-                        p_sensor_->add_Sensor(&gYLidar);
+                        p_sensor_->remove_Sensor(&gYLidar);
                 } break;
                 
                 case Field::FIELD_I : {      // State I
@@ -461,13 +466,27 @@ void State_Sensor::change_Sensors(Field field_id)
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->remove_Sensor(&gXLidar);
-                        p_sensor_->remove_Sensor(&gYLidar);
+                        p_sensor_->add_Sensor(&gYLidar);
                 } break;
                 
                 case Field::FIELD_P : {      // State I
                         p_sensor_->add_Sensor(&gXEncoder);
                         p_sensor_->add_Sensor(&gYEncoder);
+                        p_sensor_->add_Sensor(&gXLidar);
+                        p_sensor_->remove_Sensor(&gYLidar);
+                } break;
+                
+                case Field::FIELD_Q : {      // State I
+                        p_sensor_->add_Sensor(&gXEncoder);
+                        p_sensor_->add_Sensor(&gYEncoder);
                         p_sensor_->remove_Sensor(&gXLidar);
+                        p_sensor_->remove_Sensor(&gYLidar);
+                } break;
+                
+                case Field::FIELD_S : {      // State I
+                        p_sensor_->add_Sensor(&gXEncoder);
+                        p_sensor_->add_Sensor(&gYEncoder);
+                        p_sensor_->add_Sensor(&gXLidar);
                         p_sensor_->remove_Sensor(&gYLidar);
                 } break;
 

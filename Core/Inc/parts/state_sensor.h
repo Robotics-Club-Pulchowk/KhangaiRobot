@@ -39,6 +39,7 @@ public:
         uint8_t get_Bounds();
 
         void update_Position(Vec3<float> pos) { p_sensor_->update_State(pos); }
+        void update_IMUOffsets(Vec3<float> offsets);
 
 private:
         PositionSensor *p_sensor_;

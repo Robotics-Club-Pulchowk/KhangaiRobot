@@ -54,6 +54,8 @@ struct State_Vars
 
         float max_vel;
         float rated_vel;
+
+        float ang_offset;
 };
 
 class Robo_States
@@ -80,6 +82,8 @@ public:
                 sv_ = robo->get_State();
                 next_state_ = robo->get_NextState();
         }
+
+        float get_AngOffset() { return sv_->ang_offset; }
         
 private:
         State_Vars *sv_;
