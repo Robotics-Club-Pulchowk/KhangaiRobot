@@ -16,8 +16,8 @@ static unsigned long gYLidar_Read_Time = 0;
 static bool gIs_First_Update = true;
 
 //* Biases of respective lidars
-static unsigned long gXLidar_Bias = 135;
-static unsigned long gYLidar_Bias = 35;
+static unsigned long gXLidar_Bias = 0;
+static unsigned long gYLidar_Bias = 90;
 
 //* Construct the lidar's object
 TFMini gXLidar;
