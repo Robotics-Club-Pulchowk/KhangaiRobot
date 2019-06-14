@@ -212,7 +212,7 @@ const static uint8_t gSend_Extend_Num_Max = 10;
 static uint8_t gSend_Extend_Num = gSend_Extend_Num_Max;
 
 
-const uint32_t gArm_Retrieve_Count = 10;
+const uint32_t gArm_Retrieve_Count = 1000;
 static uint32_t gShagai_Thrown_Counter = 0;
 static bool gShagai_Thrown_Counter_Start = false;
 
