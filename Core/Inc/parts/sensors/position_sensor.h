@@ -81,7 +81,7 @@ private:
                 sensor_count_ = 0;
         }
 
-        void process_LidarData(float (&lidar)[2], const State_Vars *sv);
+        void process_LidarData(Vec3<float> ori, float (&lidar)[2], const State_Vars *sv);
         Vec2<float> rotate_EncData(Vec3<float> ori, Vec2<float> enc);
 };
 
