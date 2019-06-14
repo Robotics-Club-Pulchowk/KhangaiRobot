@@ -165,6 +165,11 @@ Vec3<float> Processor::auto_control(Vec3<float> state, Vec3<float> vel_from_base
         vel.setX(vx);
         vel.setY(vy);
 
+        Field id = curr_state_->get_ID();
+        if (id == Field::FIELD_Q) {
+                vel.set_Values(0,0,0);
+        }
+
         return vel;
 }
 
@@ -323,16 +328,21 @@ Vec3<float> Processor::control(Vec3<float> state,
                 }
         }
 
+        send_ThrowCommand(grip_shagai, thr_shg, actuate_arm);
+
         //* Reset Position to field O if reset_pos command is obtained
         if (reset_pos) {
                 reset_Position(robot_state_vars);
         }
 
-        send_ThrowCommand(grip_shagai, thr_shg, actuate_arm);
-
         //* Change orientation if in field Q
         if (id == Field::FIELD_Q) {
-                vels.setZ(20);
+                // sensor_->update_IMUOffsets(Vec3<float>(-55.5, -111.5, -276.5));
+                vels.setZ(curr_state_->get_AngOffset() + 9);
+        }
+        else {
+                vels.setZ(curr_state_->get_AngOffset());
+                // sensor_->update_IMUOffsets(Vec3<float>(-55.5, 16.5, -276.5));
         }
 
         return vels;
@@ -383,6 +393,8 @@ void Processor::update_State(uint8_t bounds)
         curr_state_ = curr_state_->get_NextState();
 }
 
+
+static uint32_t gSend_Retrieve_Num = 10;
 void Processor::reset_Position(State_Vars *&robot_state_vars)
 {
         curr_state_ = &gStateO;
@@ -394,9 +406,13 @@ void Processor::reset_Position(State_Vars *&robot_state_vars)
         sensor_->update_Position(pos);
         
         gSend_Extend_Num = gSend_Extend_Num_Max;
+        gSend_Retrieve_Num = 10;
+        
+        retrieve_Arm();
+        throw_Shagai(false);
+        pass_Gerege(true);
+        throw_Shagai(false);
 }
-
-static uint32_t gSend_Retrieve_Num = 10;
 
 void Processor::send_ThrowCommand(bool grip, bool throw_shg, bool act_arm)
 {
@@ -473,7 +489,7 @@ void Processor::extend_Arm()
 void Processor::retrieve_Arm()
 {
         if (gSend_Retrieve_Num) {
-                thrower_->write((uint8_t)(Throwing_Commands::EXTEND));
+                thrower_->write((uint8_t)(Throwing_Commands::RETRIEVE));
                 --gSend_Retrieve_Num;
         }
 }
