@@ -212,9 +212,15 @@ const static uint8_t gSend_Extend_Num_Max = 10;
 static uint8_t gSend_Extend_Num = gSend_Extend_Num_Max;
 
 
-const uint32_t gArm_Retrieve_Count = 1000;
+const uint32_t gArm_Retrieve_Count = 10;
 static uint32_t gShagai_Thrown_Counter = 0;
 static bool gShagai_Thrown_Counter_Start = false;
+
+static bool gWait_For_Arm_To_Return = false;
+static uint32_t gWait_For_Arm_To_Return_Count = 0;
+static uint32_t gWait_For_Arm_To_Return_Count_Max = 100;
+static bool gArm_Returned = false;
+static bool gShagai_Thrown = false;
 
 Vec3<float> Processor::control(Vec3<float> state,
                                Vec3<float> vel_from_base,
@@ -265,9 +271,10 @@ Vec3<float> Processor::control(Vec3<float> state,
                 if (gShagai_Thrown_Counter_Start) {
                         ++gShagai_Thrown_Counter;
                         if (gShagai_Thrown_Counter > gArm_Retrieve_Count) {
+                                gWait_For_Arm_To_Return = true;
                                 gShagai_Thrown_Counter = 0;
-                                curr_state_ = &gStateS;
                                 gShagai_Thrown_Counter_Start = false;
+                                gShagai_Thrown = true;
                         }
                 }
 
@@ -422,8 +429,24 @@ void Processor::send_ThrowCommand(bool grip, bool throw_shg, bool act_arm)
                 gSend_Retrieve_Num = 10;
         }
 
-        if (id == Field::FIELD_S) {
-                retrieve_Arm();
+        if (gShagai_Thrown) {
+                if (gArm_Returned) {
+                        curr_state_ = &gStateS;
+                        gShagai_Thrown = false;
+                }
+                else {
+                        if (gWait_For_Arm_To_Return) {
+                                retrieve_Arm();
+                                ++gWait_For_Arm_To_Return_Count;
+                                gArm_Returned = false;
+                        }
+
+                        if (gWait_For_Arm_To_Return_Count >= gWait_For_Arm_To_Return_Count_Max) {
+                                gWait_For_Arm_To_Return = false;
+                                gArm_Returned = true;
+                        }
+                        
+                }
         }
 
         //* Send Extend command if robot is in field Q
