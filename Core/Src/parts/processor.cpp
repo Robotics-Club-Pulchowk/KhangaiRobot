@@ -212,7 +212,7 @@ const static uint8_t gSend_Extend_Num_Max = 10;
 static uint8_t gSend_Extend_Num = gSend_Extend_Num_Max;
 
 
-const uint32_t gArm_Retrieve_Count = 10;
+const uint32_t gArm_Retrieve_Count = 100;
 static uint32_t gShagai_Thrown_Counter = 0;
 static bool gShagai_Thrown_Counter_Start = false;
 
@@ -342,8 +342,8 @@ Vec3<float> Processor::control(Vec3<float> state,
                 reset_Position(robot_state_vars);
         }
 
-        //* Change orientation if in field Q
-        if (id == Field::FIELD_Q) {
+        //* Change orientation if in field Q - S (excluding S)
+        if (id >= Field::FIELD_Q && id < Field::FIELD_S) {
                 // sensor_->update_IMUOffsets(Vec3<float>(-55.5, -111.5, -276.5));
                 vels.setZ(curr_state_->get_AngOffset() + 9);
         }
@@ -433,6 +433,8 @@ void Processor::send_ThrowCommand(bool grip, bool throw_shg, bool act_arm)
                 if (gArm_Returned) {
                         curr_state_ = &gStateS;
                         gShagai_Thrown = false;
+                        gWait_For_Arm_To_Return_Count = 0;
+                        gArm_Returned = false;
                 }
                 else {
                         if (gWait_For_Arm_To_Return) {
@@ -453,6 +455,11 @@ void Processor::send_ThrowCommand(bool grip, bool throw_shg, bool act_arm)
         if (id == Field::FIELD_Q) {
                 extend_Arm();
                 // actuate_Platform(true);
+        }
+
+        //* Send Rotate Command When in Field I
+        if (id == Field::FIELD_I) {
+                rotate_Gerege();
         }
 
         // if (id >= Field::FIELD_Q) {
@@ -560,6 +567,21 @@ void Processor::pass_Gerege(bool pass)
                         gSend_Gerege_Pass_Command_Num = gSend_Gerege_Pass_Command_Num_Max;
                         gSend_Gerege_Pass_Command = false;
                 }
+        }
+}
+
+static bool gSend_Gerege_Rotate_Command = false;
+static uint8_t gSend_Gerege_Rotate_Command_Num = 3;
+static uint8_t gSend_Gerege_Rotate_Command_Num_Max = 3;
+
+void Processor::rotate_Gerege()
+{
+        if (--gSend_Gerege_Rotate_Command_Num) {
+                thrower_->write((uint8_t)(Throwing_Commands::PASS_GEREGE));
+        }
+        else {
+                gSend_Gerege_Rotate_Command_Num = gSend_Gerege_Rotate_Command_Num_Max;
+                gSend_Gerege_Rotate_Command = false;
         }
 }
 
