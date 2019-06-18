@@ -42,6 +42,7 @@ public:
         ~Robot() { }
         static Robot& get_Instance();
 
+        void read_Field();
         int init(uint32_t dt_millis);
         void update(uint32_t dt_millis);
         void run(uint32_t dt_millis);

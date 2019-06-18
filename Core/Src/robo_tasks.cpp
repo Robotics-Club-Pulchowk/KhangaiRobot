@@ -87,6 +87,7 @@ void StartDefaultTask(void const *argument)
 
 
 Robot &Khangai_Robot = Robot::get_Instance();
+GameField gCurrent_Field = GameField::NONE;
 
 void RobotThread(void const *argument)
 {
@@ -94,6 +95,7 @@ void RobotThread(void const *argument)
         uint32_t sample_period = 10;
         
         // print_I2C_Addresses(&hi2c1);
+        Khangai_Robot.read_Field();
         Khangai_Robot.init(sample_period);
 
         uint32_t dt = HAL_GetTick();

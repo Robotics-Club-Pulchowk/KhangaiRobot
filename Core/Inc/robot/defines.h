@@ -26,4 +26,12 @@
 
 #define _ENABLE_I2C_ERROR_DETECTION
 
+enum GameField {
+        NONE,
+        RED,
+        BLUE
+};
+
+extern GameField gCurrent_Field;
+
 #endif  // _DEFINES_H_

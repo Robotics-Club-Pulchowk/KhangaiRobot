@@ -17,8 +17,12 @@
 #include "logger.h"
 #include "utils.h"
 
+#include "defines.h"
+
 extern State_Vars gStateA_Data;
 extern State_Vars gStateO_Data;
+
+void update_GameField(GameField field);
 
 // We should make sure that the robot ony have one instance and it is properly
 // instantiated
@@ -38,6 +42,15 @@ Robot& Robot::get_Instance()
         sRobo_Instance.base_ = &act;
         
         return sRobo_Instance;
+}
+
+void Robot::read_Field()
+{
+        // Read Field Value Here
+        gCurrent_Field = GameField::RED;
+
+        // Update Gamefield after reading current field
+        update_GameField(gCurrent_Field);
 }
 
 int Robot::init(uint32_t dt_millis)
