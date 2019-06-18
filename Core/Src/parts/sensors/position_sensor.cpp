@@ -66,7 +66,7 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
 
         for (uint8_t i = 0; i < sensor_count_; ++i) {
                 if (p_sensors_[i]->get_Name() == SensorName::XEncoder) {
-                        free_wheel.setX(-p_sensors_[i]->read());
+                        free_wheel.setX(p_sensors_[i]->read());
                         x_enc_used = true;
                 }
                 else if (p_sensors_[i]->get_Name() == SensorName::YEncoder) {
@@ -179,13 +179,11 @@ void PositionSensor::process_LidarData(Vec3<float> ori, float (&lidar)[2], const
                         lidar[0] += 2500;
                 }
         }
-        else if (fabs(yaw) < 5) {
+        else if (fabs(yaw) < 10) {
                 // Compensating y-values at poles using xlidar's data
                 if (id == Field::FIELD_B || id == Field::FIELD_F ||
                     (id == Field::FIELD_C && lidar[0] < 400)) {
                         if (lidar[0] < 1000) {
-                                lidar[0] += jungle_pole_dist;
-
                                 // Compensating the Y value based on lidar data
                                 if (id == Field::FIELD_B ||
                                     (id == Field::FIELD_C && lidar[0] < 400)) {
@@ -196,27 +194,36 @@ void PositionSensor::process_LidarData(Vec3<float> ori, float (&lidar)[2], const
                                 }
                         }
                 }
-                // Bridge is in between field H and I
-                else if (id == Field::FIELD_H) {
+        }
 
-                        int state_id = -1;
+        // Compensating y-values at poles using xlidar's data
+        if (id == Field::FIELD_B || id == Field::FIELD_F ||
+                (id == Field::FIELD_C && lidar[0] < 400) ||
+                (id == Field::FIELD_G && lidar[0] < 400)) {
+                if (lidar[0] < 1000) {
+                        lidar[0] += jungle_pole_dist;
+                }
+        }
+        // Bridge is in between field H and I
+        else if (id == Field::FIELD_H) {
 
-                        if (lidar[0] < (bridge_pole_dist - tol)) {
-                                // Feed 0
-                                state_id = gBridge_Machine.feed(0);
-                        }
-                        else if (lidar[0] > (bridge_pole_dist + tol)) {
-                                // Feed 1
-                                state_id = gBridge_Machine.feed(1);
-                        }
+                int state_id = -1;
 
-                        if (state_id == 7) {
-                        }
+                if (lidar[0] < (bridge_pole_dist - tol)) {
+                        // Feed 0
+                        state_id = gBridge_Machine.feed(0);
+                }
+                else if (lidar[0] > (bridge_pole_dist + tol)) {
+                        // Feed 1
+                        state_id = gBridge_Machine.feed(1);
+                }
 
-                        // Correct the XLidar Value
-                        if (lidar[0] < bridge_pole_dist) {
-                                lidar[0] += 755;
-                        }
+                if (state_id == 7) {
+                }
+
+                // Correct the XLidar Value
+                if (lidar[0] < bridge_pole_dist) {
+                        lidar[0] += 755;
                 }
         }
 
@@ -238,14 +245,14 @@ void PositionSensor::process_LidarData(Vec3<float> ori, float (&lidar)[2], const
                                 gY_Lidar_Used = false;
                         }
                 }
-                // else if (id == Field::FIELD_E) {
-                //         if (lidar[1] < 1000 && lidar[1] > ylidar_lower_value) {
-                //                 lidar[1] = 5000 - lidar[1];
-                //         }
-                //         else {
-                //                 gY_Lidar_Used = false;
-                //         }
-                // }
+                else if (id == Field::FIELD_E) {
+                        if (lidar[1] < 1000 && lidar[1] > ylidar_lower_value) {
+                                lidar[1] = 5000 - lidar[1];
+                        }
+                        else {
+                                gY_Lidar_Used = false;
+                        }
+                }
                 // else if (id == Field::FIELD_G) {
                 //         if (lidar[1] < 1000 && lidar[1] > ylidar_lower_value) {
                 //                 lidar[1] = 6500 - lidar[1];
