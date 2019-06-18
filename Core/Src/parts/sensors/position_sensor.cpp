@@ -12,6 +12,7 @@
 #include "devs_config.h"
 
 #include "error.h"
+#include "defines.h"
 
 #include "robo_states.h"
 #include "bridge.h"
@@ -66,7 +67,13 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
 
         for (uint8_t i = 0; i < sensor_count_; ++i) {
                 if (p_sensors_[i]->get_Name() == SensorName::XEncoder) {
-                        free_wheel.setX(p_sensors_[i]->read());
+                        float ex = p_sensors_[i]->read();
+                        if (gCurrent_Field == GameField::RED) {
+                                free_wheel.setX(ex);
+                        }
+                        else if (gCurrent_Field == GameField::BLUE) {
+                                free_wheel.setX(-ex);
+                        }
                         x_enc_used = true;
                 }
                 else if (p_sensors_[i]->get_Name() == SensorName::YEncoder) {

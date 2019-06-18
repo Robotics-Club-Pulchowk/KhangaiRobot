@@ -10,6 +10,8 @@
 #include "devs_config.h"
 #include "interpolation.h"
 
+#include "defines.h"
+
 
 extern float gAuto_Ratio;
 extern uint32_t gMax_Robo_Manual_Velocity;
@@ -160,8 +162,18 @@ Vec3<float> Processor::auto_control(Vec3<float> state, Vec3<float> vel_from_base
         vel.set_Values(vx, vy, 0);
 
         // This is for correcting units and the inverted co-ordinate system
-        vx = -vel.getX() / (float)1000.0;
         vy = vel.getY()  / (float)1000.0;
+        if (gCurrent_Field == GameField::RED) {
+                vx = -vel.getX() / (float)1000.0;
+        }
+        else if (gCurrent_Field == GameField::BLUE) {
+                vx = vel.getX() / (float)1000.0;
+        }
+        else {
+                vx = 0;
+                vy = 0;
+        }
+
         vel.setX(vx);
         vel.setY(vy);
 
@@ -345,7 +357,13 @@ Vec3<float> Processor::control(Vec3<float> state,
         //* Change orientation if in field Q - S (excluding S)
         if (id >= Field::FIELD_Q && id < Field::FIELD_S) {
                 // sensor_->update_IMUOffsets(Vec3<float>(-55.5, -111.5, -276.5));
-                vels.setZ(curr_state_->get_AngOffset() - 9);
+                
+                if (gCurrent_Field == GameField::RED) {
+                        vels.setZ(curr_state_->get_AngOffset() - 9);
+                }
+                else if (gCurrent_Field == GameField::BLUE) {
+                        vels.setZ(curr_state_->get_AngOffset() + 9);
+                }
         }
         else {
                 vels.setZ(curr_state_->get_AngOffset());
