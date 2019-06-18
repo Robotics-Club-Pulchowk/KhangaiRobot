@@ -129,7 +129,7 @@ void init_GameField()
         
         // Defining the state : State H
         gStateH_Data.id = Field::FIELD_H;
-        gStateH_Data.centre = Vec2<float>(1150, 6200);
+        gStateH_Data.centre = Vec2<float>(1150, 6000);
         gStateH_Data.upper_bounds = Vec2<float>(1300, 6450);
         gStateH_Data.lower_bounds = Vec2<float>(1025, 5500);
         gStateH_Data.last_limit = 1;
@@ -141,7 +141,7 @@ void init_GameField()
 
         // Defining the state : State I
         gStateI_Data.id = Field::FIELD_I;
-        gStateI_Data.centre = Vec2<float>(1350, 8600);
+        gStateI_Data.centre = Vec2<float>(1325, 8600);
         gStateI_Data.upper_bounds = Vec2<float>(1600, 9000);
         gStateI_Data.lower_bounds = Vec2<float>(1000, 8500);
         gStateI_Data.last_limit = 1;
@@ -153,7 +153,7 @@ void init_GameField()
 
         // Defining the state : State J
         gStateJ_Data.id = Field::FIELD_J;
-        gStateJ_Data.centre = Vec2<float>(5300, 8300);
+        gStateJ_Data.centre = Vec2<float>(5300, 8500);
         gStateJ_Data.upper_bounds = Vec2<float>(6500, 9000);
         gStateJ_Data.lower_bounds = Vec2<float>(4300, 7800);
         gStateJ_Data.last_limit = 1;
@@ -198,7 +198,7 @@ void init_GameField()
         gStateO_Data.first_limit = 0.6;
         gStateO_Data.max_vel = gMax_Robo_Velocity;
         gStateO_Data.rated_vel = gRated_Robo_Velocity;
-        gStateO_Data.ang_offset = -5;
+        gStateO_Data.ang_offset = -7;
 
          // Defining the state : State P
         gStateP_Data.id = Field::FIELD_P;
@@ -222,7 +222,7 @@ void init_GameField()
         gStateQ_Data.first_limit = 1;
         gStateQ_Data.max_vel = 600;
         gStateQ_Data.rated_vel = 60;
-        gStateQ_Data.ang_offset = -3;
+        gStateQ_Data.ang_offset = 10;
 
          // Defining the state : State Q1
         gStateQ1_Data.id = Field::FIELD_Q1;
