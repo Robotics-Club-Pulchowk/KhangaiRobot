@@ -90,18 +90,27 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define FENCE_6B_Pin GPIO_PIN_1
-#define FENCE_6B_GPIO_Port GPIOC
-#define FENCE_7_Pin GPIO_PIN_2
-#define FENCE_7_GPIO_Port GPIOC
-#define FENCE_8A_Pin GPIO_PIN_3
-#define FENCE_8A_GPIO_Port GPIOC
+#define FENCE_4A_GPIO_Port GPIOA
+#define FENCE_4A_Pin GPIO_PIN_2
+#define FENCE_4B_GPIO_Port GPIOC
+#define FENCE_4B_Pin GPIO_PIN_2
+
+#define FENCE_6A_GPIO_Port GPIOC
+#define FENCE_6A_Pin GPIO_PIN_3
+#define FENCE_6B_GPIO_Port GPIOB
+#define FENCE_6B_Pin GPIO_PIN_11
+
+#define FENCE_7_GPIO_Port GPIOE
+#define FENCE_7_Pin GPIO_PIN_15
+
+#define FENCE_8A_GPIO_Port GPIOE
+#define FENCE_8A_Pin GPIO_PIN_13
+#define FENCE_8B_GPIO_Port GPIOE
+#define FENCE_8B_Pin GPIO_PIN_7
+
 #define B_PushButton_Pin GPIO_PIN_0
 #define B_PushButton_GPIO_Port GPIOA
-#define FENCE_8B_Pin GPIO_PIN_11
-#define FENCE_8B_GPIO_Port GPIOB
-#define FENCE_6A_Pin GPIO_PIN_13
-#define FENCE_6A_GPIO_Port GPIOB
+
 #define B_GreenLED_Pin GPIO_PIN_12
 #define B_GreenLED_GPIO_Port GPIOD
 #define B_OrangeLED_Pin GPIO_PIN_13
