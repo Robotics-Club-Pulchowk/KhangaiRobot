@@ -182,7 +182,7 @@ Vec3<float> State_Sensor::compensate_Bounds(Vec3<float> pos, Vec3<float> ori, co
                                 //* Face 6 has touched the fence
                                 pos.setY(8350);
                         }
-                        if (bounds_ & (1 << (int)(Face::_8))) {
+                        if (bounds_ & (1 << (int)(Face::_4))) {
                                 //* Face 8 has touched the fence
                                 pos.setX(6000);
                         }

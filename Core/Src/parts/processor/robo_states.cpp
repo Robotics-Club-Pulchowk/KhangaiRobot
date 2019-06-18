@@ -227,7 +227,8 @@ bool Robo_States::nextStateReached(Vec3<float> state, uint8_t bounds)
                 return false;
         }
         else if (id == Field::FIELD_L) {
-                if ((bounds & (1 << (int)(Face::_6))) && (bounds & (1 << (int)(Face::_8)))) {
+                if (((bounds & (1 << (int)(Face::_6))) && (bounds & (1 << (int)(Face::_8)))) ||         // Red Field
+                    ((bounds & (1 << (int)(Face::_6))) && (bounds & (1 << (int)(Face::_4))))) {         // Blue Field
                         return true;
                 }
                 return false;
