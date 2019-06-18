@@ -8,3 +8,5 @@
 ## MoveMent Direction
 - Correct vx and vy
 - Correct Robot's angle when throwing Shagai
+
+## Update Field's Offsets
