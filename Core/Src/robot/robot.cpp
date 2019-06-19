@@ -47,7 +47,7 @@ Robot& Robot::get_Instance()
 void Robot::read_Field()
 {
         // Read Field Value Here
-        gCurrent_Field = GameField::RED;
+        gCurrent_Field = GameField::BLUE;
 
         // Update Gamefield after reading current field
         update_GameField(gCurrent_Field);
