@@ -190,11 +190,11 @@ void PositionSensor::process_LidarData(Vec3<float> ori, float (&lidar)[2], const
                 // Compensating y-values at poles using xlidar's data
                 if (id == Field::FIELD_B || id == Field::FIELD_F ||
                     (id == Field::FIELD_C && lidar[0] < 400)) {
-                        if (lidar[0] < 1000) {
+                        if (lidar[0] < 800) {
                                 // Compensating the Y value based on lidar data
                                 if (id == Field::FIELD_B ||
                                     (id == Field::FIELD_C && lidar[0] < 400)) {
-                                        gLast_YEncoderValue = 2030.0;
+                                        gLast_YEncoderValue = 1780.0;
                                 }
                                 else if (id == Field::FIELD_F) {
                                         gLast_YEncoderValue = 5030.0;
@@ -234,7 +234,7 @@ void PositionSensor::process_LidarData(Vec3<float> ori, float (&lidar)[2], const
                 }
         }
 
-        if (fabs(yaw) < 5) {
+        if (fabs(yaw) < 10) {
                 // Compensating y-values at poles using ylidar's data 
                 if (id == Field::FIELD_A) {
                         if (lidar[1] < 1500 && lidar[1] > ylidar_lower_value) {
