@@ -132,7 +132,7 @@ static void init_RedGameField()
         gStateF_Data.id = Field::FIELD_F;
         gStateF_Data.centre = Vec2<float>(1400, 4600);
         gStateF_Data.upper_bounds = Vec2<float>(2100, 5100);
-        gStateF_Data.lower_bounds = Vec2<float>(1100, 3800);
+        gStateF_Data.lower_bounds = Vec2<float>(1150, 3800);
         gStateF_Data.last_limit = 1;
         gStateF_Data.ramping_factor = 0.001;
         gStateF_Data.first_limit = gStateE_Data.last_limit;
@@ -547,7 +547,7 @@ static void init_BlueGameField()
         gStateQ_Data.first_limit = 1;
         gStateQ_Data.max_vel = 600;
         gStateQ_Data.rated_vel = 60;
-        gStateQ_Data.ang_offset = 10;
+        gStateQ_Data.ang_offset = 0;
 
         // *** Blue Game Field *** //
         // Defining the state : State Q1
