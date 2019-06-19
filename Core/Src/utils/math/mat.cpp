@@ -119,7 +119,7 @@ Mat Mat::mult_EW(float num)
         Mat temp(rows_, cols_);
         for (uint8_t i = 0; i < rows_; ++i) {
                 for (uint8_t j = 0; j < cols_; ++j) {
-                        temp.matrix_[i][j] *= num;
+                        temp.matrix_[i][j] = matrix_[i][j] * num;
                 }
         }
 
