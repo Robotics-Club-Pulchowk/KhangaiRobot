@@ -14,10 +14,11 @@
 #include "usart.h"
 #include "vec3.h"
 
-#define LOG_BUFFER_SIZE     (16*1024)
+#define LOG_BUFFER_SIZE     (32*1024)
 
 extern Queue<uint8_t, LOG_BUFFER_SIZE> gLogging_Buffer;
 
+void log_Stop();
 void log_Angle(float psi, float rw);
 void log_CompassOffsets(Vec3<float> offsets);
 void log_JoyStickError(uint32_t err_count);

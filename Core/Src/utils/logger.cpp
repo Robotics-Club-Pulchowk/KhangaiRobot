@@ -31,6 +31,12 @@ void Logging_Handle_TxCplt()
         gLogDataSent = true;
 }
 
+void log_Stop()
+{
+        gLogging_Buffer.insert((uint8_t)(START_BYTE));
+        gLogging_Buffer.insert((uint8_t)(STOP_PACKET_ID));
+}
+
 //* Angle_Logging Function
 void log_Angle(float psi, float rw)
 {
@@ -52,9 +58,9 @@ void log_CompassOffsets(Vec3<float> offsets)
 
         gLogging_Buffer.insert((uint8_t)(START_BYTE));
         gLogging_Buffer.insert((uint8_t)(COMPASS_PACKET_ID));
-        gLogging_Buffer.insert((int8_t)((offsets.getX()/300.0)*128.0));
-        gLogging_Buffer.insert((int8_t)((offsets.getY()/300.0)*128.0));
-        gLogging_Buffer.insert((int8_t)((offsets.getZ()/300.0)*128.0));
+        gLogging_Buffer.insert((int8_t)((offsets.getX()/500.0)*128.0));
+        gLogging_Buffer.insert((int8_t)((offsets.getY()/500.0)*128.0));
+        gLogging_Buffer.insert((int8_t)((offsets.getZ()/500.0)*128.0));
 }
 
 void log_JoyStickError(uint32_t err_count)
