@@ -79,7 +79,7 @@ static void init_RedGameField()
         // Defining the state : State B
         gStateB_Data.id = Field::FIELD_B;
         gStateB_Data.centre = Vec2<float>(1500, 1500);
-        gStateB_Data.upper_bounds = Vec2<float>(2000, 1700);
+        gStateB_Data.upper_bounds = Vec2<float>(2500, 2000);
         gStateB_Data.lower_bounds = Vec2<float>(1200, 1000);
         gStateB_Data.last_limit = 1;
         gStateB_Data.ramping_factor = 0.001;
@@ -171,7 +171,7 @@ static void init_RedGameField()
         gStateI_Data.id = Field::FIELD_I;
         gStateI_Data.centre = Vec2<float>(1325, 8600);
         gStateI_Data.upper_bounds = Vec2<float>(1600, 9000);
-        gStateI_Data.lower_bounds = Vec2<float>(1000, 8500);
+        gStateI_Data.lower_bounds = Vec2<float>(1000, 8200);
         gStateI_Data.last_limit = 1;
         gStateI_Data.ramping_factor = 0.004;
         gStateI_Data.first_limit = 0.825;
@@ -235,9 +235,9 @@ static void init_RedGameField()
         // *** Red Game Field *** //
         // Defining the state : State P
         gStateP_Data.id = Field::FIELD_P;
-        gStateP_Data.centre = Vec2<float>(3500, 7520);
-        gStateP_Data.upper_bounds = Vec2<float>(4500, 8000);
-        gStateP_Data.lower_bounds = Vec2<float>(3300, 7040);
+        gStateP_Data.centre = Vec2<float>(3500, 7420);
+        gStateP_Data.upper_bounds = Vec2<float>(4500, 7700);
+        gStateP_Data.lower_bounds = Vec2<float>(2500, 7040);
         gStateP_Data.last_limit = 1;
         gStateP_Data.ramping_factor = 0.001;
         gStateP_Data.first_limit = 1;
@@ -249,7 +249,7 @@ static void init_RedGameField()
         // Defining the state : State Q
         gStateQ_Data.id = Field::FIELD_Q;
         gStateQ_Data.centre = Vec2<float>(3500, 4600);
-        gStateQ_Data.upper_bounds = Vec2<float>(4500, 5000);
+        gStateQ_Data.upper_bounds = Vec2<float>(4500, 5300);
         gStateQ_Data.lower_bounds = Vec2<float>(3000, 4500);
         gStateQ_Data.last_limit = 1;
         gStateQ_Data.ramping_factor = 0.001;

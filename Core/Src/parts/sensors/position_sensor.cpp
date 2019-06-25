@@ -77,7 +77,8 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
                         x_enc_used = true;
                 }
                 else if (p_sensors_[i]->get_Name() == SensorName::YEncoder) {
-                        free_wheel.setY(p_sensors_[i]->read());
+                        float ey = p_sensors_[i]->read();
+                        free_wheel.setY(ey);
                         y_enc_used = true;
                 }
                 else if (p_sensors_[i]->get_Name() == SensorName::XLidar) {
@@ -233,8 +234,14 @@ void PositionSensor::process_LidarData(Vec3<float> ori, float (&lidar)[2], const
                         lidar[0] += 755;
                 }
         }
-
-        if (fabs(yaw) < 10) {
+        
+        if (id == Field::FIELD_O) {
+                // Need to compensate for shagai too
+                if (lidar[1] > ylidar_lower_value) {
+                        lidar[1] = 10000 - lidar[1]*cos(yaw / 57.3);
+                }
+        }
+        else if (fabs(yaw) < 10) {
                 // Compensating y-values at poles using ylidar's data 
                 if (id == Field::FIELD_A) {
                         if (lidar[1] < 1500 && lidar[1] > ylidar_lower_value) {
@@ -268,11 +275,10 @@ void PositionSensor::process_LidarData(Vec3<float> ori, float (&lidar)[2], const
                 //                 gY_Lidar_Used = false;
                 //         }
                 // }
-                else if (id == Field::FIELD_I || id == Field::FIELD_J ||
-                        id == Field::FIELD_O) {
+                else if (id == Field::FIELD_I || id == Field::FIELD_J) {
                         // Need to compensate for shagai too
                         if (lidar[1] > ylidar_lower_value) {
-                                lidar[1] = 10000 - lidar[1];
+                                lidar[1] = 10000 - lidar[1] * cos(yaw / 57.3);
                         }
                 }
                 else {
