@@ -47,7 +47,7 @@ Robot& Robot::get_Instance()
 void Robot::read_Field()
 {
         // Read Field Value Here
-        gCurrent_Field = GameField::BLUE;
+        gCurrent_Field = GameField::RED;
 
         // Update Gamefield after reading current field
         update_GameField(gCurrent_Field);
@@ -109,18 +109,17 @@ int Robot::init(uint32_t dt_millis)
                                 maxs.setX(max_val(maxs.getX(), hmc->raw_axis.getX()));
                                 maxs.setY(max_val(maxs.getY(), hmc->raw_axis.getY()));
                                 maxs.setZ(max_val(maxs.getZ(), hmc->raw_axis.getZ()));
-                                
+
                                 mins.setX(min_val(mins.getX(), hmc->raw_axis.getX()));
                                 mins.setY(min_val(mins.getY(), hmc->raw_axis.getY()));
                                 mins.setZ(min_val(mins.getZ(), hmc->raw_axis.getZ()));
 
+                                log_CompassOffsets(hmc->raw_axis);
                         }
                 }
                 base_->actuate(zero_vec, zero_vec, sample_period, 0);
+                log_Stop();
 
-                hmc->hard_iron_offset = (maxs + mins).mult_EW(0.5);
-                
-                log_CompassOffsets(hmc->hard_iron_offset);
                 printf("Compass offsets : ");
                 (hmc->hard_iron_offset).print();
                 printf("\n");
