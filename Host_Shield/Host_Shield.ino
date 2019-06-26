@@ -26,7 +26,7 @@ XBOXRECV Xbox(&Usb);
 #endif
 
 #define _USE_SMALLEST_SIZE
-#define JOUSTICK_SMALL_SIZE_NUM         (7)
+#define JOUSTICK_SMALL_SIZE_NUM         (8)
 
 // Data format
 // 2 bytes for buttons
@@ -105,7 +105,7 @@ void setup()
 
 bool is_Unrequired(uint8_t i)
 {
-        if (i == P_BUTTON2 || i == P_LHXH || i == P_LHYH
+        if (i == P_LHXH || i == P_LHYH
             || i == P_RHXH || i == P_RHYH) {
                     return true;
         }
@@ -137,12 +137,12 @@ void loop()
                 for (uint8_t i = 0; i < 13; ++i) {
                         if (!is_Unrequired(i)) {
                                 Serial3.write(gJoyStick_Packet[i]);
-                                 Serial.print(gJoyStick_Packet[i], DEC);
-                                 Serial.print(' ');
+                                // Serial.print(gJoyStick_Packet[i], DEC);
+                                // Serial.print(' ');
                                 joy_arr[j++] = gJoyStick_Packet[i];
                         }
                 }
-                Serial.println();
+                // Serial.println();
                 uint8_t hash = gJoyStick_CRC.get_Hash(&joy_arr[1],JOUSTICK_SMALL_SIZE_NUM);
                 // Serial.println(hash, DEC);
                 Serial3.write(hash);
@@ -275,7 +275,7 @@ void get_XBOX(uint8_t (&arr)[13])
 #endif // DEBUG_MODE
                 }
 
-                if (Xbox.getButtonClick(START))
+                if (Xbox.getButtonPress(START))
                 {
                         button_bytes[1] |= _BV(B_START);
 #ifdef DEBUG_MODE

@@ -26,12 +26,20 @@
 #define B_LB            (1)
 #define B_RB            (0)
 
+#define B_START         (7)
+#define B_BACK          (6)
+#define B_XBOX          (5)
+#define B_LEFT          (4)
+#define B_RIGHT         (3)
+
 #define MANUAL_KEY              (B_LB)
 #define AUTO_KEY                (B_A)
 #define RESET_KEY               (B_RB)
 #define SHAGAI_GRIP_KEY         (B_X)
 #define THROW_SHAGAI_KEY        (B_Y)
 #define ACTUATE_ARM_KEY         (B_B)
+
+#define START_THROW_KEY         (B_START)
 
 #ifndef _BV
         #define _BV(x)          (1 << x)
@@ -40,6 +48,7 @@
 struct JoyStick_Data
 {
         uint8_t button1;
+        uint8_t button2;
         uint8_t lt;
         uint8_t rt;
         uint8_t l_hatx;
@@ -70,6 +79,7 @@ struct JoyStick_Command
         bool grip_shagai;
         bool throw_shagai;
         bool actuate_arm;
+        bool start_throw;
 };
 
 class JoyStick

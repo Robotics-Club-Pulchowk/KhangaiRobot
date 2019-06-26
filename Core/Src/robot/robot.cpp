@@ -64,7 +64,7 @@ int Robot::init(uint32_t dt_millis)
         //* Calibrate the compass after all the devices have been initialized
 
         int status = (base_status | sensor_status | cpu_status);
-        
+
         HAL_GPIO_WritePin(B_GreenLED_GPIO_Port, B_GreenLED_Pin, GPIO_PIN_SET);
         HAL_Delay(1000);
         HAL_GPIO_WritePin(B_GreenLED_GPIO_Port, B_GreenLED_Pin, GPIO_PIN_RESET);

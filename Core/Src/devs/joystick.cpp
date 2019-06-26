@@ -16,7 +16,7 @@
 #include <math.h>
 
 #define JOYSTICK_START_BYTE     (START_BYTE)
-#define NUM_JOYSTICK_BYTES      (7)
+#define NUM_JOYSTICK_BYTES      (8)
 
 static JoyStick_Handle gJoyStick;
 static JoyStick_Data gNull_JData;
@@ -78,12 +78,13 @@ void JoyStick_Handle_RxCplt()
 static void fill_JoyData(JoyStick_Data *joy, uint8_t data[NUM_JOYSTICK_BYTES])
 {
         joy->button1 = data[0];
-        joy->lt = data[1];
-        joy->rt = data[2];
-        joy->l_hatx = data[3];
-        joy->l_haty = data[4];
-        joy->r_hatx = data[5];
-        joy->r_haty = data[6];
+        joy->button2 = data[1];
+        joy->lt = data[2];
+        joy->rt = data[3];
+        joy->l_hatx = data[4];
+        joy->l_haty = data[5];
+        joy->r_hatx = data[6];
+        joy->r_haty = data[7];
 }
 
 #ifdef _USE_BOARD_LEDS_FOR_JOYSTICK
@@ -138,6 +139,7 @@ int JoyStick::init()
 
         // Null JoyStick Data
         gNull_JData.button1 = 0;
+        gNull_JData.button2 = 0;
         gNull_JData.lt = 0;
         gNull_JData.rt = 0;
         gNull_JData.l_hatx = 0;
@@ -233,6 +235,9 @@ void JoyStick::parse_JoyData(JoyStick_Data joy)
 
         uint8_t brake = joy.rt;
         uint8_t accel = joy.lt;
+
+        button = joy.button2;
+        bool start_throw = button & _BV(START_THROW_KEY);
         
         taskENTER_CRITICAL();
         Joy_Command.mode = mode;
@@ -243,5 +248,6 @@ void JoyStick::parse_JoyData(JoyStick_Data joy)
         Joy_Command.grip_shagai = grip_shagai;
         Joy_Command.throw_shagai = throw_shagai;
         Joy_Command.actuate_arm = actuate_arm;
+        Joy_Command.start_throw = start_throw;
         taskEXIT_CRITICAL();
 }

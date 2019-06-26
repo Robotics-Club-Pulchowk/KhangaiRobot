@@ -252,6 +252,7 @@ Vec3<float> Processor::control(Vec3<float> state,
         bool reset_pos = false;
         bool thr_shg = false;
         bool actuate_arm = false;
+        bool start_throw = false;
 
         bool just_read = false;
 
@@ -266,12 +267,27 @@ Vec3<float> Processor::control(Vec3<float> state,
                 reset_pos = joy_command.reset_pos;
                 thr_shg = joy_command.throw_shagai;
                 actuate_arm = joy_command.actuate_arm;
+                start_throw = joy_command.start_throw;
         }
         
         //* Process the data if read
         process(state, robot_state_vars);
         
         Field id = robot_state_vars->id;
+
+        //* Start Throwing Sequence if start_throw received and the robot has
+        //* not already started Throwing Sequence
+        if (id != Field::FIELD_Q) {
+                if (start_throw) {
+                        curr_state_ = &gStateQ;
+                        sensor_->change_Sensors(curr_state_->get_ID());
+                        robot_state_vars = curr_state_->get_State();
+
+                        Vec2<float> p = curr_state_->get_Centre();
+                        Vec3<float> pos(p.getX(), p.getY(), 0); 
+                        sensor_->update_Position(pos);
+                }
+        }
 
         //* Return back to pick another shagai if shagai is thrown and the robot
         //* has retrieved it's arm
