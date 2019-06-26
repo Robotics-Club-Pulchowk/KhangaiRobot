@@ -95,7 +95,7 @@ void setup()
         Serial.println("Hello World!!");
         gJoyStick_CRC.begin(7);
         
-        Serial1.begin(115200);
+        Serial3.begin(115200);
         Usb.Init();
         delay(500);
         fill_array(gJoyStick_Packet, (uint8_t)0);
@@ -136,18 +136,19 @@ void loop()
                 uint8_t joy_arr[JOUSTICK_SMALL_SIZE_NUM+1];
                 for (uint8_t i = 0; i < 13; ++i) {
                         if (!is_Unrequired(i)) {
-                                Serial1.write(gJoyStick_Packet[i]);
-                                // Serial.print(gJoyStick_Packet[i], DEC);
-                                // Serial.print(' ');
+                                Serial3.write(gJoyStick_Packet[i]);
+                                 Serial.print(gJoyStick_Packet[i], DEC);
+                                 Serial.print(' ');
                                 joy_arr[j++] = gJoyStick_Packet[i];
                         }
                 }
+                Serial.println();
                 uint8_t hash = gJoyStick_CRC.get_Hash(&joy_arr[1],JOUSTICK_SMALL_SIZE_NUM);
                 // Serial.println(hash, DEC);
-                Serial1.write(hash);
+                Serial3.write(hash);
         }
-        if (Serial1.available()) {
-               char c = Serial1.read();
+        if (Serial3.available()) {
+               char c = Serial3.read();
                Serial.write(c);
         }
 #endif
