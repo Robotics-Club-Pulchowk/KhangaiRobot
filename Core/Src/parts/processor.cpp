@@ -185,11 +185,33 @@ Vec3<float> Processor::auto_control(Vec3<float> state, Vec3<float> vel_from_base
         return vel;
 }
 
-Vec3<float> Processor::manual_control(JoyStick_Command& joy_cmd)
+const float gJoyStick_Rotate_Arr[3][3] = { { 0, 1, 0},
+                                           {-1, 0, 0},
+                                           { 0, 0, 0} };
+
+
+static Mat gJoyStick_Rotate_Matrix(gJoyStick_Rotate_Arr);
+
+Vec3<float> Processor::manual_control(JoyStick_Command& joy_cmd, Field id)
 {
         Vec3<float> vels;
 
         vels = joy_cmd.vels;
+                
+        if (gCurrent_Field == GameField::RED) {
+                gJoyStick_Rotate_Matrix.at(0,1) = -1;
+                gJoyStick_Rotate_Matrix.at(1,0) = 1;
+        }
+        else {
+                // Leave as it is
+        }
+
+        if (id >= Field::FIELD_O) {
+                Mat vs = gJoyStick_Rotate_Matrix * vels;
+                vels.setX(vs.at(0,0));
+                vels.setY(vs.at(1,0));
+                vels.setZ(vs.at(2,0));
+        }
         float v = (float)(gMax_Robo_Manual_Velocity) / 1000.0;
         vels = vels.mult_EW(v);
         // Set rw to 0 for testing purpose
@@ -325,7 +347,7 @@ Vec3<float> Processor::control(Vec3<float> state,
                         vels = last_vel.mult_EW(0.8);
                 }
                 else {
-                        vels = manual_control(joy_command);
+                        vels = manual_control(joy_command, id);
                 }
 
                 led_val = fill_Intensity(0, 15);
@@ -338,7 +360,7 @@ Vec3<float> Processor::control(Vec3<float> state,
                         vels_manual = last_vel.mult_EW(0.8);
                 }
                 else {
-                        vels_manual = manual_control(joy_command);
+                        vels_manual = manual_control(joy_command, id);
                 }
 
                 vels = lerp(vels_manual, vels_auto, gAuto_Ratio);
@@ -507,7 +529,7 @@ void Processor::send_ThrowCommand(bool grip, bool throw_shg, bool act_arm)
                 actuate_Platform(act_arm);
         }
 
-        if (id >= Field::FIELD_O) {
+        if (id >= Field::FIELD_K) {
                 grip_Shagai(grip);
                 // printf("Grip Shagai");
         }

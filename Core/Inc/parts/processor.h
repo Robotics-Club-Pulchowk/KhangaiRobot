@@ -46,7 +46,7 @@ private:
         Processor() { is_first_ = true; }
         void process(Vec3<float> state, State_Vars *&robot_state_vars);
         Vec3<float> auto_control(Vec3<float> state, Vec3<float> vel_from_base, uint32_t dt_millis);
-        Vec3<float> manual_control(JoyStick_Command& joy_cmd);
+        Vec3<float> manual_control(JoyStick_Command& joy_cmd, Field id);
         void reset_Position(State_Vars *&robot_state_vars);
         void throw_Shagai(bool throw_shagai);
         void grip_Shagai(bool grip_shagai);
