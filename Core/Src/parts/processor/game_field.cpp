@@ -182,8 +182,8 @@ static void init_RedGameField()
         // *** Red Game Field *** //
         // Defining the state : State J
         gStateJ_Data.id = Field::FIELD_J;
-        gStateJ_Data.centre = Vec2<float>(5300, 8500);
-        gStateJ_Data.upper_bounds = Vec2<float>(6500, 9000);
+        gStateJ_Data.centre = Vec2<float>(5300, 8700);
+        gStateJ_Data.upper_bounds = Vec2<float>(6500, 9500);
         gStateJ_Data.lower_bounds = Vec2<float>(4300, 7800);
         gStateJ_Data.last_limit = 1;
         gStateJ_Data.ramping_factor = 0.001;
