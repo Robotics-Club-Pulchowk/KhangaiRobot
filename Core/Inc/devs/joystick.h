@@ -80,6 +80,7 @@ struct JoyStick_Command
         bool throw_shagai;
         bool actuate_arm;
         bool start_throw;
+        int8_t rotate_dir;
 };
 
 class JoyStick

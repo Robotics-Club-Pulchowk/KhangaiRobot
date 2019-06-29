@@ -256,6 +256,8 @@ static uint32_t gWait_For_Arm_To_Return_Count_Max = 100;
 static bool gArm_Returned = false;
 static bool gShagai_Thrown = false;
 
+static float gRobots_Angle_Offset = 0;
+
 Vec3<float> Processor::control(Vec3<float> state,
                                Vec3<float> vel_from_base,
                                Vec3<float> last_vel,
@@ -275,6 +277,7 @@ Vec3<float> Processor::control(Vec3<float> state,
         bool thr_shg = false;
         bool actuate_arm = false;
         bool start_throw = false;
+        int8_t rotate_dir = 0;
 
         bool just_read = false;
 
@@ -290,6 +293,7 @@ Vec3<float> Processor::control(Vec3<float> state,
                 thr_shg = joy_command.throw_shagai;
                 actuate_arm = joy_command.actuate_arm;
                 start_throw = joy_command.start_throw;
+                rotate_dir = joy_command.rotate_dir;
         }
         
         //* Process the data if read
@@ -306,7 +310,7 @@ Vec3<float> Processor::control(Vec3<float> state,
                         robot_state_vars = curr_state_->get_State();
 
                         Vec2<float> p = curr_state_->get_Centre();
-                        Vec3<float> pos(p.getX(), p.getY(), 0); 
+                        Vec3<float> pos(p.getX(), p.getY(), 0);
                         sensor_->update_Position(pos);
                 }
         }
@@ -392,19 +396,33 @@ Vec3<float> Processor::control(Vec3<float> state,
                 reset_Position(robot_state_vars);
         }
 
+        //* Correct Angle Offset According To User
+        if (rotate_dir == 1) {
+                gRobots_Angle_Offset += 0.1;
+        }
+        else if (rotate_dir == -1) {
+                gRobots_Angle_Offset -= 0.1;
+        }
+        if (gRobots_Angle_Offset > 90) {
+                gRobots_Angle_Offset = 90;
+        }
+        else if (gRobots_Angle_Offset < -90) {
+                gRobots_Angle_Offset = -90;
+        }
+
         //* Change orientation if in field Q - S (excluding S)
         if (id >= Field::FIELD_Q && id < Field::FIELD_S) {
                 // sensor_->update_IMUOffsets(Vec3<float>(-55.5, -111.5, -276.5));
                 
                 if (gCurrent_Field == GameField::RED) {
-                        vels.setZ(curr_state_->get_AngOffset() - 9);
+                        vels.setZ(curr_state_->get_AngOffset() - 9 + gRobots_Angle_Offset);
                 }
                 else if (gCurrent_Field == GameField::BLUE) {
-                        vels.setZ(curr_state_->get_AngOffset() + 9);
+                        vels.setZ(curr_state_->get_AngOffset() + 9 + gRobots_Angle_Offset);
                 }
         }
         else {
-                vels.setZ(curr_state_->get_AngOffset());
+                vels.setZ(curr_state_->get_AngOffset() + gRobots_Angle_Offset);
                 // sensor_->update_IMUOffsets(Vec3<float>(-55.5, 16.5, -276.5));
         }
 
@@ -467,7 +485,7 @@ void Processor::reset_Position(State_Vars *&robot_state_vars)
         Vec2<float> p = curr_state_->get_Centre();
         Vec3<float> pos(p.getX(), p.getY(), 0); 
         sensor_->update_Position(pos);
-        
+
         gSend_Extend_Num = gSend_Extend_Num_Max;
         gSend_Retrieve_Num = 10;
         
@@ -522,12 +540,7 @@ void Processor::send_ThrowCommand(bool grip, bool throw_shg, bool act_arm)
                 throw_Shagai(throw_shg);
         // }
 
-        if (id <= Field::FIELD_O) {
-                actuate_Arm(act_arm);
-        }
-        else {
-                actuate_Platform(act_arm);
-        }
+        actuate_Arm(act_arm);
 
         if (id >= Field::FIELD_K) {
                 grip_Shagai(grip);
