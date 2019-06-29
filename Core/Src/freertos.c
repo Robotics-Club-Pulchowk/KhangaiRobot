@@ -79,16 +79,16 @@
 
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
-uint32_t defaultTaskBuffer[256];
+uint32_t defaultTaskBuffer[ 256 ];
 osStaticThreadDef_t defaultTaskControlBlock;
 osThreadId RoboSequenceHandle;
-uint32_t RoboSequenceBuffer[2048];
+uint32_t RoboSequenceBuffer[ 8192 ];
 osStaticThreadDef_t RoboSequenceControlBlock;
 osThreadId loggingHandle;
-uint32_t loggingBuffer[2048];
+uint32_t loggingBuffer[ 4096 ];
 osStaticThreadDef_t loggingControlBlock;
 osThreadId MotorSequenceHandle;
-uint32_t MotorSequenceBuffer[ 2028 ];
+uint32_t MotorSequenceBuffer[ 4096 ];
 osStaticThreadDef_t MotorSequenceControlBlock;
 
 /* Private function prototypes -----------------------------------------------*/
@@ -148,15 +148,15 @@ void MX_FREERTOS_Init(void)
         defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
         /* definition and creation of RoboSequence */
-        osThreadStaticDef(RoboSequence, RobotThread, osPriorityRealtime, 0, 2048, RoboSequenceBuffer, &RoboSequenceControlBlock);
+        osThreadStaticDef(RoboSequence, RobotThread, osPriorityRealtime, 0, 8192, RoboSequenceBuffer, &RoboSequenceControlBlock);
         RoboSequenceHandle = osThreadCreate(osThread(RoboSequence), NULL);
 
         /* definition and creation of logging */
-        osThreadStaticDef(logging, LoggingThread, osPriorityLow, 0, 2048, loggingBuffer, &loggingControlBlock);
+        osThreadStaticDef(logging, LoggingThread, osPriorityLow, 0, 4096, loggingBuffer, &loggingControlBlock);
         loggingHandle = osThreadCreate(osThread(logging), NULL);
 
         /* definition and creation of MotorSequence */
-        osThreadStaticDef(MotorSequence, MotorThread, osPriorityRealtime, 0, 2028, MotorSequenceBuffer, &MotorSequenceControlBlock);
+        osThreadStaticDef(MotorSequence, MotorThread, osPriorityRealtime, 0, 4096, MotorSequenceBuffer, &MotorSequenceControlBlock);
         MotorSequenceHandle = osThreadCreate(osThread(MotorSequence), NULL);
 
         /* USER CODE BEGIN RTOS_THREADS */
