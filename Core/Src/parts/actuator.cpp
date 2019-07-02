@@ -288,7 +288,7 @@ void Actuator::wheels_Init(void)
         gWheel_Configurations[0].in1_port = GPIOE;
         gWheel_Configurations[0].in1_pin = GPIO_PIN_5; 
         gWheel_Configurations[0].channel = TIM_CHANNEL_1;
-        gWheel_Configurations[0].henc = &htim4;
+        gWheel_Configurations[0].henc = &htim1;
         gWheel_Configurations[0].max_omega = 65.19;
 
         gWheel_Configurations[1].in2_port = GPIOA;
@@ -307,12 +307,12 @@ void Actuator::wheels_Init(void)
         gWheel_Configurations[2].henc = &htim3;
         gWheel_Configurations[2].max_omega = 71.507;
 
-        gWheel_Configurations[3].in2_port = GPIOC;
-        gWheel_Configurations[3].in2_pin = GPIO_PIN_13;
-        gWheel_Configurations[3].in1_port = GPIOE;
-        gWheel_Configurations[3].in1_pin = GPIO_PIN_1;
+        gWheel_Configurations[3].in2_port = GPIOE;
+        gWheel_Configurations[3].in2_pin = GPIO_PIN_1;
+        gWheel_Configurations[3].in1_port = GPIOC;
+        gWheel_Configurations[3].in1_pin = GPIO_PIN_13;
         gWheel_Configurations[3].channel = TIM_CHANNEL_4;
-        gWheel_Configurations[3].henc = &htim1;
+        gWheel_Configurations[3].henc = &htim4;
         gWheel_Configurations[3].max_omega = 68.041;
 
         for (uint8_t i = 0; i < 4; ++i) {
