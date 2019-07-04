@@ -1,6 +1,6 @@
-<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/KhangaiRobot&#45;Play/Core/Inc/parts/sensors/bound_box.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/KhangaiRobot&#45;Play/Core/Inc/parts/sensors/bound_box.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,271,76"/>
-<area shape="rect" id="node2" href="$gpio_8h.html" title=" " alt="" coords="109,124,167,151"/>
-<area shape="rect" id="node3" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="107,199,169,225"/>
-<area shape="rect" id="node4" title=" " alt="" coords="79,273,197,300"/>
+<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/Khangai&#45;Robot&#45;Full/KhangaiRobot&#45;Play/Core/Inc/parts/sensors/bound_box.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/Khangai&#45;Robot&#45;Full/KhangaiRobot&#45;Play/Core/Inc/parts/sensors/bound_box.h">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,240,91"/>
+<area shape="rect" id="node2" href="$gpio_8h.html" title=" " alt="" coords="94,139,151,165"/>
+<area shape="rect" id="node3" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="92,213,153,240"/>
+<area shape="rect" id="node4" title=" " alt="" coords="64,288,181,315"/>
 </map>

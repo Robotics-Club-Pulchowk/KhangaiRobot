@@ -9,5 +9,6 @@ var searchData=
   ['brake',['brake',['../struct_joy_stick___command.html#aba359f312766f9a07407ee497353aff9',1,'JoyStick_Command']]],
   ['buf_5flen',['buf_len',['../struct_arduino___packet.html#a1bc8fd3d73cb7b81fea45e0756c611ef',1,'Arduino_Packet']]],
   ['buffer',['buffer',['../struct_arduino___packet.html#a5c35e03fa966cca485af1d8355e5f0dc',1,'Arduino_Packet']]],
-  ['button1',['button1',['../struct_joy_stick___data.html#a9cf43aeb44f0b29644aa4443c7fd4634',1,'JoyStick_Data']]]
+  ['button1',['button1',['../struct_joy_stick___data.html#a9cf43aeb44f0b29644aa4443c7fd4634',1,'JoyStick_Data']]],
+  ['button2',['button2',['../struct_joy_stick___data.html#ad523807fd31d18e1bdb057dc8fb3c71c',1,'JoyStick_Data']]]
 ];

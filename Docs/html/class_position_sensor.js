@@ -8,7 +8,7 @@ var class_position_sensor =
     [ "init", "class_position_sensor.html#a1f20719186d564899cba8ae3a01c3ecc", null ],
     [ "operator=", "class_position_sensor.html#ade4aa63bc3d5152fb4f8ba9c436a740c", null ],
     [ "operator=", "class_position_sensor.html#a7f177253b58603d914224ddb9f1b345f", null ],
-    [ "process_LidarData", "class_position_sensor.html#ad700f7bdc321b284af4b7d247f75f58f", null ],
+    [ "process_LidarData", "class_position_sensor.html#a93311cc02b8bedc263144d46cb82a540", null ],
     [ "read_Position", "class_position_sensor.html#a34aa8302e10e702599384f55148160e9", null ],
     [ "remove_Sensor", "class_position_sensor.html#ad81814b7f09c1104dc4695eec880979f", null ],
     [ "rotate_EncData", "class_position_sensor.html#adcd13a461130d4ce2c53ca917794fc0b", null ],

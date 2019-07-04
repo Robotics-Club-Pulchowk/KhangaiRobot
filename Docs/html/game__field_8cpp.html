@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Khangai Robot Play - Naive: C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai-Robot/KhangaiRobot-Play/Core/Src/parts/processor/game_field.cpp File Reference</title>
+<title>Khangai Robot Play - Naive: C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai-Robot/Khangai-Robot-Full/KhangaiRobot-Play/Core/Src/parts/processor/game_field.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -96,26 +96,28 @@ $(document).ready(function(){initNavTree('game__field_8cpp.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="robo__states_8h_source.html">robo_states.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="defines_8h_source.html">defines.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for game_field.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="game__field_8cpp__incl.png" border="0" usemap="#_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_khangai-_robot_2_khangai_robot-_play_2_core_2_src_2parts_2processor_2game__field_8cpp" alt=""/></div>
-<map name="_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_khangai-_robot_2_khangai_robot-_play_2_core_2_src_2parts_2processor_2game__field_8cpp" id="_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_khangai-_robot_2_khangai_robot-_play_2_core_2_src_2parts_2processor_2game__field_8cpp">
-<area shape="rect"  title=" " alt="" coords="373,5,598,91"/>
-<area shape="rect"  href="robo__states_8h.html" title=" " alt="" coords="435,139,536,165"/>
-<area shape="rect"  href="state__sensor_8h.html" title=" " alt="" coords="147,213,255,240"/>
-<area shape="rect"  href="vec2_8h.html" title=" " alt="" coords="309,437,368,464"/>
-<area shape="rect"  href="vec4_8h.html" title=" " alt="" coords="523,213,581,240"/>
-<area shape="rect"  href="vec3_8h.html" title=" " alt="" coords="160,512,219,539"/>
-<area shape="rect"  href="position__sensor_8h.html" title=" " alt="" coords="202,288,326,315"/>
-<area shape="rect"  href="bound__box_8h.html" title=" " alt="" coords="5,288,101,315"/>
-<area shape="rect"  title=" " alt="" coords="96,661,213,688"/>
-<area shape="rect"  href="main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="91,587,152,613"/>
-<area shape="rect"  href="sensor_8h.html" title=" " alt="" coords="376,363,448,389"/>
-<area shape="rect"  href="kalman_8h.html" title=" " alt="" coords="227,363,301,389"/>
-<area shape="rect"  title=" " alt="" coords="275,512,338,539"/>
-<area shape="rect"  href="mat_8h.html" title=" " alt="" coords="230,437,285,464"/>
-<area shape="rect"  href="gpio_8h.html" title=" " alt="" coords="39,437,97,464"/>
+<div class="center"><img src="game__field_8cpp__incl.png" border="0" usemap="#_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_khangai-_robot_2_khangai-_robot-_full_2_khangai_robot-_play_2_core_2_src_2parts_2processor_2game__field_8cpp" alt=""/></div>
+<map name="_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_khangai-_robot_2_khangai-_robot-_full_2_khangai_robot-_play_2_core_2_src_2parts_2processor_2game__field_8cpp" id="_c_1_2_users_2073be_2_one_drive_2_documents_2_robotics_2_codes_2beta_2_khangai-_robot_2_khangai-_robot-_full_2_khangai_robot-_play_2_core_2_src_2parts_2processor_2game__field_8cpp">
+<area shape="rect"  title=" " alt="" coords="438,5,645,105"/>
+<area shape="rect"  href="robo__states_8h.html" title=" " alt="" coords="435,153,536,180"/>
+<area shape="rect"  href="defines_8h.html" title=" " alt="" coords="560,153,635,180"/>
+<area shape="rect"  href="state__sensor_8h.html" title=" " alt="" coords="147,228,255,255"/>
+<area shape="rect"  href="vec2_8h.html" title=" " alt="" coords="309,452,368,479"/>
+<area shape="rect"  href="vec4_8h.html" title=" " alt="" coords="523,228,581,255"/>
+<area shape="rect"  href="vec3_8h.html" title=" " alt="" coords="160,527,219,553"/>
+<area shape="rect"  href="position__sensor_8h.html" title=" " alt="" coords="202,303,326,329"/>
+<area shape="rect"  href="bound__box_8h.html" title=" " alt="" coords="5,303,101,329"/>
+<area shape="rect"  title=" " alt="" coords="96,676,213,703"/>
+<area shape="rect"  href="main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="91,601,152,628"/>
+<area shape="rect"  href="sensor_8h.html" title=" " alt="" coords="376,377,448,404"/>
+<area shape="rect"  href="kalman_8h.html" title=" " alt="" coords="227,377,301,404"/>
+<area shape="rect"  title=" " alt="" coords="275,527,338,553"/>
+<area shape="rect"  href="mat_8h.html" title=" " alt="" coords="230,452,285,479"/>
+<area shape="rect"  href="gpio_8h.html" title=" " alt="" coords="39,452,97,479"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -123,6 +125,8 @@ Include dependency graph for game_field.cpp:</div>
 Functions</h2></td></tr>
 <tr class="memitem:a9ce21429239a4cc722845e28d0aced8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__field_8cpp.html#a9ce21429239a4cc722845e28d0aced8c">init_GameField</a> ()</td></tr>
 <tr class="separator:a9ce21429239a4cc722845e28d0aced8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9780c9d8c6c1d1b408cc0356d51c7d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__field_8cpp.html#ab9780c9d8c6c1d1b408cc0356d51c7d8">update_GameField</a> (<a class="el" href="defines_8h.html#a5187208c2894936ca145ab3298e74796">GameField</a> field)</td></tr>
+<tr class="separator:ab9780c9d8c6c1d1b408cc0356d51c7d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -190,6 +194,24 @@ Variables</h2></td></tr>
           <td class="memname">void init_GameField </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab9780c9d8c6c1d1b408cc0356d51c7d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9780c9d8c6c1d1b408cc0356d51c7d8">&#9670;&nbsp;</a></span>update_GameField()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void update_GameField </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="defines_8h.html#a5187208c2894936ca145ab3298e74796">GameField</a>&#160;</td>
+          <td class="paramname"><em>field</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

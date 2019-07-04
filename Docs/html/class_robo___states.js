@@ -8,6 +8,7 @@ var class_robo___states =
     [ "calc_RoboVelocity", "class_robo___states.html#a96e4be77ac27979c68dccfa93d90d883", null ],
     [ "calc_Velocity", "class_robo___states.html#a265781f9c854d4fc1c959f7b26ca39cc", null ],
     [ "cubicSpline", "class_robo___states.html#ae846d1e39dd7a955e4f14b36d0795c8d", null ],
+    [ "get_AngOffset", "class_robo___states.html#aa3e8208e2c2d5b591ed68f0cb955df96", null ],
     [ "get_Centre", "class_robo___states.html#ac673d6759baaa1a4afb5acc454389ec8", null ],
     [ "get_ID", "class_robo___states.html#a52979a290d5b8010c6478d76db4f167a", null ],
     [ "get_NextState", "class_robo___states.html#a2b991441c08e4ddef51f6a4683d172ed", null ],

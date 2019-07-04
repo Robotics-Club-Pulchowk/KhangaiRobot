@@ -1,6 +1,7 @@
 var struct_joy_stick___data =
 [
     [ "button1", "struct_joy_stick___data.html#a9cf43aeb44f0b29644aa4443c7fd4634", null ],
+    [ "button2", "struct_joy_stick___data.html#ad523807fd31d18e1bdb057dc8fb3c71c", null ],
     [ "l_hatx", "struct_joy_stick___data.html#aeff642260ca04d7810661d0024fcba03", null ],
     [ "l_haty", "struct_joy_stick___data.html#ac6e65c88af78b299aae2257962853fb2", null ],
     [ "lt", "struct_joy_stick___data.html#a3a749af555f936845bba1045c073ebca", null ],

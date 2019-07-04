@@ -1,8 +1,8 @@
-<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/KhangaiRobot&#45;Play/Core/Inc/parts/sensors/encoder.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/KhangaiRobot&#45;Play/Core/Inc/parts/sensors/encoder.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,253,76"/>
-<area shape="rect" id="node2" href="$sensor_8h.html" title=" " alt="" coords="41,124,113,151"/>
-<area shape="rect" id="node3" href="$freewheel_8h.html" title=" " alt="" coords="138,124,225,151"/>
-<area shape="rect" id="node4" href="$gpio_8h.html" title=" " alt="" coords="153,199,210,225"/>
-<area shape="rect" id="node5" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="151,273,212,300"/>
-<area shape="rect" id="node6" title=" " alt="" coords="123,348,240,375"/>
+<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/Khangai&#45;Robot&#45;Full/KhangaiRobot&#45;Play/Core/Inc/parts/sensors/encoder.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/Khangai&#45;Robot&#45;Full/KhangaiRobot&#45;Play/Core/Inc/parts/sensors/encoder.h">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,224,91"/>
+<area shape="rect" id="node2" href="$sensor_8h.html" title=" " alt="" coords="27,139,99,165"/>
+<area shape="rect" id="node3" href="$freewheel_8h.html" title=" " alt="" coords="123,139,210,165"/>
+<area shape="rect" id="node4" href="$gpio_8h.html" title=" " alt="" coords="138,213,195,240"/>
+<area shape="rect" id="node5" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="136,288,197,315"/>
+<area shape="rect" id="node6" title=" " alt="" coords="108,363,225,389"/>
 </map>

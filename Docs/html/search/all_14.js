@@ -5,7 +5,7 @@ var searchData=
   ['temp_5fout_5fh',['TEMP_OUT_H',['../mpu6050__reg_8h.html#ae8c4c28fe604535a3a57d0536c6e8175',1,'mpu6050_reg.h']]],
   ['temp_5fout_5fl',['TEMP_OUT_L',['../mpu6050__reg_8h.html#a7fe4a13198c0b3d8cf09802e7247fd2c',1,'mpu6050_reg.h']]],
   ['throw',['THROW',['../throwing_8h.html#a9de00b28c82e3d4fe92c30459fc1b48da655474de4674aba7a436a73cd8d9a906',1,'throwing.h']]],
-  ['throw_5fshagai',['throw_Shagai',['../class_processor.html#a418c21baf2c7177c01c275721a72a953',1,'Processor::throw_Shagai()'],['../struct_joy_stick___command.html#a7b9f8402890f6bbc67b9d865dc52457a',1,'JoyStick_Command::throw_shagai()']]],
+  ['throw_5fshagai',['throw_shagai',['../struct_joy_stick___command.html#a7b9f8402890f6bbc67b9d865dc52457a',1,'JoyStick_Command::throw_shagai()'],['../class_processor.html#a418c21baf2c7177c01c275721a72a953',1,'Processor::throw_Shagai()']]],
   ['throw_5fshagai_5fkey',['THROW_SHAGAI_KEY',['../joystick_8h.html#afbd561605768a0523968c616ce0572e6',1,'joystick.h']]],
   ['thrower_5f',['thrower_',['../class_processor.html#a7293e0edd1dcbf3d12f8e562800a10d1',1,'Processor']]],
   ['throwing',['Throwing',['../class_throwing.html',1,'Throwing'],['../class_throwing.html#a5d24c87ddfbf4714e390c86e2c68ab98',1,'Throwing::Throwing(Throwing &amp;&amp;)=default'],['../class_throwing.html#ae0c4a44d77a23e11372ee8808fb91eef',1,'Throwing::Throwing(const Throwing &amp;)=default'],['../class_throwing.html#a4f306460e6237b914ee3b5a05ebbd789',1,'Throwing::Throwing()']]],

@@ -10,6 +10,7 @@ var class_robot =
     [ "operator=", "class_robot.html#a9d87cd5916b71d18d6d6e68edc652162", null ],
     [ "operator=", "class_robot.html#a39205b459ddd0efc42f61a89e7f711f5", null ],
     [ "profile_Actuators", "class_robot.html#a38036a2ef73f7b1af6c5d6269e03a5f8", null ],
+    [ "read_Field", "class_robot.html#a41a27b6c8fbd77b3ae678a23c1813642", null ],
     [ "run", "class_robot.html#a1456df8be5ce9a34e8aa175fc6cb8a1a", null ],
     [ "update", "class_robot.html#a069b12308af85b7fc5b670b55503f55e", null ],
     [ "base_", "class_robot.html#a3bc0081ef09e6f11a76ae66dfbbbc228", null ],

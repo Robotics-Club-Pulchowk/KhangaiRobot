@@ -1,7 +1,7 @@
 var searchData=
 [
   ['main',['main',['../main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe',1,'main.cpp']]],
-  ['manual_5fcontrol',['manual_control',['../class_processor.html#a9d08a8c82a543d7501090c96f821c3b4',1,'Processor']]],
+  ['manual_5fcontrol',['manual_control',['../class_processor.html#a7ead1002c345f420def9f3dc64ac704e',1,'Processor']]],
   ['mat',['Mat',['../class_mat.html#a7205342eec3270c1aa954f35d8af27c7',1,'Mat::Mat()'],['../class_mat.html#af844a885aedf39d90ad27b2f34333791',1,'Mat::Mat(const float(&amp;mat)[M][N])'],['../class_mat.html#a591f4755584ae81e04f14e8f780a05f8',1,'Mat::Mat(uint8_t rows, uint8_t columns)'],['../class_mat.html#a560a2b152f0b4c7389058c23668da819',1,'Mat::Mat(Mat &amp;&amp;)=default'],['../class_mat.html#a1e30e252a1e556ac5e131edac7b08a23',1,'Mat::Mat(const Mat &amp;m)']]],
   ['max_5fval',['max_val',['../utils_8h.html#a58b3af0a25dadb0876181666c3fab002',1,'utils.h']]],
   ['memmanage_5fhandler',['MemManage_Handler',['../stm32f4xx__it_8h.html#a3150f74512510287a942624aa9b44cc5',1,'MemManage_Handler(void):&#160;stm32f4xx_it.c'],['../stm32f4xx__it_8c.html#a3150f74512510287a942624aa9b44cc5',1,'MemManage_Handler(void):&#160;stm32f4xx_it.c']]],

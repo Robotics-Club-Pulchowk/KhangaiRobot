@@ -1,10 +1,10 @@
-<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/KhangaiRobot&#45;Play/Core/Inc/devs/joystick.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/KhangaiRobot&#45;Play/Core/Inc/devs/joystick.h">
-<area shape="rect" id="node1" title=" " alt="" coords="77,5,302,76"/>
-<area shape="rect" id="node2" href="$vec3_8h.html" title=" " alt="" coords="5,124,64,151"/>
-<area shape="rect" id="node5" href="$usart_8h.html" title=" " alt="" coords="89,124,151,151"/>
-<area shape="rect" id="node6" href="$queue__custom_8h.html" title=" " alt="" coords="145,199,263,225"/>
-<area shape="rect" id="node7" title=" " alt="" coords="227,124,322,151"/>
-<area shape="rect" id="node8" title=" " alt="" coords="347,124,405,151"/>
-<area shape="rect" id="node3" title=" " alt="" coords="31,273,148,300"/>
-<area shape="rect" id="node4" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="59,199,120,225"/>
+<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/Khangai&#45;Robot&#45;Full/KhangaiRobot&#45;Play/Core/Inc/devs/joystick.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/Khangai&#45;Robot&#45;Full/KhangaiRobot&#45;Play/Core/Inc/devs/joystick.h">
+<area shape="rect" id="node1" title=" " alt="" coords="89,5,289,91"/>
+<area shape="rect" id="node2" href="$vec3_8h.html" title=" " alt="" coords="5,139,64,165"/>
+<area shape="rect" id="node5" href="$usart_8h.html" title=" " alt="" coords="89,139,151,165"/>
+<area shape="rect" id="node6" href="$queue__custom_8h.html" title=" " alt="" coords="145,213,263,240"/>
+<area shape="rect" id="node7" title=" " alt="" coords="227,139,322,165"/>
+<area shape="rect" id="node8" title=" " alt="" coords="347,139,405,165"/>
+<area shape="rect" id="node3" title=" " alt="" coords="31,288,148,315"/>
+<area shape="rect" id="node4" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="59,213,120,240"/>
 </map>

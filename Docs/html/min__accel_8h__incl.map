@@ -1,8 +1,8 @@
-<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/KhangaiRobot&#45;Play/Core/Inc/utils/trajectory/min_accel.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/KhangaiRobot&#45;Play/Core/Inc/utils/trajectory/min_accel.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,231,91"/>
-<area shape="rect" id="node2" href="$vec2_8h.html" title=" " alt="" coords="89,139,147,165"/>
-<area shape="rect" id="node3" href="$vec3_8h.html" title=" " alt="" coords="46,213,105,240"/>
-<area shape="rect" id="node6" title=" " alt="" coords="129,213,192,240"/>
-<area shape="rect" id="node4" title=" " alt="" coords="17,363,134,389"/>
-<area shape="rect" id="node5" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="79,288,141,315"/>
+<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/Khangai&#45;Robot&#45;Full/KhangaiRobot&#45;Play/Core/Inc/utils/trajectory/min_accel.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/Khangai&#45;Robot&#45;Full/KhangaiRobot&#45;Play/Core/Inc/utils/trajectory/min_accel.h">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,240,91"/>
+<area shape="rect" id="node2" href="$vec2_8h.html" title=" " alt="" coords="93,139,152,165"/>
+<area shape="rect" id="node3" href="$vec3_8h.html" title=" " alt="" coords="51,213,109,240"/>
+<area shape="rect" id="node6" title=" " alt="" coords="134,213,197,240"/>
+<area shape="rect" id="node4" title=" " alt="" coords="21,363,139,389"/>
+<area shape="rect" id="node5" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="84,288,145,315"/>
 </map>

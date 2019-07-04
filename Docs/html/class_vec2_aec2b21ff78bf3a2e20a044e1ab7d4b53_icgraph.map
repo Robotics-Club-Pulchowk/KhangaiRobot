@@ -1,10 +1,6 @@
 <map id="Vec2::setX" name="Vec2::setX">
-<area shape="rect" id="node1" title=" " alt="" coords="737,71,823,98"/>
-<area shape="rect" id="node2" href="$class_vec2.html#a238a918f6d2695dd187a9778982a1769" title=" " alt="" coords="535,5,661,47"/>
-<area shape="rect" id="node3" href="$class_robo___states.html#a265781f9c854d4fc1c959f7b26ca39cc" title=" " alt="" coords="507,71,689,98"/>
-<area shape="rect" id="node5" href="$class_position_sensor.html#a34aa8302e10e702599384f55148160e9" title=" " alt="" coords="527,123,669,164"/>
-<area shape="rect" id="node4" href="$class_processor.html#ad8a55cdfd1d1f42c3bd454a21ef0eb4d" title=" " alt="" coords="299,71,459,98"/>
-<area shape="rect" id="node6" href="$class_state___sensor.html#a79118858b21e47b7e6e509dfba5b06f8" title="Function that provides the state of the robot." alt="" coords="311,123,446,164"/>
-<area shape="rect" id="node7" href="$class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,130,251,157"/>
-<area shape="rect" id="node8" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,130,100,157"/>
+<area shape="rect" id="node1" title=" " alt="" coords="444,42,529,69"/>
+<area shape="rect" id="node2" href="$class_vec2.html#a238a918f6d2695dd187a9778982a1769" title=" " alt="" coords="241,5,368,47"/>
+<area shape="rect" id="node3" href="$class_robo___states.html#a265781f9c854d4fc1c959f7b26ca39cc" title=" " alt="" coords="213,71,396,98"/>
+<area shape="rect" id="node4" href="$class_processor.html#ad8a55cdfd1d1f42c3bd454a21ef0eb4d" title=" " alt="" coords="5,71,165,98"/>
 </map>

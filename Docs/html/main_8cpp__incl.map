@@ -1,13 +1,13 @@
-<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/KhangaiRobot&#45;Play/Core/Src/main.cpp" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/KhangaiRobot&#45;Play/Core/Src/main.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="220,5,446,76"/>
-<area shape="rect" id="node2" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="302,199,364,225"/>
-<area shape="rect" id="node4" title=" " alt="" coords="32,124,122,151"/>
-<area shape="rect" id="node5" href="$adc_8h.html" title=" " alt="" coords="146,124,200,151"/>
-<area shape="rect" id="node6" href="$dma_8h.html" title=" " alt="" coords="225,124,284,151"/>
-<area shape="rect" id="node7" href="$i2c_8h.html" title=" " alt="" coords="308,124,358,151"/>
-<area shape="rect" id="node8" href="$tim_8h.html" title=" " alt="" coords="382,124,433,151"/>
-<area shape="rect" id="node9" href="$usart_8h.html" title=" " alt="" coords="458,124,520,151"/>
-<area shape="rect" id="node10" title=" " alt="" coords="544,124,642,151"/>
-<area shape="rect" id="node11" href="$gpio_8h.html" title=" " alt="" coords="666,124,723,151"/>
-<area shape="rect" id="node3" title=" " alt="" coords="274,273,392,300"/>
+<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/Khangai&#45;Robot&#45;Full/KhangaiRobot&#45;Play/Core/Src/main.cpp" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/Khangai&#45;Robot&#45;Full/KhangaiRobot&#45;Play/Core/Src/main.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="233,5,433,91"/>
+<area shape="rect" id="node2" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="302,213,364,240"/>
+<area shape="rect" id="node4" title=" " alt="" coords="32,139,122,165"/>
+<area shape="rect" id="node5" href="$adc_8h.html" title=" " alt="" coords="146,139,200,165"/>
+<area shape="rect" id="node6" href="$dma_8h.html" title=" " alt="" coords="225,139,284,165"/>
+<area shape="rect" id="node7" href="$i2c_8h.html" title=" " alt="" coords="308,139,358,165"/>
+<area shape="rect" id="node8" href="$tim_8h.html" title=" " alt="" coords="382,139,433,165"/>
+<area shape="rect" id="node9" href="$usart_8h.html" title=" " alt="" coords="458,139,520,165"/>
+<area shape="rect" id="node10" title=" " alt="" coords="544,139,642,165"/>
+<area shape="rect" id="node11" href="$gpio_8h.html" title=" " alt="" coords="666,139,723,165"/>
+<area shape="rect" id="node3" title=" " alt="" coords="274,288,392,315"/>
 </map>

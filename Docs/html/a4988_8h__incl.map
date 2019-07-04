@@ -1,7 +1,7 @@
-<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/KhangaiRobot&#45;Play/Core/Inc/devs/a4988.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/KhangaiRobot&#45;Play/Core/Inc/devs/a4988.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,231,76"/>
-<area shape="rect" id="node2" href="$tim_8h.html" title=" " alt="" coords="8,124,105,151"/>
-<area shape="rect" id="node5" href="$gpio_8h.html" title=" " alt="" coords="129,124,232,151"/>
-<area shape="rect" id="node3" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="87,199,149,225"/>
-<area shape="rect" id="node4" title=" " alt="" coords="59,273,177,300"/>
+<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/Khangai&#45;Robot&#45;Full/KhangaiRobot&#45;Play/Core/Inc/devs/a4988.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/Khangai&#45;Robot&#45;Full/KhangaiRobot&#45;Play/Core/Inc/devs/a4988.h">
+<area shape="rect" id="node1" title=" " alt="" coords="15,5,215,91"/>
+<area shape="rect" id="node2" href="$tim_8h.html" title=" " alt="" coords="5,139,103,165"/>
+<area shape="rect" id="node5" href="$gpio_8h.html" title=" " alt="" coords="127,139,229,165"/>
+<area shape="rect" id="node3" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="85,213,146,240"/>
+<area shape="rect" id="node4" title=" " alt="" coords="57,288,174,315"/>
 </map>

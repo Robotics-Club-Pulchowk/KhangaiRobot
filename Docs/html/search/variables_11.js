@@ -11,10 +11,11 @@ var searchData=
   ['raw_5faxis',['raw_axis',['../struct_h_m_c5883.html#ad1333a78a3f2ef0f1387a8ccc802ba34',1,'HMC5883']]],
   ['raw_5fg_5faxis',['raw_g_axis',['../struct_m_p_u6050.html#a94360a757c361c37d0af803beccaf7a0',1,'MPU6050']]],
   ['reset_5fpos',['reset_pos',['../struct_joy_stick___command.html#ac95a433284391e4a643cf928586af96b',1,'JoyStick_Command']]],
-  ['robosequencebuffer',['RoboSequenceBuffer',['../freertos_8c.html#a326168171e676690f6a5b23d9a36de8a',1,'freertos.c']]],
+  ['robosequencebuffer',['RoboSequenceBuffer',['../freertos_8c.html#af1b012fc7cc06af36ecaf10f3536ac5f',1,'freertos.c']]],
   ['robosequencecontrolblock',['RoboSequenceControlBlock',['../freertos_8c.html#afe525754ca97518b5d6e89215b533011',1,'freertos.c']]],
   ['robosequencehandle',['RoboSequenceHandle',['../freertos_8c.html#a16ef6126f17d38471073b31d53f6001c',1,'freertos.c']]],
   ['robot_5fstate_5fvars_5f',['robot_state_vars_',['../class_robot.html#a7990f95a4b82902844fcbf718dccd5ec',1,'Robot']]],
+  ['rotate_5fdir',['rotate_dir',['../struct_joy_stick___command.html#a658132b47cd9103ed2e07c0bf282a021',1,'JoyStick_Command']]],
   ['rows_5f',['rows_',['../class_mat.html#aad27e7e5a9e5672a3ae21493892fc67e',1,'Mat']]],
   ['rt',['rt',['../struct_joy_stick___data.html#aa11f5bce8d4d5ac7045e7b5b7c6e0755',1,'JoyStick_Data']]],
   ['rx_5fdata_5f',['rx_data_',['../class_arduino___device.html#a31f966cfaa86922a7a0ad94b08e29c61',1,'Arduino_Device']]]

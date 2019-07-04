@@ -1,11 +1,11 @@
-<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/KhangaiRobot&#45;Play/Core/Inc/parts/sensors/lidar.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/KhangaiRobot&#45;Play/Core/Inc/parts/sensors/lidar.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,232,76"/>
-<area shape="rect" id="node2" href="$sensor_8h.html" title=" " alt="" coords="8,199,80,225"/>
-<area shape="rect" id="node3" href="$arduino_8h.html" title=" " alt="" coords="81,124,156,151"/>
-<area shape="rect" id="node6" href="$vec2_8h.html" title=" " alt="" coords="183,124,241,151"/>
-<area shape="rect" id="node4" href="$queue__custom_8h.html" title=" " alt="" coords="55,273,174,300"/>
-<area shape="rect" id="node5" title=" " alt="" coords="153,348,271,375"/>
-<area shape="rect" id="node7" href="$vec3_8h.html" title=" " alt="" coords="183,199,241,225"/>
-<area shape="rect" id="node9" title=" " alt="" coords="266,199,329,225"/>
-<area shape="rect" id="node8" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="249,273,311,300"/>
+<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/Khangai&#45;Robot&#45;Full/KhangaiRobot&#45;Play/Core/Inc/parts/sensors/lidar.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/Khangai&#45;Robot&#45;Full/KhangaiRobot&#45;Play/Core/Inc/parts/sensors/lidar.h">
+<area shape="rect" id="node1" title=" " alt="" coords="16,5,216,91"/>
+<area shape="rect" id="node2" href="$sensor_8h.html" title=" " alt="" coords="5,213,77,240"/>
+<area shape="rect" id="node3" href="$arduino_8h.html" title=" " alt="" coords="79,139,153,165"/>
+<area shape="rect" id="node6" href="$vec2_8h.html" title=" " alt="" coords="180,139,239,165"/>
+<area shape="rect" id="node4" href="$queue__custom_8h.html" title=" " alt="" coords="53,288,171,315"/>
+<area shape="rect" id="node5" title=" " alt="" coords="151,363,268,389"/>
+<area shape="rect" id="node7" href="$vec3_8h.html" title=" " alt="" coords="180,213,239,240"/>
+<area shape="rect" id="node9" title=" " alt="" coords="263,213,326,240"/>
+<area shape="rect" id="node8" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="247,288,308,315"/>
 </map>

@@ -1,5 +1,6 @@
 var struct_state___vars =
 [
+    [ "ang_offset", "struct_state___vars.html#a485e1b27c94f2023af6aad883aff5e57", null ],
     [ "centre", "struct_state___vars.html#a60d7f9a27264c4f57ec914d1e1889084", null ],
     [ "first_limit", "struct_state___vars.html#a367b4620274f645adb4268d53f6eaf37", null ],
     [ "id", "struct_state___vars.html#afc377dc73efaa4231c43f4ca37ba9223", null ],

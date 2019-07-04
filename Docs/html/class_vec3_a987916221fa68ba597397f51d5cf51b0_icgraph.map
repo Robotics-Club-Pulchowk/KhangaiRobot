@@ -1,7 +1,6 @@
 <map id="Vec3::mult_EW" name="Vec3::mult_EW">
-<area shape="rect" id="node1" title=" " alt="" coords="440,56,555,83"/>
-<area shape="rect" id="node2" href="$class_actuator.html#a12789faf0215436ece13fb1608111f34" title=" " alt="" coords="247,5,360,32"/>
-<area shape="rect" id="node4" href="$class_processor.html#a9d08a8c82a543d7501090c96f821c3b4" title=" " alt="" coords="215,56,392,83"/>
-<area shape="rect" id="node5" href="$interpolation_8cpp.html#a6d31b60d0d4e250acfdea864f608a6df" title=" " alt="" coords="282,107,325,133"/>
+<area shape="rect" id="node1" title=" " alt="" coords="376,31,491,57"/>
+<area shape="rect" id="node2" href="$class_actuator.html#a12789faf0215436ece13fb1608111f34" title=" " alt="" coords="215,5,328,32"/>
+<area shape="rect" id="node4" href="$interpolation_8cpp.html#a6d31b60d0d4e250acfdea864f608a6df" title=" " alt="" coords="250,56,293,83"/>
 <area shape="rect" id="node3" href="$class_robot.html#a38036a2ef73f7b1af6c5d6269e03a5f8" title=" " alt="" coords="5,5,167,32"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="Robot::init" name="Robot::init">
-<area shape="rect" id="node1" title=" " alt="" coords="5,499,87,525"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,524,87,551"/>
 <area shape="rect" id="node2" href="$class_actuator.html#a0627d75eae181eab8e03406dd65c5a91" title="Function that initializes all the required components for the robot&#39;s actuator(omni&#45;base)" alt="" coords="158,56,254,83"/>
 <area shape="rect" id="node5" href="$class_state___sensor.html#acf2521c1a1d9ad31a6affb33ba3c4c42" title="Function that initializes all the required components for the robot&#39;s State Sensor(x,..." alt="" coords="143,165,269,192"/>
 <area shape="rect" id="node6" href="$class_processor.html#ab3e919f3aa7b2e7968815d2e056e4067" title=" " alt="" coords="153,216,259,243"/>
@@ -11,11 +11,12 @@
 <area shape="rect" id="node20" href="$class_vec3.html#a2d66e34e1ad4be888821158541fcd2ea" title=" " alt="" coords="163,524,249,551"/>
 <area shape="rect" id="node21" href="$utils_8h.html#a58b3af0a25dadb0876181666c3fab002" title=" " alt="" coords="171,575,241,601"/>
 <area shape="rect" id="node22" href="$class_vec3.html#a4dadb34f7d48268a101914b7a4771e68" title=" " alt="" coords="163,625,249,652"/>
-<area shape="rect" id="node23" href="$class_vec3.html#a52f0db1c387aa9bc7befe5792b698553" title=" " alt="" coords="358,701,443,728"/>
+<area shape="rect" id="node23" href="$class_vec3.html#a52f0db1c387aa9bc7befe5792b698553" title=" " alt="" coords="358,647,443,673"/>
 <area shape="rect" id="node24" href="$utils_8h.html#a66ef77c6282c417b074b7d94b1c566d6" title=" " alt="" coords="173,727,239,753"/>
-<area shape="rect" id="node25" href="$logger_8h.html#a5cad4623bc9b165c0b5119ca65872856" title=" " alt="" coords="135,676,277,703"/>
-<area shape="rect" id="node26" href="$class_actuator.html#a56bd0d7da4f4e0aed593bfc9186a311b" title=" " alt="" coords="153,828,259,855"/>
-<area shape="rect" id="node30" href="$class_vec3.html#ae581dad3aa1a885da7538582a3324d3a" title=" " alt="" coords="143,879,269,905"/>
+<area shape="rect" id="node25" href="$logger_8h.html#a5cad4623bc9b165c0b5119ca65872856" title=" " alt="" coords="135,473,277,500"/>
+<area shape="rect" id="node26" href="$logger_8h.html#ac7032317eb79f583b95736c387b0f516" title=" " alt="" coords="169,828,243,855"/>
+<area shape="rect" id="node27" href="$class_actuator.html#a56bd0d7da4f4e0aed593bfc9186a311b" title=" " alt="" coords="153,879,259,905"/>
+<area shape="rect" id="node31" href="$class_vec3.html#ae581dad3aa1a885da7538582a3324d3a" title=" " alt="" coords="143,929,269,956"/>
 <area shape="rect" id="node3" href="$class_actuator.html#a998b08e1a048f6fe0b85c240aa33a498" title="Function that initializes all the required components for the wheels of the robot." alt="" coords="329,56,472,83"/>
 <area shape="rect" id="node4" href="$class_actuator.html#a500af768989caf2b8769bf4ac97def74" title="Function that initializes all the required components for the wheel&#39;s pid controller." alt="" coords="341,5,461,32"/>
 <area shape="rect" id="node7" href="$class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c" title=" " alt="" coords="325,259,476,301"/>
@@ -26,7 +27,7 @@
 <area shape="rect" id="node9" href="$class_position_sensor.html#ad81814b7f09c1104dc4695eec880979f" title=" " alt="" coords="526,259,685,301"/>
 <area shape="rect" id="node17" href="$class_p_i_d.html#a4d19abca579301069c3edb28fd5ff7f2" title=" " alt="" coords="336,325,465,352"/>
 <area shape="rect" id="node18" href="$class_p_i_d___algorithm.html#a388ec97d23c981e62c3726505688e1f0" title=" " alt="" coords="524,325,687,352"/>
-<area shape="rect" id="node27" href="$class_wheel.html#a313c8a1aa16803dbbb261acd291f1fd4" title=" " alt="" coords="353,803,448,829"/>
-<area shape="rect" id="node28" href="$class_p_i_d.html#a1979972e8ca6ad9a95aa70e35d467211" title=" " alt="" coords="566,828,645,855"/>
-<area shape="rect" id="node29" href="$class_p_i_d___algorithm.html#a98964ffa1025c1e4d8199b0bbd15fb05" title=" " alt="" coords="735,828,876,855"/>
+<area shape="rect" id="node28" href="$class_wheel.html#a313c8a1aa16803dbbb261acd291f1fd4" title=" " alt="" coords="353,853,448,880"/>
+<area shape="rect" id="node29" href="$class_p_i_d.html#a1979972e8ca6ad9a95aa70e35d467211" title=" " alt="" coords="566,879,645,905"/>
+<area shape="rect" id="node30" href="$class_p_i_d___algorithm.html#a98964ffa1025c1e4d8199b0bbd15fb05" title=" " alt="" coords="735,879,876,905"/>
 </map>

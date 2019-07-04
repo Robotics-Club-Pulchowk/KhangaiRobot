@@ -2,12 +2,14 @@ var searchData=
 [
   ['b_5fa',['B_A',['../joystick_8h.html#a2303a3b5b3de921388e96105d4edae5f',1,'joystick.h']]],
   ['b_5fb',['B_B',['../joystick_8h.html#a4f05778977de54a0f37ceabb5b8a73c0',1,'joystick.h']]],
+  ['b_5fback',['B_BACK',['../joystick_8h.html#a0083c5850d8e6fe1f82b7373c6f87e81',1,'joystick.h']]],
   ['b_5fblueled_5fgpio_5fport',['B_BlueLED_GPIO_Port',['../main_8h.html#adbc0e1a734556861e6399a46ddc05397',1,'main.h']]],
   ['b_5fblueled_5fpin',['B_BlueLED_Pin',['../main_8h.html#adaed86e9bc1911e5d45ff4367349e547',1,'main.h']]],
   ['b_5fdown',['B_DOWN',['../joystick_8h.html#a6026d89ac3131c946a656a20230515a8',1,'joystick.h']]],
   ['b_5fgreenled_5fgpio_5fport',['B_GreenLED_GPIO_Port',['../main_8h.html#a5cee4410aa8ad4818a091b9908cdb307',1,'main.h']]],
   ['b_5fgreenled_5fpin',['B_GreenLED_Pin',['../main_8h.html#a7f1a0ff4b052ae162788c87dba43c0c6',1,'main.h']]],
   ['b_5flb',['B_LB',['../joystick_8h.html#afe33d7e20ba56f6e1826221a659eb756',1,'joystick.h']]],
+  ['b_5fleft',['B_LEFT',['../joystick_8h.html#aeabc5041e8400876690847360541a4a3',1,'joystick.h']]],
   ['b_5forangeled_5fgpio_5fport',['B_OrangeLED_GPIO_Port',['../main_8h.html#a57be8ae9c9f2aa7eb1d5145026a35403',1,'main.h']]],
   ['b_5forangeled_5fpin',['B_OrangeLED_Pin',['../main_8h.html#a9c0c6dc529c162eda3cf23e43d92e22a',1,'main.h']]],
   ['b_5fpushbutton_5fgpio_5fport',['B_PushButton_GPIO_Port',['../main_8h.html#a314a334e3f39290f529d4835aa6a87b6',1,'main.h']]],
@@ -15,8 +17,11 @@ var searchData=
   ['b_5frb',['B_RB',['../joystick_8h.html#ad57b7c17f03e1d383c3744b6ecfff583',1,'joystick.h']]],
   ['b_5fredled_5fgpio_5fport',['B_RedLED_GPIO_Port',['../main_8h.html#a5c0cf164c849eb8b7aff00c181449122',1,'main.h']]],
   ['b_5fredled_5fpin',['B_RedLED_Pin',['../main_8h.html#a91b60e28f78758e9ceb18f81fedb3def',1,'main.h']]],
+  ['b_5fright',['B_RIGHT',['../joystick_8h.html#a9e78ef21e97bd32b3cfb948bb5aa04f1',1,'joystick.h']]],
+  ['b_5fstart',['B_START',['../joystick_8h.html#a09e5483dc9649c7377fc064fe70ba3a2',1,'joystick.h']]],
   ['b_5fup',['B_UP',['../joystick_8h.html#a3764354763070df4a655146e46c24741',1,'joystick.h']]],
   ['b_5fx',['B_X',['../joystick_8h.html#ad2092c57680df756baaf955836e73ab4',1,'joystick.h']]],
+  ['b_5fxbox',['B_XBOX',['../joystick_8h.html#ac022d4f533c15eedc236e40f24c4ef6c',1,'joystick.h']]],
   ['b_5fy',['B_Y',['../joystick_8h.html#ae0645bcec17e8f6bb1d15f4b02bcc98b',1,'joystick.h']]],
   ['bank_5fsel',['BANK_SEL',['../mpu6050__reg_8h.html#ae17eaf717e96ee3e5fa1ed153593561e',1,'mpu6050_reg.h']]]
 ];

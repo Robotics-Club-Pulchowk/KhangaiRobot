@@ -1,14 +1,14 @@
-<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/KhangaiRobot&#45;Play/Core/Inc/devs/wheel.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/KhangaiRobot&#45;Play/Core/Inc/devs/wheel.h">
-<area shape="rect" id="node1" title=" " alt="" coords="102,5,327,76"/>
-<area shape="rect" id="node2" title=" " alt="" coords="311,348,428,375"/>
-<area shape="rect" id="node3" href="$tim_8h.html" title=" " alt="" coords="233,124,284,151"/>
-<area shape="rect" id="node5" href="$defines_8h.html" title=" " alt="" coords="135,124,209,151"/>
-<area shape="rect" id="node6" href="$pid__algorithms_8h.html" title=" " alt="" coords="5,199,123,225"/>
-<area shape="rect" id="node8" href="$pid_8h.html" title=" " alt="" coords="9,124,60,151"/>
-<area shape="rect" id="node9" href="$logger_8h.html" title=" " alt="" coords="309,124,377,151"/>
-<area shape="rect" id="node4" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="223,273,284,300"/>
-<area shape="rect" id="node7" title=" " alt="" coords="31,273,97,300"/>
-<area shape="rect" id="node10" href="$queue__custom_8h.html" title=" " alt="" coords="359,273,478,300"/>
-<area shape="rect" id="node11" href="$usart_8h.html" title=" " alt="" coords="226,199,289,225"/>
-<area shape="rect" id="node12" href="$vec3_8h.html" title=" " alt="" coords="313,199,372,225"/>
+<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/Khangai&#45;Robot&#45;Full/KhangaiRobot&#45;Play/Core/Inc/devs/wheel.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/Khangai&#45;Robot&#45;Full/KhangaiRobot&#45;Play/Core/Inc/devs/wheel.h">
+<area shape="rect" id="node1" title=" " alt="" coords="115,5,315,91"/>
+<area shape="rect" id="node2" title=" " alt="" coords="311,363,428,389"/>
+<area shape="rect" id="node3" href="$tim_8h.html" title=" " alt="" coords="233,139,284,165"/>
+<area shape="rect" id="node5" href="$defines_8h.html" title=" " alt="" coords="135,139,209,165"/>
+<area shape="rect" id="node6" href="$pid__algorithms_8h.html" title=" " alt="" coords="5,213,123,240"/>
+<area shape="rect" id="node8" href="$pid_8h.html" title=" " alt="" coords="9,139,60,165"/>
+<area shape="rect" id="node9" href="$logger_8h.html" title=" " alt="" coords="309,139,377,165"/>
+<area shape="rect" id="node4" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="223,288,284,315"/>
+<area shape="rect" id="node7" title=" " alt="" coords="31,288,97,315"/>
+<area shape="rect" id="node10" href="$queue__custom_8h.html" title=" " alt="" coords="359,288,478,315"/>
+<area shape="rect" id="node11" href="$usart_8h.html" title=" " alt="" coords="226,213,289,240"/>
+<area shape="rect" id="node12" href="$vec3_8h.html" title=" " alt="" coords="313,213,372,240"/>
 </map>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['i_5f',['i_',['../class_p_i_d___algorithm.html#a707b421fc0ef05719c1a3072de4ef607',1,'PID_Algorithm::i_()'],['../struct_kalman___vars.html#a9e4cf8a3666afd962e6556a68d3deea8',1,'Kalman_Vars::I_()']]],
+  ['i_5f',['I_',['../struct_kalman___vars.html#a9e4cf8a3666afd962e6556a68d3deea8',1,'Kalman_Vars::I_()'],['../class_p_i_d___algorithm.html#a707b421fc0ef05719c1a3072de4ef607',1,'PID_Algorithm::i_()']]],
   ['id',['id',['../struct_enc.html#af8700ba82548c94c17e97b9aafe76416',1,'Enc::id()'],['../struct_wheel___config.html#aa58bda60f676c2e88512ad05466e46f6',1,'Wheel_Config::id()'],['../struct_state___vars.html#afc377dc73efaa4231c43f4ca37ba9223',1,'State_Vars::id()']]],
   ['id_5f',['id_',['../class_arduino___device.html#ab379cc15d91aaca0c172b07b8f4174d9',1,'Arduino_Device::id_()'],['../class_state.html#a1e7c62a159ce059794898ed69b852330',1,'State::id_()']]],
   ['imu_5fstepper',['IMU_Stepper',['../devs__config_8h.html#af99d7ea11952a1dedf21339e4f25a50b',1,'IMU_Stepper():&#160;devs_config.cpp'],['../devs__config_8cpp.html#af99d7ea11952a1dedf21339e4f25a50b',1,'IMU_Stepper():&#160;devs_config.cpp']]],

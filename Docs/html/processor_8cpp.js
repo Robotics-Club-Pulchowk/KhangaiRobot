@@ -3,6 +3,7 @@ var processor_8cpp =
     [ "init_GameField", "processor_8cpp.html#a9ce21429239a4cc722845e28d0aced8c", null ],
     [ "gArm_Retrieve_Count", "processor_8cpp.html#a4c9dc401c8f47d7169e99fae487ce94a", null ],
     [ "gAuto_Ratio", "processor_8cpp.html#acd4e1aac5771484408e90a063b323f7a", null ],
+    [ "gJoyStick_Rotate_Arr", "processor_8cpp.html#a84d89eda7e4e9ef71cb335ba45c7f95e", null ],
     [ "gMax_Robo_Manual_Velocity", "processor_8cpp.html#ade4dda8cceef978c8a56b53980d8e6e3", null ],
     [ "gSend_LED_Data_Max", "processor_8cpp.html#a84cd52cc313f045d3d386da0ca0b0eda", null ],
     [ "gSend_Throw_Max", "processor_8cpp.html#a7d7819d72c6266e01468e3e3467e34a0", null ],
