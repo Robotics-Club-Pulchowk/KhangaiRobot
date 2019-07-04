@@ -41,7 +41,7 @@ void IMU_Init()
 
         Body_HMC.hi2c = &hi2c1;
         Body_HMC.address = 0x3C;
-        Body_HMC.hard_iron_offset.set_Values(-115.3, -41.7, -197.1);
+        Body_HMC.hard_iron_offset.set_Values(-13.56,70.01,-136.5);
 
         MPU6050_Init(&Body_IMU);
         HMC5883_Init(&Body_HMC);
