@@ -14,7 +14,7 @@
 #include "usart.h"
 #include "vec3.h"
 
-#define LOG_BUFFER_SIZE     (2*1024)
+#define LOG_BUFFER_SIZE     (20*1024)
 
 extern Queue<uint8_t, LOG_BUFFER_SIZE> gLogging_Buffer;
 
