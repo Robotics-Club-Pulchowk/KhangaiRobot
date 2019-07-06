@@ -347,11 +347,38 @@ Vec3<float> Processor::control(Vec3<float> state,
         //* Select Controller on the basis of control mode
         if (mode == Control_Mode::MANUAL) {
 
+                float decay_factor = 0.95;
+
                 if (!just_read) {
                         vels = last_vel.mult_EW(0.8);
                 }
                 else {
                         vels = manual_control(joy_command, id);
+
+                        float lvx = last_vel.getX();
+                        float lvy = last_vel.getY();
+                        float vx = vels.getX();
+                        float vy = vels.getY();
+
+                        if (fabsf(lvx - vx) > 0.5){
+
+                                if (fabsf(vels.getX()) < 0.05) {
+                                        vels.setX(last_vel.getX()*decay_factor);
+                                }
+
+                                if (fabsf(vels.getX()) < 0.02) {
+                                        vels.setX(0);
+                                }
+                        }
+                        if (fabsf(lvy - vy) > 0.5) {
+
+                                if (fabsf(vels.getY()) < 0.05) {
+                                        vels.setY(last_vel.getY()*decay_factor);
+                                }
+                                if (fabsf(vels.getY()) < 0.02) {
+                                        vels.setY(0);
+                                }
+                        }
                 }
 
                 led_val = fill_Intensity(0, 15);
