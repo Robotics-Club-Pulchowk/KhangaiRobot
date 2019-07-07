@@ -46,8 +46,8 @@ void log_Angle(float psi, float rw)
 
         gLogging_Buffer.insert((uint8_t)(START_BYTE));
         gLogging_Buffer.insert((uint8_t)(ANGLE_PACKET_ID));
-        gLogging_Buffer.insert((int8_t)(psi * 20));
-        gLogging_Buffer.insert((int8_t)(rw * 25));
+        gLogging_Buffer.insert((int8_t)(psi / 200.0) * 128.0);
+        gLogging_Buffer.insert((int8_t)(rw / 200.0) * 128.0);
 }
 
 void log_CompassOffsets(Vec3<float> offsets)

@@ -14,6 +14,7 @@
 
 #include "error.h"
 #include "defines.h"
+#include "logger.h"
 
 
 static Vec3<float> gOmega_Bias;
@@ -374,10 +375,12 @@ Vec3<float> State_Sensor::read_Orientation(Vec3<float> base_state, uint32_t dt_m
         float cos_pitch = cos(pitch / 57.3);
         // Tilt Compensated Yaw
         float yaw = atan2f((bz*sin_roll - by*cos_roll), (bx*cos_pitch + by*sin_roll*sin_pitch + bz*cos_roll*sin_pitch)) * 57.3;
+        float yaw_before_kalman = yaw;
 
         // printf("%ld\t", (int32_t)(yaw));
         yaw = gYaw_Filter.filter(yaw, gz, dt_millis);
         // printf("%ld\n", (int32_t)(yaw));
+        log_Angle(yaw_before_kalman, yaw);
 
         angles.set_Values(roll, pitch, yaw);
 
