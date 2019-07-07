@@ -452,6 +452,14 @@ Vec3<float> Processor::control(Vec3<float> state,
                 vels.setZ(curr_state_->get_AngOffset() + gRobots_Angle_Offset);
                 // sensor_->update_IMUOffsets(Vec3<float>(-55.5, 16.5, -276.5));
         }
+        
+
+        // Don't correct angle from J to L
+        if (id >= Field::FIELD_J && id < Field::FIELD_O) {
+                vels.setZ(state.getZ());
+        }
+        else {
+        }
 
         return vels;
 }
