@@ -22,6 +22,8 @@ public:
         PID &operator=(const PID &) = default;
         ~PID() { }
 
+        void set_PID(float p, float i, float d) { algo_->set_PID(p,i,d); }
+
         void set_Algorithm(PID_Algorithm *algo) { algo_ = algo; }
         PID_Algorithm * get_Algorithm() { return algo_; }
 
