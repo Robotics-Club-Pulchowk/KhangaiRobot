@@ -128,6 +128,8 @@ void MemManage_Handler(void)
     /* USER CODE BEGIN W1_MemoryManagement_IRQn 0 */
     HAL_GPIO_WritePin(B_RedLED_GPIO_Port, B_RedLED_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(B_GreenLED_GPIO_Port, B_GreenLED_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(B_BlueLED_GPIO_Port, B_BlueLED_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(B_OrangeLED_GPIO_Port, B_OrangeLED_Pin, GPIO_PIN_RESET);
     /* USER CODE END W1_MemoryManagement_IRQn 0 */
   }
 }
@@ -145,6 +147,8 @@ void BusFault_Handler(void)
     /* USER CODE BEGIN W1_BusFault_IRQn 0 */
     HAL_GPIO_WritePin(B_RedLED_GPIO_Port, B_RedLED_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(B_GreenLED_GPIO_Port, B_GreenLED_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(B_BlueLED_GPIO_Port, B_BlueLED_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(B_OrangeLED_GPIO_Port, B_OrangeLED_Pin, GPIO_PIN_RESET);
     /* USER CODE END W1_BusFault_IRQn 0 */
   }
 }
