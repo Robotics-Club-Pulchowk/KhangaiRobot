@@ -191,14 +191,14 @@ void JoyStick::parse_JoyData(JoyStick_Data joy)
         int lx = (int8_t)(joy.l_hatx);
         float vx = (float)(lx) / 128.0;
 
-        if (fabsf(vx) < 0.2) {
+        if (fabsf(vx) < 0.05) {
                 vx = 0;
         }
 
         int ly = (int8_t)(joy.l_haty);
         float vy = (float)(ly) / 128.0;
 
-        if (fabsf(vy) < 0.2) {
+        if (fabsf(vy) < 0.05) {
                 vy = 0;
         }
 
