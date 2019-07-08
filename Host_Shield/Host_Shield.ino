@@ -1,4 +1,4 @@
-//#define _WIRELESS_JOYSTICK_
+#define _WIRELESS_JOYSTICK_
 
 #include <XBOXUSB.h>
 #include <SoftwareSerial.h>
@@ -137,12 +137,12 @@ void loop()
                 for (uint8_t i = 0; i < 13; ++i) {
                         if (!is_Unrequired(i)) {
                                 Serial3.write(gJoyStick_Packet[i]);
-                                // Serial.print(gJoyStick_Packet[i], DEC);
-                                // Serial.print(' ');
+                                 Serial.print(gJoyStick_Packet[i], DEC);
+                                 Serial.print(' ');
                                 joy_arr[j++] = gJoyStick_Packet[i];
                         }
                 }
-                // Serial.println();
+                 Serial.println();
                 uint8_t hash = gJoyStick_CRC.get_Hash(&joy_arr[1],JOUSTICK_SMALL_SIZE_NUM);
                 // Serial.println(hash, DEC);
                 Serial3.write(hash);
