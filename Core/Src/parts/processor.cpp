@@ -277,6 +277,7 @@ Vec3<float> Processor::control(Vec3<float> state,
         bool thr_shg = false;
         bool actuate_arm = false;
         bool start_throw = false;
+        bool gerg_trans = false;
         int8_t rotate_dir = 0;
 
         bool just_read = false;
@@ -293,12 +294,14 @@ Vec3<float> Processor::control(Vec3<float> state,
                 thr_shg = joy_command.throw_shagai;
                 actuate_arm = joy_command.actuate_arm;
                 start_throw = joy_command.start_throw;
+                gerg_trans = joy_command.gerege_transfer;
                 rotate_dir = joy_command.rotate_dir;
         }
         
         //* Process the data if read
         process(state, robot_state_vars);
         
+
         Field id = robot_state_vars->id;
 
         //* Start Throwing Sequence if start_throw received and the robot has
@@ -306,6 +309,17 @@ Vec3<float> Processor::control(Vec3<float> state,
         if (id != Field::FIELD_Q) {
                 if (start_throw) {
                         curr_state_ = &gStateQ;
+                        sensor_->change_Sensors(curr_state_->get_ID());
+                        robot_state_vars = curr_state_->get_State();
+
+                        Vec2<float> p = curr_state_->get_Centre();
+                        Vec3<float> pos(p.getX(), p.getY(), 0);
+                        sensor_->update_Position(pos);
+                }
+        }
+        if (id != Field::FIELD_K) {
+                if (gerg_trans) {
+                        curr_state_ = &gStateK;
                         sensor_->change_Sensors(curr_state_->get_ID());
                         robot_state_vars = curr_state_->get_State();
 

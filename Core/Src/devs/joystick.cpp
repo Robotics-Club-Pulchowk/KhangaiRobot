@@ -191,14 +191,14 @@ void JoyStick::parse_JoyData(JoyStick_Data joy)
         int lx = (int8_t)(joy.l_hatx);
         float vx = (float)(lx) / 128.0;
 
-        if (fabsf(vx) < 0.05) {
+        if (fabsf(vx) < 0.2) {
                 vx = 0;
         }
 
         int ly = (int8_t)(joy.l_haty);
         float vy = (float)(ly) / 128.0;
 
-        if (fabsf(vy) < 0.05) {
+        if (fabsf(vy) < 0.2) {
                 vy = 0;
         }
 
@@ -245,6 +245,7 @@ void JoyStick::parse_JoyData(JoyStick_Data joy)
 
         button = joy.button2;
         bool start_throw = button & _BV(START_THROW_KEY);
+        bool gerg_trans = button & _BV(GEREGE_TRANSFER_KEY);
         
         taskENTER_CRITICAL();
         Joy_Command.mode = mode;
@@ -256,6 +257,7 @@ void JoyStick::parse_JoyData(JoyStick_Data joy)
         Joy_Command.throw_shagai = throw_shagai;
         Joy_Command.actuate_arm = actuate_arm;
         Joy_Command.start_throw = start_throw;
+        Joy_Command.gerege_transfer = gerg_trans;
         Joy_Command.rotate_dir = rotate_dir;
         taskEXIT_CRITICAL();
 }

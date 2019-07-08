@@ -40,6 +40,7 @@
 #define ACTUATE_ARM_KEY         (B_B)
 
 #define START_THROW_KEY         (B_START)
+#define GEREGE_TRANSFER_KEY     (B_BACK)
 
 #ifndef _BV
         #define _BV(x)          (1 << x)
@@ -80,6 +81,7 @@ struct JoyStick_Command
         bool throw_shagai;
         bool actuate_arm;
         bool start_throw;
+        bool gerege_transfer;
         int8_t rotate_dir;
 };
 
