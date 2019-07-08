@@ -249,7 +249,7 @@ static void init_RedGameField()
         // Defining the state : State Q
         gStateQ_Data.id = Field::FIELD_Q;
         gStateQ_Data.centre = Vec2<float>(3800, 4320);
-        gStateQ_Data.upper_bounds = Vec2<float>(4500, 5300);
+        gStateQ_Data.upper_bounds = Vec2<float>(4500, 4950);
         gStateQ_Data.lower_bounds = Vec2<float>(3000, 4500);
         gStateQ_Data.last_limit = 1;
         gStateQ_Data.ramping_factor = 0.001;
@@ -540,7 +540,7 @@ static void init_BlueGameField()
         // Defining the state : State Q
         gStateQ_Data.id = Field::FIELD_Q;
         gStateQ_Data.centre = Vec2<float>(3800, 4320);
-        gStateQ_Data.upper_bounds = Vec2<float>(4500, 5300);
+        gStateQ_Data.upper_bounds = Vec2<float>(4500, 4950);
         gStateQ_Data.lower_bounds = Vec2<float>(3000, 4500);
         gStateQ_Data.last_limit = 1;
         gStateQ_Data.ramping_factor = 0.001;
