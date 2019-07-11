@@ -198,7 +198,7 @@ void PositionSensor::process_LidarData(Vec3<float> ori, float (&lidar)[2], const
                                         gLast_YEncoderValue = 1780.0;
                                 }
                                 else if (id == Field::FIELD_F) {
-                                        gLast_YEncoderValue = 5030.0;
+                                        gLast_YEncoderValue = 4730.0;
                                 }
                         }
                 }
