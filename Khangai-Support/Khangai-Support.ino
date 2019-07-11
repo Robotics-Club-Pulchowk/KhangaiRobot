@@ -28,20 +28,46 @@ uint8_t gYLidar_Address = 0x03;
 bool gPing_Command = false;
 bool gSend_Lidar_Data = false;
 
-const uint8_t gRed_LED_Pin = 10;
-const uint8_t gBlue_LED_Pin = 8;
+const uint8_t gRed_LED_Pin = 11;
+const uint8_t gBlue_LED_Pin = 5;
+
+const uint8_t gRed_GameField_Pin = 23;
+const uint8_t gBlue_GameField_Pin = 25;
+
+GameField gCurrent_GameField;
 
 void setup()
 {
-        //* Initialize LED Strip pins in pwm mode for intensity control
-        pinMode(gRed_LED_Pin, OUTPUT);
-        pinMode(gBlue_LED_Pin, OUTPUT);
-        analogWrite(gRed_LED_Pin, 0);
-        analogWrite(gBlue_LED_Pin, 0);
-
         //* Initialize the Serials
         (Serial).begin(115200);
         STM_SERIAL.begin(9600);
+ 
+        //* Initialize LED Strip pins in pwm mode for intensity control
+        pinMode(gRed_LED_Pin, OUTPUT);
+        pinMode(gBlue_LED_Pin, OUTPUT);
+
+        //* Initialize GameField Selecting Pins
+        pinMode(gRed_GameField_Pin, INPUT);
+        pinMode(gBlue_GameField_Pin, INPUT);
+
+        int red_val = digitalRead(gRed_GameField_Pin);
+        int blue_val = digitalRead(gBlue_GameField_Pin);
+
+        digitalWrite(gRed_LED_Pin, red_val);
+        digitalWrite(gBlue_LED_Pin, blue_val);
+
+        if (red_val & !blue_val) {
+                gCurrent_GameField = GameField::RED_F;
+                Serial.println("Red Field Selected");
+        }
+        else if (blue_val & !red_val) {
+                gCurrent_GameField = GameField::BLUE_F;
+                Serial.println("Blue Field Selected");
+        }
+        else {
+                gCurrent_GameField = GameField::NONE;
+                Serial.println("None Field Selected");
+        }
 
         Serial.println("Hello World!!");
 
@@ -64,20 +90,6 @@ void loop()
 
         if (millis() - gLED_Intensity_Read_Time > gLED_Intensity_Read_Period) {
                 gLED_Intensity_Read_Time = millis();
-
-                //* We expect the intensity byte to contain data in the form :
-                //* (blue red)
-                //* blue and red are of a nibble width each
-                uint8_t red = gLED_Intensity_Value & 0x0f;
-                uint8_t blue = (gLED_Intensity_Value & 0xf0) >> 4;
-
-                //* Map the nibble data to byte data
-                red = map(red, 0, 15, 0, 255);
-                blue = map(blue, 0, 15, 0, 255);
-
-                //* Analogwrite the LED intensity value
-                analogWrite(gRed_LED_Pin, red);
-                analogWrite(gBlue_LED_Pin, blue);
         }
 
         //* If ping command is obtained, send ok status
