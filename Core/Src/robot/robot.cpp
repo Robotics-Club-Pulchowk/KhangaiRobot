@@ -48,6 +48,16 @@ void Robot::read_Field()
 {
         // Read Field Value Here
         gCurrent_Field = GameField::RED;
+        
+        if (HAL_GPIO_ReadPin(GameField_Red_GPIO_Port, GameField_Red_Pin) == GPIO_PIN_SET) {
+                gCurrent_Field = GameField::RED;
+                HAL_GPIO_WritePin(B_RedLED_GPIO_Port, B_RedLED_Pin, GPIO_PIN_SET);
+        }
+        
+        if (HAL_GPIO_ReadPin(GameField_Blue_GPIO_Port, GameField_Blue_Pin) == GPIO_PIN_SET) {
+                gCurrent_Field = GameField::BLUE;
+                HAL_GPIO_WritePin(B_BlueLED_GPIO_Port, B_BlueLED_Pin, GPIO_PIN_SET);
+        }
 
         // Update Gamefield after reading current field
         update_GameField(gCurrent_Field);

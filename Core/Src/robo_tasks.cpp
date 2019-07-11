@@ -101,6 +101,10 @@ void RobotThread(void const *argument)
         uint32_t dt = HAL_GetTick();
         uint32_t dt_tmp = HAL_GetTick();
         uint32_t last_run_time = 0;
+
+        HAL_GPIO_WritePin(B_BlueLED_GPIO_Port, B_BlueLED_Pin, GPIO_PIN_RESET);
+        HAL_GPIO_WritePin(B_RedLED_GPIO_Port, B_RedLED_Pin, GPIO_PIN_RESET);
+
         HAL_GPIO_WritePin(B_OrangeLED_GPIO_Port, B_OrangeLED_Pin, GPIO_PIN_SET);
         osDelay(sample_period);
 

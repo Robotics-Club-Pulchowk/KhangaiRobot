@@ -119,6 +119,11 @@ void Error_Handler(void);
 #define B_RedLED_GPIO_Port GPIOD
 #define B_BlueLED_Pin GPIO_PIN_15
 #define B_BlueLED_GPIO_Port GPIOD
+
+#define GameField_Red_GPIO_Port GPIOD
+#define GameField_Red_Pin GPIO_PIN_10
+#define GameField_Blue_GPIO_Port GPIOB
+#define GameField_Blue_Pin GPIO_PIN_14
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

@@ -182,20 +182,32 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PB14 PB5 */
-  GPIO_InitStruct.Pin = GPIO_PIN_14|GPIO_PIN_5;
+  /*Configure GPIO pins : PB5 */
+  GPIO_InitStruct.Pin = GPIO_PIN_5;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  
+  /*Configure GPIO pin : PB14 */
+  GPIO_InitStruct.Pin = GPIO_PIN_14;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PD10 PDPin PDPin PDPin 
+  /*Configure GPIO pins : PDPin PDPin PDPin 
                            PDPin PD0 PD2 */
-  GPIO_InitStruct.Pin = GPIO_PIN_10|B_GreenLED_Pin|B_OrangeLED_Pin|B_RedLED_Pin 
+  GPIO_InitStruct.Pin = B_GreenLED_Pin|B_OrangeLED_Pin|B_RedLED_Pin 
                           |B_BlueLED_Pin|GPIO_PIN_0|GPIO_PIN_2;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+  
+  /*Configure GPIO pin : PD10 */
+  GPIO_InitStruct.Pin = GPIO_PIN_10;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PD11 PD1 PD3 PD4 */
