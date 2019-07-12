@@ -323,8 +323,7 @@ Vec3<float> Processor::control(Vec3<float> state,
                         sensor_->change_Sensors(curr_state_->get_ID());
                         robot_state_vars = curr_state_->get_State();
 
-                        Vec2<float> p = curr_state_->get_Centre();
-                        Vec3<float> pos(p.getX(), p.getY(), 0);
+                        Vec3<float> pos(4800, 8350, 0);
                         sensor_->update_Position(pos);
                 }
         }
@@ -486,14 +485,17 @@ void Processor::update_State(uint8_t bounds)
                 if ((bounds & (1 << (int)(Face::_6))) && (bounds & (1 << (int)(Face::_7)))) {
                         // field R
                         curr_state_ = &gStateR;
+                        return;
                 }
                 else if (bounds & (1 << (int)(Face::_6))) {
                         // field Q1
-                        curr_state_ = &gStateQ1;
+                        // curr_state_ = &gStateQ1;
+                        // return;
                 }
                 else if (bounds & (1 << (int)(Face::_7))) {
                         // field Q2
                         curr_state_ = &gStateQ2;
+                        return;
                 }
                 return;
         }
@@ -501,10 +503,12 @@ void Processor::update_State(uint8_t bounds)
                 if ((bounds & (1 << (int)(Face::_6))) && (bounds & (1 << (int)(Face::_7)))) {
                         // field R
                         curr_state_ = &gStateR;
+                        return;
                 }
                 else if (bounds & (1 << (int)(Face::_7))) {
                         // field Q2
                         curr_state_ = &gStateQ2;
+                        return;
                 }
                 return;
         }
@@ -512,12 +516,21 @@ void Processor::update_State(uint8_t bounds)
                 if ((bounds & (1 << (int)(Face::_6))) && (bounds & (1 << (int)(Face::_7)))) {
                         // field R
                         curr_state_ = &gStateR;
+                        return;
                 }
                 else if (bounds & (1 << (int)(Face::_6))) {
                         // field Q1
                         curr_state_ = &gStateQ1;
+                        return;
                 }
                 return;
+        }
+        else if (id == Field::FIELD_J) {
+                if (bounds & (1 << (int)(Face::_6))) {
+                        // field K
+                        curr_state_ = &gStateK;
+                        return;
+                }
         }
 
         curr_state_ = curr_state_->get_NextState();
