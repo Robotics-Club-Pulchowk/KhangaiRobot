@@ -580,11 +580,6 @@ void Processor::send_ThrowCommand(bool grip, bool throw_shg, bool act_arm)
                 // actuate_Platform(true);
         }
 
-        //* Send Rotate Command When in Field I
-        if (id == Field::FIELD_I) {
-                rotate_Gerege();
-        }
-
         // if (id >= Field::FIELD_Q) {
                 throw_Shagai(throw_shg);
         // }
@@ -596,7 +591,20 @@ void Processor::send_ThrowCommand(bool grip, bool throw_shg, bool act_arm)
                 // printf("Grip Shagai");
         }
         else if (id < Field::FIELD_O) {
-                pass_Gerege(grip);
+                //* Send Rotate Command When in Field I
+                if (id >= Field::FIELD_I) {
+                        rotate_Gerege(true);
+                }
+                if (id <= Field::FIELD_I) {
+                        rotate_Gerege(grip);
+                }
+                if (id >= Field::FIELD_J) {
+                        pass_Gerege(grip);
+                }
+                if (id >= Field::FIELD_J) {
+                        rotate_Gerege(true);
+                        pass_Gerege(true);
+                }
         }
 }
 
@@ -671,12 +679,12 @@ static uint8_t gSend_Gerege_Pass_Command_Num_Max = 3;
 
 void Processor::pass_Gerege(bool pass)
 {
-        //* Throw Shagai if throw shagai flag obtained
+        //* Pass Gerege if flag obtained
         if (pass) {
                 gSend_Gerege_Pass_Command = true;
         }
 
-        //* Send Pneumatic data if there is change in control mode
+        //* Send Pneumatic data if gerege is to be passed
         if (gSend_Gerege_Pass_Command) {
                 if (--gSend_Gerege_Pass_Command_Num) {
                         thrower_->write((uint8_t)(Throwing_Commands::PASS_GEREGE));
@@ -692,14 +700,22 @@ static bool gSend_Gerege_Rotate_Command = false;
 static uint8_t gSend_Gerege_Rotate_Command_Num = 3;
 static uint8_t gSend_Gerege_Rotate_Command_Num_Max = 3;
 
-void Processor::rotate_Gerege()
+void Processor::rotate_Gerege(bool rotate)
 {
-        if (--gSend_Gerege_Rotate_Command_Num) {
-                thrower_->write((uint8_t)(Throwing_Commands::PASS_GEREGE));
+        //* Rotate Gerege if flag obtained
+        if (rotate) {
+                gSend_Gerege_Rotate_Command = true;
         }
-        else {
-                gSend_Gerege_Rotate_Command_Num = gSend_Gerege_Rotate_Command_Num_Max;
-                gSend_Gerege_Rotate_Command = false;
+        
+        //* Send Pneumatic data if gerege is to be roatated
+        if (gSend_Gerege_Rotate_Command) {
+                if (--gSend_Gerege_Rotate_Command_Num) {
+                        thrower_->write((uint8_t)(Throwing_Commands::ROTATE_GEREGE));
+                }
+                else {
+                        gSend_Gerege_Rotate_Command_Num = gSend_Gerege_Rotate_Command_Num_Max;
+                        gSend_Gerege_Rotate_Command = false;
+                }
         }
 }
 
