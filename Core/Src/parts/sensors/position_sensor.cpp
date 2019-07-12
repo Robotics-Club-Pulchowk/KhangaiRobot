@@ -149,10 +149,22 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
         // x and y are in mm
         gLastPosition.set_Values(x, y, 0);
 
+        Vec3<float> curr_pos;
+        
+        Field id = sv->id;
+        
+        if (id < Field::FIELD_O) {
+                curr_pos.set_Values(x, y - 100, 0);
+        }
+        else {
+                curr_pos.set_Values(x, y, 0);
+        }
+
+
         // gLastPosition.print();
         // printf("\n");
 
-        return gLastPosition;
+        return curr_pos;
 }
 
 void PositionSensor::update_State(Vec3<float> state)
@@ -182,12 +194,13 @@ void PositionSensor::process_LidarData(Vec3<float> ori, float (&lidar)[2], const
         // Processing XLidar data
         if ((int)id >= (int)(Field::FIELD_P)) {
                 // The fence is at most 2000 mm from robot
+                lidar[0] *= cos(yaw / 57.3);
                 if (lidar[0] < 2000) {
                         // Lower Fence distance
                         lidar[0] += 2500;
                 }
         }
-        else if (fabs(yaw) < 10) {
+        else { //} if (fabs(yaw) < 10) {
                 // Compensating y-values at poles using xlidar's data
                 if (id == Field::FIELD_B || id == Field::FIELD_F ||
                     (id == Field::FIELD_C && lidar[0] < 400)) {
@@ -195,10 +208,10 @@ void PositionSensor::process_LidarData(Vec3<float> ori, float (&lidar)[2], const
                                 // Compensating the Y value based on lidar data
                                 if (id == Field::FIELD_B ||
                                     (id == Field::FIELD_C && lidar[0] < 400)) {
-                                        gLast_YEncoderValue = 1780.0;
+                                        gLast_YEncoderValue = 1780.0 + lidar[0]*sin(yaw / 57.3);
                                 }
                                 else if (id == Field::FIELD_F) {
-                                        gLast_YEncoderValue = 4730.0;
+                                        gLast_YEncoderValue = 5030.0 + lidar[0]*sin(yaw / 57.3);
                                 }
                         }
                 }
@@ -208,6 +221,7 @@ void PositionSensor::process_LidarData(Vec3<float> ori, float (&lidar)[2], const
         if (id == Field::FIELD_B || id == Field::FIELD_F ||
                 (id == Field::FIELD_C && lidar[0] < 400) ||
                 (id == Field::FIELD_G && lidar[0] < 400)) {
+                lidar[0] *= cos(yaw / 57.3);
                 if (lidar[0] < 1000) {
                         lidar[0] += jungle_pole_dist;
                 }
@@ -231,21 +245,23 @@ void PositionSensor::process_LidarData(Vec3<float> ori, float (&lidar)[2], const
 
                 // Correct the XLidar Value
                 if (lidar[0] < bridge_pole_dist) {
+                        lidar[0] *= cos(yaw / 57.3);
                         lidar[0] += 755;
                 }
         }
         
         if (id == Field::FIELD_O) {
-                // Need to compensate for shagai too
+                // Need to compensate for shagai toos
                 if (lidar[1] > ylidar_lower_value) {
                         lidar[1] = 10000 - lidar[1]*cos(yaw / 57.3);
                 }
         }
-        else if (fabs(yaw) < 10) {
+        else { // if (fabs(yaw) < 10) {
                 // Compensating y-values at poles using ylidar's data 
                 if (id == Field::FIELD_A) {
+
                         if (lidar[1] < 1500 && lidar[1] > ylidar_lower_value) {
-                                lidar[1] = 2000 - lidar[1];
+                                lidar[1] = 2000 - lidar[1]*cos(yaw / 57.3);
                         }
                         else {
                                 gY_Lidar_Used = false;
@@ -253,7 +269,7 @@ void PositionSensor::process_LidarData(Vec3<float> ori, float (&lidar)[2], const
                 }
                 else if (id == Field::FIELD_C) {
                         if (lidar[1] < 1000 && lidar[1] > ylidar_lower_value) {
-                                lidar[1] = 3500 - lidar[1];
+                                lidar[1] = 3500 - lidar[1]*cos(yaw / 57.3);
                         }
                         else {
                                 gY_Lidar_Used = false;
@@ -261,7 +277,7 @@ void PositionSensor::process_LidarData(Vec3<float> ori, float (&lidar)[2], const
                 }
                 else if (id == Field::FIELD_E) {
                         if (lidar[1] < 1000 && lidar[1] > ylidar_lower_value) {
-                                lidar[1] = 5000 - lidar[1];
+                                lidar[1] = 5000 - lidar[1]*cos(yaw / 57.3);
                         }
                         else {
                                 gY_Lidar_Used = false;
@@ -285,9 +301,9 @@ void PositionSensor::process_LidarData(Vec3<float> ori, float (&lidar)[2], const
                         gY_Lidar_Used = false;
                 }
         }
-        else {
-                gY_Lidar_Used = false;
-        }
+        // else {
+        //         gY_Lidar_Used = false;
+        // }
 }
 
 Vec2<float> PositionSensor::rotate_EncData(Vec3<float> ori, Vec2<float> enc)
