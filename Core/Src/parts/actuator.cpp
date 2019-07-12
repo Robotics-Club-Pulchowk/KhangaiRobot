@@ -106,7 +106,7 @@ Vec3<float> Actuator::actuate(Vec3<float> vel, Vec3<float> psis, uint32_t dt_mil
                 }
 
                 if (abs_err < 0.5) {
-                        angle_pid_->set_PID(0.3, 0, 0);
+                        angle_pid_->set_PID(0.35, 0, 0);
                 }
                 else {
                         angle_pid_->set_PID(0.3, 0, 0);
