@@ -157,8 +157,8 @@ void Robot::update(uint32_t dt_millis)
                                          robot_state_vars_,
                                          dt_millis);
 
-        state_.print();
-        printf("\n");
+        // state_.print();
+        // printf("\n");
 
         // Reflection about Y-axis
         // vels.setX(-vels.getX());

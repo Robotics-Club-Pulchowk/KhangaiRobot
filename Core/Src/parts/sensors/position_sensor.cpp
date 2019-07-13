@@ -152,8 +152,8 @@ Vec3<float> PositionSensor::read_Position(Vec3<float> ori, Vec3<float> base_stat
         Vec3<float> curr_pos;
         
         Field id = sv->id;
-        
-        if (id < Field::FIELD_O) {
+
+        if (id < Field::FIELD_I) {
                 curr_pos.set_Values(x, y - 100, 0);
         }
         else {
