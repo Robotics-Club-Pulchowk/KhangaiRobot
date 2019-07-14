@@ -176,16 +176,16 @@ JoyStick_Command& JoyStick::parse()
 
 void JoyStick::parse_JoyData(JoyStick_Data joy)
 {
-        int8_t rx = (int8_t)(joy.r_hatx);
-        // int8_t ry = (int8_t)(joy.r_haty);
+        // int8_t rx = (int8_t)(joy.r_hatx);
+        int8_t ry = (int8_t)(joy.r_haty);
         // float vy = (float)(ry) / 128.0;
 
         int8_t rotate_dir = 0;
-        if (rx > 120) {
-                rotate_dir = 1;
-        }
-        else if (rx < -120) {
+        if (ry > 120) {
                 rotate_dir = -1;
+        }
+        else if (ry < -120) {
+                rotate_dir = 1;
         }
 
         int lx = (int8_t)(joy.l_hatx);
