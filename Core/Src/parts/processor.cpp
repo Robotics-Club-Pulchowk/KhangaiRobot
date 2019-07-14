@@ -325,6 +325,9 @@ Vec3<float> Processor::control(Vec3<float> state,
 
                         Vec3<float> pos(4800, 8350, 0);
                         sensor_->update_Position(pos);
+
+                        pass_Gerege(true);
+                        rotate_Gerege(true);
                 }
         }
 
@@ -434,6 +437,10 @@ Vec3<float> Processor::control(Vec3<float> state,
         //* Reset Position to field O if reset_pos command is obtained
         if (reset_pos) {
                 reset_Position(robot_state_vars);
+        }
+        
+        if (gCurrent_Field == GameField::BLUE) {
+                rotate_dir *= -1;
         }
 
         //* Correct Angle Offset According To User
