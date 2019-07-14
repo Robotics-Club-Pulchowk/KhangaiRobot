@@ -539,7 +539,7 @@ static void init_BlueGameField()
         // *** Blue Game Field *** //
         // Defining the state : State Q
         gStateQ_Data.id = Field::FIELD_Q;
-        gStateQ_Data.centre = Vec2<float>(3800, 4320);
+        gStateQ_Data.centre = Vec2<float>(3700, 4320);
         gStateQ_Data.upper_bounds = Vec2<float>(4500, 4900);
         gStateQ_Data.lower_bounds = Vec2<float>(3000, 4000);
         gStateQ_Data.last_limit = 1;
