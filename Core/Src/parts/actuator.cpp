@@ -300,10 +300,10 @@ void Actuator::wheels_Init(void)
         gWheel_Configurations[0].henc = &htim1;
         gWheel_Configurations[0].max_omega = 65.19;
 
-        gWheel_Configurations[1].in2_port = GPIOB;
-        gWheel_Configurations[1].in2_pin = GPIO_PIN_5;
-        gWheel_Configurations[1].in1_port = GPIOA;
-        gWheel_Configurations[1].in1_pin = GPIO_PIN_10;
+        gWheel_Configurations[1].in2_port = GPIOA;
+        gWheel_Configurations[1].in2_pin = GPIO_PIN_10;
+        gWheel_Configurations[1].in1_port = GPIOB;
+        gWheel_Configurations[1].in1_pin = GPIO_PIN_5;
         gWheel_Configurations[1].channel = TIM_CHANNEL_2;
         gWheel_Configurations[1].henc = &htim2;
         gWheel_Configurations[1].max_omega = 63.86;
