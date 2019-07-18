@@ -20,20 +20,31 @@ static unsigned long gXLidar_Bias = 50;
 static unsigned long gYLidar_Bias = 40;
 
 //* Construct the lidar's object
-TFMini gXLidar;
+TFMini gXLidar_R;
+TFMini gXLidar_B;
 TFMini gYLidar;
 
 //* Initialize the lidars as shown in BasicReading.ino example of TFMini
 void init_Lidars()
 {
-        XLIDAR_SERIAL.begin(TFMINI_BAUDRATE);
+        if (gCurrent_GameField == GameField::RED_F) {
+                XLIDAR_R_SERIAL.begin(TFMINI_BAUDRATE);
+        }
+        else if (gCurrent_GameField == GameField::BLUE_F) {
+                XLIDAR_B_SERIAL.begin(TFMINI_BAUDRATE);
+        }
         YLIDAR_SERIAL.begin(TFMINI_BAUDRATE);
 
 #ifdef _DEBUG_MODE
         Serial.println("Initializing Lidars...");
 #endif
 
-        gXLidar.begin(&XLIDAR_SERIAL);
+        if (gCurrent_GameField == GameField::RED_F) {
+                gXLidar_R.begin(&XLIDAR_R_SERIAL);
+        }
+        else if (gCurrent_GameField == GameField::BLUE_F) {
+                gXLidar_B.begin(&XLIDAR_B_SERIAL);
+        }
         gYLidar.begin(&YLIDAR_SERIAL);
 }
 
@@ -63,11 +74,23 @@ void update_Lidars()
                         gXLidar_Read_Time = millis();
 
                         //* Read and send XLidar data here
-                        dist = gXLidar.getDistance()*10 + gXLidar_Bias;
+                        if (gCurrent_GameField == GameField::RED_F) {
+                                dist = gXLidar_R.getDistance()*10 + gXLidar_Bias;
+                        }
+                        else if (gCurrent_GameField == GameField::BLUE_F) {
+                                dist = gXLidar_B.getDistance()*10 + gXLidar_Bias;
+                        }
                         send_LidarDataPack(gXLidar_Address, dist);
                         
 #ifdef _DEBUG_MODE
-                        uint16_t strength = gXLidar.getRecentSignalStrength();
+                        uint16_t strength = 0;
+                        //* Read and send XLidar data here
+                        if (gCurrent_GameField == GameField::RED_F) {
+                                strength = gXLidar_R.getRecentSignalStrength();
+                        }
+                        else if (gCurrent_GameField == GameField::BLUE_F) {
+                                strength = gXLidar_B.getRecentSignalStrength();
+                        }
                         
                         // Display the measurement
                         Serial.print("XLidar(0x02) : ");

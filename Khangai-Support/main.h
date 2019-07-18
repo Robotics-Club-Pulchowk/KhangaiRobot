@@ -15,12 +15,13 @@
 
 #define START_BYTE      (0xA5)
 
-SoftwareSerial Y_Lidar(A10, A11);
+SoftwareSerial STM_Soft_Serial(A8, A9);
 
-#define STM_SERIAL      (Serial2)
+#define STM_SERIAL      (STM_Soft_Serial)
 
-#define XLIDAR_SERIAL   (Serial1)
-#define YLIDAR_SERIAL   (Serial3)
+#define XLIDAR_R_SERIAL   (Serial1)
+#define XLIDAR_B_SERIAL   (Serial2)
+#define YLIDAR_SERIAL     (Serial3)
 
 enum GameField {
         NONE,
