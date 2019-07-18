@@ -93,7 +93,7 @@ static void init_RedGameField()
         gStateC_Data.id = Field::FIELD_C;
         gStateC_Data.centre = Vec2<float>(1600, 2400);
         gStateC_Data.upper_bounds = Vec2<float>(2000, 2700);
-        gStateC_Data.lower_bounds = Vec2<float>(1500, 1880);
+        gStateC_Data.lower_bounds = Vec2<float>(1500, 1800);
         gStateC_Data.last_limit = 1;
         gStateC_Data.ramping_factor = 0.001;
         gStateC_Data.first_limit = gStateB_Data.last_limit;
@@ -106,7 +106,7 @@ static void init_RedGameField()
         gStateD_Data.id = Field::FIELD_D;
         gStateD_Data.centre = Vec2<float>(800, 3000);
         gStateD_Data.upper_bounds = Vec2<float>(1115, 3300);
-        gStateD_Data.lower_bounds = Vec2<float>(500, 2800);
+        gStateD_Data.lower_bounds = Vec2<float>(500, 2700);
         gStateD_Data.last_limit = 1;
         gStateD_Data.ramping_factor = 0.001;
         gStateD_Data.first_limit = gStateC_Data.last_limit;
@@ -384,7 +384,7 @@ static void init_BlueGameField()
         gStateC_Data.id = Field::FIELD_C;
         gStateC_Data.centre = Vec2<float>(1600, 2400);
         gStateC_Data.upper_bounds = Vec2<float>(2000, 2700);
-        gStateC_Data.lower_bounds = Vec2<float>(1500, 1880);
+        gStateC_Data.lower_bounds = Vec2<float>(1500, 1800);
         gStateC_Data.last_limit = 1;
         gStateC_Data.ramping_factor = 0.001;
         gStateC_Data.first_limit = gStateB_Data.last_limit;
@@ -395,9 +395,9 @@ static void init_BlueGameField()
         // *** Blue Game Field *** //
         // Defining the state : State D
         gStateD_Data.id = Field::FIELD_D;
-        gStateD_Data.centre = Vec2<float>(800, 3000);
+        gStateD_Data.centre = Vec2<float>(800, 2900);
         gStateD_Data.upper_bounds = Vec2<float>(1115, 3300);
-        gStateD_Data.lower_bounds = Vec2<float>(500, 2800);
+        gStateD_Data.lower_bounds = Vec2<float>(500, 2700);
         gStateD_Data.last_limit = 1;
         gStateD_Data.ramping_factor = 0.001;
         gStateD_Data.first_limit = gStateC_Data.last_limit;
