@@ -197,6 +197,7 @@ Vec3<float> Processor::manual_control(JoyStick_Command& joy_cmd, Field id)
         Vec3<float> vels;
 
         vels = joy_cmd.vels;
+        vels = vels.mult_EW(0.8);
                 
         if (gCurrent_Field == GameField::RED) {
                 gJoyStick_Rotate_Matrix.at(0,1) = -1;
@@ -465,7 +466,7 @@ Vec3<float> Processor::control(Vec3<float> state,
                         vels.setZ(curr_state_->get_AngOffset() - 9 + gRobots_Angle_Offset);
                 }
                 else if (gCurrent_Field == GameField::BLUE) {
-                        vels.setZ(curr_state_->get_AngOffset() + 9 + gRobots_Angle_Offset);
+                        vels.setZ(curr_state_->get_AngOffset() + 18 + gRobots_Angle_Offset);
                 }
         }
         else {
