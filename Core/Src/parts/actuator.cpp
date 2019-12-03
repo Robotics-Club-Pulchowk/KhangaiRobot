@@ -84,12 +84,17 @@ static const Mat gInverse_Coupling_Matrix(gInverse_Coupling_Array);
  *    wheel using the inverse Coupling Matrix
  * </pre>
  */
+static float gLast_rw = 0;
 
 Vec3<float> Actuator::actuate(Vec3<float> vel, Vec3<float> psis, uint32_t dt_millis, int8_t test)
 {
         float rw = 0;
         float t_psi = psis.getX() / 57.3;
         float psi = psis.getY() / 57.3;
+
+        int16_t rot_robo = (int16_t)psis.getZ();
+
+        printf("%d\n", (int16_t)rot_robo);
 
         if (test > 0) {
                 rw = 0.5;
@@ -99,6 +104,7 @@ Vec3<float> Actuator::actuate(Vec3<float> vel, Vec3<float> psis, uint32_t dt_mil
         }
         else {
                 // Calculate rw
+                // psi *= 0.7;
                 float err_psi = t_psi - psi;
                 float abs_err = fabsf(err_psi);
                 if (abs_err < 0.02) {
@@ -106,13 +112,43 @@ Vec3<float> Actuator::actuate(Vec3<float> vel, Vec3<float> psis, uint32_t dt_mil
                 }
 
                 if (abs_err < 0.5) {
-                        angle_pid_->set_PID(0.28, 0, 0);
+                        angle_pid_->set_PID(0.12, 0, 0);
                 }
                 else {
-                        angle_pid_->set_PID(0.25, 0, 0);
+                        angle_pid_->set_PID(0.08, 0, 0);
                 }
 
-                rw = -angle_pid_->compute_PID(err_psi, dt_millis);
+                // rw = -angle_pid_->compute_PID(err_psi, dt_millis);
+
+                #define R_OMEGA         (0.2)
+
+                if (gCurrent_Field == GameField::BLUE) {
+                        if (rot_robo > 100) {
+                                rw = R_OMEGA;
+                        }
+                        else if (rot_robo < -100) {
+                                rw = -R_OMEGA;
+                        }
+                        else {
+                                rw = gLast_rw*0.8;
+                        }
+                }
+                else if (gCurrent_Field == GameField::RED) {
+                        if (rot_robo > 100) {
+                                rw = -R_OMEGA;
+                        }
+                        else if (rot_robo < -100) {
+                                rw = R_OMEGA;
+                        }
+                        else {
+                                rw = gLast_rw*0.8;
+                        }
+                }
+        }
+        gLast_rw = rw;
+
+        if (fabsf(rw) < 0.05) {
+                rw = 0;
         }
         
         vel.setZ(rw);
@@ -150,8 +186,6 @@ Vec3<float> Actuator::actuate(Vec3<float> vel, Vec3<float> psis, uint32_t dt_mil
 
         // printf("%ld   ", HAL_GetTick());
         for (uint8_t i = 0; i < 4; ++i) {
-                // if (i != 2)
-                //         set_points[i] = 0;
 
                 omega[i] = wheels_[i].get_Omega(dt_millis);
                 error[i] = set_points[i] - omega[i];
@@ -176,7 +210,7 @@ Vec3<float> Actuator::actuate(Vec3<float> vel, Vec3<float> psis, uint32_t dt_mil
         }
         // printf("\n");
 
-        // We don't want to delete the poninter since it was not us who allocated it
+        // We don't want to delete the pointer since it was not us who allocated it
         pid = 0;
 
         for (uint8_t i = 0; i < 4; ++i) {
@@ -185,7 +219,7 @@ Vec3<float> Actuator::actuate(Vec3<float> vel, Vec3<float> psis, uint32_t dt_mil
 
         // We can measure the velocity of the robot by this method
         // We can also use this for determining wheel's slippage
-        // !yet to implement
+        //! yet to implement
         Mat measured = gInverse_Coupling_Matrix * Mat(vels);
 
         Vec3<float> last_vel(measured.at(0,0),
@@ -331,15 +365,14 @@ void Actuator::wheels_Init(void)
 }
 
 
+//* Robot's Wheels' Speed Control parameters
 static Discrete_PID gDisc_PID[4];
 static PID gPID[4];
 
-// static float gI_Factor = 3.125;
-// static float gP_Factor = 1;
-
-//* Robot's ANgle Control parameters
+//* Robot's Angle Control parameters
 static Discrete_PID gAng_PID;
 static PID gRobo_PID;
+
 /**
  * @brief Function that initializes all the required components for the wheel's
  *        pid controller

@@ -224,13 +224,13 @@ Vec3<float> Processor::manual_control(JoyStick_Command& joy_cmd, Field id)
         float factor = 0.5;
 
         if (brake > 200) {
-                factor = 0.25;
+                factor = 0.35;
         }
         else if (accel > 200) {
-                factor = 1;
+                factor = 0.8;
         }
         else {
-                factor = 0.5;
+                factor = 0.6;
         }
 
         vels = vels.mult_EW(factor);
@@ -258,6 +258,8 @@ static bool gArm_Returned = false;
 static bool gShagai_Thrown = false;
 
 static float gRobots_Angle_Offset = 0;
+
+float gRotate_Robot = 0;
 
 Vec3<float> Processor::control(Vec3<float> state,
                                Vec3<float> vel_from_base,
@@ -298,6 +300,8 @@ Vec3<float> Processor::control(Vec3<float> state,
                 gerg_trans = joy_command.gerege_transfer;
                 rotate_dir = joy_command.rotate_dir;
         }
+
+        mode = Control_Mode::MANUAL;
         
         //* Process the data if read
         process(state, robot_state_vars);
@@ -445,18 +449,27 @@ Vec3<float> Processor::control(Vec3<float> state,
         }
 
         //* Correct Angle Offset According To User
-        if (rotate_dir == 1) {
-                gRobots_Angle_Offset += 0.1;
-        }
-        else if (rotate_dir == -1) {
-                gRobots_Angle_Offset -= 0.1;
-        }
-        if (gRobots_Angle_Offset > 90) {
-                gRobots_Angle_Offset = 90;
-        }
-        else if (gRobots_Angle_Offset < -90) {
-                gRobots_Angle_Offset = -90;
-        }
+        // if (id >= Field::FIELD_O) {
+                if (rotate_dir == 1) {
+                        gRobots_Angle_Offset += 0.1;
+                        gRotate_Robot = 110.0;
+                        printf("1\n");
+                }
+                else if (rotate_dir == -1) {
+                        gRobots_Angle_Offset -= 0.1;
+                        gRotate_Robot = -110.0;
+                        printf("-1\n");
+                }
+                else {
+                        gRotate_Robot = 0;
+                }
+                if (gRobots_Angle_Offset > 90) {
+                        gRobots_Angle_Offset = 90;
+                }
+                else if (gRobots_Angle_Offset < -90) {
+                        gRobots_Angle_Offset = -90;
+                }
+        // }
 
         //* Change orientation if in field Q - S (excluding S)
         if (id >= Field::FIELD_Q && id < Field::FIELD_S) {
@@ -728,7 +741,7 @@ void Processor::rotate_Gerege(bool rotate)
                 gSend_Gerege_Rotate_Command = true;
         }
         
-        //* Send Pneumatic data if gerege is to be roatated
+        //* Send Pneumatic data if gerege is to be rotated
         if (gSend_Gerege_Rotate_Command) {
                 if (--gSend_Gerege_Rotate_Command_Num) {
                         thrower_->write((uint8_t)(Throwing_Commands::ROTATE_GEREGE));

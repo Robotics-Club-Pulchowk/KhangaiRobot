@@ -146,11 +146,13 @@ int Robot::init(uint32_t dt_millis)
         return status;
 }
 
+extern float gRotate_Robot;
 // This function is called by the RobotThread
 void Robot::update(uint32_t dt_millis)
 {
         state_ = sensor_->read_State(state_from_base_,robot_state_vars_, dt_millis);
 
+        gRotate_Robot = 0;
         Vec3<float> vels = cpu_->control(state_,
                                          state_from_base_,
                                          velocities_,
@@ -166,7 +168,7 @@ void Robot::update(uint32_t dt_millis)
 
         taskENTER_CRITICAL();
         velocities_ = vels;
-        psis_.set_Values(vels.getZ(), state_.getZ(), 0);
+        psis_.set_Values(vels.getZ(), state_.getZ(), gRotate_Robot);
         taskEXIT_CRITICAL();
 }
 
