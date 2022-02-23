@@ -1,0 +1,6 @@
+<map id="Actuator::check" name="Actuator::check">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,120,57"/>
+<area shape="rect" id="node2" href="$class_wheel.html#a17973eb57b5dd282558fb7fe5699e58e" title="Function that sets the angular velocity of the wheel." alt="" coords="168,5,303,32"/>
+<area shape="rect" id="node3" href="$class_wheel.html#afbbb8dc81da2dd495e2322cddc5f0ddd" title=" " alt="" coords="182,56,289,83"/>
+<area shape="rect" id="node4" href="$main_8h.html#a425dc7e549f2b17a4f48496d9561d248" title=" " alt="" coords="351,56,459,83"/>
+</map>

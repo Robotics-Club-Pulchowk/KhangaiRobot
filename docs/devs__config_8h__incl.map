@@ -1,0 +1,21 @@
+<map id="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/Khangai&#45;Robot&#45;Full/KhangaiRobot&#45;Play/Core/Inc/parts/devs_config.h" name="C:/Users/073be/OneDrive/Documents/Robotics/Codes/beta/Khangai&#45;Robot/Khangai&#45;Robot&#45;Full/KhangaiRobot&#45;Play/Core/Inc/parts/devs_config.h">
+<area shape="rect" id="node1" title=" " alt="" coords="257,5,457,91"/>
+<area shape="rect" id="node2" href="$a4988_8h.html" title=" " alt="" coords="29,213,97,240"/>
+<area shape="rect" id="node7" href="$arduino_8h.html" title=" " alt="" coords="729,213,803,240"/>
+<area shape="rect" id="node10" href="$freewheel_8h.html" title=" " alt="" coords="121,213,208,240"/>
+<area shape="rect" id="node11" href="$hmc5883_8h.html" title=" " alt="" coords="207,139,293,165"/>
+<area shape="rect" id="node14" href="$mpu6050_8h.html" title=" " alt="" coords="420,139,507,165"/>
+<area shape="rect" id="node16" href="$encoder_8h.html" title=" " alt="" coords="317,139,396,165"/>
+<area shape="rect" id="node17" href="$lidar_8h.html" title=" " alt="" coords="576,139,633,165"/>
+<area shape="rect" id="node3" href="$tim_8h.html" title=" " alt="" coords="5,288,103,315"/>
+<area shape="rect" id="node6" href="$gpio_8h.html" title=" " alt="" coords="127,288,229,315"/>
+<area shape="rect" id="node4" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="237,363,298,389"/>
+<area shape="rect" id="node5" title=" " alt="" coords="294,437,411,464"/>
+<area shape="rect" id="node8" href="$sensor_8h.html" title=" " alt="" coords="655,288,727,315"/>
+<area shape="rect" id="node9" href="$queue__custom_8h.html" title=" " alt="" coords="548,363,667,389"/>
+<area shape="rect" id="node12" href="$i2c_8h.html" title=" " alt="" coords="233,213,283,240"/>
+<area shape="rect" id="node13" href="$vec3_8h.html" title=" " alt="" coords="323,288,382,315"/>
+<area shape="rect" id="node15" href="$mpu6050__reg_8h.html" title=" " alt="" coords="409,213,520,240"/>
+<area shape="rect" id="node18" href="$vec2_8h.html" title=" " alt="" coords="545,213,603,240"/>
+<area shape="rect" id="node19" title=" " alt="" coords="543,288,605,315"/>
+</map>

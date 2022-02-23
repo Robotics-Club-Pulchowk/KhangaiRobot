@@ -1,0 +1,11 @@
+<map id="Robot::get_Instance" name="Robot::get_Instance">
+<area shape="rect" id="node1" title=" " alt="" coords="5,147,144,174"/>
+<area shape="rect" id="node2" href="$class_state___sensor.html#a31cc1d727cc48b82fc9ba46dfd7bea69" title=" " alt="" coords="192,71,375,98"/>
+<area shape="rect" id="node5" href="$class_processor.html#acb789148869306c2a572d16f06abd7d2" title=" " alt="" coords="202,147,365,174"/>
+<area shape="rect" id="node9" href="$class_actuator.html#a5c444f19e2bd03fd38aef75f78f4de82" title=" " alt="" coords="207,198,360,225"/>
+<area shape="rect" id="node3" href="$class_position_sensor.html#a409cde1d6bc69641e99c3521b9f40f71" title=" " alt="" coords="440,5,576,47"/>
+<area shape="rect" id="node4" href="$class_bound___box.html#a519364f16b158de7524041760fcbc579" title=" " alt="" coords="423,71,593,98"/>
+<area shape="rect" id="node6" href="$processor_8cpp.html#a9ce21429239a4cc722845e28d0aced8c" title=" " alt="" coords="453,122,563,149"/>
+<area shape="rect" id="node7" href="$class_joy_stick.html#a0526dbb1135712cc18797923aa113d4c" title=" " alt="" coords="431,173,585,199"/>
+<area shape="rect" id="node8" href="$class_throwing.html#a01d73460bc1353f502d41ab04a389e61" title=" " alt="" coords="431,223,585,250"/>
+</map>

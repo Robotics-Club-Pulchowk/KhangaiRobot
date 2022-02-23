@@ -1,0 +1,12 @@
+<map id="PositionSensor::remove_Sensor" name="PositionSensor::remove_Sensor">
+<area shape="rect" id="node1" title=" " alt="" coords="893,42,1052,83"/>
+<area shape="rect" id="node2" href="$class_state___sensor.html#a3965dffdc2a72622a862f2a20fe2e09f" title=" " alt="" coords="695,9,845,50"/>
+<area shape="rect" id="node3" href="$class_state___sensor.html#a60f0ce9b8b64f85bd06c2bb849b3300c" title=" " alt="" coords="695,74,845,115"/>
+<area shape="rect" id="node4" href="$class_processor.html#ab3e919f3aa7b2e7968815d2e056e4067" title=" " alt="" coords="507,5,614,32"/>
+<area shape="rect" id="node7" href="$class_processor.html#a27d4a79448ab44b2f97807fd9d4c3e07" title=" " alt="" coords="493,56,628,83"/>
+<area shape="rect" id="node8" href="$class_processor.html#a08eb6304c0993769d125cc8186cb51ac" title=" " alt="" coords="299,56,427,83"/>
+<area shape="rect" id="node10" href="$class_processor.html#a48a1b74f5331de13b90c35ca3569391d" title=" " alt="" coords="475,157,647,184"/>
+<area shape="rect" id="node5" href="$class_robot.html#abb7f05b4906d4e65fc2e37995b3646bf" title=" " alt="" coords="159,5,240,32"/>
+<area shape="rect" id="node6" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,31,100,57"/>
+<area shape="rect" id="node9" href="$class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,56,251,83"/>
+</map>

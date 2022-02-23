@@ -1,0 +1,7 @@
+<map id="Sensor::read" name="Sensor::read">
+<area shape="rect" id="node1" title=" " alt="" coords="672,13,768,39"/>
+<area shape="rect" id="node2" href="$class_position_sensor.html#a34aa8302e10e702599384f55148160e9" title=" " alt="" coords="481,5,624,47"/>
+<area shape="rect" id="node3" href="$class_state___sensor.html#a79118858b21e47b7e6e509dfba5b06f8" title="Function that provides the state of the robot." alt="" coords="299,5,433,47"/>
+<area shape="rect" id="node4" href="$class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,13,251,39"/>
+<area shape="rect" id="node5" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,13,100,39"/>
+</map>

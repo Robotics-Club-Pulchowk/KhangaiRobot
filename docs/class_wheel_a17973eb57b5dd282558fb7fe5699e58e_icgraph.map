@@ -1,0 +1,8 @@
+<map id="Wheel::set_Omega" name="Wheel::set_Omega">
+<area shape="rect" id="node1" title="Function that sets the angular velocity of the wheel." alt="" coords="588,31,723,57"/>
+<area shape="rect" id="node2" href="$class_actuator.html#a97d651157712c2189fac4063c31d6963" title=" " alt="" coords="431,5,535,32"/>
+<area shape="rect" id="node5" href="$class_actuator.html#ac2e0278e6601213c9f7585f40b95a3f9" title=" " alt="" coords="425,56,540,83"/>
+<area shape="rect" id="node3" href="$class_actuator.html#a12789faf0215436ece13fb1608111f34" title=" " alt="" coords="239,5,353,32"/>
+<area shape="rect" id="node4" href="$class_robot.html#a38036a2ef73f7b1af6c5d6269e03a5f8" title=" " alt="" coords="5,5,167,32"/>
+<area shape="rect" id="node6" href="$class_robot.html#a135dd428eb165e8c7f860696ea86fc98" title=" " alt="" coords="215,56,377,83"/>
+</map>

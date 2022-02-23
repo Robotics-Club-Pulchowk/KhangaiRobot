@@ -1,0 +1,7 @@
+<map id="Robot::check_Actuators" name="Robot::check_Actuators">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,168,57"/>
+<area shape="rect" id="node2" href="$class_actuator.html#ac2e0278e6601213c9f7585f40b95a3f9" title=" " alt="" coords="216,31,331,57"/>
+<area shape="rect" id="node3" href="$class_wheel.html#a17973eb57b5dd282558fb7fe5699e58e" title="Function that sets the angular velocity of the wheel." alt="" coords="379,5,513,32"/>
+<area shape="rect" id="node4" href="$class_wheel.html#afbbb8dc81da2dd495e2322cddc5f0ddd" title=" " alt="" coords="393,56,499,83"/>
+<area shape="rect" id="node5" href="$main_8h.html#a425dc7e549f2b17a4f48496d9561d248" title=" " alt="" coords="561,56,669,83"/>
+</map>

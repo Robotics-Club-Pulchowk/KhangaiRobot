@@ -1,0 +1,12 @@
+<map id="PositionSensor::rotate_EncData" name="PositionSensor::rotate_EncData">
+<area shape="rect" id="node1" title=" " alt="" coords="5,150,156,191"/>
+<area shape="rect" id="node2" href="$class_vec3.html#ad259e243f6678730d990acbae2cdff57" title=" " alt="" coords="205,5,290,32"/>
+<area shape="rect" id="node3" href="$class_vec3.html#a8eeb16262b7e619f081a1ba94df098f8" title=" " alt="" coords="204,56,291,83"/>
+<area shape="rect" id="node4" href="$class_vec3.html#a52f0db1c387aa9bc7befe5792b698553" title=" " alt="" coords="205,107,290,133"/>
+<area shape="rect" id="node5" href="$class_vec2.html#ab9c6aa483fc884d65a0f50a6426dce04" title=" " alt="" coords="205,157,290,184"/>
+<area shape="rect" id="node6" href="$class_vec2.html#ab34c86af20c627cd5ed0e1a973a43fa3" title=" " alt="" coords="204,208,291,235"/>
+<area shape="rect" id="node7" href="$class_mat.html#aa2864c30e68caf29f400bb98295aa6a3" title=" " alt="" coords="207,259,288,285"/>
+<area shape="rect" id="node9" href="$class_mat.html#a5f4b8f7e3c55a1caf7161c11ec2a2465" title=" " alt="" coords="216,309,279,336"/>
+<area shape="rect" id="node8" href="$class_mat.html#a55e6cc33fc65042a4cff351fe59ae476" title=" " alt="" coords="339,259,448,285"/>
+<area shape="rect" id="node10" href="$main_8h.html#a425dc7e549f2b17a4f48496d9561d248" title=" " alt="" coords="339,309,447,336"/>
+</map>

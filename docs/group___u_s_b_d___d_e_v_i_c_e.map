@@ -1,0 +1,6 @@
+<map id="USBD_DEVICE" name="USBD_DEVICE">
+<area shape="rect" id="node1" title="Device file for Usb otg low level driver." alt="" coords="200,45,313,70"/>
+<area shape="rect" id="node3" href="$group___u_s_b_d___d_e_v_i_c_e___exported___functions_prototype.html" title="Declaration of public functions for Usb device." alt="" coords="361,5,533,45"/>
+<area shape="rect" id="node4" href="$group___u_s_b_d___d_e_v_i_c_e___exported___variables.html" title="Public variables." alt="" coords="361,69,533,109"/>
+<area shape="rect" id="node2" href="$group___u_s_b_d___o_t_g___d_r_i_v_e_r.html" title="Driver for Usb device." alt="" coords="5,45,152,70"/>
+</map>

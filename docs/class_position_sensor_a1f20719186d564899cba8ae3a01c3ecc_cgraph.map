@@ -1,0 +1,9 @@
+<map id="PositionSensor::init" name="PositionSensor::init">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,140,57"/>
+<area shape="rect" id="node2" href="$devs__config_8h.html#a7a9d8b41fb6b7081d142fe2e84ed8e20" title=" " alt="" coords="188,5,289,32"/>
+<area shape="rect" id="node4" href="$devs__config_8h.html#a255201daf7b60410935e2f939f34a263" title=" " alt="" coords="198,56,279,83"/>
+<area shape="rect" id="node3" href="$class_encoder.html#a0548c9bae5acec8c70616e1015cdaede" title=" " alt="" coords="354,5,449,32"/>
+<area shape="rect" id="node5" href="$class_lidar.html#a4d6d4fd8bdcc558f474e349ade576523" title=" " alt="" coords="337,56,465,83"/>
+<area shape="rect" id="node6" href="$class_lidar.html#a319f70d36bd17592036aa1e92a6e7292" title=" " alt="" coords="364,107,439,133"/>
+<area shape="rect" id="node7" href="$class_arduino___device.html#a32dc6658c68c9190fab562babe1650cf" title=" " alt="" coords="513,107,649,133"/>
+</map>

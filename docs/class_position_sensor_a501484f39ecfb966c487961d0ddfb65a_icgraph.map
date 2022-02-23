@@ -1,0 +1,10 @@
+<map id="PositionSensor::update_State" name="PositionSensor::update_State">
+<area shape="rect" id="node1" title=" " alt="" coords="747,75,904,117"/>
+<area shape="rect" id="node2" href="$class_state___sensor.html#a18febc839ef7fcdd42b33c108267bcc1" title=" " alt="" coords="535,42,683,83"/>
+<area shape="rect" id="node7" href="$class_state___sensor.html#a4b667f79982e6b1bc40c78093bb9d285" title=" " alt="" coords="519,107,699,149"/>
+<area shape="rect" id="node3" href="$class_processor.html#a08eb6304c0993769d125cc8186cb51ac" title=" " alt="" coords="321,5,449,32"/>
+<area shape="rect" id="node6" href="$class_processor.html#a48a1b74f5331de13b90c35ca3569391d" title=" " alt="" coords="299,56,471,83"/>
+<area shape="rect" id="node4" href="$class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,60,251,87"/>
+<area shape="rect" id="node5" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,60,100,87"/>
+<area shape="rect" id="node8" href="$class_state___sensor.html#a79118858b21e47b7e6e509dfba5b06f8" title="Function that provides the state of the robot." alt="" coords="317,107,452,149"/>
+</map>

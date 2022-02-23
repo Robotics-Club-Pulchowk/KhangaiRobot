@@ -1,0 +1,5 @@
+<map id="JoyStick" name="JoyStick">
+<area shape="rect" id="node1" title=" " alt="" coords="39,184,111,211"/>
+<area shape="rect" id="node2" href="$struct_joy_stick___command.html" title=" " alt="" coords="5,95,144,121"/>
+<area shape="rect" id="node3" href="$class_vec3.html" title=" " alt="" coords="25,5,125,32"/>
+</map>

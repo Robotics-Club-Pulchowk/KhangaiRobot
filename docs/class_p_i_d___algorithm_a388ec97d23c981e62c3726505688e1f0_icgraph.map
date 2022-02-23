@@ -1,0 +1,12 @@
+<map id="PID_Algorithm::compute" name="PID_Algorithm::compute">
+<area shape="rect" id="node1" title=" " alt="" coords="724,81,887,108"/>
+<area shape="rect" id="node2" href="$class_p_i_d.html#a4d19abca579301069c3edb28fd5ff7f2" title=" " alt="" coords="547,81,676,108"/>
+<area shape="rect" id="node3" href="$class_actuator.html#adf6bd47ad0aa6b9c51e32ac2a5aafb73" title="Function that actuate the robot&#39;s base(omni&#45;base)" alt="" coords="376,56,499,83"/>
+<area shape="rect" id="node8" href="$class_actuator.html#a97d651157712c2189fac4063c31d6963" title=" " alt="" coords="385,107,489,133"/>
+<area shape="rect" id="node4" href="$class_robot.html#abb7f05b4906d4e65fc2e37995b3646bf" title=" " alt="" coords="231,5,312,32"/>
+<area shape="rect" id="node6" href="$class_robot.html#a1456df8be5ce9a34e8aa175fc6cb8a1a" title=" " alt="" coords="230,56,313,83"/>
+<area shape="rect" id="node5" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="39,5,133,32"/>
+<area shape="rect" id="node7" href="$robo__tasks_8cpp.html#a002008655210c48a6b7414c925b5f4ac" title="Function implementing the MotorSequence thread." alt="" coords="39,56,133,83"/>
+<area shape="rect" id="node9" href="$class_actuator.html#a12789faf0215436ece13fb1608111f34" title=" " alt="" coords="215,107,328,133"/>
+<area shape="rect" id="node10" href="$class_robot.html#a38036a2ef73f7b1af6c5d6269e03a5f8" title=" " alt="" coords="5,107,167,133"/>
+</map>

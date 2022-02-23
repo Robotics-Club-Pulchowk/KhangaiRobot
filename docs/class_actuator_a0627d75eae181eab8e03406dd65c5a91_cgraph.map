@@ -1,0 +1,5 @@
+<map id="Actuator::init" name="Actuator::init">
+<area shape="rect" id="node1" title="Function that initializes all the required components for the robot&#39;s actuator(omni&#45;base)" alt="" coords="5,31,101,57"/>
+<area shape="rect" id="node2" href="$class_actuator.html#a998b08e1a048f6fe0b85c240aa33a498" title="Function that initializes all the required components for the wheels of the robot." alt="" coords="149,5,292,32"/>
+<area shape="rect" id="node3" href="$class_actuator.html#a500af768989caf2b8769bf4ac97def74" title="Function that initializes all the required components for the wheel&#39;s pid controller." alt="" coords="161,56,281,83"/>
+</map>

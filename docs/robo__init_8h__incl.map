@@ -1,0 +1,14 @@
+<map id="Core/Inc/robot/robo_init.h" name="Core/Inc/robot/robo_init.h">
+<area shape="rect" id="node1" title=" " alt="" coords="117,5,249,47"/>
+<area shape="rect" id="node2" href="$tim_8h.html" title=" " alt="" coords="194,169,245,196"/>
+<area shape="rect" id="node5" href="$usart_8h.html" title=" " alt="" coords="5,169,68,196"/>
+<area shape="rect" id="node6" href="$gpio_8h.html" title=" " alt="" coords="75,95,132,121"/>
+<area shape="rect" id="node7" href="$adc_8h.html" title=" " alt="" coords="156,95,211,121"/>
+<area shape="rect" id="node8" href="$wheel_8h.html" title=" " alt="" coords="305,95,371,121"/>
+<area shape="rect" id="node3" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="126,244,187,271"/>
+<area shape="rect" id="node4" title=" " alt="" coords="161,319,278,345"/>
+<area shape="rect" id="node9" href="$defines_8h.html" title=" " alt="" coords="319,169,394,196"/>
+<area shape="rect" id="node10" href="$pid__algorithms_8h.html" title=" " alt="" coords="403,244,521,271"/>
+<area shape="rect" id="node12" href="$pid_8h.html" title=" " alt="" coords="469,169,519,196"/>
+<area shape="rect" id="node11" title=" " alt="" coords="429,319,495,345"/>
+</map>

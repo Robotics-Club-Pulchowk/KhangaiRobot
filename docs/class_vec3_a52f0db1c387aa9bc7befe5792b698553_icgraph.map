@@ -1,0 +1,14 @@
+<map id="Vec3::getZ" name="Vec3::getZ">
+<area shape="rect" id="node1" title=" " alt="" coords="533,264,619,291"/>
+<area shape="rect" id="node2" href="$hmc5883_8cpp.html#a6449314a8f8fa5ee28206b48b4bd94fb" title=" " alt="" coords="323,5,461,32"/>
+<area shape="rect" id="node3" href="$mpu6050_8cpp.html#ac4621db6e750eedcf624f78dbe405b13" title=" " alt="" coords="299,56,485,83"/>
+<area shape="rect" id="node4" href="$class_processor.html#ad8a55cdfd1d1f42c3bd454a21ef0eb4d" title=" " alt="" coords="312,107,472,133"/>
+<area shape="rect" id="node5" href="$class_position_sensor.html#a93311cc02b8bedc263144d46cb82a540" title=" " alt="" coords="310,158,474,199"/>
+<area shape="rect" id="node6" href="$class_position_sensor.html#adcd13a461130d4ce2c53ca917794fc0b" title=" " alt="" coords="317,223,467,265"/>
+<area shape="rect" id="node7" href="$class_state___sensor.html#a79118858b21e47b7e6e509dfba5b06f8" title="Function that provides the state of the robot." alt="" coords="325,289,459,330"/>
+<area shape="rect" id="node8" href="$class_robot.html#a069b12308af85b7fc5b670b55503f55e" title=" " alt="" coords="148,355,251,381"/>
+<area shape="rect" id="node10" href="$class_robot.html#abb7f05b4906d4e65fc2e37995b3646bf" title=" " alt="" coords="159,405,240,432"/>
+<area shape="rect" id="node11" href="$logger_8cpp.html#a5cad4623bc9b165c0b5119ca65872856" title=" " alt="" coords="321,456,463,483"/>
+<area shape="rect" id="node12" href="$class_mat.html#a8f508e70094f29bf8bd428e3d41013e8" title=" " alt="" coords="334,507,450,533"/>
+<area shape="rect" id="node9" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,380,100,407"/>
+</map>

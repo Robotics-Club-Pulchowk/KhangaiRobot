@@ -1,0 +1,4 @@
+<map id="Robot::tune_motors" name="Robot::tune_motors">
+<area shape="rect" id="node1" title="Function that calculates and sets new omegas for each wheel according to set points provided in order..." alt="" coords="148,5,284,32"/>
+<area shape="rect" id="node2" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title="Function implementing the RoboSequence thread." alt="" coords="5,5,100,32"/>
+</map>

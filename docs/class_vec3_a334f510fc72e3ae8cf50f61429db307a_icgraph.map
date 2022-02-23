@@ -1,0 +1,10 @@
+<map id="Vec3::setZ" name="Vec3::setZ">
+<area shape="rect" id="node1" title=" " alt="" coords="464,122,549,149"/>
+<area shape="rect" id="node2" href="$class_vec3.html#ae581dad3aa1a885da7538582a3324d3a" title=" " alt="" coords="284,5,411,47"/>
+<area shape="rect" id="node3" href="$hmc5883_8cpp.html#a6449314a8f8fa5ee28206b48b4bd94fb" title=" " alt="" coords="279,71,416,98"/>
+<area shape="rect" id="node4" href="$class_actuator.html#adf6bd47ad0aa6b9c51e32ac2a5aafb73" title="Function that actuate the robot&#39;s base(omni&#45;base)" alt="" coords="286,173,409,199"/>
+<area shape="rect" id="node5" href="$class_robot.html#abb7f05b4906d4e65fc2e37995b3646bf" title=" " alt="" coords="149,147,230,174"/>
+<area shape="rect" id="node7" href="$class_robot.html#a1456df8be5ce9a34e8aa175fc6cb8a1a" title=" " alt="" coords="148,210,231,237"/>
+<area shape="rect" id="node6" href="$robo__tasks_8cpp.html#a4e5b32a2e15bb82416f89b7a733d1e09" title=" " alt="" coords="5,147,100,174"/>
+<area shape="rect" id="node8" href="$robo__tasks_8cpp.html#a002008655210c48a6b7414c925b5f4ac" title="Function implementing the MotorSequence thread." alt="" coords="5,210,100,237"/>
+</map>
